@@ -1,0 +1,34 @@
+/* 预设通用颜色 */
+$color-black: #000 !default;
+$color-white: #FFF !default;
+$color-transparent: transparent !default;
+
+@import "./ad-colors";
+@import "./md-colors";
+
+/* 根据配色方案确定主色，成功色，警告色和错误色 */
+$primary-color: blue !default;
+$success-color: green !default;
+$warning-color: yellow !default;
+$error-color: red !default;
+$info-color: blue !default;
+
+@if ($colors == "md") {
+  $primary-color: $md-blue !default;
+  $success-color: $md-green !default;
+  $warning-color: $md-yellow !default;
+  $error-color: $md-red !default;
+  $info-color: $md-blue !default;
+} @else if ($colors == "default") {
+  $primary-color: blue !default;
+  $success-color: green !default;
+  $warning-color: yellow !default;
+  $error-color: red !default;
+  $info-color: blue !default;
+} @else {
+  $primary-color: $ad-blue !default;
+  $success-color: $ad-green !default;
+  $warning-color: $ad-gold !default;
+  $error-color: $ad-red !default;
+  $info-color: $ad-blue !default;
+}

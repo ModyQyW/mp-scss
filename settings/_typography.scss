@@ -1,0 +1,173 @@
+/* font-family */
+@mixin m-font-family-reset() {
+  /* stylelint-disable value-list-comma-newline-after, value-list-comma-space-after */
+  font-family:
+    Alibaba-PuHuiTi-Regular, AlibabaSans-Regular, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", Avenir, "Helvetica Neue",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  /* stylelint-enable value-list-comma-newline-after, value-list-comma-space-after */
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 字体大小 */
+$font-size-base: 14 !default;
+$font-size-step: 1 !default;
+$font-size-scale: $scale !default;
+
+@function f-get-font-size($diff) {
+  @return ($font-size-base + $font-size-step * $diff) * $font-size-scale + $unit;
+}
+
+$font-size-m-4: f-get-font-size(-4); /* 默认 20 */
+$font-size-m-3: f-get-font-size(-3); /* 默认 22 */
+$font-size-m-2: f-get-font-size(-2); /* 默认 24 */
+$font-size-m-1: f-get-font-size(-1); /* 默认 26 */
+$font-size-0: f-get-font-size(0); /* 默认 28 */
+$font-size-default: f-get-font-size(0); /* 默认 28 */
+$font-size-a-1: f-get-font-size(1); /* 默认 30 */
+$font-size-a-2: f-get-font-size(2); /* 默认 32 */
+$font-size-a-3: f-get-font-size(3); /* 默认 34 */
+$font-size-a-4: f-get-font-size(4); /* 默认 36 */
+$font-size-a-5: f-get-font-size(5); /* 默认 38 */
+$font-size-a-6: f-get-font-size(6); /* 默认 40 */
+$font-size-a-7: f-get-font-size(7); /* 默认 42 */
+$font-size-a-8: f-get-font-size(8); /* 默认 44 */
+$font-size-a-9: f-get-font-size(9); /* 默认 46 */
+$font-size-a-10: f-get-font-size(10); /* 默认 48 */
+$font-size-a-11: f-get-font-size(11); /* 默认 50 */
+$font-size-a-12: f-get-font-size(12); /* 默认 52 */
+$font-size-a-13: f-get-font-size(13); /* 默认 54 */
+$font-size-a-14: f-get-font-size(14); /* 默认 56 */
+
+@mixin m-font-size($font-size: $font-size-default) {
+  font-size: $font-size;
+}
+
+@mixin m-font-size-reset() {
+  @include m-font-size();
+}
+
+/* 字体粗细 */
+$font-weight-100: 100;
+$font-weight-thin: 100;
+$font-weight-200: 200;
+$font-weight-extra-light: 200;
+$font-weight-ultra-light: 200;
+$font-weight-300: 300;
+$font-weight-light: 300;
+$font-weight-400: 400;
+$font-weight-default: 400;
+$font-weight-regular: 400;
+$font-weight-normal: 400;
+$font-weight-500: 500;
+$font-weight-medium: 500;
+$font-weight-600: 600;
+$font-weight-semi-bold: 600;
+$font-weight-700: 700;
+$font-weight-bold: 700;
+$font-weight-800: 800;
+$font-weight-extra-bold: 800;
+$font-weight-ultra-bold: 800;
+$font-weight-900: 900;
+$font-weight-black: 900;
+$font-weight-heavy: 900;
+
+@mixin m-font-weight($font-weight: $font-weight-default) {
+  font-weight: $font-weight;
+}
+
+@mixin m-font-weight-reset() {
+  @include m-font-weight();
+}
+
+/* 行高，跟随 Ant Design */
+$line-height-base: 22 !default;
+$line-height-step: 1 !default;
+$line-height-scale: $scale !default;
+
+@function f-get-line-height($diff) {
+  @return (($line-height-base + $line-height-step * $diff) * $line-height-scale) + $unit;
+}
+
+$line-height-m-4: f-get-line-height(-4); /* 默认 36 */
+$line-height-m-3: f-get-line-height(-3); /* 默认 38 */
+$line-height-m-2: f-get-line-height(-2); /* 默认 40 */
+$line-height-m-1: f-get-line-height(-1); /* 默认 42 */
+$line-height-0: f-get-line-height(0); /* 默认 44 */
+$line-height-default: f-get-line-height(0); /* 默认 44 */
+$line-height-a-1: f-get-line-height(1); /* 默认 46 */
+$line-height-a-2: f-get-line-height(2); /* 默认 48 */
+$line-height-a-3: f-get-line-height(3); /* 默认 50 */
+$line-height-a-4: f-get-line-height(4); /* 默认 52 */
+$line-height-a-5: f-get-line-height(5); /* 默认 54 */
+$line-height-a-6: f-get-line-height(6); /* 默认 56 */
+$line-height-a-7: f-get-line-height(7); /* 默认 58 */
+$line-height-a-8: f-get-line-height(8); /* 默认 60 */
+$line-height-a-9: f-get-line-height(9); /* 默认 62 */
+$line-height-a-10: f-get-line-height(10); /* 默认 64 */
+$line-height-a-11: f-get-line-height(11); /* 默认 66 */
+$line-height-a-12: f-get-line-height(12); /* 默认 68 */
+$line-height-a-13: f-get-line-height(13); /* 默认 70 */
+$line-height-a-14: f-get-line-height(14); /* 默认 72 */
+
+@mixin m-line-height($line-height: $line-height-default) {
+  line-height: $line-height;
+}
+
+@mixin m-line-height-reset() {
+  @include m-line-height();
+}
+
+/* 字体颜色，扩展 Ant Design */
+$color-title: rgba(0, 0, 0, .85) !default;
+$color-title-light: rgba(0, 0, 0, .75) !default;
+$color-main: rgba(0, 0, 0, .65) !default;
+$color-main-light: rgba(0, 0, 0, .55) !default;
+$color-secondary: rgba(0, 0, 0, .45) !default;
+$color-disabled: rgba(0, 0, 0, .25) !default;
+$color-title-inverse: rgba(255, 255, 255, 1) !default;
+$color-title-light-inverse: rgba(255, 255, 255, .95) !default;
+$color-main-inverse: rgba(255, 255, 255, .85) !default;
+$color-main-light-inverse: rgba(255, 255, 255, .75) !default;
+$color-secondary-inverse: rgba(255, 255, 255, .65) !default;
+$color-disabled-inverse: rgba(255, 255, 255, .45) !default;
+
+@mixin m-color($color) {
+  color: $color;
+}
+
+@mixin m-color-reset() {
+  .light & {
+    color: $color-main;
+  }
+  .dark & {
+    color: $color-main-inverse;
+  }
+}
+
+/* 内容 */
+@mixin m-content($content: "") {
+  content: $content;
+}
+
+@mixin m-content-reset() {
+  @include m-content();
+}
+
+/* 可调整性 */
+$resize-none: none;
+$resize-both: both;
+$resize-horizontal: horizontal;
+$resize-vertical: vertical;
+
+@mixin m-resize($resize: $resize-none) {
+  resize: $resize;
+}
+
+@mixin m-resize-reset() {
+  resize: initial;
+}

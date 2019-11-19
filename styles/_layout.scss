@@ -1,0 +1,110 @@
+/* 布局 */
+
+/* 微信小程序根元素 */
+page {
+  @include m-position();
+  @include m-box-sizing();
+  @include m-sizing-full();
+  @include m-spacing-reset();
+  overflow: hidden;
+  @include m-font-family();
+  @include m-font-size();
+  @include m-font-weight();
+  @include m-line-height();
+  @include m-color-reset();
+  @include m-background-color-reset();
+}
+
+/* 重置 box-sizing */
+.bsbb {
+  @include m-box-sizing();
+}
+
+.container {
+  @include m-position();
+  @include m-box-sizing();
+  @include m-display();
+  @include m-flex-axis($flex-column);
+  @include m-sizing-full();
+  @include m-color-reset();
+  @include m-background-color-reset();
+
+  &.is-horizontal {
+    flex: 1;
+    @include m-flex-axis();
+    height: auto;
+
+    .main {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  .header,
+  .nav,
+  .footer {
+    @include m-position();
+    @include m-box-sizing();
+    @include m-display();
+    @include m-flex-axis($flex-row, $flex-center, $flex-space-between);
+    width: 100%;
+    @include m-background-color($color-white);
+
+    .left,
+    .right {
+      @include m-box-sizing();
+      @include m-display();
+      @include m-flex-axis($flex-row, $flex-center);
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .left {
+      flex: $flex-auto;
+      justify-content: $flex-start;
+    }
+
+    .right {
+      flex: $flex-none;
+      justify-content: $flex-end;
+    }
+  }
+
+  .header {
+    flex: 0 0 $sizing-layout-xl;
+    padding: $spacing-none $spacing-lg;
+    border-bottom: $border-width solid $border-color;
+  }
+
+  .nav {
+    flex: 0 0 $sizing-layout-xs;
+    padding: $spacing-none;
+    overflow: hidden;
+    border-bottom: $border-width solid $border-color;
+  }
+
+  .aside {
+    @include m-position();
+    @include m-box-sizing();
+    @include m-display();
+    @include m-flex-axis($flex-column, $flex-center);
+    width: auto;
+    height: 100%;
+  }
+
+  .main {
+    @include m-position();
+    @include m-box-sizing();
+    @include m-display();
+    flex: $flex-auto;
+    @include m-flex-axis($flex-column);
+    width: 100%;
+    height: auto;
+  }
+
+  .footer {
+    flex: 0 0 $sizing-layout-xxxxl;
+    padding: $spacing-none $spacing-lg;
+    border-top: $borderWidthSm solid $borderColor;
+  }
+}

@@ -1,0 +1,22 @@
+/* image */
+$image-sizing-map: (
+  xxxxs: $sizing-image-xxxxs,
+  xxxs: $sizing-image-xxxs,
+  xxs: $sizing-image-xxs,
+  xs: $sizing-image-xs,
+  sm: $sizing-image-sm,
+  md: $sizing-image-md,
+  lg: $sizing-image-lg,
+  xl: $sizing-image-xl,
+  xxl: $sizing-image-xxl,
+  xxxl: $sizing-image-xxxl,
+  xxxxl: $sizing-image-xxxxl
+);
+
+$image-sizing-list: map-keys($image-sizing-map);
+
+@each $size in $image-sizing-list {
+  .image-#{$size} {
+    @include m-sizing-square(map-get($image-sizing-map, $size));
+  }
+}

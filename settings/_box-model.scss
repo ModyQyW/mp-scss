@@ -1,0 +1,247 @@
+/* display */
+@mixin m-display($display: flex) {
+  display: $display;
+}
+
+@mixin m-display-reset() {
+  display: flex;
+}
+
+
+/* flex */
+$flex-auto: auto;
+$flex-none: none;
+$flex-row: row;
+$flex-row-reverse: row-reverse;
+$flex-column: column;
+$flex-column-reverse: column-reverse;
+$flex-wrap: wrap;
+$flex-wrap-reverse: wrap-reverse;
+$flex-nowrap: nowrap;
+$flex-order-default: 0;
+$flex-order-0: 0;
+$flex-order-1: 1;
+$flex-order-2: 2;
+$flex-order-3: 3;
+$flex-order-4: 4;
+$flex-order-5: 5;
+$flex-order-6: 6;
+$flex-order-7: 7;
+$flex-order-8: 8;
+$flex-order-9: 9;
+$flex-order-10: 10;
+$flex-order-11: 11;
+$flex-order-12: 12;
+$flex-order-13: 13;
+$flex-order-14: 14;
+$flex-order-15: 15;
+$flex-order-16: 16;
+$flex-order-17: 17;
+$flex-order-18: 18;
+$flex-order-19: 19;
+$flex-order-20: 20;
+$flex-order-21: 21;
+$flex-order-22: 22;
+$flex-order-23: 23;
+$flex-baseline: baseline;
+$flex-space-between: space-between;
+$flex-space-around: space-around;
+$flex-space-evenly: space-evenly;
+$flex-stretch: stretch;
+$flex-center: center;
+$flex-self-start: self-start;
+$flex-self-end: self-end;
+$flex-start: flex-start;
+$flex-end: flex-end;
+
+@mixin m-flex-axis($flex-direction: $flex-row, $align-items: $flex-start, $justify-content: $flex-start) {
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin m-flex-axis-center() {
+  align-items: $flex-center;
+  justify-content: $flex-center;
+}
+
+@mixin m-flex-reset() {
+  @include m-flex-axis();
+}
+
+
+/* sizing */
+@function f-get-sizing($sizing-base, $step, $diff) {
+  $sizing: $sizing-base + $step * $diff;
+  @return if($sizing <= 0, 0, $sizing + $unit);
+}
+
+$sizing-auto: auto;
+$sizing-layout-base: 80 !default;
+$sizing-layout-step: 8 !default;
+$sizing-layout-auto: auto;
+$sizing-layout-xxxxxxs: f-get-sizing($sizing-layout-base, $sizing-layout-step, -7); /* 默认 24 */
+$sizing-layout-xxxxxs: f-get-sizing($sizing-layout-base, $sizing-layout-step, -6); /* 默认 32 */
+$sizing-layout-xxxxs: f-get-sizing($sizing-layout-base, $sizing-layout-step, -5); /* 默认 40 */
+$sizing-layout-xxxs: f-get-sizing($sizing-layout-base, $sizing-layout-step, -4); /* 默认 48 */
+$sizing-layout-xxs: f-get-sizing($sizing-layout-base, $sizing-layout-step, -3); /* 默认 56 */
+$sizing-layout-xs: f-get-sizing($sizing-layout-base, $sizing-layout-step, -2); /* 默认 64 */
+$sizing-layout-sm: f-get-sizing($sizing-layout-base, $sizing-layout-step, -1); /* 默认 72 */
+$sizing-layout-md: f-get-sizing($sizing-layout-base, $sizing-layout-step, 0); /* 默认 80 */
+$sizing-layout-lg: f-get-sizing($sizing-layout-base, $sizing-layout-step, 1); /* 默认 88 */
+$sizing-layout-xl: f-get-sizing($sizing-layout-base, $sizing-layout-step, 2); /* 默认 96 */
+$sizing-layout-xxl: f-get-sizing($sizing-layout-base, $sizing-layout-step, 3); /* 默认 104 */
+$sizing-layout-xxxl: f-get-sizing($sizing-layout-base, $sizing-layout-step, 4); /* 默认 112 */
+$sizing-layout-xxxxl: f-get-sizing($sizing-layout-base, $sizing-layout-step, 5); /* 默认 120 */
+$sizing-layout-xxxxxl: f-get-sizing($sizing-layout-base, $sizing-layout-step, 6); /* 默认 128 */
+$sizing-layout-xxxxxxl: f-get-sizing($sizing-layout-base, $sizing-layout-step, 7); /* 默认 136 */
+$sizing-icon-base: 40 !default;
+$sizing-icon-step: 8 !default;
+$sizing-icon-auto: auto;
+$sizing-icon-xs: f-get-sizing($sizing-icon-base, $sizing-icon-step, -2); /* 默认 24 */
+$sizing-icon-sm: f-get-sizing($sizing-icon-base, $sizing-icon-step, -1); /* 默认 32 */
+$sizing-icon-md: f-get-sizing($sizing-icon-base, $sizing-icon-step, 0); /* 默认 40 */
+$sizing-icon-lg: f-get-sizing($sizing-icon-base, $sizing-icon-step, 1); /* 默认 48 */
+$sizing-icon-xl: f-get-sizing($sizing-icon-base, $sizing-icon-step, 2); /* 默认 56 */
+$sizing-logo-base: 80 !default;
+$sizing-logo-step: 8 !default;
+$sizing-logo-auto: auto;
+$sizing-logo-xs: f-get-sizing($sizing-logo-base, $sizing-logo-step, -2); /* 默认 64 */
+$sizing-logo-sm: f-get-sizing($sizing-logo-base, $sizing-logo-step, -1); /* 默认 72 */
+$sizing-logo-md: f-get-sizing($sizing-logo-base, $sizing-logo-step, 0); /* 默认 80 */
+$sizing-logo-lg: f-get-sizing($sizing-logo-base, $sizing-logo-step, 1); /* 默认 88 */
+$sizing-logo-xl: f-get-sizing($sizing-logo-base, $sizing-logo-step, 2); /* 默认 96 */
+$sizing-image-base: 144 !default;
+$sizing-image-step: 8 !default;
+$sizing-image-auto: auto;
+$sizing-image-xxxxs: f-get-sizing($sizing-image-base, $sizing-image-step, -5); /* 默认 104 */
+$sizing-image-xxxs: f-get-sizing($sizing-image-base, $sizing-image-step, -4); /* 默认 112 */
+$sizing-image-xxs: f-get-sizing($sizing-image-base, $sizing-image-step, -3); /* 默认 120 */
+$sizing-image-xs: f-get-sizing($sizing-image-base, $sizing-image-step, -2); /* 默认 128 */
+$sizing-image-sm: f-get-sizing($sizing-image-base, $sizing-image-step, -1); /* 默认 136 */
+$sizing-image-md: f-get-sizing($sizing-image-base, $sizing-image-step, 0); /* 默认 144 */
+$sizing-image-lg: f-get-sizing($sizing-image-base, $sizing-image-step, 1); /* 默认 152 */
+$sizing-image-xl: f-get-sizing($sizing-image-base, $sizing-image-step, 2); /* 默认 160 */
+$sizing-image-xxl: f-get-sizing($sizing-image-base, $sizing-image-step, 3); /* 默认 168 */
+$sizing-image-xxxl: f-get-sizing($sizing-image-base, $sizing-image-step, 4); /* 默认 176 */
+$sizing-image-xxxxl: f-get-sizing($sizing-image-base, $sizing-image-step, 5); /* 默认 184 */
+
+@mixin m-sizing-full() {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin m-sizing($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin m-sizing-square($size) {
+  @include m-sizing($size, $size);
+}
+
+@mixin m-sizing-reset() {
+  width: $sizing-auto;
+  height: $sizing-auto;
+}
+
+
+/* spacing */
+$spacing-base: 16 !default;
+$spacing-step: 4 !default;
+
+@function f-get-spacing($diff) {
+  @return ($spacing-base + $spacing-step * $diff) + $unit;
+}
+
+@function f-get-spacing-inverse($diff) {
+  @return -($spacing-base + $spacing-step * $diff) + $unit;
+}
+
+$spacing-0: 0;
+$spacing-none: 0;
+$spacing-xxs: f-get-spacing(-3); /* 默认 4 */
+$spacing-xs: f-get-spacing(-2); /* 默认 8 */
+$spacing-sm: f-get-spacing(-1); /* 默认 12 */
+$spacing-md: f-get-spacing(0); /* 默认 16 */
+$spacing-lg: f-get-spacing(1); /* 默认 20 */
+$spacing-xl: f-get-spacing(2); /* 默认 24 */
+$spacing-xxl: f-get-spacing(3); /* 默认 28 */
+$spacing-inverse-xxs: f-get-spacing-inverse(-3); /* 默认 -4 */
+$spacing-inverse-xs: f-get-spacing-inverse(-2); /* 默认 -8 */
+$spacing-inverse-sm: f-get-spacing-inverse(-1); /* 默认 -12 */
+$spacing-inverse-md: f-get-spacing-inverse(0); /* 默认 -16 */
+$spacing-inverse-lg: f-get-spacing-inverse(1); /* 默认 -20 */
+$spacing-inverse-xl: f-get-spacing-inverse(2); /* 默认 -24 */
+$spacing-inverse-xxl: f-get-spacing-inverse(3); /* 默认 -28 */
+
+@mixin m-spacing-padding-4(
+  $padding-top: $spacing-0,
+  $padding-right: $spacing-0,
+  $padding-bottom: $spacing-0,
+  $padding-left: $spacing-0
+) {
+  padding: $padding-top $padding-right $padding-bottom $padding-left;
+}
+
+@mixin m-spacing-padding-3(
+  $padding-top: $spacing-0,
+  $padding-horizontal: $spacing-0,
+  $padding-bottom: $spacing-0
+) {
+  padding: $padding-top $padding-horizontal $padding-bottom;
+}
+
+@mixin m-spacing-padding-2($padding-vertical: $spacing-0, $padding-horizontal: $spacing-0) {
+  padding: $padding-vertical $padding-horizontal;
+}
+
+@mixin m-spacing-padding-1($padding: $spacing-0) {
+  padding: $padding;
+}
+
+@mixin m-spacing-padding($padding: $spacing-0) {
+  padding: $padding;
+}
+
+@mixin m-spacing-padding-reset() {
+  padding: $spacing-0;
+}
+
+@mixin m-spacing-margin-4(
+  $margin-top: $spacing-0,
+  $margin-right: $spacing-0,
+  $margin-bottom: $spacing-0,
+  $margin-left: $spacing-0
+) {
+  margin: $margin-top $margin-right $margin-bottom $margin-left;
+}
+
+@mixin m-spacing-margin-3(
+  $margin-top: $spacing-0,
+  $margin-horizontal: $spacing-0,
+  $margin-bottom: $spacing-0
+) {
+  margin: $margin-top $margin-horizontal $margin-bottom;
+}
+
+@mixin m-spacing-margin-2($margin-vertical: $spacing-0, $margin-horizontal: $spacing-0) {
+  margin: $margin-vertical $margin-horizontal;
+}
+
+@mixin m-spacing-margin-1($margin: $spacing-0) {
+  margin: $margin;
+}
+
+@mixin m-spacing-margin($margin: $spacing-0) {
+  margin: $margin;
+}
+
+@mixin m-spacing-margin-reset() {
+  margin: $spacing-0;
+}
+
+@mixin m-spacing-reset() {
+  padding: $spacing-0;
+  margin: $spacing-0;
+}

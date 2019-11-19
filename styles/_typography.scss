@@ -1,0 +1,206 @@
+/* typography */
+.text-thin {
+  font-weight: $font-weight-100;
+}
+
+.text-extra-light,
+.text-ultra-light {
+  font-weight: $font-weight-200;
+}
+
+.text-light {
+  font-weight: $font-weight-300;
+}
+
+.text-regular,
+.text-normal {
+  font-weight: $font-weight-400;
+}
+
+.text-medium {
+  font-weight: $font-weight-500;
+}
+
+.text-semi-bold {
+  font-weight: $font-weight-600;
+}
+
+.text-bold {
+  font-weight: $font-weight-700;
+}
+
+.text-extra-bold,
+.text-ultra-bold {
+  font-weight: $font-weight-800;
+}
+
+.text-black,
+.text-heavy {
+  font-weight: $font-weight-900;
+}
+
+/* minus 2 */
+.text-m-2 {
+  font-size: $font-size-m-2;
+  line-height: $line-height-m-2;
+}
+
+.text-m-1 {
+  font-size: $font-size-m-1;
+  line-height: $line-height-m-1;
+}
+
+.text-0 {
+  font-size: $font-size-0;
+  line-height: $line-height-0;
+}
+
+/* add 1 */
+.text-a-1 {
+  font-size: $font-size-a-1;
+  line-height: $line-height-a-1;
+}
+
+.text-a-2 {
+  font-size: $font-size-a-2;
+  line-height: $line-height-a-2;
+}
+
+.text-a-3 {
+  font-size: $font-size-a-3;
+  line-height: $line-height-a-3;
+}
+
+.text-a-4 {
+  font-size: $font-size-a-4;
+  line-height: $line-height-a-4;
+}
+
+.text-a-5 {
+  font-size: $font-size-a-5;
+  line-height: $line-height-a-5;
+}
+
+.text-a-6 {
+  font-size: $font-size-a-6;
+  line-height: $line-height-a-6;
+}
+
+.text-a-7 {
+  font-size: $font-size-a-7;
+  line-height: $line-height-a-7;
+}
+
+.text-a-8 {
+  font-size: $font-size-a-8;
+  line-height: $line-height-a-8;
+}
+
+.text-a-9 {
+  font-size: $font-size-a-9;
+  line-height: $line-height-a-9;
+}
+
+.text-a-10 {
+  font-size: $font-size-a-10;
+  line-height: $line-height-a-10;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.light {
+  .text-disabled {
+    @include m-color($color-disabled);
+  }
+
+  .text-title {
+    @include m-color($color-title);
+  }
+
+  .text-title-light {
+    @include m-color($color-title-light);
+  }
+
+  .text-main {
+    @include m-color($color-main);
+  }
+
+  .text-main-light {
+    @include m-color($color-main-light);
+  }
+
+  .text-secondary {
+    @include m-color($color-secondary);
+  }
+}
+
+.dark {
+  .text-disabled {
+    @include m-color($color-disabled-inverse);
+  }
+
+  .text-title {
+    @include m-color($color-title-inverse);
+  }
+
+  .text-title-light {
+    @include m-color($color-title-light-inverse);
+  }
+
+  .text-main {
+    @include m-color($color-main-inverse);
+  }
+
+  .text-main-light {
+    @include m-color($color-main-light-inverse);
+  }
+
+  .text-secondary {
+    @include m-color($color-secondary-inverse);
+  }
+}
+
+.text-title {
+  @include m-font-size($font-size-a-4);
+  @include m-line-height($line-height-a-4);
+}
+
+.text-title-light {
+  @include m-font-size($font-size-a-2);
+  @include m-line-height($line-height-a-2);
+}
+
+.text-main {
+  @include m-font-size($font-size-0);
+  @include m-line-height($line-height-0);
+}
+
+.text-main-light {
+  @include m-font-size($font-size-m-1);
+  @include m-line-height($line-height-m-1);
+}
+
+.text-secondary {
+  @include m-font-size($font-size-m-2);
+  @include m-line-height($line-height-m-2);
+}

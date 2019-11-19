@@ -1,0 +1,57 @@
+/* button */
+[class^="btn-"] {
+  @include m-box-sizing();
+  @include m-display();
+  @include m-flex-axis-center();
+  @include m-spacing-reset();
+  @include m-spacing-padding(0, $spacing-md);
+  @include m-font-size();
+  @include m-font-weight();
+  line-height: 1.5;
+  @include m-color-reset();
+  text-align: center;
+  @include m-border-reset();
+  @include m-border-radius-none();
+
+  &::after {
+    @include m-border-reset();
+    @include m-border-radius-none();
+  }
+}
+
+.btn-border {
+  @include m-border-reset();
+}
+
+.btn-primary,
+.btn-success,
+.btn-warning,
+.btn-error,
+.btn-info {
+  @include m-color($color-white);
+}
+
+.btn-primary {
+  @include m-background-color($primary-color);
+  @include m-border($primary-color);
+}
+
+.btn-success {
+  @include m-background-color($success-color);
+  @include m-border($success-color);
+}
+
+.btn-warning {
+  @include m-background-color($waring-color);
+  @include m-border($warning-color);
+}
+
+.btn-error {
+  @include m-background-color($error-color);
+  @include m-border($error-color);
+}
+
+.btn-info {
+  @include m-background-color($info-color);
+  @include m-border($info-color);
+}

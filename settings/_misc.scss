@@ -1,0 +1,16 @@
+/* transform */
+@mixin m-transform-x-half() {
+  transform: scaleX(50%);
+}
+
+@mixin m-transform-y-half() {
+  transform: scaleY(50%);
+}
+
+@mixin m-transform-z-half() {
+  transform: scaleZ(50%);
+}
+
+@mixin m-transform-half() {
+  transform: scale(50%);
+}

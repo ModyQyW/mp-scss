@@ -1,0 +1,44 @@
+{
+  "name": "@modyqyw/mp-css",
+  "version": "0.1.0",
+  "description": "Custom css for miniprograms.",
+  "author": "ModyQyW <261857860@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "stylelint ./**/*.scss"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ModyQyW/mp-css.git"
+  },
+  "keywords": [
+    "css",
+    "miniprogram",
+    "scss"
+  ],
+  "devDependencies": {
+    "lint-staged": "^9.4.3",
+    "stylelint": "^11.1.1",
+    "stylelint-config-twbs-bootstrap": "^0.9.0"
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-twbs-bootstrap/scss"
+    ],
+    "rules": {
+      "color-hex-case": "upper",
+      "declaration-no-important": null,
+      "selector-type-no-unknown": null,
+      "unit-no-unknown": null
+    }
+  },
+  "lint-staged": {
+    "./**/*.scss": [
+      "stylelint",
+      "git add"
+    ]
+  }
+}

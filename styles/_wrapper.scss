@@ -1,0 +1,30 @@
+/* wrapper */
+.wrapper {
+  @include m-position();
+  @include m-box-sizing();
+  @include m-display();
+  @include m-sizing-full();
+}
+
+.wrapper-row {
+  @include m-position();
+  @include m-box-sizing();
+  @include m-display();
+  width: 100%;
+  height: auto;
+}
+
+.wrapper-col {
+  @include m-position();
+  @include m-box-sizing();
+  @include m-display();
+  width: auto;
+  height: 100%;
+}
+
+.wrapper-center {
+  @include m-position();
+  @include m-box-sizing();
+  @include m-display();
+  @include m-flex-axis-center();
+}

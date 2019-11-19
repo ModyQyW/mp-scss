@@ -1,0 +1,45 @@
+/* position */
+@mixin m-position($position: relative, $top: 0, $right: 0, $bottom: 0, $left: 0) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin m-position-reset() {
+  position: static;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* z-index，跟随 Material Design */
+$z-index-100: 100 !default; /* card */
+$z-index-200: 200 !default; /* card / button */
+$z-index-300: 300 !default; /* card / button / app bar */
+$z-index-400: 400 !default; /* card / button */
+$z-index-500: 500 !default; /* card / button */
+$z-index-600: 600 !default; /* card / button /fab */
+$z-index-700: 700 !default; /* card / button */
+$z-index-800: 800 !default; /* card / button */
+$z-index-1600: 1600 !default; /* nav drawer */
+$z-index-2400: 2400 !default; /* modal / dialog */
+
+@mixin m-z-index($z-index) {
+  z-index: $z-index;
+}
+
+@mixin m-z-index-reset() {
+  z-index: initial;
+}
+
+/* box-sizing */
+@mixin m-box-sizing($box-sizing: border-box) {
+  box-sizing: $box-sizing;
+}
+
+@mixin m-box-sizing-reset() {
+  box-sizing: border-box;
+}

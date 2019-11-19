@@ -1,0 +1,19 @@
+/* dialog */
+.wrapper-dialog {
+  @include m-position(fixed);
+  @include m-z-index($z-index-2400);
+  @include m-flex-axis-center();
+  @include m-sizing-full();
+  @include m-background-color($background-color-mask);
+
+  & > .dialog {
+    @include m-position();
+    width: 80%;
+    @include m-spacing-padding($spacing-md);
+
+    & > .icon-close {
+      @include m-sizing-square($sizing-icon-lg);
+      @include m-border-radius($border-radius-half);
+    }
+  }
+}

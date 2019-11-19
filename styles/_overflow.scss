@@ -1,0 +1,30 @@
+/* overflow */
+.overflow-hidden {
+  @include m-box-sizing();
+  overflow: hidden !important;
+}
+
+.overflow-auto {
+  @include m-box-sizing();
+  overflow: auto !important;
+}
+
+.overflow-x-hidden {
+  @include m-box-sizing();
+  overflow: hidden auto !important;
+}
+
+.overflow-y-hidden {
+  @include m-box-sizing();
+  overflow: auto hidden !important;
+}
+
+.overflow-x-auto {
+  @include m-box-sizing();
+  overflow: auto hidden !important;
+}
+
+.overflow-y-auto {
+  @include m-box-sizing();
+  overflow: hidden auto !important;
+}
