@@ -1,5 +1,5 @@
 {
-  "name": "@modyqyw/mp-css",
+  "name": "@modyqyw/mp-scss",
   "version": "0.1.0",
   "description": "Custom css for miniprograms.",
   "author": "ModyQyW <261857860@qq.com>",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:ModyQyW/mp-css.git"
+    "url": "git@github.com:ModyQyW/mp-scss.git"
   },
   "keywords": [
     "css",
