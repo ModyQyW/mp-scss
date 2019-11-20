@@ -45,16 +45,27 @@ npm i @modyqyw/mp-scss
 - 引入预设变量。之后你可以根据预设变量定制自己的样式。
 
 ```scss
-// scss
+/* uni-app @/App.vue 需要手动先添加 sass 和 sass-loader */
 @import "~@modyqyw/mp-scss";
+```
+
+```scss
+/* taro @/app.scss */
+@import "../node_modules/@modyqyw/mp-scss/index";
 ```
 
 - 引入预设样式。
 
 ```scss
-// scss
+/* uni-app @/App.vue 需要手动先添加 sass 和 sass-loader */
 @import "~@modyqyw/mp-scss";
 @import "~@modyqyw/mp-scss/styles";
+```
+
+```scss
+/* taro @/app.scss */
+@import "../node_modules/@modyqyw/mp-scss/index";
+@import "../node_modules/@modyqyw/mp-scss/styles/index";
 ```
 
 - 目前默认配色使用 Ant Design 配色，如果要修改，请在引入预设变量后修改。修改该部分会影响默认配色，但是你能使用 Ant Design 和 Material Design 所有配色。仅支持`default`，`ad`和`md`，其他情况会回退到`ad`。

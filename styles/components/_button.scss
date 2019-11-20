@@ -3,8 +3,8 @@
   @include m-box-sizing();
   @include m-display();
   @include m-flex-axis-center();
-  @include m-spacing-reset();
-  @include m-spacing-padding(0, $spacing-md);
+  @include m-spacing-padding-2(0, $spacing-md);
+  @include m-spacing-margin-reset();
   @include m-font-size();
   @include m-font-weight();
   line-height: 1.5;
@@ -42,7 +42,7 @@
 }
 
 .btn-warning {
-  @include m-background-color($waring-color);
+  @include m-background-color($warning-color);
   @include m-border($warning-color);
 }
 

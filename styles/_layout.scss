@@ -7,7 +7,7 @@ page {
   @include m-sizing-full();
   @include m-spacing-reset();
   overflow: hidden;
-  @include m-font-family();
+  @include m-font-family-reset();
   @include m-font-size();
   @include m-font-weight();
   @include m-line-height();
@@ -73,14 +73,14 @@ page {
   .header {
     flex: 0 0 $sizing-layout-xl;
     padding: $spacing-none $spacing-lg;
-    border-bottom: $border-width solid $border-color;
+    border-bottom: $border-width-default solid $border-color-default;
   }
 
   .nav {
     flex: 0 0 $sizing-layout-xs;
     padding: $spacing-none;
     overflow: hidden;
-    border-bottom: $border-width solid $border-color;
+    border-bottom: $border-width-default solid $border-color-default;
   }
 
   .aside {
@@ -105,6 +105,6 @@ page {
   .footer {
     flex: 0 0 $sizing-layout-xxxxl;
     padding: $spacing-none $spacing-lg;
-    border-top: $borderWidthSm solid $borderColor;
+    border-top: $border-width-default solid $border-color-default;
   }
 }
