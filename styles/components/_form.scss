@@ -4,7 +4,7 @@
   @include m-box-sizing-reset();
   @include m-display-reset();
   @include m-flex-axis($flex-column);
-  @include m-sizing(80%);
+  @include m-sizing(80% $sizing-layout-auto);
 
   .form-item {
     @include m-position();
