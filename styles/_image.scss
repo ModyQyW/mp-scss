@@ -20,3 +20,9 @@ $image-sizing-list: map-keys($image-sizing-map);
     @include m-sizing-square(map-get($image-sizing-map, $size));
   }
 }
+
+.bg {
+  @include m-position(fixed);
+  @include m-z-index(-99);
+  @include m-sizing-square(100%);
+}
