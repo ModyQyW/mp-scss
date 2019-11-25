@@ -131,9 +131,17 @@ $sizing-image-xxxxl: f-get-sizing($sizing-image-base, $sizing-image-step, 5); /*
   height: 100%;
 }
 
-@mixin m-sizing($width, $height) {
+@mixin m-sizing-width($width) {
   width: $width;
+}
+
+@mixin m-sizing-height($height) {
   height: $height;
+}
+
+@mixin m-sizing($width, $height) {
+  @include m-sizing-width($width);
+  @include m-sizing-height($height);
 }
 
 @mixin m-sizing-square($size) {
@@ -200,6 +208,22 @@ $spacing-inverse-xxl: f-get-spacing-inverse(3); /* 默认 -28 */
   padding: $padding;
 }
 
+@mixin m-spacing-padding-top($padding-top: $spacing-0) {
+  padding-top: $padding-top;
+}
+
+@mixin m-spacing-padding-right($padding-right: $spacing-0) {
+  padding-right: $padding-right;
+}
+
+@mixin m-spacing-padding-bottom($padding-bottom: $spacing-0) {
+  padding-bottom: $padding-bottom;
+}
+
+@mixin m-spacing-padding-left($padding-left: $spacing-0) {
+  padding-left: $padding-left;
+}
+
 @mixin m-spacing-padding($padding: $spacing-0) {
   padding: $padding;
 }
@@ -231,6 +255,22 @@ $spacing-inverse-xxl: f-get-spacing-inverse(3); /* 默认 -28 */
 
 @mixin m-spacing-margin-1($margin: $spacing-0) {
   margin: $margin;
+}
+
+@mixin m-spacing-margin-top($margin-top: $spacing-0) {
+  margin-top: $margin-top;
+}
+
+@mixin m-spacing-margin-right($margin-right: $spacing-0) {
+  margin-right: $margin-right;
+}
+
+@mixin m-spacing-margin-bottom($margin-bottom: $spacing-0) {
+  margin-bottom: $margin-bottom;
+}
+
+@mixin m-spacing-margin-left($margin-left: $spacing-0) {
+  margin-left: $margin-left;
 }
 
 @mixin m-spacing-margin($margin: $spacing-0) {
