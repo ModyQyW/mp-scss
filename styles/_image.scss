@@ -12,6 +12,7 @@ $icon-sizing-list: map-keys($icon-sizing-map);
 @each $size in $icon-sizing-list {
   .icon-#{$size} {
     @include m-sizing-square(map-get($icon-sizing-map, $size));
+    flex: 0 0 map-get($icon-sizing-map, $size);
   }
 }
 
@@ -30,6 +31,7 @@ $logo-sizing-list: map-keys($logo-sizing-map);
 @each $size in $logo-sizing-list {
   .logo-#{$size} {
     @include m-sizing-square(map-get($logo-sizing-map, $size));
+    flex: 0 0 map-get($logo-sizing-map, $size);
   }
 }
 
@@ -54,5 +56,6 @@ $image-sizing-list: map-keys($image-sizing-map);
 @each $size in $image-sizing-list {
   .image-#{$size} {
     @include m-sizing-square(map-get($image-sizing-map, $size));
+    flex: 0 0 map-get($image-sizing-map, $size);
   }
 }
