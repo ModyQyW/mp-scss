@@ -66,12 +66,27 @@ npm i @modyqyw/mp-scss
 @import "../node_modules/@modyqyw/mp-scss/styles/index";
 ```
 
-- 目前默认配色使用 Ant Design 配色，如果要修改，请在引入预设变量前修改。修改该部分会影响默认配色。仅支持`default`，`ad`和`md`，其他情况会回退到`ad`。
+- 目前默认配色使用 Ant Design 配色，如果要修改，请在引入预设变量前进行稀颗粒度的修改，修改该部分会影响默认配色。
 
 ```scss
-$colors: "default"; // 使用 html5 颜色配色
-$colors: "ad"; // 使用 Ant Design 颜色配色，默认
-$colors: "md"; // 使用 Material Design 颜色配色
+/* 默认为 Ant Design 配色 */
+$primary-color: $ad-blue;
+$success-color: $ad-green;
+$warning-color: $ad-gold;
+$error-color: $ad-red;
+$info-color: $ad-blue;
+/* 使用 Material Design 配色 */
+$primary-color: $md-blue;
+$success-color: $md-green;
+$warning-color: $md-yellow;
+$error-color: $md-red;
+$info-color: $md-blue;
+/* 使用 html 配色 */
+$primary-color: blue;
+$success-color: green;
+$warning-color: yellow;
+$error-color: red;
+$info-color: blue;
 ```
 
 - 目前默认使用 rpx 作为长度单位，如果要修改，请在引入预设变量前修改。支持任意值，但是你乱玩就肯定会出一些莫名情况的情况，不保修。
