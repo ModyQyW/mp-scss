@@ -1,0 +1,31 @@
+/* form */
+[class*="form-"] {
+  @include m-position();
+  @include m-box-sizing-reset();
+  @include m-display-reset();
+  @include m-flex-axis($flex-column);
+  @include m-sizing(80%);
+
+  .form-item {
+    @include m-position();
+    @include m-box-sizing-reset();
+    @include m-display-reset();
+    @include m-flex-axis-reset();
+    @include m-sizing(80%, $sizing-layout-auto);
+
+    .label {
+      @include m-position();
+      @include m-box-sizing-reset();
+      @include m-display-reset();
+      @include m-flex-axis($flex-row, $flex-start, $flex-end);
+      flex: 0 0 f-get-sizing($sizing-layout-base, $sizing-layout-step, 10);
+    }
+
+    .content {
+      @include m-position();
+      @include m-box-sizing-reset();
+      @include m-display-reset();
+      flex: $flex-auto;
+    }
+  }
+}
