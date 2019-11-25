@@ -66,7 +66,7 @@ npm i @modyqyw/mp-scss
 @import "../node_modules/@modyqyw/mp-scss/styles/index";
 ```
 
-- 目前默认配色使用 Ant Design 配色，如果要修改，请在引入预设变量前进行稀颗粒度的修改，修改该部分会影响默认配色。
+- 目前默认配色使用 Ant Design 配色，如果要修改，请在引入预设变量前进行细颗粒度的修改，修改该部分会影响默认配色。
 
 ```scss
 /* 默认为 Ant Design 配色 */
