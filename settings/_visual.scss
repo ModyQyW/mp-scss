@@ -131,7 +131,7 @@ $border-radius-xxxl: f-get-border-radius(4); /* 默认 32 */
 }
 
 @mixin m-border-radius-reset() {
-  @include m-border-radius();
+  @include m-border-radius-none();
 }
 
 /* outline */
