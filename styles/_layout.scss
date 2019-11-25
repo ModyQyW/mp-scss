@@ -40,6 +40,12 @@ page {
     }
   }
 
+  .bg {
+    @include m-position(fixed);
+    @include m-z-index(-99);
+    @include m-sizing-square(100%);
+  }
+
   .header,
   .nav,
   .footer {
