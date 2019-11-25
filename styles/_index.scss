@@ -18,19 +18,8 @@
 /* 排版 */
 @import "./typography";
 
-/* 图标 */
-@import "./icon";
-
-/* 徽标 */
-@import "./logo";
-
-/* 图片 */
+/* 图标、徽标、图片 */
 @import "./image";
 
 /* 组件 */
-
-@import "./components/button";
-
-@import "./components/dialog";
-
-@import "./components/modal";
+@import "./components/index";
