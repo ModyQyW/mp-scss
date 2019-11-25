@@ -1,7 +1,7 @@
 /* flex */
 .df {
-  @include m-box-sizing();
-  @include m-display();
+  @include m-box-sizing-reset();
+  @include m-display-reset();
 }
 
 .flex-auto {

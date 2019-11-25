@@ -1,7 +1,7 @@
 /* button */
 [class*="btn-"] {
-  @include m-box-sizing();
-  @include m-display();
+  @include m-box-sizing-reset();
+  @include m-display-reset();
   @include m-flex-axis-center();
   @include m-spacing-padding-2(0, $spacing-lg);
   @include m-spacing-margin-reset();

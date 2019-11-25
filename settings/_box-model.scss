@@ -65,7 +65,7 @@ $flex-end: flex-end;
   justify-content: $flex-center;
 }
 
-@mixin m-flex-reset() {
+@mixin m-flex-axis-reset() {
   @include m-flex-axis();
 }
 
