@@ -42,7 +42,7 @@ npm i @modyqyw/mp-scss
 
 - 目前仅支持 scss，没有计划支持原生 css 和 less，虽然我都有思路。
 
-- 引入预设变量。之后你可以根据预设变量定制自己的样式。
+- 引入预设变量。之后你可以根据预设变量定制自己的样式。你也可以在某一页面引入以使用预设变量。
 
 ```scss
 /* uni-app @/App.vue 需要手动先添加 sass 和 sass-loader */
@@ -58,17 +58,15 @@ npm i @modyqyw/mp-scss
 
 ```scss
 /* uni-app @/App.vue 需要手动先添加 sass 和 sass-loader */
-@import "~@modyqyw/mp-scss";
 @import "~@modyqyw/mp-scss/styles";
 ```
 
 ```scss
 /* taro @/app.scss */
-@import "../node_modules/@modyqyw/mp-scss/index";
 @import "../node_modules/@modyqyw/mp-scss/styles/index";
 ```
 
-- 目前默认配色使用 Ant Design 配色，如果要修改，请在引入预设变量后修改。修改该部分会影响默认配色，但是你能使用 Ant Design 和 Material Design 所有配色。仅支持`default`，`ad`和`md`，其他情况会回退到`ad`。
+- 目前默认配色使用 Ant Design 配色，如果要修改，请在引入预设变量前修改。修改该部分会影响默认配色。仅支持`default`，`ad`和`md`，其他情况会回退到`ad`。
 
 ```scss
 $colors: "default"; // 使用 html5 颜色配色
@@ -76,7 +74,7 @@ $colors: "ad"; // 使用 Ant Design 颜色配色，默认
 $colors: "md"; // 使用 Material Design 颜色配色
 ```
 
-- 目前默认使用 rpx 作为长度单位，如果要修改，请在引入预设变量后修改。支持任意值，但是你乱玩就肯定会出一些莫名情况的情况，不保修。
+- 目前默认使用 rpx 作为长度单位，如果要修改，请在引入预设变量前修改。支持任意值，但是你乱玩就肯定会出一些莫名情况的情况，不保修。
 
 ```scss
 $unit: rpx; // 使用 rpx 作为长度单位，默认
