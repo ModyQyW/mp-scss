@@ -1,5 +1,5 @@
 /* button */
-[class^="btn-"] {
+[class*="btn-"] {
   @include m-box-sizing();
   @include m-display();
   @include m-flex-axis-center();
@@ -21,6 +21,10 @@
 
 .btn-border {
   @include m-border-reset();
+}
+
+.btn-border-radius {
+  @include m-border-radius();
 }
 
 .btn-primary,
