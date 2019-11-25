@@ -6,12 +6,13 @@
   @include m-flex-axis($flex-column);
   @include m-sizing(80%, $sizing-layout-auto);
 
-  .form-item {
+  .item {
     @include m-position();
     @include m-box-sizing-reset();
     @include m-display-reset();
     @include m-flex-axis-reset();
     @include m-sizing(80%, $sizing-layout-auto);
+    @include m-spacing-margin-bottom($spacing-lg);
 
     .label {
       @include m-position();
@@ -26,6 +27,7 @@
       @include m-box-sizing-reset();
       @include m-display-reset();
       flex: $flex-auto;
+      @include m-spacing-margin-left($spacing-sm);
     }
   }
 }
