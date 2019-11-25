@@ -32,6 +32,11 @@
   flex-wrap: $flex-nowrap !important;
 }
 
+.flex-center {
+  align-items: $flex-center !important;
+  justify-content: $flex-center !important;
+}
+
 .align-content-center {
   align-content: $flex-center !important;
 }
