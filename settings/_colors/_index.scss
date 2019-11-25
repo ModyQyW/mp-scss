@@ -14,21 +14,21 @@ $error-color: red !default;
 $info-color: blue !default;
 
 @if ($colors == "md") {
-  $primary-color: $md-blue !default;
-  $success-color: $md-green !default;
-  $warning-color: $md-yellow !default;
-  $error-color: $md-red !default;
-  $info-color: $md-blue !default;
+  $primary-color: $md-blue;
+  $success-color: $md-green;
+  $warning-color: $md-yellow;
+  $error-color: $md-red;
+  $info-color: $md-blue;
 } @else if ($colors == "default") {
-  $primary-color: blue !default;
-  $success-color: green !default;
-  $warning-color: yellow !default;
-  $error-color: red !default;
-  $info-color: blue !default;
+  $primary-color: blue;
+  $success-color: green;
+  $warning-color: yellow;
+  $error-color: red;
+  $info-color: blue;
 } @else {
-  $primary-color: $ad-blue !default;
-  $success-color: $ad-green !default;
-  $warning-color: $ad-gold !default;
-  $error-color: $ad-red !default;
-  $info-color: $ad-blue !default;
+  $primary-color: $ad-blue;
+  $success-color: $ad-green;
+  $warning-color: $ad-gold;
+  $error-color: $ad-red;
+  $info-color: $ad-blue;
 }
