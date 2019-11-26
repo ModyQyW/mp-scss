@@ -5,13 +5,14 @@
   @include m-display-reset();
   @include m-flex-axis($flex-column);
   @include m-sizing(80%, $sizing-layout-auto);
-  @include m-spacing-padding($sizing-layout-md);
+  @include m-spacing-padding($spacing-xl);
+  @include m-background-color(rgba(255, 255, 255, .85));
 
   .item {
     @include m-position();
     @include m-box-sizing-reset();
     @include m-display-reset();
-    @include m-flex-axis-reset();
+    @include m-flex-axis-center();
     @include m-sizing(100%, $sizing-layout-auto);
     @include m-spacing-margin-bottom($spacing-lg);
 
@@ -23,8 +24,13 @@
       @include m-position();
       @include m-box-sizing-reset();
       @include m-display-reset();
-      @include m-flex-axis($flex-row, $flex-start, $flex-end);
-      flex: 0 0 f-get-sizing($sizing-layout-base, $sizing-layout-step, 10);
+      @include m-flex-axis($flex-row, $flex-center, $flex-end);
+      flex: 0 0 $sizing-layout-xxxxl;
+
+      &.use-icon {
+        @include m-flex-axis-center();
+        flex: 0 0 $sizing-icon-md;
+      }
     }
 
     .content {
