@@ -54,6 +54,30 @@ $flex-self-end: self-end;
 $flex-start: flex-start;
 $flex-end: flex-end;
 
+@mixin m-flex-direction($flex-direction: $flex-row) {
+  flex-direction: $flex-direction;
+}
+
+@mixin m-flex-direction-reset() {
+  flex-direction: $flex-row;
+}
+
+@mixin m-flex-wrap($flex-wrap: $flex-nowrap) {
+  flex-wrap: $flex-wrap;
+}
+
+@mixin m-flex-wrap-reset() {
+  flex-wrap: $flex-nowrap;
+}
+
+@mixin m-flex-order($flex-order: $flex-order-default) {
+  order: $flex-order;
+}
+
+@mixin m-flex-order-reset() {
+  order: $flex-order-default;
+}
+
 @mixin m-flex-axis($flex-direction: $flex-row, $align-items: $flex-start, $justify-content: $flex-start) {
   flex-direction: $flex-direction;
   align-items: $align-items;
@@ -224,6 +248,16 @@ $spacing-inverse-xxl: f-get-spacing-inverse(3); /* 默认 -28 */
   padding-left: $padding-left;
 }
 
+@mixin m-spacing-padding-vertical($padding-vertical: $spacing-0) {
+  @include m-spacing-padding-top($padding-vertical);
+  @include m-spacing-padding-bottom($padding-vertical);
+}
+
+@mixin m-spacing-padding-horizontal($padding-horizontal: $spacing-0) {
+  @include m-spacing-padding-left($padding-horizontal);
+  @include m-spacing-padding-right($padding-horizontal);
+}
+
 @mixin m-spacing-padding($padding: $spacing-0) {
   padding: $padding;
 }
@@ -271,6 +305,16 @@ $spacing-inverse-xxl: f-get-spacing-inverse(3); /* 默认 -28 */
 
 @mixin m-spacing-margin-left($margin-left: $spacing-0) {
   margin-left: $margin-left;
+}
+
+@mixin m-spacing-margin-vertical($margin-vertical: $spacing-0) {
+  @include m-spacing-margin-top($margin-vertical);
+  @include m-spacing-margin-bottom($margin-vertical);
+}
+
+@mixin m-spacing-margin-horizontal($margin-horizontal: $spacing-0) {
+  @include m-spacing-margin-left($margin-horizontal);
+  @include m-spacing-margin-right($margin-horizontal);
 }
 
 @mixin m-spacing-margin($margin: $spacing-0) {
