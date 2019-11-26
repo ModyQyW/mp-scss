@@ -96,7 +96,7 @@ $unit: rpx; // 使用 rpx 作为长度单位，默认
 $unit: px; // 使用 px 作为长度单位
 ```
 
-- 目前默认会放大到 2 倍，原因见[此处](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html)。你可以引入预设变量后修改。
+- 目前默认会放大到 2 倍，原因见[此处](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html)。你可以引入预设变量前修改。
 
 ```scss
 $scale: 2; // 放大到 2 倍，默认
