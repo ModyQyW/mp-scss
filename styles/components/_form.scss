@@ -5,14 +5,19 @@
   @include m-display-reset();
   @include m-flex-axis($flex-column);
   @include m-sizing(80%, $sizing-layout-auto);
+  @include m-spacing-padding($sizing-layout-md);
 
   .item {
     @include m-position();
     @include m-box-sizing-reset();
     @include m-display-reset();
     @include m-flex-axis-reset();
-    @include m-sizing(80%, $sizing-layout-auto);
+    @include m-sizing(100%, $sizing-layout-auto);
     @include m-spacing-margin-bottom($spacing-lg);
+
+    &:last-child {
+      @include m-spacing-margin-reset();
+    }
 
     .label {
       @include m-position();
