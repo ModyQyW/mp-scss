@@ -8,6 +8,16 @@
   @include m-border-color-reset();
   @include m-border-radius();
 
+  &.border-none {
+    @include m-border-none();
+  }
+
+  &.border-bottom {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
   .prefix {
     flex: 0 0 $sizing-icon-md;
     @include m-flex-order-reset();
