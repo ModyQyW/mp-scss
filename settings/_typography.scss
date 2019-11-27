@@ -13,7 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* 字体大小 */
+/* font-size */
 $font-size-base: 14 !default;
 $font-size-step: 1 !default;
 $font-size-scale: $scale !default;
@@ -51,7 +51,7 @@ $font-size-a-14: f-get-font-size(14); /* 默认 56 */
   @include m-font-size();
 }
 
-/* 字体粗细 */
+/* font-weight */
 $font-weight-100: 100;
 $font-weight-thin: 100;
 $font-weight-200: 200;
@@ -84,7 +84,7 @@ $font-weight-heavy: 900;
   @include m-font-weight();
 }
 
-/* 行高，跟随 Ant Design */
+/* line-height，跟随 Ant Design */
 $line-height-base: 22 !default;
 $line-height-step: 1 !default;
 $line-height-scale: $scale !default;
@@ -122,7 +122,8 @@ $line-height-a-14: f-get-line-height(14); /* 默认 72 */
   @include m-line-height();
 }
 
-/* 字体颜色，扩展 Ant Design */
+
+/* color，扩展 Ant Design */
 $color-title: rgba(0, 0, 0, .85) !default;
 $color-title-light: rgba(0, 0, 0, .75) !default;
 $color-main: rgba(0, 0, 0, .65) !default;
@@ -136,20 +137,26 @@ $color-main-light-inverse: rgba(255, 255, 255, .75) !default;
 $color-secondary-inverse: rgba(255, 255, 255, .65) !default;
 $color-disabled-inverse: rgba(255, 255, 255, .45) !default;
 
-@mixin m-color($color) {
-  color: $color;
+@mixin m-color($color: null) {
+  @if ($color == null) {
+    @include m-color-reset();
+  } @else {
+    color: $color;
+  }
 }
 
 @mixin m-color-reset() {
   .light & {
-    color: $color-main;
+    @include m-color($color-main);
   }
+
   .dark & {
-    color: $color-main-inverse;
+    @include m-color($color-main-inverse);
   }
 }
 
-/* 内容 */
+
+/* content */
 @mixin m-content($content: "") {
   content: $content;
 }
@@ -158,16 +165,17 @@ $color-disabled-inverse: rgba(255, 255, 255, .45) !default;
   @include m-content();
 }
 
-/* 可调整性 */
+
+/* resize */
 $resize-none: none;
 $resize-both: both;
 $resize-horizontal: horizontal;
 $resize-vertical: vertical;
 
-@mixin m-resize($resize: $resize-none) {
+@mixin m-resize($resize: initial) {
   resize: $resize;
 }
 
 @mixin m-resize-reset() {
-  resize: initial;
+  @include m-resize();
 }

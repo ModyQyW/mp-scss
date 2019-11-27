@@ -7,7 +7,7 @@ $ad-palette-saturation-step-2: 5%;
 $ad-palette-brightness-step-1: 5%;
 $ad-palette-brightness-step-2: 15%;
 
-@function hex-to-hsv($hex-color) {
+@function f-ad-palette-hex-to-hsv($hex-color) {
   // convert
   $r: red($hex-color) / 255;
   $g: green($hex-color) / 255;
@@ -39,7 +39,7 @@ $ad-palette-brightness-step-2: 15%;
 }
 
 
-@function hsv-to-hex($h, $s, $v) {
+@function f-ad-palette-hsv-to-hex($h, $s, $v) {
   $h: $h / 1deg;
   $s: $s / 100%;
   $v: $v / 100%;
@@ -64,7 +64,7 @@ $ad-palette-brightness-step-2: 15%;
   }
 }
 
-@function get-hue($h, $s, $v, $diff, $is-lighter) {
+@function f-ad-palette-get-hue($h, $s, $v, $diff, $is-lighter) {
   $hue: 0deg;
   @if ($h == 0deg and $s == 0%) {
     @return $h;
@@ -91,7 +91,7 @@ $ad-palette-brightness-step-2: 15%;
   @return round($hue);
 }
 
-@function get-saturation($h, $s, $v, $diff, $is-lighter) {
+@function f-ad-palette-get-saturation($h, $s, $v, $diff, $is-lighter) {
   $saturation: 0%;
   @if ($h == 0deg and $s == 0%) {
     @return $s;
@@ -115,7 +115,7 @@ $ad-palette-brightness-step-2: 15%;
   @return round($saturation);
 }
 
-@function get-value($h, $s, $v, $diff, $is-lighter) {
+@function f-ad-palette-get-value($h, $s, $v, $diff, $is-lighter) {
   @if ($is-lighter) {
     @return if(
       round(($v + $ad-palette-brightness-step-1 * $diff) * 100) / 100 > 100%,
@@ -130,12 +130,12 @@ $ad-palette-brightness-step-2: 15%;
   );
 }
 
-@function get-color($hex-color, $idx) {
+@function f-get-color($hex-color, $idx) {
   @if ($idx == 6) {
     @return $hex-color;
   }
   $is-lighter: $idx <= 6;
-  $hsv-color: hex-to-hsv($hex-color); // deg, %, %
+  $hsv-color: f-ad-palette-hex-to-hsv($hex-color); // deg, %, %
   $diff: if(
     $is-lighter,
     $ad-palette-light-color-count + 1 - $idx,
@@ -144,9 +144,9 @@ $ad-palette-brightness-step-2: 15%;
   $h: nth($hsv-color, 1); // deg
   $s: nth($hsv-color, 2); // %
   $v: nth($hsv-color, 3); // %
-  @return hsv-to-hex(
-    get-hue($h, $s, $v, $diff, $is-lighter),
-    get-saturation($h, $s, $v, $diff, $is-lighter),
-    get-value($h, $s, $v, $diff, $is-lighter)
+  @return f-ad-palette-hsv-to-hex(
+    f-ad-palette-get-hue($h, $s, $v, $diff, $is-lighter),
+    f-ad-palette-get-saturation($h, $s, $v, $diff, $is-lighter),
+    f-ad-palette-get-value($h, $s, $v, $diff, $is-lighter)
   );
 }

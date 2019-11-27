@@ -6,7 +6,7 @@ $color-transparent: transparent !default;
 @import "./ad-colors";
 @import "./md-colors";
 
-/* 根据配色方案确定主色，成功色，警告色和错误色 */
+/* 默认使用 Ant Design 配色 */
 $primary-color: $ad-blue !default;
 $success-color: $ad-green !default;
 $warning-color: $ad-gold !default;
