@@ -3,7 +3,7 @@
   @include m-box-sizing-reset();
   @include m-display-reset();
   @include m-flex-axis-center();
-  @include m-spacing-padding-2(0, $spacing-lg);
+  @include m-spacing-padding-2($spacing-0, $spacing-lg);
   @include m-spacing-margin-reset();
   @include m-font-size();
   @include m-font-weight();
@@ -14,7 +14,7 @@
   @include m-border-radius-none();
 
   &::after {
-    @include m-border-reset();
+    @include m-border-none();
     @include m-border-radius-none();
   }
 
@@ -23,7 +23,7 @@
   }
   
   &.btn-border-radius {
-    @include m-border-radius();
+    @include m-border-radius-reset();
   }
   
   &.btn-primary,

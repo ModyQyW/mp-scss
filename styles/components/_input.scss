@@ -1,21 +1,21 @@
 /* input */
 .wrapper-input {
   @include m-display-reset();
-  @include m-flex-axis-center();
+  @include m-flex-axis($flex-row, $flex-center, $flex-center);
   min-width: f-get-sizing($sizing-layout-base, $sizing-layout-step, 8);
   height: $sizing-layout-md;
   @include m-border-reset();
   @include m-border-color-reset();
-  @include m-border-radius();
+  @include m-border-radius-reset();
 
   &.border-none {
     @include m-border-none();
   }
 
   &.border-bottom {
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    @include m-border-top-none();
+    @include m-border-right-none();
+    @include m-border-left-none();
   }
 
   .prefix {
@@ -35,7 +35,7 @@
   [class*="input-"] {
     flex: $flex-auto;
     @include m-flex-order($flex-order-1);
-    height: 100%;
+    height: $sizing-100-pct;
     @include m-spacing-padding-horizontal($spacing-sm);
 
     .prefix + & {

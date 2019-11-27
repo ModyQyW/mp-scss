@@ -1,19 +1,19 @@
 /* form */
 [class*="form-"] {
-  @include m-position();
+  @include m-position-reset();
   @include m-box-sizing-reset();
   @include m-display-reset();
   @include m-flex-axis($flex-column);
-  @include m-sizing(80%, $sizing-layout-auto);
+  @include m-sizing($sizing-80-pct, $sizing-layout-auto);
   @include m-spacing-padding($spacing-xl);
   @include m-background-color(rgba(255, 255, 255, .85));
 
   .item {
-    @include m-position();
+    @include m-position-reset();
     @include m-box-sizing-reset();
     @include m-display-reset();
-    @include m-flex-axis-center();
-    @include m-sizing(100%, $sizing-layout-auto);
+    @include m-flex-axis($flex-row, $flex-center, $flex-center);
+    @include m-sizing($sizing-100-pct, $sizing-layout-auto);
     @include m-spacing-margin-bottom($spacing-lg);
 
     &:last-child {
@@ -21,7 +21,7 @@
     }
 
     .label {
-      @include m-position();
+      @include m-position-reset();
       @include m-box-sizing-reset();
       @include m-display-reset();
       @include m-flex-axis($flex-row, $flex-center, $flex-end);
@@ -34,12 +34,12 @@
     }
 
     .content {
-      @include m-position();
+      @include m-position-reset();
       @include m-box-sizing-reset();
       @include m-display-reset();
       flex: $flex-auto;
 
-      .label + .content {
+      .label + & {
         @include m-spacing-margin-left($spacing-sm);
       }
     }
