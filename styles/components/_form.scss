@@ -31,6 +31,10 @@
         @include m-flex-axis-center();
         flex: 0 0 $sizing-icon-md;
       }
+
+      & + .content {
+        @include m-spacing-margin-left($spacing-sm);
+      }
     }
 
     .content {
@@ -38,10 +42,6 @@
       @include m-box-sizing-reset();
       @include m-display-reset();
       flex: $flex-auto;
-
-      .label + & {
-        @include m-spacing-margin-left($spacing-sm);
-      }
     }
   }
 }
