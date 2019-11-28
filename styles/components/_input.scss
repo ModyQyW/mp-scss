@@ -50,6 +50,6 @@
   }
 
   .input-placeholder {
-    @include m-spacing-margin-reset;
+    @include m-spacing-margin-reset();
   }
 }

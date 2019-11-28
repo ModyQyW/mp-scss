@@ -7,8 +7,8 @@
   @include m-background-color($background-color-mask);
 
   & > .dialog {
-    @include m-position();
-    width: 80%;
+    @include m-position-reset();
+    @include m-sizing-width($sizing-80-pct);
     @include m-spacing-padding($spacing-md);
 
     & > .icon-close {

@@ -7,7 +7,7 @@
   @include m-background-color($background-color-mask);
 
   & > .modal {
-    @include m-position();
+    @include m-position-reset();
     width: 80%;
     @include m-spacing-padding($spacing-md);
 

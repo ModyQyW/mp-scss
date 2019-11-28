@@ -5,8 +5,8 @@
   @include m-flex-axis-center();
   @include m-spacing-padding-2($spacing-0, $spacing-xxl);
   @include m-spacing-margin-reset();
-  @include m-font-size();
-  @include m-font-weight();
+  @include m-font-size-reset();
+  @include m-font-weight-reset();
   line-height: 2.4;
   @include m-color-reset();
   text-align: center;

@@ -3,8 +3,8 @@
   @include m-position-reset();
   @include m-box-sizing-reset();
   @include m-display-reset();
-  flex: 0 0 (1 + $unit);
-  @include m-sizing(1 + $unit, $line-height-default);
+  flex: $flex-ratio-0 $flex-ratio-0 $border-width-default;
+  @include m-sizing($border-width-default, $line-height-default);
   @include m-spacing-margin-horizontal($spacing-lg);
   
   .light & {
@@ -16,6 +16,6 @@
   }
 
   &.is-vertical {
-    @include m-sizing($line-height-default, 1 + $unit);
+    @include m-sizing($line-height-default, $border-width-default);
   }
 }
