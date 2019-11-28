@@ -1,0 +1,7 @@
+/* text */
+.text {
+  @include m-font-family-reset();
+  @include m-font-size(unset);
+  @include m-line-height(unset);
+  @include m-color-reset();
+}

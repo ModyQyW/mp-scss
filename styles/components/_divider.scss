@@ -1,0 +1,21 @@
+/* divider */
+.divider {
+  @include m-position-reset();
+  @include m-box-sizing-reset();
+  @include m-display-reset();
+  flex: 0 0 (1 + $unit);
+  @include m-sizing(1 + $unit, $line-height-default);
+  @include m-spacing-margin-horizontal($spacing-lg);
+  
+  .light & {
+    @include m-background-color($color-main);
+  }
+
+  .dark & {
+    @include m-background-color($color-main-inverse);
+  }
+
+  &.is-vertical {
+    @include m-sizing($line-height-default, 1 + $unit);
+  }
+}

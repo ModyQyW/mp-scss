@@ -2,7 +2,7 @@
 
 /* 微信小程序根元素 */
 page {
-  @include m-position();
+  @include m-position-reset();
   @include m-box-sizing-reset();
   @include m-sizing-full();
   @include m-spacing-reset();
@@ -11,8 +11,6 @@ page {
   @include m-font-size();
   @include m-font-weight();
   @include m-line-height();
-  @include m-color-reset();
-  @include m-background-color-reset();
 }
 
 /* 重置 box-sizing */
@@ -21,7 +19,7 @@ page {
 }
 
 .container {
-  @include m-position();
+  @include m-position-reset();
   @include m-box-sizing-reset();
   @include m-display-reset();
   @include m-flex-axis($flex-column);
@@ -37,6 +35,7 @@ page {
     .main {
       width: auto;
       height: 100%;
+      @include m-spacing-padding-reset();
     }
   }
 
@@ -49,7 +48,7 @@ page {
   .header,
   .nav,
   .footer {
-    @include m-position();
+    @include m-position-reset();
     @include m-box-sizing-reset();
     @include m-display-reset();
     @include m-flex-axis($flex-row, $flex-center, $flex-space-between);
@@ -90,7 +89,7 @@ page {
   }
 
   .aside {
-    @include m-position();
+    @include m-position-reset();
     @include m-box-sizing-reset();
     @include m-display-reset();
     @include m-flex-axis($flex-column, $flex-center);
@@ -99,18 +98,20 @@ page {
   }
 
   .main {
-    @include m-position();
+    @include m-position-reset();
     @include m-box-sizing-reset();
     @include m-display-reset();
     flex: $flex-auto;
     @include m-flex-axis($flex-column);
     width: 100%;
     height: auto;
+    @include m-spacing-padding($spacing-xl);
   }
 
   .footer {
+    @include m-flex-axis($flex-row, $flex-start, $flex-center); // 匹配 iPhone X 系列
     flex: 0 0 $sizing-layout-xxxxl;
-    padding: $spacing-none $spacing-lg;
+    padding: $spacing-xs $spacing-lg;
     border-top: $border-width-default solid $border-color-default;
   }
 }
