@@ -52,7 +52,7 @@
     @include m-border($success-color);
 
     &.btn-ghost {
-      @include m-color($primary-color);
+      @include m-color($success-color);
     }
   }
   
@@ -61,7 +61,7 @@
     @include m-border($warning-color);
 
     &.btn-ghost {
-      @include m-color($primary-color);
+      @include m-color($warning-color);
     }
   }
   
@@ -70,7 +70,7 @@
     @include m-border($error-color);
 
     &.btn-ghost {
-      @include m-color($primary-color);
+      @include m-color($error-color);
     }
   }
   
@@ -79,7 +79,7 @@
     @include m-border($info-color);
 
     &.btn-ghost {
-      @include m-color($primary-color);
+      @include m-color($info-color);
     }
   }
 }
