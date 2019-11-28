@@ -48,4 +48,8 @@
       @include m-border-color($primary-color);
     }
   }
+
+  .input-placeholder {
+    @include m-spacing-margin-reset;
+  }
 }
