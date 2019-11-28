@@ -1,5 +1,6 @@
 /* input */
 .wrapper-input {
+  @include m-box-sizing-reset();
   @include m-display-reset();
   @include m-flex-axis($flex-row, $flex-center, $flex-center);
   min-width: f-get-sizing($sizing-layout-base, $sizing-layout-step, 8);
@@ -19,32 +20,27 @@
   }
 
   .prefix {
+    @include m-box-sizing-reset();
     flex: 0 0 $sizing-icon-md;
     @include m-flex-order-reset();
     @include m-sizing-square($sizing-icon-md);
-    @include m-spacing-padding-left($spacing-sm);
-
-    & + [class*="input-"] {
-      @include m-spacing-padding-left(f-get-spacing(8));
-    }
+    @include m-spacing-margin-left($spacing-sm);
   }
 
   .suffix {
+    @include m-box-sizing-reset();
     flex: 0 0 $sizing-icon-md;
     @include m-flex-order($flex-order-2);
     @include m-sizing-square($sizing-icon-md);
-    @include m-spacing-padding-right($spacing-sm);
-
-    & + [class*="input-"] {
-      @include m-spacing-padding-right(f-get-spacing(10));
-    }
+    @include m-spacing-margin-right($spacing-sm);
   }
 
   [class*="input-"] {
+    @include m-box-sizing-reset();
     flex: $flex-auto;
     @include m-flex-order($flex-order-1);
     height: $sizing-100-pct;
-    @include m-spacing-padding-horizontal($spacing-sm);
+    @include m-spacing-margin-horizontal($spacing-xl);
 
     &:hover,
     &:focus,
