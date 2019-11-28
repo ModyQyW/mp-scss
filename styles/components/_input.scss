@@ -23,6 +23,10 @@
     @include m-flex-order-reset();
     @include m-sizing-square($sizing-icon-md);
     @include m-spacing-padding-left($spacing-sm);
+
+    & + [class*="input-"] {
+      @include m-spacing-padding-left(f-get-spacing(8));
+    }
   }
 
   .suffix {
@@ -30,6 +34,10 @@
     @include m-flex-order($flex-order-2);
     @include m-sizing-square($sizing-icon-md);
     @include m-spacing-padding-right($spacing-sm);
+
+    & + [class*="input-"] {
+      @include m-spacing-padding-right(f-get-spacing(10));
+    }
   }
 
   [class*="input-"] {
@@ -37,14 +45,6 @@
     @include m-flex-order($flex-order-1);
     height: $sizing-100-pct;
     @include m-spacing-padding-horizontal($spacing-sm);
-
-    .prefix + & {
-      @include m-spacing-padding-left(f-get-spacing(8));
-    }
-
-    .suffix + & {
-      @include m-spacing-padding-right(f-get-spacing(10));
-    }
 
     &:hover,
     &:focus,
