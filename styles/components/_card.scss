@@ -44,7 +44,7 @@
 
   & > .header,
   & > .footer {
-    @include m-flex-axis();
+    @include m-flex-axis($flex-row, $flex-center);
 
     &.center {
       @include m-flex-axis($flex-row, $flex-center, $flex-center);

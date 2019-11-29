@@ -14,7 +14,7 @@ $icon-sizing-list: map-keys($icon-sizing-map);
     @include m-sizing-square(map-get($icon-sizing-map, $size));
     flex: 0 0 map-get($icon-sizing-map, $size);
 
-    & + text[class*="text-"] {
+    & + text {
       @include m-spacing-margin-left($spacing-sm);
     }
   }
@@ -37,7 +37,7 @@ $logo-sizing-list: map-keys($logo-sizing-map);
     @include m-sizing-square(map-get($logo-sizing-map, $size));
     flex: 0 0 map-get($logo-sizing-map, $size);
 
-    & + text[class*="text-"] {
+    & + text {
       @include m-spacing-margin-left($spacing-sm);
     }
   }
@@ -66,7 +66,7 @@ $image-sizing-list: map-keys($image-sizing-map);
     @include m-sizing-square(map-get($image-sizing-map, $size));
     flex: 0 0 map-get($image-sizing-map, $size);
     
-    & + text[class*="text-"] {
+    & + text {
       @include m-spacing-margin-left($spacing-sm);
     }
   }

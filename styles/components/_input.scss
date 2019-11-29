@@ -4,7 +4,7 @@
   @include m-display-reset();
   @include m-flex-axis($flex-row, $flex-center, $flex-center);
   min-width: f-get-sizing($sizing-layout-base, $sizing-layout-step, 8);
-  @include m-sizing-height($sizing-layout-md);
+  min-height: $sizing-layout-md;
   @include m-border-reset();
   @include m-border-color-reset();
   @include m-border-radius-reset();
