@@ -4,7 +4,7 @@
   @include m-display-reset();
   @include m-flex-axis($flex-row, $flex-center, $flex-center);
   min-width: f-get-sizing($sizing-layout-base, $sizing-layout-step, 8);
-  height: $sizing-layout-md;
+  @include m-sizing-height($sizing-layout-md);
   @include m-border-reset();
   @include m-border-color-reset();
   @include m-border-radius-reset();
@@ -25,6 +25,8 @@
     @include m-flex-order-reset();
     @include m-sizing-square($sizing-icon-md);
     @include m-spacing-margin-left($spacing-sm);
+    @include m-font-size($font-size-m-2);
+    @include m-line-height($sizing-icon-md);
   }
 
   .suffix {
@@ -33,6 +35,8 @@
     @include m-flex-order($flex-order-2);
     @include m-sizing-square($sizing-icon-md);
     @include m-spacing-margin-right($spacing-sm);
+    @include m-font-size($font-size-m-2);
+    @include m-line-height($sizing-icon-md);
   }
 
   [class*="input-"] {
