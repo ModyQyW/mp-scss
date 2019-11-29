@@ -32,22 +32,22 @@ page {
     @include m-flex-axis-reset();
     height: auto;
 
-    .main {
+    & > .main {
       width: auto;
       height: 100%;
       @include m-spacing-padding-reset();
     }
   }
 
-  .bg {
+  & > .bg {
     @include m-position(fixed);
     @include m-z-index(-99);
     @include m-sizing-square(100%);
   }
 
-  .header,
-  .nav,
-  .footer {
+  & > .header,
+  & > .nav,
+  & > .footer {
     @include m-position-reset();
     @include m-box-sizing-reset();
     @include m-display-reset();
@@ -55,8 +55,8 @@ page {
     width: 100%;
     @include m-background-color($color-white);
 
-    .left,
-    .right {
+    & > .left,
+    & > .right {
       @include m-box-sizing-reset();
       @include m-display-reset();
       @include m-flex-axis($flex-row, $flex-center);
@@ -64,31 +64,31 @@ page {
       overflow: hidden;
     }
 
-    .left {
+    & > .left {
       flex: $flex-auto;
       justify-content: $flex-start;
     }
 
-    .right {
+    & > .right {
       flex: $flex-none;
       justify-content: $flex-end;
     }
   }
 
-  .header {
+  & > .header {
     flex: 0 0 $sizing-layout-xl;
     padding: $spacing-none $spacing-lg;
     border-bottom: $border-width-default solid $border-color-default;
   }
 
-  .nav {
+  & > .nav {
     flex: 0 0 $sizing-layout-xs;
     padding: $spacing-none;
     overflow: hidden;
     border-bottom: $border-width-default solid $border-color-default;
   }
 
-  .aside {
+  & > .aside {
     @include m-position-reset();
     @include m-box-sizing-reset();
     @include m-display-reset();
@@ -97,7 +97,7 @@ page {
     height: 100%;
   }
 
-  .main {
+  & > .main {
     @include m-position-reset();
     @include m-box-sizing-reset();
     @include m-display-reset();
@@ -108,7 +108,7 @@ page {
     @include m-spacing-padding($spacing-xl);
   }
 
-  .footer {
+  & > .footer {
     @include m-flex-axis($flex-row, $flex-start, $flex-center); // 匹配 iPhone X 系列
     flex: 0 0 $sizing-layout-xxxxl;
     padding: $spacing-xs $spacing-lg;
