@@ -1,13 +1,13 @@
 /* wrapper */
 .wrapper {
-  @include m-position();
+  @include m-position-reset();
   @include m-box-sizing-reset();
   @include m-display-reset();
   @include m-sizing-full();
 }
 
 .wrapper-row {
-  @include m-position();
+  @include m-position-reset();
   @include m-box-sizing-reset();
   @include m-display-reset();
   width: 100%;
@@ -15,7 +15,7 @@
 }
 
 .wrapper-col {
-  @include m-position();
+  @include m-position-reset();
   @include m-box-sizing-reset();
   @include m-display-reset();
   width: auto;
@@ -23,7 +23,7 @@
 }
 
 .wrapper-center {
-  @include m-position();
+  @include m-position-reset();
   @include m-box-sizing-reset();
   @include m-display-reset();
   @include m-flex-axis-center();
