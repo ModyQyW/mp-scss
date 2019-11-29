@@ -250,6 +250,10 @@ $border-width-default: $border-width-base * $border-width-scale + $unit;
   @include m-border-width($border-width);
 }
 
+@mixin m-border-reset() {
+  @include m-border();
+}
+
 @mixin m-border-top(
   $border-top-color: null,
   $border-top-style: $border-style-default,
@@ -258,6 +262,10 @@ $border-width-default: $border-width-base * $border-width-scale + $unit;
   @include m-border-top-color($border-top-color);
   @include m-border-top-style($border-top-style);
   @include m-border-top-width($border-top-width);
+}
+
+@mixin m-border-top-reset() {
+  @include m-border-top();
 }
 
 @mixin m-border-right(
@@ -270,6 +278,10 @@ $border-width-default: $border-width-base * $border-width-scale + $unit;
   @include m-border-right-width($border-right-width);
 }
 
+@mixin m-border-right-reset() {
+  @include m-border-right();
+}
+
 @mixin m-border-bottom(
   $border-bottom-color: null,
   $border-bottom-style: $border-style-default,
@@ -280,6 +292,10 @@ $border-width-default: $border-width-base * $border-width-scale + $unit;
   @include m-border-bottom-width($border-bottom-width);
 }
 
+@mixin m-border-bottom-reset() {
+  @include m-border-bottom();
+}
+
 @mixin m-border-left(
   $border-left-color: null,
   $border-left-style: $border-style-default,
@@ -288,6 +304,10 @@ $border-width-default: $border-width-base * $border-width-scale + $unit;
   @include m-border-left-color($border-left-color);
   @include m-border-left-style($border-left-style);
   @include m-border-left-width($border-left-width);
+}
+
+@mixin m-border-left-reset() {
+  @include m-border-left();
 }
 
 @mixin m-border-none() {
