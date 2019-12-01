@@ -1,5 +1,5 @@
 /* button */
-button[class*="btn-"] {
+[class*="btn-"] {
   @include m-box-sizing-reset();
   @include m-display-reset();
   @include m-flex-axis-center();
