@@ -132,58 +132,6 @@
   font-style: italic;
 }
 
-.light {
-  .text-disabled {
-    @include m-color($color-disabled);
-  }
-
-  .text-title {
-    @include m-color($color-title);
-  }
-
-  .text-title-light {
-    @include m-color($color-title-light);
-  }
-
-  .text-main {
-    @include m-color($color-main);
-  }
-
-  .text-main-light {
-    @include m-color($color-main-light);
-  }
-
-  .text-secondary {
-    @include m-color($color-secondary);
-  }
-}
-
-.dark {
-  .text-disabled {
-    @include m-color($color-disabled-inverse);
-  }
-
-  .text-title {
-    @include m-color($color-title-inverse);
-  }
-
-  .text-title-light {
-    @include m-color($color-title-light-inverse);
-  }
-
-  .text-main {
-    @include m-color($color-main-inverse);
-  }
-
-  .text-main-light {
-    @include m-color($color-main-light-inverse);
-  }
-
-  .text-secondary {
-    @include m-color($color-secondary-inverse);
-  }
-}
-
 .text-title {
   @include m-font-size($font-size-a-4);
   @include m-line-height($line-height-a-4);

@@ -17,7 +17,7 @@ $background-color-table-header-inverse: rgba(255, 255, 255, .04) !default;
   @if ($background-color == null) {
     @include m-background-color-reset();
   } @else {
-    background-color: $background-color;
+    background-color: $background-color !important;
   }
 }
 
@@ -27,11 +27,11 @@ $background-color-table-header-inverse: rgba(255, 255, 255, .04) !default;
 
 @mixin m-background-color-reset() {
   .light & {
-    @include m-background-color($background-color-default);
+    background-color: $background-color-default;
   }
 
   .dark & {
-    @include m-background-color($background-color-default-inverse);
+    background-color: $background-color-default-inverse;
   }
 }
 
@@ -44,7 +44,7 @@ $border-color-default-inverse: rgba(0, 0, 0, .25) !default;
   @if ($border-color == null) {
     @include m-border-color-reset();
   } @else {
-    border-color: $border-color;
+    border-color: $border-color !important;
   }
 }
 
@@ -58,7 +58,7 @@ $border-color-default-inverse: rgba(0, 0, 0, .25) !default;
       border-top-color: $border-color-default-inverse;
     }
   } @else {
-    border-top-color: $border-top-color;
+    border-top-color: $border-top-color !important;
   }
 }
 
@@ -72,7 +72,7 @@ $border-color-default-inverse: rgba(0, 0, 0, .25) !default;
       border-right-color: $border-color-default-inverse;
     }
   } @else {
-    border-right-color: $border-right-color;
+    border-right-color: $border-right-color !important;
   }
 }
 
@@ -86,7 +86,7 @@ $border-color-default-inverse: rgba(0, 0, 0, .25) !default;
       border-bottom-color: $border-color-default-inverse;
     }
   } @else {
-    border-bottom-color: $border-bottom-color;
+    border-bottom-color: $border-bottom-color !important;
   }
 }
 
@@ -100,7 +100,7 @@ $border-color-default-inverse: rgba(0, 0, 0, .25) !default;
       border-left-color: $border-color-default-inverse;
     }
   } @else {
-    border-left-color: $border-left-color;
+    border-left-color: $border-left-color !important;
   }
 }
 
@@ -109,28 +109,29 @@ $border-color-default-inverse: rgba(0, 0, 0, .25) !default;
 }
 
 @mixin m-border-top-color-transparent() {
-  border-top-color: $color-transparent;
+  @include m-border-top-color($color-transparent);
 }
 
 @mixin m-border-right-color-transparent() {
-  border-right-color: $color-transparent;
+  @include m-border-right-color($color-transparent);
 }
 
 @mixin m-border-bottom-color-transparent() {
-  border-bottom-color: $color-transparent;
+  @include m-border-bottom-color($color-transparent);
 }
 
 @mixin m-border-left-color-transparent() {
-  border-left-color: $color-transparent;
+  @include m-border-left-color($color-transparent);
+
 }
 
 @mixin m-border-color-reset() {
   .light & {
-    @include m-border-color($border-color-default);
+    border-color: $border-color-default;
   }
 
   .dark & {
-    @include m-border-color($border-color-default-inverse);
+    border-color: $border-color-default-inverse;
   }
 }
 

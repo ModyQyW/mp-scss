@@ -27,6 +27,10 @@
     @include m-spacing-margin-left($spacing-sm);
     @include m-font-size($font-size-m-2);
     @include m-line-height($sizing-icon-md);
+
+    & + input[class*="input-"] {
+      @include m-spacing-margin-left($spacing-xl);
+    }
   }
 
   .suffix {
@@ -37,14 +41,17 @@
     @include m-spacing-margin-right($spacing-sm);
     @include m-font-size($font-size-m-2);
     @include m-line-height($sizing-icon-md);
+
+    & + input[class*="input-"] {
+      @include m-spacing-margin-right($spacing-xl);
+    }
   }
 
-  [class*="input-"] {
+  input[class*="input-"] {
     @include m-box-sizing-reset();
     flex: $flex-auto;
     @include m-flex-order($flex-order-1);
     height: $sizing-100-pct;
-    @include m-spacing-margin-horizontal($spacing-xl);
 
     &:hover,
     &:focus,

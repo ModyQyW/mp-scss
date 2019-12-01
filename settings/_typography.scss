@@ -141,17 +141,17 @@ $color-disabled-inverse: rgba(255, 255, 255, .45) !default;
   @if ($color == null) {
     @include m-color-reset();
   } @else {
-    color: $color;
+    color: $color !important;
   }
 }
 
 @mixin m-color-reset() {
   .light & {
-    @include m-color($color-main);
+    color: $color-main;
   }
 
   .dark & {
-    @include m-color($color-main-inverse);
+    color: $color-main-inverse;
   }
 }
 

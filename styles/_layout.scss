@@ -24,8 +24,16 @@ page {
   @include m-display-reset();
   @include m-flex-axis($flex-column);
   @include m-sizing-full();
-  @include m-color-reset();
-  @include m-background-color-reset();
+
+  &.light {
+    color: $color-main;
+    background-color: $color-white;
+  }
+
+  &.dark {
+    color: $color-main-inverse;
+    background-color: $color-black;
+  }
 
   &.is-horizontal {
     flex: 1;
