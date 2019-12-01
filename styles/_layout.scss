@@ -18,6 +18,10 @@ page {
   @include m-box-sizing-reset();
 }
 
+.db {
+  @include m-display(block);
+}
+
 .container {
   @include m-position-reset();
   @include m-box-sizing-reset();
