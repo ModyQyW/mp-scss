@@ -135,24 +135,69 @@
 .text-title {
   @include m-font-size($font-size-a-4);
   @include m-line-height($line-height-a-4);
+  @include m-color($color-title);
+
+  .light & {
+    @include m-color($color-title);
+  }
+
+  .dark & {
+    @include m-color($color-title-inverse);
+  }
 }
 
 .text-title-light {
   @include m-font-size($font-size-a-2);
   @include m-line-height($line-height-a-2);
+  @include m-color($color-title-light);
+
+  .light & {
+    @include m-color($color-title-light);
+  }
+
+  .dark & {
+    @include m-color($color-title-light-inverse);
+  }
 }
 
 .text-main {
   @include m-font-size($font-size-0);
   @include m-line-height($line-height-0);
+  @include m-color($color-main);
+
+  .light & {
+    @include m-color($color-main);
+  }
+
+  .dark & {
+    @include m-color($color-main-inverse);
+  }
 }
 
 .text-main-light {
   @include m-font-size($font-size-m-1);
   @include m-line-height($line-height-m-1);
+  @include m-color($color-main-light);
+
+  .light & {
+    @include m-color($color-main-light);
+  }
+
+  .dark & {
+    @include m-color($color-main-light-inverse);
+  }
 }
 
 .text-secondary {
   @include m-font-size($font-size-m-2);
   @include m-line-height($line-height-m-2);
+  @include m-color($color-secondary);
+
+  .light & {
+    @include m-color($color-secondary);
+  }
+
+  .dark & {
+    @include m-color($color-secondary-inverse);
+  }
 }
