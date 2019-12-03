@@ -43,8 +43,11 @@ $font-size-a-12: f-get-font-size(12); /* 默认 52 */
 $font-size-a-13: f-get-font-size(13); /* 默认 54 */
 $font-size-a-14: f-get-font-size(14); /* 默认 56 */
 
-@mixin m-font-size($font-size: $font-size-default) {
-  font-size: $font-size;
+@mixin m-font-size(
+  $font-size: $font-size-default,
+  $is-important: false
+) {
+  font-size: $font-size if($is-important, !important, null);
 }
 
 @mixin m-font-size-reset() {
@@ -76,8 +79,11 @@ $font-weight-900: 900;
 $font-weight-black: 900;
 $font-weight-heavy: 900;
 
-@mixin m-font-weight($font-weight: $font-weight-default) {
-  font-weight: $font-weight;
+@mixin m-font-weight(
+  $font-weight: $font-weight-default,
+  $is-important: false
+) {
+  font-weight: $font-weight if($is-important, !important, null);
 }
 
 @mixin m-font-weight-reset() {
@@ -114,8 +120,11 @@ $line-height-a-12: f-get-line-height(12); /* 默认 68 */
 $line-height-a-13: f-get-line-height(13); /* 默认 70 */
 $line-height-a-14: f-get-line-height(14); /* 默认 72 */
 
-@mixin m-line-height($line-height: $line-height-default) {
-  line-height: $line-height;
+@mixin m-line-height(
+  $line-height: $line-height-default,
+  $is-important: false
+) {
+  line-height: $line-height if($is-important, !important, null);
 }
 
 @mixin m-line-height-reset() {
