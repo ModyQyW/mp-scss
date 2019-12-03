@@ -9,6 +9,10 @@
   @include m-border-color-reset();
   @include m-border-radius-reset();
 
+  &.full {
+    @include m-sizing-width($sizing-full);
+  }
+
   &.border-none {
     @include m-border-none();
   }
