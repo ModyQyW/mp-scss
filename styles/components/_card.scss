@@ -14,13 +14,17 @@
   @include m-background-color($color-white);
   @include m-border-radius-reset();
 
+  &.full {
+    @include m-sizing($sizing-full, $sizing-full);
+  }
+
   &.is-vertical {
     flex: 0 0 $sizing-auto;
-    @include m-sizing($sizing-auto, $sizing-auto);
+    @include m-sizing($sizing-full, $sizing-auto);
 
     &.full {
       flex: 0 0 100%;
-      @include m-sizing($sizing-auto, $sizing-full);
+      @include m-sizing($sizing-full, $sizing-full);
     }
   }
 
