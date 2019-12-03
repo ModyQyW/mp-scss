@@ -20,7 +20,7 @@
 
     &.full {
       flex: 0 0 100%;
-      @include m-sizing($suzing-auto, $sizing-full);
+      @include m-sizing($sizing-auto, $sizing-full);
     }
   }
 
