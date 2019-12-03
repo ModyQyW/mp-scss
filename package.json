@@ -35,6 +35,9 @@
       "unit-no-unknown": null
     }
   },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
   "lint-staged": {
     "./**/*.scss": [
       "stylelint",
