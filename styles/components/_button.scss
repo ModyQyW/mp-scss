@@ -18,6 +18,10 @@
     @include m-border-radius-none();
   }
 
+  &.btn-full {
+    @include m-sizing-width($sizing-full);
+  }
+
   &.btn-border {
     @include m-border-reset();
   }
