@@ -75,6 +75,10 @@
   & > .content {
     @include m-flex-axis($flex-column);
 
+    &.center {
+      @include m-flex-axis($flex-column, $flex-center, $flex-center);
+    }
+
     &.full {
       flex: auto;
     }
