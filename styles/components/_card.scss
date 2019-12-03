@@ -16,6 +16,7 @@
 
   &.is-vertical {
     flex: 0 0 $sizing-auto;
+    @include m-sizing($sizing-auto, $sizing-full);
   }
 
   &.border {
@@ -64,6 +65,10 @@
 
   & > .content {
     @include m-flex-axis($flex-column);
+
+    &.full {
+      flex: auto;
+    }
 
     & > .item {
       @include m-sizing-width($sizing-full);
