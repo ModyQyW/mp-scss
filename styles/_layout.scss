@@ -88,13 +88,13 @@ page {
 
   & > .header {
     flex: 0 0 $sizing-layout-xl;
-    padding: $spacing-none $spacing-lg;
+    padding: $spacing-0 $spacing-lg;
     border-bottom: $border-width-default solid $border-color-default;
   }
 
   & > .nav {
     flex: 0 0 $sizing-layout-xs;
-    padding: $spacing-none;
+    padding: $spacing-0;
     overflow: hidden;
     border-bottom: $border-width-default solid $border-color-default;
   }

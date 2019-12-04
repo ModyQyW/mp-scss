@@ -244,7 +244,7 @@ $spacing-step: 4 !default;
 }
 
 $spacing-0: 0;
-$spacing-none: 0;
+$spacing-none: none;
 $spacing-xxs: f-get-spacing(-3); /* 默认 4 */
 $spacing-xs: f-get-spacing(-2); /* 默认 8 */
 $spacing-sm: f-get-spacing(-1); /* 默认 12 */
