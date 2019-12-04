@@ -25,6 +25,10 @@
   &.btn-border {
     @include m-border-reset();
   }
+
+  &.btn-border-none {
+    @include m-border-none();
+  }
   
   &.btn-border-radius {
     @include m-border-radius-reset();
@@ -39,6 +43,10 @@
 
     &.btn-ghost {
       @include m-background-color($color-transparent);
+
+      &.btn-border-none {
+        @include m-border-none();
+      }
     }
   }
   
