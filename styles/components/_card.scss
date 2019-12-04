@@ -59,6 +59,15 @@
     &.center {
       @include m-flex-axis($flex-row, $flex-center, $flex-center);
     }
+
+    &.right,
+    &.end {
+      @include m-flex-axis($flex-row, $flex-center, $flex-end);
+    }
+
+    &.space-between {
+      @include m-flex-axis($flex-row, $flex-center, $flex-space-between);
+    }
   }
 
   & > .header {
