@@ -20,7 +20,7 @@
     "scss"
   ],
   "devDependencies": {
-    "lint-staged": "^9.4.3",
+    "lint-staged": "^9.5.0",
     "stylelint": "^12.0.0",
     "stylelint-config-twbs-bootstrap": "^1.0.0"
   },
