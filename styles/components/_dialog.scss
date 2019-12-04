@@ -2,13 +2,15 @@
 .wrapper-dialog {
   @include m-position(fixed);
   @include m-z-index($z-index-2400);
+  @include m-display-reset();
+  @include m-flex-axis-reset();
   @include m-flex-axis-center();
   @include m-sizing-full();
   @include m-background-color($background-color-mask);
 
-  & > .dialog {
+  & > view[class*="dialog-"] {
     @include m-position-reset();
-    @include m-sizing-width($sizing-80-pct);
+    width: 80%;
     @include m-spacing-padding($spacing-md);
 
     & > .icon-close {

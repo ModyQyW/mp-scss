@@ -2,11 +2,13 @@
 .wrapper-modal {
   @include m-position(fixed);
   @include m-z-index($z-index-2400);
+  @include m-display-reset();
+  @include m-flex-axis-reset();
   @include m-flex-axis-center();
   @include m-sizing-full();
   @include m-background-color($background-color-mask);
 
-  & > .modal {
+  & > view[class*="modal-"] {
     @include m-position-reset();
     width: 80%;
     @include m-spacing-padding($spacing-md);
