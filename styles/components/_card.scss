@@ -1,5 +1,6 @@
 /* card */
-.card {
+.card,
+view[class*="card-"] {
   @include m-position-reset();
   @include m-box-sizing-reset();
   @include m-display-reset();
