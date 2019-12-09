@@ -68,6 +68,10 @@ view[class*="card-"] {
 
     &.space-between {
       @include m-flex-axis($flex-row, $flex-center, $flex-space-between);
+
+      & > .item {
+        flex: 1;
+      }
     }
   }
 
