@@ -1,13 +1,16 @@
 /* button */
-[class*="btn-"] {
+.btn,
+button[class*="btn-"],
+view[class*="btn-"] {
   @include m-box-sizing-reset();
   @include m-display-reset();
+  flex: 0 0 auto;
   @include m-flex-axis-center();
   @include m-spacing-padding-2($spacing-0, $spacing-xxl);
   @include m-spacing-margin-reset();
   @include m-font-size-reset();
   @include m-font-weight-reset();
-  line-height: 2.4;
+  @include m-line-height(2.4);
   @include m-color-reset();
   text-align: center;
   @include m-border-reset();
@@ -18,79 +21,79 @@
     @include m-border-radius-none();
   }
 
-  &.btn-full {
+  &.full-width {
     @include m-sizing-width($sizing-full);
   }
 
-  &.btn-border {
+  &.border {
     @include m-border-reset();
   }
 
-  &.btn-border-none {
+  &.border-none {
     @include m-border-none();
   }
   
-  &.btn-border-radius {
+  &.border-radius {
     @include m-border-radius-reset();
   }
   
-  &.btn-primary,
-  &.btn-success,
-  &.btn-warning,
-  &.btn-error,
-  &.btn-info {
+  &.primary,
+  &.success,
+  &.warning,
+  &.error,
+  &.info {
     @include m-color($color-white);
 
-    &.btn-ghost {
+    &.ghost {
       @include m-background-color($color-transparent);
 
-      &.btn-border-none {
+      &.border-none {
         @include m-border-none();
       }
     }
   }
   
-  &.btn-primary {
+  &.primary {
     @include m-background-color($primary-color);
     @include m-border($primary-color);
 
-    &.btn-ghost {
+    &.ghost {
       @include m-color($primary-color);
     }
   }
   
-  &.btn-success {
+  &.success {
     @include m-background-color($success-color);
     @include m-border($success-color);
 
-    &.btn-ghost {
+    &.ghost {
       @include m-color($success-color);
     }
   }
   
-  &.btn-warning {
+  &.warning {
     @include m-background-color($warning-color);
     @include m-border($warning-color);
 
-    &.btn-ghost {
+    &.ghost {
       @include m-color($warning-color);
     }
   }
   
-  &.btn-error {
+  &.error {
     @include m-background-color($error-color);
     @include m-border($error-color);
 
-    &.btn-ghost {
+    &.ghost {
       @include m-color($error-color);
     }
   }
   
-  &.btn-info {
+  &.info {
     @include m-background-color($info-color);
     @include m-border($info-color);
 
-    &.btn-ghost {
+    &.ghost {
       @include m-color($info-color);
     }
   }
