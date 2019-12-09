@@ -1,7 +1,6 @@
 /* button */
 .btn,
-button[class*="btn-"],
-view[class*="btn-"] {
+[class*="btn-"] {
   @include m-box-sizing-reset();
   @include m-display-reset();
   flex: 0 0 auto;
