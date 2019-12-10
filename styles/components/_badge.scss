@@ -1,0 +1,50 @@
+.badge,
+[class*="badge"] {
+  @include m-position(absolute, $spacing-0, $spacing-inverse-xs);
+  @include m-z-index($z-index-600);
+  @include m-box-sizing-reset();
+  @include m-display-reset();
+  @include m-flex-axis-center();
+  min-width: $sizing-icon-xl;
+  @include m-sizing($sizing-auto, $sizing-icon-md);
+  @include m-spacing-padding-horizontal($spacing-xs);
+  @include m-font-size($font-size-m-2);
+  @include m-line-height($line-height-m-2);
+  @include m-color-reset();
+  @include m-background-color-reset();
+  @include m-border-reset();
+  @include m-border-radius($border-radius-lg);
+
+  &.primary,
+  &.success,
+  &.warning,
+  &.error,
+  &.info {
+    @include m-color($color-white);
+  }
+
+  &.primary {
+    @include m-background-color($primary-color);
+    @include m-border($primary-color);
+  }
+
+  &.success {
+    @include m-background-color($success-color);
+    @include m-border($success-color);
+  }
+
+  &.warning {
+    @include m-background-color($warning-color);
+    @include m-border($waring-color);
+  }
+
+  &.error {
+    @include m-background-color($error-color);
+    @include m-border($error-color);
+  }
+
+  &.info {
+    @include m-background-color($info-color);
+    @include m-border($info-color);
+  }
+}
