@@ -35,7 +35,7 @@
 
   &.warning {
     @include m-background-color($warning-color);
-    @include m-border($waring-color);
+    @include m-border($warning-color);
   }
 
   &.error {
