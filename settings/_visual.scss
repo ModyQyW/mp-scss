@@ -318,23 +318,23 @@ $border-width-default: $border-width-base * $border-width-scale + $unit;
 }
 
 @mixin m-border-none() {
-  border: none;
+  border: none !important;
 }
 
 @mixin m-border-top-none() {
-  border-top: none;
+  border-top: none !important;
 }
 
 @mixin m-border-right-none() {
-  border-right: none;
+  border-right: none !important;
 }
 
 @mixin m-border-bottom-none() {
-  border-bottom: none;
+  border-bottom: none !important;
 }
 
 @mixin m-border-left-none() {
-  border-left: none;
+  border-left: none !important;
 }
 
 /* border-radius */
