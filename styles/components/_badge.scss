@@ -11,7 +11,6 @@
   @include m-font-size($font-size-m-2);
   @include m-line-height($line-height-m-2);
   @include m-color-reset();
-  @include m-background-color($background-color-default);
   @include m-background-color-reset();
   @include m-border-reset();
   @include m-border-radius($border-radius-lg);
