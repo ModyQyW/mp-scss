@@ -2,7 +2,7 @@
   "name": "@modyqyw/mp-scss",
   "version": "0.14.2",
   "description": "Custom css for miniprograms.",
-  "author": "ModyQyW <261857860@qq.com>",
+  "author": "ModyQyW <wurui7@mail3.sysu.edu.cn>",
   "license": "MIT",
   "scripts": {
     "lint": "stylelint ./**/*.scss"
@@ -22,7 +22,8 @@
   "devDependencies": {
     "lint-staged": "^9.5.0",
     "stylelint": "^12.0.1",
-    "stylelint-config-twbs-bootstrap": "^1.1.0"
+    "stylelint-config-twbs-bootstrap": "^1.1.0",
+    "yorkie": "^2.0.0"
   },
   "stylelint": {
     "extends": [
