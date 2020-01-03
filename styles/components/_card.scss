@@ -11,7 +11,7 @@
   @include m-font-size-reset();
   @include m-font-weight-reset();
   @include m-line-height-reset();
-  @include m-color($color-main);
+  @include m-color-reset();
   @include m-background-color-reset();
   @include m-border-radius-reset();
 
