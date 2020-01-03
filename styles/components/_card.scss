@@ -12,7 +12,8 @@
   @include m-font-weight-reset();
   @include m-line-height-reset();
   @include m-color($color-main);
-  @include m-background-color($background-color-white);
+  @include m-background-color($background-color-default);
+  @include m-background-color-reset();
   @include m-border-radius-reset();
 
   &.full {

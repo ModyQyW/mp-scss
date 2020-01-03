@@ -28,32 +28,22 @@ page {
   @include m-display-reset();
   @include m-flex-axis($flex-column);
   @include m-sizing-full();
-
-  &.light {
-    color: $color-main;
-    background-color: $background-color-white;
-  }
-
-  &.dark {
-    color: $color-main-inverse;
-    background-color: $background-color-black;
-  }
+  @include m-background-color($background-color-white);
 
   &.is-horizontal {
     flex: 1;
     @include m-flex-axis-reset();
-    height: auto;
+    @include m-sizing-height($sizing-auto);
 
     & > .main {
-      width: auto;
-      height: 100%;
+      @include m-sizing($sizing-auto, $sizing-100-pct);
       @include m-spacing-padding-reset();
     }
   }
 
   & > .bg {
     @include m-position(fixed);
-    @include m-sizing-square(100%);
+    @include m-sizing-square($sizing-100-pct);
   }
 
   & > .header,
@@ -63,7 +53,7 @@ page {
     @include m-box-sizing-reset();
     @include m-display-reset();
     @include m-flex-axis($flex-row, $flex-center, $flex-space-between);
-    width: 100%;
+    @include m-sizing-width($sizing-100-pct);
     @include m-background-color($background-color-white);
 
     & > .left,
@@ -71,7 +61,7 @@ page {
       @include m-box-sizing-reset();
       @include m-display-reset();
       @include m-flex-axis($flex-row, $flex-center);
-      height: 100%;
+      @include m-sizing-height($sizing-100-pct);
       overflow: hidden;
     }
 
@@ -88,15 +78,13 @@ page {
 
   & > .header {
     flex: 0 0 $sizing-layout-xl;
-    padding: $spacing-0 $spacing-lg;
-    border-bottom: $border-width-default solid $border-color-default;
+    @include m-spacing-padding-2($spacing-0, $spacing-lg);
   }
 
   & > .nav {
     flex: 0 0 $sizing-layout-xs;
-    padding: $spacing-0;
+    @include m-spacing-padding();
     overflow: hidden;
-    border-bottom: $border-width-default solid $border-color-default;
   }
 
   & > .aside {
@@ -104,8 +92,7 @@ page {
     @include m-box-sizing-reset();
     @include m-display-reset();
     @include m-flex-axis($flex-column, $flex-center);
-    width: auto;
-    height: 100%;
+    @include m-sizing($sizing-auto, $sizing-100-pct);
   }
 
   & > .main {
@@ -114,15 +101,42 @@ page {
     @include m-display-reset();
     flex: $flex-auto;
     @include m-flex-axis($flex-column);
-    width: 100%;
-    height: auto;
+    @include m-sizing($sizing-100-pct, $sizing-auto);
     @include m-spacing-padding($spacing-xl);
   }
 
   & > .footer {
     @include m-flex-axis($flex-row, $flex-start, $flex-center); // 匹配 iPhone X 系列
     flex: 0 0 $sizing-layout-xxxxl;
-    padding: $spacing-xs $spacing-lg;
-    border-top: $border-width-default solid $border-color-default;
+    @include m-spacing-padding-2($spacing-xs, $spacing-lg);
+  }
+}
+
+
+.container.light {
+  @include m-background-color($background-color-white);
+  @include m-color($color-main);
+
+  & > .header,
+  & > .nav {
+    @include m-border-bottom($border-color-default, solid, $border-width-default);
+  }
+
+  & > .footer {
+    @include m-border-top($border-color-default, solid, $border-width-default);
+  }
+}
+
+.container.dark {
+  @include m-background-color($background-color-black);
+  @include m-color($color-main-inverse);
+
+  & > .header,
+  & > .nav {
+    @include m-border-bottom($border-color-default-inverse, solid, $border-width-default);
+  }
+
+  & > .footer {
+    @include m-border-top($border-color-default-inverse, solid, $border-width-default);
   }
 }

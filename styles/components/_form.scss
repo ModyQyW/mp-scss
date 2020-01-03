@@ -6,7 +6,8 @@
   @include m-flex-axis($flex-column);
   @include m-sizing($sizing-80-pct, $sizing-layout-auto);
   @include m-spacing-padding($spacing-xl);
-  @include m-background-color(rgba(255, 255, 255, .85));
+  @include m-background-color($background-color-default);
+  @include m-background-color-reset();
 
   .item {
     @include m-position-reset();
