@@ -155,10 +155,7 @@ $color-disabled-inverse: rgba(255, 255, 255, .45) !default;
 }
 
 @mixin m-color-reset() {
-  & {
-    color: $color-main;
-  }
-
+  &,
   .light & {
     color: $color-main;
   }
