@@ -65,7 +65,7 @@ $image-sizing-list: map-keys($image-sizing-map);
   .image-#{$size} {
     @include m-sizing-square(map-get($image-sizing-map, $size));
     flex: 0 0 map-get($image-sizing-map, $size);
-    
+
     & + text {
       @include m-spacing-margin-left($spacing-sm);
     }

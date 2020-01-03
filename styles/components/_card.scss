@@ -12,7 +12,7 @@
   @include m-font-weight-reset();
   @include m-line-height-reset();
   @include m-color($color-main);
-  @include m-background-color($color-white);
+  @include m-background-color($background-color-white);
   @include m-border-radius-reset();
 
   &.full {
@@ -45,11 +45,6 @@
     @include m-display-reset();
     flex: 0 0 $flex-auto;
     @include m-sizing-width($sizing-full);
-  }
-
-  & > .header,
-  & > .content,
-  & > .footer {
     @include m-spacing-padding($spacing-xl);
   }
 

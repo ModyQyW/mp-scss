@@ -31,12 +31,12 @@ page {
 
   &.light {
     color: $color-main;
-    background-color: $color-white;
+    background-color: $background-color-white;
   }
 
   &.dark {
     color: $color-main-inverse;
-    background-color: $color-black;
+    background-color: $background-color-black;
   }
 
   &.is-horizontal {
@@ -64,7 +64,7 @@ page {
     @include m-display-reset();
     @include m-flex-axis($flex-row, $flex-center, $flex-space-between);
     width: 100%;
-    @include m-background-color($color-white);
+    @include m-background-color($background-color-white);
 
     & > .left,
     & > .right {

@@ -331,12 +331,6 @@ $border-width-default: $border-width-base * $border-width-scale + $unit;
   border-left: none;
 }
 
-@mixin m-border-reset() {
-  @include m-border-color-reset();
-  @include m-border-style-reset();
-  @include m-border-width-reset();
-}
-
 /* border-radius */
 $border-radius-base: 8 !default;
 $border-radius-step: 2 !default;
