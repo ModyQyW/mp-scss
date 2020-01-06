@@ -10,7 +10,7 @@
 
   & > view[class*="dialog-"] {
     @include m-position-reset();
-    width: 80%;
+    @include m-sizing-width($sizing-80-pct);
     @include m-spacing-padding($spacing-md);
 
     & > .icon-close {

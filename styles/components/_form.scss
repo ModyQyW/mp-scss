@@ -4,7 +4,8 @@
   @include m-box-sizing-reset();
   @include m-display-reset();
   @include m-flex-axis($flex-column);
-  @include m-sizing($sizing-80-pct, $sizing-layout-auto);
+  @include m-sizing-width($sizing-80-pct);
+  @include m-sizing-height();
   @include m-spacing-padding($spacing-xl);
   @include m-background-color-reset();
 
@@ -13,7 +14,8 @@
     @include m-box-sizing-reset();
     @include m-display-reset();
     @include m-flex-axis($flex-row, $flex-center, $flex-center);
-    @include m-sizing($sizing-100-pct, $sizing-layout-auto);
+    @include m-sizing-width($sizing-100-pct);
+    @include m-sizing-height();
     @include m-spacing-margin-bottom($spacing-lg);
 
     &:last-child {

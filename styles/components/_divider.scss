@@ -3,17 +3,10 @@
   @include m-position-reset();
   @include m-box-sizing-reset();
   @include m-display-reset();
-  flex: $flex-ratio-0 $flex-ratio-0 $border-width-default;
+  flex: 0 0 $border-width-default;
   @include m-sizing($border-width-default, $line-height-default);
   @include m-spacing-margin-horizontal($spacing-lg);
-  
-  .light & {
-    @include m-background-color($color-main);
-  }
-
-  .dark & {
-    @include m-background-color($color-main-inverse);
-  }
+  @include m-background-color-reset();
 
   &.is-vertical {
     @include m-sizing($line-height-default, $border-width-default);

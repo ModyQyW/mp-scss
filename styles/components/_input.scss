@@ -6,11 +6,10 @@
   min-width: f-get-sizing($sizing-layout-base, $sizing-layout-step, 8);
   min-height: $sizing-layout-md;
   @include m-border-reset();
-  @include m-border-color-reset();
   @include m-border-radius-reset();
 
   &.full {
-    @include m-sizing-width($sizing-full);
+    @include m-sizing-width($sizing-100-pct);
   }
 
   &.border-none {
@@ -55,7 +54,7 @@
     @include m-box-sizing-reset();
     flex: $flex-auto;
     @include m-flex-order($flex-order-1);
-    height: $sizing-100-pct;
+    @include m-sizing-height($sizing-100-pct);
 
     &:hover,
     &:focus,
