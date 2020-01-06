@@ -6,7 +6,8 @@
   @include m-display-reset();
   flex: 0 0 100%;
   @include m-flex-axis($flex-column);
-  @include m-sizing($sizing-full, $sizing-auto);
+  @include m-sizing-width($sizing-100-pct);
+  @include m-sizing-height();
   @include m-font-family-reset();
   @include m-font-size-reset();
   @include m-font-weight-reset();
@@ -16,16 +17,17 @@
   @include m-border-radius-reset();
 
   &.full {
-    @include m-sizing($sizing-full, $sizing-full);
+    @include m-sizing-full();
   }
 
   &.is-vertical {
     flex: 0 0 $sizing-auto;
-    @include m-sizing($sizing-full, $sizing-auto);
+    @include m-sizing-width($sizing-100-pct);
+    @include m-sizing-height();
 
     &.full {
       flex: 0 0 100%;
-      @include m-sizing($sizing-full, $sizing-full);
+      @include m-sizing-full();
     }
   }
 
@@ -44,7 +46,7 @@
     @include m-box-sizing-reset();
     @include m-display-reset();
     flex: 0 0 $flex-auto;
-    @include m-sizing-width($sizing-full);
+    @include m-sizing-width($sizing-100-pct);
     @include m-spacing-padding($spacing-xl);
   }
 
@@ -89,11 +91,11 @@
     }
 
     &.full {
-      flex: auto;
+      flex: $flex-auto;
     }
 
     & > .item {
-      @include m-sizing-width($sizing-full);
+      @include m-sizing-width($sizing-100-pct);
     }
   }
 
