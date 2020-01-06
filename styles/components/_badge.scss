@@ -1,12 +1,15 @@
 .badge,
 [class*="badge"] {
-  @include m-position(absolute, $spacing-0, $spacing-inverse-xs);
+  @include m-position(absolute);
+  top: $spacing-0;
+  right: $spacing-inverse-xs;
   @include m-z-index($z-index-600);
   @include m-box-sizing-reset();
   @include m-display-reset();
   @include m-flex-axis-center();
   min-width: $sizing-icon-xl;
-  @include m-sizing($sizing-auto, $sizing-icon-md);
+  @include m-sizing-width();
+  @include m-sizing-height($sizing-icon-md);
   @include m-spacing-padding-horizontal($spacing-xs);
   @include m-font-size($font-size-m-2);
   @include m-line-height($line-height-m-2);
