@@ -1,10 +1,6 @@
 /* position */
-@mixin m-position($position: relative, $top: 0, $right: 0, $bottom: 0, $left: 0) {
+@mixin m-position($position: relative) {
   position: $position;
-  top: $top;
-  right: $right;
-  bottom: $bottom;
-  left: $left;
 }
 
 @mixin m-position-reset() {
