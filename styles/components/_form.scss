@@ -7,6 +7,7 @@
   @include m-sizing-width($sizing-80-pct);
   @include m-sizing-height();
   @include m-spacing-padding($spacing-xl);
+  @include m-color-reset();
   @include m-background-color-reset();
 
   .item {
