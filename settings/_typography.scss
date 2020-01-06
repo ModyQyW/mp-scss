@@ -174,18 +174,3 @@ $color-disabled-inverse: rgba(255, 255, 255, .45) !default;
 @mixin m-content-reset() {
   @include m-content();
 }
-
-
-/* resize */
-$resize-none: none;
-$resize-both: both;
-$resize-horizontal: horizontal;
-$resize-vertical: vertical;
-
-@mixin m-resize($resize: initial) {
-  resize: $resize;
-}
-
-@mixin m-resize-reset() {
-  @include m-resize();
-}
