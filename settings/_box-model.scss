@@ -204,17 +204,17 @@ $sizing-image-xxl: f-get-sizing($sizing-image-base, $sizing-image-step, 3); /* �
 $sizing-image-xxxl: f-get-sizing($sizing-image-base, $sizing-image-step, 4); /* 默认 176 */
 $sizing-image-xxxxl: f-get-sizing($sizing-image-base, $sizing-image-step, 5); /* 默认 184 */
 
-@mixin m-sizing-full() {
-  width: 100%;
-  height: 100%;
-}
-
 @mixin m-sizing-width($width: $sizing-auto) {
   width: $width;
 }
 
 @mixin m-sizing-height($height: $sizing-auto) {
   height: $height;
+}
+
+@mixin m-sizing-full() {
+  @include m-sizing-width($sizing-100-pct);
+  @include m-sizing-height($sizing-100-pct);
 }
 
 @mixin m-sizing($width: $sizing-auto, $height: $sizing-auto) {
