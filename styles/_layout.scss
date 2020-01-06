@@ -1,6 +1,4 @@
-/* 布局 */
-
-/* 微信小程序根元素 */
+/* weapp root element */
 page {
   @include m-position-reset();
   @include m-box-sizing-reset();
@@ -13,11 +11,12 @@ page {
   @include m-line-height();
 }
 
-/* 重置 box-sizing */
+/* reset box-sizing to border-box */
 .bsbb {
   @include m-box-sizing-reset();
 }
 
+/* reset display to block */
 .db {
   @include m-display(block);
 }
@@ -28,15 +27,17 @@ page {
   @include m-display-reset();
   @include m-flex-axis($flex-column);
   @include m-sizing-full();
-  @include m-background-color($background-color-white);
+  @include m-color($color-main);
+  @include m-background-color($background-color-light);
 
   &.is-horizontal {
     flex: 1;
     @include m-flex-axis-reset();
-    @include m-sizing-height($sizing-auto);
+    @include m-sizing-height();
 
     & > .main {
-      @include m-sizing($sizing-auto, $sizing-100-pct);
+      @include m-sizing-width();
+      @include m-sizing-height($sizing-100-pct);
       @include m-spacing-padding-reset();
     }
   }
@@ -116,8 +117,8 @@ page {
 
 
 .container.light {
-  @include m-background-color($background-color-white);
   @include m-color($color-main);
+  @include m-background-color($background-color-light);
 
   & > .header,
   & > .nav {
@@ -130,8 +131,8 @@ page {
 }
 
 .container.dark {
-  @include m-background-color($background-color-black);
   @include m-color($color-main-inverse);
+  @include m-background-color($background-color-dark);
 
   & > .header,
   & > .nav {
