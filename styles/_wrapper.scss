@@ -10,16 +10,16 @@
   @include m-position-reset();
   @include m-box-sizing-reset();
   @include m-display-reset();
-  width: 100%;
-  height: auto;
+  @include m-sizing-width($sizing-100-pct);
+  @include m-sizing-height();
 }
 
 .wrapper-col {
   @include m-position-reset();
   @include m-box-sizing-reset();
   @include m-display-reset();
-  width: auto;
-  height: 100%;
+  @include m-sizing-width();
+  @include m-sizing-height($sizing-100-pct);
 }
 
 .wrapper-center {
