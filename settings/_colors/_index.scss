@@ -1,6 +1,6 @@
 /* 预设通用颜色 */
 $color-black: #000 !default;
-$color-white: #FFF !default;
+$color-white: #fff !default;
 $color-transparent: transparent !default;
 
 @import "./ad-colors";
@@ -12,5 +12,5 @@ $success-color: $ad-green !default;
 $warning-color: $ad-gold !default;
 $error-color: $ad-red !default;
 $info-color: $ad-blue !default;
-$background-color-black: #000 !default;
-$background-color-white: #FFF !default;
+$background-color-light: $ad-gray-1 !default;
+$background-color-dark: $ad-gray-12 !default;
