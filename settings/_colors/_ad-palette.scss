@@ -1,4 +1,4 @@
-/* Ant Design 调色板的 scss 实现 */
+/* Ant Design v3/v4 调色板的 scss 实现 */
 $ad-palette-light-color-count: 5;
 $ad-palette-dark-color-count: 4;
 $ad-palette-hue-step: 2deg;
@@ -130,7 +130,7 @@ $ad-palette-brightness-step-2: 15%;
   );
 }
 
-@function f-get-color($hex-color, $idx) {
+@function f-ad-get-color($hex-color, $idx) {
   @if ($idx == 6) {
     @return $hex-color;
   }

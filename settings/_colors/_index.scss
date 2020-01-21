@@ -1,4 +1,3 @@
-/* 预设通用颜色 */
 $color-black: #000 !default;
 $color-white: #fff !default;
 $color-transparent: transparent !default;
@@ -6,11 +5,9 @@ $color-transparent: transparent !default;
 @import "./ad-colors";
 @import "./md-colors";
 
-/* 默认使用 Ant Design 配色 */
-$primary-color: $ad-blue !default;
-$success-color: $ad-green !default;
-$warning-color: $ad-gold !default;
-$error-color: $ad-red !default;
-$info-color: $ad-blue !default;
-$background-color-light: $ad-gray-1 !default;
-$background-color-dark: $ad-gray-12 !default;
+/* 默认跟随 Ant Design */
+$color-primary: $ad-blue !default;
+$color-success: $ad-green !default;
+$color-warning: $ad-gold !default;
+$color-error: $ad-red !default;
+$color-info: $ad-blue !default;
