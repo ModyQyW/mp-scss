@@ -1,6 +1,6 @@
 # mp-scss
 
-个人在小程序中使用的 scss 集合。我觉得它会覆盖到你需要的方方面面、给你带来便利。
+一个以小程序样式为主的个人级 scss 集合，包含变量与样式。
 
 ## 起步
 
@@ -40,29 +40,31 @@ npm i @modyqyw/mp-scss
 
 ### 使用
 
-- 目前仅支持 scss，没有计划支持原生 css 和 less，虽然我都有思路。
+- 目前仅支持 scss，没有计划支持原生 css 和 less。你也可以自己去实现，思路都是差不多的。
 
 - 引入预设变量。之后你可以根据预设变量定制自己的样式。你也可以在某一页面引入以使用预设变量。
 
 ```scss
 /* uni-app @/App.vue 需要手动先添加 sass 和 sass-loader */
-@import "~@modyqyw/mp-scss";
+@import "~@modyqyw/mp-scss/settings";
 ```
 
 ```scss
 /* taro @/app.scss */
-@import "../node_modules/@modyqyw/mp-scss/index";
+@import "../node_modules/@modyqyw/mp-scss/settings/index";
 ```
 
 - 引入预设样式。
 
 ```scss
 /* uni-app @/App.vue 需要手动先添加 sass 和 sass-loader */
+@import "~@modyqyw/mp-scss/settings";
 @import "~@modyqyw/mp-scss/styles";
 ```
 
 ```scss
 /* taro @/app.scss */
+@import "../node_modules/@modyqyw/mp-scss/settings/index";
 @import "../node_modules/@modyqyw/mp-scss/styles/index";
 ```
 
@@ -149,13 +151,24 @@ $scale: 1; // 我的用户眼睛很好，不放大
 
 - 推荐做法：在页面容器上添加`light`类或`dark`类。这样会导致某些默认颜色变化（如边框，背景，文字等），同时也会带来一个限制条件：不要使用`light`类或`dark`类同级的元素去定位某一元素。
 
+- 源码阅读顺序建议
+  - settings
+    - _colors
+    - _ratio
+    - _spacing
+    - _positioning
+    - _box-model
+    - _typography
+    - _visual
+    - _misc
+
 ## 测试
 
 目前没有测试。欢迎 PR。
 
 ## 特性
 
-- scss 自实现 Ant Design v3 色板，真香啊.jpg
+- scss 实现 Ant Design v4 色板，真香啊.jpg
 - 预设变量，助你定制自己的样式
 - 可选的预设样式，引入后通过`class`直接添加样式
 - 不测试就上线，所以欢迎小白鼠提 issue，长期维护
@@ -187,3 +200,4 @@ Copyright (c) 2019-present ModyQyW
 - [ElementUI](https://element.eleme.io/)
 - [@mdo/code-guide](https://github.com/mdo/code-guide)
 - [stylelint-config-twbs-bootstrap](https://github.com/twbs/stylelint-config-twbs-bootstrap)
+- [tailwindcss](https://tailwindcss.com/)

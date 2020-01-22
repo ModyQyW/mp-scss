@@ -5,7 +5,7 @@
   "author": "ModyQyW <wurui7@mail3.sysu.edu.cn>",
   "license": "MIT",
   "scripts": {
-    "lint": "stylelint ./**/*.scss"
+    "lint": "stylelint ."
   },
   "publishConfig": {
     "access": "public"
@@ -48,7 +48,7 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "./**/*.scss": [
+    "*.scss": [
       "stylelint",
       "git add"
     ]
