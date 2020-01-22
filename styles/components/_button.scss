@@ -31,11 +31,11 @@
   &.border-none {
     @include m-border-none();
   }
-  
+
   &.border-radius {
     @include m-border-radius-reset();
   }
-  
+
   &.primary,
   &.success,
   &.warning,
@@ -51,7 +51,7 @@
       }
     }
   }
-  
+
   &.primary {
     @include m-background-color($primary-color);
     @include m-border($primary-color);
@@ -60,7 +60,7 @@
       @include m-color($primary-color);
     }
   }
-  
+
   &.success {
     @include m-background-color($success-color);
     @include m-border($success-color);
@@ -69,7 +69,7 @@
       @include m-color($success-color);
     }
   }
-  
+
   &.warning {
     @include m-background-color($warning-color);
     @include m-border($warning-color);
@@ -78,7 +78,7 @@
       @include m-color($warning-color);
     }
   }
-  
+
   &.error {
     @include m-background-color($error-color);
     @include m-border($error-color);
@@ -87,7 +87,7 @@
       @include m-color($error-color);
     }
   }
-  
+
   &.info {
     @include m-background-color($info-color);
     @include m-border($info-color);
