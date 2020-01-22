@@ -73,14 +73,12 @@ npm i @modyqyw/mp-scss
 - 目前默认配色使用 Ant Design 配色，如果要修改，请在引入预设变量前进行细颗粒度的修改，修改该部分会影响默认配色。
 
 ```scss
-/* 默认为 Ant Design 配色 */
-$primary-color: $ad-blue;
-$success-color: $ad-green;
-$warning-color: $ad-gold;
-$error-color: $ad-red;
-$info-color: $ad-blue;
-$background-color-black: #141414;
-$background-color-white: #fff;
+/* 默认为 Ant Design 设置 */
+$color-primary: $ad-blue;
+$color-success: $ad-green;
+$color-warning: $ad-gold;
+$color-error: $ad-red;
+$color-info: $ad-blue;
 $color-title: rgba(0, 0, 0, .85);
 $color-title-light: rgba(0, 0, 0, .75);
 $color-main: rgba(0, 0, 0, .65);
@@ -93,14 +91,14 @@ $color-main-inverse: rgba(255, 255, 255, .65);
 $color-main-light-inverse: rgba(255, 255, 255, .55);
 $color-secondary-inverse: rgba(255, 255, 255, .45);
 $color-disabled-inverse: rgba(255, 255, 255, .3);
-/* 使用 Material Design 配色 */
-$primary-color: $md-blue;
-$success-color: $md-green;
-$warning-color: $md-yellow;
-$error-color: $md-red;
-$info-color: $md-blue;
-$background-color-black: #121212;
-$background-color-white: #fff;
+$background-color-light: $ad-gray-1;
+$background-color-dark: $ad-gray-12;
+/* 使用 Material Design 设置 */
+$color-primary: $md-blue;
+$color-success: $md-green;
+$color-warning: $md-yellow;
+$color-error: $md-red;
+$color-info: $md-blue;
 $color-title: rgba(0, 0, 0, .87);
 $color-title-light: rgba(0, 0, 0, .87);
 $color-main: rgba(0, 0, 0, .87);
@@ -113,26 +111,8 @@ $color-main-inverse: rgba(255, 255, 255, 1);
 $color-main-light-inverse: rgba(255, 255, 255, 1);
 $color-secondary-inverse: rgba(255, 255, 255, .7);
 $color-disabled-inverse: rgba(255, 255, 255, .5);
-/* 使用 html 配色 */
-$primary-color: blue;
-$success-color: green;
-$warning-color: yellow;
-$error-color: red;
-$info-color: blue;
-$background-color-black: #000;
-$background-color-white: #fff;
-$color-title: rgba(0, 0, 0, .85);
-$color-title-light: rgba(0, 0, 0, .75);
-$color-main: rgba(0, 0, 0, .65);
-$color-main-light: rgba(0, 0, 0, .55);
-$color-secondary: rgba(0, 0, 0, .45);
-$color-disabled: rgba(0, 0, 0, .25);
-$color-title-inverse: rgba(255, 255, 255, 1);
-$color-title-light-inverse: rgba(255, 255, 255, .95);
-$color-main-inverse: rgba(255, 255, 255, .85);
-$color-main-light-inverse: rgba(255, 255, 255, .75);
-$color-secondary-inverse: rgba(255, 255, 255, .65);
-$color-disabled-inverse: rgba(255, 255, 255, .45);
+$background-color-light: #fff;
+$background-color-dark: #121212;
 ```
 
 - 目前默认使用 rpx 作为长度单位，如果要修改，请在引入预设变量前修改。支持任意值，但是你乱玩就肯定会出一些莫名情况的情况，不保修。
@@ -146,7 +126,7 @@ $unit: px; // 使用 px 作为长度单位
 
 ```scss
 $scale: 2; // 放大到 2 倍，默认
-$scale: 1; // 我的用户眼睛很好，不放大
+$scale: 1; // 不放大
 ```
 
 - 推荐做法：在页面容器上添加`light`类或`dark`类。这样会导致某些默认颜色变化（如边框，背景，文字等），同时也会带来一个限制条件：不要使用`light`类或`dark`类同级的元素去定位某一元素。
