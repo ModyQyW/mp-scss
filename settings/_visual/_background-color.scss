@@ -1,0 +1,11 @@
+// Controlling an element's background color
+$background-color-light: $ad-gray-1 !default;
+$background-color-dark: $ad-gray-12 !default;
+$background-color-default: rgba(0, 0, 0, .04) !default;
+$background-color-mask: rgba(0, 0, 0, .45) !default;
+$background-color-shadow: $background-color-mask;
+$background-color-divider: rgba(0, 0, 0, .06) !default;
+$background-color-table-header: rgba(0, 0, 0, .02) !default;
+$background-color-default-inverse: rgba(255, 255, 255, .08) !default;
+$background-color-divider-inverse: rgba(255, 255, 255, .12) !default;
+$background-color-table-header-inverse: rgba(255, 255, 255, .04) !default;
