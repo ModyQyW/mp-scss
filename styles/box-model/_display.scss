@@ -1,0 +1,35 @@
+.block {
+  display: $display-block;
+}
+
+.inline-block {
+  display: $display-inline-block;
+}
+
+.inline {
+  display: $display-inline;
+}
+
+.flex {
+  display: $display-flex;
+}
+
+.inline-flex {
+  display: $display-inline-flex;
+}
+
+.table {
+  display: $display-table;
+}
+
+.table-row {
+  display: $display-table-row;
+}
+
+.table-cell {
+  display: $display-table-cell;
+}
+
+.hidden {
+  display: $display-hidden;
+}
