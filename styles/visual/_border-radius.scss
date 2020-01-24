@@ -1,0 +1,44 @@
+.rounded-half {
+  border-radius: $ratio-50;
+}
+
+.rounded-none {
+  border-radius: $spacing-0;
+}
+
+.rounded-3xs {
+  border-radius: $spacing-1;
+}
+
+.rounded-2xs {
+  border-radius: $spacing-2;
+}
+
+.rounded-xs {
+  border-radius: $spacing-4;
+}
+
+.rounded-sm {
+  border-radius: $spacing-6;
+}
+
+.rounded,
+.rounded-md {
+  border-radius: $spacing-8;
+}
+
+.rounded-lg {
+  border-radius: $spacing-10;
+}
+
+.rounded-xl {
+  border-radius: $spacing-12;
+}
+
+.rounded-2xl {
+  border-radius: $spacing-14;
+}
+
+.rounded-3xl {
+  border-radius: $spacing-16;
+}

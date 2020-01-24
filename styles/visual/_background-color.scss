@@ -1,0 +1,60 @@
+.bg-default {
+  &,
+  .light & {
+    background-color: $background-color-default;
+  }
+
+  .dark & {
+    background-color: $background-color-default-reverse;
+  }
+}
+
+.bg-divider {
+  &,
+  .light & {
+    background-color: $background-color-divider;
+  }
+
+  .dark & {
+    background-color: $background-color-divider-reverse;
+  }
+}
+
+.bg-table-header {
+  &,
+  .light & {
+    background-color: $background-color-table-header;
+  }
+
+  .dark & {
+    background-color: $background-color-table-header-reverse;
+  }
+}
+
+.bg-light {
+  background-color: $background-color-light !important;
+}
+
+.bg-dark {
+  background-color: $background-color-dark !important;
+}
+
+.bg-primary {
+  background-color: $color-primary !important;
+}
+
+.bg-success {
+  background-color: $color-success !important;
+}
+
+.bg-warning {
+  background-color: $color-warning !important;
+}
+
+.bg-error {
+  background-color: $color-error !important;
+}
+
+.bg-info {
+  background-color: $color-info !important;
+}

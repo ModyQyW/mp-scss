@@ -1,0 +1,33 @@
+[class*="border"] {
+  &,
+  .light & {
+    border-color: $border-color-default;
+  }
+
+  .dark & {
+    border-color: $border-color-default-reverse;
+  }
+
+  border-style: $border-style-solid;
+  border-width: $spacing-1;
+}
+
+.border-primary {
+  border-color: $color-primary !important;
+}
+
+.border-success {
+  border-color: $color-success !important;
+}
+
+.border-warning {
+  border-color: $color-warning !important;
+}
+
+.border-error {
+  border-color: $color-error !important;
+}
+
+.border-info {
+  border-color: $color-info !important;
+}
