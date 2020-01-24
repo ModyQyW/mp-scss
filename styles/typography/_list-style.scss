@@ -1,0 +1,19 @@
+.list-disc {
+  list-style-type: $list-style-type-disc;
+}
+
+.list-decimal {
+  list-style-type: $list-style-type-decimal;
+}
+
+.list-inside {
+  list-style-position: $list-style-position-inside;
+}
+
+.list-outside {
+  list-style-position: $list-style-position-outside;
+}
+
+.list-none {
+  list-style: $list-style-none;
+}

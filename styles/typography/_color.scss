@@ -1,0 +1,96 @@
+[class*="text"] {
+  &,
+  .light & {
+    color: $color-main;
+  }
+
+  .dark & {
+    color: $color-main-reverse;
+  }
+}
+
+.text-title {
+  &,
+  .light & {
+    color: $color-title;
+  }
+
+  .dark & {
+    color: $color-title-reverse;
+  }
+}
+
+.text-title-light {
+  &,
+  .light & {
+    color: $color-title-light;
+  }
+
+  .dark & {
+    color: $color-title-light-reverse;
+  }
+}
+
+.text-main {
+  &,
+  .light & {
+    color: $color-main;
+  }
+
+  .dark & {
+    color: $color-main-light;
+  }
+}
+
+.text-main-light {
+  &,
+  .light & {
+    color: $color-main-light;
+  }
+
+  .dark & {
+    color: $color-main-light-reverse;
+  }
+}
+
+.text-secondary {
+  &,
+  .light & {
+    color: $color-secondary;
+  }
+
+  .dark & {
+    color: $color-secondary-reverse;
+  }
+}
+
+.text-disabled {
+  &,
+  .light & {
+    color: $color-disabled;
+  }
+
+  .dark & {
+    color: $color-disabled-reverse;
+  }
+}
+
+.text-primary {
+  color: $color-primary !important;
+}
+
+.text-success {
+  color: $color-success !important;
+}
+
+.text-warning {
+  color: $color-warning !important;
+}
+
+.text-error {
+  color: $color-error !important;
+}
+
+.text-info {
+  color: $color-info !important;
+}
