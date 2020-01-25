@@ -1,53 +1,66 @@
 .badge,
 [class*="badge"] {
-  @include m-position(absolute);
+  position: $position-absolute;
   top: $spacing-0;
-  right: $spacing-inverse-xs;
-  @include m-z-index($z-index-600);
-  @include m-box-sizing-reset();
-  @include m-display-reset();
-  @include m-flex-axis-center();
-  min-width: $sizing-icon-xl;
-  @include m-sizing-width();
-  @include m-sizing-height($sizing-icon-md);
-  @include m-spacing-padding-horizontal($spacing-xs);
-  @include m-font-size($font-size-m-2);
-  @include m-line-height($line-height-m-2);
-  @include m-color-reset();
-  @include m-background-color-reset();
-  @include m-border-reset();
-  @include m-border-radius($border-radius-lg);
+  right: $spacing-8-reverse;
+  z-index: $z-index-600;
+  box-sizing: $box-sizing-border-box;
+  display: $display-flex;
+  flex-direction: $flex-direction-row;
+  align-items: $align-items-center;
+  justify-content: $justify-content-center;
+  width: $spacing-40;
+  height: $spacing-40;
+  font-size: $font-size-12;
+  font-weight: $font-weight-default;
+  line-height: $line-height-20;
+  border-style: $border-style-solid;
+  border-width: $spacing-1;
+  border-radius: $ratio-50;
+
+  &,
+  .light & {
+    color: $color-main;
+    background-color: $background-color-default;
+    border-color: $border-color-default;
+  }
+
+  .dark & {
+    color: $color-main-reverse;
+    background-color: $background-color-default-reverse;
+    border-color: $border-color-default-reverse;
+  }
 
   &.primary,
   &.success,
   &.warning,
   &.error,
   &.info {
-    @include m-color($color-white);
+    color: $color-white;
   }
 
   &.primary {
-    @include m-background-color($primary-color);
-    @include m-border($primary-color);
+    background-color: $color-primary;
+    border-color: $color-primary;
   }
 
   &.success {
-    @include m-background-color($success-color);
-    @include m-border($success-color);
+    background-color: $color-success;
+    border-color: $color-success;
   }
 
   &.warning {
-    @include m-background-color($warning-color);
-    @include m-border($warning-color);
+    background-color: $color-warning;
+    border-color: $color-warning;
   }
 
   &.error {
-    @include m-background-color($error-color);
-    @include m-border($error-color);
+    background-color: $color-error;
+    border-color: $color-error;
   }
 
   &.info {
-    @include m-background-color($info-color);
-    @include m-border($info-color);
+    background-color: $color-info;
+    border-color: $color-info;
   }
 }
