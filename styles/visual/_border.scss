@@ -12,6 +12,10 @@
   border-width: $spacing-1;
 }
 
+.border-none {
+  border: $none !important;
+}
+
 .border-primary {
   border-color: $color-primary !important;
 }
