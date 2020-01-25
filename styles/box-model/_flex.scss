@@ -1,15 +1,15 @@
 .flex-init,
 .flex-initial,
 .flex-default {
-  flex: $flex-grow-default $flex-shrink-default $flex-basis-auto;
+  flex: $flex-grow-default $flex-shrink-default $auto;
 }
 
 .flex-auto {
-  flex: $flex-grow-1 $flex-shrink-1 $flex-basis-auto;
+  flex: $flex-grow-1 $flex-shrink-1 $auto;
 }
 
 .flex-none {
-  flex: $flex-grow-0 $flex-shrink-0 $flex-basis-auto;
+  flex: $flex-grow-0 $flex-shrink-0 $auto;
 }
 
 .flex-row {
@@ -55,7 +55,7 @@
 }
 
 .align-content-normal {
-  align-content: $align-content-normal;
+  align-content: $normal;
 }
 
 .align-content-baseline {
@@ -99,7 +99,7 @@
 }
 
 .align-items-normal {
-  align-items: $align-items-normal;
+  align-items: $normal;
 }
 
 .align-items-baseline {
@@ -111,7 +111,7 @@
 }
 
 .align-self-auto {
-  align-self: $align-self-auto;
+  align-self: $auto;
 }
 
 .align-self-start {
@@ -135,7 +135,7 @@
 }
 
 .align-self-normal {
-  align-self: $align-self-normal;
+  align-self: $normal;
 }
 
 .align-self-baseline {
@@ -159,7 +159,7 @@
 }
 
 .justify-content-normal {
-  justify-content: $justify-content-normal;
+  justify-content: $normal;
 }
 
 .justify-content-baseline {
@@ -203,7 +203,7 @@
 }
 
 .justify-items-normal {
-  justify-items: $justify-items-normal;
+  justify-items: $normal;
 }
 
 .justify-items-baseline {
@@ -215,7 +215,7 @@
 }
 
 .justify-self-auto {
-  justify-self: $justify-self-auto;
+  justify-self: $auto;
 }
 
 .justify-self-start {
@@ -239,7 +239,7 @@
 }
 
 .justify-self-normal {
-  justify-self: $justify-self-normal;
+  justify-self: $normal;
 }
 
 .justify-self-baseline {
