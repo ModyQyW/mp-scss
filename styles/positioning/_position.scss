@@ -19,7 +19,7 @@
 }
 
 .top-auto {
-  top: $spacing-auto;
+  top: $auto;
 }
 
 .right-0 {
@@ -27,7 +27,7 @@
 }
 
 .right-auto {
-  right: $spacing-auto;
+  right: $auto;
 }
 
 .bottom-0 {
@@ -35,7 +35,7 @@
 }
 
 .bottom-auto {
-  bottom: $spacing-auto;
+  bottom: $auto;
 }
 
 .left-0 {
@@ -43,7 +43,7 @@
 }
 
 .left-auto {
-  left: $spacing-auto;
+  left: $auto;
 }
 
 .inset-0 {
@@ -54,10 +54,10 @@
 }
 
 .inset-auto {
-  top: $spacing-auto;
-  right: $spacing-auto;
-  bottom: $spacing-auto;
-  left: $spacing-auto;
+  top: $auto;
+  right: $auto;
+  bottom: $auto;
+  left: $auto;
 }
 
 .inset-y-0 {
@@ -66,8 +66,8 @@
 }
 
 .inset-y-auto {
-  top: $spacing-auto;
-  bottom: $spacing-auto;
+  top: $auto;
+  bottom: $auto;
 }
 
 .inset-x-0 {
@@ -76,6 +76,6 @@
 }
 
 .inset-x-auto {
-  right: $spacing-auto;
-  left: $spacing-auto;
+  right: $auto;
+  left: $auto;
 }
