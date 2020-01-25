@@ -6,6 +6,10 @@ $unit: rpx !default;
 /* length 单位缩放，默认为 2，可以进行细粒度控制 */
 $scale: 2 !default;
 
+$auto: auto;
+$none: none;
+$hidden: hidden;
+$normal: normal;
 $inherit: inherit;
 $initial: initial;
 $unset: unset;
