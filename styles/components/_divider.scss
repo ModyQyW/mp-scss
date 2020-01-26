@@ -1,14 +1,22 @@
-/* divider */
 .divider {
-  @include m-position-reset();
-  @include m-box-sizing-reset();
-  @include m-display-reset();
-  flex: 0 0 $border-width-default;
-  @include m-sizing($border-width-default, $line-height-default);
-  @include m-spacing-margin-horizontal($spacing-lg);
-  @include m-background-color-reset();
+  position: $position-relative;
+  box-sizing: $box-sizing-border-box;
+  display: $display-flex;
+  flex: $flex-grow-0 $flex-shrink-0 $spacing-1;
+  width: $spacing-1;
+  height: $line-height-22;
+  margin: $auto $spacing-12;
 
-  &.is-vertical {
-    @include m-sizing($line-height-default, $border-width-default);
+  &,
+  .light & {
+    background-color: $background-color-default;
+  }
+
+  .dark & {
+    background-color: $background-color-default-reverse;
+  }
+
+  &.vertical {
+    flex: $flex-grow-0 $flex-shrink-0 $line-height-22;
   }
 }

@@ -1,50 +1,63 @@
-/* form */
-[class*="form-"] {
-  @include m-position-reset();
-  @include m-box-sizing-reset();
-  @include m-display-reset();
-  @include m-flex-axis($flex-column);
-  @include m-sizing-width($sizing-80-pct);
-  @include m-sizing-height();
-  @include m-spacing-padding($spacing-xl);
-  @include m-color-reset();
-  @include m-background-color-reset();
+[class*="form"]:not([class="form-item"]) {
+  position: $position-relative;
+  box-sizing: $box-sizing-border-box;
+  display: $display-flex;
+  flex-direction: $flex-direction-column;
+  width: $ratio-80;
+  height: $auto;
+  padding: $spacing-24;
 
-  .item {
-    @include m-position-reset();
-    @include m-box-sizing-reset();
-    @include m-display-reset();
-    @include m-flex-axis($flex-row, $flex-center, $flex-center);
-    @include m-sizing-width($sizing-100-pct);
-    @include m-sizing-height();
-    @include m-spacing-margin-bottom($spacing-lg);
+  &,
+  .light & {
+    color: $color-main;
+    background-color: $background-color-default;
+  }
+
+  .dark & {
+    color: $color-main-reverse;
+    background-color: $background-color-default-reverse;
+  }
+
+  & > .form-item {
+    position: $position-relative;
+    box-sizing: $box-sizing-border-box;
+    display: $display-flex;
+    flex: $flex-grow-0 $flex-shrink-0 $auto;
+    flex-direction: $flex-row;
+    align-items: $align-items-center;
+    justify-content: $justify-content-center;
+    width: $ratio-100;
+    height: $auto;
+    margin-bottom: $spacing-18;
 
     &:last-child {
-      @include m-spacing-margin-reset();
+      margin-bottom: $spacing-0;
     }
 
-    .label {
-      @include m-position-reset();
-      @include m-box-sizing-reset();
-      @include m-display-reset();
-      @include m-flex-axis($flex-row, $flex-center, $flex-end);
-      flex: 0 0 $sizing-layout-xxxxl;
+    & > .label {
+      position: $position-relative;
+      box-sizing: $box-sizing-border-box;
+      display: $display-flex;
+      flex: $flex-grow-0 $flex-shrink-0 $spacing-120;
+      flex-direction: $flex-direction-row;
+      align-items: $align-items-center;
+      justify-content: $justify-content-flex-end;
 
-      &.use-icon {
-        @include m-flex-axis-center();
-        flex: 0 0 $sizing-icon-md;
+      &.icon {
+        flex-basis: $spacing-40;
+        justify-content: $justify-content-center;
       }
 
       & + .content {
-        @include m-spacing-margin-left($spacing-sm);
+        margin-left: $spacing-12;
       }
     }
 
-    .content {
-      @include m-position-reset();
-      @include m-box-sizing-reset();
-      @include m-display-reset();
-      flex: $flex-auto;
+    & > .content {
+      position: $position-relative;
+      box-sizing: $box-sizing-border-box;
+      display: $display-flex;
+      flex: $auto;
     }
   }
 }

@@ -1,5 +1,6 @@
 .btn,
 [class*="btn-"] {
+  position: $position-relative;
   box-sizing: $box-sizing-border-box;
   display: $display-flex;
   flex: $flex-grow-0 $flex-shrink-0 $auto;
@@ -8,8 +9,8 @@
   justify-content: $justify-content-center;
   padding: $spacing-0 $spacing-24;
   margin: $spacing-0;
-  font-size: $font-size-default;
-  font-weight: $font-weight-default;
+  font-size: $font-size-14;
+  font-weight: $font-weight-400;
   line-height: 2.4;
   text-align: $text-align-center;
   border-style: $border-style-solid;

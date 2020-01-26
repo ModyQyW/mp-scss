@@ -1,25 +1,6 @@
-/* 自定义样式 */
-
-/* 引入变量 */
-@import "../settings/index";
-
-/* 布局 */
-@import "./layout";
-
-/* wrapper 容器 */
-@import "./wrapper";
-
-/* 弹性布局 */
-@import "./flex";
-
-/* 溢出 */
-@import "./overflow";
-
-/* 排版 */
-@import "./typography";
-
-/* 图标、徽标、图片 */
-@import "./image";
-
-/* 组件 */
 @import "./components/index";
+@import "./positioning/index";
+@import "./box-model/index";
+@import "./typography/index";
+@import "./visual/index";
+@import "./misc/index";

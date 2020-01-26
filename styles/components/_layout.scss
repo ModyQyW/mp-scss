@@ -1,0 +1,155 @@
+page {
+  position: $position-relative;
+  box-sizing: $box-sizing-border-box;
+  width: $ratio-100;
+  height: $ratio-100;
+  padding: $spacing-0;
+  margin: $spacing-0;
+  overflow: $overflow-hidden;
+  font-family: $font-family-default;
+  font-size: $font-size-14;
+  font-weight: $font-weight-400;
+  line-height: $line-height-22;
+}
+
+.container {
+  position: $position-relative;
+  box-sizing: $box-sizing-border-box;
+  display: $display-flex;
+  flex-direction: $flex-direction-column;
+  align-items: $align-items-flex-start;
+  justify-content: $justify-content-flex-start;
+  width: $ratio-100;
+  height: $ratio-100;
+
+  &,
+  .light & {
+    color: $color-main;
+    background-color: $background-color-light;
+  }
+
+  .dark & {
+    color: $color-main-reverse;
+    background-color: $background-color-light-reverse;
+  }
+
+  & > .bg {
+    position: $position-fixed;
+    width: $ratio-100;
+    height: $ratio-100;
+  }
+
+  & > .header,
+  & > .nav,
+  & > .footer,
+  & > .aside,
+  & > .main {
+    position: $position-relative;
+    box-sizing: $box-sizing-border-box;
+    display: $display-flex;
+    background-color: $color-transparent;
+  }
+
+  & > .header,
+  & > .nav,
+  & > .footer {
+    flex-direction: $flex-direction-row;
+    align-items: $align-items-center;
+    justify-content: $justify-content-space-between;
+    width: $ratio-100;
+
+    & > .left,
+    & > .right {
+      position: $position-relative;
+      box-sizing: $box-sizing-border-box;
+      display: $display-flex;
+      flex-direction: $flex-direction-row;
+      align-items: $align-items-center;
+      height: $ratio-100;
+      overflow: hidden;
+    }
+
+    & > .left {
+      flex: $auto;
+      justify-content: $justify-content-flex-start;
+    }
+
+    & > .right {
+      flex: $none;
+      justify-content: $justify-content-flex-end;
+    }
+  }
+
+  & > .header {
+    flex: $flex-grow-0 $flex-shrink-0 $spacing-96;
+    padding: $spacing-0 $spacing-20;
+  }
+
+  & > .nav {
+    flex: $flex-grow-0 $flex-shrink-0 $spacing-64;
+    padding: $spacing-0;
+    overflow: hidden;
+  }
+
+  & > .main {
+    flex: $auto;
+    flex-direction: $flex-direction-column;
+    width: $ratio-100;
+    height: $auto;
+    padding: $spacing-18;
+  }
+
+  & > .footer {
+    flex: $flex-grow-0 $flex-shrink-0 $spacing-184;
+    flex-direction: $flex-direction-row;
+    align-items: $align-items-flex-start;
+    justify-content: $justify-content-center;
+    padding: $spacing-8 $spacing-20;
+  }
+
+  &.horizontal {
+    flex: $auto;
+    flex-direction: $flex-direction-row;
+    height: $auto;
+
+    & > .aside {
+      flex-direction: $flex-direction-column;
+      align-items: $align-items-center;
+      width: $auto;
+      height: $ratio-100;
+    }
+
+    & > .main {
+      width: $auto;
+      height: $ratio-100;
+      padding: $spacing-0;
+    }
+  }
+}
+
+[class*="wrapper"] {
+  position: $position-relative;
+  box-sizing: $box-sizing-border-box;
+  display: $display-flex;
+}
+
+.wrapper {
+  width: $ratio-100;
+  height: $ratio-100;
+}
+
+.wrapper-row {
+  width: $ratio-100;
+  height: $auto;
+}
+
+.wrapper-col,
+.wrapper-column {
+  width: $auto;
+  height: $ratio-100;
+}
+
+.wrapper-center {
+  align-items: $align-items-center;
+  justify-content: $justify-content-center;
+}

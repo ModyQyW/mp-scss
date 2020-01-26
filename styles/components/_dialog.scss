@@ -1,21 +1,24 @@
-/* dialog */
 .wrapper-dialog {
-  @include m-position(fixed);
-  @include m-z-index($z-index-2400);
-  @include m-display-reset();
-  @include m-flex-axis-reset();
-  @include m-flex-axis-center();
-  @include m-sizing-full();
-  @include m-background-color($background-color-mask);
+  position: $position-fixed;
+  z-index: $z-index-2400;
+  display: $display-flex;
+  flex-direction: $flex-direction-row;
+  align-items: $align-items-center;
+  justify-content: $justify-content-center;
+  width: $ratio-100;
+  height: $ratio-100;
+  background-color: $background-color-mask;
 
-  & > view[class*="dialog-"] {
-    @include m-position-reset();
-    @include m-sizing-width($sizing-80-pct);
-    @include m-spacing-padding($spacing-md);
+  & > view[class*="dialog"] {
+    position: $position-relative;
+    width: $ratio-80;
+    height: $auto;
+    padding: $spacing-24;
 
     & > .icon-close {
-      @include m-sizing-square($sizing-icon-lg);
-      @include m-border-radius($border-radius-half);
+      width: $spacing-40;
+      height: $spacing-40;
+      border-radius: $ratio-50;
     }
   }
 }

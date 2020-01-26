@@ -1,70 +1,67 @@
-/* input */
 .wrapper-input {
-  @include m-box-sizing-reset();
-  @include m-display-reset();
-  @include m-flex-axis($flex-row, $flex-center, $flex-center);
-  min-width: f-get-sizing($sizing-layout-base, $sizing-layout-step, 8);
-  min-height: $sizing-layout-md;
-  @include m-color-reset();
-  @include m-border-reset();
-  @include m-border-radius-reset();
+  position: $position-relative;
+  box-sizing: $box-sizing-border-box;
+  display: $display-flex;
+  flex-direction: $flex-direction-row;
+  align-items: $align-items-center;
+  justify-content: $justify-content-center;
+  min-width: $spacing-144;
+  min-height: $spacing-80;
+  border-style: $border-style-solid;
+  border-width: $spacing-1;
+  border-radius: $spacing-6;
 
-  &.full {
-    @include m-sizing-width($sizing-100-pct);
+  &,
+  .light & {
+    color: $color-main;
+    border-color: $border-color-default;
   }
 
-  &.border-none {
-    @include m-border-none();
+  .dark & {
+    color: $color-main-reverse;
+    border-color: $border-color-default-reverse;
   }
 
-  &.border-bottom {
-    @include m-border-top-none();
-    @include m-border-right-none();
-    @include m-border-left-none();
-  }
-
-  .prefix {
-    @include m-box-sizing-reset();
-    flex: 0 0 $sizing-icon-md;
-    @include m-flex-order-reset();
-    @include m-sizing-square($sizing-icon-md);
-    @include m-spacing-margin-left($spacing-sm);
-    @include m-font-size($font-size-m-2);
-    @include m-line-height($sizing-icon-md);
+  & > .prefix {
+    position: $position-relative;
+    box-sizing: $box-sizing-border-box;
+    flex: $flex-grow-0 $flex-shrink-0 $spacing-40;
+    order: $order-first;
+    width: $spacing-40;
+    height: $spacing-40;
+    margin-left: $spacing-8;
+    font-size: $font-size-12;
+    line-height: $line-height-40;
 
     & + input[class*="input-"] {
-      @include m-spacing-margin-left($spacing-xl);
+      margin-left: $spacing-18;
     }
   }
 
-  .suffix {
-    @include m-box-sizing-reset();
-    flex: 0 0 $sizing-icon-md;
-    @include m-flex-order($flex-order-2);
-    @include m-sizing-square($sizing-icon-md);
-    @include m-spacing-margin-right($spacing-sm);
-    @include m-font-size($font-size-m-2);
-    @include m-line-height($sizing-icon-md);
+  & > .suffix {
+    position: $position-relative;
+    box-sizing: $box-sizing-border-box;
+    flex: $flex-grow-0 $flex-shrink-0 $spacing-40;
+    order: $order-last;
+    width: $spacing-40;
+    height: $spacing-40;
+    margin-right: $spacing-8;
+    font-size: $font-size-12;
+    line-height: $line-height-40;
 
     & + input[class*="input-"] {
-      @include m-spacing-margin-right($spacing-xl);
+      margin-right: $spacing-18;
     }
   }
 
-  input[class*="input-"] {
-    @include m-box-sizing-reset();
-    flex: $flex-auto;
-    @include m-flex-order($flex-order-1);
-    @include m-sizing-height($sizing-100-pct);
-
-    &:hover,
-    &:focus,
-    &:active {
-      @include m-border-color($primary-color);
-    }
+  & > input[class*="input-"] {
+    position: $position-relative;
+    box-sizing: $box-sizing-border-box;
+    flex: $auto;
+    height: $ratio-100;
   }
 
   .input-placeholder {
-    @include m-spacing-margin-reset();
+    margin: $spacing-0;
   }
 }

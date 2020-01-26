@@ -1,105 +1,60 @@
-/* card */
 .card,
 [class*="card-"] {
-  @include m-position-reset();
-  @include m-box-sizing-reset();
-  @include m-display-reset();
-  flex: 0 0 100%;
-  @include m-flex-axis($flex-column);
-  @include m-sizing-width($sizing-100-pct);
-  @include m-sizing-height();
-  @include m-font-family-reset();
-  @include m-font-size-reset();
-  @include m-font-weight-reset();
-  @include m-line-height-reset();
-  @include m-color-reset();
-  @include m-background-color-reset();
-  @include m-border-radius-reset();
+  position: $position-relative;
+  box-sizing: $box-sizing-border-box;
+  display: $display-flex;
+  flex: $flex-grow-0 $flex-shrink-0 $ratio-100;
+  flex-direction: $flex-direction-column;
+  width: $ratio-100;
+  height: $auto;
+  font-size: $font-size-14;
+  font-weight: $font-weight-400;
+  line-height: $line-height-22;
+  border-style: $border-style-solid;
+  border-width: $spacing-1;
+  border-radius: $spacing-0;
 
-  &.full {
-    @include m-sizing-full();
+  &,
+  .light & {
+    color: $color-main;
+    background-color: $background-color-default;
+    border-color: $border-color-default;
   }
 
-  &.is-vertical {
-    flex: 0 0 $sizing-auto;
-    @include m-sizing-width($sizing-100-pct);
-    @include m-sizing-height();
-
-    &.full {
-      flex: 0 0 100%;
-      @include m-sizing-full();
-    }
+  .dark & {
+    color: $color-main-reverse;
+    background-color: $background-color-default-reverse;
+    border-color: $border-color-default-reverse;
   }
 
-  &.border {
-    @include m-border-reset();
-  }
-
-  &.shadow {
-    @include m-box-shadow(7);
+  &.vertical {
+    flex: $flex-grow-0 $flex-shrink-0 $auto;
   }
 
   & > .header,
   & > .content,
   & > .footer {
-    @include m-position-reset();
-    @include m-box-sizing-reset();
-    @include m-display-reset();
-    flex: 0 0 $flex-auto;
-    @include m-sizing-width($sizing-100-pct);
-    @include m-spacing-padding($spacing-xl);
+    position: $position-relative;
+    box-sizing: $box-sizing-border-box;
+    display: $display-flex;
+    flex: $flex-grow-0 $flex-shrink-0 $flex-auto;
+    width: $ratio-100;
+    padding: $spacing-12;
   }
 
   & > .header,
   & > .footer {
-    @include m-flex-axis($flex-row, $flex-center);
-
-    &.center {
-      @include m-flex-axis($flex-row, $flex-center, $flex-center);
-    }
-
-    &.right,
-    &.end {
-      @include m-flex-axis($flex-row, $flex-center, $flex-end);
-    }
-
-    &.space-between {
-      @include m-flex-axis($flex-row, $flex-center, $flex-space-between);
-
-      & > .item {
-        flex: 1;
-      }
-    }
+    flex-direction: $flex-direction-row;
+    align-items: $align-items-center;
   }
 
   & > .header {
-    flex: 0 0 $flex-auto;
-    @include m-font-size($font-size-a-2);
-    @include m-font-weight($font-weight-bold);
-    @include m-line-height($line-height-a-2);
-
-    &.border {
-      @include m-border-bottom-reset();
-    }
+    font-size: $font-size-16;
+    font-weight: $font-weight-700;
+    line-height: $line-height-24;
   }
 
   & > .content {
-    @include m-flex-axis($flex-column);
-
-    &.center {
-      @include m-flex-axis($flex-column, $flex-center, $flex-center);
-    }
-
-    &.full {
-      flex: $flex-auto;
-    }
-
-    & > .item {
-      @include m-sizing-width($sizing-100-pct);
-    }
-  }
-
-  & > .footer.border {
-    @include m-border-top-reset();
+    flex-direction: $flex-direction-column;
   }
 }
