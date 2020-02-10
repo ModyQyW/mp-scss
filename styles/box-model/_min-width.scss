@@ -2,6 +2,10 @@
   min-width: $spacing-0;
 }
 
+.min-w-half {
+  min-width: $ratio-50;
+}
+
 .min-w-full {
   min-width: $ratio-100;
 }

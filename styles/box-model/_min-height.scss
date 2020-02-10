@@ -2,6 +2,10 @@
   min-height: $spacing-0;
 }
 
+.min-h-half {
+  min-height: $ratio-50;
+}
+
 .min-h-full {
   min-height: $ratio-100;
 }
