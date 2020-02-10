@@ -12,7 +12,7 @@
   - 参照以下链接，首先安装 nvm
     - [nvm for Mac/Linux](https://github.com/nvm-sh/nvm)
     - [nvm-windows](https://github.com/coreybutler/nvm-windows)
-    - 使用 [Homebrew](https://brew.sh/) 在 Mac 安装 nvm 是**不**推荐的
+    - **不**推荐使用 [Homebrew](https://brew.sh/) 在 Mac 安装 nvm
   - 接着在终端/命令行安装长期支持版 node
 
     ```sh
