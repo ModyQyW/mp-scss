@@ -21,8 +21,8 @@
   ],
   "devDependencies": {
     "lint-staged": "^9.5.0",
-    "stylelint": "^12.0.1",
-    "stylelint-config-twbs-bootstrap": "^1.1.0",
+    "stylelint": "^13.2.0",
+    "stylelint-config-twbs-bootstrap": "^2.0.1",
     "yorkie": "^2.0.0"
   },
   "stylelint": {
