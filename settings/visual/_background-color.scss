@@ -7,5 +7,7 @@ $background-color-shadow: $background-color-mask;
 $background-color-divider: rgba(0, 0, 0, .06) !default;
 $background-color-table-header: rgba(0, 0, 0, .02) !default;
 $background-color-default-reverse: rgba(255, 255, 255, .08) !default;
+$background-color-mask-reverse: rgba(255, 255, 255, .55) !default; // temp
+$background-color-shadow-reverse: $background-color-mask-reverse; // temp
 $background-color-divider-reverse: rgba(255, 255, 255, .12) !default;
 $background-color-table-header-reverse: rgba(255, 255, 255, .04) !default;

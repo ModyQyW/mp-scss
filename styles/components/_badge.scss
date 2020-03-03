@@ -1,4 +1,3 @@
-.badge,
 [class*="badge"] {
   position: $position-absolute;
   top: $spacing-0;
@@ -23,44 +22,66 @@
     color: $color-main;
     background-color: $background-color-default;
     border-color: $border-color-default;
+
+    &.primary {
+      color: $color-main-reverse;
+      background-color: $color-primary;
+      border-color: $color-primary;
+    }
+
+    &.success {
+      color: $color-main-reverse;
+      background-color: $color-success;
+      border-color: $color-success;
+    }
+
+    &.warning {
+      color: $color-main-reverse;
+      background-color: $color-warning;
+      border-color: $color-warning;
+    }
+
+    &.error {
+      color: $color-main-reverse;
+      background-color: $color-error;
+      border-color: $color-error;
+    }
+
+    &.info {
+      color: $color-main-reverse;
+      background-color: $color-info;
+      border-color: $color-info;
+    }
   }
 
   .dark & {
     color: $color-main-reverse;
     background-color: $background-color-default-reverse;
     border-color: $border-color-default-reverse;
-  }
 
-  &.primary,
-  &.success,
-  &.warning,
-  &.error,
-  &.info {
-    color: $color-white;
-  }
+    &.primary {
+      background-color: $color-primary-reverse;
+      border-color: $color-primary-reverse;
+    }
 
-  &.primary {
-    background-color: $color-primary;
-    border-color: $color-primary;
-  }
+    &.success {
+      background-color: $color-success-reverse;
+      border-color: $color-success-reverse;
+    }
 
-  &.success {
-    background-color: $color-success;
-    border-color: $color-success;
-  }
+    &.warning {
+      background-color: $color-warning-reverse;
+      border-color: $color-warning-reverse;
+    }
 
-  &.warning {
-    background-color: $color-warning;
-    border-color: $color-warning;
-  }
+    &.error {
+      background-color: $color-error-reverse;
+      border-color: $color-error-reverse;
+    }
 
-  &.error {
-    background-color: $color-error;
-    border-color: $color-error;
-  }
-
-  &.info {
-    background-color: $color-info;
-    border-color: $color-info;
+    &.info {
+      background-color: $color-info-reverse;
+      border-color: $color-info-reverse;
+    }
   }
 }

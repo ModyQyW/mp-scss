@@ -76,21 +76,56 @@
 }
 
 .text-primary {
-  color: $color-primary !important;
+  &,
+  .light & {
+    color: $color-primary;
+  }
+
+  .dark & {
+    color: $color-primary-reverse;
+  }
 }
 
 .text-success {
-  color: $color-success !important;
+  &,
+  .light & {
+    color: $color-success;
+  }
+
+  .dark & {
+    color: $color-success-reverse;
+  }
 }
 
 .text-warning {
-  color: $color-warning !important;
+  &,
+  .light & {
+    color: $color-warning;
+  }
+
+  .dark & {
+    color: $color-warning-reverse;
+  }
 }
 
 .text-error {
-  color: $color-error !important;
+  &,
+  .light & {
+    color: $color-error;
+  }
+
+  .dark & {
+    color: $color-error-reverse;
+  }
 }
 
 .text-info {
-  color: $color-info !important;
+  &,
+  .light & {
+    color: $color-info;
+  }
+
+  .dark & {
+    color: $color-info-reverse;
+  }
 }

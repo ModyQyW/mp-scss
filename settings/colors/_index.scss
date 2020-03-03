@@ -6,8 +6,13 @@ $color-transparent: transparent !default;
 @import "./md-colors";
 
 /* 默认跟随 Ant Design */
-$color-primary: $ad-blue !default;
-$color-success: $ad-green !default;
-$color-warning: $ad-gold !default;
-$color-error: $ad-red !default;
-$color-info: $ad-blue !default;
+$color-primary: $ad-blue-6 !default;
+$color-success: $ad-green-6 !default;
+$color-warning: $ad-gold-6 !default;
+$color-error: $ad-red-6 !default;
+$color-info: $ad-blue-6 !default;
+$color-primary-reverse: $ad-blue-6-reverse !default;
+$color-success-reverse: $ad-green-6-reverse !default;
+$color-warning-reverse: $ad-gold-6-reverse !default;
+$color-error-reverse: $ad-red-6-reverse !default;
+$color-info-reverse: $ad-blue-6-reverse !default;

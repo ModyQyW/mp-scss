@@ -1,5 +1,4 @@
-.btn,
-[class*="btn-"] {
+[class*="btn"] {
   position: $position-relative;
   box-sizing: $box-sizing-border-box;
   display: $display-flex;
@@ -22,74 +21,121 @@
     color: $color-main;
     background-color: $background-color-default;
     border-color: $border-color-default;
+
+    &.primary {
+      color: $color-main-reverse;
+      background-color: $color-primary;
+      border-color: $color-primary;
+
+      &.ghost {
+        color: $color-primary;
+        background-color: $color-transparent;
+      }
+    }
+
+    &.success {
+      color: $color-main-reverse;
+      background-color: $color-success;
+      border-color: $color-success;
+
+      &.ghost {
+        color: $color-success;
+        background-color: $color-transparent;
+      }
+    }
+
+    &.warning {
+      color: $color-main-reverse;
+      background-color: $color-warning;
+      border-color: $color-warning;
+
+      &.ghost {
+        color: $color-warning;
+        background-color: $color-transparent;
+      }
+    }
+
+    &.error {
+      color: $color-main-reverse;
+      background-color: $color-error;
+      border-color: $color-error;
+
+      &.ghost {
+        color: $color-error;
+        background-color: $color-transparent;
+      }
+    }
+
+    &.info {
+      color: $color-main-reverse;
+      background-color: $color-info;
+      border-color: $color-info;
+
+      &.ghost {
+        color: $color-info;
+        background-color: $color-transparent;
+      }
+    }
   }
 
   .dark & {
     color: $color-main-reverse;
     background-color: $background-color-default-reverse;
     border-color: $border-color-default-reverse;
+
+    &.primary {
+      background-color: $color-primary-reverse;
+      border-color: $color-primary-reverse;
+
+      &.ghost {
+        color: $color-primary-reverse;
+        background-color: $color-transparent;
+      }
+    }
+
+    &.success {
+      background-color: $color-success-reverse;
+      border-color: $color-success-reverse;
+
+      &.ghost {
+        color: $color-success-reverse;
+        background-color: $color-transparent;
+      }
+    }
+
+    &.warning {
+      background-color: $color-warning-reverse;
+      border-color: $color-warning-reverse;
+
+      &.ghost {
+        color: $color-warning-reverse;
+        background-color: $color-transparent;
+      }
+    }
+
+    &.error {
+      background-color: $color-error-reverse;
+      border-color: $color-error-reverse;
+
+      &.ghost {
+        color: $color-error-reverse;
+        background-color: $color-transparent;
+      }
+    }
+
+    &.info {
+      background-color: $color-info-reverse;
+      border-color: $color-info-reverse;
+
+      &.ghost {
+        color: $color-info-reverse;
+        background-color: $color-transparent;
+      }
+    }
   }
 
   &::after {
     border: $none;
     border-radius: $spacing-0;
-  }
-
-  &.primary,
-  &.success,
-  &.warning,
-  &.error,
-  &.info {
-    color: $color-white;
-  }
-
-  &.primary {
-    background-color: $color-primary;
-    border-color: $color-primary;
-
-    &.ghost {
-      color: $color-primary;
-      background-color: $color-transparent;
-    }
-  }
-
-  &.success {
-    background-color: $color-success;
-    border-color: $color-success;
-
-    &.ghost {
-      color: $color-success;
-      background-color: $color-transparent;
-    }
-  }
-
-  &.warning {
-    background-color: $color-warning;
-    border-color: $color-warning;
-
-    &.ghost {
-      color: $color-warning;
-      background-color: $color-transparent;
-    }
-  }
-
-  &.error {
-    background-color: $color-error;
-    border-color: $color-error;
-
-    &.ghost {
-      color: $color-error;
-      background-color: $color-transparent;
-    }
-  }
-
-  &.info {
-    background-color: $color-info;
-    border-color: $color-info;
-
-    &.ghost {
-      color: $color-info;
-      background-color: $color-transparent;
-    }
   }
 }
