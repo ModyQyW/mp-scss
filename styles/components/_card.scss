@@ -56,5 +56,6 @@
 
   & > .content {
     flex-direction: $flex-direction-column;
+    padding: $spacing-20 0;
   }
 }
