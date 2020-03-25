@@ -1,4 +1,4 @@
-[class*="form"]:not([class="form-item"]) {
+[class*="form"]:not([class*="form-item"]) {
   position: $position-relative;
   box-sizing: $box-sizing-border-box;
   display: $display-flex;
