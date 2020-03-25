@@ -7,7 +7,15 @@
   justify-content: $justify-content-center;
   width: $ratio-100;
   height: $ratio-100;
-  background-color: $background-color-mask;
+
+  &,
+  .light & {
+    background-color: $background-color-mask;
+  }
+
+  .dark & {
+    background-color: $background-color-mask-reverse;
+  }
 
   & > view[class*="dialog"] {
     position: $position-relative;
