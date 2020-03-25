@@ -1,8 +1,8 @@
 page {
   position: $position-relative;
   box-sizing: $box-sizing-border-box;
-  width: $ratio-100;
-  height: $ratio-100;
+  width: 100vw;
+  height: 100vh;
   padding: $spacing-0;
   margin: $spacing-0;
   overflow: $hidden;
@@ -30,7 +30,7 @@ page {
 
   .dark & {
     color: $color-main-reverse;
-    background-color: $background-color-light-reverse;
+    background-color: $background-color-dark;
   }
 
   & > .bg {
@@ -57,6 +57,7 @@ page {
     align-items: $align-items-center;
     justify-content: $justify-content-space-between;
     width: $ratio-100;
+    padding: 0 $spacing-24;
 
     & > .left,
     & > .right {
@@ -96,7 +97,7 @@ page {
     flex-direction: $flex-direction-column;
     width: $ratio-100;
     height: $auto;
-    padding: $spacing-18;
+    padding: $spacing-24;
   }
 
   & > .footer {
