@@ -28,6 +28,7 @@ $ad-red-7: f-ad-get-color($ad-red, 7); // #cf1322
 $ad-red-8: f-ad-get-color($ad-red, 8); // #a8071a
 $ad-red-9: f-ad-get-color($ad-red, 9); // #820014
 $ad-red-10: f-ad-get-color($ad-red, 10); // #5c0011
+$ad-red-reverse: mix($ad-red, $ad-gray-12, 85%);
 $ad-red-1-reverse: mix(f-ad-get-color($ad-red, 8), $ad-gray-12, 15%);
 $ad-red-2-reverse: mix(f-ad-get-color($ad-red, 7), $ad-gray-12, 25%);
 $ad-red-3-reverse: mix($ad-red, $ad-gray-12, 30%);
@@ -50,6 +51,7 @@ $ad-volcano-7: f-ad-get-color($ad-volcano, 7); // #d4380d
 $ad-volcano-8: f-ad-get-color($ad-volcano, 8); // #ad2102
 $ad-volcano-9: f-ad-get-color($ad-volcano, 9); // #871400
 $ad-volcano-10: f-ad-get-color($ad-volcano, 10); // #610b00
+$ad-volcano-reverse: mix($ad-volcano, $ad-gray-12, 85%);
 $ad-volcano-1-reverse: mix(f-ad-get-color($ad-volcano, 8), $ad-gray-12, 15%);
 $ad-volcano-2-reverse: mix(f-ad-get-color($ad-volcano, 7), $ad-gray-12, 25%);
 $ad-volcano-3-reverse: mix($ad-volcano, $ad-gray-12, 30%);
@@ -72,6 +74,7 @@ $ad-orange-7: f-ad-get-color($ad-orange, 7); // #d46b08
 $ad-orange-8: f-ad-get-color($ad-orange, 8); // #ad4e00
 $ad-orange-9: f-ad-get-color($ad-orange, 9); // #873800
 $ad-orange-10: f-ad-get-color($ad-orange, 10); // #612500
+$ad-orange-reverse: mix($ad-orange, $ad-gray-12, 85%);
 $ad-orange-1-reverse: mix(f-ad-get-color($ad-orange, 8), $ad-gray-12, 15%);
 $ad-orange-2-reverse: mix(f-ad-get-color($ad-orange, 7), $ad-gray-12, 25%);
 $ad-orange-3-reverse: mix($ad-orange, $ad-gray-12, 30%);
@@ -94,6 +97,7 @@ $ad-gold-7: f-ad-get-color($ad-gold, 7); // #d48806
 $ad-gold-8: f-ad-get-color($ad-gold, 8); // #ad6800
 $ad-gold-9: f-ad-get-color($ad-gold, 9); // #874d00
 $ad-gold-10: f-ad-get-color($ad-gold, 10); // #613400
+$ad-gold-reverse: mix($ad-gold, $ad-gray-12, 85%);
 $ad-gold-1-reverse: mix(f-ad-get-color($ad-gold, 8), $ad-gray-12, 15%);
 $ad-gold-2-reverse: mix(f-ad-get-color($ad-gold, 7), $ad-gray-12, 25%);
 $ad-gold-3-reverse: mix($ad-gold, $ad-gray-12, 30%);
@@ -116,6 +120,7 @@ $ad-yellow-7: f-ad-get-color($ad-yellow, 7); // #d4b106
 $ad-yellow-8: f-ad-get-color($ad-yellow, 8); // #ad8b00
 $ad-yellow-9: f-ad-get-color($ad-yellow, 9); // #876800
 $ad-yellow-10: f-ad-get-color($ad-yellow, 10); // #614700
+$ad-yellow-reverse: mix($ad-yellow, $ad-gray-12, 85%);
 $ad-yellow-1-reverse: mix(f-ad-get-color($ad-yellow, 8), $ad-gray-12, 15%);
 $ad-yellow-2-reverse: mix(f-ad-get-color($ad-yellow, 7), $ad-gray-12, 25%);
 $ad-yellow-3-reverse: mix($ad-yellow, $ad-gray-12, 30%);
@@ -138,6 +143,7 @@ $ad-lime-7: f-ad-get-color($ad-lime, 7); // #7cb305
 $ad-lime-8: f-ad-get-color($ad-lime, 8); // #5b8c00
 $ad-lime-9: f-ad-get-color($ad-lime, 9); // #3f6600
 $ad-lime-10: f-ad-get-color($ad-lime, 10); // #254000
+$ad-lime-reverse: mix($ad-lime, $ad-gray-12, 85%);
 $ad-lime-1-reverse: mix(f-ad-get-color($ad-lime, 8), $ad-gray-12, 15%);
 $ad-lime-2-reverse: mix(f-ad-get-color($ad-lime, 7), $ad-gray-12, 25%);
 $ad-lime-3-reverse: mix($ad-lime, $ad-gray-12, 30%);
@@ -160,6 +166,7 @@ $ad-green-7: f-ad-get-color($ad-green, 7); // #389e0d
 $ad-green-8: f-ad-get-color($ad-green, 8); // #237804
 $ad-green-9: f-ad-get-color($ad-green, 9); // #135200
 $ad-green-10: f-ad-get-color($ad-green, 10); // #092b00
+$ad-green-reverse: mix($ad-green, $ad-gray-12, 85%);
 $ad-green-1-reverse: mix(f-ad-get-color($ad-green, 8), $ad-gray-12, 15%);
 $ad-green-2-reverse: mix(f-ad-get-color($ad-green, 7), $ad-gray-12, 25%);
 $ad-green-3-reverse: mix($ad-green, $ad-gray-12, 30%);
@@ -182,6 +189,7 @@ $ad-cyan-7: f-ad-get-color($ad-cyan, 7); // #08979c
 $ad-cyan-8: f-ad-get-color($ad-cyan, 8); // #006d75
 $ad-cyan-9: f-ad-get-color($ad-cyan, 9); // #00474f
 $ad-cyan-10: f-ad-get-color($ad-cyan, 10); // #002329
+$ad-cyan-reverse: mix($ad-cyan, $ad-gray-12, 85%);
 $ad-cyan-1-reverse: mix(f-ad-get-color($ad-cyan, 8), $ad-gray-12, 15%);
 $ad-cyan-2-reverse: mix(f-ad-get-color($ad-cyan, 7), $ad-gray-12, 25%);
 $ad-cyan-3-reverse: mix($ad-cyan, $ad-gray-12, 30%);
@@ -204,6 +212,7 @@ $ad-blue-7: f-ad-get-color($ad-blue, 7); // #096dd9
 $ad-blue-8: f-ad-get-color($ad-blue, 8); // #0050b3
 $ad-blue-9: f-ad-get-color($ad-blue, 9); // #003a8c
 $ad-blue-10: f-ad-get-color($ad-blue, 10); // #002766
+$ad-blue-reverse: mix($ad-blue, $ad-gray-12, 85%);
 $ad-blue-1-reverse: mix(f-ad-get-color($ad-blue, 8), $ad-gray-12, 15%);
 $ad-blue-2-reverse: mix(f-ad-get-color($ad-blue, 7), $ad-gray-12, 25%);
 $ad-blue-3-reverse: mix($ad-blue, $ad-gray-12, 30%);
@@ -226,6 +235,7 @@ $ad-geek-blue-7: f-ad-get-color($ad-geek-blue, 7); // #1d39c4
 $ad-geek-blue-8: f-ad-get-color($ad-geek-blue, 8); // #10239e
 $ad-geek-blue-9: f-ad-get-color($ad-geek-blue, 9); // #061178
 $ad-geek-blue-10: f-ad-get-color($ad-geek-blue, 10); // #030852
+$ad-geek-blue-reverse: mix($ad-geek-blue, $ad-gray-12, 85%);
 $ad-geek-blue-1-reverse: mix(f-ad-get-color($ad-geek-blue, 8), $ad-gray-12, 15%);
 $ad-geek-blue-2-reverse: mix(f-ad-get-color($ad-geek-blue, 7), $ad-gray-12, 25%);
 $ad-geek-blue-3-reverse: mix($ad-geek-blue, $ad-gray-12, 30%);
@@ -248,6 +258,7 @@ $ad-purple-7: f-ad-get-color($ad-purple, 7); // #531dab
 $ad-purple-8: f-ad-get-color($ad-purple, 8); // #391085
 $ad-purple-9: f-ad-get-color($ad-purple, 9); // #22075e
 $ad-purple-10: f-ad-get-color($ad-purple, 10); // #120338
+$ad-purple-reverse: mix($ad-purple, $ad-gray-12, 85%);
 $ad-purple-1-reverse: mix(f-ad-get-color($ad-purple, 8), $ad-gray-12, 15%);
 $ad-purple-2-reverse: mix(f-ad-get-color($ad-purple, 7), $ad-gray-12, 25%);
 $ad-purple-3-reverse: mix($ad-purple, $ad-gray-12, 30%);
@@ -270,6 +281,7 @@ $ad-magenta-7: f-ad-get-color($ad-magenta, 7); // #c41d7f
 $ad-magenta-8: f-ad-get-color($ad-magenta, 8); // #9e1068
 $ad-magenta-9: f-ad-get-color($ad-magenta, 9); // #780650
 $ad-magenta-10: f-ad-get-color($ad-magenta, 10); // #520339
+$ad-magenta-reverse: mix($ad-magenta, $ad-gray-12, 85%);
 $ad-magenta-1-reverse: mix(f-ad-get-color($ad-magenta, 8), $ad-gray-12, 15%);
 $ad-magenta-2-reverse: mix(f-ad-get-color($ad-magenta, 7), $ad-gray-12, 25%);
 $ad-magenta-3-reverse: mix($ad-magenta, $ad-gray-12, 30%);
