@@ -46,6 +46,7 @@
       &.icon {
         flex-basis: $spacing-40;
         justify-content: $justify-content-center;
+        height: $spacing-40;
       }
 
       & + .content {
