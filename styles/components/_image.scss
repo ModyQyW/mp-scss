@@ -21,8 +21,7 @@ $icon-sizing-list: map-keys($icon-sizing-map);
     width: map-get($icon-sizing-map, $size);
     height: map-get($icon-sizing-map, $size);
 
-    & + text,
-    & + [class*="text"] {
+    & + text {
       margin-left: $spacing-4;
     }
   }
