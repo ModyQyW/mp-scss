@@ -90,7 +90,7 @@
 }
 
 .text-truncate {
-  overflow: $overflow-hidden;
+  overflow: $hidden;
   text-overflow: $text-overflow-ellipsis;
   white-space: nowrap;
 }
