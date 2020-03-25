@@ -79,6 +79,11 @@ $color-success: $ad-green;
 $color-warning: $ad-gold;
 $color-error: $ad-red;
 $color-info: $ad-blue;
+$color-primary-reverse: $ad-blue-reverse;
+$color-success-reverse: $ad-green-reverse;
+$color-warning-reverse: $ad-gold-reverse;
+$color-error-reverse: $ad-red-reverse;
+$color-info-reverse: $ad-blue-reverse;
 $color-title: rgba(0, 0, 0, .85);
 $color-title-light: rgba(0, 0, 0, .75);
 $color-main: rgba(0, 0, 0, .65);
@@ -99,6 +104,11 @@ $color-success: $md-green;
 $color-warning: $md-yellow;
 $color-error: $md-red;
 $color-info: $md-blue;
+$color-primary-reverse: $md-blue;
+$color-success-reverse: $md-green;
+$color-warning-reverse: $md-yellow;
+$color-error-reverse: $md-red;
+$color-info-reverse: $md-blue;
 $color-title: rgba(0, 0, 0, .87);
 $color-title-light: rgba(0, 0, 0, .87);
 $color-main: rgba(0, 0, 0, .87);
@@ -141,6 +151,13 @@ $scale: 1; // 不放大
     - _typography
     - _visual
     - _misc
+  - styles
+    - components
+    - positioning
+    - box-model
+    - typography
+    - visual
+    - misc
 
 ## 测试
 
