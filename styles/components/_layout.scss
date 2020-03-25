@@ -21,6 +21,10 @@ page {
   justify-content: $justify-content-flex-start;
   width: $ratio-100;
   height: $ratio-100;
+  font-family: $font-family-default;
+  font-size: $font-size-14;
+  font-weight: $font-weight-400;
+  line-height: $line-height-22;
 
   &,
   .light & {
@@ -83,12 +87,10 @@ page {
 
   & > .header {
     flex: $flex-grow-0 $flex-shrink-0 $spacing-96;
-    padding: $spacing-0 $spacing-20;
   }
 
   & > .nav {
     flex: $flex-grow-0 $flex-shrink-0 $spacing-64;
-    padding: $spacing-0;
     overflow: hidden;
   }
 
@@ -105,7 +107,7 @@ page {
     flex-direction: $flex-direction-row;
     align-items: $align-items-flex-start;
     justify-content: $justify-content-center;
-    padding: $spacing-8 $spacing-20;
+    padding: $spacing-8 $spacing-24;
   }
 
   &.horizontal {
