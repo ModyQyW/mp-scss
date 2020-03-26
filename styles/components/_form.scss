@@ -35,14 +35,18 @@
       margin-bottom: $spacing-0;
     }
 
-    & > .label {
+    & > .label,
+    & > .content {
       position: $position-relative;
       box-sizing: $box-sizing-border-box;
       display: $display-flex;
-      flex: $flex-grow-0 $flex-shrink-0 $spacing-120;
       flex-direction: $flex-direction-row;
       align-items: $align-items-center;
-      justify-content: $justify-content-flex-end;
+    }
+
+    & > .label {
+      flex: $flex-grow-0 $flex-shrink-0 $spacing-120;
+      justify-content: $justify-content-flex-start;
 
       &.icon {
         flex-basis: $spacing-40;
@@ -56,10 +60,8 @@
     }
 
     & > .content {
-      position: $position-relative;
-      box-sizing: $box-sizing-border-box;
-      display: $display-flex;
       flex: $auto;
+      justify-content: $justify-content-flex-start;
     }
   }
 }
