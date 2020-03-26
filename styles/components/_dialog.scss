@@ -21,11 +21,11 @@
     position: $position-relative;
     width: $ratio-80;
     height: $auto;
-    padding: $spacing-24;
+    padding: $spacing-12;
 
     & > .icon-close {
-      width: $spacing-40;
-      height: $spacing-40;
+      width: $spacing-20;
+      height: $spacing-20;
       border-radius: $ratio-50;
     }
   }

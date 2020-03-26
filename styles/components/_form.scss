@@ -5,7 +5,7 @@
   flex-direction: $flex-direction-column;
   width: $ratio-90;
   height: $auto;
-  padding: $spacing-24;
+  padding: $spacing-12;
   margin: 0 $auto;
 
   &,
@@ -29,7 +29,8 @@
     justify-content: $justify-content-center;
     width: $ratio-100;
     height: $auto;
-    padding: $spacing-12;
+    min-height: $spacing-41;
+    padding: 0 $spacing-12;
 
     & > .label,
     & > .content {
@@ -38,20 +39,21 @@
       display: $display-flex;
       flex-direction: $flex-direction-row;
       align-items: $align-items-center;
+      min-height: $spacing-40;
     }
 
     & > .label {
-      flex: $flex-grow-0 $flex-shrink-0 $spacing-120;
+      flex: $flex-grow-0 $flex-shrink-0 $spacing-60;
       justify-content: $justify-content-flex-start;
 
       &.icon {
-        flex-basis: $spacing-40;
+        flex-basis: $spacing-20;
         justify-content: $justify-content-center;
-        height: $spacing-40;
+        height: $spacing-20;
       }
 
       & + .content {
-        margin-left: $spacing-12;
+        margin-left: $spacing-8;
       }
     }
 

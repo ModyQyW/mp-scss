@@ -62,7 +62,7 @@ page {
     align-items: $align-items-center;
     justify-content: $justify-content-space-between;
     width: $ratio-100;
-    padding: 0 $spacing-24;
+    padding: 0 $spacing-12;
 
     & > .left,
     & > .right {
@@ -87,11 +87,11 @@ page {
   }
 
   & > .header {
-    flex: $flex-grow-0 $flex-shrink-0 $spacing-96;
+    flex: $flex-grow-0 $flex-shrink-0 $spacing-48;
   }
 
   & > .nav {
-    flex: $flex-grow-0 $flex-shrink-0 $spacing-64;
+    flex: $flex-grow-0 $flex-shrink-0 $spacing-32;
     overflow: hidden;
   }
 
@@ -100,15 +100,15 @@ page {
     flex-direction: $flex-direction-column;
     width: $ratio-100;
     height: $auto;
-    padding: $spacing-24;
+    padding: $spacing-12;
   }
 
   & > .footer {
-    flex: $flex-grow-0 $flex-shrink-0 $spacing-184;
+    flex: $flex-grow-0 $flex-shrink-0 $spacing-92;
     flex-direction: $flex-direction-row;
     align-items: $align-items-flex-start;
     justify-content: $justify-content-center;
-    padding: $spacing-8 $spacing-24;
+    padding: $spacing-4 $spacing-12;
   }
 
   &.horizontal {
