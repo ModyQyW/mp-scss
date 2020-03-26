@@ -21,6 +21,7 @@ page {
   justify-content: $justify-content-flex-start;
   width: $ratio-100;
   height: $ratio-100;
+  overflow: $hidden;
   font-family: $font-family-default;
   font-size: $font-size-14;
   font-weight: $font-weight-400;
