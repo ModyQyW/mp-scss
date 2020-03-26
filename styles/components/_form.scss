@@ -3,9 +3,10 @@
   box-sizing: $box-sizing-border-box;
   display: $display-flex;
   flex-direction: $flex-direction-column;
-  width: $ratio-80;
+  width: $ratio-90;
   height: $auto;
   padding: $spacing-24;
+  margin: 0 $auto;
 
   &,
   .light & {
