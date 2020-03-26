@@ -33,7 +33,7 @@
     font-size: $font-size-12;
     line-height: $line-height-40;
 
-    & + input[class*="input-"] {
+    & + input[class*="input"] {
       margin-left: $spacing-8;
     }
   }
