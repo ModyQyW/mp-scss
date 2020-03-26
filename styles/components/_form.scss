@@ -29,11 +29,7 @@
     justify-content: $justify-content-center;
     width: $ratio-100;
     height: $auto;
-    margin-bottom: $spacing-16;
-
-    &:last-child {
-      margin-bottom: $spacing-0;
-    }
+    padding: $spacing-12;
 
     & > .label,
     & > .content {
