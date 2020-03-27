@@ -23,7 +23,8 @@
     background-color: $background-color-default;
     border-color: $border-color-default;
 
-    &.primary {
+    &.primary,
+    &.btn-primary {
       color: $ad-gray-1;
       background-color: $color-primary;
       border-color: $color-primary;
@@ -33,7 +34,8 @@
         border-color: f-ad-get-color($color-primary, 7);
       }
 
-      &.ghost {
+      &.ghost,
+      &.btn-ghost {
         color: $color-primary;
         background-color: $color-transparent;
 
@@ -44,7 +46,8 @@
       }
     }
 
-    &.success {
+    &.success,
+    &.btn-success {
       color: $ad-gray-1;
       background-color: $color-success;
       border-color: $color-success;
@@ -54,7 +57,8 @@
         border-color: f-ad-get-color($color-success, 7);
       }
 
-      &.ghost {
+      &.ghost,
+      &.btn-ghost {
         color: $color-success;
         background-color: $color-transparent;
 
@@ -65,7 +69,8 @@
       }
     }
 
-    &.warning {
+    &.warning,
+    &.btn-warning {
       color: $ad-gray-1;
       background-color: $color-warning;
       border-color: $color-warning;
@@ -75,7 +80,8 @@
         border-color: f-ad-get-color($color-warning, 7);
       }
 
-      &.ghost {
+      &.ghost,
+      &.btn-ghost {
         color: $color-warning;
         background-color: $color-transparent;
 
@@ -86,7 +92,8 @@
       }
     }
 
-    &.error {
+    &.error,
+    &.btn-error {
       color: $ad-gray-1;
       background-color: $color-error;
       border-color: $color-error;
@@ -96,7 +103,8 @@
         border-color: f-ad-get-color($color-error, 7);
       }
 
-      &.ghost {
+      &.ghost,
+      &.btn-ghost {
         color: $color-error;
         background-color: $color-transparent;
 
@@ -107,7 +115,8 @@
       }
     }
 
-    &.info {
+    &.info,
+    &.btn-info {
       color: $ad-gray-1;
       background-color: $color-info;
       border-color: $color-info;
@@ -117,7 +126,8 @@
         border-color: f-ad-get-color($color-info, 7);
       }
 
-      &.ghost {
+      &.ghost,
+      &.btn-ghost {
         color: $color-info;
         background-color: $color-transparent;
 
@@ -134,7 +144,8 @@
     background-color: $background-color-default-reverse;
     border-color: $border-color-default-reverse;
 
-    &.primary {
+    &.primary,
+    &.btn-primary {
       background-color: $color-primary-reverse;
       border-color: $color-primary-reverse;
 
@@ -143,7 +154,8 @@
         border-color: mix(f-ad-get-color($color-primary-reverse, 5), $ad-gray-12, 90%);
       }
 
-      &.ghost {
+      &.ghost,
+      &.btn-ghost {
         color: $color-primary-reverse;
         background-color: $color-transparent;
 
@@ -154,7 +166,8 @@
       }
     }
 
-    &.success {
+    &.success,
+    &.btn-success {
       background-color: $color-success-reverse;
       border-color: $color-success-reverse;
 
@@ -163,7 +176,8 @@
         border-color: mix(f-ad-get-color($color-success-reverse, 5), $ad-gray-12, 90%);
       }
 
-      &.ghost {
+      &.ghost,
+      &.btn-ghost {
         color: $color-success-reverse;
         background-color: $color-transparent;
 
@@ -174,7 +188,8 @@
       }
     }
 
-    &.warning {
+    &.warning,
+    &.btn-warning {
       background-color: $color-warning-reverse;
       border-color: $color-warning-reverse;
 
@@ -183,7 +198,8 @@
         border-color: mix(f-ad-get-color($color-warning-reverse, 5), $ad-gray-12, 90%);
       }
 
-      &.ghost {
+      &.ghost,
+      &.btn-ghost {
         color: $color-warning-reverse;
         background-color: $color-transparent;
 
@@ -194,7 +210,8 @@
       }
     }
 
-    &.error {
+    &.error,
+    &.btn-error {
       background-color: $color-error-reverse;
       border-color: $color-error-reverse;
 
@@ -203,7 +220,8 @@
         border-color: mix(f-ad-get-color($color-error-reverse, 5), $ad-gray-12, 90%);
       }
 
-      &.ghost {
+      &.ghost,
+      &.btn-ghost {
         color: $color-error-reverse;
         background-color: $color-transparent;
 
@@ -214,7 +232,8 @@
       }
     }
 
-    &.info {
+    &.info,
+    &.btn-info {
       background-color: $color-info-reverse;
       border-color: $color-info-reverse;
 
@@ -223,7 +242,8 @@
         border-color: mix(f-ad-get-color($color-info-reverse, 5), $ad-gray-12, 90%);
       }
 
-      &.ghost {
+      &.ghost,
+      &.btn-ghost {
         color: $color-info-reverse;
         background-color: $color-transparent;
 
