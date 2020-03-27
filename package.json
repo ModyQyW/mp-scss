@@ -5,7 +5,7 @@
   "author": "ModyQyW <wurui7@mail3.sysu.edu.cn>",
   "license": "MIT",
   "scripts": {
-    "lint": "stylelint ."
+    "lint": "stylelint settings && stylelint styles"
   },
   "publishConfig": {
     "access": "public"
