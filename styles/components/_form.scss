@@ -32,6 +32,10 @@
     min-height: $spacing-41;
     padding: 0 $spacing-12;
 
+    &.h-auto {
+      height: $auto !important;
+    }
+
     & > .label,
     & > .content {
       position: $position-relative;
