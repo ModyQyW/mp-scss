@@ -194,7 +194,6 @@ Copyright (c) 2019-present ModyQyW
 
 - [Material Design](https://material.io/)
 - [Ant Design](https://ant.design/)
-- [ElementUI](https://element.eleme.io/)
-- [@mdo/code-guide](https://github.com/mdo/code-guide)
-- [stylelint-config-twbs-bootstrap](https://github.com/twbs/stylelint-config-twbs-bootstrap)
+- [bootstrap](https://github.com/twbs/stylelint-config-twbs-bootstrap)
 - [tailwindcss](https://tailwindcss.com/)
+- [bulma](https://bulma.io/)
