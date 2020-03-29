@@ -13,6 +13,8 @@ $normal: normal;
 $inherit: inherit;
 $initial: initial;
 $unset: unset;
+$start: flex-start;
+$end: flex-end;
 
 @import "./colors/index";
 @import "./ratio/index";
@@ -20,4 +22,3 @@ $unset: unset;
 @import "./positioning/index";
 @import "./box-model/index";
 @import "./typography/index";
-@import "./visual/index";

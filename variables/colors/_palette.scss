@@ -1,13 +1,13 @@
-/* Ant Design v3/v4 调色板的 scss 实现 */
-$ad-palette-light-color-count: 5;
-$ad-palette-dark-color-count: 4;
-$ad-palette-hue-step: 2deg;
-$ad-palette-saturation-step-1: 16%;
-$ad-palette-saturation-step-2: 5%;
-$ad-palette-brightness-step-1: 5%;
-$ad-palette-brightness-step-2: 15%;
+/* Ant Design v3/v4 调色板 */
+$palette-light-color-count: 5;
+$palette-dark-color-count: 4;
+$palette-hue-step: 2deg;
+$palette-saturation-step-1: 16%;
+$palette-saturation-step-2: 5%;
+$palette-brightness-step-1: 5%;
+$palette-brightness-step-2: 15%;
 
-@function f-ad-palette-hex-to-hsv($hex-color) {
+@function f-palette-hex-to-hsv($hex-color) {
   // convert
   $r: red($hex-color) / 255;
   $g: green($hex-color) / 255;
@@ -39,7 +39,7 @@ $ad-palette-brightness-step-2: 15%;
 }
 
 
-@function f-ad-palette-hsv-to-hex($h, $s, $v) {
+@function f-palette-hsv-to-hex($h, $s, $v) {
   $h: $h / 1deg;
   $s: $s / 100%;
   $v: $v / 100%;
@@ -64,7 +64,7 @@ $ad-palette-brightness-step-2: 15%;
   }
 }
 
-@function f-ad-palette-get-hue($h, $s, $v, $diff, $is-lighter) {
+@function f-palette-get-hue($h, $s, $v, $diff, $is-lighter) {
   $hue: 0deg;
   @if ($h == 0deg and $s == 0%) {
     @return $h;
@@ -72,14 +72,14 @@ $ad-palette-brightness-step-2: 15%;
   @if ($h >= 60deg and $h <= 240deg) {
     $hue: if(
       $is-lighter,
-      $h - $ad-palette-hue-step * $diff,
-      $h + $ad-palette-hue-step * $diff
+      $h - $palette-hue-step * $diff,
+      $h + $palette-hue-step * $diff
     );
   } @else {
     $hue: if(
       $is-lighter,
-      $h + $ad-palette-hue-step * $diff,
-      $h - $ad-palette-hue-step * $diff
+      $h + $palette-hue-step * $diff,
+      $h - $palette-hue-step * $diff
     );
   }
   @if ($hue < 0deg) {
@@ -91,22 +91,22 @@ $ad-palette-brightness-step-2: 15%;
   @return round($hue);
 }
 
-@function f-ad-palette-get-saturation($h, $s, $v, $diff, $is-lighter) {
+@function f-palette-get-saturation($h, $s, $v, $diff, $is-lighter) {
   $saturation: 0%;
   @if ($h == 0deg and $s == 0%) {
     @return $s;
   }
   @if ($is-lighter) {
-    $saturation: round(($s - $ad-palette-saturation-step-1 * $diff) * 100) / 100;
-  } @else if ($diff == $ad-palette-dark-color-count) {
-    $saturation: round(($s + $ad-palette-saturation-step-1) * 100) / 100;
+    $saturation: round(($s - $palette-saturation-step-1 * $diff) * 100) / 100;
+  } @else if ($diff == $palette-dark-color-count) {
+    $saturation: round(($s + $palette-saturation-step-1) * 100) / 100;
   } @else {
-    $saturation: round(($s + $ad-palette-saturation-step-2 * $diff) * 100) / 100;
+    $saturation: round(($s + $palette-saturation-step-2 * $diff) * 100) / 100;
   }
   @if ($saturation > 100%) {
     $saturation: 100%;
   }
-  @if ($is-lighter == true and $diff == $ad-palette-light-color-count and $saturation > 10%) {
+  @if ($is-lighter == true and $diff == $palette-light-color-count and $saturation > 10%) {
     $saturation: 10%;
   }
   @if ($saturation < 6%) {
@@ -115,38 +115,38 @@ $ad-palette-brightness-step-2: 15%;
   @return round($saturation);
 }
 
-@function f-ad-palette-get-value($h, $s, $v, $diff, $is-lighter) {
+@function f-palette-get-value($h, $s, $v, $diff, $is-lighter) {
   @if ($is-lighter) {
     @return if(
-      round(($v + $ad-palette-brightness-step-1 * $diff) * 100) / 100 > 100%,
+      round(($v + $palette-brightness-step-1 * $diff) * 100) / 100 > 100%,
       100%,
-      round(($v + $ad-palette-brightness-step-1 * $diff) * 100) / 100
+      round(($v + $palette-brightness-step-1 * $diff) * 100) / 100
     );
   }
   @return if(
-    round(($v - $ad-palette-brightness-step-2 * $diff) * 100) / 100 < 0%,
+    round(($v - $palette-brightness-step-2 * $diff) * 100) / 100 < 0%,
     0%,
-    round(($v - $ad-palette-brightness-step-2 * $diff) * 100) / 100
+    round(($v - $palette-brightness-step-2 * $diff) * 100) / 100
   );
 }
 
-@function f-ad-get-color($hex-color, $idx) {
+@function f-get-color($hex-color, $idx) {
   @if ($idx == 6) {
     @return $hex-color;
   }
   $is-lighter: $idx <= 6;
-  $hsv-color: f-ad-palette-hex-to-hsv($hex-color); // deg, %, %
+  $hsv-color: f-palette-hex-to-hsv($hex-color); // deg, %, %
   $diff: if(
     $is-lighter,
-    $ad-palette-light-color-count + 1 - $idx,
-    $idx - $ad-palette-light-color-count - 1
+    $palette-light-color-count + 1 - $idx,
+    $idx - $palette-light-color-count - 1
   );
   $h: nth($hsv-color, 1); // deg
   $s: nth($hsv-color, 2); // %
   $v: nth($hsv-color, 3); // %
-  @return f-ad-palette-hsv-to-hex(
-    f-ad-palette-get-hue($h, $s, $v, $diff, $is-lighter),
-    f-ad-palette-get-saturation($h, $s, $v, $diff, $is-lighter),
-    f-ad-palette-get-value($h, $s, $v, $diff, $is-lighter)
+  @return f-palette-hsv-to-hex(
+    f-palette-get-hue($h, $s, $v, $diff, $is-lighter),
+    f-palette-get-saturation($h, $s, $v, $diff, $is-lighter),
+    f-palette-get-value($h, $s, $v, $diff, $is-lighter)
   );
 }
