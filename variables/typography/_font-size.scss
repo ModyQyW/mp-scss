@@ -1,96 +1,52 @@
 // 控制元素的字体大小
-$font-size-default: 14 * $scale + $unit;
-//
-// var str = ''
-// for (let i = 10; i <= 96; i += 1) {
-//   str += `$font-size-${i}: ${i} * $scale + $unit;\r`
-// }
-// copy(str)
-//
-$font-size-10: 10 * $scale + $unit;
-$font-size-11: 11 * $scale + $unit;
-$font-size-12: 12 * $scale + $unit;
-$font-size-13: 13 * $scale + $unit;
-$font-size-14: 14 * $scale + $unit;
-$font-size-15: 15 * $scale + $unit;
-$font-size-16: 16 * $scale + $unit;
-$font-size-17: 17 * $scale + $unit;
-$font-size-18: 18 * $scale + $unit;
-$font-size-19: 19 * $scale + $unit;
-$font-size-20: 20 * $scale + $unit;
-$font-size-21: 21 * $scale + $unit;
-$font-size-22: 22 * $scale + $unit;
-$font-size-23: 23 * $scale + $unit;
-$font-size-24: 24 * $scale + $unit;
-$font-size-25: 25 * $scale + $unit;
-$font-size-26: 26 * $scale + $unit;
-$font-size-27: 27 * $scale + $unit;
-$font-size-28: 28 * $scale + $unit;
-$font-size-29: 29 * $scale + $unit;
-$font-size-30: 30 * $scale + $unit;
-$font-size-31: 31 * $scale + $unit;
-$font-size-32: 32 * $scale + $unit;
-$font-size-33: 33 * $scale + $unit;
-$font-size-34: 34 * $scale + $unit;
-$font-size-35: 35 * $scale + $unit;
-$font-size-36: 36 * $scale + $unit;
-$font-size-37: 37 * $scale + $unit;
-$font-size-38: 38 * $scale + $unit;
-$font-size-39: 39 * $scale + $unit;
-$font-size-40: 40 * $scale + $unit;
-$font-size-41: 41 * $scale + $unit;
-$font-size-42: 42 * $scale + $unit;
-$font-size-43: 43 * $scale + $unit;
-$font-size-44: 44 * $scale + $unit;
-$font-size-45: 45 * $scale + $unit;
-$font-size-46: 46 * $scale + $unit;
-$font-size-47: 47 * $scale + $unit;
-$font-size-48: 48 * $scale + $unit;
-$font-size-49: 49 * $scale + $unit;
-$font-size-50: 50 * $scale + $unit;
-$font-size-51: 51 * $scale + $unit;
-$font-size-52: 52 * $scale + $unit;
-$font-size-53: 53 * $scale + $unit;
-$font-size-54: 54 * $scale + $unit;
-$font-size-55: 55 * $scale + $unit;
-$font-size-56: 56 * $scale + $unit;
-$font-size-57: 57 * $scale + $unit;
-$font-size-58: 58 * $scale + $unit;
-$font-size-59: 59 * $scale + $unit;
-$font-size-60: 60 * $scale + $unit;
-$font-size-61: 61 * $scale + $unit;
-$font-size-62: 62 * $scale + $unit;
-$font-size-63: 63 * $scale + $unit;
-$font-size-64: 64 * $scale + $unit;
-$font-size-65: 65 * $scale + $unit;
-$font-size-66: 66 * $scale + $unit;
-$font-size-67: 67 * $scale + $unit;
-$font-size-68: 68 * $scale + $unit;
-$font-size-69: 69 * $scale + $unit;
-$font-size-70: 70 * $scale + $unit;
-$font-size-71: 71 * $scale + $unit;
-$font-size-72: 72 * $scale + $unit;
-$font-size-73: 73 * $scale + $unit;
-$font-size-74: 74 * $scale + $unit;
-$font-size-75: 75 * $scale + $unit;
-$font-size-76: 76 * $scale + $unit;
-$font-size-77: 77 * $scale + $unit;
-$font-size-78: 78 * $scale + $unit;
-$font-size-79: 79 * $scale + $unit;
-$font-size-80: 80 * $scale + $unit;
-$font-size-81: 81 * $scale + $unit;
-$font-size-82: 82 * $scale + $unit;
-$font-size-83: 83 * $scale + $unit;
-$font-size-84: 84 * $scale + $unit;
-$font-size-85: 85 * $scale + $unit;
-$font-size-86: 86 * $scale + $unit;
-$font-size-87: 87 * $scale + $unit;
-$font-size-88: 88 * $scale + $unit;
-$font-size-89: 89 * $scale + $unit;
-$font-size-90: 90 * $scale + $unit;
-$font-size-91: 91 * $scale + $unit;
-$font-size-92: 92 * $scale + $unit;
-$font-size-93: 93 * $scale + $unit;
-$font-size-94: 94 * $scale + $unit;
-$font-size-95: 95 * $scale + $unit;
-$font-size-96: 96 * $scale + $unit;
+
+$font-size-benchmark: 14 !default;
+
+// 基准字体大小
+$font-size-base: $font-size-benchmark * $scale + $unit;
+// s - sub
+$font-size-s-8: ($font-size-benchmark - 8) * $scale + $unit;
+$font-size-s-7: ($font-size-benchmark - 7) * $scale + $unit;
+$font-size-s-6: ($font-size-benchmark - 6) * $scale + $unit;
+$font-size-s-5: ($font-size-benchmark - 5) * $scale + $unit;
+$font-size-s-4: ($font-size-benchmark - 4) * $scale + $unit;
+$font-size-s-3: ($font-size-benchmark - 3) * $scale + $unit;
+$font-size-s-2: ($font-size-benchmark - 2) * $scale + $unit;
+$font-size-s-1: ($font-size-benchmark - 1) * $scale + $unit;
+// a - add
+$font-size-a-1: ($font-size-benchmark + 1) * $scale + $unit;
+$font-size-a-2: ($font-size-benchmark + 2) * $scale + $unit;
+$font-size-a-3: ($font-size-benchmark + 3) * $scale + $unit;
+$font-size-a-4: ($font-size-benchmark + 4) * $scale + $unit;
+$font-size-a-5: ($font-size-benchmark + 5) * $scale + $unit;
+$font-size-a-6: ($font-size-benchmark + 6) * $scale + $unit;
+$font-size-a-7: ($font-size-benchmark + 7) * $scale + $unit;
+$font-size-a-8: ($font-size-benchmark + 8) * $scale + $unit;
+$font-size-a-9: ($font-size-benchmark + 9) * $scale + $unit;
+$font-size-a-10: ($font-size-benchmark + 10) * $scale + $unit;
+$font-size-a-11: ($font-size-benchmark + 11) * $scale + $unit;
+$font-size-a-12: ($font-size-benchmark + 12) * $scale + $unit;
+$font-size-a-13: ($font-size-benchmark + 13) * $scale + $unit;
+$font-size-a-14: ($font-size-benchmark + 14) * $scale + $unit;
+$font-size-a-15: ($font-size-benchmark + 15) * $scale + $unit;
+$font-size-a-16: ($font-size-benchmark + 16) * $scale + $unit;
+$font-size-a-17: ($font-size-benchmark + 17) * $scale + $unit;
+$font-size-a-18: ($font-size-benchmark + 18) * $scale + $unit;
+$font-size-a-19: ($font-size-benchmark + 19) * $scale + $unit;
+$font-size-a-20: ($font-size-benchmark + 20) * $scale + $unit;
+$font-size-a-21: ($font-size-benchmark + 21) * $scale + $unit;
+$font-size-a-22: ($font-size-benchmark + 22) * $scale + $unit;
+$font-size-a-23: ($font-size-benchmark + 23) * $scale + $unit;
+$font-size-a-24: ($font-size-benchmark + 24) * $scale + $unit;
+// m - multiply
+$font-size-m-4-8: ($font-size-benchmark * .5) * $scale + $unit;
+$font-size-m-5-8: ($font-size-benchmark * .625) * $scale + $unit;
+$font-size-m-6-8: ($font-size-benchmark * .75) * $scale + $unit;
+$font-size-m-7-8: ($font-size-benchmark * .875) * $scale + $unit;
+$font-size-m-9-8: ($font-size-benchmark * 1.125) * $scale + $unit;
+$font-size-m-10-8: ($font-size-benchmark * 1.25) * $scale + $unit;
+$font-size-m-12-8: ($font-size-benchmark * 1.5) * $scale + $unit;
+$font-size-m-15-8: ($font-size-benchmark * 1.875) * $scale + $unit;
+$font-size-m-18-8: ($font-size-benchmark * 2.25) * $scale + $unit;
+$font-size-m-24-8: ($font-size-benchmark * 3) * $scale + $unit;
+$font-size-m-32-8: ($font-size-benchmark * 4) * $scale + $unit;
