@@ -1,5 +1,5 @@
-$colors-light: (
-  /* 色板颜色 */
+/* 色板颜色 */
+$palette-colors-light: (
   gray: $gray,
   gray-1: $gray-1,
   gray-2: $gray-2,
@@ -146,25 +146,34 @@ $colors-light: (
   magenta-8: $magenta-8,
   magenta-9: $magenta-9,
   magenta-10: $magenta-10,
-  /* 色板外颜色 */
-  transparent: transparent,
-  // 功能色
+);
+
+/* 功能色 */
+$functional-colors-light: (
   primary: $color-primary,
   success: $color-success,
   warning: $color-warning,
   error: $color-error,
   info: $color-info,
-  // 文字色
+  transparent: transparent
+);
+
+/* 文字色 */
+$text-colors-light: (
   title: $color-title,
   main: $color-main,
   secondary: $color-secondary,
-  disabled: $color-disabled,
-  // 背景色
+  disabled: $color-disabled
+);
+
+$background-colors-light: (
   container: $color-container,
   default: $color-default,
   mask: $color-mask,
   shadow: $color-shadow,
-  divider: $color-divider,
-  // 边框色
+  divider: $color-divider
+);
+
+$border-colors-light: (
   border: $color-border
 );
