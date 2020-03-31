@@ -1,159 +1,150 @@
 page {
-  position: $position-relative;
-  box-sizing: $box-sizing-border-box;
+  position: relative;
+  box-sizing: border-box;
   width: 100vw;
   height: 100vh;
-  padding: 0;
-  margin: 0;
   overflow: hidden;
-  font-family: $font-family-default;
-  font-size: $font-size-14;
-  font-weight: $font-weight-400;
-  line-height: $line-height-22;
+  font-size: $font-size-base;
+  font-weight: 400;
+  line-height: $line-height-base;
 }
 
 .container {
-  position: $position-relative;
-  box-sizing: $box-sizing-border-box;
-  display: $display-flex;
-  flex-direction: $flex-direction-column;
-  align-items: $align-start;
-  justify-content: $justify-start;
-  width: $ratio-100;
-  height: $ratio-100;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  font-family: $font-family-default;
-  font-size: $font-size-14;
-  font-weight: $font-weight-400;
-  line-height: $line-height-22;
+  font-size: $font-size-base;
+  font-weight: 400;
+  line-height: $line-height-base;
 
   &,
   .light & {
     color: $color-main;
-    background-color: $background-color-light;
+    background-color: $color-bg-container;
   }
 
   .dark & {
     color: $color-main-reverse;
-    background-color: $background-color-dark;
+    background-color: $color-bg-container-reverse;
   }
 
-  & > .bg {
-    position: $position-fixed;
-    width: $ratio-100;
-    height: $ratio-100;
-  }
-
-  & > .header,
-  & > .nav,
-  & > .footer,
-  & > .aside,
-  & > .main {
-    position: $position-relative;
-    box-sizing: $box-sizing-border-box;
-    display: $display-flex;
-    background-color: $color-transparent;
-  }
-
-  & > .header,
-  & > .nav,
-  & > .footer {
-    flex-direction: $flex-direction-row;
-    align-items: $align-center;
-    justify-content: $justify-space-between;
-    width: $ratio-100;
-    padding: 0 $length-12;
-
-    & > .left,
-    & > .right {
-      position: $position-relative;
-      box-sizing: $box-sizing-border-box;
-      display: $display-flex;
-      flex-direction: $flex-direction-row;
-      align-items: $align-center;
-      height: $ratio-100;
-      overflow: hidden;
-    }
-
-    & > .left {
-      flex: auto;
-      justify-content: $justify-start;
-    }
-
-    & > .right {
-      flex: none;
-      justify-content: $justify-end;
-    }
-  }
-
-  & > .header {
-    flex: $flex-grow-0 $flex-shrink-0 $length-48;
-  }
-
-  & > .nav {
-    flex: $flex-grow-0 $flex-shrink-0 $length-32;
-    overflow: hidden;
-  }
-
-  & > .main {
+  &.horizontal,
+  &.is-horizontal {
     flex: auto;
-    flex-direction: $flex-direction-column;
-    width: $ratio-100;
+    flex-direction: row;
     height: auto;
-    padding: $length-12;
-  }
-
-  & > .footer {
-    flex: $flex-grow-0 $flex-shrink-0 $length-92;
-    flex-direction: $flex-direction-row;
-    align-items: $align-start;
-    justify-content: $justify-center;
-    padding: $length-4 $length-12;
-  }
-
-  &.horizontal {
-    flex: auto;
-    flex-direction: $flex-direction-row;
-    height: auto;
-
-    & > .aside {
-      flex-direction: $flex-direction-column;
-      align-items: $align-center;
-      width: auto;
-      height: $ratio-100;
-    }
-
-    & > .main {
-      width: auto;
-      height: $ratio-100;
-      padding: 0;
-    }
   }
 }
 
-[class*="wrapper"] {
-  position: $position-relative;
-  box-sizing: $box-sizing-border-box;
-  display: $display-flex;
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.header,
+.nav,
+.footer,
+.aside,
+.main {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  background-color: transparent;
+}
+
+.header,
+.nav,
+.footer {
+  flex-direction: row;
+  width: 100%;
+}
+
+.header {
+  flex: 0 0 $length-48;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $length-12;
+}
+
+.nav {
+  flex: 0 0 $length-32;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $length-12;
+}
+
+.aside.horizontal,
+.aside.is-horizontal {
+  flex-direction: column;
+  width: auto;
+  height: 100%;
+}
+
+.main {
+  flex: auto;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding: $length-12;
+
+  &.horizontal,
+  &.is-horizontal {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.footer {
+  flex: 0 0 $length-72;
+  // 适配 iPhone X 系列
+  justify-content: center;
+  padding: $length-4 $length-12;
+}
+
+.left,
+.right {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+  height: 100%;
+  overflow: hidden;
 }
 
 .wrapper {
-  width: $ratio-100;
-  height: $ratio-100;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 .wrapper-row {
-  width: $ratio-100;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
   height: auto;
 }
 
 .wrapper-col,
 .wrapper-column {
   width: auto;
-  height: $ratio-100;
+  height: 100%;
 }
 
 .wrapper-center {
-  align-items: $align-center;
-  justify-content: $justify-center;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
