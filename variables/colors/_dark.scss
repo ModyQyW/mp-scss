@@ -168,14 +168,14 @@ $text-colors-dark: (
 );
 
 $background-colors-dark: (
-  container: $color-container-reverse,
-  default: $color-default-reverse,
-  mask: $color-mask-reverse,
-  shadow: $color-shadow-reverse,
-  divider: $color-divider-reverse
+  container: $color-bg-container-reverse,
+  default: $color-bg-default-reverse,
+  mask: $color-bg-mask-reverse,
+  shadow: $color-bg-shadow-reverse,
+  divider: $color-bg-divider-reverse
 );
 
 $border-colors-dark: (
-  border: $color-border-reverse
+  border: $color-border-default-reverse
 );
 

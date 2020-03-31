@@ -167,13 +167,13 @@ $text-colors-light: (
 );
 
 $background-colors-light: (
-  container: $color-container,
-  default: $color-default,
-  mask: $color-mask,
-  shadow: $color-shadow,
-  divider: $color-divider
+  container: $color-bg-container,
+  default: $color-bg-default,
+  mask: $color-bg-mask,
+  shadow: $color-bg-shadow,
+  divider: $color-bg-divider
 );
 
 $border-colors-light: (
-  border: $color-border
+  default: $color-border-default
 );

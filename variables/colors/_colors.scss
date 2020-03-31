@@ -309,16 +309,16 @@ $color-main-reverse: rgba(255, 255, 255, .65) !default;
 $color-secondary-reverse: rgba(255, 255, 255, .45) !default;
 $color-disabled-reverse: rgba(255, 255, 255, .3) !default;
 // 背景色
-$color-container: $gray-1 !default;
-$color-default: rgba(0, 0, 0, .04) !default;
-$color-mask: rgba(0, 0, 0, .45) !default;
-$color-shadow: rgba(0, 0, 0, .45) !default;
-$color-divider: rgba(0, 0, 0, .06) !default;
-$color-container-reverse: $gray-12 !default;
-$color-default-reverse: rgba(255, 255, 255, .08) !default;
-$color-mask-reverse: rgba(255, 255, 255, .55) !default;
-$color-shadow-reverse: rgba(255, 255, 255, .55) !default;
-$color-divider-reverse: rgba(255, 255, 255, .12) !default;
+$color-bg-container: $gray-1 !default;
+$color-bg-default: rgba(0, 0, 0, .04) !default;
+$color-bg-mask: rgba(0, 0, 0, .45) !default;
+$color-bg-shadow: rgba(0, 0, 0, .45) !default;
+$color-bg-divider: rgba(0, 0, 0, .06) !default;
+$color-bg-container-reverse: $gray-12 !default;
+$color-bg-default-reverse: rgba(255, 255, 255, .08) !default;
+$color-bg-mask-reverse: rgba(255, 255, 255, .55) !default;
+$color-bg-shadow-reverse: rgba(255, 255, 255, .55) !default;
+$color-bg-divider-reverse: rgba(255, 255, 255, .12) !default;
 // 边框色
-$color-border: rgba(0, 0, 0, .15) !default;
-$color-border-reverse: rgba(255, 255, 255, .2) !default;
+$color-border-default: rgba(0, 0, 0, .15) !default;
+$color-border-default-reverse: rgba(255, 255, 255, .2) !default;
