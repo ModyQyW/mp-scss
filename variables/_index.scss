@@ -5,5 +5,7 @@ $unit: rpx !default;
 $scale: 2 !default;
 
 @import "./colors/index";
-@import "./spacing/index";
+@import "./length/index";
+@import "./sizing/index"; // width and height
+@import "./spacing/index"; // padding and margin
 @import "./typography/index";
