@@ -1,6 +1,12 @@
 # mp-scss
 
-一个以小程序样式为主的个人级 scss 集合，包含变量与样式。初期阶段，更新较为频繁，可以等稳定后再尝试。
+A scss lib for miniprogram. Since miniprogram is used almost only in China, Chinese docs are provided.
+
+一个面向小程序的个人级 scss 样式库，包含 scss 变量，类样式，组件样式和小程序组件样式重置。
+
+该样式库的目标是：在仅有原型图的情况下，用这个样式库能快速做出不仅能适配微信小程序和支付宝小程序，而且看起来还过得去的页面。
+
+初期阶段，更新较为频繁，可以等稳定后再尝试。
 
 ## 起步
 
@@ -40,124 +46,179 @@ npm i @modyqyw/mp-scss
 
 ### 使用
 
-- 目前仅支持 scss，没有计划支持原生 css 和 less。你也可以自己去实现，思路都是差不多的。
+- 只支持 scss，没有计划支持 css，less 和 stylus。
 
 - 引入预设变量。之后你可以根据预设变量定制自己的样式。你也可以在某一页面引入以使用预设变量。
 
 ```scss
 /* uni-app @/App.vue 需要手动先添加 sass 和 sass-loader */
-@import "~@modyqyw/mp-scss/settings";
+@import "~@modyqyw/mp-scss/variables";
 ```
 
 ```scss
 /* taro @/app.scss */
-@import "../node_modules/@modyqyw/mp-scss/settings/index";
+@import "../node_modules/@modyqyw/mp-scss/variables/index";
 ```
 
-- 引入预设样式。
+- 引入预设组件样式。
 
 ```scss
 /* uni-app @/App.vue 需要手动先添加 sass 和 sass-loader */
-@import "~@modyqyw/mp-scss/settings";
-@import "~@modyqyw/mp-scss/styles";
+@import "~@modyqyw/mp-scss/variables";
+@import "~@modyqyw/mp-scss/components";
 ```
 
 ```scss
 /* taro @/app.scss */
-@import "../node_modules/@modyqyw/mp-scss/settings/index";
-@import "../node_modules/@modyqyw/mp-scss/styles/index";
+@import "../node_modules/@modyqyw/mp-scss/variables/index";
+@import "../node_modules/@modyqyw/mp-scss/components/index";
 ```
 
-当然，你也可以手动引入你所需要的预设样式。
-
-- 目前默认配色使用 Ant Design 配色，如果要修改，请在引入预设变量前进行细颗粒度的修改，修改该部分会影响默认配色。
+- 引入预设类样式。
 
 ```scss
-/* 默认为 Ant Design 设置 */
-$color-primary: $ad-blue;
-$color-success: $ad-green;
-$color-warning: $ad-gold;
-$color-error: $ad-red;
-$color-info: $ad-blue;
-$color-primary-reverse: $ad-blue-reverse;
-$color-success-reverse: $ad-green-reverse;
-$color-warning-reverse: $ad-gold-reverse;
-$color-error-reverse: $ad-red-reverse;
-$color-info-reverse: $ad-blue-reverse;
-$color-title: rgba(0, 0, 0, .85);
-$color-title-light: rgba(0, 0, 0, .75);
-$color-main: rgba(0, 0, 0, .65);
-$color-main-light: rgba(0, 0, 0, .55);
-$color-secondary: rgba(0, 0, 0, .45);
-$color-disabled: rgba(0, 0, 0, .25);
-$color-title-reverse: rgba(255, 255, 255, .85);
-$color-title-light-reverse: rgba(255, 255, 255, .75);
-$color-main-reverse: rgba(255, 255, 255, .65);
-$color-main-light-reverse: rgba(255, 255, 255, .55);
-$color-secondary-reverse: rgba(255, 255, 255, .45);
-$color-disabled-reverse: rgba(255, 255, 255, .3);
-$background-color-light: $ad-gray-1;
-$background-color-dark: $ad-gray-12;
-/* 使用 Material Design 设置 */
-$color-primary: $md-blue;
-$color-success: $md-green;
-$color-warning: $md-yellow;
-$color-error: $md-red;
-$color-info: $md-blue;
-$color-primary-reverse: $md-blue;
-$color-success-reverse: $md-green;
-$color-warning-reverse: $md-yellow;
-$color-error-reverse: $md-red;
-$color-info-reverse: $md-blue;
-$color-title: rgba(0, 0, 0, .87);
-$color-title-light: rgba(0, 0, 0, .87);
-$color-main: rgba(0, 0, 0, .87);
-$color-main-light: rgba(0, 0, 0, .87);
-$color-secondary: rgba(0, 0, 0, .6);
-$color-disabled: rgba(0, 0, 0, .38);
-$color-title-reverse: rgba(255, 255, 255, 1);
-$color-title-light-reverse: rgba(255, 255, 255, 1);
-$color-main-reverse: rgba(255, 255, 255, 1);
-$color-main-light-reverse: rgba(255, 255, 255, 1);
-$color-secondary-reverse: rgba(255, 255, 255, .7);
-$color-disabled-reverse: rgba(255, 255, 255, .5);
-$background-color-light: #fff;
-$background-color-dark: #121212;
+/* uni-app @/App.vue 需要手动先添加 sass 和 sass-loader */
+@import "~@modyqyw/mp-scss/variables";
+@import "~@modyqyw/mp-scss/classes";
 ```
 
-- 目前默认使用 rpx 作为长度单位，如果要修改，请在引入预设变量前修改。支持任意值，但是你乱玩就肯定会出一些莫名情况的情况，不保修。
+```scss
+/* taro @/app.scss */
+@import "../node_modules/@modyqyw/mp-scss/variables/index";
+@import "../node_modules/@modyqyw/mp-scss/classes/index";
+```
+
+- 引入预设组件样式。
+
+```scss
+/* uni-app @/App.vue 需要手动先添加 sass 和 sass-loader */
+@import "~@modyqyw/mp-scss/variables";
+@import "~@modyqyw/mp-scss/components";
+```
+
+```scss
+/* taro @/app.scss */
+@import "../node_modules/@modyqyw/mp-scss/variables/index";
+@import "../node_modules/@modyqyw/mp-scss/components/index";
+```
+
+- 引入全部变量与样式。注意：这种做法意味着你要同时使用预设类样式和预设组件样式，这很可能会导致样式覆盖问题。如果发生了这类问题，而你认为并不合理，请提 issue 并附上 demo。
+
+```scss
+/* uni-app @/App.vue 需要手动先添加 sass 和 sass-loader */
+@import "~@modyqyw/mp-scss";
+```
+
+```scss
+/* taro @/app.scss */
+@import "../node_modules/@modyqyw/mp-scss/index";
+```
+
+- 默认使用 Ant Design 配色。如果要修改，需要在引入预设变量前进行细颗粒度的修改。
+
+```scss
+// Dust Red / 薄暮
+$red: #f5222d !default;
+// Volcano / 火山
+$volcano: #fa541c !default;
+// Sunset Orange / 日暮
+$orange: #fa8c16 !default;
+// Calendula Gold / 金盏花
+$gold: #faad14 !default;
+// Sunrise Yellow / 日出
+$yellow: #fadb14 !default;
+// Lime / 青柠
+$lime: #a0d911 !default;
+// Polar Green / 极光绿
+$green: #52c41a !default;
+// Cyan / 明青
+$cyan: #13c2c2 !default;
+// Daybreak Blue / 拂晓蓝
+$blue: #1890ff !default;
+// Geek Blue / 极客蓝
+$geek-blue: #2f54eb !default;
+// Golden Purple / 酱紫
+$purple: #722ed1 !default;
+// Magenta / 法式洋红
+$magenta: #eb2f96 !default;
+// 中性色
+$gray-1: #fff !default;
+$gray-2: #fafafa !default;
+$gray-3: #f5f5f5 !default;
+$gray-4: #f0f0f0 !default;
+$gray-5: #d9d9d9 !default;
+$gray-6: #bfbfbf !default;
+$gray-7: #8c8c8c !default;
+$gray-8: #595959 !default;
+$gray-9: #434343 !default;
+$gray-10: #262626 !default;
+$gray-11: #1f1f1f !default;
+$gray-12: #141414 !default;
+$gray-13: #000 !default;
+// 功能色
+$color-primary: $blue-6 !default;
+$color-success: $green-6 !default;
+$color-warning: $gold-6 !default;
+$color-error: $red-6 !default;
+$color-info: $blue-6 !default;
+// 文字色
+$color-title: rgba(0, 0, 0, .85) !default;
+$color-main: rgba(0, 0, 0, .65) !default;
+$color-secondary: rgba(0, 0, 0, .45) !default;
+$color-disabled: rgba(0, 0, 0, .25) !default;
+$color-title-reverse: rgba(255, 255, 255, .85) !default;
+$color-main-reverse: rgba(255, 255, 255, .65) !default;
+$color-secondary-reverse: rgba(255, 255, 255, .45) !default;
+$color-disabled-reverse: rgba(255, 255, 255, .3) !default;
+// 背景色
+$color-bg-container: $gray-1 !default;
+$color-bg-default: rgba(0, 0, 0, .04) !default;
+$color-bg-mask: rgba(0, 0, 0, .45) !default;
+$color-bg-shadow: rgba(0, 0, 0, .45) !default;
+$color-bg-divider: rgba(0, 0, 0, .06) !default;
+$color-bg-container-reverse: $gray-12 !default;
+$color-bg-default-reverse: rgba(255, 255, 255, .08) !default;
+$color-bg-mask-reverse: rgba(255, 255, 255, .55) !default;
+$color-bg-shadow-reverse: rgba(255, 255, 255, .55) !default;
+$color-bg-divider-reverse: rgba(255, 255, 255, .12) !default;
+// 边框色
+$color-border-default: rgba(0, 0, 0, .15) !default;
+$color-border-default-reverse: rgba(255, 255, 255, .2) !default;
+```
+
+- 默认使用 rpx 作为长度单位。如果要修改，需要在引入预设变量前修改。
 
 ```scss
 $unit: rpx; // 使用 rpx 作为长度单位，默认
-$unit: px; // 使用 px 作为长度单位
+$unit: px; // 修改为使用 px 作为长度单位
 ```
 
-- 目前默认会放大到 2 倍，原因见[此处](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html)。你可以引入预设变量前修改。
+- 默认会对所有长度类数值乘 2，原因见[此处](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html)。如果要修改，需要在引入预设变量前修改。
 
 ```scss
-$scale: 2; // 放大到 2 倍，默认
-$scale: 1; // 不放大
+$scale: 2; // 乘 2，默认
+$scale: 1; // 修改为不缩放
 ```
 
-- 推荐做法：在页面容器上添加`light`类或`dark`类。这样会导致某些默认颜色变化（如边框，背景，文字等），同时也会带来一个限制条件：不要使用`light`类或`dark`类同级的元素去定位某一元素。
+- 默认字体族如下。如果要修改，需要在引入预设变量前修改。
 
-- 源码阅读顺序建议
-  - settings
-    - _colors
-    - _ratio
-    - _spacing
-    - _positioning
-    - _box-model
-    - _typography
-    - _visual
-    - _misc
-  - styles
-    - components
-    - positioning
-    - box-model
-    - typography
-    - visual
-    - misc
+```scss
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+```
+
+- 默认基准字体大小值为 14，根据`$unit`和`$scale`计算得出基准字体大小。如果要修改，需要在引入预设变量前修改。
+
+```scss
+$font-size-benchmark: 14; // 默认为 14
+$line-height-base: $line-height-benchmark * $scale + $unit; // 基准字体大小计算
+```
+
+- 默认基准行高值为 22，根据`$unit`和`$scale`计算得出基准字体大小。如果要修改，需要在引入预设变量前修改。
+
+```scss
+$line-height-benchmark: 22; // 默认为 22
+$line-height-base: $line-height-benchmark * $scale + $unit; // 基准行高计算
+```
 
 ## 测试
 
@@ -165,10 +226,9 @@ $scale: 1; // 不放大
 
 ## 特性
 
-- scss 实现 Ant Design v3 色板，真香啊.jpg（v4 增添了暗色主题下的色板，正在思考实现中，你也可以在 issue 中提供相关的建议）
-- 预设变量，助你定制自己的样式
-- 可选的预设样式，引入后通过`class`直接添加样式
-- 不测试就上线，所以欢迎小白鼠提 issue，长期维护
+- scss 实现 Ant Design v4 色板
+- 预设变量，帮助定制自己的样式
+- 长期维护
 
 ## 贡献
 
@@ -192,8 +252,8 @@ Copyright (c) 2019-present ModyQyW
 
 ## 致谢
 
-- [Material Design](https://material.io/)
 - [Ant Design](https://ant.design/)
+- [Material Design](https://material.io/)
 - [bootstrap](https://github.com/twbs/stylelint-config-twbs-bootstrap)
-- [tailwindcss](https://tailwindcss.com/)
 - [bulma](https://bulma.io/)
+- [tailwindcss](https://tailwindcss.com/)
