@@ -1,20 +1,6 @@
 @import "./palette";
-// gray
-$gray: $gray-7;
-$gray-1: #fff !default;
-$gray-2: #fafafa !default;
-$gray-3: #f5f5f5 !default;
-$gray-4: #f0f0f0 !default;
-$gray-5: #d9d9d9 !default;
-$gray-6: #bfbfbf !default;
-$gray-7: #8c8c8c !default;
-$gray-8: #595959 !default;
-$gray-9: #434343 !default;
-$gray-10: #262626 !default;
-$gray-11: #1f1f1f !default;
-$gray-12: #141414 !default;
-$gray-13: #000 !default;
-// red
+
+// Dust Red / 薄暮
 $red: #f5222d !default;
 $red-1: f-get-color($red, 1); // #fff1f0
 $red-2: f-get-color($red, 2); // #ffccc7
@@ -37,7 +23,7 @@ $red-7-reverse: mix(f-get-color($red, 5), $gray-12, 90%); // #e84749
 $red-8-reverse: mix(f-get-color($red, 4), $gray-12, 95%); // #f37370
 $red-9-reverse: mix(f-get-color($red, 3), $gray-12, 97%); // #f89f9a
 $red-10-reverse: mix(f-get-color($red, 2), $gray-12, 98%); // #fac8c3
-// volcano
+// Volcano / 火山
 $volcano: #fa541c !default;
 $volcano-1: f-get-color($volcano, 1); // #fff2e8
 $volcano-2: f-get-color($volcano, 2); // #ffd8bf
@@ -60,7 +46,7 @@ $volcano-7-reverse: mix(f-get-color($volcano, 5), $gray-12, 90%); // #e87040
 $volcano-8-reverse: mix(f-get-color($volcano, 4), $gray-12, 95%); // #f3956a
 $volcano-9-reverse: mix(f-get-color($volcano, 3), $gray-12, 97%); // #f8b692
 $volcano-10-reverse: mix(f-get-color($volcano, 2), $gray-12, 98%); // #fad4bc
-// orange
+// Sunset Orange / 日暮
 $orange: #fa8c16 !default;
 $orange-1: f-get-color($orange, 1); // #fff7e6
 $orange-2: f-get-color($orange, 2); // #ffe7ba
@@ -83,7 +69,7 @@ $orange-7-reverse: mix(f-get-color($orange, 5), $gray-12, 90%); // #e89a3c
 $orange-8-reverse: mix(f-get-color($orange, 4), $gray-12, 95%); // #f3b765
 $orange-9-reverse: mix(f-get-color($orange, 3), $gray-12, 97%); // #f8cf8d
 $orange-10-reverse: mix(f-get-color($orange, 2), $gray-12, 98%); // #fae3b7
-// gold
+// Calendula Gold / 金盏花
 $gold: #faad14 !default;
 $gold-1: f-get-color($gold, 1); // #fffbe6
 $gold-2: f-get-color($gold, 2); // #fff1b8
@@ -106,7 +92,7 @@ $gold-7-reverse: mix(f-get-color($gold, 5), $gray-12, 90%); // #e8b339
 $gold-8-reverse: mix(f-get-color($gold, 4), $gray-12, 95%); // #f3cc62
 $gold-9-reverse: mix(f-get-color($gold, 3), $gray-12, 97%); // #f8df8b
 $gold-10-reverse: mix(f-get-color($gold, 2), $gray-12, 98%);  // #faedb5
-// yellow
+// Sunrise Yellow / 日出
 $yellow: #fadb14 !default;
 $yellow-1: f-get-color($yellow, 1); // #feffe6
 $yellow-2: f-get-color($yellow, 2); // #ffffb8
@@ -129,7 +115,7 @@ $yellow-7-reverse: mix(f-get-color($yellow, 5), $gray-12, 90%); // #e8d639
 $yellow-8-reverse: mix(f-get-color($yellow, 4), $gray-12, 95%); // #f3ea62
 $yellow-9-reverse: mix(f-get-color($yellow, 3), $gray-12, 97%); // #f8f48b
 $yellow-10-reverse: mix(f-get-color($yellow, 2), $gray-12, 98%); // #fafab5
-// lime
+// Lime / 青柠
 $lime: #a0d911 !default;
 $lime-1: f-get-color($lime, 1); // #fcffe6
 $lime-2: f-get-color($lime, 2); // #f4ffb8
@@ -152,7 +138,7 @@ $lime-7-reverse: mix(f-get-color($lime, 5), $gray-12, 90%); // #a9d134
 $lime-8-reverse: mix(f-get-color($lime, 4), $gray-12, 95%); // #c9e75d
 $lime-9-reverse: mix(f-get-color($lime, 3), $gray-12, 97%); // #e4f88b
 $lime-10-reverse: mix(f-get-color($lime, 2), $gray-12, 98%); // #f0fab5
-// green
+// Polar Green / 极光绿
 $green: #52c41a !default;
 $green-1: f-get-color($green, 1); // #f6ffed
 $green-2: f-get-color($green, 2); // #d9f7be
@@ -175,7 +161,7 @@ $green-7-reverse: mix(f-get-color($green, 5), $gray-12, 90%); // #6abe39
 $green-8-reverse: mix(f-get-color($green, 4), $gray-12, 95%); // #8fd460
 $green-9-reverse: mix(f-get-color($green, 3), $gray-12, 97%); // #b2e58b
 $green-10-reverse: mix(f-get-color($green, 2), $gray-12, 98%); // #d5f2bb
-// cyan
+// Cyan / 明青
 $cyan: #13c2c2 !default;
 $cyan-1: f-get-color($cyan, 1); // #e6fffb
 $cyan-2: f-get-color($cyan, 2); // #b5f5ec
@@ -198,7 +184,7 @@ $cyan-7-reverse: mix(f-get-color($cyan, 5), $gray-12, 90%); // #33bcb7
 $cyan-8-reverse: mix(f-get-color($cyan, 4), $gray-12, 95%); // #58d1c9
 $cyan-9-reverse: mix(f-get-color($cyan, 3), $gray-12, 97%); // #84e2d8
 $cyan-10-reverse: mix(f-get-color($cyan, 2), $gray-12, 98%); // #b2f1e8
-// blue
+// Daybreak Blue / 拂晓蓝
 $blue: #1890ff !default;
 $blue-1: f-get-color($blue, 1); // #e6f7ff
 $blue-2: f-get-color($blue, 2); // #bae7ff
@@ -221,7 +207,7 @@ $blue-7-reverse: mix(f-get-color($blue, 5), $gray-12, 90%); // #3c9ae8
 $blue-8-reverse: mix(f-get-color($blue, 4), $gray-12, 95%); // #65b7f3
 $blue-9-reverse: mix(f-get-color($blue, 3), $gray-12, 97%); // #8dcff8
 $blue-10-reverse: mix(f-get-color($blue, 2), $gray-12, 98%); // #b7e3fa
-// geek blue
+// Geek Blue / 极客蓝
 $geek-blue: #2f54eb !default;
 $geek-blue-1: f-get-color($geek-blue, 1); // #f0f5ff
 $geek-blue-2: f-get-color($geek-blue, 2); // #d6e4ff
@@ -244,7 +230,7 @@ $geek-blue-7-reverse: mix(f-get-color($geek-blue, 5), $gray-12, 90%); // #5273e0
 $geek-blue-8-reverse: mix(f-get-color($geek-blue, 4), $gray-12, 95%); // #7f9ef3
 $geek-blue-9-reverse: mix(f-get-color($geek-blue, 3), $gray-12, 97%); // #a8c1f8
 $geek-blue-10-reverse: mix(f-get-color($geek-blue, 2), $gray-12, 98%); // #d2e0fa
-// purple
+// Golden Purple / 酱紫
 $purple: #722ed1 !default;
 $purple-1: f-get-color($purple, 1); // #f9f0ff
 $purple-2: f-get-color($purple, 2); // #efdbff
@@ -267,7 +253,7 @@ $purple-7-reverse: mix(f-get-color($purple, 5), $gray-12, 90%); // #854eca
 $purple-8-reverse: mix(f-get-color($purple, 4), $gray-12, 95%); // #ab7ae0
 $purple-9-reverse: mix(f-get-color($purple, 3), $gray-12, 97%); // #cda8f0
 $purple-10-reverse: mix(f-get-color($purple, 2), $gray-12, 98%); // #ebd7fa
-// magenta
+// Magenta / 法式洋红
 $magenta: #eb2f96 !default;
 $magenta-1: f-get-color($magenta, 1); // #fff0f6
 $magenta-2: f-get-color($magenta, 2); // #ffd6e7
@@ -290,6 +276,21 @@ $magenta-7-reverse: mix(f-get-color($magenta, 5), $gray-12, 90%); // #e0529c
 $magenta-8-reverse: mix(f-get-color($magenta, 4), $gray-12, 95%); // #f37fb7
 $magenta-9-reverse: mix(f-get-color($magenta, 3), $gray-12, 97%); // #f8a8cc
 $magenta-10-reverse: mix(f-get-color($magenta, 2), $gray-12, 98%); // #fad2e3
+// 中性色
+$gray: $gray-7;
+$gray-1: #fff !default;
+$gray-2: #fafafa !default;
+$gray-3: #f5f5f5 !default;
+$gray-4: #f0f0f0 !default;
+$gray-5: #d9d9d9 !default;
+$gray-6: #bfbfbf !default;
+$gray-7: #8c8c8c !default;
+$gray-8: #595959 !default;
+$gray-9: #434343 !default;
+$gray-10: #262626 !default;
+$gray-11: #1f1f1f !default;
+$gray-12: #141414 !default;
+$gray-13: #000 !default;
 // 功能色
 $color-primary: $blue-6 !default;
 $color-success: $green-6 !default;

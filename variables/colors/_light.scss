@@ -1,21 +1,5 @@
 /* 色板颜色 */
 $palette-colors-light: (
-  white: $gray-1,
-  black: $gray-13,
-  gray: $gray,
-  gray-1: $gray-1,
-  gray-2: $gray-2,
-  gray-3: $gray-3,
-  gray-4: $gray-4,
-  gray-5: $gray-5,
-  gray-6: $gray-6,
-  gray-7: $gray-7,
-  gray-8: $gray-8,
-  gray-9: $gray-9,
-  gray-10: $gray-10,
-  gray-11: $gray-11,
-  gray-12: $gray-12,
-  gray-13: $gray-13,
   red: $red,
   red-1: $red-1,
   red-2: $red-2,
@@ -148,9 +132,25 @@ $palette-colors-light: (
   magenta-8: $magenta-8,
   magenta-9: $magenta-9,
   magenta-10: $magenta-10,
+  white: $gray-1,
+  black: $gray-13,
+  gray: $gray,
+  gray-1: $gray-1,
+  gray-2: $gray-2,
+  gray-3: $gray-3,
+  gray-4: $gray-4,
+  gray-5: $gray-5,
+  gray-6: $gray-6,
+  gray-7: $gray-7,
+  gray-8: $gray-8,
+  gray-9: $gray-9,
+  gray-10: $gray-10,
+  gray-11: $gray-11,
+  gray-12: $gray-12,
+  gray-13: $gray-13
 );
 
-/* 功能色 */
+// 功能色
 $functional-colors-light: (
   primary: $color-primary,
   success: $color-success,
@@ -160,7 +160,7 @@ $functional-colors-light: (
   transparent: transparent
 );
 
-/* 文字色 */
+// 文字色
 $text-colors-light: (
   title: $color-title,
   title-small: $color-title-small,
@@ -170,7 +170,7 @@ $text-colors-light: (
   disabled: $color-disabled
 );
 
-/* 背景色 */
+// 背景色
 $background-colors-light: (
   container: $color-bg-container,
   default: $color-bg-default,

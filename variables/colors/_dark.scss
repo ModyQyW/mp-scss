@@ -1,21 +1,5 @@
 /* 色板颜色 */
 $palette-colors-dark: (
-  white: $gray-1,
-  black: $gray-13,
-  gray: $gray,
-  gray-1: $gray-1,
-  gray-2: $gray-2,
-  gray-3: $gray-3,
-  gray-4: $gray-4,
-  gray-5: $gray-5,
-  gray-6: $gray-6,
-  gray-7: $gray-7,
-  gray-8: $gray-8,
-  gray-9: $gray-9,
-  gray-10: $gray-10,
-  gray-11: $gray-11,
-  gray-12: $gray-12,
-  gray-13: $gray-13,
   red: $red-reverse,
   red-1: $red-1-reverse,
   red-2: $red-2-reverse,
@@ -148,10 +132,26 @@ $palette-colors-dark: (
   magenta-8: $magenta-8-reverse,
   magenta-9: $magenta-9-reverse,
   magenta-10: $magenta-10-reverse,
+  white: $gray-1,
+  black: $gray-13,
+  gray: $gray,
+  gray-1: $gray-1,
+  gray-2: $gray-2,
+  gray-3: $gray-3,
+  gray-4: $gray-4,
+  gray-5: $gray-5,
+  gray-6: $gray-6,
+  gray-7: $gray-7,
+  gray-8: $gray-8,
+  gray-9: $gray-9,
+  gray-10: $gray-10,
+  gray-11: $gray-11,
+  gray-12: $gray-12,
+  gray-13: $gray-13
 );
 
 
-/* 功能色 */
+// 功能色
 $functional-colors-dark: (
   primary: mix($color-primary, $gray-12, 85%),
   success: mix($color-success, $gray-12, 85%),
@@ -161,7 +161,7 @@ $functional-colors-dark: (
   transparent: transparent
 );
 
-/* 文字色 */
+// 文字色
 $text-colors-dark: (
   title: $color-title-reverse,
   title-small: $color-title-small-reverse,
@@ -171,7 +171,7 @@ $text-colors-dark: (
   disabled: $color-disabled-reverse
 );
 
-/* 背景色 */
+// 背景色
 $background-colors-dark: (
   container: $color-bg-container-reverse,
   default: $color-bg-default-reverse,
@@ -180,7 +180,7 @@ $background-colors-dark: (
   divider: $color-bg-divider-reverse
 );
 
-/* 边框色 */
+// 边框色
 $border-colors-dark: (
   border: $color-border-default-reverse
 );
