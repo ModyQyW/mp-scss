@@ -1,3 +1,6 @@
+$length-1-real: 1 + $unit;
+$length-1-real-reverse: -1 + $unit;
+
 // var str = ''
 // for (let i = -1024; i <= 1024; i += 1) {
 //   if (i < 0) {

@@ -9,4 +9,8 @@ $scale: 2 !default;
 @import "./length/index";
 @import "./sizing/index"; // width 和 height
 @import "./spacing/index"; // padding 和 margin
+@import "./positioning/index";
+@import "./box-model/index";
 @import "./typography/index";
+@import "./visual/index";
+@import "./misc/index";
