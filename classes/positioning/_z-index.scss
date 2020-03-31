@@ -1,4 +1,4 @@
-@each $key, $val in $z-indexes {
+@each $key, $val in $m-z-index {
   .z-#{$key} {
     z-index: $val;
   }

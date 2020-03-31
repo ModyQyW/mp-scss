@@ -4,7 +4,7 @@
   }
 }
 
-@each $key, $val in $ratios {
+@each $key, $val in $m-ratio {
   .h-#{$key} {
     height: $val;
   }

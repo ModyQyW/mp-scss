@@ -1,10 +1,10 @@
-@each $key, $val in $positions {
+@each $key, $val in $m-position {
   .#{$key} {
     position: $val;
   }
 }
 
-@each $key, $val in $position-values {
+@each $key, $val in $m-position-value {
   .top-#{$key} {
     top: $val;
   }

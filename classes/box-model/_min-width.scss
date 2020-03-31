@@ -1,4 +1,4 @@
-@each $key, $val in $sizings {
+@each $key, $val in $m-sizing {
   .min-w-#{$key} {
     min-width: $val;
   }

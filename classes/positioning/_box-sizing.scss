@@ -1,4 +1,4 @@
-@each $key, $val in $box-sizings {
+@each $key, $val in $m-box-sizing {
   .#{$key}-box,
   .box-#{$key} {
     box-sizing: $val;

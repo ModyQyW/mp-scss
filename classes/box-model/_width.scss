@@ -1,10 +1,10 @@
-@each $key, $val in $sizings {
+@each $key, $val in $m-sizing {
   .w-#{$key} {
     width: $val;
   }
 }
 
-@each $key, $val in $ratios {
+@each $key, $val in $m-ratio {
   .w-#{$key} {
     width: $val;
   }
