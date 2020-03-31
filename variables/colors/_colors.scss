@@ -1,5 +1,20 @@
 @import "./palette";
 
+// 中性色
+$gray: #8c8c8c !default;
+$gray-1: #fff !default;
+$gray-2: #fafafa !default;
+$gray-3: #f5f5f5 !default;
+$gray-4: #f0f0f0 !default;
+$gray-5: #d9d9d9 !default;
+$gray-6: #bfbfbf !default;
+$gray-7: #8c8c8c !default;
+$gray-8: #595959 !default;
+$gray-9: #434343 !default;
+$gray-10: #262626 !default;
+$gray-11: #1f1f1f !default;
+$gray-12: #141414 !default;
+$gray-13: #000 !default;
 // Dust Red / 薄暮
 $red: #f5222d !default;
 $red-1: f-get-color($red, 1); // #fff1f0
@@ -276,21 +291,6 @@ $magenta-7-reverse: mix(f-get-color($magenta, 5), $gray-12, 90%); // #e0529c
 $magenta-8-reverse: mix(f-get-color($magenta, 4), $gray-12, 95%); // #f37fb7
 $magenta-9-reverse: mix(f-get-color($magenta, 3), $gray-12, 97%); // #f8a8cc
 $magenta-10-reverse: mix(f-get-color($magenta, 2), $gray-12, 98%); // #fad2e3
-// 中性色
-$gray: $gray-7;
-$gray-1: #fff !default;
-$gray-2: #fafafa !default;
-$gray-3: #f5f5f5 !default;
-$gray-4: #f0f0f0 !default;
-$gray-5: #d9d9d9 !default;
-$gray-6: #bfbfbf !default;
-$gray-7: #8c8c8c !default;
-$gray-8: #595959 !default;
-$gray-9: #434343 !default;
-$gray-10: #262626 !default;
-$gray-11: #1f1f1f !default;
-$gray-12: #141414 !default;
-$gray-13: #000 !default;
 // 功能色
 $color-primary: $blue-6 !default;
 $color-success: $green-6 !default;
