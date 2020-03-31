@@ -142,6 +142,7 @@ $purple: #722ed1 !default;
 // Magenta / 法式洋红
 $magenta: #eb2f96 !default;
 // 中性色
+$gray: #8c8c8c !default;
 $gray-1: #fff !default;
 $gray-2: #fafafa !default;
 $gray-3: #f5f5f5 !default;
