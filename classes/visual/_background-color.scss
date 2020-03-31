@@ -1,0 +1,38 @@
+@each $key, $val in $palette-colors-light {
+  .bg-#{$key},
+  .light .bg-#{$key} {
+    background: $val;
+  }
+}
+
+@each $key, $val in $functional-colors-light {
+  .bg-#{$key},
+  .light .bg-#{$key} {
+    background: $val;
+  }
+}
+
+@each $key, $val in $background-colors-light {
+  .bg-#{$key},
+  .light .bg-#{$key} {
+    background: $val;
+  }
+}
+
+@each $key, $val in $palette-colors-dark {
+  .dark .bg-#{$key} {
+    background: $val;
+  }
+}
+
+@each $key, $val in $functional-colors-dark {
+  .dark .bg-#{$key} {
+    background: $val;
+  }
+}
+
+@each $key, $val in $background-colors-dark {
+  .dark .bg-#{$key} {
+    background: $val;
+  }
+}

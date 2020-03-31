@@ -1,0 +1,21 @@
+@each $key, $val in $sizings {
+  .min-w-#{$key} {
+    min-width: $val;
+  }
+}
+
+.min-w-0 {
+  min-width: 0;
+}
+
+.min-w-half {
+  min-width: 50%;
+}
+
+.min-w-full {
+  min-width: 100%;
+}
+
+.min-w-screen {
+  min-width: 100vw;
+}

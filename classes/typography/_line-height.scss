@@ -1,0 +1,17 @@
+$line-heights: (
+  xs: $line-height-s-4,
+  sm: $line-height-s-2,
+  md: $line-height-base,
+  base: $line-height-base,
+  lg: $line-height-a-2,
+  xl: $line-height-a-4,
+  2xl: $line-height-a-6,
+  3xl: $line-height-a-8,
+  4xl: $line-height-a-10
+);
+
+@each $key, $val in $line-heights {
+  .leading-#{$key} {
+    line-height: $val;
+  }
+}

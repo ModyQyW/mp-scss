@@ -1,0 +1,19 @@
+@each $key, $val in $heights {
+  .h-#{$key} {
+    height: $val;
+  }
+}
+
+@each $key, $val in $ratios {
+  .h-#{$key} {
+    height: $val;
+  }
+}
+
+.h-auto {
+  height: auto;
+}
+
+.h-screen {
+  height: 100vh;
+}

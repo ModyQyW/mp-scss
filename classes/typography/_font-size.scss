@@ -1,0 +1,6 @@
+@each $key, $val in $m-font-size {
+  .text-#{$key},
+  .size-#{$key} {
+    font-size: $val;
+  }
+}

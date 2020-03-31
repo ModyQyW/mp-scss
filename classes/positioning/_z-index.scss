@@ -1,0 +1,5 @@
+@each $key, $val in $z-indexes {
+  .z-#{$key} {
+    z-index: $val;
+  }
+}

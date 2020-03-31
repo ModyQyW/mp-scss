@@ -1,0 +1,5 @@
+@each $key, $val in $m-display {
+  .#{$key} {
+    display: $val;
+  }
+}

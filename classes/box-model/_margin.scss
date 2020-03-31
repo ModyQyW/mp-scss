@@ -1,0 +1,31 @@
+@each $key, $val in $margins {
+  .m-#{$key} {
+    margin: $val;
+  }
+
+  .m-y-#{$key} {
+    margin-top: $val;
+    margin-bottom: $val;
+  }
+
+  .m-t-#{$key} {
+    margin-top: $val;
+  }
+
+  .m-b-#{$key} {
+    margin-bottom: $val;
+  }
+
+  .m-x-#{$key} {
+    margin-top: $val;
+    margin-bottom: $val;
+  }
+
+  .m-r-#{$key} {
+    margin-top: $val;
+  }
+
+  .m-l-#{$key} {
+    margin-bottom: $val;
+  }
+}

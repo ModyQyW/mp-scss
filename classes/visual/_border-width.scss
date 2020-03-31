@@ -1,0 +1,21 @@
+@each $key, $val in $m-border-width {
+  .border-#{$key} {
+    border-width: $val;
+  }
+
+  .border-t-#{$key} {
+    border-top-width: $val;
+  }
+
+  .border-r-#{$key} {
+    border-right-width: $val;
+  }
+
+  .border-b-#{$key} {
+    border-bottom-width: $val;
+  }
+
+  .border-l-#{$key} {
+    border-left-width: $val;
+  }
+}

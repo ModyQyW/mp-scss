@@ -1,0 +1,5 @@
+@each $key, $val in $m-text-align {
+  .text-#{$key} {
+    text-align: $val;
+  }
+}

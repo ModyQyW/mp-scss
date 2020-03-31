@@ -1,0 +1,5 @@
+@each $key, $val in $m-vertical-align {
+  .align-#{$key} {
+    vertical-align: $val;
+  }
+}

@@ -1,0 +1,22 @@
+.divider {
+  position: $position-relative;
+  box-sizing: $box-sizing-border-box;
+  display: $display-flex;
+  flex: $flex-grow-0 $flex-shrink-0 $length-1;
+  width: $length-1;
+  height: $line-height-22;
+  margin: auto $length-8;
+
+  &,
+  .light & {
+    background-color: $background-color-default;
+  }
+
+  .dark & {
+    background-color: $background-color-default-reverse;
+  }
+
+  &.vertical {
+    flex: $flex-grow-0 $flex-shrink-0 $line-height-22;
+  }
+}

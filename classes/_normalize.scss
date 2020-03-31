@@ -1,0 +1,23 @@
+page {
+  padding: 0;
+  margin: 0;
+  font-family: $font-family-default;
+  font-size: $font-size-base;
+  font-weight: 400;
+  line-height: $line-height-base;
+  color: initial;
+  background: initial;
+}
+
+input,
+text,
+textarea {
+  padding: 0;
+  margin: 0;
+  font-family: unset;
+  font-size: unset;
+  font-weight: 400;
+  line-height: unset;
+  color: unset;
+  background: unset;
+}

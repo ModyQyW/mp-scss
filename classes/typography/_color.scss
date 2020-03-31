@@ -1,0 +1,38 @@
+@each $key, $val in $palette-colors-light {
+  .text-#{$key},
+  .light .text-#{$key} {
+    color: $val;
+  }
+}
+
+@each $key, $val in $functional-colors-light {
+  .text-#{$key},
+  .light .text-#{$key} {
+    color: $val;
+  }
+}
+
+@each $key, $val in $text-colors-light {
+  .text-#{$key},
+  .light .text-#{$key} {
+    color: $val;
+  }
+}
+
+@each $key, $val in $palette-colors-dark {
+  .dark .text-#{$key} {
+    color: $val;
+  }
+}
+
+@each $key, $val in $functional-colors-dark {
+  .dark .text-#{$key} {
+    color: $val;
+  }
+}
+
+@each $key, $val in $text-colors-dark {
+  .dark .text-#{$key} {
+    color: $val;
+  }
+}

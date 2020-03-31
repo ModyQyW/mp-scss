@@ -1,0 +1,11 @@
+@each $key, $val in $m-text-transform {
+  .#{$key},
+  .transform-#{$key} {
+    text-transform: $val;
+  }
+}
+
+.transform-none,
+.transform-normal {
+  text-transform: none;
+}

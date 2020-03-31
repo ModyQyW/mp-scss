@@ -1,0 +1,12 @@
+
+
+@each $key, $val in $m-text-decoration {
+  .#{$key},
+  .decoration-#{$key} {
+    text-decoration: $val;
+  }
+}
+
+.decoration-none {
+  text-decoration: none;
+}

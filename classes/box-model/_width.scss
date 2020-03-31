@@ -1,0 +1,19 @@
+@each $key, $val in $sizings {
+  .w-#{$key} {
+    width: $val;
+  }
+}
+
+@each $key, $val in $ratios {
+  .w-#{$key} {
+    width: $val;
+  }
+}
+
+.w-auto {
+  width: auto;
+}
+
+.w-screen {
+  width: 100vw;
+}

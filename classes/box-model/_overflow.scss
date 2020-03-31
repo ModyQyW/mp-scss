@@ -1,0 +1,13 @@
+@each $key, $val in $m-overflow {
+  .overflow-#{$key} {
+    overflow: $val;
+  }
+
+  .overflow-x-#{$key} {
+    overflow-y: $val;
+  }
+
+  .overflow-y-#{$key} {
+    overflow-y: $val;
+  }
+}

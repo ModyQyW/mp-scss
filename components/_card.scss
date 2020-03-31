@@ -1,0 +1,61 @@
+.card,
+[class*="card"] {
+  position: $position-relative;
+  box-sizing: $box-sizing-border-box;
+  display: $display-flex;
+  flex: $flex-grow-0 $flex-shrink-0 $ratio-100;
+  flex-direction: $flex-direction-column;
+  width: $ratio-100;
+  height: auto;
+  font-size: $font-size-14;
+  font-weight: $font-weight-400;
+  line-height: $line-height-22;
+  border-style: $border-style-solid;
+  border-width: $length-1;
+  border-radius: 0;
+
+  &,
+  .light & {
+    color: $color-main;
+    background-color: $background-color-default;
+    border-color: $border-color-default;
+  }
+
+  .dark & {
+    color: $color-main-reverse;
+    background-color: $background-color-default-reverse;
+    border-color: $border-color-default-reverse;
+  }
+
+  &.vertical {
+    flex: $flex-grow-0 $flex-shrink-0 auto;
+  }
+
+  & > .header,
+  & > .content,
+  & > .footer {
+    position: $position-relative;
+    box-sizing: $box-sizing-border-box;
+    display: $display-flex;
+    flex: $flex-grow-0 $flex-shrink-0 auto;
+    width: $ratio-100;
+    padding: $length-12;
+  }
+
+  & > .header,
+  & > .footer {
+    flex-direction: $flex-direction-row;
+    align-items: $align-center;
+  }
+
+  & > .header {
+    font-size: $font-size-16;
+    font-weight: $font-weight-700;
+    line-height: $line-height-24;
+  }
+
+  & > .content {
+    flex-direction: $flex-direction-column;
+    padding: $length-12 0;
+  }
+}

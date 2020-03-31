@@ -1,0 +1,10 @@
+@each $key, $val in $m-font-style {
+  .#{$key},
+  .style-#{$key} {
+    font-style: $val;
+  }
+}
+
+.style-normal {
+  font-style: normal;
+}

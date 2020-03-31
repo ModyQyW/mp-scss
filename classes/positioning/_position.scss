@@ -1,0 +1,40 @@
+@each $key, $val in $positions {
+  .#{$key} {
+    position: $val;
+  }
+}
+
+@each $key, $val in $position-values {
+  .top-#{$key} {
+    top: $val;
+  }
+
+  .right-#{$key} {
+    right: $val;
+  }
+
+  .bottom-#{$key} {
+    right: $val;
+  }
+
+  .left-#{$key} {
+    right: $val;
+  }
+
+  .inset-#{$key} {
+    top: $val;
+    right: $val;
+    bottom: $val;
+    left: $val;
+  }
+
+  .inset-y-#{$key} {
+    top: $val;
+    bottom: $val;
+  }
+
+  .inset-x-#{$key} {
+    right: $val;
+    left: $val;
+  }
+}

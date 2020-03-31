@@ -1,0 +1,87 @@
+[class*="badge"] {
+  position: $position-absolute;
+  top: 0;
+  right: $length-8-reverse;
+  z-index: $z-index-600;
+  box-sizing: $box-sizing-border-box;
+  display: $display-flex;
+  flex-direction: $flex-direction-row;
+  align-items: $align-center;
+  justify-content: $justify-center;
+  width: $length-20;
+  height: $length-20;
+  font-size: $font-size-12;
+  font-weight: $font-weight-400;
+  line-height: $line-height-20;
+  border-style: $border-style-solid;
+  border-width: $length-1;
+  border-radius: $ratio-50;
+
+  &,
+  .light & {
+    color: $color-main;
+    background-color: $background-color-default;
+    border-color: $border-color-default;
+
+    &.primary {
+      color: $color-main-reverse;
+      background-color: $color-primary;
+      border-color: $color-primary;
+    }
+
+    &.success {
+      color: $color-main-reverse;
+      background-color: $color-success;
+      border-color: $color-success;
+    }
+
+    &.warning {
+      color: $color-main-reverse;
+      background-color: $color-warning;
+      border-color: $color-warning;
+    }
+
+    &.error {
+      color: $color-main-reverse;
+      background-color: $color-error;
+      border-color: $color-error;
+    }
+
+    &.info {
+      color: $color-main-reverse;
+      background-color: $color-info;
+      border-color: $color-info;
+    }
+  }
+
+  .dark & {
+    color: $color-main-reverse;
+    background-color: $background-color-default-reverse;
+    border-color: $border-color-default-reverse;
+
+    &.primary {
+      background-color: $color-primary-reverse;
+      border-color: $color-primary-reverse;
+    }
+
+    &.success {
+      background-color: $color-success-reverse;
+      border-color: $color-success-reverse;
+    }
+
+    &.warning {
+      background-color: $color-warning-reverse;
+      border-color: $color-warning-reverse;
+    }
+
+    &.error {
+      background-color: $color-error-reverse;
+      border-color: $color-error-reverse;
+    }
+
+    &.info {
+      background-color: $color-info-reverse;
+      border-color: $color-info-reverse;
+    }
+  }
+}

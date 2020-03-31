@@ -1,0 +1,31 @@
+@each $key, $val in $paddings {
+  .p-#{$key} {
+    padding: $val;
+  }
+
+  .p-y-#{$key} {
+    padding-top: $val;
+    padding-bottom: $val;
+  }
+
+  .p-t-#{$key} {
+    padding-top: $val;
+  }
+
+  .p-b-#{$key} {
+    padding-bottom: $val;
+  }
+
+  .p-x-#{$key} {
+    padding-top: $val;
+    padding-bottom: $val;
+  }
+
+  .p-r-#{$key} {
+    padding-top: $val;
+  }
+
+  .p-l-#{$key} {
+    padding-bottom: $val;
+  }
+}
