@@ -163,11 +163,14 @@ $functional-colors-light: (
 /* 文字色 */
 $text-colors-light: (
   title: $color-title,
+  title-small: $color-title-small,
   main: $color-main,
+  main-small: $color-main-small,
   secondary: $color-secondary,
   disabled: $color-disabled
 );
 
+/* 背景色 */
 $background-colors-light: (
   container: $color-bg-container,
   default: $color-bg-default,
@@ -176,6 +179,7 @@ $background-colors-light: (
   divider: $color-bg-divider
 );
 
+/* 边框色 */
 $border-colors-light: (
   default: $color-border-default
 );

@@ -1,11 +1,11 @@
-/* 选择 length 单位，默认为 rpx，支持任意单位 */
+/* 选择 length 单位，默认为 rpx */
 $unit: rpx !default;
 
-/* length 单位缩放，默认为 2，可以进行细粒度控制 */
+/* length 单位缩放，默认为 2 */
 $scale: 2 !default;
 
 @import "./colors/index";
 @import "./length/index";
-@import "./sizing/index"; // width and height
-@import "./spacing/index"; // padding and margin
+@import "./sizing/index"; // width 和 height
+@import "./spacing/index"; // padding 和 margin
 @import "./typography/index";

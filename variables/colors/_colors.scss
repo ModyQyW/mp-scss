@@ -1,4 +1,3 @@
-/* Ant Design v3/v4 色板 */
 @import "./palette";
 // gray
 $gray: #8c8c8c;
@@ -291,8 +290,6 @@ $magenta-7-reverse: mix(f-get-color($magenta, 5), $gray-12, 90%); // #e0529c
 $magenta-8-reverse: mix(f-get-color($magenta, 4), $gray-12, 95%); // #f37fb7
 $magenta-9-reverse: mix(f-get-color($magenta, 3), $gray-12, 97%); // #f8a8cc
 $magenta-10-reverse: mix(f-get-color($magenta, 2), $gray-12, 98%); // #fad2e3
-
-/* Ant Design 色板外颜色 */
 // 功能色
 $color-primary: $blue-6 !default;
 $color-success: $green-6 !default;
@@ -301,11 +298,15 @@ $color-error: $red-6 !default;
 $color-info: $blue-6 !default;
 // 文字色
 $color-title: rgba(0, 0, 0, .85) !default;
+$color-title-small: rgba(0, 0, 0, .75) !default;
 $color-main: rgba(0, 0, 0, .65) !default;
+$color-main-small: rgba(0, 0, 0, .55) !default;
 $color-secondary: rgba(0, 0, 0, .45) !default;
 $color-disabled: rgba(0, 0, 0, .25) !default;
 $color-title-reverse: rgba(255, 255, 255, .85) !default;
+$color-title-small-reverse: rgba(255, 255, 255, .75) !default;
 $color-main-reverse: rgba(255, 255, 255, .65) !default;
+$color-main-small-reverse: rgba(255, 255, 255, .55) !default;
 $color-secondary-reverse: rgba(255, 255, 255, .45) !default;
 $color-disabled-reverse: rgba(255, 255, 255, .3) !default;
 // 背景色
