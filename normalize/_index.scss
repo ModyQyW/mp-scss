@@ -18,13 +18,13 @@ page {
 }
 
 view {
-  display: flex;
+  display: block;
   padding: 0;
   margin: 0;
 }
 
 scroll-view {
-  display: flex;
+  display: block;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -51,11 +51,11 @@ text,
 rich-text {
   padding: 0;
   margin: 0;
-  font-family: unset;
-  font-size: unset;
+  font-family: inherit;
+  font-size: 100%;
   font-weight: 400;
-  line-height: unset;
-  color: unset;
+  line-height: inherit;
+  color: inherit;
 }
 
 progress {
@@ -63,6 +63,7 @@ progress {
   align-items: center;
   padding: 0;
   margin: 0;
+  vertical-align: baseline;
 }
 
 button {
@@ -106,12 +107,11 @@ button {
 input {
   padding: 0;
   margin: 0;
-  font-family: unset;
-  font-size: unset;
+  font-family: inherit;
+  font-size: 100%;
   font-weight: 400;
-  line-height: unset;
-  color: unset;
-  background: unset;
+  line-height: inherit;
+  color: inherit;
 }
 
 label {
@@ -137,12 +137,11 @@ label {
 textarea {
   padding: 0;
   margin: 0;
-  font-family: unset;
-  font-size: unset;
+  font-family: inherit;
+  font-size: 100%;
   font-weight: 400;
-  line-height: unset;
-  color: unset;
-  background: unset;
+  line-height: inherit;
+  color: inherit;
 }
 
 // navigator {}
@@ -151,7 +150,9 @@ textarea {
 
 // camera {}
 
-// image {}
+image {
+  border-style: none;
+}
 
 // video {}
 
