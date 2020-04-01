@@ -1,32 +1,31 @@
 .wrapper-dialog {
-  position: $position-fixed;
-  z-index: $z-index-2400;
-  display: $display-flex;
-  flex-direction: $flex-direction-row;
-  align-items: $align-center;
-  justify-content: $justify-center;
-  width: $ratio-100;
-  height: $ratio-100;
+  position: fixed;
+  z-index: 240;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 
   &,
   .light & {
-    background-color: $background-color-mask;
+    background-color: $color-bg-mask;
   }
 
   .dark & {
-    background-color: $background-color-mask-reverse;
+    background-color: $color-bg-mask-reverse;
   }
+}
 
-  & > view[class*="dialog"] {
-    position: $position-relative;
-    width: $ratio-80;
-    height: auto;
-    padding: $length-12;
+.dialog {
+  position: relative;
+  width: 80%;
+  height: auto;
+  padding: $length-6;
+}
 
-    & > .icon-close {
-      width: $length-20;
-      height: $length-20;
-      border-radius: $ratio-50;
-    }
-  }
+.dialog-icon-close {
+  width: $length-20;
+  height: $length-20;
 }
