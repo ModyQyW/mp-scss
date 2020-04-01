@@ -2,7 +2,7 @@
 
 A scss lib for miniprogram. Since miniprogram is used almost only in China, Chinese docs are provided.
 
-一个面向小程序的个人级 scss 样式库，包含 scss 变量，类样式，组件样式和小程序组件样式重置。
+一个面向小程序的个人级 scss 样式库，包含 scss 变量 variables，重置样式 normalize，组件样式 components 和类样式 classes。
 
 该样式库的目标是：在仅有原型图的情况下，用这个样式库能快速做出不仅能适配微信小程序和支付宝小程序，而且看起来还过得去的页面。
 
@@ -60,17 +60,33 @@ npm i @modyqyw/mp-scss
 @import "../node_modules/@modyqyw/mp-scss/variables/index";
 ```
 
-- 引入预设组件样式。
+- 引入预设重置样式。注意：不要使用微信小程序 v2 样式。
 
 ```scss
 /* uni-app @/App.vue 需要手动先添加 sass 和 sass-loader */
 @import "~@modyqyw/mp-scss/variables";
+@import "~@modyqyw/mp-scss/normalize";
+```
+
+```scss
+/* taro @/app.scss */
+@import "../node_modules/@modyqyw/mp-scss/variables/index";
+@import "../node_modules/@modyqyw/mp-scss/normalize/index";
+```
+
+- 引入预设组件样式。注意：不要使用微信小程序 v2 样式。
+
+```scss
+/* uni-app @/App.vue 需要手动先添加 sass 和 sass-loader */
+@import "~@modyqyw/mp-scss/variables";
+@import "~@modyqyw/mp-scss/normalize";
 @import "~@modyqyw/mp-scss/components";
 ```
 
 ```scss
 /* taro @/app.scss */
 @import "../node_modules/@modyqyw/mp-scss/variables/index";
+@import "../node_modules/@modyqyw/mp-scss/normalize/index";
 @import "../node_modules/@modyqyw/mp-scss/components/index";
 ```
 
@@ -88,21 +104,7 @@ npm i @modyqyw/mp-scss
 @import "../node_modules/@modyqyw/mp-scss/classes/index";
 ```
 
-- 引入预设组件样式。
-
-```scss
-/* uni-app @/App.vue 需要手动先添加 sass 和 sass-loader */
-@import "~@modyqyw/mp-scss/variables";
-@import "~@modyqyw/mp-scss/components";
-```
-
-```scss
-/* taro @/app.scss */
-@import "../node_modules/@modyqyw/mp-scss/variables/index";
-@import "../node_modules/@modyqyw/mp-scss/components/index";
-```
-
-- 引入全部变量与样式。注意：这种做法意味着你要同时使用预设类样式和预设组件样式，这很可能会导致样式覆盖问题。如果发生了这类问题，而你认为并不合理，请提 issue 并附上 demo。
+- 引入全部变量与样式。注意：这种做法意味着你要重置小程序样式，使用预设类样式和预设组件样式，这很可能会导致样式覆盖问题。如果发生了这类问题，而你认为并不合理，请提 issue 并附上 demo。
 
 ```scss
 /* uni-app @/App.vue 需要手动先添加 sass 和 sass-loader */
