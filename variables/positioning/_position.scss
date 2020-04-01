@@ -1,11 +1,11 @@
 $m-position: (
-  relative: relative,
-  absolute: absolute,
-  fixed: fixed,
-  static: static
+  "relative": relative,
+  "absolute": absolute,
+  "fixed": fixed,
+  "static": static
 );
 
 $m-position-value: (
-  0: 0,
-  auto: auto
+  "0": 0,
+  "auto": auto
 );

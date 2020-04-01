@@ -13,7 +13,7 @@ $m-icon: (
 );
 
 @each $key, $val in $m-icon {
-  .icon-#{$size} {
+  .icon-#{$key} {
     flex: 0 0 $val;
     width: $val;
     height: $val;

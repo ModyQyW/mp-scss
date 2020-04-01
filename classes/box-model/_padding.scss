@@ -1,4 +1,4 @@
-@each $key, $val in $paddings {
+@each $key, $val in $m-spacing {
   .p-#{$key} {
     padding: $val;
   }

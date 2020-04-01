@@ -1,4 +1,4 @@
-@each $key, $val in $heights {
+@each $key, $val in $m-sizing {
   .min-h-#{$key} {
     min-height: $val;
   }

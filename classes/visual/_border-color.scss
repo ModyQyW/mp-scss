@@ -1,18 +1,18 @@
-@each $key, $val in $palette-colors-light {
+@each $key, $val in $m-palette-color-light {
   .border-#{$key},
   .light .border-#{$key} {
     background: $val;
   }
 }
 
-@each $key, $val in $functional-colors-light {
+@each $key, $val in $m-functional-color-light {
   .border-#{$key},
   .light .border-#{$key} {
     background: $val;
   }
 }
 
-@each $key, $val in $border-colors-light {
+@each $key, $val in $m-border-color-light {
   .border-#{$key},
   .light .border-#{$key} {
     background: $val;
@@ -25,13 +25,13 @@
   }
 }
 
-@each $key, $val in $functional-colors-dark {
+@each $key, $val in $m-functional-color-dark {
   .dark .border-#{$key} {
     background: $val;
   }
 }
 
-@each $key, $val in $background-colors-dark {
+@each $key, $val in $m-border-color-dark {
   .dark .border-#{$key} {
     background: $val;
   }

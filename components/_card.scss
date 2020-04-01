@@ -22,8 +22,8 @@
 
   .dark & {
     color: $color-main-reverse;
-    background-color: $background-color-default-reverse;
-    border-color: $border-color-default-reverse;
+    background-color: $color-bg-default-reverse;
+    border-color: $color-border-default-reverse;
   }
 }
 

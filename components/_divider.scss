@@ -10,11 +10,11 @@
 
   &,
   .light & {
-    background-color: $background-color-default;
+    background-color: $color-bg-default;
   }
 
   .dark & {
-    background-color: $background-color-default-reverse;
+    background-color: $color-bg-default-reverse;
   }
 }
 
