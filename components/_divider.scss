@@ -1,10 +1,11 @@
-.divider {
-  position: $position-relative;
-  box-sizing: $box-sizing-border-box;
-  display: $display-flex;
-  flex: $flex-grow-0 $flex-shrink-0 $length-1;
+.divider,
+.divider-vertical {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 $length-1;
   width: $length-1;
-  height: $line-height-22;
+  height: $length-12;
   margin: auto $length-8;
 
   &,
@@ -15,8 +16,8 @@
   .dark & {
     background-color: $background-color-default-reverse;
   }
+}
 
-  &.vertical {
-    flex: $flex-grow-0 $flex-shrink-0 $line-height-22;
-  }
+.divider-vertical {
+  flex: 0 0 $length-12;
 }
