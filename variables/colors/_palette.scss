@@ -31,7 +31,7 @@ $palette-brightness-step-2: 15%;
     $h: 60deg * ($r - $g) / ($max - $min) + 240deg;
   }
   // s %
-  $s: if(max == 0, 0%, percentage(1 - $min / $max));
+  $s: if($max == 0, 0%, percentage(1 - $min / $max));
   // v %
   $v: percentage($max);
   // return list
