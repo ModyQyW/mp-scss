@@ -102,8 +102,8 @@ page {
 }
 
 .footer {
+  // 避免遮挡
   flex: 0 0 $length-72;
-  // 适配 iPhone X 系列
   justify-content: center;
   padding: $length-4 $length-12;
 }
