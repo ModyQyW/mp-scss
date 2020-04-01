@@ -1,4 +1,9 @@
-.badge {
+.badge,
+.badge-primary,
+.badge-success,
+.badge-warning,
+.badge-error,
+.badge-info {
   position: absolute;
   top: 0;
   right: $length-8-reverse;
@@ -16,90 +21,70 @@
   border-style: solid;
   border-width: $length-1-real;
   border-radius: 50%;
-
-  &,
-  .light & {
-    color: $color-main;
-    background-color: $color-bg-default;
-    border-color: $color-border-default;
-  }
-
-  .dark & {
-    color: $color-main-reverse;
-    background-color: $color-bg-default-reverse;
-    border-color: $color-border-default-reverse;
-  }
 }
 
-.badge-primary,
-.badge-success,
-.badge-warning,
-.badge-error,
-.badge-info {
-  color: $color-main-reverse;
-}
+$m-badge: (
+  "": (
+    color-light: $color-main,
+    background-color-light: $color-bg-default,
+    border-color-light: $color-border-default,
+    color-dark: $color-main-reverse,
+    background-color-dark: $color-bg-default-reverse,
+    border-color-dark: $color-border-default-reverse
+  ),
+  "-primary": (
+    color-light: $gray-1,
+    background-color-light: $color-primary,
+    border-color-light: $color-primary,
+    color-dark: $gray-1,
+    background-color-dark: $color-primary-reverse,
+    border-color-dark: $color-primary-reverse
+  ),
+  "-success": (
+    color-light: $gray-1,
+    background-color-light: $color-success,
+    border-color-light: $color-success,
+    color-dark: $gray-1,
+    background-color-dark: $color-success-reverse,
+    border-color-dark: $color-success-reverse
+  ),
+  "-warning": (
+    color-light: $gray-1,
+    background-color-light: $color-warning,
+    border-color-light: $color-warning,
+    color-dark: $gray-1,
+    background-color-dark: $color-warning-reverse,
+    border-color-dark: $color-warning-reverse
+  ),
+  "-error": (
+    color-light: $gray-1,
+    background-color-light: $color-error,
+    border-color-light: $color-error,
+    color-dark: $gray-1,
+    background-color-dark: $color-error-reverse,
+    border-color-dark: $color-error-reverse
+  ),
+  "-info": (
+    color-light: $gray-1,
+    background-color-light: $color-info,
+    border-color-light: $color-info,
+    color-dark: $gray-1,
+    background-color-dark: $color-info-reverse,
+    border-color-dark: $color-info-reverse
+  )
+);
 
-.badge-primary {
-  &,
-  .light & {
-    background-color: $color-primary;
-    border-color: $color-primary;
+@each $key, $val in $m-badge {
+  .badge#{$key},
+  .light .badge#{$key} {
+    color: map-get($val, "color-light");
+    background-color: map-get($val, "background-color-light");
+    border-color: map-get($val, "border-color-light");
   }
 
-  .dark & {
-    background-color: $color-primary-reverse;
-    border-color: $color-primary-reverse;
-  }
-}
-
-.badge-success {
-  &,
-  .light & {
-    background-color: $color-success;
-    border-color: $color-success;
-  }
-
-  .dark & {
-    background-color: $color-success-reverse;
-    border-color: $color-success-reverse;
-  }
-}
-
-.badge-warning {
-  &,
-  .light & {
-    background-color: $color-warning;
-    border-color: $color-warning;
-  }
-
-  .dark & {
-    background-color: $color-warning-reverse;
-    border-color: $color-warning-reverse;
-  }
-}
-
-.badge-error {
-  &,
-  .light & {
-    background-color: $color-error;
-    border-color: $color-error;
-  }
-
-  .dark & {
-    background-color: $color-error-reverse;
-    border-color: $color-error-reverse;
-  }
-}
-
-.badge-info {
-  &,
-  .light & {
-    background-color: $color-info;
-    border-color: $color-info;
-  }
-
-  .dark & {
-    background-color: $color-info-reverse;
-    border-color: $color-info-reverse;
+  .dark .badge#{$key} {
+    color: map-get($val, "color-dark");
+    background-color: map-get($val, "background-color-dark");
+    border-color: map-get($val, "border-color-dark");
   }
 }
