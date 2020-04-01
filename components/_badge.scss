@@ -1,87 +1,105 @@
-[class*="badge"] {
-  position: $position-absolute;
+.badge {
+  position: absolute;
   top: 0;
   right: $length-8-reverse;
-  z-index: $z-index-600;
-  box-sizing: $box-sizing-border-box;
-  display: $display-flex;
-  flex-direction: $flex-direction-row;
-  align-items: $align-center;
-  justify-content: $justify-center;
+  z-index: 600;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   width: $length-20;
   height: $length-20;
-  font-size: $font-size-12;
-  font-weight: $font-weight-400;
-  line-height: $line-height-20;
-  border-style: $border-style-solid;
-  border-width: $length-1;
-  border-radius: $ratio-50;
+  font-size: $font-size-s-2;
+  font-weight: 400;
+  line-height: $line-height-s-2;
+  border-style: solid;
+  border-width: $length-1-real;
+  border-radius: 50%;
 
   &,
   .light & {
     color: $color-main;
-    background-color: $background-color-default;
-    border-color: $border-color-default;
-
-    &.primary {
-      color: $color-main-reverse;
-      background-color: $color-primary;
-      border-color: $color-primary;
-    }
-
-    &.success {
-      color: $color-main-reverse;
-      background-color: $color-success;
-      border-color: $color-success;
-    }
-
-    &.warning {
-      color: $color-main-reverse;
-      background-color: $color-warning;
-      border-color: $color-warning;
-    }
-
-    &.error {
-      color: $color-main-reverse;
-      background-color: $color-error;
-      border-color: $color-error;
-    }
-
-    &.info {
-      color: $color-main-reverse;
-      background-color: $color-info;
-      border-color: $color-info;
-    }
+    background-color: $color-bg-default;
+    border-color: $color-border-default;
   }
 
   .dark & {
     color: $color-main-reverse;
-    background-color: $background-color-default-reverse;
-    border-color: $border-color-default-reverse;
+    background-color: $color-bg-default-reverse;
+    border-color: $color-border-default-reverse;
+  }
+}
 
-    &.primary {
-      background-color: $color-primary-reverse;
-      border-color: $color-primary-reverse;
-    }
+.badge-primary,
+.badge-success,
+.badge-warning,
+.badge-error,
+.badge-info {
+  color: $color-main-reverse;
+}
 
-    &.success {
-      background-color: $color-success-reverse;
-      border-color: $color-success-reverse;
-    }
+.badge-primary {
+  &,
+  .light & {
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
 
-    &.warning {
-      background-color: $color-warning-reverse;
-      border-color: $color-warning-reverse;
-    }
+  .dark & {
+    background-color: $color-primary-reverse;
+    border-color: $color-primary-reverse;
+  }
+}
 
-    &.error {
-      background-color: $color-error-reverse;
-      border-color: $color-error-reverse;
-    }
+.badge-success {
+  &,
+  .light & {
+    background-color: $color-success;
+    border-color: $color-success;
+  }
 
-    &.info {
-      background-color: $color-info-reverse;
-      border-color: $color-info-reverse;
-    }
+  .dark & {
+    background-color: $color-success-reverse;
+    border-color: $color-success-reverse;
+  }
+}
+
+.badge-warning {
+  &,
+  .light & {
+    background-color: $color-warning;
+    border-color: $color-warning;
+  }
+
+  .dark & {
+    background-color: $color-warning-reverse;
+    border-color: $color-warning-reverse;
+  }
+}
+
+.badge-error {
+  &,
+  .light & {
+    background-color: $color-error;
+    border-color: $color-error;
+  }
+
+  .dark & {
+    background-color: $color-error-reverse;
+    border-color: $color-error-reverse;
+  }
+}
+
+.badge-info {
+  &,
+  .light & {
+    background-color: $color-info;
+    border-color: $color-info;
+  }
+
+  .dark & {
+    background-color: $color-info-reverse;
+    border-color: $color-info-reverse;
   }
 }
