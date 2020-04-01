@@ -151,7 +151,7 @@ $palette-brightness-step-2: 15%;
   );
   $a: alpha($hex-color);
   @if ($a == 1) {
-    @return $nex-hex-color;
+    @return $new-hex-color;
   } @else if ($a <= .2) {
     @return change-color($new-hex-color, $alpha: $a * 2);
   } @else if ($a <= .4) {
