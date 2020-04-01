@@ -5,7 +5,8 @@
   "author": "ModyQyW <wurui7@mail3.sysu.edu.cn>",
   "license": "MIT",
   "scripts": {
-    "lint": "stylelint settings && stylelint styles"
+    "lint": "stylelint . --custom-formatter=node_modules/stylelint-formatter-pretty",
+    "sass": "sass _index.scss index.css"
   },
   "publishConfig": {
     "access": "public"
@@ -21,8 +22,10 @@
   ],
   "devDependencies": {
     "lint-staged": "^9.5.0",
+    "sass": "^1.26.3",
     "stylelint": "^13.2.1",
     "stylelint-config-twbs-bootstrap": "^2.0.1",
+    "stylelint-formatter-pretty": "^2.0.0",
     "yorkie": "^2.0.0"
   },
   "stylelint": {
