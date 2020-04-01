@@ -297,6 +297,11 @@ $color-success: $green-6 !default;
 $color-warning: $gold-6 !default;
 $color-error: $red-6 !default;
 $color-info: $blue-6 !default;
+$color-primary-reverse: mix($color-primary, $gray-12, 85%);
+$color-success-reverse: mix($color-success, $gray-12, 85%);
+$color-warning-reverse: mix($color-warning, $gray-12, 85%);
+$color-error-reverse: mix($color-error, $gray-12, 85%);
+$color-info-reverse: mix($color-info, $gray-12, 85%);
 // 文字色
 $color-title: rgba(0, 0, 0, .85) !default;
 $color-title-small: rgba(0, 0, 0, .75) !default;

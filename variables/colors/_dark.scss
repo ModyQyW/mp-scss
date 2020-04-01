@@ -153,11 +153,11 @@ $palette-colors-dark: (
 
 // 功能色
 $functional-colors-dark: (
-  primary: mix($color-primary, $gray-12, 85%),
-  success: mix($color-success, $gray-12, 85%),
-  warning: mix($color-warning, $gray-12, 85%),
-  error: mix($color-error, $gray-12, 85%),
-  info: mix($color-info, $gray-12, 85%),
+  primary: $color-primary-reverse,
+  success: $color-success-reverse,
+  warning: $color-warning-reverse,
+  error: $color-error-reverse,
+  info: $color-info-reverse,
   transparent: transparent
 );
 
