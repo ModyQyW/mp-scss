@@ -1,68 +1,66 @@
 .wrapper-input {
-  position: $position-relative;
-  box-sizing: $box-sizing-border-box;
-  display: $display-flex;
-  flex-direction: $flex-direction-row;
-  align-items: $align-center;
-  justify-content: $justify-center;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   min-width: $length-72;
   min-height: $length-40;
-  border-style: $border-style-solid;
+  border-style: solid;
   border-width: $length-1;
   border-radius: $length-4;
 
   &,
   .light & {
     color: $color-main;
-    border-color: $border-color-default;
+    background-color: $color-bg-default;
+    border-color: $color-border-default;
   }
 
   .dark & {
     color: $color-main-reverse;
-    border-color: $border-color-default-reverse;
+    background-color: $color-bg-default-reverse;
+    border-color: $color-border-default-reverse;
   }
+}
 
-  & > .prefix {
-    position: $position-relative;
-    box-sizing: $box-sizing-border-box;
-    flex: $flex-grow-0 $flex-shrink-0 $length-20;
-    order: $order-first;
-    width: $length-20;
-    height: $length-20;
-    margin-left: $length-4;
-    font-size: $font-size-12;
-    line-height: $line-height-40;
+.input-prefix,
+.input-suffix {
+  position: relative;
+  box-sizing: border-box;
+  flex: 0 0 $length-20;
+  width: $length-20;
+  height: $length-20;
+  margin-left: $length-4;
+  font-size: $font-size-s-2;
+  line-height: $line-height-s-2;
+}
 
-    & + input[class*="input"] {
-      margin-left: $length-8;
-    }
+.input-prefix {
+  order: -9999;
+
+  & + .input {
+    margin-left: $length-8;
   }
+}
 
-  & > .suffix {
-    position: $position-relative;
-    box-sizing: $box-sizing-border-box;
-    flex: $flex-grow-0 $flex-shrink-0 $length-20;
-    order: $order-last;
-    width: $length-20;
-    height: $length-20;
-    margin-right: $length-4;
-    font-size: $font-size-12;
-    line-height: $line-height-40;
+.input-suffix {
+  order: 9999;
 
-    & + input[class*="input"] {
-      margin-right: $length-8;
-    }
+  & + .input {
+    margin-right: $length-8;
   }
+}
 
-  & > input[class*="input"] {
-    position: $position-relative;
-    box-sizing: $box-sizing-border-box;
-    flex: auto;
-    height: $ratio-100;
-    padding: 0 $length-4;
-  }
+.input {
+  position: relative;
+  box-sizing: border-box;
+  flex: auto;
+  height: 100%;
+  padding: 0 $length-4;
+}
 
-  .input-placeholder {
-    margin: 0;
-  }
+.input-placeholder {
+  margin: 0;
 }
