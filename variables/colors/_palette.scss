@@ -144,9 +144,19 @@ $palette-brightness-step-2: 15%;
   $h: nth($hsv-color, 1); // deg
   $s: nth($hsv-color, 2); // %
   $v: nth($hsv-color, 3); // %
-  @return f-palette-hsv-to-hex(
+  $new-hex-color: f-palette-hsv-to-hex(
     f-palette-get-hue($h, $s, $v, $diff, $is-lighter),
     f-palette-get-saturation($h, $s, $v, $diff, $is-lighter),
     f-palette-get-value($h, $s, $v, $diff, $is-lighter)
   );
+  $a: alpha($hex-color);
+  @if ($a == 1) {
+    @return $nex-hex-color;
+  } @else if ($a <= .2) {
+    @return change-color($new-hex-color, $alpha: $a * 2);
+  } @else if ($a <= .4) {
+    @return change-color($new-hex-color, $alpha: $a * 1.5);
+  } @else {
+    @return change-color($new-hex-color, $alpha: $a);
+  }
 }
