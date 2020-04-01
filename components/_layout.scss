@@ -80,25 +80,27 @@ page {
   padding: 0 $length-12;
 }
 
-.aside.horizontal,
-.aside.is-horizontal {
+.aside.aside-horizontal {
   flex-direction: column;
   width: auto;
   height: 100%;
 }
 
-.main {
+.main,
+.main-horizontal {
   flex: auto;
   flex-direction: column;
+  padding: $length-12;
+}
+
+.main {
   width: 100%;
   height: auto;
-  padding: $length-12;
+}
 
-  &.horizontal,
-  &.is-horizontal {
-    width: auto;
-    height: 100%;
-  }
+.main-horizontal {
+  width: auto;
+  height: 100%;
 }
 
 .footer {
