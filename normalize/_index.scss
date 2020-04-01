@@ -1,0 +1,168 @@
+// 样式重置
+// 微信小程序不要启用 v2 样式，否则将无法重置 button icon radio checkbox switch slider 的样式
+
+page {
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: $font-family-default;
+  font-size: $font-size-base;
+  font-weight: 400;
+  line-height: $line-height-base;
+  color: initial;
+  cursor: default;
+  user-select: none;
+  background: initial;
+  text-size-adjust: none;
+}
+
+view {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+scroll-view {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+// swiper {}
+
+// movable-area {}
+
+// movable-view {}
+
+// cover-view {}
+
+// cover-image {}
+
+icon {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+
+text,
+rich-text {
+  padding: 0;
+  margin: 0;
+  font-family: unset;
+  font-size: unset;
+  font-weight: 400;
+  line-height: unset;
+  color: unset;
+}
+
+progress {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  min-height: 72rpx;
+  padding: 8rpx 32rpx;
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: unset;
+  font-size: $font-size-base;
+  font-weight: 400;
+  line-height: $line-height-base;
+  color: $color-main;
+  text-align: center;
+  text-decoration: none;
+  background-color: $gray-3;
+
+  &[disabled] {
+    color: $color-disabled;
+    background-color: $gray-2;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+// checkbox {}
+
+// editor {}
+
+// form {}
+
+input {
+  padding: 0;
+  margin: 0;
+  font-family: unset;
+  font-size: unset;
+  font-weight: 400;
+  line-height: unset;
+  color: unset;
+  background: unset;
+}
+
+label {
+  padding: 0;
+  margin: 0;
+  font-family: unset;
+  font-size: unset;
+  font-weight: 400;
+  line-height: unset;
+  color: unset;
+}
+
+// picker {}
+
+// picker-view {}
+
+// radio {}
+
+// slider {}
+
+// switch {}
+
+textarea {
+  padding: 0;
+  margin: 0;
+  font-family: unset;
+  font-size: unset;
+  font-weight: 400;
+  line-height: unset;
+  color: unset;
+  background: unset;
+}
+
+// navigator {}
+
+// audio {}
+
+// camera {}
+
+// image {}
+
+// video {}
+
+// live-player {}
+
+// live-pusher {}
+
+// map {}
+
+// canvas {}
+
+// web-view {}
+
+// ad {}
