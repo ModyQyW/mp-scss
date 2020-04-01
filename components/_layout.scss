@@ -6,15 +6,14 @@ page {
   overflow: hidden;
 }
 
-.container {
+.container,
+.container-horizontal {
   position: relative;
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
-  height: 100%;
   overflow: hidden;
   font-size: $font-size-base;
   font-weight: 400;
@@ -30,13 +29,17 @@ page {
     color: $color-main-reverse;
     background-color: $color-bg-container-reverse;
   }
+}
 
-  &.horizontal,
-  &.is-horizontal {
-    flex: auto;
-    flex-direction: row;
-    height: auto;
-  }
+.container {
+  flex-direction: column;
+  height: 100%;
+}
+
+.container-horizontal {
+  flex: auto;
+  flex-direction: row;
+  height: auto;
 }
 
 .bg {
