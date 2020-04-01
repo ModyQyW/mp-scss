@@ -6,7 +6,7 @@ A scss lib for miniprogram. Since miniprogram is used almost only in China, Chin
 
 该样式库的目标是：在仅有原型图的情况下，用这个样式库能快速做出不仅能适配微信小程序和支付宝小程序，而且看起来还过得去的页面。
 
-初期阶段，更新较为频繁，可以等稳定后再尝试。
+初期阶段，更新较为频繁且可能存在遗漏，欢迎中肯的意见，建议，issues，prs 等。
 
 ## 起步
 
