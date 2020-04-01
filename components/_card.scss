@@ -1,4 +1,5 @@
-.card {
+.card,
+.card-vertical {
   position: relative;
   box-sizing: border-box;
   display: flex;
@@ -24,10 +25,10 @@
     background-color: $background-color-default-reverse;
     border-color: $border-color-default-reverse;
   }
+}
 
-  &.card-vertical {
-    flex: 0 0 auto;
-  }
+.card-vertical {
+  flex: 0 0 auto;
 }
 
 .card-header,
