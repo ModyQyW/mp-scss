@@ -264,3 +264,4 @@ Copyright (c) 2019-present ModyQyW
 - [bootstrap](https://github.com/twbs/stylelint-config-twbs-bootstrap)
 - [bulma](https://bulma.io/)
 - [tailwindcss](https://tailwindcss.com/)
+- [normalize.css](https://github.com/necolas/normalize.css/blob/master/normalize.css)
