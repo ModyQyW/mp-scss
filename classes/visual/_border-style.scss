@@ -2,4 +2,20 @@
   .border-#{$key} {
     border-style: $val;
   }
+
+  .border-t-#{$key} {
+    border-top-style: $val;
+  }
+
+  .border-r-#{$key} {
+    border-right-style: $val;
+  }
+
+  .border-b-#{$key} {
+    border-bottom-style: $val;
+  }
+
+  .border-l-#{$key} {
+    border-left-style: $val;
+  }
 }
