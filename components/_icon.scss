@@ -1,19 +1,20 @@
 $m-icon: (
-  4xs: $length-2,
-  3xs: $length-4,
-  2xs: $length-8,
-  xs: $length-12,
-  sm: $length-16,
-  md: $length-20,
-  lg: $length-24,
-  xl: $length-28,
-  2xl: $length-32,
-  3xl: $length-36,
-  4xl: $length-40
+  "-4xs": $length-2,
+  "-3xs": $length-4,
+  "-2xs": $length-8,
+  "-xs": $length-12,
+  "-sm": $length-16,
+  "-md": $length-20,
+  "": $length-20,
+  "-lg": $length-24,
+  "-xl": $length-28,
+  "-2xl": $length-32,
+  "-3xl": $length-36,
+  "-4xl": $length-40
 );
 
 @each $key, $val in $m-icon {
-  .icon-#{$key} {
+  .icon#{$key} {
     flex: 0 0 $val;
     width: $val;
     height: $val;
