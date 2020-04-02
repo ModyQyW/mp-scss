@@ -108,7 +108,7 @@ npm i @modyqyw/mp-scss
 @import "../node_modules/@modyqyw/mp-scss/classes/index";
 ```
 
-- 引入全部变量与样式。注意：这种做法意味着你要重置小程序样式，使用预设类样式和预设组件样式，这很可能会导致样式覆盖问题。如果发生了这类问题，而你认为并不合理，请提 issue 并附上 demo。
+- 引入全部变量与样式。
 
 ```scss
 /* uni-app @/App.vue 需要手动先添加 sass 和 sass-loader */
@@ -119,6 +119,8 @@ npm i @modyqyw/mp-scss
 /* taro @/app.scss */
 @import "../node_modules/@modyqyw/mp-scss/index";
 ```
+
+注意：这种做法意味着你要重置小程序样式，使用预设类样式和预设组件样式，这很可能会导致样式覆盖问题。如果发生了这类问题，而你认为并不合理，请提 issue 并附上 demo。
 
 - 默认使用 Ant Design 配色。如果要修改，需要在引入预设变量前进行细颗粒度的修改。
 
