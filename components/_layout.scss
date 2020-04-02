@@ -137,11 +137,9 @@ page {
   &,
   .light & {
     color: $color-main;
-    background-color: $color-bg-default;
   }
 
   .dark & {
     color: $color-main-reverse;
-    background-color: $color-bg-default-reverse;
   }
 }
