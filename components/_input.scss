@@ -59,4 +59,13 @@
 
 .input-placeholder {
   margin: 0;
+
+  &,
+  .light & {
+    color: $color-secondary;
+  }
+
+  .dark & {
+    color: $color-secondary-reverse;
+  }
 }
