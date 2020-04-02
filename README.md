@@ -48,7 +48,7 @@ npm i @modyqyw/mp-scss
 
 - 只支持 scss，没有计划支持 css，less 和 stylus。
 
-- 引入预设变量。之后你可以根据预设变量定制自己的样式。你也可以在某一页面引入以使用预设变量。
+- 引入预设变量。之后你可以根据预设变量定制自己的样式。
 
 ```scss
 /* uni-app @/App.vue 需要手动先添加 sass 和 sass-loader */
@@ -59,6 +59,10 @@ npm i @modyqyw/mp-scss
 /* taro @/app.scss */
 @import "../node_modules/@modyqyw/mp-scss/variables/index";
 ```
+
+注意：如果你只在`App.vue`的`style`标签或者`app.scss`引入了预设变量文件，你是不能在每个样式标签/文件中使用预设变量的。这与编译机制有关，`App.vue`中的`style`标签和`app.scss`会被编译成微信小程序的`app.wxss`。
+
+要在每个样式标签/文件中都使用预设变量，你可以每个样式标签/文件中都手动引入一次，或配置`sass-loader`的`prependData`选项，把预设变量文件自动引入到每个样式标签/文件中。
 
 - 引入预设重置样式。注意：不要使用微信小程序 v2 样式。
 
