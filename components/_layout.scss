@@ -81,6 +81,7 @@ page {
 }
 
 .aside.aside-horizontal {
+  flex: 0 0 auto;
   flex-direction: column;
   width: auto;
   height: 100%;
@@ -137,8 +138,7 @@ page {
   height: auto;
 }
 
-.wrapper-col,
-.wrapper-column {
+.wrapper-col {
   width: auto;
   height: 100%;
 }
