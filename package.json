@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "stylelint . --custom-formatter=node_modules/stylelint-formatter-pretty",
-    "sass": "sass _index.scss index.css"
+    "sass": "sass _index.scss index.css --style=compressed --no-source-map"
   },
   "publishConfig": {
     "access": "public"
