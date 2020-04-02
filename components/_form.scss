@@ -7,7 +7,7 @@
   flex-direction: column;
   width: 100%;
   height: auto;
-  padding: $length-12;
+  padding: $length-12 0;
   margin: 0 auto;
 
   &,
@@ -45,7 +45,6 @@
   align-items: center;
   height: 100%;
   height: $length-40;
-  min-height: $length-40;
 }
 
 .form-item__label {
@@ -56,5 +55,6 @@
 .form-item__content {
   flex: auto;
   justify-content: flex-start;
+  min-height: $length-40;
   padding-left: $length-8;
 }
