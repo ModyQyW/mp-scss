@@ -14,14 +14,10 @@
   &,
   .light & {
     color: $color-main;
-    background-color: $color-bg-default;
-    border-color: $color-border-default;
   }
 
   .dark & {
     color: $color-main-reverse;
-    background-color: $color-bg-default-reverse;
-    border-color: $color-border-default-reverse;
   }
 }
 
