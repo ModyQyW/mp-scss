@@ -58,6 +58,17 @@ page {
   box-sizing: border-box;
   display: flex;
   background-color: transparent;
+
+  &,
+  .light & {
+    color: $color-main;
+    background-color: $color-bg-default;
+  }
+
+  .dark & {
+    color: $color-main-reverse;
+    background-color: $color-bg-default-reverse;
+  }
 }
 
 .header,
@@ -122,4 +133,15 @@ page {
   align-items: center;
   height: 100%;
   overflow: hidden;
+
+  &,
+  .light & {
+    color: $color-main;
+    background-color: $color-bg-default;
+  }
+
+  .dark & {
+    color: $color-main-reverse;
+    background-color: $color-bg-default-reverse;
+  }
 }
