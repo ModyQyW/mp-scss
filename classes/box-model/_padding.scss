@@ -17,15 +17,15 @@
   }
 
   .p-x-#{$key} {
-    padding-top: $val;
-    padding-bottom: $val;
+    padding-right: $val;
+    padding-left: $val;
   }
 
   .p-r-#{$key} {
-    padding-top: $val;
+    padding-right: $val;
   }
 
   .p-l-#{$key} {
-    padding-bottom: $val;
+    padding-left: $val;
   }
 }

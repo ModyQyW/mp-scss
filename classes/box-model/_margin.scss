@@ -17,15 +17,15 @@
   }
 
   .m-x-#{$key} {
-    margin-top: $val;
-    margin-bottom: $val;
+    margin-right: $val;
+    margin-left: $val;
   }
 
   .m-r-#{$key} {
-    margin-top: $val;
+    margin-right: $val;
   }
 
   .m-l-#{$key} {
-    margin-bottom: $val;
+    margin-left: $val;
   }
 }

@@ -1,38 +1,146 @@
 @each $key, $val in $m-palette-color-light {
   .border-#{$key},
   .light .border-#{$key} {
-    background: $val;
+    border-color: $val;
+  }
+
+  .border-t-#{$key},
+  .light .border-t-#{$key} {
+    border-top-color: $val;
+  }
+
+  .border-r-#{$key},
+  .light .border-r-#{$key} {
+    border-right-color: $val;
+  }
+
+  .border-b-#{$key},
+  .light .border-b-#{$key} {
+    border-bottom-color: $val;
+  }
+
+  .border-l-#{$key},
+  .light .border-l-#{$key} {
+    border-color: $val;
   }
 }
 
 @each $key, $val in $m-functional-color-light {
   .border-#{$key},
   .light .border-#{$key} {
-    background: $val;
+    border-color: $val;
+  }
+
+  .border-t-#{$key},
+  .light .border-t-#{$key} {
+    border-top-color: $val;
+  }
+
+  .border-r-#{$key},
+  .light .border-r-#{$key} {
+    border-right-color: $val;
+  }
+
+  .border-b-#{$key},
+  .light .border-b-#{$key} {
+    border-bottom-color: $val;
+  }
+
+  .border-l-#{$key},
+  .light .border-l-#{$key} {
+    border-color: $val;
   }
 }
 
 @each $key, $val in $m-border-color-light {
   .border-#{$key},
   .light .border-#{$key} {
-    background: $val;
+    border-color: $val;
+  }
+
+  .border-t-#{$key},
+  .light .border-t-#{$key} {
+    border-top-color: $val;
+  }
+
+  .border-r-#{$key},
+  .light .border-r-#{$key} {
+    border-right-color: $val;
+  }
+
+  .border-b-#{$key},
+  .light .border-b-#{$key} {
+    border-bottom-color: $val;
+  }
+
+  .border-l-#{$key},
+  .light .border-l-#{$key} {
+    border-color: $val;
   }
 }
 
 @each $key, $val in $palette-colors-dark {
   .dark .border-#{$key} {
-    background: $val;
+    border-color: $val;
+  }
+
+  .dark .border-t-#{$key} {
+    border-top-color: $val;
+  }
+
+  .dark .border-r-#{$key} {
+    border-right-color: $val;
+  }
+
+  .dark .border-b-#{$key} {
+    border-bottom-color: $val;
+  }
+
+  .dark .border-l-#{$key} {
+    border-color: $val;
   }
 }
 
 @each $key, $val in $m-functional-color-dark {
   .dark .border-#{$key} {
-    background: $val;
+    border-color: $val;
+  }
+
+  .dark .border-t-#{$key} {
+    border-top-color: $val;
+  }
+
+  .dark .border-r-#{$key} {
+    border-right-color: $val;
+  }
+
+  .dark .border-b-#{$key} {
+    border-bottom-color: $val;
+  }
+
+  .dark .border-l-#{$key} {
+    border-color: $val;
   }
 }
 
 @each $key, $val in $m-border-color-dark {
   .dark .border-#{$key} {
-    background: $val;
+    border-color: $val;
+  }
+
+  .dark .border-t-#{$key} {
+    border-top-color: $val;
+  }
+
+  .dark .border-r-#{$key} {
+    border-right-color: $val;
+  }
+
+  .dark .border-b-#{$key} {
+    border-bottom-color: $val;
+  }
+
+  .dark .border-l-#{$key} {
+    border-color: $val;
   }
 }
