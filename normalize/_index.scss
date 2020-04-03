@@ -54,7 +54,7 @@ rich-text {
   margin: 0;
   font-family: inherit;
   font-size: 100%;
-  font-weight: 400;
+  font-weight: inherit;
   line-height: inherit;
   color: inherit;
 }
@@ -80,7 +80,7 @@ button {
   padding: 8rpx 32rpx;
   margin: 0 auto;
   overflow: hidden;
-  font-family: unset;
+  font-family: inherit;
   font-size: $font-size-base;
   font-weight: 400;
   line-height: $line-height-base;
@@ -110,7 +110,7 @@ input {
   margin: 0;
   font-family: inherit;
   font-size: 100%;
-  font-weight: 400;
+  font-weight: inherit;
   line-height: inherit;
   color: inherit;
 }
@@ -118,11 +118,11 @@ input {
 label {
   padding: 0;
   margin: 0;
-  font-family: unset;
-  font-size: unset;
-  font-weight: 400;
-  line-height: unset;
-  color: unset;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
 }
 
 // picker {}
