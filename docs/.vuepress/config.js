@@ -56,13 +56,16 @@ module.exports = {
         link: '/variables/'
       },
       {
-        text: '前端',
-        items: [
-          {
-            text: '学习路径',
-            link: '/front-end/roadmap/',
-          }
-        ]
+        text: '重置样式',
+        link: '/normalize/'
+      },
+      {
+        text: '组件样式',
+        link: '/components/'
+      },
+      {
+        text: '类样式',
+        link: '/classes/'
       },
       {
         text: '主站',
@@ -79,7 +82,7 @@ module.exports = {
     lastUpdated: '上次更新',
     repo: 'ModyQyW/mp-scss',
     repoLabel: '查看源码',
-    docsDir: 'docs',
+    docsBranch: 'gh-pages',
     editLinks: true,
     editLinkText: '编辑此页面'
   },

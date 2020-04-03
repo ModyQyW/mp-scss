@@ -46,6 +46,8 @@ npm i @modyqyw/mp-scss
 
 ### 使用
 
+- 下面是简略版文档，[完整版文档](https://modyqyw.github.io/mp-scss/)另外部署。
+
 - 只支持 scss，没有计划支持 css，less 和 stylus。
 
 - 引入预设变量。之后你可以根据预设变量定制自己的样式。
