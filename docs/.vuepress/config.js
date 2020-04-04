@@ -52,6 +52,10 @@ module.exports = {
         link: '/',
       },
       {
+        text: '准备',
+        link: '/preparation/'
+      },
+      {
         text: '变量',
         link: '/variables/'
       },

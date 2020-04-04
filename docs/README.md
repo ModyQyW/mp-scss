@@ -2,8 +2,8 @@
 home: true
 heroText: '@modyqyw/mp-scss'
 tagline: 一个面向小程序的个人级 scss 样式库
-actionText: 快速上手 →
-actionLink: /variables/
+actionText: 准备 →
+actionLink: /preparation/
 features:
 - title: 变量
   details: 提供变量供你定制自己的小程序样式。

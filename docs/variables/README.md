@@ -2,9 +2,9 @@
 
 预设的变量供你定制样式。你也可以直接在小程序中单独使用。
 
-## 尺寸单位 dimension unit 和缩放 scale
+## 长度单位 dimension unit 和缩放 scale
 
-尺寸单位一律采用`rpx`，对标微信小程序和支付宝小程序标准。
+长度单位不使用`px`，`em`，`rem`等，而是使用`rpx`，对标微信小程序和支付宝小程序标准。
 
 ```scss
 $unit: rpx !default;
@@ -17,6 +17,8 @@ $scale: 2 !default;
 ```
 
 更多有关尺寸单位和缩放的说明，参考[微信小程序官方文档](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html)和[支付宝小程序官方文档](https://opendocs.alipay.com/mini/framework/acss)。
+
+具体代码见 [variables/_index.scss](https://github.com/ModyQyW/mp-scss/blob/master/variables/_index.scss)。
 
 ## 颜色 colors
 
@@ -355,6 +357,32 @@ $scale: 2 !default;
 |功能色|`$color-error-reverse`|`#d32029`<input type="color" disabled value="#d32029" />|×|由`$color-error`与`$color-bg-container-reverse`生成，暗黑模式下使用|
 |功能色|`$color-info-reverse`|`#177ddc`<input type="color" disabled value="#177ddc" />|×|由`$color-info`与`$color-bg-container-reverse`生成，暗黑模式下使用|
 
+除了直接使用的变量之外，还提供了两套主题的映射。
+
+浅色主题的映射有：
+
+- 色板色：`$palette-colors-light`
+- 功能色：`$m-functional-color-light`，增加了`transparent`
+- 文字色：`$m-text-color-light`
+- 背景色：`$m-background-color-light`
+- 边框色：`$m-border-color-light`
+
+暗黑主题的映射有：
+
+- 色板色：`$palette-colors-dark`
+- 功能色：`$m-functional-color-dark`，增加了`transparent`
+- 文字色：`$m-text-color-dark`
+- 背景色：`$m-background-color-dark`
+- 边框色：`$m-border-color-dark`
+
+具体代码见 [variables/colors](https://github.com/ModyQyW/mp-scss/tree/master/variables/colors)。
+
+### 什么时候会提供可直接使用的变量
+
+可直接使用的变量往往能免去开发者只能使用映射时的不方便，如颜色、比例、长度等。
+
+映射一般都会提供。
+
 ## 比例 ratio
 
 内置一些常用的比例，免去自己算一算的烦恼。
@@ -403,6 +431,10 @@ $scale: 2 !default;
 |`$ratio-half`|50%|
 |`$ratio-full`|100%|
 
+除了直接使用的变量之外，还提供了一个映射，包含了以上所有变量。
+
+具体代码见 [variables/ratio](https://github.com/ModyQyW/mp-scss/tree/master/variables/ratio/_index.scss)。
+
 ## 长度 length
 
 内置一些常用的处理过的长度，免去自己算一算的烦恼。
@@ -422,17 +454,47 @@ $length-3: 3 * $scale + $unit;
 $length-1024: 1024 * $scale + $unit;
 ```
 
-注意：没有`$length-0`。
+**注意**：没有`$length-0`，也没有提供映射。
 
-注意：`$length-1-real-reverse`和`$length-1-real`的数值不会受`$scale`影响。
+**注意**：`$length-1-real-reverse`和`$length-1-real`的数值不会受`$scale`影响。
 
-## 尺寸 sizing 与间距 spacing
+具体代码见 [variables/length](https://github.com/ModyQyW/mp-scss/tree/master/variables/length/_index.scss)。
 
-尺寸和间距提供的都是基于长度进行封装的映射。一般来说，无需改动。
+## 尺寸 sizing
 
-尺寸用于 width 和 height。间距用于 padding 和 margin。
+尺寸只提供了基于长度进行封装的、用于 width 和 height 的映射`$m-sizing`。
+
+具体代码见 [variables/sizing](https://github.com/ModyQyW/mp-scss/tree/master/variables/sizing/_index.scss)。
+
+## 间距 spacing
+
+间距只提供了基于长度进行封装的、用于 width 和 height 的映射`$m-spacing`。
+
+具体代码见 [variables/spacing](https://github.com/ModyQyW/mp-scss/tree/master/variables/spacing/_index.scss)。
 
 ## 定位 positioning
+
+定位提供了多个映射，没有提供可直接使用的变量。
+
+具体代码见 [variables/positioning](https://github.com/ModyQyW/mp-scss/tree/master/variables/positioning/_index.scss)。
+
+### 属性`position`
+
+`$m-position`包含了常用的四个定位属性：`relative`，`absolute`，`fixed`和`static`。
+
+`$m-position-value`包含了两个值：`0`和`auto`。
+
+具体代码见 [variables/positioning/position](https://github.com/ModyQyW/mp-scss/tree/master/variables/positioning/_position.scss)。
+
+### 属性`z-index`
+
+`$m-z-index`包含了多个值：`0`，`10`，`20`，`30`，`40`，`50`，`60`，`70`，`80`，`90`，`100`，`120`，`140`，`160`，`180`，`200`，`220`，`240`，`auto`，`default`。
+
+具体代码见 [variables/positioning/z-index](https://github.com/ModyQyW/mp-scss/tree/master/variables/positioning/_z-index.scss)。
+
+### 属性`box-sizing`
+
+`$m-box-sizing`包含了两个值：`content`（对应`content-box`）和`border`（对应`border-box`）。
 
 ## 盒模型 box-model
 
