@@ -9,7 +9,7 @@
     "build": "sass _index.scss index.css --style=compressed --no-source-map",
     "dev:docs": "vuepress dev docs",
     "build:docs": "vuepress build docs",
-    "deploy": "sh deploy.sh"
+    "deploy:docs": "sh deploy.sh"
   },
   "publishConfig": {
     "access": "public"
