@@ -182,12 +182,12 @@ $color-main-reverse: rgba(255, 255, 255, .65) !default;
 $color-secondary-reverse: rgba(255, 255, 255, .45) !default;
 $color-disabled-reverse: rgba(255, 255, 255, .3) !default;
 // 背景色
-$color-bg-container: $gray-1 !default;
+$color-bg-container: $gray-1;
 $color-bg-default: rgba(0, 0, 0, .04) !default;
 $color-bg-mask: rgba(0, 0, 0, .45) !default;
 $color-bg-shadow: rgba(0, 0, 0, .45) !default;
 $color-bg-divider: rgba(0, 0, 0, .06) !default;
-$color-bg-container-reverse: $gray-12 !default;
+$color-bg-container-reverse: $gray-12;
 $color-bg-default-reverse: rgba(255, 255, 255, .08) !default;
 $color-bg-mask-reverse: rgba(255, 255, 255, .55) !default;
 $color-bg-shadow-reverse: rgba(255, 255, 255, .55) !default;
