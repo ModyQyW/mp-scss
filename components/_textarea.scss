@@ -1,0 +1,44 @@
+.wrapper-textarea {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: $length-72;
+  min-height: $length-36;
+  border-style: solid;
+  border-width: $length-1;
+  border-radius: $length-4;
+
+  &,
+  .light & {
+    color: $color-main;
+  }
+
+  .dark & {
+    color: $color-main-reverse;
+  }
+}
+
+.textarea {
+  position: relative;
+  box-sizing: border-box;
+  flex: auto;
+  min-height: $length-80;
+  padding: $length-4;
+}
+
+.textarea-placeholder {
+  margin: 0;
+  font-weight: inherit;
+
+  &,
+  .light & {
+    color: $color-secondary;
+  }
+
+  .dark & {
+    color: $color-secondary-reverse;
+  }
+}
