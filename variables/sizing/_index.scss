@@ -1,7 +1,7 @@
 /* width 和 height */
 $m-sizing: (
   "0": 0,
-  "1-real": 1 + $unit,
+  "1-real": $length-1-real,
   "1": $length-1,
   "2": $length-2,
   "4": $length-4,

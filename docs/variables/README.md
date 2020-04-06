@@ -1,6 +1,6 @@
 # 变量
 
-预设的变量供你定制样式。你也可以直接在小程序中单独使用。
+你可以在这里查看预设的变量。它们供你定制样式，也供你直接在小程序中单独使用。
 
 ## 长度单位 dimension unit 和缩放 scale
 
@@ -22,9 +22,7 @@ $scale: 2 !default;
 
 ## 颜色 colors
 
-主要跟随 Ant Design 的[颜色设计](https://ant.design/docs/spec/colors-cn)和[暗黑模式](https://ant.design/docs/spec/dark-cn)，另外自己补充了一点颜色。
-
-为了方便查询，下面直接列写预设的颜色。具体生成方式可参见代码。
+内置 Ant Design 的颜色（主要参考[颜色设计](https://ant.design/docs/spec/colors-cn)和[暗黑模式](https://ant.design/docs/spec/dark-cn)）。详细的变量名和变量值的对应可参考下表。
 
 |分类|变量名|变量值|是否可覆盖|备注|
 |:-:|:-:|:-:|:-:|---|
@@ -357,12 +355,12 @@ $scale: 2 !default;
 |功能色|`$color-error-reverse`|`#d32029`<input type="color" disabled value="#d32029" />|×|由`$color-error`与`$color-bg-container-reverse`生成，暗黑模式下使用|
 |功能色|`$color-info-reverse`|`#177ddc`<input type="color" disabled value="#177ddc" />|×|由`$color-info`与`$color-bg-container-reverse`生成，暗黑模式下使用|
 
-除了直接使用的变量之外，还提供了两套主题的映射。
+除了以上列写的可直接使用的变量之外，还提供了两个主题映射，合起来包含了以上所有变量，变量名即为映射键，变量值即为映射值。
 
 浅色主题的映射有：
 
 - 色板色：`$palette-colors-light`
-- 功能色：`$m-functional-color-light`，增加了`transparent`
+- 功能色：`$m-functional-color-light`，增加了映射键和映射值均为`transparent`的键值对
 - 文字色：`$m-text-color-light`
 - 背景色：`$m-background-color-light`
 - 边框色：`$m-border-color-light`
@@ -370,7 +368,7 @@ $scale: 2 !default;
 暗黑主题的映射有：
 
 - 色板色：`$palette-colors-dark`
-- 功能色：`$m-functional-color-dark`，增加了`transparent`
+- 功能色：`$m-functional-color-dark`，增加了映射键和映射值均为`transparent`的键值对
 - 文字色：`$m-text-color-dark`
 - 背景色：`$m-background-color-dark`
 - 边框色：`$m-border-color-dark`
@@ -381,11 +379,11 @@ $scale: 2 !default;
 
 可直接使用的变量往往能免去开发者只能使用映射时的不方便，如颜色、比例、长度等。
 
-映射一般都会提供。
+映射一般都会提供，目的是遍历映射批量生成样式。
 
 ## 比例 ratio
 
-内置一些常用的比例，免去自己算一算的烦恼。
+内置一些常用的比例，免去自己算一算的烦恼。详细的变量名和变量值的对应可参考下表。
 
 |变量名|变量值|
 |:-:|:-:|
@@ -431,30 +429,32 @@ $scale: 2 !default;
 |`$ratio-half`|50%|
 |`$ratio-full`|100%|
 
-除了直接使用的变量之外，还提供了一个映射，包含了以上所有变量。
+除了以上列写的可直接使用的变量之外，还提供了一个映射`$m-ratio`，包含了以上所有变量，变量名即为映射键，变量值即为映射值。
 
 具体代码见 [variables/ratio](https://github.com/ModyQyW/mp-scss/tree/master/variables/ratio/_index.scss)。
 
 ## 长度 length
 
-内置一些常用的处理过的长度，免去自己算一算的烦恼。
+内置一些常用的处理过的长度，免去自己算一算的烦恼。详细的变量名和变量值的对应可参考下表。
 
-```scss
-$length-1024-reverse: -1024 * $scale + $unit;
-...
-$length-3-reverse: -3 * $scale + $unit;
-$length-2-reverse: -2 * $scale + $unit;
-$length-1-real-reverse: -1 + $unit;
-$length-1-reverse: -1 * $scale + $unit;
-$length-1: 1 * $scale + $unit;
-$length-1-real: 1 + $unit;
-$length-2: 2 * $scale + $unit;
-$length-3: 3 * $scale + $unit;
-...
-$length-1024: 1024 * $scale + $unit;
-```
+|变量名|变量值|
+|:-:|:-:|
+|`$length-1024-reverse`|`-1024 * $scale + $unit`|
+|...|...|
+|`$length-3-reverse`|`-3 * $scale + $unit`|
+|`$length-2-reverse`|`-2 * $scale + $unit`|
+|`$length-1-real-reverse`|`-1 + $unit`|
+|`$length-1-reverse`|`-3 * $scale + $unit`|
+|`$length-1`|`1 * $scale + $unit`|
+|`$length-1-real`|`1 + $unit`|
+|`$length-2`|`2 * $scale + $unit`|
+|`$length-3`|`3 * $scale + $unit`|
+|...|...|
+|`$length-1024`|`1024 * $scale + $unit`|
 
-**注意**：没有`$length-0`，也没有提供映射。
+**注意**：只提供了可直接使用的变量，没有提供映射。
+
+**注意**：没有提供变量`$length-0`。
 
 **注意**：`$length-1-real-reverse`和`$length-1-real`的数值不会受`$scale`影响。
 
@@ -462,7 +462,97 @@ $length-1024: 1024 * $scale + $unit;
 
 ## 尺寸 sizing
 
-尺寸只提供了基于长度进行封装的、用于 width 和 height 的映射`$m-sizing`。
+尺寸没有提供可直接使用的变量，只提供了基于长度进行封装的、用于 width 和 height 的映射`$m-sizing`，它的键值对可参考下表。
+
+|映射键|映射值|
+|:-:|:-:|
+|`0`|`0`|
+|`1-real`|`$length-1-real`|
+|`1`|`$length-1`|
+|`2`|`$length-2`|
+|`4`|`$length-4`|
+|`5`|`$length-5`|
+|`8`|`$length-8`|
+|`10`|`$length-10`|
+|`12`|`$length-12`|
+|`15`|`$length-15`|
+|`16`|`$length-16`|
+|`20`|`$length-20`|
+|`24`|`$length-24`|
+|`25`|`$length-25`|
+|`28`|`$length-28`|
+|`30`|`$length-30`|
+|`32`|`$length-32`|
+|`35`|`$length-35`|
+|`36`|`$length-36`|
+|`40`|`$length-40`|
+|`44`|`$length-44`|
+|`45`|`$length-45`|
+|`48`|`$length-48`|
+|`50`|`$length-50`|
+|`52`|`$length-52`|
+|`55`|`$length-55`|
+|`56`|`$length-56`|
+|`60`|`$length-60`|
+|`64`|`$length-64`|
+|`65`|`$length-65`|
+|`70`|`$length-70`|
+|`72`|`$length-72`|
+|`75`|`$length-75`|
+|`80`|`$length-80`|
+|`85`|`$length-85`|
+|`88`|`$length-88`|
+|`90`|`$length-90`|
+|`95`|`$length-95`|
+|`96`|`$length-96`|
+|`100`|`$length-100`|
+|`104`|`$length-104`|
+|`105`|`$length-105`|
+|`110`|`$length-110`|
+|`112`|`$length-112`|
+|`115`|`$length-115`|
+|`120`|`$length-120`|
+|`125`|`$length-125`|
+|`128`|`$length-128`|
+|`130`|`$length-130`|
+|`135`|`$length-135`|
+|`136`|`$length-136`|
+|`140`|`$length-140`|
+|`144`|`$length-144`|
+|`145`|`$length-145`|
+|`150`|`$length-150`|
+|`152`|`$length-152`|
+|`155`|`$length-155`|
+|`160`|`$length-160`|
+|`165`|`$length-165`|
+|`168`|`$length-168`|
+|`170`|`$length-170`|
+|`175`|`$length-175`|
+|`176`|`$length-176`|
+|`180`|`$length-180`|
+|`184`|`$length-184`|
+|`185`|`$length-185`|
+|`190`|`$length-190`|
+|`192`|`$length-192`|
+|`195`|`$length-195`|
+|`200`|`$length-200`|
+|`205`|`$length-205`|
+|`208`|`$length-208`|
+|`210`|`$length-210`|
+|`215`|`$length-215`|
+|`216`|`$length-216`|
+|`220`|`$length-220`|
+|`224`|`$length-224`|
+|`225`|`$length-225`|
+|`230`|`$length-230`|
+|`232`|`$length-232`|
+|`235`|`$length-235`|
+|`240`|`$length-240`|
+|`245`|`$length-245`|
+|`248`|`$length-248`|
+|`250`|`$length-250`|
+|`255`|`$length-255`|
+|`256`|`$length-256`|
 
 具体代码见 [variables/sizing](https://github.com/ModyQyW/mp-scss/tree/master/variables/sizing/_index.scss)。
 
@@ -478,11 +568,11 @@ $length-1024: 1024 * $scale + $unit;
 
 具体代码见 [variables/positioning](https://github.com/ModyQyW/mp-scss/tree/master/variables/positioning/_index.scss)。
 
-### 属性`position`
+### 属性`position`相关
 
 `$m-position`包含了常用的四个定位属性：`relative`，`absolute`，`fixed`和`static`。
 
-`$m-position-value`包含了两个值：`0`和`auto`。
+`$m-position-value`包含了 2 个值：`0`和`auto`。
 
 具体代码见 [variables/positioning/position](https://github.com/ModyQyW/mp-scss/tree/master/variables/positioning/_position.scss)。
 
@@ -494,12 +584,62 @@ $length-1024: 1024 * $scale + $unit;
 
 ### 属性`box-sizing`
 
-`$m-box-sizing`包含了两个值：`content`（对应`content-box`）和`border`（对应`border-box`）。
+`$m-box-sizing`包含了 2 个值：`content`（对应`content-box`）和`border`（对应`border-box`）。
 
 ## 盒模型 box-model
 
+### 属性`display`
+
+`$m-display`包含了 6 个值：`block`，`inline-block`，`inline`，`flex`，`inline-flex`，`none`。
+
+### 属性`flex`相关
+
+### 属性`overflow`相关
+
 ## 排版 typography
 
-## visual
+### 属性`font-family`
 
-## misc
+### 属性`font-size`
+
+### 属性`font-style`
+
+### 属性`font-weight`
+
+### 属性`font-variant`
+
+### 属性`line-height`
+
+### 属性`text-align`
+
+### 属性`text-decoration`
+
+### 属性`text-transform`
+
+### 属性`vertical-align`
+
+### 属性`visibility`
+
+### 属性`resize`
+
+## 视觉 visual
+
+### 属性`background-repeat`
+
+### 属性`background-attachment`
+
+### 属性`background-position`
+
+### 属性`background-size`
+
+### 属性`border-style`
+
+### 属性`border-width`
+
+### 属性`border-radius`
+
+## 杂项 misc
+
+### 属性`opactiy`
+
+`$m-opacity`包含了 5 个值：`0`（对应`0`），`25`（对应`.25`），`50`（对应`.5`），`75`（对应`.75`），`100`（对应`1`）。
