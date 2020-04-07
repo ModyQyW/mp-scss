@@ -959,6 +959,16 @@ $scale: 2 !default;
 
 ## 杂项 misc
 
-### 属性`opactiy`
+### 属性`opacity`
 
-`$m-opacity`包含了 5 个值：`0`（对应`0`），`25`（对应`.25`），`50`（对应`.5`），`75`（对应`.75`），`100`（对应`1`）。
+属性`opacity`没有提供可直接使用的变量，只提供了 1 个映射`$m-opacity`，键值对可参考下表。
+
+|映射键|映射值|
+|:-:|:-:|
+|`0`|`0`|
+|`25`|`.25`|
+|`50`|`.5`|
+|`75`|`.75`|
+|`100`|`1`|
+
+具体代码见 [variables/misc/opacity](https://github.com/ModyQyW/mp-scss/tree/master/variables/misc/_opacity.scss)。
