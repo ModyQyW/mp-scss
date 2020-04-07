@@ -14,4 +14,10 @@
 
 你需要着重掌握[变量 variables](https://sass-lang.com/documentation/variables)，[字符串 strings](https://sass-lang.com/documentation/values/strings)，[映射 maps](https://sass-lang.com/documentation/values/maps)，[颜色 color](https://sass-lang.com/documentation/modules/color)。这个库里大量地使用了与它们相关的知识。
 
-为什么不使用 mixin？mixin 在一定程度上加大了调试的负担，我想尽可能地避免使用 mixin。
+- [stylelint](https://stylelint.io/)
+
+我使用了 stylelint + [bootstrap 规范](https://github.com/twbs/stylelint-config-twbs-bootstrap)来检查代码。当然我在它的基础上做了些许改动。
+
+为什么不使用 mixin？mixin 在一定程度上加大了调试的负担，同时也会影响代码检查，我想尽可能地避免使用 mixin。
+
+或许你最初还会疑惑为什么我不打算做 css 和 less 的版本，一部分原因是我没有那么多的精力，另一部分则是 css 变量的支持在小程序上可能会出现问题，less 和 stylus 没有找到较好的现成的规则供我使用。

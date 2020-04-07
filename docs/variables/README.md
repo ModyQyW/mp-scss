@@ -741,37 +741,179 @@ $scale: 2 !default;
 
 ## 定位 positioning
 
-定位提供了多个映射，没有提供可直接使用的变量。
-
-具体代码见 [variables/positioning](https://github.com/ModyQyW/mp-scss/tree/master/variables/positioning/_index.scss)。
-
 ### 属性`position`相关
 
-`$m-position`包含了常用的四个定位属性：`relative`，`absolute`，`fixed`和`static`。
+属性`position`相关没有提供可直接使用的变量，只提供了 2 个映射。
 
-`$m-position-value`包含了 2 个值：`0`和`auto`。
+`$m-position`的键值对可参考下表。
+
+|映射键|映射值|
+|:-:|:-:|
+|`relative`|`relative`|
+|`absolute`|`absolute`|
+|`fixed`|`fixed`|
+|`static`|`static`|
+
+`$m-position-value`的键值对可参考下表。
+
+|映射键|映射值|
+|:-:|:-:|
+|`0`|`0`|
+|`auto`|`auto`|
 
 具体代码见 [variables/positioning/position](https://github.com/ModyQyW/mp-scss/tree/master/variables/positioning/_position.scss)。
 
 ### 属性`z-index`
 
-`$m-z-index`包含了多个值：`0`，`10`，`20`，`30`，`40`，`50`，`60`，`70`，`80`，`90`，`100`，`120`，`140`，`160`，`180`，`200`，`220`，`240`，`auto`，`default`。
+属性`z-index`没有提供可直接使用的变量，只提供了 1 个映射`$m-z-index`，键值对可参考下表。
+
+|映射键|映射值|
+|:-:|:-:|
+|`0`|`0`|
+|`10`|`10`|
+|`20`|`20`|
+|`30`|`30`|
+|`40`|`40`|
+|`50`|`50`|
+|`60`|`60`|
+|`70`|`70`|
+|`80`|`80`|
+|`90`|`90`|
+|`100`|`100`|
+|`120`|`120`|
+|`140`|`140`|
+|`160`|`160`|
+|`180`|`180`|
+|`200`|`200`|
+|`220`|`220`|
+|`240`|`240`|
+|`auto`|`auto`|
 
 具体代码见 [variables/positioning/z-index](https://github.com/ModyQyW/mp-scss/tree/master/variables/positioning/_z-index.scss)。
 
 ### 属性`box-sizing`
 
-`$m-box-sizing`包含了 2 个值：`content`（对应`content-box`）和`border`（对应`border-box`）。
+属性`box-sizing`没有提供可直接使用的变量，只提供了 1 个映射`$m-box-sizing`，键值对可参考下表。
+
+|映射键|映射值|
+|:-:|:-:|
+|`content`|`content-box`|
+|`border`|`border-box`|
+
+具体代码见 [variables/positioning/box-sizing](https://github.com/ModyQyW/mp-scss/tree/master/variables/positioning/_box-sizing.scss)。
 
 ## 盒模型 box-model
 
 ### 属性`display`
 
-`$m-display`包含了 6 个值：`block`，`inline-block`，`inline`，`flex`，`inline-flex`，`none`。
+属性`display`没有提供可直接使用的变量，只提供了 1 个映射`$m-display`，键值对可参考下表。
+
+|映射键|映射值|
+|:-:|:-:|
+|`block`|`block`|
+|`inline-block`|`inline-block`|
+|`inline`|`inline`|
+|`flex`|`flex`|
+|`inline-flex`|`inline-flex`|
+|`none`|`none`|
+
+具体代码见 [variables/box-model/display](https://github.com/ModyQyW/mp-scss/tree/master/variables/box-model/_display.scss)。
 
 ### 属性`flex`相关
 
-### 属性`overflow`相关
+属性`flex`相关没有提供可直接使用的变量，只提供了 8 个映射。
+
+`$m-flex`的键值对可参考下表。
+
+|映射键|映射值|
+|:-:|:-:|
+|`init`|`0 1 auto`|
+|`auto`|`1 1 auto`|
+|`none`|`0 0 auto`|
+
+`$m-flex-direction`的键值对可参考下表。
+
+|映射键|映射值|
+|:-:|:-:|
+|`row`|`row`|
+|`row-reverse`|`row-reverse`|
+|`col`|`column`|
+|`col-reverse`|`column-reverse`|
+
+`$m-flex-wrap`的键值对可参考下表。
+
+|映射键|映射值|
+|:-:|:-:|
+|`nowrap`|`nowrap`|
+|`wrap`|`warp`|
+|`wrap-reverse`|`wrap-reverse`|
+
+`$m-align-content`的键值对可参考下表。
+
+|映射键|映射值|
+|:-:|:-:|
+|`start`|`flex-start`|
+|`end`|`flex-end`|
+|`center`|`center`|
+|`between`|`space-between`|
+|`around`|`space-around`|
+|`evenly`|`space-evenly`|
+|`stretch`|`stretch`|
+
+`$m-align-items`的键值对可参考下表。
+
+|映射键|映射值|
+|:-:|:-:|
+|`start`|`flex-start`|
+|`end`|`flex-end`|
+|`center`|`center`|
+|`baseline`|`baseline`|
+|`stretch`|`stretch`|
+
+`$m-align-self`的键值对可参考下表。
+
+|映射键|映射值|
+|:-:|:-:|
+|`auto`|`auto`|
+|`start`|`start`|
+|`end`|`end`|
+|`center`|`center`|
+|`stretch`|`stretch`|
+
+`$m-justify-content`的键值对可参考下表。
+
+|映射键|映射值|
+|:-:|:-:|
+|`start`|`flex-start`|
+|`end`|`flex-end`|
+|`center`|`center`|
+|`between`|`space-between`|
+|`around`|`space-around`|
+|`evenly`|`space-evenly`|
+|`stretch`|`stretch`|
+
+`$m-order`的键值对可参考下表。
+
+|映射键|映射值|
+|:-:|:-:|
+|`init`|`0`|
+|`first`|`-9999`|
+|`last`|`9999`|
+
+具体代码见 [variables/box-model/flex](https://github.com/ModyQyW/mp-scss/tree/master/variables/box-model/_flex.scss)。
+
+### 属性`overflow`
+
+属性`overflow`没有提供可直接使用的变量，只提供了 1 个映射`$m-overflow`，键值对可参考下表。
+
+|映射键|映射值|
+|:-:|:-:|
+|`auto`|`auto`|
+|`hidden`|`hidden`|
+|`visible`|`visible`|
+|`scroll`|`scroll`|
+
+具体代码见 [variables/box-model/overflow](https://github.com/ModyQyW/mp-scss/tree/master/variables/box-model/_overflow.scss)。
 
 ## 排版 typography
 
