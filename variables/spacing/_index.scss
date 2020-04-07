@@ -1,10 +1,10 @@
 /* padding 和 margin */
 $m-spacing: (
   "0": 0,
-  "1": $length-1,
-  "1-reverse": $length-1-reverse,
   "1-real": 1 + $unit,
   "1-real-reverse": -1 + $unit,
+  "1": $length-1,
+  "1-reverse": $length-1-reverse,
   "2": $length-2,
   "2-reverse": $length-2-reverse,
   "4": $length-4,
