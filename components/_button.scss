@@ -15,7 +15,7 @@
   height: auto;
   min-height: 72rpx;
   padding: 8rpx 32rpx;
-  margin: 0 auto;
+  margin: 0;
   overflow: hidden;
   font-family: unset;
   font-size: $font-size-base;
@@ -33,14 +33,6 @@
     border-color: $gray-2 !important;
   }
 
-  &.btn-dotted {
-    border-style: dotted;
-  }
-
-  &.btn-dashed {
-    border-style: dashed;
-  }
-
   &::after {
     display: none;
   }
@@ -53,14 +45,16 @@ $m-btn: (
     border-color-light: $color-border-default,
     ghost-color-light: $gray-1,
     ghost-border-color-light: $gray-1,
-    ghost-active-color-light: $color-primary,
+    ghost-active-color-light: $gray-1,
+    ghost-active-background-color-light: $color-primary,
     ghost-active-border-color-light: $color-primary,
     color-dark: $color-main-reverse,
     background-color-dark: $color-bg-default-reverse,
     border-color-dark: $color-border-default-reverse,
     ghost-color-dark: $gray-1,
     ghost-border-color-dark: $gray-1,
-    ghost-active-color-dark: $color-primary-reverse,
+    ghost-active-color-dark: $gray-1,
+    ghost-active-background-color-dark: $color-primary-reverse,
     ghost-active-border-color-dark: $color-primary-reverse
   ),
   "-primary": (
@@ -69,15 +63,17 @@ $m-btn: (
     border-color-light: $color-primary,
     ghost-color-light: $color-primary,
     ghost-border-color-light: $color-primary,
-    ghost-active-color-light: f-get-color($color-primary, 7),
-    ghost-active-border-color-light: f-get-color($color-primary, 7),
-    color-dark: mix($gray-1, $gray-12, 85%),
+    ghost-active-color-light: $gray-1,
+    ghost-active-background-color-light: $color-primary,
+    ghost-active-border-color-light: $color-primary,
+    color-dark: mix($gray-1, $color-bg-container-reverse, 85%),
     background-color-dark: $color-primary-reverse,
     border-color-dark: $color-primary-reverse,
     ghost-color-dark: $color-primary-reverse,
     ghost-border-color-dark: $color-primary-reverse,
-    ghost-active-color-dark: f-get-color($color-primary-reverse, 7),
-    ghost-active-border-color-dark: f-get-color($color-primary-reverse, 7)
+    ghost-active-color-dark: mix($gray-1, $color-bg-container-reverse, 85%),
+    ghost-active-background-color-dark: $color-primary-reverse,
+    ghost-active-border-color-dark: $color-primary-reverse
   ),
   "-success": (
     color-light: $gray-1,
@@ -85,15 +81,17 @@ $m-btn: (
     border-color-light: $color-success,
     ghost-color-light: $color-success,
     ghost-border-color-light: $color-success,
-    ghost-active-color-light: f-get-color($color-success, 7),
-    ghost-active-border-color-light: f-get-color($color-success, 7),
-    color-dark: mix($gray-1, $gray-12, 85%),
+    ghost-active-color-light: $gray-1,
+    ghost-active-background-color-light: $color-success,
+    ghost-active-border-color-light: $color-success,
+    color-dark: mix($gray-1, $color-bg-container-reverse, 85%),
     background-color-dark: $color-success-reverse,
     border-color-dark: $color-success-reverse,
     ghost-color-dark: $color-success-reverse,
     ghost-border-color-dark: $color-success-reverse,
-    ghost-active-color-dark: f-get-color($color-success-reverse, 7),
-    ghost-active-border-color-dark: f-get-color($color-success-reverse, 7)
+    ghost-active-color-dark: mix($gray-1, $color-bg-container-reverse, 85%),
+    ghost-active-background-color-dark: $color-success-reverse,
+    ghost-active-border-color-dark: $color-success-reverse
   ),
   "-error": (
     color-light: $gray-1,
@@ -101,15 +99,17 @@ $m-btn: (
     border-color-light: $color-error,
     ghost-color-light: $color-error,
     ghost-border-color-light: $color-error,
-    ghost-active-color-light: f-get-color($color-error, 7),
-    ghost-active-border-color-light: f-get-color($color-error, 7),
-    color-dark: mix($gray-1, $gray-12, 85%),
+    ghost-active-color-light: $gray-1,
+    ghost-active-background-color-light: $color-error,
+    ghost-active-border-color-light: $color-error,
+    color-dark: mix($gray-1, $color-bg-container-reverse, 85%),
     background-color-dark: $color-error-reverse,
     border-color-dark: $color-error-reverse,
     ghost-color-dark: $color-error-reverse,
     ghost-border-color-dark: $color-error-reverse,
-    ghost-active-color-dark: f-get-color($color-error-reverse, 7),
-    ghost-active-border-color-dark: f-get-color($color-error-reverse, 7)
+    ghost-active-color-dark: mix($gray-1, $color-bg-container-reverse, 85%),
+    ghost-active-background-color-dark: $color-error-reverse,
+    ghost-active-border-color-dark: $color-error-reverse
   ),
   "-warning": (
     color-light: $gray-1,
@@ -117,15 +117,17 @@ $m-btn: (
     border-color-light: $color-warning,
     ghost-color-light: $color-warning,
     ghost-border-color-light: $color-warning,
-    ghost-active-color-light: f-get-color($color-warning, 7),
-    ghost-active-border-color-light: f-get-color($color-warning, 7),
-    color-dark: mix($gray-1, $gray-12, 85%),
+    ghost-active-color-light: $gray-1,
+    ghost-active-background-color-light: $color-warning,
+    ghost-active-border-color-light: $color-warning,
+    color-dark: mix($gray-1, $color-bg-container-reverse, 85%),
     background-color-dark: $color-warning-reverse,
     border-color-dark: $color-warning-reverse,
     ghost-color-dark: $color-warning-reverse,
     ghost-border-color-dark: $color-warning-reverse,
-    ghost-active-color-dark: f-get-color($color-warning-reverse, 7),
-    ghost-active-border-color-dark: f-get-color($color-warning-reverse, 7)
+    ghost-active-color-dark: mix($gray-1, $color-bg-container-reverse, 85%),
+    ghost-active-background-color-dark: $color-warning-reverse,
+    ghost-active-border-color-dark: $color-warning-reverse
   ),
   "-info": (
     color-light: $gray-1,
@@ -133,15 +135,17 @@ $m-btn: (
     border-color-light: $color-info,
     ghost-color-light: $color-info,
     ghost-border-color-light: $color-info,
-    ghost-active-color-light: f-get-color($color-info, 7),
-    ghost-active-border-color-light: f-get-color($color-info, 7),
-    color-dark: mix($gray-1, $gray-12, 85%),
+    ghost-active-color-light: $gray-1,
+    ghost-active-background-color-light: $color-info,
+    ghost-active-border-color-light: $color-info,
+    color-dark: mix($gray-1, $color-bg-container-reverse, 85%),
     background-color-dark: $color-info-reverse,
     border-color-dark: $color-info-reverse,
     ghost-color-dark: $color-info-reverse,
     ghost-border-color-dark: $color-info-reverse,
-    ghost-active-color-dark: f-get-color($color-info-reverse, 7),
-    ghost-active-border-color-dark: f-get-color($color-info-reverse, 7)
+    ghost-active-color-dark: mix($gray-1, $color-bg-container-reverse, 85%),
+    ghost-active-background-color-dark: $color-info-reverse,
+    ghost-active-border-color-dark: $color-info-reverse
   )
 );
 
@@ -164,6 +168,7 @@ $m-btn: (
 
       &:active {
         color: map-get($val, "ghost-active-color-light");
+        background-color: map-get($val, "ghost-active-background-color-light");
         border-color: map-get($val, "ghost-active-border-color-light");
       }
     }
@@ -186,8 +191,21 @@ $m-btn: (
 
       &:active {
         color: map-get($val, "ghost-active-color-dark");
+        background-color: map-get($val, "ghost-active-background-color-dark");
         border-color: map-get($val, "ghost-active-border-color-dark");
       }
     }
   }
+}
+
+.btn-solid {
+  border-style: solid;
+}
+
+.btn-dotted {
+  border-style: dotted;
+}
+
+.btn-dashed {
+  border-style: dashed;
 }
