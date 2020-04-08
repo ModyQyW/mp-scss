@@ -1,9 +1,5 @@
 @each $key, $val in $m-resize {
-  .resize-#{$val} {
+  .resize#{$val} {
     resize: $val;
   }
-}
-
-.resize {
-  resize: both;
 }
