@@ -1,31 +1,31 @@
 @each $key, $val in $m-spacing {
-  .p-#{$key} {
+  .p#{$key} {
     padding: $val;
   }
 
-  .p-y-#{$key} {
+  .p-y#{$key} {
     padding-top: $val;
     padding-bottom: $val;
   }
 
-  .p-t-#{$key} {
+  .p-t#{$key} {
     padding-top: $val;
   }
 
-  .p-b-#{$key} {
+  .p-b#{$key} {
     padding-bottom: $val;
   }
 
-  .p-x-#{$key} {
+  .p-x#{$key} {
     padding-right: $val;
     padding-left: $val;
   }
 
-  .p-r-#{$key} {
+  .p-r#{$key} {
     padding-right: $val;
   }
 
-  .p-l-#{$key} {
+  .p-l#{$key} {
     padding-left: $val;
   }
 }
