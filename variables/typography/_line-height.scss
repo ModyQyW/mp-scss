@@ -5,6 +5,8 @@ $line-height-benchmark: 22 !default;
 // 基准行距
 $line-height-base: $line-height-benchmark * $scale + $unit;
 // s - sub
+$line-height-s-10: ($line-height-benchmark - 10) * $scale + $unit;
+$line-height-s-9: ($line-height-benchmark - 9) * $scale + $unit;
 $line-height-s-8: ($line-height-benchmark - 8) * $scale + $unit;
 $line-height-s-7: ($line-height-benchmark - 7) * $scale + $unit;
 $line-height-s-6: ($line-height-benchmark - 6) * $scale + $unit;
