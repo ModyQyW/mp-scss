@@ -1,17 +1,13 @@
 @each $key, $val in $m-sizing {
-  .w-#{$key} {
+  .w#{$key} {
     width: $val;
   }
 }
 
 @each $key, $val in $m-ratio {
-  .w-#{$key} {
+  .w#{$key} {
     width: $val;
   }
-}
-
-.w-auto {
-  width: auto;
 }
 
 .w-screen {

@@ -1,11 +1,7 @@
 @each $key, $val in $m-sizing {
-  .min-w-#{$key} {
+  .min-w#{$key} {
     min-width: $val;
   }
-}
-
-.min-w-0 {
-  min-width: 0;
 }
 
 .min-w-half {

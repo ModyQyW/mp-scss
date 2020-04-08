@@ -1,11 +1,7 @@
 @each $key, $val in $m-sizing {
-  .min-h-#{$key} {
+  .min-h#{$key} {
     min-height: $val;
   }
-}
-
-.min-h-0 {
-  min-height: 0;
 }
 
 .min-h-half {

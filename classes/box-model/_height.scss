@@ -1,17 +1,13 @@
 @each $key, $val in $m-sizing {
-  .h-#{$key} {
+  .h#{$key} {
     height: $val;
   }
 }
 
 @each $key, $val in $m-ratio {
-  .h-#{$key} {
+  .h#{$key} {
     height: $val;
   }
-}
-
-.h-auto {
-  height: auto;
 }
 
 .h-screen {
