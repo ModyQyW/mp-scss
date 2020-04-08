@@ -1,9 +1,15 @@
 .btn,
+.btn-ghost,
 .btn-primary,
+.btn-primary-ghost,
 .btn-success,
+.btn-success-ghost,
 .btn-warning,
+.btn-warning-ghost,
 .btn-error,
-.btn-info {
+.btn-error-ghost,
+.btn-info,
+.btn-info-ghost {
   position: relative;
   box-sizing: border-box;
   display: inline-flex;
@@ -38,166 +44,6 @@
   }
 }
 
-$m-btn: (
-  "": (
-    color-light: $color-main,
-    background-color-light: $color-bg-default,
-    border-color-light: $color-border-default,
-    ghost-color-light: $gray-1,
-    ghost-border-color-light: $gray-1,
-    ghost-active-color-light: $gray-1,
-    ghost-active-background-color-light: $color-primary,
-    ghost-active-border-color-light: $color-primary,
-    color-dark: $color-main-reverse,
-    background-color-dark: $color-bg-default-reverse,
-    border-color-dark: $color-border-default-reverse,
-    ghost-color-dark: $gray-1,
-    ghost-border-color-dark: $gray-1,
-    ghost-active-color-dark: $gray-1,
-    ghost-active-background-color-dark: $color-primary-reverse,
-    ghost-active-border-color-dark: $color-primary-reverse
-  ),
-  "-primary": (
-    color-light: $gray-1,
-    background-color-light: $color-primary,
-    border-color-light: $color-primary,
-    ghost-color-light: $color-primary,
-    ghost-border-color-light: $color-primary,
-    ghost-active-color-light: $gray-1,
-    ghost-active-background-color-light: $color-primary,
-    ghost-active-border-color-light: $color-primary,
-    color-dark: mix($gray-1, $color-bg-container-reverse, 85%),
-    background-color-dark: $color-primary-reverse,
-    border-color-dark: $color-primary-reverse,
-    ghost-color-dark: $color-primary-reverse,
-    ghost-border-color-dark: $color-primary-reverse,
-    ghost-active-color-dark: mix($gray-1, $color-bg-container-reverse, 85%),
-    ghost-active-background-color-dark: $color-primary-reverse,
-    ghost-active-border-color-dark: $color-primary-reverse
-  ),
-  "-success": (
-    color-light: $gray-1,
-    background-color-light: $color-success,
-    border-color-light: $color-success,
-    ghost-color-light: $color-success,
-    ghost-border-color-light: $color-success,
-    ghost-active-color-light: $gray-1,
-    ghost-active-background-color-light: $color-success,
-    ghost-active-border-color-light: $color-success,
-    color-dark: mix($gray-1, $color-bg-container-reverse, 85%),
-    background-color-dark: $color-success-reverse,
-    border-color-dark: $color-success-reverse,
-    ghost-color-dark: $color-success-reverse,
-    ghost-border-color-dark: $color-success-reverse,
-    ghost-active-color-dark: mix($gray-1, $color-bg-container-reverse, 85%),
-    ghost-active-background-color-dark: $color-success-reverse,
-    ghost-active-border-color-dark: $color-success-reverse
-  ),
-  "-error": (
-    color-light: $gray-1,
-    background-color-light: $color-error,
-    border-color-light: $color-error,
-    ghost-color-light: $color-error,
-    ghost-border-color-light: $color-error,
-    ghost-active-color-light: $gray-1,
-    ghost-active-background-color-light: $color-error,
-    ghost-active-border-color-light: $color-error,
-    color-dark: mix($gray-1, $color-bg-container-reverse, 85%),
-    background-color-dark: $color-error-reverse,
-    border-color-dark: $color-error-reverse,
-    ghost-color-dark: $color-error-reverse,
-    ghost-border-color-dark: $color-error-reverse,
-    ghost-active-color-dark: mix($gray-1, $color-bg-container-reverse, 85%),
-    ghost-active-background-color-dark: $color-error-reverse,
-    ghost-active-border-color-dark: $color-error-reverse
-  ),
-  "-warning": (
-    color-light: $gray-1,
-    background-color-light: $color-warning,
-    border-color-light: $color-warning,
-    ghost-color-light: $color-warning,
-    ghost-border-color-light: $color-warning,
-    ghost-active-color-light: $gray-1,
-    ghost-active-background-color-light: $color-warning,
-    ghost-active-border-color-light: $color-warning,
-    color-dark: mix($gray-1, $color-bg-container-reverse, 85%),
-    background-color-dark: $color-warning-reverse,
-    border-color-dark: $color-warning-reverse,
-    ghost-color-dark: $color-warning-reverse,
-    ghost-border-color-dark: $color-warning-reverse,
-    ghost-active-color-dark: mix($gray-1, $color-bg-container-reverse, 85%),
-    ghost-active-background-color-dark: $color-warning-reverse,
-    ghost-active-border-color-dark: $color-warning-reverse
-  ),
-  "-info": (
-    color-light: $gray-1,
-    background-color-light: $color-info,
-    border-color-light: $color-info,
-    ghost-color-light: $color-info,
-    ghost-border-color-light: $color-info,
-    ghost-active-color-light: $gray-1,
-    ghost-active-background-color-light: $color-info,
-    ghost-active-border-color-light: $color-info,
-    color-dark: mix($gray-1, $color-bg-container-reverse, 85%),
-    background-color-dark: $color-info-reverse,
-    border-color-dark: $color-info-reverse,
-    ghost-color-dark: $color-info-reverse,
-    ghost-border-color-dark: $color-info-reverse,
-    ghost-active-color-dark: mix($gray-1, $color-bg-container-reverse, 85%),
-    ghost-active-background-color-dark: $color-info-reverse,
-    ghost-active-border-color-dark: $color-info-reverse
-  )
-);
-
-@each $key, $val in $m-btn {
-  .btn#{$key},
-  .light .btn#{$key} {
-    color: map-get($val, "color-light");
-    background-color: map-get($val, "background-color-light");
-    border-color: map-get($val, "border-color-light");
-
-    &:active {
-      background-color: f-get-color(map-get($val, "background-color-light"), 7);
-      border-color: f-get-color(map-get($val, "border-color-light"), 7);
-    }
-
-    &.btn-ghost {
-      color: map-get($val, "ghost-color-light");
-      background-color: transparent;
-      border-color: map-get($val, "ghost-border-color-light");
-
-      &:active {
-        color: map-get($val, "ghost-active-color-light");
-        background-color: map-get($val, "ghost-active-background-color-light");
-        border-color: map-get($val, "ghost-active-border-color-light");
-      }
-    }
-  }
-
-  .dark .btn#{$key} {
-    color: map-get($val, "color-dark");
-    background-color: map-get($val, "background-color-dark");
-    border-color: map-get($val, "border-color-dark");
-
-    &:active {
-      background-color: f-get-color(map-get($val, "background-color-dark"), 7);
-      border-color: f-get-color(map-get($val, "border-color-dark"), 7);
-    }
-
-    &.btn-ghost {
-      color: map-get($val, "ghost-color-dark");
-      background-color: transparent;
-      border-color: map-get($val, "ghost-border-color-dark");
-
-      &:active {
-        color: map-get($val, "ghost-active-color-dark");
-        background-color: map-get($val, "ghost-active-background-color-dark");
-        border-color: map-get($val, "ghost-active-border-color-dark");
-      }
-    }
-  }
-}
-
 .btn-solid {
   border-style: solid;
 }
@@ -208,4 +54,202 @@ $m-btn: (
 
 .btn-dashed {
   border-style: dashed;
+}
+
+$m-btn: (
+  "": (
+    "color-light": $color-main,
+    "color-bg-light": $color-bg-default,
+    "color-border-light": $color-border-default,
+    "color-light-active": $color-main,
+    "color-bg-light-active": f-get-color($color-bg-default, 7),
+    "color-border-light-active": f-get-color($color-border-default, 7),
+    "color-dark": $color-main-reverse,
+    "color-bg-dark": $color-bg-default-reverse,
+    "color-border-dark": $color-border-default-reverse,
+    "color-dark-active": $color-main-reverse,
+    "color-bg-dark-active": f-get-color($color-bg-default-reverse, 7),
+    "color-border-dark-active": f-get-color($color-border-default-reverse, 7)
+  ),
+  "-ghost": (
+    "color-light": $gray-1,
+    "color-bg-light": transparent,
+    "color-border-light": $gray-1,
+    "color-light-active": $gray-1,
+    "color-bg-light-active": $color-primary,
+    "color-border-light-active": $color-primary,
+    "color-dark": $gray-1,
+    "color-bg-dark": transparent,
+    "color-border-dark": $gray-1,
+    "color-dark-active": $gray-1,
+    "color-bg-dark-active": $color-primary-reverse,
+    "color-border-dark-active": $color-primary-reverse,
+  ),
+  "-primary": (
+    "color-light": $gray-1,
+    "color-bg-light": $color-primary,
+    "color-border-light": $color-primary,
+    "color-light-active": $gray-1,
+    "color-bg-light-active": f-get-color($color-primary, 7),
+    "color-border-light-active": f-get-color($color-primary, 7),
+    "color-dark": mix($gray-1, $color-bg-container-reverse, 85%),
+    "color-bg-dark": $color-primary-reverse,
+    "color-border-dark": $color-primary-reverse,
+    "color-dark-active": mix($gray-1, $color-bg-container-reverse, 85%),
+    "color-bg-dark-active": f-get-color($color-primary-reverse, 7),
+    "color-border-dark-active": f-get-color($color-primary-reverse, 7)
+  ),
+  "-primary-ghost": (
+    "color-light": $color-primary,
+    "color-bg-light": transparent,
+    "color-border-light": $color-primary,
+    "color-light-active": $gray-1,
+    "color-bg-light-active": $color-primary,
+    "color-border-light-active": $color-primary,
+    "color-dark": $color-primary-reverse,
+    "color-bg-dark": transparent,
+    "color-border-dark": $color-primary-reverse,
+    "color-dark-active": mix($gray-1, $color-bg-container-reverse, 85%),
+    "color-bg-dark-active": $color-primary-reverse,
+    "color-border-dark-active": $color-primary-reverse
+  ),
+  "-success": (
+    "color-light": $gray-1,
+    "color-bg-light": $color-success,
+    "color-border-light": $color-success,
+    "color-light-active": $gray-1,
+    "color-bg-light-active": f-get-color($color-success, 7),
+    "color-border-light-active": f-get-color($color-success, 7),
+    "color-dark": mix($gray-1, $color-bg-container-reverse, 85%),
+    "color-bg-dark": $color-success-reverse,
+    "color-border-dark": $color-success-reverse,
+    "color-dark-active": mix($gray-1, $color-bg-container-reverse, 85%),
+    "color-bg-dark-active": f-get-color($color-success-reverse, 7),
+    "color-border-dark-active": f-get-color($color-success-reverse, 7)
+  ),
+  "-success-ghost": (
+    "color-light": $color-success,
+    "color-bg-light": transparent,
+    "color-border-light": $color-success,
+    "color-light-active": $gray-1,
+    "color-bg-light-active": $color-success,
+    "color-border-light-active": $color-success,
+    "color-dark": $color-success-reverse,
+    "color-bg-dark": transparent,
+    "color-border-dark": $color-success-reverse,
+    "color-dark-active": mix($gray-1, $color-bg-container-reverse, 85%),
+    "color-bg-dark-active": $color-success-reverse,
+    "color-border-dark-active": $color-success-reverse
+  ),
+  "-error": (
+    "color-light": $gray-1,
+    "color-bg-light": $color-error,
+    "color-border-light": $color-error,
+    "color-light-active": $gray-1,
+    "color-bg-light-active": f-get-color($color-error, 7),
+    "color-border-light-active": f-get-color($color-error, 7),
+    "color-dark": mix($gray-1, $color-bg-container-reverse, 85%),
+    "color-bg-dark": $color-error-reverse,
+    "color-border-dark": $color-error-reverse,
+    "color-dark-active": mix($gray-1, $color-bg-container-reverse, 85%),
+    "color-bg-dark-active": f-get-color($color-error-reverse, 7),
+    "color-border-dark-active": f-get-color($color-error-reverse, 7)
+  ),
+  "-error-ghost": (
+    "color-light": $color-error,
+    "color-bg-light": transparent,
+    "color-border-light": $color-error,
+    "color-light-active": $gray-1,
+    "color-bg-light-active": $color-error,
+    "color-border-light-active": $color-error,
+    "color-dark": $color-error-reverse,
+    "color-bg-dark": transparent,
+    "color-border-dark": $color-error-reverse,
+    "color-dark-active": mix($gray-1, $color-bg-container-reverse, 85%),
+    "color-bg-dark-active": $color-error-reverse,
+    "color-border-dark-active": $color-error-reverse
+  ),
+  "-warning": (
+    "color-light": $gray-1,
+    "color-bg-light": $color-warning,
+    "color-border-light": $color-warning,
+    "color-light-active": $gray-1,
+    "color-bg-light-active": f-get-color($color-warning, 7),
+    "color-border-light-active": f-get-color($color-warning, 7),
+    "color-dark": mix($gray-1, $color-bg-container-reverse, 85%),
+    "color-bg-dark": $color-warning-reverse,
+    "color-border-dark": $color-warning-reverse,
+    "color-dark-active": mix($gray-1, $color-bg-container-reverse, 85%),
+    "color-bg-dark-active": f-get-color($color-warning-reverse, 7),
+    "color-border-dark-active": f-get-color($color-warning-reverse, 7)
+  ),
+  "-warning-ghost": (
+    "color-light": $color-warning,
+    "color-bg-light": transparent,
+    "color-border-light": $color-warning,
+    "color-light-active": $gray-1,
+    "color-bg-light-active": $color-warning,
+    "color-border-light-active": $color-warning,
+    "color-dark": $color-warning-reverse,
+    "color-bg-dark": transparent,
+    "color-border-dark": $color-warning-reverse,
+    "color-dark-active": mix($gray-1, $color-bg-container-reverse, 85%),
+    "color-bg-dark-active": $color-warning-reverse,
+    "color-border-dark-active": $color-warning-reverse
+  ),
+  "-info": (
+    "color-light": $gray-1,
+    "color-bg-light": $color-info,
+    "color-border-light": $color-info,
+    "color-light-active": $gray-1,
+    "color-bg-light-active": f-get-color($color-info, 7),
+    "color-border-light-active": f-get-color($color-info, 7),
+    "color-dark": mix($gray-1, $color-bg-container-reverse, 85%),
+    "color-bg-dark": $color-info-reverse,
+    "color-border-dark": $color-info-reverse,
+    "color-dark-active": mix($gray-1, $color-bg-container-reverse, 85%),
+    "color-bg-dark-active": f-get-color($color-info-reverse, 7),
+    "color-border-dark-active": f-get-color($color-info-reverse, 7)
+  ),
+  "-info-ghost": (
+    "color-light": $color-info,
+    "color-bg-light": transparent,
+    "color-border-light": $color-info,
+    "color-light-active": $gray-1,
+    "color-bg-light-active": $color-info,
+    "color-border-light-active": $color-info,
+    "color-dark": $color-info-reverse,
+    "color-bg-dark": transparent,
+    "color-border-dark": $color-info-reverse,
+    "color-dark-active": mix($gray-1, $color-bg-container-reverse, 85%),
+    "color-bg-dark-active": $color-info-reverse,
+    "color-border-dark-active": $color-info-reverse
+  )
+);
+
+@each $key, $val in $m-btn {
+  .btn#{$key},
+  .light .btn#{$key} {
+    color: map-get($val, "color-light");
+    background-color: map-get($val, "color-bg-light");
+    border-color: map-get($val, "color-border-light");
+
+    &:active {
+      color: map-get($val, "color-light-active");
+      background-color: map-get($val, "color-bg-light-active");
+      border-color: map-get($val, "color-border-light-active");
+    }
+  }
+
+  .dark .btn#{$key} {
+    color: map-get($val, "color-dark");
+    background-color: map-get($val, "color-bg-dark");
+    border-color: map-get($val, "color-border-dark");
+
+    &:active {
+      color: map-get($val, "color-dark-active");
+      background-color: map-get($val, "color-bg-dark-active");
+      border-color: map-get($val, "color-border-dark-active");
+    }
+  }
 }
