@@ -86,7 +86,6 @@ module.exports = {
     lastUpdated: '上次更新',
     repo: 'ModyQyW/mp-scss',
     repoLabel: '查看源码',
-    docsBranch: 'gh-pages',
     editLinks: true,
     editLinkText: '编辑此页面'
   },
