@@ -1,10 +1,10 @@
 $m-border-radius: (
-  half: 50%,
-  none: 0,
-  xs: $length-1,
-  sm: $length-2,
-  md: $length-4,
-  base: $length-4,
-  lg: $length-5,
-  xl: $length-6
+  "-half": 50%,
+  "-none": 0,
+  "-xs": $length-1,
+  "-sm": $length-2,
+  "-md": $length-4,
+  "": $length-4,
+  "-lg": $length-5,
+  "-xl": $length-6
 );
