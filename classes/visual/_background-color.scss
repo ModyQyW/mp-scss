@@ -1,38 +1,38 @@
 @each $key, $val in $m-palette-color-light {
-  .bg-#{$key},
-  .light .bg-#{$key} {
+  .bg#{$key},
+  .light .bg#{$key} {
     background: $val;
   }
 }
 
 @each $key, $val in $m-functional-color-light {
-  .bg-#{$key},
-  .light .bg-#{$key} {
+  .bg#{$key},
+  .light .bg#{$key} {
     background: $val;
   }
 }
 
 @each $key, $val in $m-background-color-light {
-  .bg-#{$key},
-  .light .bg-#{$key} {
+  .bg#{$key},
+  .light .bg#{$key} {
     background: $val;
   }
 }
 
-@each $key, $val in $palette-colors-dark {
-  .dark .bg-#{$key} {
+@each $key, $val in $m-palette-color-dark {
+  .dark .bg#{$key} {
     background: $val;
   }
 }
 
 @each $key, $val in $m-functional-color-dark {
-  .dark .bg-#{$key} {
+  .dark .bg#{$key} {
     background: $val;
   }
 }
 
 @each $key, $val in $m-background-color-dark {
-  .dark .bg-#{$key} {
+  .dark .bg#{$key} {
     background: $val;
   }
 }

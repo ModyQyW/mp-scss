@@ -1,38 +1,38 @@
 @each $key, $val in $m-palette-color-light {
-  .text-#{$key},
-  .light .text-#{$key} {
+  .text#{$key},
+  .light .text#{$key} {
     color: $val;
   }
 }
 
 @each $key, $val in $m-functional-color-light {
-  .text-#{$key},
-  .light .text-#{$key} {
+  .text#{$key},
+  .light .text#{$key} {
     color: $val;
   }
 }
 
 @each $key, $val in $m-text-color-light {
-  .text-#{$key},
-  .light .text-#{$key} {
+  .text#{$key},
+  .light .text#{$key} {
     color: $val;
   }
 }
 
-@each $key, $val in $palette-colors-dark {
-  .dark .text-#{$key} {
+@each $key, $val in $m-palette-color-dark {
+  .dark .text#{$key} {
     color: $val;
   }
 }
 
 @each $key, $val in $m-functional-color-dark {
-  .dark .text-#{$key} {
+  .dark .text#{$key} {
     color: $val;
   }
 }
 
 @each $key, $val in $m-text-color-dark {
-  .dark .text-#{$key} {
+  .dark .text#{$key} {
     color: $val;
   }
 }
