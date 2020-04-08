@@ -1,5 +1,5 @@
 @each $key, $val in $m-background-size {
-  .bg-#{$key} {
+  .bg#{$key} {
     background-size: $val;
   }
 }
