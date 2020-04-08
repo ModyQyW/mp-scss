@@ -5,6 +5,8 @@ $font-size-benchmark: 14 !default;
 // 基准字体大小
 $font-size-base: $font-size-benchmark * $scale + $unit;
 // s - sub
+$font-size-s-10: ($font-size-benchmark - 10) * $scale + $unit;
+$font-size-s-9: ($font-size-benchmark - 9) * $scale + $unit;
 $font-size-s-8: ($font-size-benchmark - 8) * $scale + $unit;
 $font-size-s-7: ($font-size-benchmark - 7) * $scale + $unit;
 $font-size-s-6: ($font-size-benchmark - 6) * $scale + $unit;
