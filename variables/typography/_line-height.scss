@@ -38,18 +38,6 @@ $line-height-a-21: ($line-height-benchmark + 21) * $scale + $unit;
 $line-height-a-22: ($line-height-benchmark + 22) * $scale + $unit;
 $line-height-a-23: ($line-height-benchmark + 23) * $scale + $unit;
 $line-height-a-24: ($line-height-benchmark + 24) * $scale + $unit;
-// m - multiply
-$line-height-m-4-8: ($line-height-benchmark * .5) * $scale + $unit;
-$line-height-m-5-8: ($line-height-benchmark * .625) * $scale + $unit;
-$line-height-m-6-8: ($line-height-benchmark * .75) * $scale + $unit;
-$line-height-m-7-8: ($line-height-benchmark * .875) * $scale + $unit;
-$line-height-m-9-8: ($line-height-benchmark * 1.125) * $scale + $unit;
-$line-height-m-10-8: ($line-height-benchmark * 1.25) * $scale + $unit;
-$line-height-m-12-8: ($line-height-benchmark * 1.5) * $scale + $unit;
-$line-height-m-15-8: ($line-height-benchmark * 1.875) * $scale + $unit;
-$line-height-m-18-8: ($line-height-benchmark * 2.25) * $scale + $unit;
-$line-height-m-24-8: ($line-height-benchmark * 3) * $scale + $unit;
-$line-height-m-32-8: ($line-height-benchmark * 4) * $scale + $unit;
 
 $line-height-none: 1;
 $line-height-tight: 1.25;
@@ -60,6 +48,9 @@ $line-height-loose: 2;
 $line-height-default: 1.15;
 
 $m-line-height: (
+  "-4xs": $line-height-s-10,
+  "-3xs": $line-height-s-8,
+  "-2xs": $line-height-s-6,
   "-xs": $line-height-s-4,
   "-sm": $line-height-s-2,
   "-md": $line-height-base,
