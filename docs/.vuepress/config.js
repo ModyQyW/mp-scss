@@ -74,10 +74,6 @@ module.exports = {
       {
         text: '主站',
         link: 'https://modyqyw.github.io'
-      },
-      {
-        text: 'Github',
-        link: 'https://github.com/ModyQyW/mp-scss',
       }
     ],
     sidebar: 'auto',
