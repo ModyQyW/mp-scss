@@ -1,5 +1,5 @@
 @each $key, $val in $m-opacity {
-  .opacity-#{$key} {
+  .opacity#{$key} {
     opacity: $val;
   }
 }
