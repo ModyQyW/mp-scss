@@ -1,11 +1,11 @@
 // flex
 @each $key, $val in $m-flex {
-  .flex-#{$key} {
+  .flex#{$key} {
     flex: $val;
   }
 }
 
-@for $i from 1 to 8 {
+@for $i from 0 to 8 {
   .flex-#{$i} {
     flex: $i;
   }
@@ -13,60 +13,56 @@
 
 // flex-direction
 @each $key, $val in $m-flex-direction {
-  .flex-#{$key} {
+  .flex#{$key} {
     flex-direction: $val;
   }
 }
 
 // flex-wrap
 @each $key, $val in $m-flex-wrap {
-  .flex-#{$key} {
+  .flex#{$key} {
     flex-wrap: $val;
   }
 }
 
 // flex-shrink
-.flex-shrink {
-  flex-shrink: 1;
-}
-
-.flex-shrink-0 {
-  flex-shrink: 0;
+@each $key, $val in $m-flex-shrink {
+  .flex-shrink#{$key} {
+    flex-shrink: $val;
+  }
 }
 
 // flex-grow
-.flex-grow {
-  flex-grow: 1;
-}
-
-.flex-grow-0 {
-  flex-grow: 0;
+@each $key, $val in $m-flex-grow {
+  .flex-grow#{$key} {
+    flex-grow: $val;
+  }
 }
 
 // align-content
 @each $key, $val in $m-align-content {
-  .content-#{$key} {
+  .content#{$key} {
     align-content: $val;
   }
 }
 
 // align-items
 @each $key, $val in $m-align-items {
-  .items-#{$key} {
+  .items#{$key} {
     align-items: $val;
   }
 }
 
 // align-self
 @each $key, $val in $m-align-self {
-  .self-#{$key} {
+  .self#{$key} {
     align-self: $val;
   }
 }
 
 // justify-content
 @each $key, $val in $m-justify-content {
-  .justify-#{$key} {
+  .justify#{$key} {
     justify-content: $val;
   }
 }
@@ -79,7 +75,7 @@
 }
 
 @each $key, $val in $m-order {
-  .order-#{$key} {
+  .order#{$key} {
     order: $val;
   }
 }
