@@ -1,6 +1,6 @@
 .DS_Store
 node_modules
-/dist
+dist
 /docs/.vuepress/dist
 
 # local env files
@@ -21,5 +21,4 @@ yarn-error.log*
 *.sln
 *.sw?
 
-test.*
-index.*
+*.css*

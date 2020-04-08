@@ -1,5 +1,5 @@
-*.sh
-*.json
+*.sh*
+*.json*
 *.css*
-README.md
+*.md*
 LICENSE
