@@ -38,20 +38,11 @@ $font-size-a-21: ($font-size-benchmark + 21) * $scale + $unit;
 $font-size-a-22: ($font-size-benchmark + 22) * $scale + $unit;
 $font-size-a-23: ($font-size-benchmark + 23) * $scale + $unit;
 $font-size-a-24: ($font-size-benchmark + 24) * $scale + $unit;
-// m - multiply
-$font-size-m-4-8: ($font-size-benchmark * .5) * $scale + $unit;
-$font-size-m-5-8: ($font-size-benchmark * .625) * $scale + $unit;
-$font-size-m-6-8: ($font-size-benchmark * .75) * $scale + $unit;
-$font-size-m-7-8: ($font-size-benchmark * .875) * $scale + $unit;
-$font-size-m-9-8: ($font-size-benchmark * 1.125) * $scale + $unit;
-$font-size-m-10-8: ($font-size-benchmark * 1.25) * $scale + $unit;
-$font-size-m-12-8: ($font-size-benchmark * 1.5) * $scale + $unit;
-$font-size-m-15-8: ($font-size-benchmark * 1.875) * $scale + $unit;
-$font-size-m-18-8: ($font-size-benchmark * 2.25) * $scale + $unit;
-$font-size-m-24-8: ($font-size-benchmark * 3) * $scale + $unit;
-$font-size-m-32-8: ($font-size-benchmark * 4) * $scale + $unit;
 
 $m-font-size: (
+  "-4xs": $font-size-s-10,
+  "-3xs": $font-size-s-8,
+  "-2xs": $font-size-s-6,
   "-xs": $font-size-s-4,
   "-sm": $font-size-s-2,
   "-md": $font-size-base,
