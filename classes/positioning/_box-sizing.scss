@@ -1,6 +1,5 @@
 @each $key, $val in $m-box-sizing {
-  .#{$key}-box,
-  .box-#{$key} {
+  .box#{$key} {
     box-sizing: $val;
   }
 }
