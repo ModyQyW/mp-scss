@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: '@modyqyw/mp-scss'
-tagline: 一个面向小程序的个人级 scss 样式库，欢迎你来一起完善。
+tagline: 一个面向小程序的个人级 scss 样式库
 actionText: 准备 →
 actionLink: /preparation/
 features:
