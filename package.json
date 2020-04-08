@@ -1,6 +1,6 @@
 {
   "name": "@modyqyw/mp-scss",
-  "version": "1.0.0",
+  "version": "1.0.0-rc.1",
   "description": "Custom css for miniprograms.",
   "author": "ModyQyW <wurui7@mail3.sysu.edu.cn>",
   "license": "MIT",
