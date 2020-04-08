@@ -5,35 +5,35 @@
 }
 
 @each $key, $val in $m-position-value {
-  .top-#{$key} {
+  .top#{$key} {
     top: $val;
   }
 
-  .right-#{$key} {
+  .right#{$key} {
     right: $val;
   }
 
-  .bottom-#{$key} {
+  .bottom#{$key} {
     right: $val;
   }
 
-  .left-#{$key} {
+  .left#{$key} {
     right: $val;
   }
 
-  .inset-#{$key} {
+  .inset#{$key} {
     top: $val;
     right: $val;
     bottom: $val;
     left: $val;
   }
 
-  .inset-y-#{$key} {
+  .inset-y#{$key} {
     top: $val;
     bottom: $val;
   }
 
-  .inset-x-#{$key} {
+  .inset-x#{$key} {
     right: $val;
     left: $val;
   }
