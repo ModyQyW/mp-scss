@@ -52,13 +52,12 @@ $font-size-m-24-8: ($font-size-benchmark * 3) * $scale + $unit;
 $font-size-m-32-8: ($font-size-benchmark * 4) * $scale + $unit;
 
 $m-font-size: (
-  "xs": $font-size-s-4,
-  "sm": $font-size-s-2,
-  "md": $font-size-base,
-  "base": $font-size-base,
-  "lg": $font-size-a-2,
-  "xl": $font-size-a-4,
-  "2xl": $font-size-a-6,
-  "3xl": $font-size-a-8,
-  "4xl": $font-size-a-10
+  "-xs": $font-size-s-4,
+  "-sm": $font-size-s-2,
+  "-md": $font-size-base,
+  "-lg": $font-size-a-2,
+  "-xl": $font-size-a-4,
+  "-2xl": $font-size-a-6,
+  "-3xl": $font-size-a-8,
+  "-4xl": $font-size-a-10
 );
