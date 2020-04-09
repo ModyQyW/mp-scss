@@ -46,7 +46,7 @@ npm i @modyqyw/mp-scss
 
 ### 使用
 
-- 下面是简略版文档，供只想快速开发的同学使用。[完整版文档](https://modyqyw.github.io/mp-scss/)另外部署，供想一探究竟但实力不足以阅读源码的同学使用。
+- 下面是简略版文档，供只想快速开发的同学使用。获取更多信息，可阅读[完整版文档](https://modyqyw.github.io/mp-scss/)（持续完善中）。
 
 - 只支持 scss，没有计划支持 css，less 和 stylus。
 
