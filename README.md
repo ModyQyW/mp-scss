@@ -50,7 +50,7 @@ npm i @modyqyw/mp-scss
 
 - 只支持 scss，没有计划支持 css，less 和 stylus。
 
-- uni-app 使用前，需要手动添加 sass 相关包和 sass-loader。使用[`node-sass`](https://github.com/sass/node-sass)，建议使用 node 8 来安装编译；使用[`sass`](https://github.com/sass/dart-sass)，需要注释`node_modules/@dcloudio/vue-cli-plugin-uni/lib/options.js`第 78 行。安装 node-sass 失败，建议设置[淘宝源](https://developer.aliyun.com/mirror/NPM?from=tnpm)而不是直接用 cnpm。
+- uni-app 使用前，需要手动添加 sass 相关包和 sass-loader。使用[`node-sass`](https://github.com/sass/node-sass)，建议使用 node 8 来安装编译；使用[`dart-sass`](https://github.com/sass/dart-sass)，请参考[此处说明](https://modyqyw.top/front-end/environment/#%E9%A2%98%E5%A4%96%E8%AF%9D)。安装 node-sass 失败，建议设置[淘宝源](https://developer.aliyun.com/mirror/NPM?from=tnpm)而不是直接用 cnpm。
 
 - 引入预设变量。之后你可以根据预设变量定制自己的样式。
 
