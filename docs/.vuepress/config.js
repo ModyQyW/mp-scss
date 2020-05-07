@@ -111,7 +111,7 @@ module.exports = {
     sidebarDepth: 3,
     searchMaxSuggestions: 10,
     lastUpdated: "上次更新",
-    repo: "ModyQyW/mp-scss",
+    repo: "Millcloud/mp-scss",
     repoLabel: "查看源码",
     editLinks: true,
     editLinkText: "编辑此页面",

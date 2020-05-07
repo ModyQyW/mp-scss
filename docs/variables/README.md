@@ -18,7 +18,7 @@ $scale: 2 !default;
 
 更多有关尺寸单位和缩放的说明，参考[微信小程序官方文档](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html)和[支付宝小程序官方文档](https://opendocs.alipay.com/mini/framework/acss)。
 
-具体代码见 [variables/_index.scss](https://github.com/ModyQyW/mp-scss/blob/master/variables/_index.scss)。
+具体代码见 [variables/_index.scss](https://github.com/Millcloud/mp-scss/blob/master/variables/_index.scss)。
 
 ## 颜色 colors
 
@@ -375,7 +375,7 @@ $scale: 2 !default;
 
 篇幅原因，不再列举这部分映射的具体内容。
 
-具体代码见 [variables/colors](https://github.com/ModyQyW/mp-scss/tree/master/variables/colors)。
+具体代码见 [variables/colors](https://github.com/Millcloud/mp-scss/tree/master/variables/colors)。
 
 ### 什么时候会提供可直接使用的变量
 
@@ -478,7 +478,7 @@ $scale: 2 !default;
 |`-full`|`$ratio-full`|
 |`-auto`|`auto`|
 
-具体代码见 [variables/ratio](https://github.com/ModyQyW/mp-scss/tree/master/variables/ratio/_index.scss)。
+具体代码见 [variables/ratio](https://github.com/Millcloud/mp-scss/tree/master/variables/ratio/_index.scss)。
 
 ## 长度 length
 
@@ -505,7 +505,7 @@ $scale: 2 !default;
 
 **注意**：`$length-1-real-reverse`和`$length-1-real`的数值不会受`$scale`影响。
 
-具体代码见 [variables/length](https://github.com/ModyQyW/mp-scss/tree/master/variables/length/_index.scss)。
+具体代码见 [variables/length](https://github.com/Millcloud/mp-scss/tree/master/variables/length/_index.scss)。
 
 ## 尺寸 sizing
 
@@ -601,7 +601,7 @@ $scale: 2 !default;
 |`-255`|`$length-255`|
 |`-256`|`$length-256`|
 
-具体代码见 [variables/sizing](https://github.com/ModyQyW/mp-scss/tree/master/variables/sizing/_index.scss)。
+具体代码见 [variables/sizing](https://github.com/Millcloud/mp-scss/tree/master/variables/sizing/_index.scss)。
 
 ## 间距 spacing
 
@@ -784,7 +784,7 @@ $scale: 2 !default;
 |`-256-reverse`|`$length-256-reverse`|
 |`-auto`|`auto`|
 
-具体代码见 [variables/spacing](https://github.com/ModyQyW/mp-scss/tree/master/variables/spacing/_index.scss)。
+具体代码见 [variables/spacing](https://github.com/Millcloud/mp-scss/tree/master/variables/spacing/_index.scss)。
 
 ## 定位 positioning
 
@@ -808,7 +808,7 @@ $scale: 2 !default;
 |`-0`|`0`|
 |`-auto`|`auto`|
 
-具体代码见 [variables/positioning/position](https://github.com/ModyQyW/mp-scss/tree/master/variables/positioning/_position.scss)。
+具体代码见 [variables/positioning/position](https://github.com/Millcloud/mp-scss/tree/master/variables/positioning/_position.scss)。
 
 ### 属性`z-index`
 
@@ -836,7 +836,7 @@ $scale: 2 !default;
 |`-240`|`240`|
 |`-auto`|`auto`|
 
-具体代码见 [variables/positioning/z-index](https://github.com/ModyQyW/mp-scss/tree/master/variables/positioning/_z-index.scss)。
+具体代码见 [variables/positioning/z-index](https://github.com/Millcloud/mp-scss/tree/master/variables/positioning/_z-index.scss)。
 
 ### 属性`box-sizing`
 
@@ -847,7 +847,7 @@ $scale: 2 !default;
 |`-content`|`content-box`|
 |`-border`|`border-box`|
 
-具体代码见 [variables/positioning/box-sizing](https://github.com/ModyQyW/mp-scss/tree/master/variables/positioning/_box-sizing.scss)。
+具体代码见 [variables/positioning/box-sizing](https://github.com/Millcloud/mp-scss/tree/master/variables/positioning/_box-sizing.scss)。
 
 ## 盒模型 box-model
 
@@ -864,7 +864,7 @@ $scale: 2 !default;
 |`inline-flex`|`inline-flex`|
 |`none`|`none`|
 
-具体代码见 [variables/box-model/display](https://github.com/ModyQyW/mp-scss/tree/master/variables/box-model/_display.scss)。
+具体代码见 [variables/box-model/display](https://github.com/Millcloud/mp-scss/tree/master/variables/box-model/_display.scss)。
 
 ### 属性`flex`相关
 
@@ -899,14 +899,14 @@ $scale: 2 !default;
 
 |映射键|映射值|
 |:-:|:-:|
-|` `(空字符串)|`1`|
+|``(空字符串)|`1`|
 |`-0`|`0`|
 
 `$m-flex-grow`的键值对可参考下表。
 
 |映射键|映射值|
 |:-:|:-:|
-|` `(空字符串)|`1`|
+|``(空字符串)|`1`|
 |`-0`|`0`|
 
 `$m-align-content`的键值对可参考下表。
@@ -961,7 +961,7 @@ $scale: 2 !default;
 |`-first`|`-9999`|
 |`-last`|`9999`|
 
-具体代码见 [variables/box-model/flex](https://github.com/ModyQyW/mp-scss/tree/master/variables/box-model/_flex.scss)。
+具体代码见 [variables/box-model/flex](https://github.com/Millcloud/mp-scss/tree/master/variables/box-model/_flex.scss)。
 
 ### 属性`overflow`
 
@@ -974,7 +974,7 @@ $scale: 2 !default;
 |`-visible`|`visible`|
 |`-scroll`|`scroll`|
 
-具体代码见 [variables/box-model/overflow](https://github.com/ModyQyW/mp-scss/tree/master/variables/box-model/_overflow.scss)。
+具体代码见 [variables/box-model/overflow](https://github.com/Millcloud/mp-scss/tree/master/variables/box-model/_overflow.scss)。
 
 ## 排版 typography
 
@@ -988,7 +988,7 @@ $scale: 2 !default;
 
 **注意**：只提供了可直接使用的变量，没有提供映射。
 
-具体代码见 [variables/typography/font-family](https://github.com/ModyQyW/mp-scss/tree/master/variables/typography/_font-family.scss)。
+具体代码见 [variables/typography/font-family](https://github.com/Millcloud/mp-scss/tree/master/variables/typography/_font-family.scss)。
 
 ### 属性`font-size`
 
@@ -1049,7 +1049,7 @@ $scale: 2 !default;
 |`-3xl`|`$font-size-a-8`|
 |`-4xl`|`$font-size-a-10`|
 
-具体代码见 [variables/typography/font-size](https://github.com/ModyQyW/mp-scss/tree/master/variables/typography/_font-size.scss)。
+具体代码见 [variables/typography/font-size](https://github.com/Millcloud/mp-scss/tree/master/variables/typography/_font-size.scss)。
 
 ### 属性`font-style`
 
@@ -1060,7 +1060,7 @@ $scale: 2 !default;
 |`italic`|`italic`|
 |`oblique`|`oblique`|
 
-具体代码见 [variables/typography/font-style](https://github.com/ModyQyW/mp-scss/tree/master/variables/typography/_font-style.scss)。
+具体代码见 [variables/typography/font-style](https://github.com/Millcloud/mp-scss/tree/master/variables/typography/_font-style.scss)。
 
 ### 属性`font-weight`
 
@@ -1083,7 +1083,7 @@ $scale: 2 !default;
 |`-black`|`900`|
 |`-heavy`|`900`|
 
-具体代码见 [variables/typography/font-weight](https://github.com/ModyQyW/mp-scss/tree/master/variables/typography/_font-weight.scss)。
+具体代码见 [variables/typography/font-weight](https://github.com/Millcloud/mp-scss/tree/master/variables/typography/_font-weight.scss)。
 
 ### 属性`font-variant`
 
@@ -1093,7 +1093,7 @@ $scale: 2 !default;
 |:-:|:-:|
 |`tabular-nums`|`tabular-nums`|
 
-具体代码见 [variables/typography/font-variant](https://github.com/ModyQyW/mp-scss/tree/master/variables/typography/_font-variant.scss)。
+具体代码见 [variables/typography/font-variant](https://github.com/Millcloud/mp-scss/tree/master/variables/typography/_font-variant.scss)。
 
 ### 属性`line-height`
 
@@ -1161,7 +1161,7 @@ $scale: 2 !default;
 |`-3xl`|`$line-height-a-8`|
 |`-4xl`|`$line-height-a-10`|
 
-具体代码见 [variables/typography/font-size](https://github.com/ModyQyW/mp-scss/tree/master/variables/typography/_font-size.scss)。
+具体代码见 [variables/typography/font-size](https://github.com/Millcloud/mp-scss/tree/master/variables/typography/_font-size.scss)。
 
 ### 属性`text-align`
 
@@ -1174,7 +1174,7 @@ $scale: 2 !default;
 |`-center`|`center`|
 |`-justify`|`justify`|
 
-具体代码见 [variables/typography/text-align](https://github.com/ModyQyW/mp-scss/tree/master/variables/typography/_text-align.scss)。
+具体代码见 [variables/typography/text-align](https://github.com/Millcloud/mp-scss/tree/master/variables/typography/_text-align.scss)。
 
 ### 属性`text-decoration`
 
@@ -1185,7 +1185,7 @@ $scale: 2 !default;
 |`underline`|`underline`|
 |`line-through`|`line-through`|
 
-具体代码见 [variables/typography/text-decoration](https://github.com/ModyQyW/mp-scss/tree/master/variables/typography/_text-decoration.scss)。
+具体代码见 [variables/typography/text-decoration](https://github.com/Millcloud/mp-scss/tree/master/variables/typography/_text-decoration.scss)。
 
 ### 属性`text-transform`
 
@@ -1199,7 +1199,7 @@ $scale: 2 !default;
 |`lower`|`lowercase`
 |`lowercase`|`lowercase`|
 
-具体代码见 [variables/typography/text-transform](https://github.com/ModyQyW/mp-scss/tree/master/variables/typography/_text-transform.scss)。
+具体代码见 [variables/typography/text-transform](https://github.com/Millcloud/mp-scss/tree/master/variables/typography/_text-transform.scss)。
 
 ### 属性`vertical-align`
 
@@ -1216,7 +1216,7 @@ $scale: 2 !default;
 |`-bottom`|`bottom`|
 |`-middle`|`middle`|
 
-具体代码见 [variables/typography/vertical-align](https://github.com/ModyQyW/mp-scss/tree/master/variables/typography/_vertical-align.scss)。
+具体代码见 [variables/typography/vertical-align](https://github.com/Millcloud/mp-scss/tree/master/variables/typography/_vertical-align.scss)。
 
 ### 属性`visibility`
 
@@ -1227,7 +1227,7 @@ $scale: 2 !default;
 |`visible`|`visible`|
 |`invisible`|`hidden`|
 
-具体代码见 [variables/typography/visibility](https://github.com/ModyQyW/mp-scss/tree/master/variables/typography/_visibility.scss)。
+具体代码见 [variables/typography/visibility](https://github.com/Millcloud/mp-scss/tree/master/variables/typography/_visibility.scss)。
 
 ### 属性`resize`
 
@@ -1236,12 +1236,12 @@ $scale: 2 !default;
 |映射键|映射值|
 |:-:|:-:|
 |`-none`|`none`|
-|` `(空字符串)|`both`|
+|``(空字符串)|`both`|
 |`-both`|`both`|
 |`-y`|`vertical`|
 |`-x`|`horizontal`|
 
-具体代码见 [variables/typography/resize](https://github.com/ModyQyW/mp-scss/tree/master/variables/typography/_resize.scss)。
+具体代码见 [variables/typography/resize](https://github.com/Millcloud/mp-scss/tree/master/variables/typography/_resize.scss)。
 
 ## 视觉 visual
 
@@ -1258,7 +1258,7 @@ $scale: 2 !default;
 |`-repeat-round`|`round`|
 |`-no-repeat`|`no-repeat`|
 
-具体代码见 [variables/visual/background-repeat](https://github.com/ModyQyW/mp-scss/tree/master/variables/visual/_background-repeat.scss)。
+具体代码见 [variables/visual/background-repeat](https://github.com/Millcloud/mp-scss/tree/master/variables/visual/_background-repeat.scss)。
 
 ### 属性`background-attachment`
 
@@ -1270,7 +1270,7 @@ $scale: 2 !default;
 |`-local`|`local`|
 |`-scroll`|`scroll`|
 
-具体代码见 [variables/visual/background-attachment](https://github.com/ModyQyW/mp-scss/tree/master/variables/visual/_background-attachment.scss)。
+具体代码见 [variables/visual/background-attachment](https://github.com/Millcloud/mp-scss/tree/master/variables/visual/_background-attachment.scss)。
 
 ### 属性`background-position`
 
@@ -1288,7 +1288,7 @@ $scale: 2 !default;
 |`-left-bottom`|`left bottom`|
 |`-center`|`center`|
 
-具体代码见 [variables/visual/background-position](https://github.com/ModyQyW/mp-scss/tree/master/variables/visual/_background-position.scss)。
+具体代码见 [variables/visual/background-position](https://github.com/Millcloud/mp-scss/tree/master/variables/visual/_background-position.scss)。
 
 ### 属性`background-size`
 
@@ -1300,7 +1300,7 @@ $scale: 2 !default;
 |`-cover`|`cover`|
 |`-auto`|`auto`|
 
-具体代码见 [variables/visual/background-size](https://github.com/ModyQyW/mp-scss/tree/master/variables/visual/_background-size.scss)。
+具体代码见 [variables/visual/background-size](https://github.com/Millcloud/mp-scss/tree/master/variables/visual/_background-size.scss)。
 
 ### 属性`border-style`
 
@@ -1313,7 +1313,7 @@ $scale: 2 !default;
 |`-dotted`|`dotted`|
 |`-none`|`none`|
 
-具体代码见 [variables/visual/border-style](https://github.com/ModyQyW/mp-scss/tree/master/variables/visual/_border-style.scss)。
+具体代码见 [variables/visual/border-style](https://github.com/Millcloud/mp-scss/tree/master/variables/visual/_border-style.scss)。
 
 ### 属性`border-width`
 
@@ -1327,7 +1327,7 @@ $scale: 2 !default;
 |`-2`|`$length-2`|
 |`-4`|`$length-4`|
 
-具体代码见 [variables/visual/border-width](https://github.com/ModyQyW/mp-scss/tree/master/variables/visual/_border-width.scss)。
+具体代码见 [variables/visual/border-width](https://github.com/Millcloud/mp-scss/tree/master/variables/visual/_border-width.scss)。
 
 ### 属性`border-radius`
 
@@ -1340,11 +1340,11 @@ $scale: 2 !default;
 |`-xs`|`$length-1`|
 |`-sm`|`$length-2`|
 |`-md`|`$length-4`|
-|` `(空字符串)|`$length-4`|
+|``(空字符串)|`$length-4`|
 |`-lg`|`$length-5`|
 |`-xl`|`$length-76`|
 
-具体代码见 [variables/visual/border-radius](https://github.com/ModyQyW/mp-scss/tree/master/variables/visual/_border-radius.scss)。
+具体代码见 [variables/visual/border-radius](https://github.com/Millcloud/mp-scss/tree/master/variables/visual/_border-radius.scss)。
 
 ## 杂项 misc
 
@@ -1360,4 +1360,4 @@ $scale: 2 !default;
 |`-75`|`.75`|
 |`-100`|`1`|
 
-具体代码见 [variables/misc/opacity](https://github.com/ModyQyW/mp-scss/tree/master/variables/misc/_opacity.scss)。
+具体代码见 [variables/misc/opacity](https://github.com/Millcloud/mp-scss/tree/master/variables/misc/_opacity.scss)。
