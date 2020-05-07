@@ -2,11 +2,11 @@
 
 A scss lib for miniprogram. Since miniprogram is used almost only in China, Chinese docs are provided.
 
-一个面向小程序的个人级 scss 样式库，包含 scss 变量 variables，重置样式 normalize，组件样式 components 和类样式 classes。
+一个面向小程序的 scss 样式库，包含 scss 变量 variables，重置样式 normalize，组件样式 components 和类样式 classes。
 
 该样式库的目标是：在仅有原型图的情况下，用这个样式库能快速做出不仅能适配微信小程序和支付宝小程序，而且看起来还过得去的页面。
 
-初期阶段，更新较为频繁且可能存在遗漏，欢迎中肯的意见，建议，issues，prs 等。
+初期阶段，更新较为频繁且可能存在遗漏，欢迎中肯的意见，建议，issue，pr 等。
 
 ## 起步
 
@@ -46,11 +46,11 @@ npm i @modyqyw/mp-scss
 
 ### 使用
 
-- 下面是简略版文档，供只想快速开发的同学使用。获取更多信息，可阅读[完整版文档](https://modyqyw.github.io/mp-scss/)（持续完善中）。
+- 下面是简略版文档，供快速开发使用。获取更多信息，可阅读[完整版文档](https://modyqyw.github.io/mp-scss/)（持续完善中）。
 
 - 只支持 scss，没有计划支持 css，less 和 stylus。
 
-- uni-app 使用前，需要手动添加 sass 相关包和 sass-loader。使用[`node-sass`](https://github.com/sass/node-sass)，建议使用 node 8 来安装编译；使用[`dart-sass`](https://github.com/sass/dart-sass)，请参考[此处说明](https://modyqyw.top/front-end/environment/#%E9%A2%98%E5%A4%96%E8%AF%9D)。安装 node-sass 失败，建议设置[淘宝源](https://developer.aliyun.com/mirror/NPM?from=tnpm)而不是直接用 cnpm。
+- uni-app 使用前，需要手动添加 sass 相关包和 sass-loader。请参考[此处说明](https://modyqyw.top/front-end/environment/#%E9%A2%98%E5%A4%96%E8%AF%9D)。尽量避免使用 cnpm。
 
 - 引入预设变量。之后你可以根据预设变量定制自己的样式。
 
