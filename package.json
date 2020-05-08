@@ -26,8 +26,6 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-angular": "^8.3.4",
-    "@vssue/api-github-v4": "^1.4.0",
-    "@vssue/vuepress-plugin-vssue": "^1.4.4",
     "@vuepress/plugin-active-header-links": "^1.4.1",
     "@vuepress/plugin-back-to-top": "^1.4.1",
     "@vuepress/plugin-medium-zoom": "^1.4.1",
