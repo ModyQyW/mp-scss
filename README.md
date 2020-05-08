@@ -46,7 +46,7 @@ npm i @modyqyw/mp-scss
 
 ### 使用
 
-- 下面是简略版文档，供快速开发使用。获取更多信息，可阅读[完整版文档](https://modyqyw.github.io/mp-scss/)（持续完善中）。
+- 下面是简略版文档，供快速开发使用。获取更多信息，可阅读[完整版文档](https://millcloud.github.io/mp-scss/)（持续完善中）。
 
 - 只支持 scss，没有计划支持 css，less 和 stylus。
 
@@ -251,19 +251,19 @@ $line-height-base: $line-height-benchmark * $scale + $unit; // 基准行高计�
 
 ## 版本命名
 
-使用 [SemVer](http://semver.org/) 进行版本控制。有关可用版本，请参阅此仓库的 [releases](https://github.com/ModyQyW/css-styles/releases)。
+使用 [SemVer](http://semver.org/) 进行版本控制。有关可用版本，请参阅此仓库的 [releases](https://github.com/Millcloud/css-styles/releases)。
 
 ## 作者
 
 - **Rui Wu** - *最初工作* - [ModyQyW](https://github.com/ModyQyW)
 
-另请参阅参与此项目的 [contributors](https://github.com/ModyQyW/css-styles/contributors) 列表。
+另请参阅参与此项目的 [contributors](https://github.com/Millcloud/css-styles/contributors) 列表。
 
 ## 协议
 
 [MIT](./LICENSE)
 
-Copyright (c) 2019-present ModyQyW
+Copyright (c) 2019-present Millcloud
 
 ## 致谢
 

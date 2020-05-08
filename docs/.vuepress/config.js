@@ -102,10 +102,6 @@ module.exports = {
         text: "优化",
         link: "/optimization/",
       },
-      {
-        text: "主站",
-        link: "https://modyqyw.github.io",
-      },
     ],
     sidebar: "auto",
     sidebarDepth: 3,
@@ -134,7 +130,7 @@ module.exports = {
     [
       "sitemap",
       {
-        hostname: "https://modyqyw.top",
+        hostname: "https://millcloud.github.io",
       },
     ],
     [
@@ -150,17 +146,6 @@ module.exports = {
             vOffset: 0,
           },
         },
-      },
-    ],
-    [
-      "@vssue/vuepress-plugin-vssue",
-      {
-        platform: "github-v4",
-        owner: "ModyQyW",
-        repo: "mp-scss",
-        clientId: "ee62eae699b0c63fb4c2",
-        clientSecret: "68b0ceecccc462ce8bdd73c2c02e261cb355506e",
-        baseURL: "https://github.com",
       },
     ],
   ],
