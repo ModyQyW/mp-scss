@@ -8,7 +8,7 @@
     "lint": "stylelint . --custom-formatter=node_modules/stylelint-formatter-pretty",
     "build": "sass _index.scss index.css --style=compressed --no-source-map",
     "dev:docs": "vuepress dev docs",
-    "build:docs": "vuepress build docs",
+    "build:docs": "rimraf index.css && vuepress build docs",
     "deploy:docs": "sh deploy.sh"
   },
   "publishConfig": {
