@@ -23,10 +23,15 @@
     "miniprogram",
     "scss"
   ],
+  "dependencies": {
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2"
+  },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-angular": "^8.3.4",
-    "@modyqyw/eslint-config": "^1.2.4",
+    "@modyqyw/eslint-config": "^1.2.6",
+    "@modyqyw/stylelint-config-scss": "^1.0.3",
     "@vuepress/plugin-active-header-links": "^1.4.1",
     "@vuepress/plugin-back-to-top": "^1.4.1",
     "@vuepress/plugin-medium-zoom": "^1.4.1",
@@ -35,10 +40,7 @@
     "eslint": "^6.8.0",
     "lint-staged": "^10.2.2",
     "rimraf": "^3.0.2",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
     "stylelint": "^13.3.3",
-    "stylelint-config-twbs-bootstrap": "^2.0.2",
     "stylelint-formatter-pretty": "^2.0.1",
     "vuepress": "^1.4.1",
     "vuepress-plugin-helper-live2d": "^1.0.0",

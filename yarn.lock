@@ -1055,10 +1055,10 @@
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
-"@modyqyw/eslint-config@^1.2.4":
-  version "1.2.4"
-  resolved "https://registry.npmjs.org/@modyqyw/eslint-config/-/eslint-config-1.2.4.tgz#13be9ced2b4681d65051e5e3dcd76fd0a8a3c887"
-  integrity sha512-fZd24Da0tn9vwGUZmHIcD6nJ3WbjdMfCvIt0HTUBQi7VzF7u8VAiKV7MToMuKt4TKa+L3DlAJnkCl9iH8pJh8w==
+"@modyqyw/eslint-config@^1.2.6":
+  version "1.2.6"
+  resolved "https://registry.npmjs.org/@modyqyw/eslint-config/-/eslint-config-1.2.6.tgz#dac01ca50928ba60caeb09bf3297f643ed089613"
+  integrity sha512-8W/sJcQPvH2QOEKf5V6w4KcZJ7W8XPreqABsP5Ju0xSArTT+hv1cxjNQBAYxyaB4mGPvQSmgC6dj4GKexHaudQ==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^2.31.0"
     "@typescript-eslint/parser" "^2.31.0"
@@ -1070,6 +1070,13 @@
     eslint-plugin-promise "^4.2.1"
     eslint-plugin-standard "^4.0.1"
     typescript "^3.8.3"
+
+"@modyqyw/stylelint-config-scss@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/@modyqyw/stylelint-config-scss/-/stylelint-config-scss-1.0.3.tgz#1f97e7370a67794ae4d0f866e791d36b407765b7"
+  integrity sha512-NTlpTc6wCkrC0sdsWUyQO1+EF4SEFKnk8+E3xwzu9NU+NxdcV+N62UQkz8J098djX0mLv58ZJnr8ulnYO6Ffmg==
+  dependencies:
+    stylelint-config-twbs-bootstrap "^2.0.2"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -1769,7 +1776,7 @@ ansi-colors@^3.0.0, ansi-colors@^3.2.1:
   resolved "https://registry.npmjs.org/ansi-colors/-/ansi-colors-3.2.4.tgz#e3a3da4bfbae6c86a9c285625de124a234026fbf"
   integrity sha512-hHUXGagefjN2iRrID63xckIvotOXOojhQKWIPUZ4mNUZ9nLZW+7FMNoE1lOkEhNWYsx/7ysGIuJYCiMAA9FnrA==
 
-ansi-escapes@^4.1.0, ansi-escapes@^4.2.1, ansi-escapes@^4.3.0:
+ansi-escapes@^4.1.0, ansi-escapes@^4.2.1, ansi-escapes@^4.3.0, ansi-escapes@^4.3.1:
   version "4.3.1"
   resolved "https://registry.npmjs.org/ansi-escapes/-/ansi-escapes-4.3.1.tgz#a5c47cc43181f1f38ffd7076837700d395522a61"
   integrity sha512-JWF7ocqNrp8u9oqpgV+wH5ftbt+cfvv+PTjOvKLT3AdYly/LmORARfEVT1iyjwN+4MqE5UmVKoAdIBqeoCHgLA==
@@ -2625,9 +2632,9 @@ chardet@^0.7.0:
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
 "chokidar@>=2.0.0 <4.0.0":
-  version "3.3.1"
-  resolved "https://registry.npmjs.org/chokidar/-/chokidar-3.3.1.tgz#c84e5b3d18d9a4d77558fef466b1bf16bbeb3450"
-  integrity sha512-4QYCEWOcK3OJrxwvyyAOxFuhpvOVCYkr33LPfFNBjAD/w3sEzWsp2BUOkI4l9bHvWioAd0rc6NlHUOEaWkTeqg==
+  version "3.4.0"
+  resolved "https://registry.npmjs.org/chokidar/-/chokidar-3.4.0.tgz#b30611423ce376357c765b9b8f904b9fba3c0be8"
+  integrity sha512-aXAaho2VJtisB/1fg1+3nlLJqGOuewTzQpd/Tz0yTg2R0e4IGtshYvtjowyEumcBv2z+y4+kc75Mz7j5xJskcQ==
   dependencies:
     anymatch "~3.1.1"
     braces "~3.0.2"
@@ -2635,7 +2642,7 @@ chardet@^0.7.0:
     is-binary-path "~2.1.0"
     is-glob "~4.0.1"
     normalize-path "~3.0.0"
-    readdirp "~3.3.0"
+    readdirp "~3.4.0"
   optionalDependencies:
     fsevents "~2.1.2"
 
@@ -4560,9 +4567,9 @@ fsevents@^1.2.7:
     nan "^2.12.1"
 
 fsevents@~2.1.2:
-  version "2.1.2"
-  resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.1.2.tgz#4c0a1fb34bc68e543b4b82a9ec392bfbda840805"
-  integrity sha512-R4wDiBwZ0KzpgOWetKDug1FZcYhqYnUYKtfZYt4mD5SBz76q0KR4Q9o7GIPamsVPGmW3EYPPJ0dOOjvx32ldZA==
+  version "2.1.3"
+  resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.1.3.tgz#fb738703ae8d2f9fe900c33836ddebee8b97f23e"
+  integrity sha512-Auw9a4AxqWpa9GUfj370BMPzzyncfBABW8Mab7BGWBYDj4Isgq+cDKtx0i6u9jcX9pQDnswsaaOTgTmA5pEjuQ==
 
 function-bind@^1.1.1:
   version "1.1.1"
@@ -5317,6 +5324,11 @@ ipaddr.js@1.9.1, ipaddr.js@^1.9.0:
   version "1.9.1"
   resolved "https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-1.9.1.tgz#bff38543eeb8984825079ff3a2a8e6cbd46781b3"
   integrity sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==
+
+irregular-plurals@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.npmjs.org/irregular-plurals/-/irregular-plurals-3.2.0.tgz#b19c490a0723798db51b235d7e39add44dab0822"
+  integrity sha512-YqTdPLfwP7YFN0SsD3QUVCkm9ZG2VzOXv3DOrw5G5mkMbVwptTwVcFv7/C0vOpBmgTxAeTG19XpUs1E522LW9Q==
 
 is-absolute-url@^2.0.0:
   version "2.1.0"
@@ -7252,7 +7264,7 @@ performance-now@^2.1.0:
   resolved "https://registry.npmjs.org/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
 
-picomatch@^2.0.4, picomatch@^2.0.5, picomatch@^2.0.7, picomatch@^2.2.1:
+picomatch@^2.0.4, picomatch@^2.0.5, picomatch@^2.2.1:
   version "2.2.2"
   resolved "https://registry.npmjs.org/picomatch/-/picomatch-2.2.2.tgz#21f333e9b6b8eaff02468f5146ea406d345f4dad"
   integrity sha512-q0M/9eZHzmr0AulXyPwNfZjtwZ/RBZlbN3K3CErVrk50T2ASYI7Bye0EvekFY3IP1Nt2DHu0re+V2ZHIpMkuWg==
@@ -7311,6 +7323,13 @@ please-upgrade-node@^3.2.0:
   integrity sha512-gQR3WpIgNIKwBMVLkpMUeR3e1/E1y42bqDQZfql+kDeXd8COYfM8PQA4X6y7a8u9Ua9FHmsrrmirW2vHs45hWg==
   dependencies:
     semver-compare "^1.0.0"
+
+plur@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/plur/-/plur-4.0.0.tgz#729aedb08f452645fe8c58ef115bf16b0a73ef84"
+  integrity sha512-4UGewrYgqDFw9vV6zNV+ADmPAUAfJPKtGvb/VdpQAx25X5f3xXdGdyOEVFwkl8Hl/tl7+xbeHqSEM+D5/TirUg==
+  dependencies:
+    irregular-plurals "^3.2.0"
 
 portfinder@^1.0.13, portfinder@^1.0.25:
   version "1.0.25"
@@ -7725,10 +7744,19 @@ postcss-value-parser@^4.1.0:
   resolved "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.1.0.tgz#443f6a20ced6481a2bda4fa8532a6e55d789a2cb"
   integrity sha512-97DXOFbQJhk71ne5/Mt6cOu6yxsSfM0QGQyl0L25Gca4yGWEGJaig7l7gbCX623VqTBNGLRLaVUCnNkcedlRSQ==
 
-postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.21, postcss@^7.0.26, postcss@^7.0.27, postcss@^7.0.5, postcss@^7.0.6, postcss@^7.0.7:
+postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.2, postcss@^7.0.21, postcss@^7.0.26, postcss@^7.0.27, postcss@^7.0.5, postcss@^7.0.6, postcss@^7.0.7:
   version "7.0.27"
   resolved "https://registry.npmjs.org/postcss/-/postcss-7.0.27.tgz#cc67cdc6b0daa375105b7c424a85567345fc54d9"
   integrity sha512-WuQETPMcW9Uf1/22HWUWP9lgsIC+KEHg2kozMflKjbeUtw9ujvFX6QmIfozaErDkmLWS9WEnEdEe6Uo9/BNTdQ==
+  dependencies:
+    chalk "^2.4.2"
+    source-map "^0.6.1"
+    supports-color "^6.1.0"
+
+postcss@^7.0.17:
+  version "7.0.29"
+  resolved "https://registry.npmjs.org/postcss/-/postcss-7.0.29.tgz#d3a903872bd52280b83bce38cdc83ce55c06129e"
+  integrity sha512-ba0ApvR3LxGvRMMiUa9n0WR4HjzcYm7tS+ht4/2Nd0NLtHpPIH77fuB9Xh1/yJVz9O/E/95Y/dn8ygWsyffXtw==
   dependencies:
     chalk "^2.4.2"
     source-map "^0.6.1"
@@ -8054,12 +8082,12 @@ readdirp@^2.2.1:
     micromatch "^3.1.10"
     readable-stream "^2.0.2"
 
-readdirp@~3.3.0:
-  version "3.3.0"
-  resolved "https://registry.npmjs.org/readdirp/-/readdirp-3.3.0.tgz#984458d13a1e42e2e9f5841b129e162f369aff17"
-  integrity sha512-zz0pAkSPOXXm1viEwygWIPSPkcBYjW1xU5j/JBh5t9bGCJwa6f9+BJa6VaB2g+b55yVrmXzqkyLf4xaWYM0IkQ==
+readdirp@~3.4.0:
+  version "3.4.0"
+  resolved "https://registry.npmjs.org/readdirp/-/readdirp-3.4.0.tgz#9fdccdf9e9155805449221ac645e8303ab5b9ada"
+  integrity sha512-0xe001vZBnJEK+uKcj8qOhyAKPzIT+gStxWr3LCB0DwcXR5NZJ3IaC+yGnHCYzB/S7ov3m3EEbZI2zeNvX+hGQ==
   dependencies:
-    picomatch "^2.0.7"
+    picomatch "^2.2.1"
 
 redent@^2.0.0:
   version "2.0.0"
@@ -9265,6 +9293,17 @@ stylelint-config-twbs-bootstrap@^2.0.2:
     stylelint-config-standard "^20.0.0"
     stylelint-order "^4.0.0"
     stylelint-scss "^3.17.1"
+
+stylelint-formatter-pretty@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/stylelint-formatter-pretty/-/stylelint-formatter-pretty-2.0.1.tgz#d96f054a9dad7e8403d4598fb5b2615f182ca2a4"
+  integrity sha512-1Vv6phtxdgB7wpldwzrEyELfFl4TNE4M0DNDqaXFxWyXmFfgXBydb5Vkp6VAjOGYJRvuVU3Z34nXvQyauBGc1A==
+  dependencies:
+    ansi-escapes "^4.3.1"
+    chalk "^4.0.0"
+    log-symbols "^3.0.0"
+    plur "^4.0.0"
+    string-width "^4.2.0"
 
 stylelint-order@^4.0.0:
   version "4.0.0"
