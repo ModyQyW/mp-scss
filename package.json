@@ -39,6 +39,7 @@
     "sass-loader": "^8.0.2",
     "stylelint": "^13.3.3",
     "stylelint-config-twbs-bootstrap": "^2.0.2",
+    "stylelint-formatter-pretty": "^2.0.1",
     "vuepress": "^1.4.1",
     "vuepress-plugin-helper-live2d": "^1.0.0",
     "vuepress-plugin-sitemap": "^2.3.1",
