@@ -33,11 +33,13 @@
   border-width: $length-1;
   transition: all .5s;
 
+  /* stylelint-disable declaration-no-important */
   &[disabled] {
     color: $color-disabled !important;
     background-color: $gray-2 !important;
     border-color: $gray-2 !important;
   }
+  /* stylelint-enable declaration-no-important */
 
   &::after {
     display: none;
