@@ -48,6 +48,7 @@
     "yorkie": "^2.0.0"
   },
   "gitHooks": {
+    "commit-msg": "commitlint -e -V",
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
