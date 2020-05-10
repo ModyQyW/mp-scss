@@ -1055,10 +1055,10 @@
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
-"@modyqyw/eslint-config@^1.2.6":
-  version "1.2.6"
-  resolved "https://registry.npmjs.org/@modyqyw/eslint-config/-/eslint-config-1.2.6.tgz#dac01ca50928ba60caeb09bf3297f643ed089613"
-  integrity sha512-8W/sJcQPvH2QOEKf5V6w4KcZJ7W8XPreqABsP5Ju0xSArTT+hv1cxjNQBAYxyaB4mGPvQSmgC6dj4GKexHaudQ==
+"@modyqyw/eslint-config@^1.2.7":
+  version "1.2.7"
+  resolved "https://registry.npmjs.org/@modyqyw/eslint-config/-/eslint-config-1.2.7.tgz#daefd9a4bdefe2e4a2d26af3f7ebf35a240044ac"
+  integrity sha512-Ov+uK08ZpzkkkJFwZcf0JxzH+wNPdaZ1dd9aRkzviTJtKOVayOe0QEOWW/7STiSsSlDPtfwF4WeSBRu/va3NBg==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^2.31.0"
     "@typescript-eslint/parser" "^2.31.0"
