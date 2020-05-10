@@ -1071,10 +1071,10 @@
     eslint-plugin-standard "^4.0.1"
     typescript "^3.8.3"
 
-"@modyqyw/stylelint-config-scss@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.npmjs.org/@modyqyw/stylelint-config-scss/-/stylelint-config-scss-1.0.3.tgz#1f97e7370a67794ae4d0f866e791d36b407765b7"
-  integrity sha512-NTlpTc6wCkrC0sdsWUyQO1+EF4SEFKnk8+E3xwzu9NU+NxdcV+N62UQkz8J098djX0mLv58ZJnr8ulnYO6Ffmg==
+"@modyqyw/stylelint-config-scss@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.npmjs.org/@modyqyw/stylelint-config-scss/-/stylelint-config-scss-1.0.5.tgz#17ca5382170d6574675bf8c25eb2114195936810"
+  integrity sha512-7lVLIXSiCN2Low3hCmaxYAkcNcKMRIGjTanou2KywE/ZXBQVGtNIBSd4ME+1aD+t/kHlJjO5Q2yO9ky+iTy5KQ==
   dependencies:
     stylelint-config-twbs-bootstrap "^2.0.2"
 
