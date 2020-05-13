@@ -67,8 +67,6 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.scss": [
-      "stylelint"
-    ]
+    "*.scss": ["stylelint --custom-formatter=node_modules/stylelint-formatter-pretty"]
   }
 }
