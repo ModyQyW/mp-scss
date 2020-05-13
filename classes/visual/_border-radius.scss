@@ -2,4 +2,20 @@
   .rounded#{$key} {
     border-radius: $val;
   }
+
+  .rounded-tl#{$key} {
+    border-top-left-radius: $val;
+  }
+
+  .rounded-tr#{$key} {
+    border-top-right-radius: $val;
+  }
+
+  .rounded-br#{$key} {
+    border-bottom-right-radius: $val;
+  }
+
+  .rounded-bl#{$key} {
+    border-bottom-left-radius: $val;
+  }
 }
