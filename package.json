@@ -24,13 +24,18 @@
     "build:docs": "rimraf index.css && vuepress build docs",
     "deploy:docs": "sh deploy.sh"
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-angular": "^8.3.4",
+    "@commitlint/config-conventional": "^8.3.4",
     "@modyqyw/eslint-config": "^1.2.7",
     "@modyqyw/stylelint-config-scss": "^1.0.5",
     "@vuepress/plugin-active-header-links": "^1.4.1",
@@ -38,6 +43,8 @@
     "@vuepress/plugin-medium-zoom": "^1.4.1",
     "@vuepress/plugin-nprogress": "^1.4.1",
     "@vuepress/plugin-pwa": "^1.4.1",
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "^3.2.0",
     "eslint": "^6.8.0",
     "lint-staged": "^10.2.2",
     "rimraf": "^3.0.2",
