@@ -3,6 +3,26 @@
     border-radius: $val;
   }
 
+  .rounded-t#{$key} {
+    border-top-left-radius: $val;
+    border-top-right-radius: $val;
+  }
+
+  .rounded-b#{$key} {
+    border-bottom-right-radius: $val;
+    border-bottom-left-radius: $val;
+  }
+
+  .rounded-r#{$key} {
+    border-top-right-radius: $val;
+    border-bottom-right-radius: $val;
+  }
+
+  .rounded-l#{$key} {
+    border-top-left-radius: $val;
+    border-bottom-left-radius: $val;
+  }
+
   .rounded-tl#{$key} {
     border-top-left-radius: $val;
   }
