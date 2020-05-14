@@ -1,6 +1,6 @@
 {
   "name": "@modyqyw/mp-scss",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Custom css for miniprograms.",
   "keywords": [
     "css",
@@ -20,6 +20,7 @@
   "scripts": {
     "lint": "stylelint . --custom-formatter=node_modules/stylelint-formatter-pretty",
     "build": "sass _index.scss index.css --style=compressed --no-source-map",
+    "commit": "git-cz && git push",
     "dev:docs": "vuepress dev docs",
     "build:docs": "rimraf index.css && vuepress build docs",
     "deploy:docs": "sh deploy.sh"
