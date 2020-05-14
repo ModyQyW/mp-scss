@@ -1,15 +1,21 @@
 .btn,
 .btn-ghost,
+.btn-text,
 .btn-primary,
 .btn-primary-ghost,
+.btn-primary-text,
 .btn-success,
 .btn-success-ghost,
+.btn-success-text,
 .btn-warning,
 .btn-warning-ghost,
+.btn-warning-text,
 .btn-error,
 .btn-error-ghost,
+.btn-error-text,
 .btn-info,
-.btn-info-ghost {
+.btn-info-ghost,
+.btn-info-text {
   position: relative;
   box-sizing: border-box;
   display: inline-flex;
@@ -32,14 +38,6 @@
   border-style: solid;
   border-width: $length-1;
   transition: all .5s;
-
-  /* stylelint-disable declaration-no-important */
-  &[disabled] {
-    color: $color-disabled !important;
-    background-color: $gray-2 !important;
-    border-color: $gray-2 !important;
-  }
-  /* stylelint-enable declaration-no-important */
 
   &::after {
     display: none;
@@ -71,7 +69,10 @@ $m-btn: (
     "color-border-dark": $color-border-default-reverse,
     "color-dark-active": $color-main-reverse,
     "color-bg-dark-active": f-get-color($color-bg-default-reverse, 7),
-    "color-border-dark-active": f-get-color($color-border-default-reverse, 7)
+    "color-border-dark-active": f-get-color($color-border-default-reverse, 7),
+    "color-disabled": $color-disabled,
+    "color-bg-disabled": $gray-2,
+    "color-border-disabled": $gray-2,
   ),
   "-ghost": (
     "color-light": $gray-1,
@@ -86,6 +87,26 @@ $m-btn: (
     "color-dark-active": $gray-1,
     "color-bg-dark-active": $color-primary-reverse,
     "color-border-dark-active": $color-primary-reverse,
+    "color-disabled": $color-disabled,
+    "color-bg-disabled": $gray-2,
+    "color-border-disabled": $gray-2,
+  ),
+  "-text": (
+    "color-light": $gray-1,
+    "color-bg-light": transparent,
+    "color-border-light": transparent,
+    "color-light-active": $gray-1,
+    "color-bg-light-active": transparent,
+    "color-border-light-active": transparent,
+    "color-dark": $gray-1,
+    "color-bg-dark": transparent,
+    "color-border-dark": transparent,
+    "color-dark-active": $gray-1,
+    "color-bg-dark-active": transparent,
+    "color-border-dark-active": transparent,
+    "color-disabled": $color-disabled,
+    "color-bg-disabled": transparent,
+    "color-border-disabled": transparent,
   ),
   "-primary": (
     "color-light": $gray-1,
@@ -99,7 +120,10 @@ $m-btn: (
     "color-border-dark": $color-primary-reverse,
     "color-dark-active": mix($gray-1, $color-bg-container-reverse, 85%),
     "color-bg-dark-active": f-get-color($color-primary-reverse, 7),
-    "color-border-dark-active": f-get-color($color-primary-reverse, 7)
+    "color-border-dark-active": f-get-color($color-primary-reverse, 7),
+    "color-disabled": $color-disabled,
+    "color-bg-disabled": $gray-2,
+    "color-border-disabled": $gray-2,
   ),
   "-primary-ghost": (
     "color-light": $color-primary,
@@ -113,7 +137,27 @@ $m-btn: (
     "color-border-dark": $color-primary-reverse,
     "color-dark-active": mix($gray-1, $color-bg-container-reverse, 85%),
     "color-bg-dark-active": $color-primary-reverse,
-    "color-border-dark-active": $color-primary-reverse
+    "color-border-dark-active": $color-primary-reverse,
+    "color-disabled": $color-disabled,
+    "color-bg-disabled": $gray-2,
+    "color-border-disabled": $gray-2,
+  ),
+  "-primary-text": (
+    "color-light": $color-primary,
+    "color-bg-light": transparent,
+    "color-border-light": transparent,
+    "color-light-active": f-get-color($color-primary, 7),
+    "color-bg-light-active": transparent,
+    "color-border-light-active": transparent,
+    "color-dark": $color-primary-reverse,
+    "color-bg-dark": transparent,
+    "color-border-dark": transparent,
+    "color-dark-active": mix($color-primary-reverse, $color-bg-container-reverse, 85%),
+    "color-bg-dark-active": transparent,
+    "color-border-dark-active": transparent,
+    "color-disabled": $color-disabled,
+    "color-bg-disabled": transparent,
+    "color-border-disabled": transparent,
   ),
   "-success": (
     "color-light": $gray-1,
@@ -127,7 +171,10 @@ $m-btn: (
     "color-border-dark": $color-success-reverse,
     "color-dark-active": mix($gray-1, $color-bg-container-reverse, 85%),
     "color-bg-dark-active": f-get-color($color-success-reverse, 7),
-    "color-border-dark-active": f-get-color($color-success-reverse, 7)
+    "color-border-dark-active": f-get-color($color-success-reverse, 7),
+    "color-disabled": $color-disabled,
+    "color-bg-disabled": $gray-2,
+    "color-border-disabled": $gray-2,
   ),
   "-success-ghost": (
     "color-light": $color-success,
@@ -141,7 +188,27 @@ $m-btn: (
     "color-border-dark": $color-success-reverse,
     "color-dark-active": mix($gray-1, $color-bg-container-reverse, 85%),
     "color-bg-dark-active": $color-success-reverse,
-    "color-border-dark-active": $color-success-reverse
+    "color-border-dark-active": $color-success-reverse,
+    "color-disabled": $color-disabled,
+    "color-bg-disabled": $gray-2,
+    "color-border-disabled": $gray-2,
+  ),
+  "-success-text": (
+    "color-light": $color-success,
+    "color-bg-light": transparent,
+    "color-border-light": transparent,
+    "color-light-active": f-get-color($color-success, 7),
+    "color-bg-light-active": transparent,
+    "color-border-light-active": transparent,
+    "color-dark": $color-success-reverse,
+    "color-bg-dark": transparent,
+    "color-border-dark": transparent,
+    "color-dark-active": mix($color-success-reverse, $color-bg-container-reverse, 85%),
+    "color-bg-dark-active": transparent,
+    "color-border-dark-active": transparent,
+    "color-disabled": $color-disabled,
+    "color-bg-disabled": transparent,
+    "color-border-disabled": transparent,
   ),
   "-error": (
     "color-light": $gray-1,
@@ -155,7 +222,10 @@ $m-btn: (
     "color-border-dark": $color-error-reverse,
     "color-dark-active": mix($gray-1, $color-bg-container-reverse, 85%),
     "color-bg-dark-active": f-get-color($color-error-reverse, 7),
-    "color-border-dark-active": f-get-color($color-error-reverse, 7)
+    "color-border-dark-active": f-get-color($color-error-reverse, 7),
+    "color-disabled": $color-disabled,
+    "color-bg-disabled": $gray-2,
+    "color-border-disabled": $gray-2,
   ),
   "-error-ghost": (
     "color-light": $color-error,
@@ -169,7 +239,27 @@ $m-btn: (
     "color-border-dark": $color-error-reverse,
     "color-dark-active": mix($gray-1, $color-bg-container-reverse, 85%),
     "color-bg-dark-active": $color-error-reverse,
-    "color-border-dark-active": $color-error-reverse
+    "color-border-dark-active": $color-error-reverse,
+    "color-disabled": $color-disabled,
+    "color-bg-disabled": $gray-2,
+    "color-border-disabled": $gray-2,
+  ),
+  "-error-text": (
+    "color-light": $color-error,
+    "color-bg-light": transparent,
+    "color-border-light": transparent,
+    "color-light-active": f-get-color($color-error, 7),
+    "color-bg-light-active": transparent,
+    "color-border-light-active": transparent,
+    "color-dark": $color-error-reverse,
+    "color-bg-dark": transparent,
+    "color-border-dark": transparent,
+    "color-dark-active": mix($color-error-reverse, $color-bg-container-reverse, 85%),
+    "color-bg-dark-active": transparent,
+    "color-border-dark-active": transparent,
+    "color-disabled": $color-disabled,
+    "color-bg-disabled": transparent,
+    "color-border-disabled": transparent,
   ),
   "-warning": (
     "color-light": $gray-1,
@@ -183,7 +273,10 @@ $m-btn: (
     "color-border-dark": $color-warning-reverse,
     "color-dark-active": mix($gray-1, $color-bg-container-reverse, 85%),
     "color-bg-dark-active": f-get-color($color-warning-reverse, 7),
-    "color-border-dark-active": f-get-color($color-warning-reverse, 7)
+    "color-border-dark-active": f-get-color($color-warning-reverse, 7),
+    "color-disabled": $color-disabled,
+    "color-bg-disabled": $gray-2,
+    "color-border-disabled": $gray-2,
   ),
   "-warning-ghost": (
     "color-light": $color-warning,
@@ -197,7 +290,27 @@ $m-btn: (
     "color-border-dark": $color-warning-reverse,
     "color-dark-active": mix($gray-1, $color-bg-container-reverse, 85%),
     "color-bg-dark-active": $color-warning-reverse,
-    "color-border-dark-active": $color-warning-reverse
+    "color-border-dark-active": $color-warning-reverse,
+    "color-disabled": $color-disabled,
+    "color-bg-disabled": $gray-2,
+    "color-border-disabled": $gray-2,
+  ),
+  "-warning-text": (
+    "color-light": $color-warning,
+    "color-bg-light": transparent,
+    "color-border-light": transparent,
+    "color-light-active": f-get-color($color-warning, 7),
+    "color-bg-light-active": transparent,
+    "color-border-light-active": transparent,
+    "color-dark": $color-warning-reverse,
+    "color-bg-dark": transparent,
+    "color-border-dark": transparent,
+    "color-dark-active": mix($color-warning-reverse, $color-bg-container-reverse, 85%),
+    "color-bg-dark-active": transparent,
+    "color-border-dark-active": transparent,
+    "color-disabled": $color-disabled,
+    "color-bg-disabled": transparent,
+    "color-border-disabled": transparent,
   ),
   "-info": (
     "color-light": $gray-1,
@@ -211,7 +324,10 @@ $m-btn: (
     "color-border-dark": $color-info-reverse,
     "color-dark-active": mix($gray-1, $color-bg-container-reverse, 85%),
     "color-bg-dark-active": f-get-color($color-info-reverse, 7),
-    "color-border-dark-active": f-get-color($color-info-reverse, 7)
+    "color-border-dark-active": f-get-color($color-info-reverse, 7),
+    "color-disabled": $color-disabled,
+    "color-bg-disabled": $gray-2,
+    "color-border-disabled": $gray-2,
   ),
   "-info-ghost": (
     "color-light": $color-info,
@@ -225,8 +341,28 @@ $m-btn: (
     "color-border-dark": $color-info-reverse,
     "color-dark-active": mix($gray-1, $color-bg-container-reverse, 85%),
     "color-bg-dark-active": $color-info-reverse,
-    "color-border-dark-active": $color-info-reverse
-  )
+    "color-border-dark-active": $color-info-reverse,
+    "color-disabled": $color-disabled,
+    "color-bg-disabled": $gray-2,
+    "color-border-disabled": $gray-2,
+  ),
+  "-info-text": (
+    "color-light": $color-info,
+    "color-bg-light": transparent,
+    "color-border-light": transparent,
+    "color-light-active": f-get-color($color-info, 7),
+    "color-bg-light-active": transparent,
+    "color-border-light-active": transparent,
+    "color-dark": $color-info-reverse,
+    "color-bg-dark": transparent,
+    "color-border-dark": transparent,
+    "color-dark-active": mix($color-info-reverse, $color-bg-container-reverse, 85%),
+    "color-bg-dark-active": transparent,
+    "color-border-dark-active": transparent,
+    "color-disabled": $color-disabled,
+    "color-bg-disabled": transparent,
+    "color-border-disabled": transparent,
+  ),
 );
 
 @each $key, $val in $m-btn {
@@ -254,4 +390,12 @@ $m-btn: (
       border-color: map-get($val, "color-border-dark-active");
     }
   }
+
+  /* stylelint-disable declaration-no-important */
+  .btn#{$key}[disabled] {
+    color: map-get($val, "color-disabled") !important;
+    background-color: map-get($val, "color-bg-disabled") !important;
+    border-color: map-get($val, "color-border-disabled") !important;
+  }
+  /* stylelint-enable declaration-no-important */
 }
