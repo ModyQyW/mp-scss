@@ -18,4 +18,14 @@
   .border-l#{$key} {
     border-left-style: $val;
   }
+
+  .border-y#{$key} {
+    border-top-style: $val;
+    border-bottom-style: $val;
+  }
+
+  .border-x#{$key} {
+    border-right-style: $val;
+    border-left-style: $val;
+  }
 }
