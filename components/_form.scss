@@ -21,18 +21,32 @@
   }
 }
 
-.form-item {
+.form-item,
+.form-item-lg,
+.form-item-xl {
   position: relative;
   box-sizing: border-box;
   display: flex;
-  flex: 0 0 auto;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: $length-41;
-  min-height: $length-41;
   padding: 0 $length-12;
+}
+
+.form-item {
+  flex: 0 0 $length-41;
+  height: $length-41;
+}
+
+.form-item-lg {
+  flex: 0 0 $length-51;
+  height: $length-51;
+}
+
+.form-item-xl {
+  flex: 0 0 $length-61;
+  height: $length-61;
 }
 
 .form-item__label,
