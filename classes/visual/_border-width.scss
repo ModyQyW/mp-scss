@@ -3,6 +3,16 @@
     border-width: $val;
   }
 
+  .border-y#{$key} {
+    border-top-width: $val;
+    border-bottom-width: $val;
+  }
+
+  .border-x#{$key} {
+    border-right-width: $val;
+    border-left-width: $val;
+  }
+
   .border-t#{$key} {
     border-top-width: $val;
   }
