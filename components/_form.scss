@@ -75,8 +75,20 @@
 .form-item-lg__label,
 .form-item-xl__label,
 .form-item-auto__label {
-  flex: 0 0 $length-60;
   height: $length-40;
+}
+
+.form-item__label,
+.form-item-auto__label {
+  flex: 0 0 $length-60;
+}
+
+.form-item-lg__label {
+  flex: 0 0 $length-70;
+}
+
+.form-item-xl__label {
+  flex: 0 0 $length-80;
 }
 
 .form-item__content,
