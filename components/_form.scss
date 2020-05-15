@@ -23,7 +23,8 @@
 
 .form-item,
 .form-item-lg,
-.form-item-xl {
+.form-item-xl,
+.form-item-auto {
   position: relative;
   box-sizing: border-box;
   display: flex;
@@ -49,25 +50,60 @@
   height: $length-61;
 }
 
+.form-item-auto {
+  flex: 0 0 auto;
+  height: auto;
+}
+
 .form-item__label,
-.form-item__content {
+.form-item__content,
+.form-item-lg__label,
+.form-item-lg__content,
+.form-item-xl__label,
+.form-item-xl__content,
+.form-item-auto__label,
+.form-item-auto__content {
   position: relative;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+}
+
+.form-item__label,
+.form-item-lg__label,
+.form-item-xl__label,
+.form-item-auto__label {
+  flex: 0 0 $length-60;
   height: $length-40;
 }
 
-.form-item__label {
-  flex: 0 0 $length-60;
-  justify-content: flex-start;
+.form-item__content,
+.form-item-lg__content,
+.form-item-xl__content,
+.form-item-auto__content {
+  flex: auto;
+  padding-right: $length-8;
+  padding-left: $length-8;
 }
 
 .form-item__content {
-  flex: auto;
-  justify-content: flex-start;
+  height: $length-40;
   min-height: $length-40;
-  padding-left: $length-8;
+}
+
+.form-item-lg__content {
+  height: $length-50;
+  min-height: $length-50;
+}
+
+.form-item-xl__content {
+  height: $length-60;
+  min-height: $length-60;
+}
+
+.form-item-auto__content {
+  height: auto;
+  min-height: $length-40;
 }
