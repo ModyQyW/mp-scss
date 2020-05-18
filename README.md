@@ -14,27 +14,31 @@ A scss lib for miniprogram. Since miniprogram is used almost only in China, Chin
 
 ### 准备
 
-- 推荐使用 nvm，长期支持版 lts node，长期支持版 npm 和 yarn。
-  - 参照以下链接，首先安装 nvm
-    - [nvm for Mac/Linux](https://github.com/nvm-sh/nvm)
-    - [nvm-windows](https://github.com/coreybutler/nvm-windows)
-    - **不**推荐使用 [Homebrew](https://brew.sh/) 在 Mac 安装 nvm
-  - 接着在终端/命令行安装长期支持版 node
+以下使用 macOS 做平台演示，Linux 和 Windows 请自行调整。
 
-    ```sh
-    nvm install --lts
-    ```
+- 手动安装 [nvm](https://github.com/nvm-sh/nvm)
 
-  - 全局升级 npm 到长期支持版，安装 yarn
+```sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+```
 
-    ```sh
-    npm i -g npm@lts
-    npm i -g yarn
-    ```
+- 在终端安装长期支持版 node
 
-- Git 也是需要的
-  - [git for Windows/Linux](https://git-scm.com/downloads)
-  - 使用 [Homebrew](https://brew.sh/) 在 Mac 安装 git 是推荐的
+```sh
+nvm install --lts
+```
+
+- 全局升级 npm 到长期支持版并全局安装 yarn
+
+```sh
+npm i -g npm@lts yarn
+```
+
+- 使用 [Homebrew](https://brew.sh/) 安装 git
+
+```sh
+brew install git
+```
 
 ### 安装
 
