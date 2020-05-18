@@ -43,6 +43,18 @@
     border-color: $val;
   }
 
+  .border-y#{$key},
+  .light .border-y#{$key} {
+    border-top-color: $val;
+    border-bottom-color: $val;
+  }
+
+  .border-x#{$key},
+  .light .border-x#{$key} {
+    border-right-color: $val;
+    border-left-color: $val;
+  }
+
   .border-t#{$key},
   .light .border-t#{$key} {
     border-top-color: $val;
@@ -68,6 +80,18 @@
   .border#{$key},
   .light .border#{$key} {
     border-color: $val;
+  }
+
+  .border-y#{$key},
+  .light .border-y#{$key} {
+    border-top-color: $val;
+    border-bottom-color: $val;
+  }
+
+  .border-x#{$key},
+  .light .border-x#{$key} {
+    border-right-color: $val;
+    border-left-color: $val;
   }
 
   .border-t#{$key},
@@ -96,6 +120,16 @@
     border-color: $val;
   }
 
+  .dark .border-y#{$key} {
+    border-top-color: $val;
+    border-bottom-color: $val;
+  }
+
+  .dark .border-x#{$key} {
+    border-right-color: $val;
+    border-left-color: $val;
+  }
+
   .dark .border-t#{$key} {
     border-top-color: $val;
   }
@@ -118,6 +152,16 @@
     border-color: $val;
   }
 
+  .dark .border-y#{$key} {
+    border-top-color: $val;
+    border-bottom-color: $val;
+  }
+
+  .dark .border-x#{$key} {
+    border-right-color: $val;
+    border-left-color: $val;
+  }
+
   .dark .border-t#{$key} {
     border-top-color: $val;
   }
@@ -138,6 +182,16 @@
 @each $key, $val in $m-border-color-dark {
   .dark .border#{$key} {
     border-color: $val;
+  }
+
+  .dark .border-y#{$key} {
+    border-top-color: $val;
+    border-bottom-color: $val;
+  }
+
+  .dark .border-x#{$key} {
+    border-right-color: $val;
+    border-left-color: $val;
   }
 
   .dark .border-t#{$key} {
