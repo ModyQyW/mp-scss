@@ -16,25 +16,25 @@ A scss lib for miniprogram. Since miniprogram is used almost only in China, Chin
 
 以下使用 macOS 做平台演示，Linux 和 Windows 请自行调整。
 
-- 手动安装 [nvm](https://github.com/nvm-sh/nvm)
+- 手动安装 [nvm](https://github.com/nvm-sh/nvm)。你可以在链接里获取更多信息。
 
 ```sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ```
 
-- 在终端安装长期支持版 node
+- 在终端安装长期支持版 node。
 
 ```sh
 nvm install --lts
 ```
 
-- 全局升级 npm 到长期支持版并全局安装 yarn
+- 全局升级 npm 到长期支持版并全局安装 yarn。
 
 ```sh
 npm i -g npm@lts yarn
 ```
 
-- 使用 [Homebrew](https://brew.sh/) 安装 git
+- 使用 [Homebrew](https://brew.sh/) 安装 git。
 
 ```sh
 brew install git
