@@ -53,7 +53,9 @@ page {
 .nav,
 .footer,
 .aside,
-.main {
+.aside-horizontal,
+.main,
+.main-horizontal {
   position: relative;
   box-sizing: border-box;
   display: flex;
@@ -90,7 +92,8 @@ page {
   padding: 0 $length-12;
 }
 
-.aside.aside-horizontal {
+.aside,
+.aside-horizontal {
   flex: 0 0 auto;
   flex-direction: column;
   width: auto;
