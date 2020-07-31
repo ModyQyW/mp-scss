@@ -1,21 +1,21 @@
 {
   "name": "@modyqyw/mp-scss",
-  "version": "1.5.4",
+  "version": "1.6.0",
   "description": "Custom css for miniprograms.",
   "keywords": [
     "css",
     "miniprogram",
     "scss"
   ],
-  "homepage": "https://github.com/Millcloud/mp-scss#readme",
+  "homepage": "https://github.com/MillCloud/mp-scss#readme",
   "bugs": {
-    "url": "https://github.com/Millcloud/mp-scss/issues"
+    "url": "https://github.com/MillCloud/mp-scss/issues"
   },
   "license": "MIT",
   "author": "ModyQyW <wurui7@mail3.sysu.edu.cn>",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Millcloud/mp-scss.git"
+    "url": "git@github.com:MillCloud/mp-scss.git"
   },
   "scripts": {
     "lint": "stylelint . --custom-formatter=node_modules/stylelint-formatter-pretty",
@@ -31,34 +31,38 @@
     }
   },
   "dependencies": {
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2"
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
-    "@modyqyw/eslint-config": "^1.2.7",
-    "@modyqyw/stylelint-config-scss": "^1.0.5",
-    "@vuepress/plugin-active-header-links": "^1.4.1",
-    "@vuepress/plugin-back-to-top": "^1.4.1",
-    "@vuepress/plugin-medium-zoom": "^1.4.1",
-    "@vuepress/plugin-nprogress": "^1.4.1",
-    "@vuepress/plugin-pwa": "^1.4.1",
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
+    "@modyqyw/eslint-config": "^1.6.0",
+    "@modyqyw/prettier-config": "^1.0.1",
+    "@modyqyw/stylelint-config-scss": "^1.0.16",
+    "@vuepress/plugin-active-header-links": "^1.5.2",
+    "@vuepress/plugin-back-to-top": "^1.5.2",
+    "@vuepress/plugin-blog": "^1.9.2",
+    "@vuepress/plugin-medium-zoom": "^1.5.2",
+    "@vuepress/plugin-nprogress": "^1.5.2",
+    "@vuepress/plugin-pwa": "^1.5.2",
     "commitizen": "^4.1.2",
     "cz-conventional-changelog": "^3.2.0",
-    "eslint": "^6.8.0",
-    "lint-staged": "^10.2.2",
+    "eslint": "^7.5.0",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
-    "stylelint": "^13.3.3",
-    "stylelint-formatter-pretty": "^2.0.1",
-    "vuepress": "^1.4.1",
-    "vuepress-plugin-helper-live2d": "^1.0.0",
+    "stylelint": "^13.6.1",
+    "stylelint-formatter-pretty": "^2.1.0",
+    "vuepress": "^1.5.2",
+    "vuepress-plugin-code-copy": "^1.0.6",
+    "vuepress-plugin-helper-live2d": "^1.0.2",
     "vuepress-plugin-sitemap": "^2.3.1",
     "yorkie": "^2.0.0"
   },
   "peerDependencies": {
     "sass": "~1.26.0",
-    "sass-loader": "~8.0.0"
+    "sass-loader": "~9.0.0"
   },
   "publishConfig": {
     "access": "public"
@@ -68,6 +72,8 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.scss": ["stylelint --custom-formatter=node_modules/stylelint-formatter-pretty"]
+    "*.scss": [
+      "stylelint --custom-formatter=node_modules/stylelint-formatter-pretty"
+    ]
   }
 }

@@ -14,7 +14,7 @@ git add -A
 git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io
-git push -f git@github.com:Millcloud/mp-scss.git master:gh-pages
+git push -f git@github.com:MillCloud/mp-scss.git master:gh-pages
 
 cd -
 

@@ -6,7 +6,7 @@ A scss lib for miniprogram. Since miniprogram is used almost only in China, Chin
 
 该样式库的目标是：在仅有原型图的情况下，用这个样式库能快速做出不仅能适配微信小程序和支付宝小程序，而且看起来还过得去的页面。
 
-初期阶段，更新较为频繁且可能存在遗漏，欢迎中肯的意见，建议，issue，pr 等。
+初期阶段，更新较为频繁且可能存在遗漏，欢迎中肯的意见，建议，issue，pr 等。建议 v3 版本再投入正式使用。
 
 ## 起步
 
@@ -70,7 +70,7 @@ npm i @modyqyw/mp-scss
 
 注意：如果你只在`App.vue`的`style`标签中引入了预设变量文件，你是不能在每个样式标签/文件中使用预设变量的。这与编译机制有关，`App.vue`中的`style`标签会被编译成微信小程序的`app.wxss`，其中不会再包含变量，所以每个样式标签/文件不能读取到预设变量。
 
-要在每个样式标签/文件中都使用预设变量，你可以每个样式标签/文件中都手动引入一次，或配置`sass-loader`的`prependData`选项，把预设变量文件自动引入到每个样式标签/文件中。
+要在每个样式标签/文件中都使用预设变量，你可以每个样式标签/文件中都手动引入一次，或配置`sass-loader`，把预设变量文件自动引入到每个样式标签/文件中。
 
 - 引入预设重置样式。注意：不要使用微信小程序 v2 样式，否则可能导致样式重置不生效。
 
@@ -255,19 +255,19 @@ $line-height-base: $line-height-benchmark * $scale + $unit; // 基准行高计�
 
 ## 版本命名
 
-使用 [SemVer](http://semver.org/) 进行版本控制。有关可用版本，请参阅此仓库的 [releases](https://github.com/Millcloud/css-styles/releases)。
+使用 [SemVer](http://semver.org/) 进行版本控制。有关可用版本，请参阅此仓库的 [releases](https://github.com/MillCloud/mp-scss/releases)。
 
 ## 作者
 
 - **Rui Wu** - *最初工作* - [ModyQyW](https://github.com/ModyQyW)
 
-另请参阅参与此项目的 [contributors](https://github.com/Millcloud/css-styles/contributors) 列表。
+另请参阅参与此项目的 [contributors](https://github.com/MillCloud/mp-scss/contributors) 列表。
 
 ## 协议
 
 [MIT](./LICENSE)
 
-Copyright (c) 2019-present Millcloud
+Copyright (c) 2019-present MillCloud
 
 ## 致谢
 
