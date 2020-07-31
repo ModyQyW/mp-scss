@@ -1,145 +1,133 @@
 module.exports = {
-  base: "/mp-scss/",
-  title: "@modyqyw/mp-scss",
+  base: '/mp-scss/',
+  title: '@modyqyw/mp-scss',
   head: [
     [
-      "link",
+      'link',
       {
-        rel: "icon",
+        rel: 'icon',
         href: `/favicon.ico`,
       },
     ],
     [
-      "link",
+      'link',
       {
-        rel: "manifest",
-        href: "/manifest.json",
+        rel: 'manifest',
+        href: '/manifest.json',
       },
     ],
     [
-      "meta",
+      'meta',
       {
-        name: "theme-color",
-        content: "#65b687",
+        name: 'theme-color',
+        content: '#65b687',
       },
     ],
     [
-      "meta",
+      'meta',
       {
-        name: "apple-mobile-web-app-capable",
-        content: "yes",
+        name: 'apple-mobile-web-app-capable',
+        content: 'yes',
       },
     ],
     [
-      "meta",
+      'meta',
       {
-        name: "apple-mobile-web-app-status-bar-style",
-        content: "black",
+        name: 'apple-mobile-web-app-status-bar-style',
+        content: 'black',
       },
     ],
     [
-      "link",
+      'link',
       {
-        rel: "apple-touch-icon",
-        href: "/favicon.ico",
+        rel: 'apple-touch-icon',
+        href: '/favicon.ico',
       },
     ],
     [
-      "link",
+      'link',
       {
-        rel: "mask-icon",
-        href: "/favicon.ico",
-        color: "#000000",
+        rel: 'mask-icon',
+        href: '/favicon.ico',
+        color: '#000000',
       },
     ],
     [
-      "meta",
+      'meta',
       {
-        name: "msapplication-TileImage",
-        content: "/favicon.ico",
+        name: 'msapplication-TileImage',
+        content: '/favicon.ico',
       },
     ],
     [
-      "meta",
+      'meta',
       {
-        name: "msapplication-TileColor",
-        content: "#000000",
+        name: 'msapplication-TileColor',
+        content: '#000000',
       },
     ],
   ],
   locales: {
-    "/": {
-      lang: "zh-CN",
+    '/': {
+      lang: 'zh-CN',
     },
   },
   themeConfig: {
     nav: [
       {
-        text: "首页",
-        link: "/",
+        text: '首页',
+        link: '/',
       },
       {
-        text: "准备",
-        link: "/preparation/",
-      },
-      {
-        text: "变量",
-        link: "/variables/",
-      },
-      {
-        text: "重置样式",
-        link: "/normalize/",
-      },
-      {
-        text: "组件样式",
-        link: "/components/",
-      },
-      {
-        text: "类样式",
-        link: "/classes/",
-      },
-      {
-        text: "优化",
-        link: "/optimization/",
+        text: '准备',
+        link: '/preparation/',
       },
     ],
-    sidebar: "auto",
+    sidebar: 'auto',
     sidebarDepth: 3,
-    searchMaxSuggestions: 10,
-    lastUpdated: "上次更新",
-    repo: "Millcloud/mp-scss",
-    repoLabel: "查看源码",
+    lastUpdated: 'Last Updated',
+    repo: 'MillCloud/mp-scss',
+    repoLabel: '查看源码',
     editLinks: true,
-    editLinkText: "编辑此页面",
+    editLinkText: '编辑此页面',
   },
   plugins: [
-    "@vuepress/active-header-links",
-    "@vuepress/back-to-top",
-    "@vuepress/medium-zoom",
-    "@vuepress/nprogress",
+    '@vuepress/active-header-links',
+    '@vuepress/back-to-top',
     [
-      "@vuepress/pwa",
+      '@vuepress/last-updated',
+      {
+        dateOptions: {
+          hour12: false,
+        },
+      },
+    ],
+    '@vuepress/medium-zoom',
+    '@vuepress/nprogress',
+    [
+      '@vuepress/pwa',
       {
         serviceWorker: true,
         updatePopup: {
-          message: "新内容可用。",
-          buttonText: "刷新",
+          message: '新内容可用。',
+          buttonText: '刷新',
         },
       },
     ],
     [
-      "sitemap",
+      'sitemap',
       {
-        hostname: "https://millcloud.github.io",
+        hostname: 'https://millcloud.github.io',
       },
     ],
+    'vuepress-plugin-code-copy',
     [
-      "helper-live2d",
+      'helper-live2d',
       {
         live2d: {
-          model: "wanko",
+          model: 'wanko',
           display: {
-            position: "right",
+            position: 'right',
             width: 135,
             height: 300,
             hOffset: 65,
@@ -151,6 +139,8 @@ module.exports = {
   ],
   markdown: {
     lineNumbers: true,
+    toc: { includeLevel: [2, 3, 4] },
+    extractHeaders: ['h2', 'h3', 'h4'],
   },
   evergreen: true,
 };
