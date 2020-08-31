@@ -1,6 +1,6 @@
 {
   "name": "@modyqyw/mp-scss",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Custom css for miniprograms.",
   "keywords": [
     "css",
@@ -11,6 +11,7 @@
   "bugs": {
     "url": "https://github.com/MillCloud/mp-scss/issues"
   },
+  "main": "./dist/index.css",
   "license": "MIT",
   "author": "ModyQyW <wurui7@mail3.sysu.edu.cn>",
   "repository": {
@@ -18,12 +19,13 @@
     "url": "git@github.com:MillCloud/mp-scss.git"
   },
   "scripts": {
-    "lint": "stylelint . --custom-formatter=node_modules/stylelint-formatter-pretty",
-    "build": "sass _index.scss index.css --style=compressed --no-source-map",
+    "lint": "stylelint ./**/*.scss --fix",
+    "build": "rimraf dist && sass ./_index.scss ./dist/index.css --style=compressed",
     "commit": "git-cz && git push",
     "dev:docs": "vuepress dev docs",
-    "build:docs": "rimraf index.css && vuepress build docs",
-    "deploy:docs": "sh deploy.sh"
+    "build:docs": "vuepress build docs",
+    "deploy:docs": "sh deploy.sh",
+    "check": "ncu"
   },
   "config": {
     "commitizen": {
@@ -32,48 +34,49 @@
   },
   "dependencies": {
     "sass": "^1.26.10",
-    "sass-loader": "^9.0.2"
+    "sass-loader": "^10.0.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^9.1.1",
-    "@commitlint/config-conventional": "^9.1.1",
-    "@modyqyw/eslint-config": "^1.6.0",
-    "@modyqyw/prettier-config": "^1.0.1",
-    "@modyqyw/stylelint-config-scss": "^1.0.16",
-    "@vuepress/plugin-active-header-links": "^1.5.2",
-    "@vuepress/plugin-back-to-top": "^1.5.2",
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.2",
+    "@modyqyw/eslint-config": "^1.7.2",
+    "@modyqyw/prettier-config": "^1.1.1",
+    "@modyqyw/stylelint-config-scss": "^1.0.18",
+    "@vuepress/plugin-active-header-links": "^1.5.4",
+    "@vuepress/plugin-back-to-top": "^1.5.4",
     "@vuepress/plugin-blog": "^1.9.2",
-    "@vuepress/plugin-medium-zoom": "^1.5.2",
-    "@vuepress/plugin-nprogress": "^1.5.2",
-    "@vuepress/plugin-pwa": "^1.5.2",
-    "commitizen": "^4.1.2",
-    "cz-conventional-changelog": "^3.2.0",
-    "eslint": "^7.5.0",
-    "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5",
+    "@vuepress/plugin-medium-zoom": "^1.5.4",
+    "@vuepress/plugin-nprogress": "^1.5.4",
+    "@vuepress/plugin-pwa": "^1.5.4",
+    "commitizen": "^4.2.1",
+    "eslint": "^7.7.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.13",
+    "prettier": "^2.1.1",
     "rimraf": "^3.0.2",
-    "stylelint": "^13.6.1",
-    "stylelint-formatter-pretty": "^2.1.0",
-    "vuepress": "^1.5.2",
+    "stylelint": "^13.7.0",
+    "vuepress": "^1.5.4",
     "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-plugin-helper-live2d": "^1.0.2",
-    "vuepress-plugin-sitemap": "^2.3.1",
-    "yorkie": "^2.0.0"
+    "vuepress-plugin-sitemap": "^2.3.1"
   },
   "peerDependencies": {
     "sass": "~1.26.0",
-    "sass-loader": "~9.0.0"
+    "sass-loader": "~10.0.0"
   },
   "publishConfig": {
     "access": "public"
   },
-  "gitHooks": {
-    "commit-msg": "commitlint -e -V",
-    "pre-commit": "lint-staged"
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
-    "*.scss": [
-      "stylelint --custom-formatter=node_modules/stylelint-formatter-pretty"
+    "**/*.scss": [
+      "prettier --write",
+      "stylelint --fix"
     ]
   }
 }
