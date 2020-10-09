@@ -51,8 +51,8 @@ $magenta: #eb2f96 !default;
 $l-denominator: 3, 4, 5, 6, 8, 10, 12, 16, 24, 100 !default;
 
 /* lengths */
+$length-min: 0 !default;
 $length-max: 256 !default;
-$length-has-zero: true !default;
 $length-has-auto: true !default;
 
 /* positioning */
@@ -121,10 +121,10 @@ $m-flex-shrink: (
   "": 1,
   "-0": 0
 ) !default;
-$m-flex-grow: (
-  "": 1,
-  "-0": 0
-) !default;
+$flex-shrink-min: 0 !default;
+$flex-shrink-max: 8 !default;
+$flex-grow-min: 0 !default;
+$flex-grow-max: 8 !default;
 $m-align-content: (
   "-start": flex-start,
   "-end": flex-end,
@@ -162,6 +162,12 @@ $m-order: (
   "-first": -9999,
   "-last": 9999
 ) !default;
+$order-first: -9999 !default;
+$order-min: -24 !default;
+$order-init: 0 !default;
+$order-max: 24 !default;
+$order-last: 9999 !default;
+
 // overflow
 $m-overflow: (
   "-auto": auto,
@@ -297,8 +303,8 @@ $m-border-style: (
   "-none": none
 );
 // border-width
+$border-width-min: 0 !default;
 $border-width-max: 4 !default;
-$border-width-has-zero: true !default;
 
 /* misc */
 // opacity

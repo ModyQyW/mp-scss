@@ -813,14 +813,6 @@ $m-ratio: (
 
 /* length */
 $m-length: ();
-@if ($length-has-zero) {
-  $m-length: map-merge(
-    $m-length,
-    (
-      "-0": 0
-    )
-  );
-}
 @if ($length-has-auto) {
   $m-length: map-merge(
     $m-length,
@@ -829,7 +821,7 @@ $m-length: ();
     )
   );
 }
-@for $v from 1 through $length-max {
+@for $v from $length-min through $length-max {
   $m-length: map-merge(
     $m-length,
     (
@@ -847,9 +839,39 @@ $m-length: ();
     )
   );
 }
+// flex
+$m-flex-shrink: ();
+@for $v from $flex-shrink-min to $flex-shrink-max {
+  $m-flex-shrink: map-merge(
+    $m-flex-shrink,
+    (
+      "-#{$v}": $v
+    )
+  );
+}
+$m-flex-grow: ();
+@for $v from $flex-grow-min to $flex-grow-max {
+  $m-flex-grow: map-merge(
+    $m-flex-grow,
+    (
+      "-#{$v}": $v
+    )
+  );
+}
+$m-order: (
+  "-init": $order-init,
+  "-first": $order-first,
+  "-last": $order-last
+);
+@for $v from $order-min to $order-max {
+  $m-order: map-merge(
+    $m-order,
+    (
+      "-#{$v}": $v
+    )
+  );
+}
 
-/* typography */
-// font-size
 $font-size-base: $font-size-benchmark * $scale + $unit;
 $m-font-size: (
   "": $font-size-base,
@@ -921,15 +943,7 @@ $border-color-default: fade-out($black, .85) !default;
 $border-color-default-reverse: fade-out($white, .8) !default;
 // border-width
 $m-border-width: ();
-@if ($border-width-has-zero) {
-  $m-border-width: map-merge(
-    $m-border-width,
-    (
-      "-0": 0
-    )
-  );
-}
-@for $v from 1 through $border-width-max {
+@for $v from $border-width-min through $border-width-max {
   $m-border-width: map-merge(
     $m-border-width,
     (
