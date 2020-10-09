@@ -383,7 +383,8 @@ $info-8-reverse: mix($info, $container-background-color-reverse, 95%);
 $info-9-reverse: mix($info, $container-background-color-reverse, 97%);
 $info-10-reverse: mix($info, $container-background-color-reverse, 98%);
 // maps
-$m-color: (
+$m-colors: (
+  "-transparent": transparent,
   "-black": $black,
   "-white": $white,
   "-gray": $gray,
@@ -588,23 +589,7 @@ $m-color: (
   "-info-9": $info-9,
   "-info-10": $info-10
 );
-$m-color-reverse: (
-  "-black": $black,
-  "-white": $white,
-  "-gray": $gray,
-  "-gray-1": $gray-1,
-  "-gray-2": $gray-2,
-  "-gray-3": $gray-3,
-  "-gray-4": $gray-4,
-  "-gray-5": $gray-5,
-  "-gray-6": $gray-6,
-  "-gray-7": $gray-7,
-  "-gray-8": $gray-8,
-  "-gray-9": $gray-9,
-  "-gray-10": $gray-10,
-  "-gray-11": $gray-11,
-  "-gray-12": $gray-12,
-  "-gray-13": $gray-13,
+$m-colors-reverse: (
   "-red": $red-reverse,
   "-red-1": $red-1-reverse,
   "-red-2": $red-2-reverse,
@@ -798,7 +783,8 @@ $m-color-reverse: (
 $m-ratio: (
   "-full": 100%,
   "-half": 50%,
-  "-none": 0
+  "-none": none,
+  "-0": 0
 );
 @each $denominator in $l-denominator {
   @for $molecule from 1 through $denominator {
@@ -933,14 +919,28 @@ $color-main-reverse: fade-out($white, .35) !default;
 $color-main-small-reverse: fade-out($white, .45) !default;
 $color-secondary-reverse: fade-out($white, .55) !default;
 $color-disabled-reverse: fade-out($white, .7) !default;
+$m-color: (
+  "-title": $color-title
+);
+$m-color-reverse: (
+  "-title-reverse": $color-title-reverse
+);
 
 /* visual */
 // background-color
-$background-color-default: fade-out($black, .96) !default;
-$background-color-default-reverse: fade-out($white, .92) !default;
+$background-color: fade-out($black, .96) !default;
+$background-color-reverse: fade-out($white, .92) !default;
+$m-background-color: (
+  "": $background-color,
+  "-reverse": $background-color-reverse
+);
 // border-color
-$border-color-default: fade-out($black, .85) !default;
-$border-color-default-reverse: fade-out($white, .8) !default;
+$border-color: fade-out($black, .85) !default;
+$border-color-reverse: fade-out($white, .8) !default;
+$m-border-color: (
+  "": $border-color,
+  "-reverse": $border-color-reverse
+);
 // border-width
 $m-border-width: ();
 @for $v from $border-width-min through $border-width-max {
