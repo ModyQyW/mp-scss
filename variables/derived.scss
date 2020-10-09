@@ -931,14 +931,18 @@ $m-color-reverse: (
 $background-color: fade-out($black, .96) !default;
 $background-color-reverse: fade-out($white, .92) !default;
 $m-background-color: (
-  "": $background-color,
+  "": $background-color
+);
+$m-background-color-reverse: (
   "-reverse": $background-color-reverse
 );
 // border-color
 $border-color: fade-out($black, .85) !default;
 $border-color-reverse: fade-out($white, .8) !default;
 $m-border-color: (
-  "": $border-color,
+  "": $border-color
+);
+$m-border-color-reverse: (
   "-reverse": $border-color-reverse
 );
 // border-width
@@ -954,6 +958,24 @@ $m-border-width: ();
 @if ($scale != 1) {
   $m-border-width: map-merge(
     $m-border-width,
+    (
+      "-1-real": 1 + $unit
+    )
+  );
+}
+// border-radius
+$m-border-radius: ();
+@for $v from $border-radius-min through $border-radius-max {
+  $m-border-radius: map-merge(
+    $m-border-radius,
+    (
+      "-#{$v}": $v * $scale + $unit
+    )
+  );
+}
+@if ($scale != 1) {
+  $m-border-radius: map-merge(
+    $m-border-radius,
     (
       "-1-real": 1 + $unit
     )

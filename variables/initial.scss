@@ -293,7 +293,8 @@ $m-background-position: (
 $m-background-size: (
   "-contain": contain,
   "-cover": cover,
-  "-auto": auto
+  "-auto": auto,
+  "-full": 100% 100%
 );
 // border-style
 $m-border-style: (
@@ -305,6 +306,9 @@ $m-border-style: (
 // border-width
 $border-width-min: 0 !default;
 $border-width-max: 4 !default;
+// border-radius
+$border-radius-min: 0 !default;
+$border-radius-max: 8 !default;
 
 /* misc */
 // opacity
