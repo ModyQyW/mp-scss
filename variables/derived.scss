@@ -12,17 +12,17 @@ $red-7: f-get-color($red, 7); // #cf1322
 $red-8: f-get-color($red, 8); // #a8071a
 $red-9: f-get-color($red, 9); // #820014
 $red-10: f-get-color($red, 10); // #5c0011
-$red-reverse: mix($red, $color-bg-container-reverse, 85%); // #d32029
-$red-1-reverse: mix($red-8, $color-bg-container-reverse, 15%); // #2a1215
-$red-2-reverse: mix($red-7, $color-bg-container-reverse, 25%); // #431418
-$red-3-reverse: mix($red, $color-bg-container-reverse, 30%); // #58181c
-$red-4-reverse: mix($red, $color-bg-container-reverse, 45%); // #791a1f
-$red-5-reverse: mix($red, $color-bg-container-reverse, 65%); // #a61d24
-$red-6-reverse: mix($red, $color-bg-container-reverse, 85%); // #d32029
-$red-7-reverse: mix($red-5, $color-bg-container-reverse, 90%); // #e84749
-$red-8-reverse: mix($red-4, $color-bg-container-reverse, 95%); // #f37370
-$red-9-reverse: mix($red-3, $color-bg-container-reverse, 97%); // #f89f9a
-$red-10-reverse: mix($red-2, $color-bg-container-reverse, 98%); // #fac8c3
+$red-reverse: mix($red, $container-background-color-reverse, 85%); // #d32029
+$red-1-reverse: mix($red-8, $container-background-color-reverse, 15%); // #2a1215
+$red-2-reverse: mix($red-7, $container-background-color-reverse, 25%); // #431418
+$red-3-reverse: mix($red, $container-background-color-reverse, 30%); // #58181c
+$red-4-reverse: mix($red, $container-background-color-reverse, 45%); // #791a1f
+$red-5-reverse: mix($red, $container-background-color-reverse, 65%); // #a61d24
+$red-6-reverse: mix($red, $container-background-color-reverse, 85%); // #d32029
+$red-7-reverse: mix($red-5, $container-background-color-reverse, 90%); // #e84749
+$red-8-reverse: mix($red-4, $container-background-color-reverse, 95%); // #f37370
+$red-9-reverse: mix($red-3, $container-background-color-reverse, 97%); // #f89f9a
+$red-10-reverse: mix($red-2, $container-background-color-reverse, 98%); // #fac8c3
 // volcano
 $volcano-1: f-get-color($volcano, 1); // #fff2e8
 $volcano-2: f-get-color($volcano, 2); // #ffd8bf
@@ -34,17 +34,17 @@ $volcano-7: f-get-color($volcano, 7); // #d4380d
 $volcano-8: f-get-color($volcano, 8); // #ad2102
 $volcano-9: f-get-color($volcano, 9); // #871400
 $volcano-10: f-get-color($volcano, 10); // #610b00
-$volcano-reverse: mix($volcano, $color-bg-container-reverse, 85%); // #d84a1b
-$volcano-1-reverse: mix($volcano-8, $color-bg-container-reverse, 15%); // #2b1611
-$volcano-2-reverse: mix($volcano-7, $color-bg-container-reverse, 25%); // #441d12
-$volcano-3-reverse: mix($volcano, $color-bg-container-reverse, 30%); // #592716
-$volcano-4-reverse: mix($volcano, $color-bg-container-reverse, 45%); // #7c3118
-$volcano-5-reverse: mix($volcano, $color-bg-container-reverse, 65%); // #aa3e19
-$volcano-6-reverse: mix($volcano, $color-bg-container-reverse, 85%); // #d84a1b
-$volcano-7-reverse: mix($volcano-5, $color-bg-container-reverse, 90%); // #e87040
-$volcano-8-reverse: mix($volcano-4, $color-bg-container-reverse, 95%); // #f3956a
-$volcano-9-reverse: mix($volcano-3, $color-bg-container-reverse, 97%); // #f8b692
-$volcano-10-reverse: mix($volcano-2, $color-bg-container-reverse, 98%); // #fad4bc
+$volcano-reverse: mix($volcano, $container-background-color-reverse, 85%); // #d84a1b
+$volcano-1-reverse: mix($volcano-8, $container-background-color-reverse, 15%); // #2b1611
+$volcano-2-reverse: mix($volcano-7, $container-background-color-reverse, 25%); // #441d12
+$volcano-3-reverse: mix($volcano, $container-background-color-reverse, 30%); // #592716
+$volcano-4-reverse: mix($volcano, $container-background-color-reverse, 45%); // #7c3118
+$volcano-5-reverse: mix($volcano, $container-background-color-reverse, 65%); // #aa3e19
+$volcano-6-reverse: mix($volcano, $container-background-color-reverse, 85%); // #d84a1b
+$volcano-7-reverse: mix($volcano-5, $container-background-color-reverse, 90%); // #e87040
+$volcano-8-reverse: mix($volcano-4, $container-background-color-reverse, 95%); // #f3956a
+$volcano-9-reverse: mix($volcano-3, $container-background-color-reverse, 97%); // #f8b692
+$volcano-10-reverse: mix($volcano-2, $container-background-color-reverse, 98%); // #fad4bc
 // sunset orange
 $orange-1: f-get-color($orange, 1); // #fff7e6
 $orange-2: f-get-color($orange, 2); // #ffe7ba
@@ -56,17 +56,17 @@ $orange-7: f-get-color($orange, 7); // #d46b08
 $orange-8: f-get-color($orange, 8); // #ad4e00
 $orange-9: f-get-color($orange, 9); // #873800
 $orange-10: f-get-color($orange, 10); // #612500
-$orange-reverse: mix($orange, $color-bg-container-reverse, 85%); // #d87a16
-$orange-1-reverse: mix($orange-8, $color-bg-container-reverse, 15%); // #2b1d11
-$orange-2-reverse: mix($orange-7, $color-bg-container-reverse, 25%); // #442a11
-$orange-3-reverse: mix($orange, $color-bg-container-reverse, 30%); // #593815
-$orange-4-reverse: mix($orange, $color-bg-container-reverse, 45%); // #7c4a15
-$orange-5-reverse: mix($orange, $color-bg-container-reverse, 65%); // #aa6215
-$orange-6-reverse: mix($orange, $color-bg-container-reverse, 85%); // #d87a16
-$orange-7-reverse: mix($orange-5, $color-bg-container-reverse, 90%); // #e89a3c
-$orange-8-reverse: mix($orange-4, $color-bg-container-reverse, 95%); // #f3b765
-$orange-9-reverse: mix($orange-3, $color-bg-container-reverse, 97%); // #f8cf8d
-$orange-10-reverse: mix($orange-2, $color-bg-container-reverse, 98%); // #fae3b7
+$orange-reverse: mix($orange, $container-background-color-reverse, 85%); // #d87a16
+$orange-1-reverse: mix($orange-8, $container-background-color-reverse, 15%); // #2b1d11
+$orange-2-reverse: mix($orange-7, $container-background-color-reverse, 25%); // #442a11
+$orange-3-reverse: mix($orange, $container-background-color-reverse, 30%); // #593815
+$orange-4-reverse: mix($orange, $container-background-color-reverse, 45%); // #7c4a15
+$orange-5-reverse: mix($orange, $container-background-color-reverse, 65%); // #aa6215
+$orange-6-reverse: mix($orange, $container-background-color-reverse, 85%); // #d87a16
+$orange-7-reverse: mix($orange-5, $container-background-color-reverse, 90%); // #e89a3c
+$orange-8-reverse: mix($orange-4, $container-background-color-reverse, 95%); // #f3b765
+$orange-9-reverse: mix($orange-3, $container-background-color-reverse, 97%); // #f8cf8d
+$orange-10-reverse: mix($orange-2, $container-background-color-reverse, 98%); // #fae3b7
 // calendula gold
 $gold-1: f-get-color($gold, 1); // #fffbe6
 $gold-2: f-get-color($gold, 2); // #fff1b8
@@ -78,17 +78,17 @@ $gold-7: f-get-color($gold, 7); // #d48806
 $gold-8: f-get-color($gold, 8); // #ad6800
 $gold-9: f-get-color($gold, 9); // #874d00
 $gold-10: f-get-color($gold, 10); // #613400
-$gold-reverse: mix($gold, $color-bg-container-reverse, 85%); // #d89614
-$gold-1-reverse: mix($gold-8, $color-bg-container-reverse, 15%); // #2b2111
-$gold-2-reverse: mix($gold-7, $color-bg-container-reverse, 25%); // #443111
-$gold-3-reverse: mix($gold, $color-bg-container-reverse, 30%); // #594214
-$gold-4-reverse: mix($gold, $color-bg-container-reverse, 45%); // #7c5914
-$gold-5-reverse: mix($gold, $color-bg-container-reverse, 65%); // #aa7714
-$gold-6-reverse: mix($gold, $color-bg-container-reverse, 85%); // #d89614
-$gold-7-reverse: mix($gold-5, $color-bg-container-reverse, 90%); // #e8b339
-$gold-8-reverse: mix($gold-4, $color-bg-container-reverse, 95%); // #f3cc62
-$gold-9-reverse: mix($gold-3, $color-bg-container-reverse, 97%); // #f8df8b
-$gold-10-reverse: mix($gold-2, $color-bg-container-reverse, 98%); // #faedb5
+$gold-reverse: mix($gold, $container-background-color-reverse, 85%); // #d89614
+$gold-1-reverse: mix($gold-8, $container-background-color-reverse, 15%); // #2b2111
+$gold-2-reverse: mix($gold-7, $container-background-color-reverse, 25%); // #443111
+$gold-3-reverse: mix($gold, $container-background-color-reverse, 30%); // #594214
+$gold-4-reverse: mix($gold, $container-background-color-reverse, 45%); // #7c5914
+$gold-5-reverse: mix($gold, $container-background-color-reverse, 65%); // #aa7714
+$gold-6-reverse: mix($gold, $container-background-color-reverse, 85%); // #d89614
+$gold-7-reverse: mix($gold-5, $container-background-color-reverse, 90%); // #e8b339
+$gold-8-reverse: mix($gold-4, $container-background-color-reverse, 95%); // #f3cc62
+$gold-9-reverse: mix($gold-3, $container-background-color-reverse, 97%); // #f8df8b
+$gold-10-reverse: mix($gold-2, $container-background-color-reverse, 98%); // #faedb5
 // sunrise yellow
 $yellow-1: f-get-color($yellow, 1); // #feffe6
 $yellow-2: f-get-color($yellow, 2); // #ffffb8
@@ -100,17 +100,17 @@ $yellow-7: f-get-color($yellow, 7); // #d4b106
 $yellow-8: f-get-color($yellow, 8); // #ad8b00
 $yellow-9: f-get-color($yellow, 9); // #876800
 $yellow-10: f-get-color($yellow, 10); // #614700
-$yellow-reverse: mix($yellow, $color-bg-container-reverse, 85%); // #d8bd14
-$yellow-1-reverse: mix($yellow-8, $color-bg-container-reverse, 15%); // #2b2611
-$yellow-2-reverse: mix($yellow-7, $color-bg-container-reverse, 25%); // #443b11
-$yellow-3-reverse: mix($yellow, $color-bg-container-reverse, 30%); // #595014
-$yellow-4-reverse: mix($yellow, $color-bg-container-reverse, 45%); // #7c6e14
-$yellow-5-reverse: mix($yellow, $color-bg-container-reverse, 65%); // #aa9514
-$yellow-6-reverse: mix($yellow, $color-bg-container-reverse, 85%); // #d8bd14
-$yellow-7-reverse: mix($yellow-5, $color-bg-container-reverse, 90%); // #e8d639
-$yellow-8-reverse: mix($yellow-4, $color-bg-container-reverse, 95%); // #f3ea62
-$yellow-9-reverse: mix($yellow-3, $color-bg-container-reverse, 97%); // #f8f48b
-$yellow-10-reverse: mix($yellow-2, $color-bg-container-reverse, 98%); // #fafab5
+$yellow-reverse: mix($yellow, $container-background-color-reverse, 85%); // #d8bd14
+$yellow-1-reverse: mix($yellow-8, $container-background-color-reverse, 15%); // #2b2611
+$yellow-2-reverse: mix($yellow-7, $container-background-color-reverse, 25%); // #443b11
+$yellow-3-reverse: mix($yellow, $container-background-color-reverse, 30%); // #595014
+$yellow-4-reverse: mix($yellow, $container-background-color-reverse, 45%); // #7c6e14
+$yellow-5-reverse: mix($yellow, $container-background-color-reverse, 65%); // #aa9514
+$yellow-6-reverse: mix($yellow, $container-background-color-reverse, 85%); // #d8bd14
+$yellow-7-reverse: mix($yellow-5, $container-background-color-reverse, 90%); // #e8d639
+$yellow-8-reverse: mix($yellow-4, $container-background-color-reverse, 95%); // #f3ea62
+$yellow-9-reverse: mix($yellow-3, $container-background-color-reverse, 97%); // #f8f48b
+$yellow-10-reverse: mix($yellow-2, $container-background-color-reverse, 98%); // #fafab5
 // lime
 $lime-1: f-get-color($lime, 1); // #fcffe6
 $lime-2: f-get-color($lime, 2); // #f4ffb8
@@ -122,17 +122,17 @@ $lime-7: f-get-color($lime, 7); // #7cb305
 $lime-8: f-get-color($lime, 8); // #5b8c00
 $lime-9: f-get-color($lime, 9); // #3f6600
 $lime-10: f-get-color($lime, 10); // #254000
-$lime-reverse: mix($lime, $color-bg-container-reverse, 85%); // #8bbb11
-$lime-1-reverse: mix($lime-8, $color-bg-container-reverse, 15%); // #1f2611
-$lime-2-reverse: mix($lime-7, $color-bg-container-reverse, 25%); // #2e3c10
-$lime-3-reverse: mix($lime, $color-bg-container-reverse, 30%); // #3e4f13
-$lime-4-reverse: mix($lime, $color-bg-container-reverse, 45%); // #536d13
-$lime-5-reverse: mix($lime, $color-bg-container-reverse, 65%); // #6f9412
-$lime-6-reverse: mix($lime, $color-bg-container-reverse, 85%); // #8bbb11
-$lime-7-reverse: mix($lime-5, $color-bg-container-reverse, 90%); // #a9d134
-$lime-8-reverse: mix($lime-4, $color-bg-container-reverse, 95%); // #c9e75d
-$lime-9-reverse: mix($lime-3, $color-bg-container-reverse, 97%); // #e4f88b
-$lime-10-reverse: mix($lime-2, $color-bg-container-reverse, 98%); // #f0fab5
+$lime-reverse: mix($lime, $container-background-color-reverse, 85%); // #8bbb11
+$lime-1-reverse: mix($lime-8, $container-background-color-reverse, 15%); // #1f2611
+$lime-2-reverse: mix($lime-7, $container-background-color-reverse, 25%); // #2e3c10
+$lime-3-reverse: mix($lime, $container-background-color-reverse, 30%); // #3e4f13
+$lime-4-reverse: mix($lime, $container-background-color-reverse, 45%); // #536d13
+$lime-5-reverse: mix($lime, $container-background-color-reverse, 65%); // #6f9412
+$lime-6-reverse: mix($lime, $container-background-color-reverse, 85%); // #8bbb11
+$lime-7-reverse: mix($lime-5, $container-background-color-reverse, 90%); // #a9d134
+$lime-8-reverse: mix($lime-4, $container-background-color-reverse, 95%); // #c9e75d
+$lime-9-reverse: mix($lime-3, $container-background-color-reverse, 97%); // #e4f88b
+$lime-10-reverse: mix($lime-2, $container-background-color-reverse, 98%); // #f0fab5
 // polar green
 $green-1: f-get-color($green, 1); // #f6ffed
 $green-2: f-get-color($green, 2); // #d9f7be
@@ -144,17 +144,17 @@ $green-7: f-get-color($green, 7); // #389e0d
 $green-8: f-get-color($green, 8); // #237804
 $green-9: f-get-color($green, 9); // #135200
 $green-10: f-get-color($green, 10); // #092b00
-$green-reverse: mix($green, $color-bg-container-reverse, 85%); // #49aa19
-$green-1-reverse: mix($green-8, $color-bg-container-reverse, 15%); // #162312
-$green-2-reverse: mix($green-7, $color-bg-container-reverse, 25%); // #1d3712
-$green-3-reverse: mix($green, $color-bg-container-reverse, 30%); // #274916
-$green-4-reverse: mix($green, $color-bg-container-reverse, 45%); // #306317
-$green-5-reverse: mix($green, $color-bg-container-reverse, 65%); // #3c8618
-$green-6-reverse: mix($green, $color-bg-container-reverse, 85%); // #49aa19
-$green-7-reverse: mix($green-5, $color-bg-container-reverse, 90%); // #6abe39
-$green-8-reverse: mix($green-4, $color-bg-container-reverse, 95%); // #8fd460
-$green-9-reverse: mix($green-3, $color-bg-container-reverse, 97%); // #b2e58b
-$green-10-reverse: mix($green-2, $color-bg-container-reverse, 98%); // #d5f2bb
+$green-reverse: mix($green, $container-background-color-reverse, 85%); // #49aa19
+$green-1-reverse: mix($green-8, $container-background-color-reverse, 15%); // #162312
+$green-2-reverse: mix($green-7, $container-background-color-reverse, 25%); // #1d3712
+$green-3-reverse: mix($green, $container-background-color-reverse, 30%); // #274916
+$green-4-reverse: mix($green, $container-background-color-reverse, 45%); // #306317
+$green-5-reverse: mix($green, $container-background-color-reverse, 65%); // #3c8618
+$green-6-reverse: mix($green, $container-background-color-reverse, 85%); // #49aa19
+$green-7-reverse: mix($green-5, $container-background-color-reverse, 90%); // #6abe39
+$green-8-reverse: mix($green-4, $container-background-color-reverse, 95%); // #8fd460
+$green-9-reverse: mix($green-3, $container-background-color-reverse, 97%); // #b2e58b
+$green-10-reverse: mix($green-2, $container-background-color-reverse, 98%); // #d5f2bb
 // cyan
 $cyan-1: f-get-color($cyan, 1); // #e6fffb
 $cyan-2: f-get-color($cyan, 2); // #b5f5ec
@@ -166,17 +166,17 @@ $cyan-7: f-get-color($cyan, 7); // #08979c
 $cyan-8: f-get-color($cyan, 8); // #006d75
 $cyan-9: f-get-color($cyan, 9); // #00474f
 $cyan-10: f-get-color($cyan, 10); // #002329
-$cyan-reverse: mix($cyan, $color-bg-container-reverse, 85%); // #13a8a8
-$cyan-1-reverse: mix($cyan-8, $color-bg-container-reverse, 15%); // #112123
-$cyan-2-reverse: mix($cyan-7, $color-bg-container-reverse, 25%); // #113536
-$cyan-3-reverse: mix($cyan, $color-bg-container-reverse, 30%); // #144848
-$cyan-4-reverse: mix($cyan, $color-bg-container-reverse, 45%); // #146262
-$cyan-5-reverse: mix($cyan, $color-bg-container-reverse, 65%); // #138585
-$cyan-6-reverse: mix($cyan, $color-bg-container-reverse, 85%); // #13a8a8
-$cyan-7-reverse: mix($cyan-5, $color-bg-container-reverse, 90%); // #33bcb7
-$cyan-8-reverse: mix($cyan-4, $color-bg-container-reverse, 95%); // #58d1c9
-$cyan-9-reverse: mix($cyan-3, $color-bg-container-reverse, 97%); // #84e2d8
-$cyan-10-reverse: mix($cyan-2, $color-bg-container-reverse, 98%); // #b2f1e8
+$cyan-reverse: mix($cyan, $container-background-color-reverse, 85%); // #13a8a8
+$cyan-1-reverse: mix($cyan-8, $container-background-color-reverse, 15%); // #112123
+$cyan-2-reverse: mix($cyan-7, $container-background-color-reverse, 25%); // #113536
+$cyan-3-reverse: mix($cyan, $container-background-color-reverse, 30%); // #144848
+$cyan-4-reverse: mix($cyan, $container-background-color-reverse, 45%); // #146262
+$cyan-5-reverse: mix($cyan, $container-background-color-reverse, 65%); // #138585
+$cyan-6-reverse: mix($cyan, $container-background-color-reverse, 85%); // #13a8a8
+$cyan-7-reverse: mix($cyan-5, $container-background-color-reverse, 90%); // #33bcb7
+$cyan-8-reverse: mix($cyan-4, $container-background-color-reverse, 95%); // #58d1c9
+$cyan-9-reverse: mix($cyan-3, $container-background-color-reverse, 97%); // #84e2d8
+$cyan-10-reverse: mix($cyan-2, $container-background-color-reverse, 98%); // #b2f1e8
 // daybreak blue
 $blue-1: f-get-color($blue, 1); // #e6f7ff
 $blue-2: f-get-color($blue, 2); // #bae7ff
@@ -188,17 +188,17 @@ $blue-7: f-get-color($blue, 7); // #096dd9
 $blue-8: f-get-color($blue, 8); // #0050b3
 $blue-9: f-get-color($blue, 9); // #003a8c
 $blue-10: f-get-color($blue, 10); // #002766
-$blue-reverse: mix($blue, $color-bg-container-reverse, 85%); // #177ddc
-$blue-1-reverse: mix($blue-8, $color-bg-container-reverse, 15%); // #111d2c
-$blue-2-reverse: mix($blue-7, $color-bg-container-reverse, 25%); // #112a45
-$blue-3-reverse: mix($blue, $color-bg-container-reverse, 30%); // #15395b
-$blue-4-reverse: mix($blue, $color-bg-container-reverse, 45%); // #164c7e
-$blue-5-reverse: mix($blue, $color-bg-container-reverse, 65%); // #1765ad
-$blue-6-reverse: mix($blue, $color-bg-container-reverse, 85%); // #177ddc
-$blue-7-reverse: mix($blue-5, $color-bg-container-reverse, 90%); // #3c9ae8
-$blue-8-reverse: mix($blue-4, $color-bg-container-reverse, 95%); // #65b7f3
-$blue-9-reverse: mix($blue-3, $color-bg-container-reverse, 97%); // #8dcff8
-$blue-10-reverse: mix($blue-2, $color-bg-container-reverse, 98%); // #b7e3fa
+$blue-reverse: mix($blue, $container-background-color-reverse, 85%); // #177ddc
+$blue-1-reverse: mix($blue-8, $container-background-color-reverse, 15%); // #111d2c
+$blue-2-reverse: mix($blue-7, $container-background-color-reverse, 25%); // #112a45
+$blue-3-reverse: mix($blue, $container-background-color-reverse, 30%); // #15395b
+$blue-4-reverse: mix($blue, $container-background-color-reverse, 45%); // #164c7e
+$blue-5-reverse: mix($blue, $container-background-color-reverse, 65%); // #1765ad
+$blue-6-reverse: mix($blue, $container-background-color-reverse, 85%); // #177ddc
+$blue-7-reverse: mix($blue-5, $container-background-color-reverse, 90%); // #3c9ae8
+$blue-8-reverse: mix($blue-4, $container-background-color-reverse, 95%); // #65b7f3
+$blue-9-reverse: mix($blue-3, $container-background-color-reverse, 97%); // #8dcff8
+$blue-10-reverse: mix($blue-2, $container-background-color-reverse, 98%); // #b7e3fa
 // geek blue
 $geek-blue-1: f-get-color($geek-blue, 1); // #f0f5ff
 $geek-blue-2: f-get-color($geek-blue, 2); // #d6e4ff
@@ -210,17 +210,17 @@ $geek-blue-7: f-get-color($geek-blue, 7); // #1d39c4
 $geek-blue-8: f-get-color($geek-blue, 8); // #10239e
 $geek-blue-9: f-get-color($geek-blue, 9); // #061178
 $geek-blue-10: f-get-color($geek-blue, 10); // #030852
-$geek-blue-reverse: mix($geek-blue, $color-bg-container-reverse, 85%); // #2b4acb
-$geek-blue-1-reverse: mix($geek-blue-8, $color-bg-container-reverse, 15%); // #131629
-$geek-blue-2-reverse: mix($geek-blue-7, $color-bg-container-reverse, 25%); // #161d40
-$geek-blue-3-reverse: mix($geek-blue, $color-bg-container-reverse, 30%); // #1c2755
-$geek-blue-4-reverse: mix($geek-blue, $color-bg-container-reverse, 45%); // #203175
-$geek-blue-5-reverse: mix($geek-blue, $color-bg-container-reverse, 65%); // #263ea0
-$geek-blue-6-reverse: mix($geek-blue, $color-bg-container-reverse, 85%); // #2b4acb
-$geek-blue-7-reverse: mix($geek-blue-5, $color-bg-container-reverse, 90%); // #5273e0
-$geek-blue-8-reverse: mix($geek-blue-4, $color-bg-container-reverse, 95%); // #7f9ef3
-$geek-blue-9-reverse: mix($geek-blue-3, $color-bg-container-reverse, 97%); // #a8c1f8
-$geek-blue-10-reverse: mix($geek-blue-2, $color-bg-container-reverse, 98%); // #d2e0fa
+$geek-blue-reverse: mix($geek-blue, $container-background-color-reverse, 85%); // #2b4acb
+$geek-blue-1-reverse: mix($geek-blue-8, $container-background-color-reverse, 15%); // #131629
+$geek-blue-2-reverse: mix($geek-blue-7, $container-background-color-reverse, 25%); // #161d40
+$geek-blue-3-reverse: mix($geek-blue, $container-background-color-reverse, 30%); // #1c2755
+$geek-blue-4-reverse: mix($geek-blue, $container-background-color-reverse, 45%); // #203175
+$geek-blue-5-reverse: mix($geek-blue, $container-background-color-reverse, 65%); // #263ea0
+$geek-blue-6-reverse: mix($geek-blue, $container-background-color-reverse, 85%); // #2b4acb
+$geek-blue-7-reverse: mix($geek-blue-5, $container-background-color-reverse, 90%); // #5273e0
+$geek-blue-8-reverse: mix($geek-blue-4, $container-background-color-reverse, 95%); // #7f9ef3
+$geek-blue-9-reverse: mix($geek-blue-3, $container-background-color-reverse, 97%); // #a8c1f8
+$geek-blue-10-reverse: mix($geek-blue-2, $container-background-color-reverse, 98%); // #d2e0fa
 // golden purple
 $purple-1: f-get-color($purple, 1); // #f9f0ff
 $purple-2: f-get-color($purple, 2); // #efdbff
@@ -232,17 +232,17 @@ $purple-7: f-get-color($purple, 7); // #531dab
 $purple-8: f-get-color($purple, 8); // #391085
 $purple-9: f-get-color($purple, 9); // #22075e
 $purple-10: f-get-color($purple, 10); // #120338
-$purple-reverse: mix($purple, $color-bg-container-reverse, 85%); // #642ab5
-$purple-1-reverse: mix($purple-8, $color-bg-container-reverse, 15%); // #1a1325
-$purple-2-reverse: mix($purple-7, $color-bg-container-reverse, 25%); // #24163a
-$purple-3-reverse: mix($purple, $color-bg-container-reverse, 30%); // #301c4d
-$purple-4-reverse: mix($purple, $color-bg-container-reverse, 45%); // #3e2069
-$purple-5-reverse: mix($purple, $color-bg-container-reverse, 65%); // #51258f
-$purple-6-reverse: mix($purple, $color-bg-container-reverse, 85%); // #642ab5
-$purple-7-reverse: mix($purple-5, $color-bg-container-reverse, 90%); // #854eca
-$purple-8-reverse: mix($purple-4, $color-bg-container-reverse, 95%); // #ab7ae0
-$purple-9-reverse: mix($purple-3, $color-bg-container-reverse, 97%); // #cda8f0
-$purple-10-reverse: mix($purple-2, $color-bg-container-reverse, 98%); // #ebd7fa
+$purple-reverse: mix($purple, $container-background-color-reverse, 85%); // #642ab5
+$purple-1-reverse: mix($purple-8, $container-background-color-reverse, 15%); // #1a1325
+$purple-2-reverse: mix($purple-7, $container-background-color-reverse, 25%); // #24163a
+$purple-3-reverse: mix($purple, $container-background-color-reverse, 30%); // #301c4d
+$purple-4-reverse: mix($purple, $container-background-color-reverse, 45%); // #3e2069
+$purple-5-reverse: mix($purple, $container-background-color-reverse, 65%); // #51258f
+$purple-6-reverse: mix($purple, $container-background-color-reverse, 85%); // #642ab5
+$purple-7-reverse: mix($purple-5, $container-background-color-reverse, 90%); // #854eca
+$purple-8-reverse: mix($purple-4, $container-background-color-reverse, 95%); // #ab7ae0
+$purple-9-reverse: mix($purple-3, $container-background-color-reverse, 97%); // #cda8f0
+$purple-10-reverse: mix($purple-2, $container-background-color-reverse, 98%); // #ebd7fa
 // magenta
 $magenta-1: f-get-color($magenta, 1); // #fff0f6
 $magenta-2: f-get-color($magenta, 2); // #ffd6e7
@@ -254,17 +254,17 @@ $magenta-7: f-get-color($magenta, 7); // #c41d7f
 $magenta-8: f-get-color($magenta, 8); // #9e1068
 $magenta-9: f-get-color($magenta, 9); // #780650
 $magenta-10: f-get-color($magenta, 10); // #520339
-$magenta-reverse: mix($magenta, $color-bg-container-reverse, 85%); // #cb2b83
-$magenta-1-reverse: mix($magenta-8, $color-bg-container-reverse, 15%); // #291321
-$magenta-2-reverse: mix($magenta-7, $color-bg-container-reverse, 25%); // #40162f
-$magenta-3-reverse: mix($magenta, $color-bg-container-reverse, 30%); // #551c3b
-$magenta-4-reverse: mix($magenta, $color-bg-container-reverse, 45%); // #75204f
-$magenta-5-reverse: mix($magenta, $color-bg-container-reverse, 65%); // #a02669
-$magenta-6-reverse: mix($magenta, $color-bg-container-reverse, 85%); // #cb2b83
-$magenta-7-reverse: mix($magenta-5, $color-bg-container-reverse, 90%); // #e0529c
-$magenta-8-reverse: mix($magenta-4, $color-bg-container-reverse, 95%); // #f37fb7
-$magenta-9-reverse: mix($magenta-3, $color-bg-container-reverse, 97%); // #f8a8cc
-$magenta-10-reverse: mix($magenta-2, $color-bg-container-reverse, 98%); // #fad2e3
+$magenta-reverse: mix($magenta, $container-background-color-reverse, 85%); // #cb2b83
+$magenta-1-reverse: mix($magenta-8, $container-background-color-reverse, 15%); // #291321
+$magenta-2-reverse: mix($magenta-7, $container-background-color-reverse, 25%); // #40162f
+$magenta-3-reverse: mix($magenta, $container-background-color-reverse, 30%); // #551c3b
+$magenta-4-reverse: mix($magenta, $container-background-color-reverse, 45%); // #75204f
+$magenta-5-reverse: mix($magenta, $container-background-color-reverse, 65%); // #a02669
+$magenta-6-reverse: mix($magenta, $container-background-color-reverse, 85%); // #cb2b83
+$magenta-7-reverse: mix($magenta-5, $container-background-color-reverse, 90%); // #e0529c
+$magenta-8-reverse: mix($magenta-4, $container-background-color-reverse, 95%); // #f37fb7
+$magenta-9-reverse: mix($magenta-3, $container-background-color-reverse, 97%); // #f8a8cc
+$magenta-10-reverse: mix($magenta-2, $container-background-color-reverse, 98%); // #fad2e3
 
 /* theme colors that can be used in most places */
 // primary color
@@ -279,17 +279,17 @@ $primary-7: f-get-color($primary, 7);
 $primary-8: f-get-color($primary, 8);
 $primary-9: f-get-color($primary, 9);
 $primary-10: f-get-color($primary, 10);
-$primary-reverse: mix($primary, $color-bg-container-reverse, 85%);
-$primary-1-reverse: mix($primary, $color-bg-container-reverse, 15%);
-$primary-2-reverse: mix($primary, $color-bg-container-reverse, 25%);
-$primary-3-reverse: mix($primary, $color-bg-container-reverse, 30%);
-$primary-4-reverse: mix($primary, $color-bg-container-reverse, 45%);
-$primary-5-reverse: mix($primary, $color-bg-container-reverse, 65%);
-$primary-6-reverse: mix($primary, $color-bg-container-reverse, 85%);
-$primary-7-reverse: mix($primary, $color-bg-container-reverse, 90%);
-$primary-8-reverse: mix($primary, $color-bg-container-reverse, 95%);
-$primary-9-reverse: mix($primary, $color-bg-container-reverse, 97%);
-$primary-10-reverse: mix($primary, $color-bg-container-reverse, 98%);
+$primary-reverse: mix($primary, $container-background-color-reverse, 85%);
+$primary-1-reverse: mix($primary, $container-background-color-reverse, 15%);
+$primary-2-reverse: mix($primary, $container-background-color-reverse, 25%);
+$primary-3-reverse: mix($primary, $container-background-color-reverse, 30%);
+$primary-4-reverse: mix($primary, $container-background-color-reverse, 45%);
+$primary-5-reverse: mix($primary, $container-background-color-reverse, 65%);
+$primary-6-reverse: mix($primary, $container-background-color-reverse, 85%);
+$primary-7-reverse: mix($primary, $container-background-color-reverse, 90%);
+$primary-8-reverse: mix($primary, $container-background-color-reverse, 95%);
+$primary-9-reverse: mix($primary, $container-background-color-reverse, 97%);
+$primary-10-reverse: mix($primary, $container-background-color-reverse, 98%);
 // success color
 $success: $green-6 !default;
 $success-1: f-get-color($success, 1);
@@ -302,17 +302,17 @@ $success-7: f-get-color($success, 7);
 $success-8: f-get-color($success, 8);
 $success-9: f-get-color($success, 9);
 $success-10: f-get-color($success, 10);
-$success-reverse: mix($success, $color-bg-container-reverse, 85%);
-$success-1-reverse: mix($success, $color-bg-container-reverse, 15%);
-$success-2-reverse: mix($success, $color-bg-container-reverse, 25%);
-$success-3-reverse: mix($success, $color-bg-container-reverse, 30%);
-$success-4-reverse: mix($success, $color-bg-container-reverse, 45%);
-$success-5-reverse: mix($success, $color-bg-container-reverse, 65%);
-$success-6-reverse: mix($success, $color-bg-container-reverse, 85%);
-$success-7-reverse: mix($success, $color-bg-container-reverse, 90%);
-$success-8-reverse: mix($success, $color-bg-container-reverse, 95%);
-$success-9-reverse: mix($success, $color-bg-container-reverse, 97%);
-$success-10-reverse: mix($success, $color-bg-container-reverse, 98%);
+$success-reverse: mix($success, $container-background-color-reverse, 85%);
+$success-1-reverse: mix($success, $container-background-color-reverse, 15%);
+$success-2-reverse: mix($success, $container-background-color-reverse, 25%);
+$success-3-reverse: mix($success, $container-background-color-reverse, 30%);
+$success-4-reverse: mix($success, $container-background-color-reverse, 45%);
+$success-5-reverse: mix($success, $container-background-color-reverse, 65%);
+$success-6-reverse: mix($success, $container-background-color-reverse, 85%);
+$success-7-reverse: mix($success, $container-background-color-reverse, 90%);
+$success-8-reverse: mix($success, $container-background-color-reverse, 95%);
+$success-9-reverse: mix($success, $container-background-color-reverse, 97%);
+$success-10-reverse: mix($success, $container-background-color-reverse, 98%);
 // warning color
 $warning: $gold-6 !default;
 $warning-1: f-get-color($warning, 1);
@@ -325,17 +325,17 @@ $warning-7: f-get-color($warning, 7);
 $warning-8: f-get-color($warning, 8);
 $warning-9: f-get-color($warning, 9);
 $warning-10: f-get-color($warning, 10);
-$warning-reverse: mix($warning, $color-bg-container-reverse, 85%);
-$warning-1-reverse: mix($warning, $color-bg-container-reverse, 15%);
-$warning-2-reverse: mix($warning, $color-bg-container-reverse, 25%);
-$warning-3-reverse: mix($warning, $color-bg-container-reverse, 30%);
-$warning-4-reverse: mix($warning, $color-bg-container-reverse, 45%);
-$warning-5-reverse: mix($warning, $color-bg-container-reverse, 65%);
-$warning-6-reverse: mix($warning, $color-bg-container-reverse, 85%);
-$warning-7-reverse: mix($warning, $color-bg-container-reverse, 90%);
-$warning-8-reverse: mix($warning, $color-bg-container-reverse, 95%);
-$warning-9-reverse: mix($warning, $color-bg-container-reverse, 97%);
-$warning-10-reverse: mix($warning, $color-bg-container-reverse, 98%);
+$warning-reverse: mix($warning, $container-background-color-reverse, 85%);
+$warning-1-reverse: mix($warning, $container-background-color-reverse, 15%);
+$warning-2-reverse: mix($warning, $container-background-color-reverse, 25%);
+$warning-3-reverse: mix($warning, $container-background-color-reverse, 30%);
+$warning-4-reverse: mix($warning, $container-background-color-reverse, 45%);
+$warning-5-reverse: mix($warning, $container-background-color-reverse, 65%);
+$warning-6-reverse: mix($warning, $container-background-color-reverse, 85%);
+$warning-7-reverse: mix($warning, $container-background-color-reverse, 90%);
+$warning-8-reverse: mix($warning, $container-background-color-reverse, 95%);
+$warning-9-reverse: mix($warning, $container-background-color-reverse, 97%);
+$warning-10-reverse: mix($warning, $container-background-color-reverse, 98%);
 // error color
 $error: $red-6 !default;
 $error-1: f-get-color($error, 1);
@@ -348,17 +348,17 @@ $error-7: f-get-color($error, 7);
 $error-8: f-get-color($error, 8);
 $error-9: f-get-color($error, 9);
 $error-10: f-get-color($error, 10);
-$error-reverse: mix($error, $color-bg-container-reverse, 85%);
-$error-1-reverse: mix($error, $color-bg-container-reverse, 15%);
-$error-2-reverse: mix($error, $color-bg-container-reverse, 25%);
-$error-3-reverse: mix($error, $color-bg-container-reverse, 30%);
-$error-4-reverse: mix($error, $color-bg-container-reverse, 45%);
-$error-5-reverse: mix($error, $color-bg-container-reverse, 65%);
-$error-6-reverse: mix($error, $color-bg-container-reverse, 85%);
-$error-7-reverse: mix($error, $color-bg-container-reverse, 90%);
-$error-8-reverse: mix($error, $color-bg-container-reverse, 95%);
-$error-9-reverse: mix($error, $color-bg-container-reverse, 97%);
-$error-10-reverse: mix($error, $color-bg-container-reverse, 98%);
+$error-reverse: mix($error, $container-background-color-reverse, 85%);
+$error-1-reverse: mix($error, $container-background-color-reverse, 15%);
+$error-2-reverse: mix($error, $container-background-color-reverse, 25%);
+$error-3-reverse: mix($error, $container-background-color-reverse, 30%);
+$error-4-reverse: mix($error, $container-background-color-reverse, 45%);
+$error-5-reverse: mix($error, $container-background-color-reverse, 65%);
+$error-6-reverse: mix($error, $container-background-color-reverse, 85%);
+$error-7-reverse: mix($error, $container-background-color-reverse, 90%);
+$error-8-reverse: mix($error, $container-background-color-reverse, 95%);
+$error-9-reverse: mix($error, $container-background-color-reverse, 97%);
+$error-10-reverse: mix($error, $container-background-color-reverse, 98%);
 // info color
 $info: $blue-6 !default;
 $info-1: f-get-color($info, 1);
@@ -371,17 +371,17 @@ $info-7: f-get-color($info, 7);
 $info-8: f-get-color($info, 8);
 $info-9: f-get-color($info, 9);
 $info-10: f-get-color($info, 10);
-$info-reverse: mix($info, $color-bg-container-reverse, 85%);
-$info-1-reverse: mix($info, $color-bg-container-reverse, 15%);
-$info-2-reverse: mix($info, $color-bg-container-reverse, 25%);
-$info-3-reverse: mix($info, $color-bg-container-reverse, 30%);
-$info-4-reverse: mix($info, $color-bg-container-reverse, 45%);
-$info-5-reverse: mix($info, $color-bg-container-reverse, 65%);
-$info-6-reverse: mix($info, $color-bg-container-reverse, 85%);
-$info-7-reverse: mix($info, $color-bg-container-reverse, 90%);
-$info-8-reverse: mix($info, $color-bg-container-reverse, 95%);
-$info-9-reverse: mix($info, $color-bg-container-reverse, 97%);
-$info-10-reverse: mix($info, $color-bg-container-reverse, 98%);
+$info-reverse: mix($info, $container-background-color-reverse, 85%);
+$info-1-reverse: mix($info, $container-background-color-reverse, 15%);
+$info-2-reverse: mix($info, $container-background-color-reverse, 25%);
+$info-3-reverse: mix($info, $container-background-color-reverse, 30%);
+$info-4-reverse: mix($info, $container-background-color-reverse, 45%);
+$info-5-reverse: mix($info, $container-background-color-reverse, 65%);
+$info-6-reverse: mix($info, $container-background-color-reverse, 85%);
+$info-7-reverse: mix($info, $container-background-color-reverse, 90%);
+$info-8-reverse: mix($info, $container-background-color-reverse, 95%);
+$info-9-reverse: mix($info, $container-background-color-reverse, 97%);
+$info-10-reverse: mix($info, $container-background-color-reverse, 98%);
 // maps
 $m-color: (
   "-black": $black,
@@ -883,8 +883,8 @@ $m-font-size: (
 // line-height
 $line-height-base: $line-height-benchmark;
 $m-line-height: (
-  "": $font-height-base,
-  "-normal": $font-height-base,
+  "": $line-height-base,
+  "-normal": $line-height-base,
   "-none": 1.15,
   "-tight": 1.3,
   "-snug": 1.45,
