@@ -1,5 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable global-require */
+const config = require('@modyqyw/prettier-config');
+
 module.exports = {
-  ...require('@modyqyw/prettier-config'),
+  ...config,
+  printWidth: 120,
 };
