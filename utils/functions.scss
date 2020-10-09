@@ -109,15 +109,15 @@
     @return $hex-color;
   }
   $is-lighter: $idx <= 6;
-  $hsv-color: f-palette-hex-to-hsv($hex-color); // deg, %, %
+  $hsv-color: f-hex-to-hsv($hex-color); // deg, %, %
   $diff: if($is-lighter, 5 + 1 - $idx, $idx - 5 - 1);
   $h: nth($hsv-color, 1); // deg
   $s: nth($hsv-color, 2); // %
   $v: nth($hsv-color, 3); // %
-  $new-hex-color: f-palette-hsv-to-hex(
-    f-palette-get-hue($h, $s, $v, $diff, $is-lighter),
-    f-palette-get-saturation($h, $s, $v, $diff, $is-lighter),
-    f-palette-get-value($h, $s, $v, $diff, $is-lighter)
+  $new-hex-color: f-hsv-to-hex(
+    f-get-hue($h, $s, $v, $diff, $is-lighter),
+    f-get-saturation($h, $s, $v, $diff, $is-lighter),
+    f-get-value($h, $s, $v, $diff, $is-lighter)
   );
   $a: alpha($hex-color);
   @if ($a == 1) {
