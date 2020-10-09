@@ -19,8 +19,14 @@
     "url": "git@github.com:MillCloud/mp-scss.git"
   },
   "scripts": {
-    "lint": "stylelint ./**/*.scss --fix",
-    "build": "rimraf dist && sass ./_index.scss ./dist/index.css --style=compressed",
+    "lint": "prettier ./**/*.scss --write && stylelint ./**/*.scss --fix",
+    "build:all": "yarn build:index && yarn build:reset && yarn build:elements && yarn build:layout && yarn build:components && yarn build:classes",
+    "build:index": "sass ./index.scss ./dist/index.css --style=compressed",
+    "build:reset": "sass ./reset/index.scss ./dist/reset.css --style=compressed",
+    "build:elements": "sass ./elements/index.scss ./dist/elements.css --style=compressed",
+    "build:layout": "sass ./layout/index.scss ./dist/layout.css --style=compressed",
+    "build:components": "sass ./components/index.scss ./dist/components.css --style=compressed",
+    "build:classes": "sass ./classes/index.scss ./dist/classes.css --style=compressed",
     "commit": "git-cz && git push",
     "dev:docs": "vuepress dev docs",
     "build:docs": "vuepress build docs",
