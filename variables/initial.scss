@@ -1,0 +1,311 @@
+/* global variables with literal values */
+
+$unit: rpx !default;
+
+$scale: 2 !default;
+
+/* common colors */
+// neutral color
+$gray: #8c8c8c !default;
+$gray-1: #fff !default;
+$gray-2: #fafafa !default;
+$gray-3: #f5f5f5 !default;
+$gray-4: #f0f0f0 !default;
+$gray-5: #d9d9d9 !default;
+$gray-6: #bfbfbf !default;
+$gray-7: #8c8c8c !default;
+$gray-8: #595959 !default;
+$gray-9: #434343 !default;
+$gray-10: #262626 !default;
+$gray-11: #1f1f1f !default;
+$gray-12: #141414 !default;
+$gray-13: #000 !default;
+$white: #fff !default;
+$black: #000 !default;
+// dust red
+$red: #f5222d !default;
+// volcano
+$volcano: #fa541c !default;
+// sunset orange
+$orange: #fa8c16 !default;
+// calendula gold
+$gold: #faad14 !default;
+// sunrise yellow
+$yellow: #fadb14 !default;
+// lime
+$lime: #a0d911 !default;
+// polar green
+$green: #52c41a !default;
+// cyan
+$cyan: #13c2c2 !default;
+// daybreak blue
+$blue: #1890ff !default;
+// geek blue
+$geek-blue: #2f54eb !default;
+// golden purple
+$purple: #722ed1 !default;
+// magenta
+$magenta: #eb2f96 !default;
+
+/* denominators */
+$l-denominator: 3, 4, 5, 6, 8, 10, 12, 16, 24, 100 !default;
+
+/* lengths */
+$length-max: 256 !default;
+$length-has-zero: true !default;
+$length-has-auto: true !default;
+
+/* positioning */
+// position
+$m-position: (
+  "relative": relative,
+  "absolute": absolute,
+  "fixed": fixed,
+  "static": static,
+  "sticky": sticky
+) !default;
+$m-position-value: (
+  "-0": 0,
+  "-auto": auto
+) !default;
+// z-index
+$m-z-index: (
+  "-0": 0,
+  "-10": 10,
+  "-20": 20,
+  "-30": 30,
+  "-40": 40,
+  "-50": 50,
+  "-60": 60,
+  "-70": 70,
+  "-80": 80,
+  "-90": 90,
+  "-100": 100,
+  "-110": 110,
+  "-120": 120,
+  "-auto": auto
+) !default;
+// box-sizing
+$m-box-sizing: (
+  "-content": content-box,
+  "-border": border-box
+) !default;
+
+/* box-model */
+// display
+$m-display: (
+  "block": block,
+  "inline-block": inline-block,
+  "inline": inline,
+  "flex": flex,
+  "none": none
+) !default;
+// flex
+$m-flex: (
+  "-init": 0 1 auto,
+  "-auto": 1 1 auto,
+  "-none": 0 0 auto
+) !default;
+$m-flex-direction: (
+  "-row": row,
+  "-row-reverse": row-reverse,
+  "-col": column,
+  "-col-reverse": column-reverse
+) !default;
+$m-flex-wrap: (
+  "-nowrap": nowrap,
+  "-wrap": wrap,
+  "-wrap-reverse": wrap-reverse
+) !default;
+$m-flex-shrink: (
+  "": 1,
+  "-0": 0
+) !default;
+$m-flex-grow: (
+  "": 1,
+  "-0": 0
+) !default;
+$m-align-content: (
+  "-start": flex-start,
+  "-end": flex-end,
+  "-center": center,
+  "-between": space-between,
+  "-around": space-around,
+  "-evenly": space-evenly,
+  "-stretch": stretch
+) !default;
+$m-align-items: (
+  "-start": flex-start,
+  "-end": flex-end,
+  "-center": center,
+  "-baseline": baseline,
+  "-stretch": stretch
+) !default;
+$m-align-self: (
+  "-auto": auto,
+  "-start": flex-start,
+  "-end": flex-end,
+  "-center": center,
+  "-stretch": stretch
+) !default;
+$m-justify-content: (
+  "-start": flex-start,
+  "-end": flex-end,
+  "-center": center,
+  "-between": space-between,
+  "-around": space-around,
+  "-evenly": space-evenly,
+  "-stretch": stretch
+) !default;
+$m-order: (
+  "-init": 0,
+  "-first": -9999,
+  "-last": 9999
+) !default;
+// overflow
+$m-overflow: (
+  "-auto": auto,
+  "-hidden": hidden,
+  "-visible": visible,
+  "-scroll": scroll
+) !default;
+
+/* typography */
+// font-family
+/* stylelint-disable value-keyword-case */
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+  Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+/* stylelint-enable */
+// font-size
+$font-size-benchmark: 14 !default;
+$font-size-min: 10 !default;
+$font-size-max: 64 !default;
+// font-style
+$m-font-style: (
+  "italic": italic,
+  "oblique": oblique
+) !default;
+// font-weight
+$m-font-weight: (
+  "-thin": 100,
+  "-extra-light": 200,
+  "-ultra-light": 200,
+  "-light": 300,
+  "-default": 400,
+  "-normal": 400,
+  "-regular": 400,
+  "-medium": 500,
+  "-semi-bold": 600,
+  "-bold": 700,
+  "-extra-bold": 800,
+  "-ultra-bold": 800,
+  "-black": 900,
+  "-heavy": 900
+) !default;
+// font-variant-numeric
+$m-font-variant-numeric: (
+  "tabular-nums": tabular-nums
+) !default;
+// line-height
+$line-height-benchmark: 1.5715 !default;
+$line-height-min: 18 !default;
+$line-height-max: 72 !default;
+// text-align
+$m-text-align: (
+  "-left": left,
+  "-right": right,
+  "-center": center,
+  "-justify": justify
+);
+// text-decoration
+$m-text-decoration: (
+  "underline": underline,
+  "line-through": line-through
+);
+// text-transform
+$m-text-transform: (
+  "capitalize": capitalize,
+  "upper": uppercase,
+  "uppercase": uppercase,
+  "lower": lowercase,
+  "lowercase": lowercase
+);
+// vertical-align
+$m-vertical-align: (
+  "-baseline": baseline,
+  "-sub": sub,
+  "-super": super,
+  "-text-top": text-top,
+  "-text-bottom": text-bottom,
+  "-top": top,
+  "-bottom": bottom,
+  "-middle": middle
+);
+// visibility
+$m-visibility: (
+  "visible": visible,
+  "invisible": hidden
+);
+// resize
+$m-resize: (
+  "-none": none,
+  "": both,
+  "-both": both,
+  "-y": vertical,
+  "-x": horizontal
+);
+
+/* visual */
+// background-repeat
+$m-background-repeat: (
+  "-repeat": repeat,
+  "-repeat-y": repeat-y,
+  "-repeat-x": repeat-x,
+  "-repeat-space": space,
+  "-repeat-round": round,
+  "-no-repeat": no-repeat
+);
+// background-attachment
+$m-background-attachment: (
+  "-fixed": fixed,
+  "-local": local,
+  "-scroll": scroll
+);
+// background-position
+$m-background-position: (
+  "-top": top,
+  "-right": right,
+  "-bottom": bottom,
+  "-left": left,
+  "-right-top": right top,
+  "-right-bottom": right bottom,
+  "-left-top": left top,
+  "-left-bottom": left bottom,
+  "-center": center
+);
+// background-size
+$m-background-size: (
+  "-contain": contain,
+  "-cover": cover,
+  "-auto": auto
+);
+// border-style
+$m-border-style: (
+  "-solid": solid,
+  "-dashed": dashed,
+  "-dotted": dotted,
+  "-none": none
+);
+// border-width
+$border-width-max: 4 !default;
+$border-width-has-zero: true !default;
+
+/* misc */
+// opacity
+$m-opacity: (
+  "-0": 0,
+  "-25": .25,
+  "-50": .5,
+  "-75": .75,
+  "-100": 1
+);

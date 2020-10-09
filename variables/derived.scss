@@ -1,0 +1,947 @@
+/* global variables that reference other variables or are computed */
+
+/* common colors */
+// dust red
+$red-1: f-get-color($red, 1); // #fff1f0
+$red-2: f-get-color($red, 2); // #ffccc7
+$red-3: f-get-color($red, 3); // #ffa39e
+$red-4: f-get-color($red, 4); // #ff7875
+$red-5: f-get-color($red, 5); // #ff4d4f
+$red-6: f-get-color($red, 6); // #f5222d
+$red-7: f-get-color($red, 7); // #cf1322
+$red-8: f-get-color($red, 8); // #a8071a
+$red-9: f-get-color($red, 9); // #820014
+$red-10: f-get-color($red, 10); // #5c0011
+$red-reverse: mix($red, $color-bg-container-reverse, 85%); // #d32029
+$red-1-reverse: mix($red-8, $color-bg-container-reverse, 15%); // #2a1215
+$red-2-reverse: mix($red-7, $color-bg-container-reverse, 25%); // #431418
+$red-3-reverse: mix($red, $color-bg-container-reverse, 30%); // #58181c
+$red-4-reverse: mix($red, $color-bg-container-reverse, 45%); // #791a1f
+$red-5-reverse: mix($red, $color-bg-container-reverse, 65%); // #a61d24
+$red-6-reverse: mix($red, $color-bg-container-reverse, 85%); // #d32029
+$red-7-reverse: mix($red-5, $color-bg-container-reverse, 90%); // #e84749
+$red-8-reverse: mix($red-4, $color-bg-container-reverse, 95%); // #f37370
+$red-9-reverse: mix($red-3, $color-bg-container-reverse, 97%); // #f89f9a
+$red-10-reverse: mix($red-2, $color-bg-container-reverse, 98%); // #fac8c3
+// volcano
+$volcano-1: f-get-color($volcano, 1); // #fff2e8
+$volcano-2: f-get-color($volcano, 2); // #ffd8bf
+$volcano-3: f-get-color($volcano, 3); // #ffbb96
+$volcano-4: f-get-color($volcano, 4); // #ff9c6e
+$volcano-5: f-get-color($volcano, 5); // #ff7a45
+$volcano-6: f-get-color($volcano, 6); // #fa541c
+$volcano-7: f-get-color($volcano, 7); // #d4380d
+$volcano-8: f-get-color($volcano, 8); // #ad2102
+$volcano-9: f-get-color($volcano, 9); // #871400
+$volcano-10: f-get-color($volcano, 10); // #610b00
+$volcano-reverse: mix($volcano, $color-bg-container-reverse, 85%); // #d84a1b
+$volcano-1-reverse: mix($volcano-8, $color-bg-container-reverse, 15%); // #2b1611
+$volcano-2-reverse: mix($volcano-7, $color-bg-container-reverse, 25%); // #441d12
+$volcano-3-reverse: mix($volcano, $color-bg-container-reverse, 30%); // #592716
+$volcano-4-reverse: mix($volcano, $color-bg-container-reverse, 45%); // #7c3118
+$volcano-5-reverse: mix($volcano, $color-bg-container-reverse, 65%); // #aa3e19
+$volcano-6-reverse: mix($volcano, $color-bg-container-reverse, 85%); // #d84a1b
+$volcano-7-reverse: mix($volcano-5, $color-bg-container-reverse, 90%); // #e87040
+$volcano-8-reverse: mix($volcano-4, $color-bg-container-reverse, 95%); // #f3956a
+$volcano-9-reverse: mix($volcano-3, $color-bg-container-reverse, 97%); // #f8b692
+$volcano-10-reverse: mix($volcano-2, $color-bg-container-reverse, 98%); // #fad4bc
+// sunset orange
+$orange-1: f-get-color($orange, 1); // #fff7e6
+$orange-2: f-get-color($orange, 2); // #ffe7ba
+$orange-3: f-get-color($orange, 3); // #ffd591
+$orange-4: f-get-color($orange, 4); // #ffc069
+$orange-5: f-get-color($orange, 5); // #ffa940
+$orange-6: f-get-color($orange, 6); // #fa8c16
+$orange-7: f-get-color($orange, 7); // #d46b08
+$orange-8: f-get-color($orange, 8); // #ad4e00
+$orange-9: f-get-color($orange, 9); // #873800
+$orange-10: f-get-color($orange, 10); // #612500
+$orange-reverse: mix($orange, $color-bg-container-reverse, 85%); // #d87a16
+$orange-1-reverse: mix($orange-8, $color-bg-container-reverse, 15%); // #2b1d11
+$orange-2-reverse: mix($orange-7, $color-bg-container-reverse, 25%); // #442a11
+$orange-3-reverse: mix($orange, $color-bg-container-reverse, 30%); // #593815
+$orange-4-reverse: mix($orange, $color-bg-container-reverse, 45%); // #7c4a15
+$orange-5-reverse: mix($orange, $color-bg-container-reverse, 65%); // #aa6215
+$orange-6-reverse: mix($orange, $color-bg-container-reverse, 85%); // #d87a16
+$orange-7-reverse: mix($orange-5, $color-bg-container-reverse, 90%); // #e89a3c
+$orange-8-reverse: mix($orange-4, $color-bg-container-reverse, 95%); // #f3b765
+$orange-9-reverse: mix($orange-3, $color-bg-container-reverse, 97%); // #f8cf8d
+$orange-10-reverse: mix($orange-2, $color-bg-container-reverse, 98%); // #fae3b7
+// calendula gold
+$gold-1: f-get-color($gold, 1); // #fffbe6
+$gold-2: f-get-color($gold, 2); // #fff1b8
+$gold-3: f-get-color($gold, 3); // #ffe58f
+$gold-4: f-get-color($gold, 4); // #ffd666
+$gold-5: f-get-color($gold, 5); // #ffc53d
+$gold-6: f-get-color($gold, 6); // #faad14
+$gold-7: f-get-color($gold, 7); // #d48806
+$gold-8: f-get-color($gold, 8); // #ad6800
+$gold-9: f-get-color($gold, 9); // #874d00
+$gold-10: f-get-color($gold, 10); // #613400
+$gold-reverse: mix($gold, $color-bg-container-reverse, 85%); // #d89614
+$gold-1-reverse: mix($gold-8, $color-bg-container-reverse, 15%); // #2b2111
+$gold-2-reverse: mix($gold-7, $color-bg-container-reverse, 25%); // #443111
+$gold-3-reverse: mix($gold, $color-bg-container-reverse, 30%); // #594214
+$gold-4-reverse: mix($gold, $color-bg-container-reverse, 45%); // #7c5914
+$gold-5-reverse: mix($gold, $color-bg-container-reverse, 65%); // #aa7714
+$gold-6-reverse: mix($gold, $color-bg-container-reverse, 85%); // #d89614
+$gold-7-reverse: mix($gold-5, $color-bg-container-reverse, 90%); // #e8b339
+$gold-8-reverse: mix($gold-4, $color-bg-container-reverse, 95%); // #f3cc62
+$gold-9-reverse: mix($gold-3, $color-bg-container-reverse, 97%); // #f8df8b
+$gold-10-reverse: mix($gold-2, $color-bg-container-reverse, 98%); // #faedb5
+// sunrise yellow
+$yellow-1: f-get-color($yellow, 1); // #feffe6
+$yellow-2: f-get-color($yellow, 2); // #ffffb8
+$yellow-3: f-get-color($yellow, 3); // #fffb8f
+$yellow-4: f-get-color($yellow, 4); // #fff566
+$yellow-5: f-get-color($yellow, 5); // #ffec3d
+$yellow-6: f-get-color($yellow, 6); // #fadb14
+$yellow-7: f-get-color($yellow, 7); // #d4b106
+$yellow-8: f-get-color($yellow, 8); // #ad8b00
+$yellow-9: f-get-color($yellow, 9); // #876800
+$yellow-10: f-get-color($yellow, 10); // #614700
+$yellow-reverse: mix($yellow, $color-bg-container-reverse, 85%); // #d8bd14
+$yellow-1-reverse: mix($yellow-8, $color-bg-container-reverse, 15%); // #2b2611
+$yellow-2-reverse: mix($yellow-7, $color-bg-container-reverse, 25%); // #443b11
+$yellow-3-reverse: mix($yellow, $color-bg-container-reverse, 30%); // #595014
+$yellow-4-reverse: mix($yellow, $color-bg-container-reverse, 45%); // #7c6e14
+$yellow-5-reverse: mix($yellow, $color-bg-container-reverse, 65%); // #aa9514
+$yellow-6-reverse: mix($yellow, $color-bg-container-reverse, 85%); // #d8bd14
+$yellow-7-reverse: mix($yellow-5, $color-bg-container-reverse, 90%); // #e8d639
+$yellow-8-reverse: mix($yellow-4, $color-bg-container-reverse, 95%); // #f3ea62
+$yellow-9-reverse: mix($yellow-3, $color-bg-container-reverse, 97%); // #f8f48b
+$yellow-10-reverse: mix($yellow-2, $color-bg-container-reverse, 98%); // #fafab5
+// lime
+$lime-1: f-get-color($lime, 1); // #fcffe6
+$lime-2: f-get-color($lime, 2); // #f4ffb8
+$lime-3: f-get-color($lime, 3); // #eaff8f
+$lime-4: f-get-color($lime, 4); // #d3f261
+$lime-5: f-get-color($lime, 5); // #bae637
+$lime-6: f-get-color($lime, 6); // #a0d911
+$lime-7: f-get-color($lime, 7); // #7cb305
+$lime-8: f-get-color($lime, 8); // #5b8c00
+$lime-9: f-get-color($lime, 9); // #3f6600
+$lime-10: f-get-color($lime, 10); // #254000
+$lime-reverse: mix($lime, $color-bg-container-reverse, 85%); // #8bbb11
+$lime-1-reverse: mix($lime-8, $color-bg-container-reverse, 15%); // #1f2611
+$lime-2-reverse: mix($lime-7, $color-bg-container-reverse, 25%); // #2e3c10
+$lime-3-reverse: mix($lime, $color-bg-container-reverse, 30%); // #3e4f13
+$lime-4-reverse: mix($lime, $color-bg-container-reverse, 45%); // #536d13
+$lime-5-reverse: mix($lime, $color-bg-container-reverse, 65%); // #6f9412
+$lime-6-reverse: mix($lime, $color-bg-container-reverse, 85%); // #8bbb11
+$lime-7-reverse: mix($lime-5, $color-bg-container-reverse, 90%); // #a9d134
+$lime-8-reverse: mix($lime-4, $color-bg-container-reverse, 95%); // #c9e75d
+$lime-9-reverse: mix($lime-3, $color-bg-container-reverse, 97%); // #e4f88b
+$lime-10-reverse: mix($lime-2, $color-bg-container-reverse, 98%); // #f0fab5
+// polar green
+$green-1: f-get-color($green, 1); // #f6ffed
+$green-2: f-get-color($green, 2); // #d9f7be
+$green-3: f-get-color($green, 3); // #b7eb8f
+$green-4: f-get-color($green, 4); // #95de64
+$green-5: f-get-color($green, 5); // #73d13d
+$green-6: f-get-color($green, 6); // #52c41a
+$green-7: f-get-color($green, 7); // #389e0d
+$green-8: f-get-color($green, 8); // #237804
+$green-9: f-get-color($green, 9); // #135200
+$green-10: f-get-color($green, 10); // #092b00
+$green-reverse: mix($green, $color-bg-container-reverse, 85%); // #49aa19
+$green-1-reverse: mix($green-8, $color-bg-container-reverse, 15%); // #162312
+$green-2-reverse: mix($green-7, $color-bg-container-reverse, 25%); // #1d3712
+$green-3-reverse: mix($green, $color-bg-container-reverse, 30%); // #274916
+$green-4-reverse: mix($green, $color-bg-container-reverse, 45%); // #306317
+$green-5-reverse: mix($green, $color-bg-container-reverse, 65%); // #3c8618
+$green-6-reverse: mix($green, $color-bg-container-reverse, 85%); // #49aa19
+$green-7-reverse: mix($green-5, $color-bg-container-reverse, 90%); // #6abe39
+$green-8-reverse: mix($green-4, $color-bg-container-reverse, 95%); // #8fd460
+$green-9-reverse: mix($green-3, $color-bg-container-reverse, 97%); // #b2e58b
+$green-10-reverse: mix($green-2, $color-bg-container-reverse, 98%); // #d5f2bb
+// cyan
+$cyan-1: f-get-color($cyan, 1); // #e6fffb
+$cyan-2: f-get-color($cyan, 2); // #b5f5ec
+$cyan-3: f-get-color($cyan, 3); // #87e8de
+$cyan-4: f-get-color($cyan, 4); // #5cdbd3
+$cyan-5: f-get-color($cyan, 5); // #36cfc9
+$cyan-6: f-get-color($cyan, 6); // #13c2c2
+$cyan-7: f-get-color($cyan, 7); // #08979c
+$cyan-8: f-get-color($cyan, 8); // #006d75
+$cyan-9: f-get-color($cyan, 9); // #00474f
+$cyan-10: f-get-color($cyan, 10); // #002329
+$cyan-reverse: mix($cyan, $color-bg-container-reverse, 85%); // #13a8a8
+$cyan-1-reverse: mix($cyan-8, $color-bg-container-reverse, 15%); // #112123
+$cyan-2-reverse: mix($cyan-7, $color-bg-container-reverse, 25%); // #113536
+$cyan-3-reverse: mix($cyan, $color-bg-container-reverse, 30%); // #144848
+$cyan-4-reverse: mix($cyan, $color-bg-container-reverse, 45%); // #146262
+$cyan-5-reverse: mix($cyan, $color-bg-container-reverse, 65%); // #138585
+$cyan-6-reverse: mix($cyan, $color-bg-container-reverse, 85%); // #13a8a8
+$cyan-7-reverse: mix($cyan-5, $color-bg-container-reverse, 90%); // #33bcb7
+$cyan-8-reverse: mix($cyan-4, $color-bg-container-reverse, 95%); // #58d1c9
+$cyan-9-reverse: mix($cyan-3, $color-bg-container-reverse, 97%); // #84e2d8
+$cyan-10-reverse: mix($cyan-2, $color-bg-container-reverse, 98%); // #b2f1e8
+// daybreak blue
+$blue-1: f-get-color($blue, 1); // #e6f7ff
+$blue-2: f-get-color($blue, 2); // #bae7ff
+$blue-3: f-get-color($blue, 3); // #91d5ff
+$blue-4: f-get-color($blue, 4); // #69c0ff
+$blue-5: f-get-color($blue, 5); // #40a9ff
+$blue-6: f-get-color($blue, 6); // #1890ff
+$blue-7: f-get-color($blue, 7); // #096dd9
+$blue-8: f-get-color($blue, 8); // #0050b3
+$blue-9: f-get-color($blue, 9); // #003a8c
+$blue-10: f-get-color($blue, 10); // #002766
+$blue-reverse: mix($blue, $color-bg-container-reverse, 85%); // #177ddc
+$blue-1-reverse: mix($blue-8, $color-bg-container-reverse, 15%); // #111d2c
+$blue-2-reverse: mix($blue-7, $color-bg-container-reverse, 25%); // #112a45
+$blue-3-reverse: mix($blue, $color-bg-container-reverse, 30%); // #15395b
+$blue-4-reverse: mix($blue, $color-bg-container-reverse, 45%); // #164c7e
+$blue-5-reverse: mix($blue, $color-bg-container-reverse, 65%); // #1765ad
+$blue-6-reverse: mix($blue, $color-bg-container-reverse, 85%); // #177ddc
+$blue-7-reverse: mix($blue-5, $color-bg-container-reverse, 90%); // #3c9ae8
+$blue-8-reverse: mix($blue-4, $color-bg-container-reverse, 95%); // #65b7f3
+$blue-9-reverse: mix($blue-3, $color-bg-container-reverse, 97%); // #8dcff8
+$blue-10-reverse: mix($blue-2, $color-bg-container-reverse, 98%); // #b7e3fa
+// geek blue
+$geek-blue-1: f-get-color($geek-blue, 1); // #f0f5ff
+$geek-blue-2: f-get-color($geek-blue, 2); // #d6e4ff
+$geek-blue-3: f-get-color($geek-blue, 3); // #adc6ff
+$geek-blue-4: f-get-color($geek-blue, 4); // #85a5ff
+$geek-blue-5: f-get-color($geek-blue, 5); // #597ef7
+$geek-blue-6: f-get-color($geek-blue, 6); // #2f54eb
+$geek-blue-7: f-get-color($geek-blue, 7); // #1d39c4
+$geek-blue-8: f-get-color($geek-blue, 8); // #10239e
+$geek-blue-9: f-get-color($geek-blue, 9); // #061178
+$geek-blue-10: f-get-color($geek-blue, 10); // #030852
+$geek-blue-reverse: mix($geek-blue, $color-bg-container-reverse, 85%); // #2b4acb
+$geek-blue-1-reverse: mix($geek-blue-8, $color-bg-container-reverse, 15%); // #131629
+$geek-blue-2-reverse: mix($geek-blue-7, $color-bg-container-reverse, 25%); // #161d40
+$geek-blue-3-reverse: mix($geek-blue, $color-bg-container-reverse, 30%); // #1c2755
+$geek-blue-4-reverse: mix($geek-blue, $color-bg-container-reverse, 45%); // #203175
+$geek-blue-5-reverse: mix($geek-blue, $color-bg-container-reverse, 65%); // #263ea0
+$geek-blue-6-reverse: mix($geek-blue, $color-bg-container-reverse, 85%); // #2b4acb
+$geek-blue-7-reverse: mix($geek-blue-5, $color-bg-container-reverse, 90%); // #5273e0
+$geek-blue-8-reverse: mix($geek-blue-4, $color-bg-container-reverse, 95%); // #7f9ef3
+$geek-blue-9-reverse: mix($geek-blue-3, $color-bg-container-reverse, 97%); // #a8c1f8
+$geek-blue-10-reverse: mix($geek-blue-2, $color-bg-container-reverse, 98%); // #d2e0fa
+// golden purple
+$purple-1: f-get-color($purple, 1); // #f9f0ff
+$purple-2: f-get-color($purple, 2); // #efdbff
+$purple-3: f-get-color($purple, 3); // #d3adf7
+$purple-4: f-get-color($purple, 4); // #b37feb
+$purple-5: f-get-color($purple, 5); // #9254de
+$purple-6: f-get-color($purple, 6); // #722ed1
+$purple-7: f-get-color($purple, 7); // #531dab
+$purple-8: f-get-color($purple, 8); // #391085
+$purple-9: f-get-color($purple, 9); // #22075e
+$purple-10: f-get-color($purple, 10); // #120338
+$purple-reverse: mix($purple, $color-bg-container-reverse, 85%); // #642ab5
+$purple-1-reverse: mix($purple-8, $color-bg-container-reverse, 15%); // #1a1325
+$purple-2-reverse: mix($purple-7, $color-bg-container-reverse, 25%); // #24163a
+$purple-3-reverse: mix($purple, $color-bg-container-reverse, 30%); // #301c4d
+$purple-4-reverse: mix($purple, $color-bg-container-reverse, 45%); // #3e2069
+$purple-5-reverse: mix($purple, $color-bg-container-reverse, 65%); // #51258f
+$purple-6-reverse: mix($purple, $color-bg-container-reverse, 85%); // #642ab5
+$purple-7-reverse: mix($purple-5, $color-bg-container-reverse, 90%); // #854eca
+$purple-8-reverse: mix($purple-4, $color-bg-container-reverse, 95%); // #ab7ae0
+$purple-9-reverse: mix($purple-3, $color-bg-container-reverse, 97%); // #cda8f0
+$purple-10-reverse: mix($purple-2, $color-bg-container-reverse, 98%); // #ebd7fa
+// magenta
+$magenta-1: f-get-color($magenta, 1); // #fff0f6
+$magenta-2: f-get-color($magenta, 2); // #ffd6e7
+$magenta-3: f-get-color($magenta, 3); // #ffadd2
+$magenta-4: f-get-color($magenta, 4); // #ff85c0
+$magenta-5: f-get-color($magenta, 5); // #f759ab
+$magenta-6: f-get-color($magenta, 6); // #eb2f96
+$magenta-7: f-get-color($magenta, 7); // #c41d7f
+$magenta-8: f-get-color($magenta, 8); // #9e1068
+$magenta-9: f-get-color($magenta, 9); // #780650
+$magenta-10: f-get-color($magenta, 10); // #520339
+$magenta-reverse: mix($magenta, $color-bg-container-reverse, 85%); // #cb2b83
+$magenta-1-reverse: mix($magenta-8, $color-bg-container-reverse, 15%); // #291321
+$magenta-2-reverse: mix($magenta-7, $color-bg-container-reverse, 25%); // #40162f
+$magenta-3-reverse: mix($magenta, $color-bg-container-reverse, 30%); // #551c3b
+$magenta-4-reverse: mix($magenta, $color-bg-container-reverse, 45%); // #75204f
+$magenta-5-reverse: mix($magenta, $color-bg-container-reverse, 65%); // #a02669
+$magenta-6-reverse: mix($magenta, $color-bg-container-reverse, 85%); // #cb2b83
+$magenta-7-reverse: mix($magenta-5, $color-bg-container-reverse, 90%); // #e0529c
+$magenta-8-reverse: mix($magenta-4, $color-bg-container-reverse, 95%); // #f37fb7
+$magenta-9-reverse: mix($magenta-3, $color-bg-container-reverse, 97%); // #f8a8cc
+$magenta-10-reverse: mix($magenta-2, $color-bg-container-reverse, 98%); // #fad2e3
+
+/* theme colors that can be used in most places */
+// primary color
+$primary: $blue-6 !default;
+$primary-1: f-get-color($primary, 1);
+$primary-2: f-get-color($primary, 2);
+$primary-3: f-get-color($primary, 3);
+$primary-4: f-get-color($primary, 4);
+$primary-5: f-get-color($primary, 5);
+$primary-6: f-get-color($primary, 6);
+$primary-7: f-get-color($primary, 7);
+$primary-8: f-get-color($primary, 8);
+$primary-9: f-get-color($primary, 9);
+$primary-10: f-get-color($primary, 10);
+$primary-reverse: mix($primary, $color-bg-container-reverse, 85%);
+$primary-1-reverse: mix($primary, $color-bg-container-reverse, 15%);
+$primary-2-reverse: mix($primary, $color-bg-container-reverse, 25%);
+$primary-3-reverse: mix($primary, $color-bg-container-reverse, 30%);
+$primary-4-reverse: mix($primary, $color-bg-container-reverse, 45%);
+$primary-5-reverse: mix($primary, $color-bg-container-reverse, 65%);
+$primary-6-reverse: mix($primary, $color-bg-container-reverse, 85%);
+$primary-7-reverse: mix($primary, $color-bg-container-reverse, 90%);
+$primary-8-reverse: mix($primary, $color-bg-container-reverse, 95%);
+$primary-9-reverse: mix($primary, $color-bg-container-reverse, 97%);
+$primary-10-reverse: mix($primary, $color-bg-container-reverse, 98%);
+// success color
+$success: $green-6 !default;
+$success-1: f-get-color($success, 1);
+$success-2: f-get-color($success, 2);
+$success-3: f-get-color($success, 3);
+$success-4: f-get-color($success, 4);
+$success-5: f-get-color($success, 5);
+$success-6: f-get-color($success, 6);
+$success-7: f-get-color($success, 7);
+$success-8: f-get-color($success, 8);
+$success-9: f-get-color($success, 9);
+$success-10: f-get-color($success, 10);
+$success-reverse: mix($success, $color-bg-container-reverse, 85%);
+$success-1-reverse: mix($success, $color-bg-container-reverse, 15%);
+$success-2-reverse: mix($success, $color-bg-container-reverse, 25%);
+$success-3-reverse: mix($success, $color-bg-container-reverse, 30%);
+$success-4-reverse: mix($success, $color-bg-container-reverse, 45%);
+$success-5-reverse: mix($success, $color-bg-container-reverse, 65%);
+$success-6-reverse: mix($success, $color-bg-container-reverse, 85%);
+$success-7-reverse: mix($success, $color-bg-container-reverse, 90%);
+$success-8-reverse: mix($success, $color-bg-container-reverse, 95%);
+$success-9-reverse: mix($success, $color-bg-container-reverse, 97%);
+$success-10-reverse: mix($success, $color-bg-container-reverse, 98%);
+// warning color
+$warning: $gold-6 !default;
+$warning-1: f-get-color($warning, 1);
+$warning-2: f-get-color($warning, 2);
+$warning-3: f-get-color($warning, 3);
+$warning-4: f-get-color($warning, 4);
+$warning-5: f-get-color($warning, 5);
+$warning-6: f-get-color($warning, 6);
+$warning-7: f-get-color($warning, 7);
+$warning-8: f-get-color($warning, 8);
+$warning-9: f-get-color($warning, 9);
+$warning-10: f-get-color($warning, 10);
+$warning-reverse: mix($warning, $color-bg-container-reverse, 85%);
+$warning-1-reverse: mix($warning, $color-bg-container-reverse, 15%);
+$warning-2-reverse: mix($warning, $color-bg-container-reverse, 25%);
+$warning-3-reverse: mix($warning, $color-bg-container-reverse, 30%);
+$warning-4-reverse: mix($warning, $color-bg-container-reverse, 45%);
+$warning-5-reverse: mix($warning, $color-bg-container-reverse, 65%);
+$warning-6-reverse: mix($warning, $color-bg-container-reverse, 85%);
+$warning-7-reverse: mix($warning, $color-bg-container-reverse, 90%);
+$warning-8-reverse: mix($warning, $color-bg-container-reverse, 95%);
+$warning-9-reverse: mix($warning, $color-bg-container-reverse, 97%);
+$warning-10-reverse: mix($warning, $color-bg-container-reverse, 98%);
+// error color
+$error: $red-6 !default;
+$error-1: f-get-color($error, 1);
+$error-2: f-get-color($error, 2);
+$error-3: f-get-color($error, 3);
+$error-4: f-get-color($error, 4);
+$error-5: f-get-color($error, 5);
+$error-6: f-get-color($error, 6);
+$error-7: f-get-color($error, 7);
+$error-8: f-get-color($error, 8);
+$error-9: f-get-color($error, 9);
+$error-10: f-get-color($error, 10);
+$error-reverse: mix($error, $color-bg-container-reverse, 85%);
+$error-1-reverse: mix($error, $color-bg-container-reverse, 15%);
+$error-2-reverse: mix($error, $color-bg-container-reverse, 25%);
+$error-3-reverse: mix($error, $color-bg-container-reverse, 30%);
+$error-4-reverse: mix($error, $color-bg-container-reverse, 45%);
+$error-5-reverse: mix($error, $color-bg-container-reverse, 65%);
+$error-6-reverse: mix($error, $color-bg-container-reverse, 85%);
+$error-7-reverse: mix($error, $color-bg-container-reverse, 90%);
+$error-8-reverse: mix($error, $color-bg-container-reverse, 95%);
+$error-9-reverse: mix($error, $color-bg-container-reverse, 97%);
+$error-10-reverse: mix($error, $color-bg-container-reverse, 98%);
+// info color
+$info: $blue-6 !default;
+$info-1: f-get-color($info, 1);
+$info-2: f-get-color($info, 2);
+$info-3: f-get-color($info, 3);
+$info-4: f-get-color($info, 4);
+$info-5: f-get-color($info, 5);
+$info-6: f-get-color($info, 6);
+$info-7: f-get-color($info, 7);
+$info-8: f-get-color($info, 8);
+$info-9: f-get-color($info, 9);
+$info-10: f-get-color($info, 10);
+$info-reverse: mix($info, $color-bg-container-reverse, 85%);
+$info-1-reverse: mix($info, $color-bg-container-reverse, 15%);
+$info-2-reverse: mix($info, $color-bg-container-reverse, 25%);
+$info-3-reverse: mix($info, $color-bg-container-reverse, 30%);
+$info-4-reverse: mix($info, $color-bg-container-reverse, 45%);
+$info-5-reverse: mix($info, $color-bg-container-reverse, 65%);
+$info-6-reverse: mix($info, $color-bg-container-reverse, 85%);
+$info-7-reverse: mix($info, $color-bg-container-reverse, 90%);
+$info-8-reverse: mix($info, $color-bg-container-reverse, 95%);
+$info-9-reverse: mix($info, $color-bg-container-reverse, 97%);
+$info-10-reverse: mix($info, $color-bg-container-reverse, 98%);
+// maps
+$m-color: (
+  "-black": $black,
+  "-white": $white,
+  "-gray": $gray,
+  "-gray-1": $gray-1,
+  "-gray-2": $gray-2,
+  "-gray-3": $gray-3,
+  "-gray-4": $gray-4,
+  "-gray-5": $gray-5,
+  "-gray-6": $gray-6,
+  "-gray-7": $gray-7,
+  "-gray-8": $gray-8,
+  "-gray-9": $gray-9,
+  "-gray-10": $gray-10,
+  "-gray-11": $gray-11,
+  "-gray-12": $gray-12,
+  "-gray-13": $gray-13,
+  "-red": $red,
+  "-red-1": $red-1,
+  "-red-2": $red-2,
+  "-red-3": $red-3,
+  "-red-4": $red-4,
+  "-red-5": $red-5,
+  "-red-6": $red-6,
+  "-red-7": $red-7,
+  "-red-8": $red-8,
+  "-red-9": $red-9,
+  "-red-10": $red-10,
+  "-volcano": $volcano,
+  "-volcano-1": $volcano-1,
+  "-volcano-2": $volcano-2,
+  "-volcano-3": $volcano-3,
+  "-volcano-4": $volcano-4,
+  "-volcano-5": $volcano-5,
+  "-volcano-6": $volcano-6,
+  "-volcano-7": $volcano-7,
+  "-volcano-8": $volcano-8,
+  "-volcano-9": $volcano-9,
+  "-volcano-10": $volcano-10,
+  "-orange": $orange,
+  "-orange-1": $orange-1,
+  "-orange-2": $orange-2,
+  "-orange-3": $orange-3,
+  "-orange-4": $orange-4,
+  "-orange-5": $orange-5,
+  "-orange-6": $orange-6,
+  "-orange-7": $orange-7,
+  "-orange-8": $orange-8,
+  "-orange-9": $orange-9,
+  "-orange-10": $orange-10,
+  "-gold": $gold,
+  "-gold-1": $gold-1,
+  "-gold-2": $gold-2,
+  "-gold-3": $gold-3,
+  "-gold-4": $gold-4,
+  "-gold-5": $gold-5,
+  "-gold-6": $gold-6,
+  "-gold-7": $gold-7,
+  "-gold-8": $gold-8,
+  "-gold-9": $gold-9,
+  "-gold-10": $gold-10,
+  "-yellow": $yellow,
+  "-yellow-1": $yellow-1,
+  "-yellow-2": $yellow-2,
+  "-yellow-3": $yellow-3,
+  "-yellow-4": $yellow-4,
+  "-yellow-5": $yellow-5,
+  "-yellow-6": $yellow-6,
+  "-yellow-7": $yellow-7,
+  "-yellow-8": $yellow-8,
+  "-yellow-9": $yellow-9,
+  "-yellow-10": $yellow-10,
+  "-lime": $lime,
+  "-lime-1": $lime-1,
+  "-lime-2": $lime-2,
+  "-lime-3": $lime-3,
+  "-lime-4": $lime-4,
+  "-lime-5": $lime-5,
+  "-lime-6": $lime-6,
+  "-lime-7": $lime-7,
+  "-lime-8": $lime-8,
+  "-lime-9": $lime-9,
+  "-lime-10": $lime-10,
+  "-green": $green,
+  "-green-1": $green-1,
+  "-green-2": $green-2,
+  "-green-3": $green-3,
+  "-green-4": $green-4,
+  "-green-5": $green-5,
+  "-green-6": $green-6,
+  "-green-7": $green-7,
+  "-green-8": $green-8,
+  "-green-9": $green-9,
+  "-green-10": $green-10,
+  "-cyan": $cyan,
+  "-cyan-1": $cyan-1,
+  "-cyan-2": $cyan-2,
+  "-cyan-3": $cyan-3,
+  "-cyan-4": $cyan-4,
+  "-cyan-5": $cyan-5,
+  "-cyan-6": $cyan-6,
+  "-cyan-7": $cyan-7,
+  "-cyan-8": $cyan-8,
+  "-cyan-9": $cyan-9,
+  "-cyan-10": $cyan-10,
+  "-blue": $blue,
+  "-blue-1": $blue-1,
+  "-blue-2": $blue-2,
+  "-blue-3": $blue-3,
+  "-blue-4": $blue-4,
+  "-blue-5": $blue-5,
+  "-blue-6": $blue-6,
+  "-blue-7": $blue-7,
+  "-blue-8": $blue-8,
+  "-blue-9": $blue-9,
+  "-blue-10": $blue-10,
+  "-geek-blue": $geek-blue,
+  "-geek-blue-1": $geek-blue-1,
+  "-geek-blue-2": $geek-blue-2,
+  "-geek-blue-3": $geek-blue-3,
+  "-geek-blue-4": $geek-blue-4,
+  "-geek-blue-5": $geek-blue-5,
+  "-geek-blue-6": $geek-blue-6,
+  "-geek-blue-7": $geek-blue-7,
+  "-geek-blue-8": $geek-blue-8,
+  "-geek-blue-9": $geek-blue-9,
+  "-geek-blue-10": $geek-blue-10,
+  "-purple": $purple,
+  "-purple-1": $purple-1,
+  "-purple-2": $purple-2,
+  "-purple-3": $purple-3,
+  "-purple-4": $purple-4,
+  "-purple-5": $purple-5,
+  "-purple-6": $purple-6,
+  "-purple-7": $purple-7,
+  "-purple-8": $purple-8,
+  "-purple-9": $purple-9,
+  "-purple-10": $purple-10,
+  "-magenta": $magenta,
+  "-magenta-1": $magenta-1,
+  "-magenta-2": $magenta-2,
+  "-magenta-3": $magenta-3,
+  "-magenta-4": $magenta-4,
+  "-magenta-5": $magenta-5,
+  "-magenta-6": $magenta-6,
+  "-magenta-7": $magenta-7,
+  "-magenta-8": $magenta-8,
+  "-magenta-9": $magenta-9,
+  "-magenta-10": $magenta-10,
+  "-primary": $primary,
+  "-primary-1": $primary-1,
+  "-primary-2": $primary-2,
+  "-primary-3": $primary-3,
+  "-primary-4": $primary-4,
+  "-primary-5": $primary-5,
+  "-primary-6": $primary-6,
+  "-primary-7": $primary-7,
+  "-primary-8": $primary-8,
+  "-primary-9": $primary-9,
+  "-primary-10": $primary-10,
+  "-success": $success,
+  "-success-1": $success-1,
+  "-success-2": $success-2,
+  "-success-3": $success-3,
+  "-success-4": $success-4,
+  "-success-5": $success-5,
+  "-success-6": $success-6,
+  "-success-7": $success-7,
+  "-success-8": $success-8,
+  "-success-9": $success-9,
+  "-success-10": $success-10,
+  "-warning": $warning,
+  "-warning-1": $warning-1,
+  "-warning-2": $warning-2,
+  "-warning-3": $warning-3,
+  "-warning-4": $warning-4,
+  "-warning-5": $warning-5,
+  "-warning-6": $warning-6,
+  "-warning-7": $warning-7,
+  "-warning-8": $warning-8,
+  "-warning-9": $warning-9,
+  "-warning-10": $warning-10,
+  "-error": $error,
+  "-error-1": $error-1,
+  "-error-2": $error-2,
+  "-error-3": $error-3,
+  "-error-4": $error-4,
+  "-error-5": $error-5,
+  "-error-6": $error-6,
+  "-error-7": $error-7,
+  "-error-8": $error-8,
+  "-error-9": $error-9,
+  "-error-10": $error-10,
+  "-info": $info,
+  "-info-1": $info-1,
+  "-info-2": $info-2,
+  "-info-3": $info-3,
+  "-info-4": $info-4,
+  "-info-5": $info-5,
+  "-info-6": $info-6,
+  "-info-7": $info-7,
+  "-info-8": $info-8,
+  "-info-9": $info-9,
+  "-info-10": $info-10,
+);
+$m-color-reverse: (
+  "-black": $black,
+  "-white": $white,
+  "-gray": $gray,
+  "-gray-1": $gray-1,
+  "-gray-2": $gray-2,
+  "-gray-3": $gray-3,
+  "-gray-4": $gray-4,
+  "-gray-5": $gray-5,
+  "-gray-6": $gray-6,
+  "-gray-7": $gray-7,
+  "-gray-8": $gray-8,
+  "-gray-9": $gray-9,
+  "-gray-10": $gray-10,
+  "-gray-11": $gray-11,
+  "-gray-12": $gray-12,
+  "-gray-13": $gray-13,
+  "-red": $red-reverse,
+  "-red-1": $red-1-reverse,
+  "-red-2": $red-2-reverse,
+  "-red-3": $red-3-reverse,
+  "-red-4": $red-4-reverse,
+  "-red-5": $red-5-reverse,
+  "-red-6": $red-6-reverse,
+  "-red-7": $red-7-reverse,
+  "-red-8": $red-8-reverse,
+  "-red-9": $red-9-reverse,
+  "-red-10": $red-10-reverse,
+  "-volcano": $volcano-reverse,
+  "-volcano-1": $volcano-1-reverse,
+  "-volcano-2": $volcano-2-reverse,
+  "-volcano-3": $volcano-3-reverse,
+  "-volcano-4": $volcano-4-reverse,
+  "-volcano-5": $volcano-5-reverse,
+  "-volcano-6": $volcano-6-reverse,
+  "-volcano-7": $volcano-7-reverse,
+  "-volcano-8": $volcano-8-reverse,
+  "-volcano-9": $volcano-9-reverse,
+  "-volcano-10": $volcano-10-reverse,
+  "-orange": $orange-reverse,
+  "-orange-1": $orange-1-reverse,
+  "-orange-2": $orange-2-reverse,
+  "-orange-3": $orange-3-reverse,
+  "-orange-4": $orange-4-reverse,
+  "-orange-5": $orange-5-reverse,
+  "-orange-6": $orange-6-reverse,
+  "-orange-7": $orange-7-reverse,
+  "-orange-8": $orange-8-reverse,
+  "-orange-9": $orange-9-reverse,
+  "-orange-10": $orange-10-reverse,
+  "-gold": $gold-reverse,
+  "-gold-1": $gold-1-reverse,
+  "-gold-2": $gold-2-reverse,
+  "-gold-3": $gold-3-reverse,
+  "-gold-4": $gold-4-reverse,
+  "-gold-5": $gold-5-reverse,
+  "-gold-6": $gold-6-reverse,
+  "-gold-7": $gold-7-reverse,
+  "-gold-8": $gold-8-reverse,
+  "-gold-9": $gold-9-reverse,
+  "-gold-10": $gold-10-reverse,
+  "-yellow": $yellow-reverse,
+  "-yellow-1": $yellow-1-reverse,
+  "-yellow-2": $yellow-2-reverse,
+  "-yellow-3": $yellow-3-reverse,
+  "-yellow-4": $yellow-4-reverse,
+  "-yellow-5": $yellow-5-reverse,
+  "-yellow-6": $yellow-6-reverse,
+  "-yellow-7": $yellow-7-reverse,
+  "-yellow-8": $yellow-8-reverse,
+  "-yellow-9": $yellow-9-reverse,
+  "-yellow-10": $yellow-10-reverse,
+  "-lime": $lime-reverse,
+  "-lime-1": $lime-1-reverse,
+  "-lime-2": $lime-2-reverse,
+  "-lime-3": $lime-3-reverse,
+  "-lime-4": $lime-4-reverse,
+  "-lime-5": $lime-5-reverse,
+  "-lime-6": $lime-6-reverse,
+  "-lime-7": $lime-7-reverse,
+  "-lime-8": $lime-8-reverse,
+  "-lime-9": $lime-9-reverse,
+  "-lime-10": $lime-10-reverse,
+  "-green": $green-reverse,
+  "-green-1": $green-1-reverse,
+  "-green-2": $green-2-reverse,
+  "-green-3": $green-3-reverse,
+  "-green-4": $green-4-reverse,
+  "-green-5": $green-5-reverse,
+  "-green-6": $green-6-reverse,
+  "-green-7": $green-7-reverse,
+  "-green-8": $green-8-reverse,
+  "-green-9": $green-9-reverse,
+  "-green-10": $green-10-reverse,
+  "-cyan": $cyan-reverse,
+  "-cyan-1": $cyan-1-reverse,
+  "-cyan-2": $cyan-2-reverse,
+  "-cyan-3": $cyan-3-reverse,
+  "-cyan-4": $cyan-4-reverse,
+  "-cyan-5": $cyan-5-reverse,
+  "-cyan-6": $cyan-6-reverse,
+  "-cyan-7": $cyan-7-reverse,
+  "-cyan-8": $cyan-8-reverse,
+  "-cyan-9": $cyan-9-reverse,
+  "-cyan-10": $cyan-10-reverse,
+  "-blue": $blue-reverse,
+  "-blue-1": $blue-1-reverse,
+  "-blue-2": $blue-2-reverse,
+  "-blue-3": $blue-3-reverse,
+  "-blue-4": $blue-4-reverse,
+  "-blue-5": $blue-5-reverse,
+  "-blue-6": $blue-6-reverse,
+  "-blue-7": $blue-7-reverse,
+  "-blue-8": $blue-8-reverse,
+  "-blue-9": $blue-9-reverse,
+  "-blue-10": $blue-10-reverse,
+  "-geek-blue": $geek-blue-reverse,
+  "-geek-blue-1": $geek-blue-1-reverse,
+  "-geek-blue-2": $geek-blue-2-reverse,
+  "-geek-blue-3": $geek-blue-3-reverse,
+  "-geek-blue-4": $geek-blue-4-reverse,
+  "-geek-blue-5": $geek-blue-5-reverse,
+  "-geek-blue-6": $geek-blue-6-reverse,
+  "-geek-blue-7": $geek-blue-7-reverse,
+  "-geek-blue-8": $geek-blue-8-reverse,
+  "-geek-blue-9": $geek-blue-9-reverse,
+  "-geek-blue-10": $geek-blue-10-reverse,
+  "-purple": $purple-reverse,
+  "-purple-1": $purple-1-reverse,
+  "-purple-2": $purple-2-reverse,
+  "-purple-3": $purple-3-reverse,
+  "-purple-4": $purple-4-reverse,
+  "-purple-5": $purple-5-reverse,
+  "-purple-6": $purple-6-reverse,
+  "-purple-7": $purple-7-reverse,
+  "-purple-8": $purple-8-reverse,
+  "-purple-9": $purple-9-reverse,
+  "-purple-10": $purple-10-reverse,
+  "-magenta": $magenta-reverse,
+  "-magenta-1": $magenta-1-reverse,
+  "-magenta-2": $magenta-2-reverse,
+  "-magenta-3": $magenta-3-reverse,
+  "-magenta-4": $magenta-4-reverse,
+  "-magenta-5": $magenta-5-reverse,
+  "-magenta-6": $magenta-6-reverse,
+  "-magenta-7": $magenta-7-reverse,
+  "-magenta-8": $magenta-8-reverse,
+  "-magenta-9": $magenta-9-reverse,
+  "-magenta-10": $magenta-10-reverse,
+  "-primary-reverse": $primary-reverse,
+  "-primary-1-reverse": $primary-1-reverse,
+  "-primary-2-reverse": $primary-2-reverse,
+  "-primary-3-reverse": $primary-3-reverse,
+  "-primary-4-reverse": $primary-4-reverse,
+  "-primary-5-reverse": $primary-5-reverse,
+  "-primary-6-reverse": $primary-6-reverse,
+  "-primary-7-reverse": $primary-7-reverse,
+  "-primary-8-reverse": $primary-8-reverse,
+  "-primary-9-reverse": $primary-9-reverse,
+  "-primary-10-reverse": $primary-10-reverse,
+  "-success-reverse": $success-reverse,
+  "-success-1-reverse": $success-1-reverse,
+  "-success-2-reverse": $success-2-reverse,
+  "-success-3-reverse": $success-3-reverse,
+  "-success-4-reverse": $success-4-reverse,
+  "-success-5-reverse": $success-5-reverse,
+  "-success-6-reverse": $success-6-reverse,
+  "-success-7-reverse": $success-7-reverse,
+  "-success-8-reverse": $success-8-reverse,
+  "-success-9-reverse": $success-9-reverse,
+  "-success-10-reverse": $success-10-reverse,
+  "-warning-reverse": $warning-reverse,
+  "-warning-1-reverse": $warning-1-reverse,
+  "-warning-2-reverse": $warning-2-reverse,
+  "-warning-3-reverse": $warning-3-reverse,
+  "-warning-4-reverse": $warning-4-reverse,
+  "-warning-5-reverse": $warning-5-reverse,
+  "-warning-6-reverse": $warning-6-reverse,
+  "-warning-7-reverse": $warning-7-reverse,
+  "-warning-8-reverse": $warning-8-reverse,
+  "-warning-9-reverse": $warning-9-reverse,
+  "-warning-10-reverse": $warning-10-reverse,
+  "-error-reverse": $error-reverse,
+  "-error-1-reverse": $error-1-reverse,
+  "-error-2-reverse": $error-2-reverse,
+  "-error-3-reverse": $error-3-reverse,
+  "-error-4-reverse": $error-4-reverse,
+  "-error-5-reverse": $error-5-reverse,
+  "-error-6-reverse": $error-6-reverse,
+  "-error-7-reverse": $error-7-reverse,
+  "-error-8-reverse": $error-8-reverse,
+  "-error-9-reverse": $error-9-reverse,
+  "-error-10-reverse": $error-10-reverse,
+  "-info-reverse": $info-reverse,
+  "-info-1-reverse": $info-1-reverse,
+  "-info-2-reverse": $info-2-reverse,
+  "-info-3-reverse": $info-3-reverse,
+  "-info-4-reverse": $info-4-reverse,
+  "-info-5-reverse": $info-5-reverse,
+  "-info-6-reverse": $info-6-reverse,
+  "-info-7-reverse": $info-7-reverse,
+  "-info-8-reverse": $info-8-reverse,
+  "-info-9-reverse": $info-9-reverse,
+  "-info-10-reverse": $info-10-reverse,
+);
+
+/* ratios */
+$m-ratio: (
+  "-full": 100%,
+  "-half": 50%,
+  "-none": 0
+);
+@each $denominator in $l-denominator {
+  @for $molecule from 1 through $denominator {
+    $m-ratio: map-merge(
+      $m-ratio,
+      (
+        "-#{$molecule}-#{$denominator}": $molecule / $denominator * 100%
+      )
+    );
+  }
+}
+
+/* length */
+$m-length: ();
+@if ($length-has-zero) {
+  $m-length: map-merge(
+    $m-length,
+    (
+      "-0": 0
+    )
+  );
+}
+@if ($length-has-auto) {
+  $m-length: map-merge(
+    $m-length,
+    (
+      "-auto": auto
+    )
+  );
+}
+@for $v from 1 through $length-max {
+  $m-length: map-merge(
+    $m-length,
+    (
+      "-#{$v}": $v * $scale + $unit,
+      "-#{$v}-reverse": -1 * $v * $scale + $unit
+    )
+  );
+}
+@if ($scale != 1) {
+  $m-length: map-merge(
+    $m-length,
+    (
+      "-1-real": 1 + $unit,
+      "-1-real-reverse": -1 + $unit
+    )
+  );
+}
+
+/* typography */
+// font-size
+$font-size-base: $font-size-benchmark * $scale + $unit;
+$m-font-size: (
+  "": $font-size-base,
+  "-xs": (
+    $font-size-benchmark - 4
+  ) * $scale + $unit,
+  "-sm": (
+    $font-size-benchmark - 2
+  ) * $scale + $unit,
+  "-md": $font-size-base,
+  "-lg": (
+    $font-size-benchmark + 2
+  ) * $scale + $unit,
+  "-xl": (
+    $font-size-benchmark + 4
+  ) * $scale + $unit,
+  "-2xl": round(($font-size-benchmark + 4) * 1.33333333) * $scale + $unit,
+  "-3xl": round(($font-size-benchmark + 4) * 1.33333333 * 1.16666667) * $scale + $unit,
+  "-4xl": round(($font-size-benchmark + 4) * 1.33333333 * 1.16666667 * 1.14285714) * $scale + $unit,
+  "-5xl": round(($font-size-benchmark + 4) * 1.33333333 * 1.16666667 * 1.14285714 * 1.125) * $scale + $unit,
+  "-6xl": round(($font-size-benchmark + 4) * 1.33333333 * 1.16666667 * 1.14285714 * 1.125 * 1.11111111) * $scale + $unit
+);
+@for $v from $font-size-min through $font-size-max {
+  $m-font-size: map-merge(
+    $m-font-size,
+    (
+      "-#{$v}": $v * $scale + $unit
+    )
+  );
+}
+// line-height
+$line-height-base: $line-height-benchmark;
+$m-line-height: (
+  "": $font-height-base,
+  "-normal": $font-height-base,
+  "-none": 1.15,
+  "-tight": 1.3,
+  "-snug": 1.45,
+  "-loose": 1.65
+);
+@for $v from $line-height-min through $line-height-max {
+  $m-line-height: map-merge(
+    $m-line-height,
+    (
+      "-#{$v}": $v * $scale + $unit
+    )
+  );
+}
+// color
+$color-title: fade-out($black, .15) !default;
+$color-title-small: fade-out($black, .25) !default;
+$color-main: fade-out($black, .35) !default;
+$color-main-small: fade-out($black, .45) !default;
+$color-secondary: fade-out($black, .55) !default;
+$color-disabled: fade-out($black, .75) !default;
+$color-title-reverse: fade-out($white, .15) !default;
+$color-title-small-reverse: fade-out($white, .25) !default;
+$color-main-reverse: fade-out($white, .35) !default;
+$color-main-small-reverse: fade-out($white, .45) !default;
+$color-secondary-reverse: fade-out($white, .55) !default;
+$color-disabled-reverse: fade-out($white, .7) !default;
+
+/* visual */
+// background-color
+$background-color-default: fade-out($black, .96) !default;
+$background-color-default-reverse: fade-out($white, .92) !default;
+// border-color
+$border-color-default: fade-out($black, .85) !default;
+$border-color-default-reverse: fade-out($white, .8) !default;
+// border-width
+$m-border-width: ();
+@if ($border-width-has-zero) {
+  $m-border-width: map-merge(
+    $m-border-width,
+    (
+      "-0": 0
+    )
+  );
+}
+@for $v from 1 through $border-width-max {
+  $m-border-width: map-merge(
+    $m-border-width,
+    (
+      "-#{$v}": $v * $scale + $unit
+    )
+  );
+}
+@if ($scale != 1) {
+  $m-border-width: map-merge(
+    $m-border-width,
+    (
+      "-1-real": 1 + $unit
+    )
+  );
+}
