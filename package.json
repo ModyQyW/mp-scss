@@ -33,36 +33,36 @@
     }
   },
   "dependencies": {
-    "sass": "^1.26.10",
-    "sass-loader": "^10.0.1"
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^9.1.2",
-    "@commitlint/config-conventional": "^9.1.2",
-    "@modyqyw/eslint-config": "^1.7.2",
-    "@modyqyw/prettier-config": "^1.1.1",
-    "@modyqyw/stylelint-config-scss": "^1.0.18",
-    "@vuepress/plugin-active-header-links": "^1.5.4",
-    "@vuepress/plugin-back-to-top": "^1.5.4",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@modyqyw/eslint-config": "^1.8.7",
+    "@modyqyw/prettier-config": "^1.1.4",
+    "@modyqyw/stylelint-config": "^1.0.0",
+    "@vuepress/plugin-active-header-links": "^1.6.0",
+    "@vuepress/plugin-back-to-top": "^1.6.0",
     "@vuepress/plugin-blog": "^1.9.2",
-    "@vuepress/plugin-medium-zoom": "^1.5.4",
-    "@vuepress/plugin-nprogress": "^1.5.4",
-    "@vuepress/plugin-pwa": "^1.5.4",
+    "@vuepress/plugin-medium-zoom": "^1.6.0",
+    "@vuepress/plugin-nprogress": "^1.6.0",
+    "@vuepress/plugin-pwa": "^1.6.0",
     "commitizen": "^4.2.1",
-    "eslint": "^7.7.0",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.13",
-    "prettier": "^2.1.1",
+    "eslint": "^7.10.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
     "rimraf": "^3.0.2",
-    "stylelint": "^13.7.0",
-    "vuepress": "^1.5.4",
+    "stylelint": "^13.7.2",
+    "vuepress": "^1.6.0",
     "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-plugin-helper-live2d": "^1.0.2",
     "vuepress-plugin-sitemap": "^2.3.1"
   },
   "peerDependencies": {
-    "sass": "~1.26.0",
-    "sass-loader": "~10.0.0"
+    "sass": "~1.27.0",
+    "sass-loader": "~10.0.2"
   },
   "publishConfig": {
     "access": "public"
