@@ -1,7 +1,9 @@
 /* global variables */
 
+// rpx is used in most cases
 $unit: rpx !default;
 
+// 2x scaling is used in most cases
 $scale: 2 !default;
 
 /* common colors */
@@ -116,10 +118,6 @@ $m-flex-wrap: (
   "-nowrap": nowrap,
   "-wrap": wrap,
   "-wrap-reverse": wrap-reverse
-) !default;
-$m-flex-shrink: (
-  "": 1,
-  "-0": 0
 ) !default;
 $flex-shrink-min: 0 !default;
 $flex-shrink-max: 8 !default;
@@ -238,17 +236,6 @@ $m-text-transform: (
   "uppercase": uppercase,
   "lower": lowercase,
   "lowercase": lowercase
-);
-// vertical-align
-$m-vertical-align: (
-  "-baseline": baseline,
-  "-sub": sub,
-  "-super": super,
-  "-text-top": text-top,
-  "-text-bottom": text-bottom,
-  "-top": top,
-  "-bottom": bottom,
-  "-middle": middle
 );
 // visibility
 $m-visibility: (

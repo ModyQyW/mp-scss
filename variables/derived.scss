@@ -826,7 +826,7 @@ $m-length: ();
   );
 }
 // flex
-$m-flex-shrink: ();
+$m-flex-shrink: ("": 1);
 @for $v from $flex-shrink-min to $flex-shrink-max {
   $m-flex-shrink: map-merge(
     $m-flex-shrink,
@@ -835,7 +835,7 @@ $m-flex-shrink: ();
     )
   );
 }
-$m-flex-grow: ();
+$m-flex-grow: ("": 1);
 @for $v from $flex-grow-min to $flex-grow-max {
   $m-flex-grow: map-merge(
     $m-flex-grow,
