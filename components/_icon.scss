@@ -13,10 +13,10 @@ $m-icon: (
   "-4xl": $length-40
 );
 
-@each $key, $val in $m-icon {
-  .icon#{$key} {
-    flex: 0 0 $val;
-    width: $val;
-    height: $val;
+@each $k, $v in $m-icon {
+  .icon#{$k} {
+    flex: 0 0 $v;
+    width: $v;
+    height: $v;
   }
 }

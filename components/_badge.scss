@@ -74,17 +74,17 @@ $m-badge: (
   )
 );
 
-@each $key, $val in $m-badge {
-  .badge#{$key},
-  .light .badge#{$key} {
-    color: map-get($val, "color-light");
-    background-color: map-get($val, "background-color-light");
-    border-color: map-get($val, "border-color-light");
+@each $k, $v in $m-badge {
+  .badge#{$k},
+  .light .badge#{$k} {
+    color: map-get($v, "color-light");
+    background-color: map-get($v, "background-color-light");
+    border-color: map-get($v, "border-color-light");
   }
 
-  .dark .badge#{$key} {
-    color: map-get($val, "color-dark");
-    background-color: map-get($val, "background-color-dark");
-    border-color: map-get($val, "border-color-dark");
+  .dark .badge#{$k} {
+    color: map-get($v, "color-dark");
+    background-color: map-get($v, "background-color-dark");
+    border-color: map-get($v, "border-color-dark");
   }
 }
