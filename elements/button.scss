@@ -1,0 +1,34 @@
+button {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  padding: 8rpx 32rpx;
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  background-color: $gray-3;
+  border: 1rpx solid $border-color;
+  border-radius: $border-radius-min;
+
+  &[disabled] {
+    color: $color-disabled;
+    background-color: $gray-2;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+// TODO: add theme

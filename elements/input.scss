@@ -1,0 +1,17 @@
+input {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: unset;
+  padding: 12rpx 36rpx;
+  overflow: hidden;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-overflow: clip;
+  white-space: nowrap;
+  cursor: auto;
+}
