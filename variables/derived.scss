@@ -784,7 +784,6 @@ $m-ratio: (
   "-full": 100%,
   "-half": 50%,
   "-none": none,
-  "-0": 0
 );
 @each $denominator in $l-denominator {
   @for $molecule from 1 through $denominator {
@@ -826,6 +825,8 @@ $m-length: ();
     )
   );
 }
+
+/* box-model */
 // flex
 $m-flex-shrink: ("": 1);
 @for $v from $flex-shrink-min to $flex-shrink-max {
@@ -858,6 +859,15 @@ $m-order: (
     )
   );
 }
+// spacing
+$m-spacing: (
+  "": 12 * $scale + $unit,
+  "-xs": 4 * $scale + $unit,
+  "-sm": 8 * $scale + $unit,
+  "-md": 12 * $scale + $unit,
+  "-lg": 16 * $scale + $unit,
+  "-xl": 20 * $scale + $unit
+);
 
 /* typography */
 // font-family
