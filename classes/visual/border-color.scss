@@ -1,0 +1,169 @@
+@each $k, $v in $m-colors {
+  .border#{$k},
+  .is-light .border#{$k},
+  .is-light.border#{$k} {
+    border-color: $v;
+  }
+
+  .border-y#{$k},
+  .is-light .border-y#{$k},
+  .is-light.border-y#{$k} {
+    border-top-color: $v;
+    border-bottom-color: $v;
+  }
+
+  .border-x#{$k},
+  .is-light .border-x#{$k},
+  .is-light.border-x#{$k} {
+    border-right-color: $v;
+    border-left-color: $v;
+  }
+
+  .border-t#{$k},
+  .is-light .border-t#{$k},
+  .is-light.border-t#{$k} {
+    border-top-color: $v;
+  }
+
+  .border-r#{$k},
+  .is-light .border-r#{$k},
+  .is-light.border-r#{$k} {
+    border-right-color: $v;
+  }
+
+  .border-b#{$k},
+  .is-light .border-b#{$k},
+  .is-light.border-b#{$k} {
+    border-bottom-color: $v;
+  }
+
+  .border-l#{$k},
+  .is-light .border-l#{$k},
+  .is-light.border-l#{$k} {
+    border-color: $v;
+  }
+}
+
+@each $k, $v in $m-border-color {
+  .border#{$k},
+  .is-light .border#{$k},
+  .is-light.border#{$k} {
+    border-color: $v;
+  }
+
+  .border-y#{$k},
+  .is-light .border-y#{$k},
+  .is-light.border-y#{$k} {
+    border-top-color: $v;
+    border-bottom-color: $v;
+  }
+
+  .border-x#{$k},
+  .is-light .border-x#{$k},
+  .is-light.border-x#{$k} {
+    border-right-color: $v;
+    border-left-color: $v;
+  }
+
+  .border-t#{$k},
+  .is-light .border-t#{$k},
+  .is-light.border-t#{$k} {
+    border-top-color: $v;
+  }
+
+  .border-r#{$k},
+  .is-light .border-r#{$k},
+  .is-light.border-r#{$k} {
+    border-right-color: $v;
+  }
+
+  .border-b#{$k},
+  .is-light .border-b#{$k},
+  .is-light.border-b#{$k} {
+    border-bottom-color: $v;
+  }
+
+  .border-l#{$k},
+  .is-light .border-l#{$k},
+  .is-light.border-l#{$k} {
+    border-color: $v;
+  }
+}
+
+@each $k, $v in $m-colors-reverse {
+  .is-dark .border#{$k},
+  .is-dark.border#{$k} {
+    border-color: $v;
+  }
+
+  .is-dark .border-y#{$k},
+  .is-dark.border-y#{$k} {
+    border-top-color: $v;
+    border-bottom-color: $v;
+  }
+
+  .is-dark .border-x#{$k},
+  .is-dark.border-x#{$k} {
+    border-right-color: $v;
+    border-left-color: $v;
+  }
+
+  .is-dark .border-t#{$k},
+  .is-dark.border-t#{$k} {
+    border-top-color: $v;
+  }
+
+  .is-dark .border-r#{$k},
+  .is-dark.border-r#{$k} {
+    border-right-color: $v;
+  }
+
+  .is-dark .border-b#{$k},
+  .is-dark.border-b#{$k} {
+    border-bottom-color: $v;
+  }
+
+  .is-dark .border-l#{$k},
+  .is-dark.border-l#{$k} {
+    border-color: $v;
+  }
+}
+
+@each $k, $v in $m-border-color-reverse {
+  .is-dark .border#{$k},
+  .is-dark.border#{$k} {
+    border-color: $v;
+  }
+
+  .is-dark .border-y#{$k},
+  .is-dark.border-y#{$k} {
+    border-top-color: $v;
+    border-bottom-color: $v;
+  }
+
+  .is-dark .border-x#{$k},
+  .is-dark.border-x#{$k} {
+    border-right-color: $v;
+    border-left-color: $v;
+  }
+
+  .is-dark .border-t#{$k},
+  .is-dark.border-t#{$k} {
+    border-top-color: $v;
+  }
+
+  .is-dark .border-r#{$k},
+  .is-dark.border-r#{$k} {
+    border-right-color: $v;
+  }
+
+  .is-dark .border-b#{$k},
+  .is-dark.border-b#{$k} {
+    border-bottom-color: $v;
+  }
+
+  .is-dark .border-l#{$k},
+  .is-dark.border-l#{$k} {
+    border-color: $v;
+  }
+}

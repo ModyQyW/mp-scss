@@ -1,0 +1,31 @@
+@each $k, $v in $m-border-style {
+  .border#{$k} {
+    border-style: $v;
+  }
+
+  .border-t#{$k} {
+    border-top-style: $v;
+  }
+
+  .border-r#{$k} {
+    border-right-style: $v;
+  }
+
+  .border-b#{$k} {
+    border-bottom-style: $v;
+  }
+
+  .border-l#{$k} {
+    border-left-style: $v;
+  }
+
+  .border-y#{$k} {
+    border-top-style: $v;
+    border-bottom-style: $v;
+  }
+
+  .border-x#{$k} {
+    border-right-style: $v;
+    border-left-style: $v;
+  }
+}

@@ -1,5 +1,0 @@
-@each $key, $val in $m-visibility {
-  .#{$key} {
-    visibility: $val;
-  }
-}

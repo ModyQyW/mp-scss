@@ -1,0 +1,5 @@
+@each $k, $v in $m-resize {
+  .resize#{$v} {
+    resize: $v;
+  }
+}

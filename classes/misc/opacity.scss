@@ -1,0 +1,5 @@
+@each $k, $v in $m-opacity {
+  .opacity#{$k} {
+    opacity: $v;
+  }
+}

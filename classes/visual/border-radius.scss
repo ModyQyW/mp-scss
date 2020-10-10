@@ -1,0 +1,41 @@
+@each $k, $v in $m-border-radius {
+  .rounded#{$k} {
+    border-radius: $v;
+  }
+
+  .rounded-t#{$k} {
+    border-top-left-radius: $v;
+    border-top-right-radius: $v;
+  }
+
+  .rounded-b#{$k} {
+    border-bottom-right-radius: $v;
+    border-bottom-left-radius: $v;
+  }
+
+  .rounded-r#{$k} {
+    border-top-right-radius: $v;
+    border-bottom-right-radius: $v;
+  }
+
+  .rounded-l#{$k} {
+    border-top-left-radius: $v;
+    border-bottom-left-radius: $v;
+  }
+
+  .rounded-tl#{$k} {
+    border-top-left-radius: $v;
+  }
+
+  .rounded-tr#{$k} {
+    border-top-right-radius: $v;
+  }
+
+  .rounded-br#{$k} {
+    border-bottom-right-radius: $v;
+  }
+
+  .rounded-bl#{$k} {
+    border-bottom-left-radius: $v;
+  }
+}

@@ -1,5 +1,0 @@
-@each $key, $val in $m-z-index {
-  .z#{$key} {
-    z-index: $val;
-  }
-}

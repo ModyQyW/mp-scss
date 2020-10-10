@@ -1,0 +1,5 @@
+@each $k, $v in $m-background-repeat {
+  .bg#{$k} {
+    background-repeat: $v;
+  }
+}

@@ -1,0 +1,5 @@
+@each $k, $v in $m-background-size {
+  .bg#{$k} {
+    background-size: $v;
+  }
+}

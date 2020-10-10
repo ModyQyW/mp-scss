@@ -1,0 +1,40 @@
+@each $k, $v in $m-position {
+  .#{$k} {
+    position: $v;
+  }
+}
+
+@each $k, $v in $m-position-value {
+  .top#{$k} {
+    top: $v;
+  }
+
+  .right#{$k} {
+    right: $v;
+  }
+
+  .bottom#{$k} {
+    right: $v;
+  }
+
+  .left#{$k} {
+    right: $v;
+  }
+
+  .inset#{$k} {
+    top: $v;
+    right: $v;
+    bottom: $v;
+    left: $v;
+  }
+
+  .inset-y#{$k} {
+    top: $v;
+    bottom: $v;
+  }
+
+  .inset-x#{$k} {
+    right: $v;
+    left: $v;
+  }
+}

@@ -1,0 +1,56 @@
+@each $k, $v in $m-ratio {
+  .w#{$k} {
+    width: $v;
+  }
+}
+
+@each $k, $v in $m-length {
+  // no negative
+  @if (str-index($k, "-n") == null) {
+    .w#{$k} {
+      width: $v;
+    }
+  }
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+@each $k, $v in $m-ratio {
+  .min-w#{$k} {
+    min-width: $v;
+  }
+}
+
+@each $k, $v in $m-length {
+  // no negative
+  @if (str-index($k, "-n") == null) {
+    .min-w#{$k} {
+      min-width: $v;
+    }
+  }
+}
+
+.min-w-screen {
+  min-width: 100vw;
+}
+
+@each $k, $v in $m-ratio {
+  .max-w#{$k} {
+    min-width: $v;
+  }
+}
+
+@each $k, $v in $m-length {
+  // no negative
+  @if (str-index($k, "-n") == null) {
+    .max-w#{$k} {
+      min-width: $v;
+    }
+  }
+}
+
+.max-w-screen {
+  max-width: 100vw;
+}

@@ -1,0 +1,29 @@
+@each $k, $v in $m-colors {
+  .text#{$k},
+  .is-light .text#{$k},
+  .is-light.text#{$k} {
+    color: $v;
+  }
+}
+
+@each $k, $v in $m-color {
+  .text#{$k},
+  .is-light .text#{$k},
+  .is-light.text#{$k} {
+    color: $v;
+  }
+}
+
+@each $k, $v in $m-colors-reverse {
+  .is-dark .text#{$k}
+  .is-dark.text#{$k} {
+    color: $v;
+  }
+}
+
+@each $k, $v in $m-color-reverse {
+  .is-dark .text#{$k},
+  .is-dark.text#{$k} {
+    color: $v;
+  }
+}

@@ -1,0 +1,5 @@
+@each $k, $v in $m-background-attachment {
+  .bg#{$k} {
+    background-attachment: $v;
+  }
+}

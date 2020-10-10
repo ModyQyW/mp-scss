@@ -1,0 +1,5 @@
+@each $k, $v in $m-transition {
+  .transition#{$k} {
+    transition: $v;
+  }
+}

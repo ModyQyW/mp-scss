@@ -1,5 +1,0 @@
-@each $key, $val in $m-line-height {
-  .leading#{$key} {
-    line-height: $val;
-  }
-}

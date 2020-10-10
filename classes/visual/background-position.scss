@@ -1,0 +1,5 @@
+@each $k, $v in $m-background-position {
+  .bg#{$k} {
+    background-position: $v;
+  }
+}

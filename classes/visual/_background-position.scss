@@ -1,5 +1,0 @@
-@each $key, $val in $m-background-position {
-  .bg#{$key} {
-    background-position: $val;
-  }
-}

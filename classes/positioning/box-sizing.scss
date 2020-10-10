@@ -1,0 +1,5 @@
+@each $k, $v in $m-box-sizing {
+  .box#{$k} {
+    box-sizing: $v;
+  }
+}

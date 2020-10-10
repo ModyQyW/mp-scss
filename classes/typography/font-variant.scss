@@ -1,0 +1,5 @@
+@each $k, $v in $m-font-variant-numeric {
+  .#{$k} {
+    font-variant: $v;
+  }
+}

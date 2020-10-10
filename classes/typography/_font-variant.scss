@@ -1,6 +1,0 @@
-@each $key, $val in $m-font-variant {
-  .#{$key},
-  .variant-#{$key} {
-    font-variant: $val;
-  }
-}

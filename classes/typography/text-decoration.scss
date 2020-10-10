@@ -1,0 +1,5 @@
+@each $k, $v in $m-text-decoration {
+  .text-decoration#{$k} {
+    text-decoration: $v;
+  }
+}

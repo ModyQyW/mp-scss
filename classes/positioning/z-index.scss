@@ -1,0 +1,5 @@
+@each $k, $v in $m-z-index {
+  .z#{$k} {
+    z-index: $v;
+  }
+}

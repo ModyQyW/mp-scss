@@ -1,0 +1,13 @@
+@each $k, $v in $m-overflow {
+  .overflow#{$k} {
+    overflow: $v;
+  }
+
+  .overflow-x#{$k} {
+    overflow-y: $v;
+  }
+
+  .overflow-y#{$k} {
+    overflow-y: $v;
+  }
+}

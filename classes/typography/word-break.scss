@@ -1,0 +1,18 @@
+.text-break-normal {
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+.text-break-word {
+  overflow-wrap: break-word;
+}
+
+.text-break-all {
+  word-break: break-all;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
