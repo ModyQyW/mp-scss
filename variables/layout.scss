@@ -1,3 +1,28 @@
 // variables that used by layout
 $container-background-color: $gray-1 !default;
 $container-background-color-reverse: $gray-12 !default;
+
+$header-background-color: transparent !default;
+$header-background-color-reverse: transparent !default;
+
+$navbar-background-color: transparent !default;
+$navbar-background-color-reverse: transparent !default;
+
+$aside-background-color: transparent !default;
+$aside-background-color-reverse: transparent !default;
+
+$main-background-color: transparent !default;
+$main-background-color-reverse: transparent !default;
+
+$footer-background-color: transparent !default;
+$footer-background-color-reverse: transparent !default;
+
+$safe-area-height: 34 * $scale + $unit;
+$safe-area-background-color: transparent !default;
+$safe-area-background-color-reverse: transparent !default;
+
+$row-background-color: transparent !default;
+$row-background-color-reverse: transparent !default;
+
+$col-background-color: transparent !default;
+$col-background-color-reverse: transparent !default;
