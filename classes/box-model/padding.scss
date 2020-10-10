@@ -61,3 +61,35 @@
     padding-left: $v;
   }
 }
+
+@each $k, $v in $m-spacing {
+  .p#{$k} {
+    padding: $v;
+  }
+
+  .py#{$k} {
+    padding-top: $v;
+    padding-bottom: $v;
+  }
+
+  .pt#{$k} {
+    padding-top: $v;
+  }
+
+  .pb#{$k} {
+    padding-bottom: $v;
+  }
+
+  .px#{$k} {
+    padding-right: $v;
+    padding-left: $v;
+  }
+
+  .pr#{$k} {
+    padding-right: $v;
+  }
+
+  .pl#{$k} {
+    padding-left: $v;
+  }
+}
