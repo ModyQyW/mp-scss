@@ -722,61 +722,61 @@ $m-colors-reverse: (
   "-magenta-8": $magenta-8-reverse,
   "-magenta-9": $magenta-9-reverse,
   "-magenta-10": $magenta-10-reverse,
-  "-primary-reverse": $primary-reverse,
-  "-primary-1-reverse": $primary-1-reverse,
-  "-primary-2-reverse": $primary-2-reverse,
-  "-primary-3-reverse": $primary-3-reverse,
-  "-primary-4-reverse": $primary-4-reverse,
-  "-primary-5-reverse": $primary-5-reverse,
-  "-primary-6-reverse": $primary-6-reverse,
-  "-primary-7-reverse": $primary-7-reverse,
-  "-primary-8-reverse": $primary-8-reverse,
-  "-primary-9-reverse": $primary-9-reverse,
-  "-primary-10-reverse": $primary-10-reverse,
-  "-success-reverse": $success-reverse,
-  "-success-1-reverse": $success-1-reverse,
-  "-success-2-reverse": $success-2-reverse,
-  "-success-3-reverse": $success-3-reverse,
-  "-success-4-reverse": $success-4-reverse,
-  "-success-5-reverse": $success-5-reverse,
-  "-success-6-reverse": $success-6-reverse,
-  "-success-7-reverse": $success-7-reverse,
-  "-success-8-reverse": $success-8-reverse,
-  "-success-9-reverse": $success-9-reverse,
-  "-success-10-reverse": $success-10-reverse,
-  "-warning-reverse": $warning-reverse,
-  "-warning-1-reverse": $warning-1-reverse,
-  "-warning-2-reverse": $warning-2-reverse,
-  "-warning-3-reverse": $warning-3-reverse,
-  "-warning-4-reverse": $warning-4-reverse,
-  "-warning-5-reverse": $warning-5-reverse,
-  "-warning-6-reverse": $warning-6-reverse,
-  "-warning-7-reverse": $warning-7-reverse,
-  "-warning-8-reverse": $warning-8-reverse,
-  "-warning-9-reverse": $warning-9-reverse,
-  "-warning-10-reverse": $warning-10-reverse,
-  "-error-reverse": $error-reverse,
-  "-error-1-reverse": $error-1-reverse,
-  "-error-2-reverse": $error-2-reverse,
-  "-error-3-reverse": $error-3-reverse,
-  "-error-4-reverse": $error-4-reverse,
-  "-error-5-reverse": $error-5-reverse,
-  "-error-6-reverse": $error-6-reverse,
-  "-error-7-reverse": $error-7-reverse,
-  "-error-8-reverse": $error-8-reverse,
-  "-error-9-reverse": $error-9-reverse,
-  "-error-10-reverse": $error-10-reverse,
-  "-info-reverse": $info-reverse,
-  "-info-1-reverse": $info-1-reverse,
-  "-info-2-reverse": $info-2-reverse,
-  "-info-3-reverse": $info-3-reverse,
-  "-info-4-reverse": $info-4-reverse,
-  "-info-5-reverse": $info-5-reverse,
-  "-info-6-reverse": $info-6-reverse,
-  "-info-7-reverse": $info-7-reverse,
-  "-info-8-reverse": $info-8-reverse,
-  "-info-9-reverse": $info-9-reverse,
-  "-info-10-reverse": $info-10-reverse
+  "-primary": $primary-reverse,
+  "-primary-1": $primary-1-reverse,
+  "-primary-2": $primary-2-reverse,
+  "-primary-3": $primary-3-reverse,
+  "-primary-4": $primary-4-reverse,
+  "-primary-5": $primary-5-reverse,
+  "-primary-6": $primary-6-reverse,
+  "-primary-7": $primary-7-reverse,
+  "-primary-8": $primary-8-reverse,
+  "-primary-9": $primary-9-reverse,
+  "-primary-10": $primary-10-reverse,
+  "-success": $success-reverse,
+  "-success-1": $success-1-reverse,
+  "-success-2": $success-2-reverse,
+  "-success-3": $success-3-reverse,
+  "-success-4": $success-4-reverse,
+  "-success-5": $success-5-reverse,
+  "-success-6": $success-6-reverse,
+  "-success-7": $success-7-reverse,
+  "-success-8": $success-8-reverse,
+  "-success-9": $success-9-reverse,
+  "-success-10": $success-10-reverse,
+  "-warning": $warning-reverse,
+  "-warning-1": $warning-1-reverse,
+  "-warning-2": $warning-2-reverse,
+  "-warning-3": $warning-3-reverse,
+  "-warning-4": $warning-4-reverse,
+  "-warning-5": $warning-5-reverse,
+  "-warning-6": $warning-6-reverse,
+  "-warning-7": $warning-7-reverse,
+  "-warning-8": $warning-8-reverse,
+  "-warning-9": $warning-9-reverse,
+  "-warning-10": $warning-10-reverse,
+  "-error": $error-reverse,
+  "-error-1": $error-1-reverse,
+  "-error-2": $error-2-reverse,
+  "-error-3": $error-3-reverse,
+  "-error-4": $error-4-reverse,
+  "-error-5": $error-5-reverse,
+  "-error-6": $error-6-reverse,
+  "-error-7": $error-7-reverse,
+  "-error-8": $error-8-reverse,
+  "-error-9": $error-9-reverse,
+  "-error-10": $error-10-reverse,
+  "-info": $info-reverse,
+  "-info-1": $info-1-reverse,
+  "-info-2": $info-2-reverse,
+  "-info-3": $info-3-reverse,
+  "-info-4": $info-4-reverse,
+  "-info-5": $info-5-reverse,
+  "-info-6": $info-6-reverse,
+  "-info-7": $info-7-reverse,
+  "-info-8": $info-8-reverse,
+  "-info-9": $info-9-reverse,
+  "-info-10": $info-10-reverse
 );
 
 /* ratios */
@@ -858,6 +858,15 @@ $m-order: (
   );
 }
 
+/* typography */
+// font-family
+$m-font-family: (
+  "-default": $font-family-default,
+  "-sans": $font-family-sans,
+  "-serif": $font-family-serif,
+  "-mono": $font-family-mono
+);
+// font-size
 $font-size-base: $font-size-benchmark * $scale + $unit;
 $m-font-size: (
   "": $font-size-base,
@@ -896,7 +905,8 @@ $m-line-height: (
   "-none": 1.15,
   "-tight": 1.3,
   "-snug": 1.45,
-  "-loose": 1.65
+  "-relaxed": 1.65,
+  "-loose": 2
 );
 @for $v from $line-height-min through $line-height-max {
   $m-line-height: map-merge(
@@ -920,10 +930,20 @@ $color-main-small-reverse: fade-out($white, .45) !default;
 $color-secondary-reverse: fade-out($white, .55) !default;
 $color-disabled-reverse: fade-out($white, .7) !default;
 $m-color: (
-  "-title": $color-title
+  "-title": $color-title,
+  "-title-small": $color-title-small,
+  "-main": $color-main,
+  "-main-small": $color-main-small,
+  "-secondary": $color-secondary,
+  "-disabled": $color-disabled
 );
 $m-color-reverse: (
-  "-title-reverse": $color-title-reverse
+  "-title": $color-title-reverse,
+  "-title-small": $color-title-small-reverse,
+  "-main": $color-main-reverse,
+  "-main-small": $color-main-small-reverse,
+  "-secondary": $color-secondary-reverse,
+  "-disabled": $color-disabled-reverse
 );
 
 /* visual */
@@ -934,7 +954,7 @@ $m-background-color: (
   "": $background-color
 );
 $m-background-color-reverse: (
-  "-reverse": $background-color-reverse
+  "": $background-color-reverse
 );
 // border-color
 $border-color: fade-out($black, .85) !default;
@@ -943,7 +963,7 @@ $m-border-color: (
   "": $border-color
 );
 $m-border-color-reverse: (
-  "-reverse": $border-color-reverse
+  "": $border-color-reverse
 );
 // border-width
 $m-border-width: ();
