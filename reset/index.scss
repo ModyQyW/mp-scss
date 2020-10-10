@@ -17,3 +17,8 @@ page {
   background: initial;
   text-size-adjust: none;
 }
+
+view,
+scroll-view {
+  box-sizing: border-box;
+}
