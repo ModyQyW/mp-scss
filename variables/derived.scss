@@ -919,15 +919,15 @@ $m-line-height: (
 }
 // color
 $color-title: fade-out($black, .15) !default;
-$color-title-small: fade-out($black, .25) !default;
-$color-main: fade-out($black, .35) !default;
-$color-main-small: fade-out($black, .45) !default;
+$color-title-small: fade-out($black, .15) !default;
+$color-main: fade-out($black, .15) !default;
+$color-main-small: fade-out($black, .15) !default;
 $color-secondary: fade-out($black, .55) !default;
 $color-disabled: fade-out($black, .75) !default;
 $color-title-reverse: fade-out($white, .15) !default;
-$color-title-small-reverse: fade-out($white, .25) !default;
-$color-main-reverse: fade-out($white, .35) !default;
-$color-main-small-reverse: fade-out($white, .45) !default;
+$color-title-small-reverse: fade-out($white, .15) !default;
+$color-main-reverse: fade-out($white, .15) !default;
+$color-main-small-reverse: fade-out($white, .15) !default;
 $color-secondary-reverse: fade-out($white, .55) !default;
 $color-disabled-reverse: fade-out($white, .7) !default;
 $m-color: (
