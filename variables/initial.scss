@@ -96,11 +96,12 @@ $m-box-sizing: (
 /* box-model */
 // display
 $m-display: (
-  "block": block,
-  "inline-block": inline-block,
-  "inline": inline,
-  "flex": flex,
-  "none": none
+  "-block": block,
+  "-inline-block": inline-block,
+  "-inline": inline,
+  "-flex": flex,
+  "-inline-flex": inline-flex,
+  "-none": none
 ) !default;
 // flex
 $m-flex: (
@@ -189,8 +190,8 @@ $font-size-min: 10 !default;
 $font-size-max: 64 !default;
 // font-style
 $m-font-style: (
-  "italic": italic,
-  "oblique": oblique
+  "-italic": italic,
+  "-oblique": oblique
 ) !default;
 // font-weight
 $m-font-weight: (
@@ -206,7 +207,6 @@ $m-font-weight: (
   "-bold": 700,
   "-extra-bold": 800,
   "-ultra-bold": 800,
-  "-black": 900,
   "-heavy": 900
 ) !default;
 // font-variant-numeric
@@ -223,25 +223,20 @@ $m-text-align: (
   "-right": right,
   "-center": center,
   "-justify": justify
-);
+) !default;
 // text-decoration
 $m-text-decoration: (
-  "underline": underline,
-  "line-through": line-through
-);
+  "-none": none,
+  "-overline": overline,
+  "-underline": underline,
+  "-line-through": line-through
+) !default;
 // text-transform
 $m-text-transform: (
-  "capitalize": capitalize,
-  "upper": uppercase,
-  "uppercase": uppercase,
-  "lower": lowercase,
-  "lowercase": lowercase
-);
-// visibility
-$m-visibility: (
-  "visible": visible,
-  "invisible": hidden
-);
+  "-capitalize": capitalize,
+  "-uppercase": uppercase,
+  "-lowercase": lowercase
+) !default;
 // resize
 $m-resize: (
   "-none": none,
@@ -249,7 +244,7 @@ $m-resize: (
   "-both": both,
   "-y": vertical,
   "-x": horizontal
-);
+) !default;
 
 /* visual */
 // background-repeat
@@ -260,13 +255,13 @@ $m-background-repeat: (
   "-repeat-space": space,
   "-repeat-round": round,
   "-no-repeat": no-repeat
-);
+) !default;
 // background-attachment
 $m-background-attachment: (
   "-fixed": fixed,
   "-local": local,
   "-scroll": scroll
-);
+) !default;
 // background-position
 $m-background-position: (
   "-top": top,
@@ -278,27 +273,33 @@ $m-background-position: (
   "-left-top": left top,
   "-left-bottom": left bottom,
   "-center": center
-);
+) !default;
 // background-size
 $m-background-size: (
   "-contain": contain,
   "-cover": cover,
   "-auto": auto,
   "-full": 100% 100%
-);
+) !default;
 // border-style
 $m-border-style: (
   "-solid": solid,
   "-dashed": dashed,
   "-dotted": dotted,
   "-none": none
-);
+) !default;
 // border-width
 $border-width-min: 0 !default;
 $border-width-max: 4 !default;
 // border-radius
 $border-radius-min: 0 !default;
 $border-radius-max: 8 !default;
+// box-shadow
+$box-shadow-umbra: rgba(0, 0, 0, .2) !default;
+$box-shadow-penumbra: rgba(0, 0, 0, .14) !default;
+$box-shadow-ambient: rgba(0, 0, 0, .12) !default;
+$box-shadow-min: 0 !default;
+$box-shadow-max: 24 !default;
 
 /* misc */
 // opacity
@@ -308,4 +309,7 @@ $m-opacity: (
   "-50": .5,
   "-75": .75,
   "-100": 1
-);
+) !default;
+// transition
+$transition-delay: .8s !default;
+$transition-timing-function: cubic-bezier(.25, .8, .5, 1) !default;
