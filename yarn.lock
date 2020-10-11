@@ -8560,11 +8560,6 @@ responselike@^1.0.2:
   dependencies:
     lowercase-keys "^1.0.0"
 
-ress@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/ress/-/ress-3.0.0.tgz#45ec8304b67ea114b0cec733bf2628083f35aa9c"
-  integrity sha512-MTPto7t44AawqmSbEmvMKoSMWPnxjaTuHf94s7RjWxuSGFN0o8/b+6yOwkaC50+Vihjsu6ODUEQR397gTMn57w==
-
 restore-cursor@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/restore-cursor/-/restore-cursor-2.0.0.tgz#9f7ee287f82fd326d4fd162923d62129eee0dfaf"

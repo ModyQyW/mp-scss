@@ -1,6 +1,12 @@
 // styles reset
+//
+// REF
+// - https://ress-css.surge.sh/
+//
 // DO NOT USE V2 STYLE for wechat miniprogram
-@import "../node_modules/ress/ress.css";
+/* stylelint-disable property-no-vendor-prefix, declaration-no-important */
+
+@import "../variables/index";
 
 page {
   width: 100%;
@@ -12,13 +18,174 @@ page {
   font-weight: 400;
   line-height: $line-height-base;
   color: $color-main;
+  word-break: normal;
   cursor: default;
   user-select: none;
   background: initial;
   text-size-adjust: none;
 }
 
+cover-image,
+cover-view,
+match-media,
+movable-area,
+movable-view,
+scroll-view,
+swiper,
+swiper-item,
+view,
+icon,
+progress,
+rich-text,
+text,
+button,
+checkbox,
+checkbox-group,
+editor,
+form,
+input,
+label,
+picker,
+picker-view,
+picker-view-column,
+radio,
+radio-group,
+slider,
+switch,
+textarea,
+functional-page-navigator,
+navigator,
+audio,
+camera,
+image,
+live-player,
+live-pusher,
+video,
+voip-room,
+map,
+canvas,
+ad,
+ad-custom,
+official-account,
+open-data,
+web-view,
+navigation-bar,
+page-meta {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-repeat: no-repeat;
+}
+
+::before,
+::after {
+  box-sizing: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  background-repeat: no-repeat;
+}
+
 view,
 scroll-view {
-  box-sizing: border-box;
+  display: block;
 }
+
+[hidden] {
+  display: none;
+}
+
+input {
+  border-radius: 0;
+}
+
+[disabled] {
+  cursor: default;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  outline-offset: -2px;
+  -webkit-appearance: textfield;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  background-color: transparent;
+  border-style: none;
+}
+
+button {
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+[role="button"] {
+  color: inherit;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+button:-moz-focusring,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  outline: 1px dotted ButtonText;
+}
+
+image {
+  border-style: none;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+@media screen {
+  [hidden~="screen"] {
+    display: inherit;
+  }
+  [hidden~="screen"]:not(:active):not(:focus):not(:target) {
+    position: absolute !important;
+    clip: rect(0 0 0 0) !important;
+  }
+}
+
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+[aria-controls] {
+  cursor: pointer;
+}
+
+[aria-disabled] {
+  cursor: default;
+}
+
