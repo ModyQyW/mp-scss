@@ -1,3 +1,7 @@
+// REF
+// - https://github.com/ant-design/ant-design/blob/master/components/style/color/colorPalette.less
+// - https://zhuanlan.zhihu.com/p/32422584
+
 @function f-hex-to-hsv($hex-color) {
   // convert
   $r: red($hex-color) / 255;
