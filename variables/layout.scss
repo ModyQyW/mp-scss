@@ -26,3 +26,18 @@ $row-background-color-reverse: transparent !default;
 
 $col-background-color: transparent !default;
 $col-background-color-reverse: transparent !default;
+
+$grid-max: 24 !default;
+$m-gutter: (
+  "": 12 / 2 * $scale + $unit,
+  "-xs": 4 / 2 * $scale + $unit,
+  "-sm": 8 / 2 * $scale + $unit,
+  "-md": 12 / 2 * $scale + $unit,
+  "-lg": 16 / 2 * $scale + $unit,
+  "-xl": 20 / 2 * $scale + $unit
+) !default;
+$gutter-min: 4 !default;
+$gutter-max: 20 !default;
+@for $v from $gutter-min through $gutter-max {
+  $m-gutter: map-merge($m-gutter, ("-#{$v}": $v / 2 * $scale + $unit));
+}
