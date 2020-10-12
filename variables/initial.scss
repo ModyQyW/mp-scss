@@ -55,7 +55,6 @@ $l-denominator: 3, 4, 5, 6, 8, 10, 12, 16, 24, 100 !default;
 /* lengths */
 $length-min: 0 !default;
 $length-max: 256 !default;
-$length-has-auto: true !default;
 
 /* positioning */
 // position
@@ -166,7 +165,10 @@ $order-min: -24 !default;
 $order-init: 0 !default;
 $order-max: 24 !default;
 $order-last: 9999 !default;
-
+// spacing
+$spacing-benchmark: 12 !default;
+$spacing-min: 0 !default;
+$spacing-max: 256 !default;
 // overflow
 $m-overflow: (
   "-auto": auto,
@@ -292,6 +294,7 @@ $m-border-style: (
 $border-width-min: 0 !default;
 $border-width-max: 4 !default;
 // border-radius
+$border-radius-benchmark: 6 !default;
 $border-radius-min: 0 !default;
 $border-radius-max: 8 !default;
 // box-shadow

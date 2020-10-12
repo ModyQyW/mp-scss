@@ -784,9 +784,9 @@ $m-ratio: (
   "-full": 100%,
   "-half": 50%,
   "-none": none,
-);
+) !default;
 @each $denominator in $l-denominator {
-  @for $molecule from 1 through $denominator {
+  @for $molecule from 1 to $denominator {
     $m-ratio: map-merge(
       $m-ratio,
       (
@@ -797,77 +797,60 @@ $m-ratio: (
 }
 
 /* length */
-$m-length: ();
-@if ($length-has-auto) {
-  $m-length: map-merge(
-    $m-length,
-    (
-      "-auto": auto
-    )
-  );
+$m-length: ("-auto": auto) !default;
+@for $v from $length-min to $length-max {
+  $m-length: map-merge($m-length, ("-#{$v}": $v * $scale + $unit));
 }
-@for $v from $length-min through $length-max {
-  $m-length: map-merge(
-    $m-length,
+@if ($scale != 1) {
+  $m-length: map-merge($m-length, ("-1-real": 1 + $unit));
+}
+
+/* box-model */
+// flex
+$m-flex-shrink: ("": 1) !default;
+@for $v from $flex-shrink-min to $flex-shrink-max {
+  $m-flex-shrink: map-merge($m-flex-shrink, ("-#{$v}": $v));
+}
+$m-flex-grow: ("": 1) !default;
+@for $v from $flex-grow-min to $flex-grow-max {
+  $m-flex-grow: map-merge($m-flex-grow, ("-#{$v}": $v));
+}
+$m-order: (
+  "-init": $order-init,
+  "-first": $order-first,
+  "-last": $order-last
+) !default;
+@for $v from $order-min to $order-max {
+  $m-order: map-merge($m-order, ("-#{$v}": $v));
+}
+// spacing
+$m-spacing: (
+  "-auto": auto,
+  "": $spacing-benchmark * $scale + $unit,
+  "-xs": ($spacing-benchmark - 8) * $scale + $unit,
+  "-sm": ($spacing-benchmark - 4) * $scale + $unit,
+  "-md": $spacing-benchmark * $scale + $unit,
+  "-lg": ($spacing-benchmark + 4) * $scale + $unit,
+  "-xl": ($spacing-benchmark + 8) * $scale + $unit
+) !default;
+@for $v from $spacing-min to $spacing-max {
+  $m-spacing: map-merge(
+    $m-spacing,
     (
       "-#{$v}": $v * $scale + $unit,
-      // negative
       "-n#{$v}": -1 * $v * $scale + $unit
     )
   );
 }
 @if ($scale != 1) {
-  $m-length: map-merge(
-    $m-length,
+  $m-spacing: map-merge(
+    $m-spacing,
     (
       "-1-real": 1 + $unit,
       "-n1-real": -1 + $unit
     )
   );
 }
-
-/* box-model */
-// flex
-$m-flex-shrink: ("": 1);
-@for $v from $flex-shrink-min to $flex-shrink-max {
-  $m-flex-shrink: map-merge(
-    $m-flex-shrink,
-    (
-      "-#{$v}": $v
-    )
-  );
-}
-$m-flex-grow: ("": 1);
-@for $v from $flex-grow-min to $flex-grow-max {
-  $m-flex-grow: map-merge(
-    $m-flex-grow,
-    (
-      "-#{$v}": $v
-    )
-  );
-}
-$m-order: (
-  "-init": $order-init,
-  "-first": $order-first,
-  "-last": $order-last
-);
-@for $v from $order-min to $order-max {
-  $m-order: map-merge(
-    $m-order,
-    (
-      "-#{$v}": $v
-    )
-  );
-}
-// spacing
-$m-spacing: (
-  "": 12 * $scale + $unit,
-  "-xs": 4 * $scale + $unit,
-  "-sm": 8 * $scale + $unit,
-  "-md": 12 * $scale + $unit,
-  "-lg": 16 * $scale + $unit,
-  "-xl": 20 * $scale + $unit
-);
 
 /* typography */
 // font-family
@@ -876,31 +859,22 @@ $m-font-family: (
   "-sans": $font-family-sans,
   "-serif": $font-family-serif,
   "-mono": $font-family-mono
-);
+) !default;
 // font-size
-$font-size-base: $font-size-benchmark * $scale + $unit;
 $m-font-size: (
-  "": $font-size-base,
-  "-xs": (
-    $font-size-benchmark - 4
-  ) * $scale + $unit,
-  "-sm": (
-    $font-size-benchmark - 2
-  ) * $scale + $unit,
-  "-md": $font-size-base,
-  "-lg": (
-    $font-size-benchmark + 2
-  ) * $scale + $unit,
-  "-xl": (
-    $font-size-benchmark + 4
-  ) * $scale + $unit,
+  "": $font-size-benchmark * $scale + $unit,
+  "-xs": ($font-size-benchmark - 4) * $scale + $unit,
+  "-sm": ($font-size-benchmark - 2) * $scale + $unit,
+  "-md": $font-size-benchmark * $scale + $unit,
+  "-lg": ($font-size-benchmark + 2) * $scale + $unit,
+  "-xl": ($font-size-benchmark + 4) * $scale + $unit,
   "-2xl": round(($font-size-benchmark + 4) * 1.33333333) * $scale + $unit,
   "-3xl": round(($font-size-benchmark + 4) * 1.33333333 * 1.16666667) * $scale + $unit,
   "-4xl": round(($font-size-benchmark + 4) * 1.33333333 * 1.16666667 * 1.14285714) * $scale + $unit,
   "-5xl": round(($font-size-benchmark + 4) * 1.33333333 * 1.16666667 * 1.14285714 * 1.125) * $scale + $unit,
   "-6xl": round(($font-size-benchmark + 4) * 1.33333333 * 1.16666667 * 1.14285714 * 1.125 * 1.11111111) * $scale + $unit
-);
-@for $v from $font-size-min through $font-size-max {
+) !default;
+@for $v from $font-size-min to $font-size-max {
   $m-font-size: map-merge(
     $m-font-size,
     (
@@ -909,17 +883,16 @@ $m-font-size: (
   );
 }
 // line-height
-$line-height-base: $line-height-benchmark;
 $m-line-height: (
-  "": $line-height-base,
-  "-normal": $line-height-base,
+  "": $line-height-benchmark,
+  "-normal": $line-height-benchmark,
   "-none": 1.15,
   "-tight": 1.3,
   "-snug": 1.45,
   "-relaxed": 1.65,
   "-loose": 2
-);
-@for $v from $line-height-min through $line-height-max {
+) !default;
+@for $v from $line-height-min to $line-height-max {
   $m-line-height: map-merge(
     $m-line-height,
     (
@@ -977,8 +950,8 @@ $m-border-color-reverse: (
   "": $border-color-reverse
 );
 // border-width
-$m-border-width: ();
-@for $v from $border-width-min through $border-width-max {
+$m-border-width: ("": 1 * $scale + $unit) !default;
+@for $v from $border-width-min to $border-width-max {
   $m-border-width: map-merge(
     $m-border-width,
     (
@@ -995,8 +968,18 @@ $m-border-width: ();
   );
 }
 // border-radius
-$m-border-radius: ();
-@for $v from $border-radius-min through $border-radius-max {
+$m-border-radius: (
+  "": $border-radius-benchmark * $scale + $unit,
+  "-xs": ($border-radius-benchmark - 4) * $scale + $unit,
+  "-sm": ($border-radius-benchmark - 2) * $scale + $unit,
+  "-md": $border-radius-benchmark * $scale + $unit,
+  "-lg": ($border-radius-benchmark + 2) * $scale + $unit,
+  "-xl": ($border-radius-benchmark + 4) * $scale + $unit,
+  "-2xl": ($border-radius-benchmark + 6) * $scale + $unit,
+  "-half": 50%,
+  "-full": 100%
+) !default;
+@for $v from $border-radius-min to $border-radius-max {
   $m-border-radius: map-merge(
     $m-border-radius,
     (
