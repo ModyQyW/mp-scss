@@ -31,29 +31,29 @@ button,
     border-color: $button-disabled-border-color;
   }
 
-  &.is-ripple::after {
+  &.is-ripply::after {
     position: absolute;
-    top: $button-ripple-radius-benchmark * $scale + $unit;
-    right: $button-ripple-radius-benchmark * $scale + $unit;
-    bottom: $button-ripple-radius-benchmark * $scale + $unit;
-    left: $button-ripple-radius-benchmark * $scale + $unit;
+    top: $button-ripply-radius-benchmark * $scale + $unit;
+    right: $button-ripply-radius-benchmark * $scale + $unit;
+    bottom: $button-ripply-radius-benchmark * $scale + $unit;
+    left: $button-ripply-radius-benchmark * $scale + $unit;
     display: block;
     pointer-events: none;
     content: "";
-    background-color: $button-ripple-background-color;
+    background-color: $button-ripply-background-color;
     background-repeat: no-repeat;
     background-position: 50%;
     border-radius: inherit;
     opacity: 0;
-    transition: $button-ripple-transition;
+    transition: $button-ripply-transition;
   }
 
-  &.is-ripple:active::after {
+  &.is-ripply:active::after {
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: $button-ripple-active-opacity;
+    opacity: $button-ripply-active-opacity;
     transition: 0s;
   }
 
