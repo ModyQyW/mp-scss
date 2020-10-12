@@ -8,11 +8,16 @@ $button-font-size: $font-size-benchmark * $scale + $unit !default;
 $button-color: inherit !default;
 $button-background-color: $gray-1 !default;
 $button-border: 1 * $scale + $unit solid $border-color;
-$button-radius: $border-radius-benchmark * $scale + $unit;
+$button-border-radius: $border-radius-benchmark * $scale + $unit;
 $button-transition: $transition-delay $transition-timing-function;
 $button-disabled-color: $color-disabled;
 $button-disabled-background-color: $gray-3 !default;
 $button-disabled-border-color: $border-color;
+
+$button-ripple-spacing-benchmark: -4 !default;
+$button-ripple-transition: $transition-delay !default;
+$button-ripple-background-color: $gray-9 !default;
+$button-ripple-active-opacity: .24 !default;
 
 $button-sm-padding-y: 0 !default;
 $button-sm-padding-x: $button-padding-benchmark * 2 * $scale + $unit !default;
