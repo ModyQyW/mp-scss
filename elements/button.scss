@@ -33,10 +33,10 @@ button,
 
   &.is-ripply::after {
     position: absolute;
-    top: $button-ripply-radius-benchmark * $scale + $unit;
-    right: $button-ripply-radius-benchmark * $scale + $unit;
-    bottom: $button-ripply-radius-benchmark * $scale + $unit;
-    left: $button-ripply-radius-benchmark * $scale + $unit;
+    top: $button-ripply-spacing-benchmark * $scale + $unit;
+    right: $button-ripply-spacing-benchmark * $scale + $unit;
+    bottom: $button-ripply-spacing-benchmark * $scale + $unit;
+    left: $button-ripply-spacing-benchmark * $scale + $unit;
     display: block;
     pointer-events: none;
     content: "";
