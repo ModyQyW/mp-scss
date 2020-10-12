@@ -38,6 +38,6 @@ $m-gutter: (
 ) !default;
 $gutter-min: 4 !default;
 $gutter-max: 20 !default;
-@for $v from $gutter-min through $gutter-max {
+@for $v from $gutter-min to $gutter-max {
   $m-gutter: map-merge($m-gutter, ("-#{$v}": $v / 2 * $scale + $unit));
 }
