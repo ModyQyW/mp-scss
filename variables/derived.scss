@@ -1,5 +1,11 @@
 /* global variables that reference other variables or are computed */
 
+// preset elements
+$page-background-color: $gray-1 !default;
+$page-background-color-reverse: $gray-13 !default;
+$body-background-color: $page-background-color !default;
+$body-background-color: $page-background-color-reverse !default;
+
 /* common colors */
 // dust red
 $red-1: f-get-color($red, 1); // #fff1f0
