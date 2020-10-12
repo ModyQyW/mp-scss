@@ -14,9 +14,9 @@ page {
   margin: 0;
   overflow-x: hidden;
   font-family: $font-family-default;
-  font-size: $font-size-base;
+  font-size: $font-size-benchmark * $scale + $unit;
   font-weight: 400;
-  line-height: $line-height-base;
+  line-height: $line-height-benchmark;
   color: $color-main;
   word-break: normal;
   cursor: default;
