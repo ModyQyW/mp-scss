@@ -1,4 +1,5 @@
-button {
+button,
+.btn {
   position: relative;
   box-sizing: border-box;
   display: flex;
@@ -17,6 +18,7 @@ button {
   color: $button-color;
   text-align: center;
   text-decoration: none;
+  cursor: pointer;
   background-color: $button-background-color;
   border: $button-border;
   border-radius: $button-radius;
@@ -25,6 +27,7 @@ button {
 
   &[disabled] {
     color: $button-disabled-color;
+    cursor: not-allowed;
     background-color: $button-disabled-background-color;
     border-color: $button-disabled-border-color;
   }
@@ -45,6 +48,7 @@ button {
 
   &.is-loading:not([disabled]) {
     pointer-events: none;
+    cursor: default;
   }
 
   &.is-text,
