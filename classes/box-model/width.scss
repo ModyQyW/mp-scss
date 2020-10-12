@@ -5,11 +5,8 @@
 }
 
 @each $k, $v in $m-length {
-  // no negative
-  @if (str-index($k, "-n") == null) {
-    .w#{$k} {
-      width: $v;
-    }
+  .w#{$k} {
+    width: $v;
   }
 }
 
@@ -24,11 +21,8 @@
 }
 
 @each $k, $v in $m-length {
-  // no negative
-  @if (str-index($k, "-n") == null) {
-    .min-w#{$k} {
-      min-width: $v;
-    }
+  .min-w#{$k} {
+    min-width: $v;
   }
 }
 
@@ -43,11 +37,8 @@
 }
 
 @each $k, $v in $m-length {
-  // no negative
-  @if (str-index($k, "-n") == null) {
-    .max-w#{$k} {
-      min-width: $v;
-    }
+  .max-w#{$k} {
+    min-width: $v;
   }
 }
 

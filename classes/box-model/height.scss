@@ -5,11 +5,8 @@
 }
 
 @each $k, $v in $m-length {
-  // no negative
-  @if (str-index($k, "-n") == null) {
-    .h#{$k} {
-      height: $v;
-    }
+  .h#{$k} {
+    height: $v;
   }
 }
 
@@ -24,11 +21,8 @@
 }
 
 @each $k, $v in $m-length {
-  // no negative
-  @if (str-index($k, "-n") == null) {
-    .min-h#{$k} {
-      height: $v;
-    }
+  .min-h#{$k} {
+    height: $v;
   }
 }
 
@@ -43,11 +37,8 @@
 }
 
 @each $k, $v in $m-length {
-  // no negative
-  @if (str-index($k, "-n") == null) {
-    .max-h#{$k} {
-      height: $v;
-    }
+  .max-h#{$k} {
+    height: $v;
   }
 }
 

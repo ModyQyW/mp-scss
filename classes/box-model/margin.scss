@@ -30,38 +30,6 @@
   }
 }
 
-@each $k, $v in $m-length {
-  .m#{$k} {
-    margin: $v;
-  }
-
-  .my#{$k} {
-    margin-top: $v;
-    margin-bottom: $v;
-  }
-
-  .mt#{$k} {
-    margin-top: $v;
-  }
-
-  .mb#{$k} {
-    margin-bottom: $v;
-  }
-
-  .mx#{$k} {
-    margin-right: $v;
-    margin-left: $v;
-  }
-
-  .mr#{$k} {
-    margin-right: $v;
-  }
-
-  .ml#{$k} {
-    margin-left: $v;
-  }
-}
-
 @each $k, $v in $m-spacing {
   .m#{$k} {
     margin: $v;

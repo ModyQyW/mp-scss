@@ -1,4 +1,4 @@
-@for $v from $box-shadow-min through $box-shadow-max {
+@for $v from $box-shadow-min to $box-shadow-max {
   .z-#{$v} {
     box-shadow: map-get($m-box-shadow-umbra, $v), map-get($m-box-shadow-penumbra, $v), map-get($m-box-shadow-ambient, $v);
   }
