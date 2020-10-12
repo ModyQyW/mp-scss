@@ -970,12 +970,11 @@ $m-border-width: ("": 1 * $scale + $unit) !default;
 // border-radius
 $m-border-radius: (
   "": $border-radius-benchmark * $scale + $unit,
-  "-xs": ($border-radius-benchmark - 4) * $scale + $unit,
-  "-sm": ($border-radius-benchmark - 2) * $scale + $unit,
+  "-xs": ($border-radius-benchmark - 2) * $scale + $unit,
+  "-sm": ($border-radius-benchmark - 1) * $scale + $unit,
   "-md": $border-radius-benchmark * $scale + $unit,
   "-lg": ($border-radius-benchmark + 2) * $scale + $unit,
   "-xl": ($border-radius-benchmark + 4) * $scale + $unit,
-  "-2xl": ($border-radius-benchmark + 6) * $scale + $unit,
   "-half": 50%,
   "-full": 100%
 ) !default;
