@@ -1,10 +1,12 @@
 /* global variables that reference other variables or are computed */
 
-// preset elements
+// global preset
 $page-background-color: $gray-1 !default;
 $page-background-color-reverse: $gray-13 !default;
 $body-background-color: $page-background-color !default;
 $body-background-color: $page-background-color-reverse !default;
+$container-background-color: $gray-1 !default;
+$container-background-color-reverse: $gray-12 !default;
 
 /* common colors */
 // dust red
