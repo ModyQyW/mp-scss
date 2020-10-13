@@ -2,7 +2,7 @@ button,
 .btn {
   position: relative;
   box-sizing: border-box;
-  display: flex;
+  display: $button-display;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -10,100 +10,118 @@ button,
   height: auto;
   padding: $button-padding-y $button-padding-x;
   margin: $button-margin-y $button-margin-x;
+  overflow: hidden;
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
   line-height: inherit;
-  color: $button-color;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  background-color: $button-background-color;
-  border: $button-border;
+  border-style: $button-border-style;
+  border-width: $button-border-width;
   border-radius: $button-border-radius;
   outline: 0;
   transition: $button-transition;
 
+  &::after {
+    display: none;
+  }
+
   &[disabled] {
-    color: $button-disabled-color;
     cursor: not-allowed;
-    background-color: $button-disabled-background-color;
-    border-color: $button-disabled-border-color;
   }
 
   &.is-ripply::after {
     position: absolute;
-    top: $button-ripply-spacing-benchmark * $scale + $unit;
-    right: $button-ripply-spacing-benchmark * $scale + $unit;
-    bottom: $button-ripply-spacing-benchmark * $scale + $unit;
-    left: $button-ripply-spacing-benchmark * $scale + $unit;
+    top: 0;
+    left: 0;
     display: block;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
     content: "";
-    background-color: $button-ripply-background-color;
+    background-image: radial-gradient(circle, $button-ripply-background-color 10%, transparent 10.0001%);
     background-repeat: no-repeat;
     background-position: 50%;
     border-radius: inherit;
     opacity: 0;
     transition: $button-ripply-transition;
+    transform: scale($button-ripply-transform-scale, $button-ripply-transform-scale);
   }
 
-  &.is-ripply:active::after {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  &.is-ripply:active::after,
+  &.is-ripply.button-hover::after {
+    display: block;
     opacity: $button-ripply-active-opacity;
     transition: 0s;
+    transform: scale(0, 0);
   }
 
-  &.is-small {
-    padding: $button-sm-padding-y $button-sm-padding-x;
-    font-size: $button-sm-font-size;
-  }
-
-  &.is-large {
-    padding: $button-lg-padding-y $button-lg-padding-x;
-    font-size: $button-lg-font-size;
-  }
-
-  &.is-loading:not([disabled]) {
-    pointer-events: none;
-    cursor: default;
-  }
-
-  &.is-text,
-  .is-light &.is-text,
-  &.is-light.is-text,
-  .is-dark &.is-text,
-  &.is-dark.is-text {
-    color: $button-text-color;
-    background-color: $button-text-background-color;
-    border-color: $button-text-border-color;
+  &,
+  .is-light &,
+  &.is-light {
+    color: $button-color;
+    background-color: $button-background-color;
+    border-color: $button-border-color;
 
     &:hover {
-      color: $button-text-hover-color;
-      background-color: $button-text-hover-background-color;
-      border-color: $button-text-hover-border-color;
+      color: $button-hover-color;
+      background-color: $button-hover-background-color;
+      border-color: $button-hover-border-color;
     }
 
     &:focus,
     &:focus-within {
-      color: $button-text-focus-color;
-      background-color: $button-text-focus-background-color;
-      border-color: $button-text-focus-border-color;
+      color: $button-focus-color;
+      background-color: $button-focus-background-color;
+      border-color: $button-focus-border-color;
     }
 
-    &:active {
-      color: $button-text-active-color;
-      background-color: $button-text-active-background-color;
-      border-color: $button-text-active-border-color;
+    &:active,
+    &.button-hover {
+      color: $button-active-color;
+      background-color: $button-active-background-color;
+      border-color: $button-active-border-color;
     }
 
     &[disabled] {
-      color: $button-text-disabled-color;
-      background-color: $button-text-disabled-background-color;
-      border-color: $button-text-disabled-border-color;
+      color: $button-disabled-color;
+      background-color: $button-disabled-background-color;
+      border-color: $button-disabled-border-color;
+    }
+  }
+
+  .is-dark &,
+  &.is-dark {
+    color: $button-color-reverse;
+    background-color: $button-background-color-reverse;
+    border-color: $button-border-color-reverse;
+
+    &:hover {
+      color: $button-hover-color-reverse;
+      background-color: $button-hover-background-color-reverse;
+      border-color: $button-hover-border-color-reverse;
+    }
+
+    &:focus,
+    &:focus-within {
+      color: $button-focus-color-reverse;
+      background-color: $button-focus-background-color-reverse;
+      border-color: $button-focus-border-color-reverse;
+    }
+
+    &:active,
+    &.button-hover {
+      color: $button-active-color-reverse;
+      background-color: $button-active-background-color-reverse;
+      border-color: $button-active-border-color-reverse;
+    }
+
+    &[disabled] {
+      color: $button-disabled-color;
+      background-color: $button-disabled-background-color;
+      border-color: $button-disabled-border-color;
     }
   }
 
@@ -127,7 +145,8 @@ button,
       border-color: $button-primary-focus-border-color;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-primary-active-color;
       background-color: $button-primary-active-background-color;
       border-color: $button-primary-active-border-color;
@@ -154,7 +173,8 @@ button,
       border-color: $button-primary-outlined-focus-border-color;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-primary-outlined-active-color;
       background-color: $button-primary-outlined-active-background-color;
       border-color: $button-primary-outlined-active-border-color;
@@ -165,6 +185,7 @@ button,
   .is-light &.is-primary-link,
   &.is-light.is-primary-link {
     color: $button-primary-link-color;
+    text-decoration: underline;
     background-color: $button-primary-link-background-color;
     border-color: $button-primary-link-border-color;
 
@@ -181,7 +202,8 @@ button,
       border-color: $button-primary-link-focus-border-color;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-primary-link-active-color;
       background-color: $button-primary-link-active-background-color;
       border-color: $button-primary-link-active-border-color;
@@ -213,7 +235,8 @@ button,
       border-color: $button-primary-focus-border-color-reverse;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-primary-active-color-reverse;
       background-color: $button-primary-active-background-color-reverse;
       border-color: $button-primary-active-border-color-reverse;
@@ -239,7 +262,8 @@ button,
       border-color: $button-primary-outlined-focus-border-color-reverse;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-primary-outlined-active-color-reverse;
       background-color: $button-primary-outlined-active-background-color-reverse;
       border-color: $button-primary-outlined-active-border-color-reverse;
@@ -249,6 +273,7 @@ button,
   .is-dark &.is-primary-link,
   &.is-dark.is-primary-link {
     color: $button-primary-link-color-reverse;
+    text-decoration: underline;
     background-color: $button-primary-link-background-color-reverse;
     border-color: $button-primary-link-border-color-reverse;
 
@@ -265,7 +290,8 @@ button,
       border-color: $button-primary-link-focus-border-color-reverse;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-primary-link-active-color-reverse;
       background-color: $button-primary-link-active-background-color-reverse;
       border-color: $button-primary-link-active-border-color-reverse;
@@ -298,7 +324,8 @@ button,
       border-color: $button-success-focus-border-color;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-success-active-color;
       background-color: $button-success-active-background-color;
       border-color: $button-success-active-border-color;
@@ -325,7 +352,8 @@ button,
       border-color: $button-success-outlined-focus-border-color;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-success-outlined-active-color;
       background-color: $button-success-outlined-active-background-color;
       border-color: $button-success-outlined-active-border-color;
@@ -336,6 +364,7 @@ button,
   .is-light &.is-success-link,
   &.is-light.is-success-link {
     color: $button-success-link-color;
+    text-decoration: underline;
     background-color: $button-success-link-background-color;
     border-color: $button-success-link-border-color;
 
@@ -352,7 +381,8 @@ button,
       border-color: $button-success-link-focus-border-color;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-success-link-active-color;
       background-color: $button-success-link-active-background-color;
       border-color: $button-success-link-active-border-color;
@@ -384,7 +414,8 @@ button,
       border-color: $button-success-focus-border-color-reverse;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-success-active-color-reverse;
       background-color: $button-success-active-background-color-reverse;
       border-color: $button-success-active-border-color-reverse;
@@ -410,7 +441,8 @@ button,
       border-color: $button-success-outlined-focus-border-color-reverse;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-success-outlined-active-color-reverse;
       background-color: $button-success-outlined-active-background-color-reverse;
       border-color: $button-success-outlined-active-border-color-reverse;
@@ -420,6 +452,7 @@ button,
   .is-dark &.is-success-link,
   &.is-dark.is-success-link {
     color: $button-success-link-color-reverse;
+    text-decoration: underline;
     background-color: $button-success-link-background-color-reverse;
     border-color: $button-success-link-border-color-reverse;
 
@@ -436,7 +469,8 @@ button,
       border-color: $button-success-link-focus-border-color-reverse;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-success-link-active-color-reverse;
       background-color: $button-success-link-active-background-color-reverse;
       border-color: $button-success-link-active-border-color-reverse;
@@ -469,7 +503,8 @@ button,
       border-color: $button-warning-focus-border-color;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-warning-active-color;
       background-color: $button-warning-active-background-color;
       border-color: $button-warning-active-border-color;
@@ -496,7 +531,8 @@ button,
       border-color: $button-warning-outlined-focus-border-color;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-warning-outlined-active-color;
       background-color: $button-warning-outlined-active-background-color;
       border-color: $button-warning-outlined-active-border-color;
@@ -507,6 +543,7 @@ button,
   .is-light &.is-warning-link,
   &.is-light.is-warning-link {
     color: $button-warning-link-color;
+    text-decoration: underline;
     background-color: $button-warning-link-background-color;
     border-color: $button-warning-link-border-color;
 
@@ -523,7 +560,8 @@ button,
       border-color: $button-warning-link-focus-border-color;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-warning-link-active-color;
       background-color: $button-warning-link-active-background-color;
       border-color: $button-warning-link-active-border-color;
@@ -555,7 +593,8 @@ button,
       border-color: $button-warning-focus-border-color-reverse;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-warning-active-color-reverse;
       background-color: $button-warning-active-background-color-reverse;
       border-color: $button-warning-active-border-color-reverse;
@@ -581,7 +620,8 @@ button,
       border-color: $button-warning-outlined-focus-border-color-reverse;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-warning-outlined-active-color-reverse;
       background-color: $button-warning-outlined-active-background-color-reverse;
       border-color: $button-warning-outlined-active-border-color-reverse;
@@ -591,6 +631,7 @@ button,
   .is-dark &.is-warning-link,
   &.is-dark.is-warning-link {
     color: $button-warning-link-color-reverse;
+    text-decoration: underline;
     background-color: $button-warning-link-background-color-reverse;
     border-color: $button-warning-link-border-color-reverse;
 
@@ -607,7 +648,8 @@ button,
       border-color: $button-warning-link-focus-border-color-reverse;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-warning-link-active-color-reverse;
       background-color: $button-warning-link-active-background-color-reverse;
       border-color: $button-warning-link-active-border-color-reverse;
@@ -640,7 +682,8 @@ button,
       border-color: $button-error-focus-border-color;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-error-active-color;
       background-color: $button-error-active-background-color;
       border-color: $button-error-active-border-color;
@@ -667,7 +710,8 @@ button,
       border-color: $button-error-outlined-focus-border-color;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-error-outlined-active-color;
       background-color: $button-error-outlined-active-background-color;
       border-color: $button-error-outlined-active-border-color;
@@ -678,6 +722,7 @@ button,
   .is-light &.is-error-link,
   &.is-light.is-error-link {
     color: $button-error-link-color;
+    text-decoration: underline;
     background-color: $button-error-link-background-color;
     border-color: $button-error-link-border-color;
 
@@ -694,7 +739,8 @@ button,
       border-color: $button-error-link-focus-border-color;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-error-link-active-color;
       background-color: $button-error-link-active-background-color;
       border-color: $button-error-link-active-border-color;
@@ -726,7 +772,8 @@ button,
       border-color: $button-error-focus-border-color-reverse;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-error-active-color-reverse;
       background-color: $button-error-active-background-color-reverse;
       border-color: $button-error-active-border-color-reverse;
@@ -752,7 +799,8 @@ button,
       border-color: $button-error-outlined-focus-border-color-reverse;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-error-outlined-active-color-reverse;
       background-color: $button-error-outlined-active-background-color-reverse;
       border-color: $button-error-outlined-active-border-color-reverse;
@@ -762,6 +810,7 @@ button,
   .is-dark &.is-error-link,
   &.is-dark.is-error-link {
     color: $button-error-link-color-reverse;
+    text-decoration: underline;
     background-color: $button-error-link-background-color-reverse;
     border-color: $button-error-link-border-color-reverse;
 
@@ -778,7 +827,8 @@ button,
       border-color: $button-error-link-focus-border-color-reverse;
     }
 
-    &:active {
+    &:active,
+    &.button-hover {
       color: $button-error-link-active-color-reverse;
       background-color: $button-error-link-active-background-color-reverse;
       border-color: $button-error-link-active-border-color-reverse;
@@ -789,5 +839,199 @@ button,
       background-color: $button-error-link-disabled-background-color-reverse;
       border-color: $button-error-link-disabled-border-color-reverse;
     }
+  }
+
+  &.is-info,
+  .is-light &.is-info,
+  &.is-light.is-info {
+    color: $button-info-color;
+    background-color: $button-info-background-color;
+    border-color: $button-info-border-color;
+
+    &:hover {
+      color: $button-info-hover-color;
+      background-color: $button-info-hover-background-color;
+      border-color: $button-info-hover-border-color;
+    }
+
+    &:focus,
+    &:focus-within {
+      color: $button-info-focus-color;
+      background-color: $button-info-focus-background-color;
+      border-color: $button-info-focus-border-color;
+    }
+
+    &:active,
+    &.button-hover {
+      color: $button-info-active-color;
+      background-color: $button-info-active-background-color;
+      border-color: $button-info-active-border-color;
+    }
+  }
+
+  &.is-info-outlined,
+  .is-light &.is-info-outlined,
+  &.is-light.is-info-outlined {
+    color: $button-info-outlined-color;
+    background-color: $button-info-outlined-background-color;
+    border-color: $button-info-outlined-border-color;
+
+    &:hover {
+      color: $button-info-outlined-hover-color;
+      background-color: $button-info-outlined-hover-background-color;
+      border-color: $button-info-outlined-hover-border-color;
+    }
+
+    &:focus,
+    &:focus-within {
+      color: $button-info-outlined-focus-color;
+      background-color: $button-info-outlined-focus-background-color;
+      border-color: $button-info-outlined-focus-border-color;
+    }
+
+    &:active,
+    &.button-hover {
+      color: $button-info-outlined-active-color;
+      background-color: $button-info-outlined-active-background-color;
+      border-color: $button-info-outlined-active-border-color;
+    }
+  }
+
+  &.is-info-link,
+  .is-light &.is-info-link,
+  &.is-light.is-info-link {
+    color: $button-info-link-color;
+    text-decoration: underline;
+    background-color: $button-info-link-background-color;
+    border-color: $button-info-link-border-color;
+
+    &:hover {
+      color: $button-info-link-hover-color;
+      background-color: $button-info-link-hover-background-color;
+      border-color: $button-info-link-hover-border-color;
+    }
+
+    &:focus,
+    &:focus-within {
+      color: $button-info-link-focus-color;
+      background-color: $button-info-link-focus-background-color;
+      border-color: $button-info-link-focus-border-color;
+    }
+
+    &:active,
+    &.button-hover {
+      color: $button-info-link-active-color;
+      background-color: $button-info-link-active-background-color;
+      border-color: $button-info-link-active-border-color;
+    }
+
+    &[disabled] {
+      color: $button-info-link-disabled-color;
+      background-color: $button-info-link-disabled-background-color;
+      border-color: $button-info-link-disabled-border-color;
+    }
+  }
+
+  .is-dark &.is-info,
+  &.is-dark.is-info {
+    color: $button-info-color-reverse;
+    background-color: $button-info-background-color-reverse;
+    border-color: $button-info-border-color-reverse;
+
+    &:hover {
+      color: $button-info-hover-color-reverse;
+      background-color: $button-info-hover-background-color-reverse;
+      border-color: $button-info-hover-border-color-reverse;
+    }
+
+    &:focus,
+    &:focus-within {
+      color: $button-info-focus-color-reverse;
+      background-color: $button-info-focus-background-color-reverse;
+      border-color: $button-info-focus-border-color-reverse;
+    }
+
+    &:active,
+    &.button-hover {
+      color: $button-info-active-color-reverse;
+      background-color: $button-info-active-background-color-reverse;
+      border-color: $button-info-active-border-color-reverse;
+    }
+  }
+
+  .is-dark &.is-info-outlined,
+  &.is-dark.is-info-outlined {
+    color: $button-info-outlined-color-reverse;
+    background-color: $button-info-outlined-background-color-reverse;
+    border-color: $button-info-outlined-border-color-reverse;
+
+    &:hover {
+      color: $button-info-outlined-hover-color-reverse;
+      background-color: $button-info-outlined-hover-background-color-reverse;
+      border-color: $button-info-outlined-hover-border-color-reverse;
+    }
+
+    &:focus,
+    &:focus-within {
+      color: $button-info-outlined-focus-color-reverse;
+      background-color: $button-info-outlined-focus-background-color-reverse;
+      border-color: $button-info-outlined-focus-border-color-reverse;
+    }
+
+    &:active,
+    &.button-hover {
+      color: $button-info-outlined-active-color-reverse;
+      background-color: $button-info-outlined-active-background-color-reverse;
+      border-color: $button-info-outlined-active-border-color-reverse;
+    }
+  }
+
+  .is-dark &.is-info-link,
+  &.is-dark.is-info-link {
+    color: $button-info-link-color-reverse;
+    text-decoration: underline;
+    background-color: $button-info-link-background-color-reverse;
+    border-color: $button-info-link-border-color-reverse;
+
+    &:hover {
+      color: $button-info-link-hover-color-reverse;
+      background-color: $button-info-link-hover-background-color-reverse;
+      border-color: $button-info-link-hover-border-color-reverse;
+    }
+
+    &:focus,
+    &:focus-within {
+      color: $button-info-link-focus-color-reverse;
+      background-color: $button-info-link-focus-background-color-reverse;
+      border-color: $button-info-link-focus-border-color-reverse;
+    }
+
+    &:active,
+    &.button-hover {
+      color: $button-info-link-active-color-reverse;
+      background-color: $button-info-link-active-background-color-reverse;
+      border-color: $button-info-link-active-border-color-reverse;
+    }
+
+    &[disabled] {
+      color: $button-info-link-disabled-color-reverse;
+      background-color: $button-info-link-disabled-background-color-reverse;
+      border-color: $button-info-link-disabled-border-color-reverse;
+    }
+  }
+
+  &.is-small {
+    padding: $button-sm-padding-y $button-sm-padding-x;
+    font-size: $button-sm-font-size;
+  }
+
+  &.is-large {
+    padding: $button-lg-padding-y $button-lg-padding-x;
+    font-size: $button-lg-font-size;
+  }
+
+  &.is-loading:not([disabled]) {
+    pointer-events: none;
+    cursor: default;
   }
 }
