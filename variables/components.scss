@@ -1,9 +1,18 @@
 // variables that used by components
+
+/* icon */
+$icon-sizing-benchmark: $font-size-benchmark !default;
+$icon-sizing: $icon-sizing-benchmark * $scale + $unit !default;
+$icon-line-height: 1 !default;
+$icon-sm-sizing: $icon-sizing-benchmark * $scale + $unit !default;
+$icon-sm-line-height: 1 !default;
+$icon-lg-sizing: ($icon-sizing-benchmark + 2) * $scale + $unit !default;
+$icon-lg-line-height: 1 !default;
+
+/* dialog */
 $mask-background-color: fade-out($black, .55) !default;
 $mask-background-color-reverse: fade-out($white, .45) !default;
 
-$shadow-background-color: $mask-background-color !default;
-$shadow-background-color-reverse: $mask-background-color-reverse !default;
-
+/* divider */
 $divider-background-color: fade-out($black, .94) !default;
 $divider-background-color-reverse: fade-out($white, .88) !default;

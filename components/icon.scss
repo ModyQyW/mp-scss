@@ -1,0 +1,19 @@
+.icon {
+  display: inline-block;
+  width: $icon-sizing;
+  height: $icon-sizing;
+  line-height: $icon-line-height;
+
+  &.is-small {
+    width: $icon-sm-sizing;
+    height: $icon-sm-sizing;
+    line-height: $icon-sm-line-height;
+  }
+
+  &.is-large {
+    width: $icon-lg-sizing;
+    height: $icon-lg-sizing;
+    line-height: $icon-lg-line-height;
+  }
+}
+
