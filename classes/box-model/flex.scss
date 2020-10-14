@@ -16,13 +16,13 @@
   }
 }
 
-@for $k, $v in $m-flex-shrink {
+@each $k, $v in $m-flex-shrink {
   .flex-shrink#{$k} {
     flex-shrink: $v;
   }
 }
 
-@for $k, $v in $m-flex-grow {
+@each $k, $v in $m-flex-grow {
   .flex-grow#{$k} {
     flex-grow: $v;
   }
