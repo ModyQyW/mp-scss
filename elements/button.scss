@@ -1,3 +1,5 @@
+@import "../variables/index";
+
 button,
 .btn {
   position: relative;
@@ -11,12 +13,11 @@ button,
   padding: $button-padding-y $button-padding-x;
   margin: $button-margin-y $button-margin-x;
   overflow: hidden;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: inherit;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  line-height: $button-line-height;
   text-align: center;
-  text-decoration: none;
+  white-space: nowrap;
   cursor: pointer;
   border-style: $button-border-style;
   border-width: $button-border-width;
@@ -185,7 +186,7 @@ button,
   .is-light &.is-primary-link,
   &.is-light.is-primary-link {
     color: $button-primary-link-color;
-    text-decoration: underline;
+    text-decoration: $button-primary-link-text-decoration;
     background-color: $button-primary-link-background-color;
     border-color: $button-primary-link-border-color;
 
@@ -273,7 +274,6 @@ button,
   .is-dark &.is-primary-link,
   &.is-dark.is-primary-link {
     color: $button-primary-link-color-reverse;
-    text-decoration: underline;
     background-color: $button-primary-link-background-color-reverse;
     border-color: $button-primary-link-border-color-reverse;
 
@@ -364,7 +364,7 @@ button,
   .is-light &.is-success-link,
   &.is-light.is-success-link {
     color: $button-success-link-color;
-    text-decoration: underline;
+    text-decoration: $button-success-link-text-decoration;
     background-color: $button-success-link-background-color;
     border-color: $button-success-link-border-color;
 
@@ -452,7 +452,6 @@ button,
   .is-dark &.is-success-link,
   &.is-dark.is-success-link {
     color: $button-success-link-color-reverse;
-    text-decoration: underline;
     background-color: $button-success-link-background-color-reverse;
     border-color: $button-success-link-border-color-reverse;
 
@@ -543,7 +542,7 @@ button,
   .is-light &.is-warning-link,
   &.is-light.is-warning-link {
     color: $button-warning-link-color;
-    text-decoration: underline;
+    text-decoration: $button-warning-link-text-decoration;
     background-color: $button-warning-link-background-color;
     border-color: $button-warning-link-border-color;
 
@@ -631,7 +630,6 @@ button,
   .is-dark &.is-warning-link,
   &.is-dark.is-warning-link {
     color: $button-warning-link-color-reverse;
-    text-decoration: underline;
     background-color: $button-warning-link-background-color-reverse;
     border-color: $button-warning-link-border-color-reverse;
 
@@ -722,7 +720,7 @@ button,
   .is-light &.is-error-link,
   &.is-light.is-error-link {
     color: $button-error-link-color;
-    text-decoration: underline;
+    text-decoration: $button-error-link-text-decoration;
     background-color: $button-error-link-background-color;
     border-color: $button-error-link-border-color;
 
@@ -810,7 +808,6 @@ button,
   .is-dark &.is-error-link,
   &.is-dark.is-error-link {
     color: $button-error-link-color-reverse;
-    text-decoration: underline;
     background-color: $button-error-link-background-color-reverse;
     border-color: $button-error-link-border-color-reverse;
 
@@ -901,7 +898,7 @@ button,
   .is-light &.is-info-link,
   &.is-light.is-info-link {
     color: $button-info-link-color;
-    text-decoration: underline;
+    text-decoration: $button-info-link-text-decoration;
     background-color: $button-info-link-background-color;
     border-color: $button-info-link-border-color;
 
@@ -989,7 +986,6 @@ button,
   .is-dark &.is-info-link,
   &.is-dark.is-info-link {
     color: $button-info-link-color-reverse;
-    text-decoration: underline;
     background-color: $button-info-link-background-color-reverse;
     border-color: $button-info-link-border-color-reverse;
 
