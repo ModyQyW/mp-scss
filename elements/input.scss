@@ -1,17 +1,237 @@
-input {
+@import "../variables/index";
+
+.input-placeholder {
+  &,
+  .is-light &,
+  &.is-light {
+    color: $input-placeholder-color;
+  }
+
+  .is-dark &,
+  &.is-dark {
+    color: $input-placeholder-color-reverse;
+  }
+}
+
+input.input {
   position: relative;
   box-sizing: border-box;
-  display: block;
+  display: $input-display;
   width: 100%;
+  min-width: 0;
   height: auto;
   min-height: unset;
-  padding: 12rpx 36rpx;
-  overflow: hidden;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: inherit;
-  text-overflow: clip;
+  padding: $input-padding-y $input-padding-x;
+  margin: $input-margin-y $input-margin-x;
+  font-size: $input-font-size;
+  font-weight: $input-font-weight;
+  font-variant: $input-font-variant;
+  line-height: $input-line-height;
   white-space: nowrap;
-  cursor: auto;
+  cursor: text;
+  border-style: $input-border-style;
+  border-width: $input-border-width;
+  border-radius: $input-border-radius;
+  outline: none;
+  transition: $input-transition;
+
+  &:placeholder-shown {
+    text-overflow: ellipsis;
+  }
+
+  &,
+  .is-light &,
+  &.is-light {
+    color: $input-color;
+    background-color: $input-background-color;
+    border-color: $input-border-color;
+
+    &:hover {
+      color: $input-hover-color;
+      background-color: $input-hover-background-color;
+      border-color: $input-hover-border-color;
+    }
+
+    &:focus,
+    &:focus-within {
+      color: $input-focus-color;
+      background-color: $input-focus-background-color;
+      border-color: $input-focus-border-color;
+    }
+
+    &:active {
+      color: $input-active-color;
+      background-color: $input-active-background-color;
+      border-color: $input-active-border-color;
+    }
+  }
+
+  .is-dark &,
+  &.is-dark {
+    color: $input-color-reverse;
+    background-color: $input-background-color-reverse;
+    border-color: $input-border-color-reverse;
+
+    &:hover {
+      color: $input-hover-color-reverse;
+      background-color: $input-hover-background-color-reverse;
+      border-color: $input-hover-border-color-reverse;
+    }
+
+    &:focus,
+    &:focus-within {
+      color: $input-focus-color-reverse;
+      background-color: $input-focus-background-color-reverse;
+      border-color: $input-focus-border-color-reverse;
+    }
+
+    &:active {
+      color: $input-active-color-reverse;
+      background-color: $input-active-background-color-reverse;
+      border-color: $input-active-border-color-reverse;
+    }
+  }
+
+  &.is-small {
+    padding: $input-sm-padding-y $input-sm-padding-x;
+    font-size: $input-sm-font-size;
+  }
+
+  &.is-large {
+    padding: $input-lg-padding-y $input-lg-padding-x;
+    font-size: $input-lg-font-size;
+  }
+}
+
+// TODO: wrapper, addon, prefix, suffix
+.input-wrapper {
+  position: relative;
+  box-sizing: border-box;
+  display: $input-wrapper-display;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  min-height: unset;
+  padding: $input-wrapper-padding-y $input-wrapper-padding-x;
+  margin: $input-wrapper-margin-y $input-wrapper-margin-x;
+  font-size: $input-wrapper-font-size;
+  font-weight: $input-wrapper-font-weight;
+  font-variant: $input-wrapper-font-variant;
+  line-height: $input-wrapper-line-height;
+  border-style: $input-wrapper-border-style;
+  border-width: $input-wrapper-border-width;
+  border-radius: $input-wrapper-border-radius;
+  outline: none;
+  transition: $input-wrapper-transition;
+
+  &,
+  .is-light &,
+  &.is-light {
+    color: $input-wrapper-color;
+    background-color: $input-wrapper-background-color;
+    border-color: $input-wrapper-border-color;
+
+    &:hover {
+      color: $input-wrapper-hover-color;
+      background-color: $input-wrapper-hover-background-color;
+      border-color: $input-wrapper-hover-border-color;
+    }
+
+    &:focus,
+    &:focus-within {
+      color: $input-wrapper-focus-color;
+      background-color: $input-wrapper-focus-background-color;
+      border-color: $input-wrapper-focus-border-color;
+    }
+
+    &:active {
+      color: $input-wrapper-active-color;
+      background-color: $input-wrapper-active-background-color;
+      border-color: $input-wrapper-active-border-color;
+    }
+  }
+
+  .is-dark &,
+  &.is-dark {
+    color: $input-wrapper-color-reverse;
+    background-color: $input-wrapper-background-color-reverse;
+    border-color: $input-wrapper-border-color-reverse;
+
+    &:hover {
+      color: $input-wrapper-hover-color-reverse;
+      background-color: $input-wrapper-hover-background-color-reverse;
+      border-color: $input-wrapper-hover-border-color-reverse;
+    }
+
+    &:focus,
+    &:focus-within {
+      color: $input-wrapper-focus-color-reverse;
+      background-color: $input-wrapper-focus-background-color-reverse;
+      border-color: $input-wrapper-focus-border-color-reverse;
+    }
+
+    &:active {
+      color: $input-wrapper-active-color-reverse;
+      background-color: $input-wrapper-active-background-color-reverse;
+      border-color: $input-wrapper-active-border-color-reverse;
+    }
+  }
+
+  > input.input {
+    flex: auto;
+    width: auto;
+    padding: 0;
+    border-color: transparent;
+    border-style: none;
+    border-width: 0;
+
+    &.is-small,
+    &.is-large {
+      padding: 0;
+      font-size: $input-wrapper-font-size;
+    }
+  }
+
+  > .prefix,
+  > .suffix {
+    position: relative;
+    box-sizing: border-box;
+    flex: none;
+    align-items: center;
+  }
+
+  > .prefix {
+    display: $input-wrapper-prefix-display;
+    justify-content: flex-start;
+    order: $order-first;
+    margin-right: $input-wrapper-prefix-margin-right;
+  }
+
+  > .suffix {
+    display: $input-wrapper-suffix-display;
+    justify-content: flex-end;
+    order: $order-last;
+    margin-left: $input-wrapper-suffix-margin-left;
+  }
+
+  &.is-small {
+    padding: $input-wrapper-sm-padding-y $input-wrapper-sm-padding-x;
+    font-size: $input-wrapper-sm-font-size;
+
+    > input.input {
+      font-size: $input-wrapper-sm-font-size;
+    }
+  }
+
+  &.is-large {
+    padding: $input-wrapper-lg-padding-y $input-wrapper-lg-padding-x;
+    font-size: $input-wrapper-lg-font-size;
+
+    > input.input {
+      font-size: $input-wrapper-lg-font-size;
+    }
+  }
 }

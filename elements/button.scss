@@ -22,7 +22,7 @@ button,
   border-style: $button-border-style;
   border-width: $button-border-width;
   border-radius: $button-border-radius;
-  outline: 0;
+  outline: none;
   transition: $button-transition;
 
   &::after {
