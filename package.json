@@ -7,31 +7,42 @@
     "miniprogram",
     "scss"
   ],
-  "homepage": "https://github.com/MillCloud/mp-scss#readme",
+  "homepage": "https://millcloud.github.io/mp-scss",
   "bugs": {
     "url": "https://github.com/MillCloud/mp-scss/issues"
   },
   "main": "./src/index.scss",
   "license": "MIT",
-  "author": "ModyQyW <wurui7@mail3.sysu.edu.cn>",
+  "author": {
+    "name": "ModyQyW",
+    "email": "wurui7@mail3.sysu.edu.cn",
+    "url": "https://modyqyw.github.io"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:MillCloud/mp-scss.git"
   },
   "scripts": {
-    "lint": "prettier ./**/*.scss --write && stylelint ./**/*.scss --fix",
-    "build:all": "yarn build:index && yarn build:reset && yarn build:elements && yarn build:layout && yarn build:components && yarn build:classes",
-    "build:index": "sass ./index.scss ./dist/index.css --no-source-map && postcss ./dist/index.css --no-map -r",
-    "build:reset": "sass ./reset:./dist/reset --no-source-map && postcss ./dist/reset --no-map -r",
-    "build:elements": "sass ./elements:./dist/elements --no-source-map && postcss ./dist/elements --no-map -r",
-    "build:layout": "sass ./layout:./dist/layout --no-source-map && postcss ./dist/layout --no-map -r",
-    "build:components": "sass ./components:./dist/components --no-source-map && postcss ./dist/components --no-map -r",
-    "build:classes": "sass ./classes:./dist/classes --no-source-map && postcss ./dist/classes --no-map -r",
-    "commit": "git-cz && git push",
-    "dev:docs": "vuepress dev docs",
-    "build:docs": "vuepress build docs",
-    "deploy:docs": "sh deploy.sh",
-    "check": "ncu"
+    "lint": "prettier ./src/**/*.scss --write && stylelint ./src/**/*.scss --fix",
+    "clean": "rimraf ./dist",
+    "build-all": "rimraf ./dist && sass ./src:./dist/css",
+    "build-index": "sass ./src/index.scss ./dist/css/index.css --no-source-map",
+    "build-reset": "sass ./src/reset:./dist/css/reset --no-source-map",
+    "build-elements": "sass ./src/elements:./dist/css/elements --no-source-map",
+    "build-layout": "sass ./src/layout:./dist/css/layout --no-source-map",
+    "build-components": "sass ./src/components:./dist/css/components --no-source-map",
+    "build-classes": "sass ./src/classes:./dist/css/classes --no-source-map",
+    "transform": "postcss ./dist --no-map -r",
+    "copy": "copyfiles -u 2 ./dist/css/*.css ./dist/wxss && copyfiles -u 2 ./dist/css/**/*.css ./dist/wxss && copyfiles -u 2 ./dist/css/*.css ./dist/acss &&  copyfiles -u 2 ./dist/css/**/*.css ./dist/acss",
+    "rename": "renamer -e ext -f css -r wxss \"./dist/wxss/**\" && renamer -e ext -f css -r acss \"./dist/acss/**\"",
+    "build": "yarn lint && yarn clean && yarn build-all && yarn transform && yarn copy && yarn rename",
+    "deploy": "np --no-tests --no-release-draft",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "docs:deploy": "sh deploy.sh",
+    "release": "yarn deploy && yarn docs:deploy",
+    "check": "ncu",
+    "commit": "git-cz && git push"
   },
   "config": {
     "commitizen": {
@@ -86,7 +97,7 @@
     }
   },
   "lint-staged": {
-    "*.scss": [
+    "./src/**/*.scss": [
       "prettier --write",
       "stylelint --fix"
     ]
