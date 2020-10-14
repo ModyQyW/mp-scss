@@ -1,3 +1,5 @@
+@import "../../variables/index";
+
 @each $k, $v in $m-colors {
   .bg#{$k},
   .is-light .bg#{$k},

@@ -1,3 +1,5 @@
+@import "../../variables/index";
+
 @each $k, $v in $m-font-family {
   .font#{$k} {
     font-family: $v;

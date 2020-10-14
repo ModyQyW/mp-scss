@@ -1,3 +1,5 @@
+@import "../../variables/index";
+
 @each $k, $v in $m-text-transform {
   .text#{$k} {
     text-transform: $v;

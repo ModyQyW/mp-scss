@@ -1,3 +1,5 @@
+@import "../../variables/index";
+
 @each $k, $v in $m-text-align {
   .text#{$k} {
     text-align: $v;

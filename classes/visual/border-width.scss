@@ -1,3 +1,5 @@
+@import "../../variables/index";
+
 @each $k, $v in $m-border-width {
   .border#{$k} {
     border-width: $v;
