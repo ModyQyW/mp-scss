@@ -791,7 +791,7 @@ $m-colors-reverse: (
 $m-ratio: (
   "-full": 100%,
   "-half": 50%,
-  "-none": none,
+  "-none": none
 ) !default;
 @each $denominator in $l-denominator {
   @for $molecule from 1 to $denominator {
@@ -805,23 +805,49 @@ $m-ratio: (
 }
 
 /* length */
-$m-length: ("-auto": auto) !default;
+$m-length: (
+  "-auto": auto
+) !default;
 @for $v from $length-min to $length-max {
-  $m-length: map-merge($m-length, ("-#{$v}": $v * $scale + $unit));
+  $m-length: map-merge(
+    $m-length,
+    (
+      "-#{$v}": $v * $scale + $unit
+    )
+  );
 }
 @if ($scale != 1) {
-  $m-length: map-merge($m-length, ("-1-real": 1 + $unit));
+  $m-length: map-merge(
+    $m-length,
+    (
+      "-1-real": 1 + $unit
+    )
+  );
 }
 
 /* box-model */
 // flex
-$m-flex-shrink: ("": 1) !default;
+$m-flex-shrink: (
+  "": 1
+) !default;
 @for $v from $flex-shrink-min to $flex-shrink-max {
-  $m-flex-shrink: map-merge($m-flex-shrink, ("-#{$v}": $v));
+  $m-flex-shrink: map-merge(
+    $m-flex-shrink,
+    (
+      "-#{$v}": $v
+    )
+  );
 }
-$m-flex-grow: ("": 1) !default;
+$m-flex-grow: (
+  "": 1
+) !default;
 @for $v from $flex-grow-min to $flex-grow-max {
-  $m-flex-grow: map-merge($m-flex-grow, ("-#{$v}": $v));
+  $m-flex-grow: map-merge(
+    $m-flex-grow,
+    (
+      "-#{$v}": $v
+    )
+  );
 }
 $m-order: (
   "-init": $order-init,
@@ -829,17 +855,30 @@ $m-order: (
   "-last": $order-last
 ) !default;
 @for $v from $order-min to $order-max {
-  $m-order: map-merge($m-order, ("-#{$v}": $v));
+  $m-order: map-merge(
+    $m-order,
+    (
+      "-#{$v}": $v
+    )
+  );
 }
 // spacing
 $m-spacing: (
   "-auto": auto,
   "": $spacing-benchmark * $scale + $unit,
-  "-xs": ($spacing-benchmark - 8) * $scale + $unit,
-  "-sm": ($spacing-benchmark - 4) * $scale + $unit,
+  "-xs": (
+    $spacing-benchmark - 8
+  ) * $scale + $unit,
+  "-sm": (
+    $spacing-benchmark - 4
+  ) * $scale + $unit,
   "-md": $spacing-benchmark * $scale + $unit,
-  "-lg": ($spacing-benchmark + 4) * $scale + $unit,
-  "-xl": ($spacing-benchmark + 8) * $scale + $unit
+  "-lg": (
+    $spacing-benchmark + 4
+  ) * $scale + $unit,
+  "-xl": (
+    $spacing-benchmark + 8
+  ) * $scale + $unit
 ) !default;
 @for $v from $spacing-min to $spacing-max {
   $m-spacing: map-merge(
@@ -871,11 +910,19 @@ $m-font-family: (
 // font-size
 $m-font-size: (
   "": $font-size-benchmark * $scale + $unit,
-  "-xs": ($font-size-benchmark - 4) * $scale + $unit,
-  "-sm": ($font-size-benchmark - 2) * $scale + $unit,
+  "-xs": (
+    $font-size-benchmark - 4
+  ) * $scale + $unit,
+  "-sm": (
+    $font-size-benchmark - 2
+  ) * $scale + $unit,
   "-md": $font-size-benchmark * $scale + $unit,
-  "-lg": ($font-size-benchmark + 2) * $scale + $unit,
-  "-xl": ($font-size-benchmark + 4) * $scale + $unit,
+  "-lg": (
+    $font-size-benchmark + 2
+  ) * $scale + $unit,
+  "-xl": (
+    $font-size-benchmark + 4
+  ) * $scale + $unit,
   "-2xl": round(($font-size-benchmark + 4) * 1.33333333) * $scale + $unit,
   "-3xl": round(($font-size-benchmark + 4) * 1.33333333 * 1.16666667) * $scale + $unit,
   "-4xl": round(($font-size-benchmark + 4) * 1.33333333 * 1.16666667 * 1.14285714) * $scale + $unit,
@@ -958,7 +1005,9 @@ $m-border-color-reverse: (
   "": $border-color-reverse
 );
 // border-width
-$m-border-width: ("": 1 * $scale + $unit) !default;
+$m-border-width: (
+  "": 1 * $scale + $unit
+) !default;
 @for $v from $border-width-min to $border-width-max {
   $m-border-width: map-merge(
     $m-border-width,
@@ -978,11 +1027,19 @@ $m-border-width: ("": 1 * $scale + $unit) !default;
 // border-radius
 $m-border-radius: (
   "": $border-radius-benchmark * $scale + $unit,
-  "-xs": ($border-radius-benchmark - 2) * $scale + $unit,
-  "-sm": ($border-radius-benchmark - 1) * $scale + $unit,
+  "-xs": (
+    $border-radius-benchmark - 2
+  ) * $scale + $unit,
+  "-sm": (
+    $border-radius-benchmark - 1
+  ) * $scale + $unit,
   "-md": $border-radius-benchmark * $scale + $unit,
-  "-lg": ($border-radius-benchmark + 2) * $scale + $unit,
-  "-xl": ($border-radius-benchmark + 4) * $scale + $unit,
+  "-lg": (
+    $border-radius-benchmark + 2
+  ) * $scale + $unit,
+  "-xl": (
+    $border-radius-benchmark + 4
+  ) * $scale + $unit,
   "-half": 50%,
   "-full": 100%
 ) !default;
@@ -1004,85 +1061,235 @@ $m-border-radius: (
 }
 // box-shadow
 $m-box-shadow-umbra: (
-  0: (0 0 0 0 $box-shadow-umbra),
-  1: (0 2px 1px -1px $box-shadow-umbra),
-  2: (0 3px 1px -2px $box-shadow-umbra),
-  3: (0 3px 3px -2px $box-shadow-umbra),
-  4: (0 2px 4px -1px $box-shadow-umbra),
-  5: (0 3px 5px -1px $box-shadow-umbra),
-  6: (0 3px 5px -1px $box-shadow-umbra),
-  7: (0 4px 5px -2px $box-shadow-umbra),
-  8: (0 5px 5px -3px $box-shadow-umbra),
-  9: (0 5px 6px -3px $box-shadow-umbra),
-  10: (0 6px 6px -3px $box-shadow-umbra),
-  11: (0 6px 7px -4px $box-shadow-umbra),
-  12: (0 7px 8px -4px $box-shadow-umbra),
-  13: (0 7px 8px -4px $box-shadow-umbra),
-  14: (0 7px 9px -4px $box-shadow-umbra),
-  15: (0 8px 9px -5px $box-shadow-umbra),
-  16: (0 8px 10px -5px $box-shadow-umbra),
-  17: (0 8px 11px -5px $box-shadow-umbra),
-  18: (0 9px 11px -5px $box-shadow-umbra),
-  19: (0 9px 12px -6px $box-shadow-umbra),
-  20: (0 10px 13px -6px $box-shadow-umbra),
-  21: (0 10px 13px -6px $box-shadow-umbra),
-  22: (0 10px 14px -6px $box-shadow-umbra),
-  23: (0 11px 14px -7px $box-shadow-umbra),
-  24: (0 11px 15px -7px $box-shadow-umbra)
+  0: (
+    0 0 0 0 $box-shadow-umbra
+  ),
+  1: (
+    0 2px 1px -1px $box-shadow-umbra
+  ),
+  2: (
+    0 3px 1px -2px $box-shadow-umbra
+  ),
+  3: (
+    0 3px 3px -2px $box-shadow-umbra
+  ),
+  4: (
+    0 2px 4px -1px $box-shadow-umbra
+  ),
+  5: (
+    0 3px 5px -1px $box-shadow-umbra
+  ),
+  6: (
+    0 3px 5px -1px $box-shadow-umbra
+  ),
+  7: (
+    0 4px 5px -2px $box-shadow-umbra
+  ),
+  8: (
+    0 5px 5px -3px $box-shadow-umbra
+  ),
+  9: (
+    0 5px 6px -3px $box-shadow-umbra
+  ),
+  10: (
+    0 6px 6px -3px $box-shadow-umbra
+  ),
+  11: (
+    0 6px 7px -4px $box-shadow-umbra
+  ),
+  12: (
+    0 7px 8px -4px $box-shadow-umbra
+  ),
+  13: (
+    0 7px 8px -4px $box-shadow-umbra
+  ),
+  14: (
+    0 7px 9px -4px $box-shadow-umbra
+  ),
+  15: (
+    0 8px 9px -5px $box-shadow-umbra
+  ),
+  16: (
+    0 8px 10px -5px $box-shadow-umbra
+  ),
+  17: (
+    0 8px 11px -5px $box-shadow-umbra
+  ),
+  18: (
+    0 9px 11px -5px $box-shadow-umbra
+  ),
+  19: (
+    0 9px 12px -6px $box-shadow-umbra
+  ),
+  20: (
+    0 10px 13px -6px $box-shadow-umbra
+  ),
+  21: (
+    0 10px 13px -6px $box-shadow-umbra
+  ),
+  22: (
+    0 10px 14px -6px $box-shadow-umbra
+  ),
+  23: (
+    0 11px 14px -7px $box-shadow-umbra
+  ),
+  24: (
+    0 11px 15px -7px $box-shadow-umbra
+  )
 );
 $m-box-shadow-penumbra: (
-  0: (0 0 0 0 $box-shadow-penumbra),
-  1: (0 1px 1px 0 $box-shadow-penumbra),
-  2: (0 2px 2px 0 $box-shadow-penumbra),
-  3: (0 3px 4px 0 $box-shadow-penumbra),
-  4: (0 4px 5px 0 $box-shadow-penumbra),
-  5: (0 5px 8px 0 $box-shadow-penumbra),
-  6: (0 6px 10px 0 $box-shadow-penumbra),
-  7: (0 7px 10px 1px $box-shadow-penumbra),
-  8: (0 8px 10px 1px $box-shadow-penumbra),
-  9: (0 9px 12px 1px $box-shadow-penumbra),
-  10: (0 10px 14px 1px $box-shadow-penumbra),
-  11: (0 11px 15px 1px $box-shadow-penumbra),
-  12: (0 12px 17px 2px $box-shadow-penumbra),
-  13: (0 13px 19px 2px $box-shadow-penumbra),
-  14: (0 14px 21px 2px $box-shadow-penumbra),
-  15: (0 15px 22px 2px $box-shadow-penumbra),
-  16: (0 16px 24px 2px $box-shadow-penumbra),
-  17: (0 17px 26px 2px $box-shadow-penumbra),
-  18: (0 18px 28px 2px $box-shadow-penumbra),
-  19: (0 19px 29px 2px $box-shadow-penumbra),
-  20: (0 20px 31px 3px $box-shadow-penumbra),
-  21: (0 21px 33px 3px $box-shadow-penumbra),
-  22: (0 22px 35px 3px $box-shadow-penumbra),
-  23: (0 23px 36px 3px $box-shadow-penumbra),
-  24: (0 24px 38px 3px $box-shadow-penumbra)
+  0: (
+    0 0 0 0 $box-shadow-penumbra
+  ),
+  1: (
+    0 1px 1px 0 $box-shadow-penumbra
+  ),
+  2: (
+    0 2px 2px 0 $box-shadow-penumbra
+  ),
+  3: (
+    0 3px 4px 0 $box-shadow-penumbra
+  ),
+  4: (
+    0 4px 5px 0 $box-shadow-penumbra
+  ),
+  5: (
+    0 5px 8px 0 $box-shadow-penumbra
+  ),
+  6: (
+    0 6px 10px 0 $box-shadow-penumbra
+  ),
+  7: (
+    0 7px 10px 1px $box-shadow-penumbra
+  ),
+  8: (
+    0 8px 10px 1px $box-shadow-penumbra
+  ),
+  9: (
+    0 9px 12px 1px $box-shadow-penumbra
+  ),
+  10: (
+    0 10px 14px 1px $box-shadow-penumbra
+  ),
+  11: (
+    0 11px 15px 1px $box-shadow-penumbra
+  ),
+  12: (
+    0 12px 17px 2px $box-shadow-penumbra
+  ),
+  13: (
+    0 13px 19px 2px $box-shadow-penumbra
+  ),
+  14: (
+    0 14px 21px 2px $box-shadow-penumbra
+  ),
+  15: (
+    0 15px 22px 2px $box-shadow-penumbra
+  ),
+  16: (
+    0 16px 24px 2px $box-shadow-penumbra
+  ),
+  17: (
+    0 17px 26px 2px $box-shadow-penumbra
+  ),
+  18: (
+    0 18px 28px 2px $box-shadow-penumbra
+  ),
+  19: (
+    0 19px 29px 2px $box-shadow-penumbra
+  ),
+  20: (
+    0 20px 31px 3px $box-shadow-penumbra
+  ),
+  21: (
+    0 21px 33px 3px $box-shadow-penumbra
+  ),
+  22: (
+    0 22px 35px 3px $box-shadow-penumbra
+  ),
+  23: (
+    0 23px 36px 3px $box-shadow-penumbra
+  ),
+  24: (
+    0 24px 38px 3px $box-shadow-penumbra
+  )
 );
 $m-box-shadow-ambient: (
-  0: (0 0 0 0 $box-shadow-ambient),
-  1: (0 1px 3px 0 $box-shadow-ambient),
-  2: (0 1px 5px 0 $box-shadow-ambient),
-  3: (0 1px 8px 0 $box-shadow-ambient),
-  4: (0 1px 10px 0 $box-shadow-ambient),
-  5: (0 1px 14px 0 $box-shadow-ambient),
-  6: (0 1px 18px 0 $box-shadow-ambient),
-  7: (0 2px 16px 1px $box-shadow-ambient),
-  8: (0 3px 14px 2px $box-shadow-ambient),
-  9: (0 3px 16px 2px $box-shadow-ambient),
-  10: (0 4px 18px 3px $box-shadow-ambient),
-  11: (0 4px 20px 3px $box-shadow-ambient),
-  12: (0 5px 22px 4px $box-shadow-ambient),
-  13: (0 5px 24px 4px $box-shadow-ambient),
-  14: (0 5px 26px 4px $box-shadow-ambient),
-  15: (0 6px 28px 5px $box-shadow-ambient),
-  16: (0 6px 30px 5px $box-shadow-ambient),
-  17: (0 6px 32px 5px $box-shadow-ambient),
-  18: (0 7px 34px 6px $box-shadow-ambient),
-  19: (0 7px 36px 6px $box-shadow-ambient),
-  20: (0 8px 38px 7px $box-shadow-ambient),
-  21: (0 8px 40px 7px $box-shadow-ambient),
-  22: (0 8px 42px 7px $box-shadow-ambient),
-  23: (0 9px 44px 8px $box-shadow-ambient),
-  24: (0 9px 46px 8px $box-shadow-ambient)
+  0: (
+    0 0 0 0 $box-shadow-ambient
+  ),
+  1: (
+    0 1px 3px 0 $box-shadow-ambient
+  ),
+  2: (
+    0 1px 5px 0 $box-shadow-ambient
+  ),
+  3: (
+    0 1px 8px 0 $box-shadow-ambient
+  ),
+  4: (
+    0 1px 10px 0 $box-shadow-ambient
+  ),
+  5: (
+    0 1px 14px 0 $box-shadow-ambient
+  ),
+  6: (
+    0 1px 18px 0 $box-shadow-ambient
+  ),
+  7: (
+    0 2px 16px 1px $box-shadow-ambient
+  ),
+  8: (
+    0 3px 14px 2px $box-shadow-ambient
+  ),
+  9: (
+    0 3px 16px 2px $box-shadow-ambient
+  ),
+  10: (
+    0 4px 18px 3px $box-shadow-ambient
+  ),
+  11: (
+    0 4px 20px 3px $box-shadow-ambient
+  ),
+  12: (
+    0 5px 22px 4px $box-shadow-ambient
+  ),
+  13: (
+    0 5px 24px 4px $box-shadow-ambient
+  ),
+  14: (
+    0 5px 26px 4px $box-shadow-ambient
+  ),
+  15: (
+    0 6px 28px 5px $box-shadow-ambient
+  ),
+  16: (
+    0 6px 30px 5px $box-shadow-ambient
+  ),
+  17: (
+    0 6px 32px 5px $box-shadow-ambient
+  ),
+  18: (
+    0 7px 34px 6px $box-shadow-ambient
+  ),
+  19: (
+    0 7px 36px 6px $box-shadow-ambient
+  ),
+  20: (
+    0 8px 38px 7px $box-shadow-ambient
+  ),
+  21: (
+    0 8px 40px 7px $box-shadow-ambient
+  ),
+  22: (
+    0 8px 42px 7px $box-shadow-ambient
+  ),
+  23: (
+    0 9px 44px 8px $box-shadow-ambient
+  ),
+  24: (
+    0 9px 46px 8px $box-shadow-ambient
+  )
 );
 
 /* misc */
