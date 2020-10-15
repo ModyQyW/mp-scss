@@ -1,7 +1,7 @@
 @import "../variables/index";
 
 .badge {
-  position: $badge-position;
+  position: absolute;
   top: $badge-top;
   right: $badge-right;
   z-index: $badge-z-index;
