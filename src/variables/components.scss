@@ -1,6 +1,97 @@
 // variables that used by components
 
+/* badge */
+// common
+$badge-position: absolute !default;
+$badge-top: 0 !default;
+$badge-right: 0 !default;
+$badge-z-index: auto !default;
+$badge-display: flex !default;
+$badge-sizing-benchmark: 20 !default;
+$badge-min-width: $badge-sizing-benchmark * $scale + $unit !default;
+$badge-height: $badge-sizing-benchmark * $scale + $unit !default;
+$badge-padding-benchmark: 6 !default;
+$badge-padding-y: 0 !default;
+$badge-padding-x: $badge-padding-benchmark * $scale + $unit !default;
+$badge-font-size-benchmark: $font-size-benchmark - 2 !default;
+$badge-font-size: $badge-font-size-benchmark * $scale + $unit;
+$badge-font-weight: map-get($m-font-weight, "-default") !default;
+$badge-line-height: $badge-height !default;
+$badge-border-style: solid !default;
+$badge-border-width: 1 * $scale + $unit !default;
+$badge-border-radius-benchmark: $badge-sizing-benchmark / 2 !default;
+$badge-border-radius: $badge-border-radius-benchmark * $scale + $unit !default;
+$badge-transition: $transition-delay $transition-timing-function !default;
+$badge-transform: translate(50%, -50%) !default;
+$badge-transform-origin: 100% 0 !default;
+// default
+$badge-color: $color-main !default;
+$badge-background-color: $gray-5 !default;
+$badge-border-color: $gray-5 !default;
+$badge-box-shadow: 0 0 0 1 * $scale + $unit $container-background-color !default;
+$badge-color-reverse: $color-main-reverse !default;
+$badge-background-color-reverse: $gray-5 !default;
+$badge-border-color-reverse: $gray-5 !default;
+$badge-box-shadow-reverse: 0 0 0 1 * $scale + $unit $container-background-color-reverse !default;
+// primary
+$badge-primary-color: $gray-1 !default;
+$badge-primary-background-color: $primary-5 !default;
+$badge-primary-border-color: $primary-5 !default;
+$badge-primary-color-reverse: $gray-1 !default;
+$badge-primary-background-color-reverse: $primary-5-reverse !default;
+$badge-primary-border-color-reverse: $primary-5-reverse !default;
+// success
+$badge-success-color: $gray-1 !default;
+$badge-success-background-color: $success-5 !default;
+$badge-success-border-color: $success-5 !default;
+$badge-success-color-reverse: $gray-1 !default;
+$badge-success-background-color-reverse: $success-5-reverse !default;
+$badge-success-border-color-reverse: $success-5-reverse !default;
+// warning
+$badge-warning-color: $gray-1 !default;
+$badge-warning-background-color: $warning-5 !default;
+$badge-warning-border-color: $warning-5 !default;
+$badge-warning-color-reverse: $gray-1 !default;
+$badge-warning-background-color-reverse: $warning-5-reverse !default;
+$badge-warning-border-color-reverse: $warning-5-reverse !default;
+// error
+$badge-error-color: $gray-1 !default;
+$badge-error-background-color: $error-5 !default;
+$badge-error-border-color: $error-5 !default;
+$badge-error-color-reverse: $gray-1 !default;
+$badge-error-background-color-reverse: $error-5-reverse !default;
+$badge-error-border-color-reverse: $error-5-reverse !default;
+// info
+$badge-info-color: $gray-1 !default;
+$badge-info-background-color: $info-5 !default;
+$badge-info-border-color: $info-5 !default;
+$badge-info-color-reverse: $gray-1 !default;
+$badge-info-background-color-reverse: $info-5-reverse !default;
+$badge-info-border-color-reverse: $info-5-reverse !default;
+// size
+$badge-sm-sizing-benchmark: 14 !default;
+$badge-sm-min-width: $badge-sm-sizing-benchmark * $scale + $unit !default;
+$badge-sm-height: $badge-sm-sizing-benchmark * $scale + $unit !default;
+$badge-sm-padding-y: 0 !default;
+$badge-sm-padding-x: 0 !default;
+$badge-sm-font-size-benchmark: $badge-font-size-benchmark !default;
+$badge-sm-font-size: $badge-sm-font-size-benchmark * $scale + $unit;
+$badge-sm-line-height: $badge-sm-height;
+$badge-sm-border-radius-benchmark: $badge-sm-sizing-benchmark / 2 !default;
+$badge-sm-border-radius: $badge-sm-border-radius-benchmark * $scale + $unit !default;
+// dot
+$badge-dot-sizing-benchmark: 6 !default;
+$badge-dot-width: $badge-dot-sizing-benchmark * $scale + $unit !default;
+$badge-dot-min-width: auto !default;
+$badge-dot-height: $badge-dot-sizing-benchmark * $scale + $unit !default;
+$badge-dot-padding-y: 0 !default;
+$badge-dot-padding-x: 0 !default;
+$badge-dot-overflow: hidden !default;
+$badge-dot-color: transparent !default;
+$badge-dot-border-radius: 100% !default;
+
 /* icon */
+$icon-display: inline-block !default;
 $icon-sizing-benchmark: $font-size-benchmark !default;
 $icon-sizing: $icon-sizing-benchmark * $scale + $unit !default;
 $icon-line-height: 1 !default;
@@ -9,9 +100,9 @@ $icon-sm-line-height: 1 !default;
 $icon-lg-sizing: ($icon-sizing-benchmark + 2) * $scale + $unit !default;
 $icon-lg-line-height: 1 !default;
 
-/* dialog */
-$mask-background-color: fade-out($black, .55) !default;
-$mask-background-color-reverse: fade-out($white, .45) !default;
+/* modal */
+$modal-mask-background-color: fade-out($black, .55) !default;
+$modal-mask-background-color-reverse: fade-out($white, .45) !default;
 
 /* divider */
 $divider-background-color: fade-out($black, .94) !default;

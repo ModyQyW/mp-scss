@@ -1,4 +1,141 @@
-// TODO: badge
-// default, primary, success, warning,error, info
-// light and dark
-// dot
+@import "../variables/index";
+
+.badge {
+  position: $badge-position;
+  top: $badge-top;
+  right: $badge-right;
+  z-index: $badge-z-index;
+  box-sizing: border-box;
+  display: $badge-display;
+  align-items: center;
+  min-width: $badge-min-width;
+  height: $badge-height;
+  padding: $badge-padding-y $badge-padding-x;
+  font-size: $badge-font-size;
+  font-weight: $badge-font-weight;
+  line-height: $badge-line-height;
+  color: $badge-color;
+  text-align: center;
+  white-space: nowrap;
+  background-color: $badge-background-color;
+  border-color: $badge-border-color;
+  border-style: $badge-border-style;
+  border-width: $badge-border-width;
+  border-radius: $badge-border-radius;
+  transition: $badge-transition;
+  transform: $badge-transform;
+  transform-origin: $badge-transform-origin;
+
+  &,
+  .is-light &,
+  &.is-light {
+    color: $badge-color;
+    background-color: $badge-background-color;
+    border-color: $badge-border-color;
+    box-shadow: $badge-box-shadow;
+  }
+
+  .is-dark &,
+  &.is-dark {
+    color: $badge-color-reverse;
+    background-color: $badge-background-color-reverse;
+    border-color: $badge-border-color-reverse;
+    box-shadow: $badge-box-shadow-reverse;
+  }
+
+  &.is-primary,
+  .is-light &.is-primary,
+  &.is-light.is-primary {
+    color: $badge-primary-color;
+    background-color: $badge-primary-background-color;
+    border-color: $badge-primary-border-color;
+  }
+
+  .is-dark &.is-primary,
+  &.is-dark.is-primary {
+    color: $badge-primary-color-reverse;
+    background-color: $badge-primary-background-color-reverse;
+    border-color: $badge-primary-border-color-reverse;
+  }
+
+  &.is-success,
+  .is-light &.is-success,
+  &.is-light.is-success {
+    color: $badge-success-color;
+    background-color: $badge-success-background-color;
+    border-color: $badge-success-border-color;
+  }
+
+  .is-dark &.is-success,
+  &.is-dark.is-success {
+    color: $badge-success-color-reverse;
+    background-color: $badge-success-background-color-reverse;
+    border-color: $badge-success-border-color-reverse;
+  }
+
+  &.is-warning,
+  .is-light &.is-warning,
+  &.is-light.is-warning {
+    color: $badge-warning-color;
+    background-color: $badge-warning-background-color;
+    border-color: $badge-warning-border-color;
+  }
+
+  .is-dark &.is-warning,
+  &.is-dark.is-warning {
+    color: $badge-warning-color-reverse;
+    background-color: $badge-warning-background-color-reverse;
+    border-color: $badge-warning-border-color-reverse;
+  }
+
+  &.is-error,
+  .is-light &.is-error,
+  &.is-light.is-error {
+    color: $badge-error-color;
+    background-color: $badge-error-background-color;
+    border-color: $badge-error-border-color;
+  }
+
+  .is-dark &.is-error,
+  &.is-dark.is-error {
+    color: $badge-error-color-reverse;
+    background-color: $badge-error-background-color-reverse;
+    border-color: $badge-error-border-color-reverse;
+  }
+
+  &.is-info,
+  .is-light &.is-info,
+  &.is-light.is-info {
+    color: $badge-info-color;
+    background-color: $badge-info-background-color;
+    border-color: $badge-info-border-color;
+  }
+
+  .is-dark &.is-info,
+  &.is-dark.is-info {
+    color: $badge-info-color-reverse;
+    background-color: $badge-info-background-color-reverse;
+    border-color: $badge-info-border-color-reverse;
+  }
+
+  &.is-small {
+    min-width: $badge-sm-min-width;
+    height: $badge-sm-height;
+    padding: $badge-sm-padding-y $badge-sm-padding-x;
+    font-size: $badge-sm-font-size;
+    line-height: $badge-sm-line-height;
+    border-radius: $badge-sm-border-radius;
+  }
+
+  &.is-dot,
+  &.is-dot.is-large,
+  &.is-dotter.is-small {
+    width: $badge-dot-width;
+    min-width: $badge-dot-min-width;
+    height: $badge-dot-height;
+    padding: $badge-dot-padding-y $badge-dot-padding-x;
+    overflow: $badge-dot-overflow;
+    color: $badge-dot-color;
+    border-radius: $badge-dot-border-radius;
+  }
+}
