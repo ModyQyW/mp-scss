@@ -1,25 +1,93 @@
-// .divider,
-// .divider-vertical {
-//   position: relative;
-//   box-sizing: border-box;
-//   margin: 0 auto;
+@import "../variables/index";
 
-//   &,
-//   .light & {
-//     background-color: $color-bg-default;
-//   }
+.divider {
+  position: relative;
+  box-sizing: border-box;
+  display: $divider-display;
+  width: $divider-width;
+  height: $divider-height;
+  margin: $divider-margin-y $divider-margin-x;
+  border-top-style: $divider-border-top-style;
+  border-top-width: $divider-border-top-width;
+  border-left: none;
+  transition: $divider-transition;
 
-//   .dark & {
-//     background-color: $color-bg-default-reverse;
-//   }
-// }
+  &,
+  .is-light &,
+  &.is-light {
+    border-top-color: $divider-border-top-color;
+  }
 
-// .divider {
-//   width: 100%;
-//   height: 2rpx;
-// }
+  .is-dark &,
+  &.is-dark {
+    border-top-color: $divider-border-top-color-reverse;
+  }
 
-// .divider-vertical {
-//   width: 2rpx;
-//   height: 100%;
-// }
+  &.is-vertical {
+    display: $divider-vertical-display;
+    width: $divider-vertical-width;
+    height: $divider-vertical-height;
+    margin: $divider-vertical-margin-y $divider-vertical-margin-x;
+    border-top: none;
+    border-left-style: $divider-vertical-border-left-style;
+    border-left-width: $divider-vertical-border-left-width;
+
+    &,
+    .is-light &,
+    &.is-light {
+      border-left-color: $divider-vertical-border-left-color;
+    }
+
+    .is-dark &,
+    &.is-dark {
+      border-left-color: $divider-vertical-border-left-color-reverse;
+    }
+  }
+}
+
+.divider-wrapper {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+
+  .divider-text {
+    position: relative;
+    box-sizing: border-box;
+    display: $divider-text-display;
+    padding: $divider-text-padding-y $divider-text-padding-x;
+    font-size: $divider-text-font-size;
+    font-weight: $divider-text-font-weight;
+    line-height: $divider-text-line-height;
+  }
+
+  .divider,
+  &.is-center .divider {
+    flex: 0 1 50%;
+    max-width: 50%;
+  }
+
+  &.is-left .divider {
+    &:first-child {
+      flex: 0 1 20%;
+      max-width: 20%;
+    }
+
+    &:last-child {
+      flex: 0 1 80%;
+      max-width: 80%;
+    }
+  }
+
+  &.is-right .divider {
+    &:first-child {
+      flex: 0 1 80%;
+      max-width: 80%;
+    }
+
+    &:last-child {
+      flex: 0 1 20%;
+      max-width: 20%;
+    }
+  }
+}

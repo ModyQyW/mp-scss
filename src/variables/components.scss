@@ -89,6 +89,42 @@ $badge-dot-overflow: hidden !default;
 $badge-dot-color: transparent !default;
 $badge-dot-border-radius: 100% !default;
 
+/* divider */
+// common
+$divider-display: block !default;
+$divider-width: 100% !default;
+$divider-height: auto !default;
+$divider-margin-benchmark: 8 !default;
+$divider-margin-y: $divider-margin-benchmark * 3 * $scale + $unit !default;
+$divider-margin-x: 0 !default;
+$divider-border-top-style: solid !default;
+$divider-border-top-width-benchmark: 1 !default;
+$divider-border-top-width: $divider-border-top-width-benchmark * $scale + $unit;
+$divider-border-top-color: $border-color !default;
+$divider-border-top-color-reverse: $border-color-reverse !default;
+$divider-transition: $transition-delay $transition-timing-function !default;
+$divider-vertical-display: inline-block !default;
+$divider-vertical-width: auto !default;
+$divider-vertical-height: 100% !default;
+$divider-vertical-margin-benchmark: $divider-margin-benchmark !default;
+$divider-vertical-margin-y: 0 !default;
+$divider-vertical-margin-x: $divider-vertical-margin-benchmark * $scale + $unit !default;
+$divider-vertical-border-left-style: $divider-border-top-style !default;
+$divider-vertical-border-left-width: $divider-border-top-width !default;
+$divider-vertical-border-left-color: $border-color !default;
+$divider-vertical-border-left-color-reverse: $border-color-reverse !default;
+// wrapper
+$divider-wrapper-display: flex !default;
+// text
+$divider-text-display: inline-block !default;
+$divider-text-padding-benchmark: 16 !default;
+$divider-text-padding-y: 0 !default;
+$divider-text-padding-x: $divider-text-padding-benchmark * $scale + $unit;
+$divider-text-font-size-benchmark: $font-size-benchmark !default;
+$divider-text-font-size: $badge-font-size-benchmark * $scale + $unit;
+$divider-text-font-weight: map-get($m-font-weight, "-default") !default;
+$divider-text-line-height: $badge-height !default;
+
 /* icon */
 $icon-display: inline-block !default;
 $icon-sizing-benchmark: $font-size-benchmark !default;
@@ -101,8 +137,4 @@ $icon-lg-line-height: 1 !default;
 
 /* modal */
 $modal-mask-background-color: fade-out($black, .55) !default;
-$modal-mask-background-color-reverse: fade-out($white, .45) !default;
-
-/* divider */
-$divider-background-color: fade-out($black, .94) !default;
-$divider-background-color-reverse: fade-out($white, .88) !default;
+$modal-mask-background-color-reverse: $modal-mask-background-color !default;
