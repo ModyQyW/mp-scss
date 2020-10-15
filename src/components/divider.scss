@@ -48,7 +48,7 @@
 .divider-wrapper {
   position: relative;
   box-sizing: border-box;
-  display: flex;
+  display: $divider-wrapper-display;
   align-items: center;
 
   .divider-text {

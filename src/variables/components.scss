@@ -121,9 +121,9 @@ $divider-text-padding-benchmark: 16 !default;
 $divider-text-padding-y: 0 !default;
 $divider-text-padding-x: $divider-text-padding-benchmark * $scale + $unit;
 $divider-text-font-size-benchmark: $font-size-benchmark !default;
-$divider-text-font-size: $badge-font-size-benchmark * $scale + $unit;
+$divider-text-font-size: $divider-text-font-size-benchmark * $scale + $unit;
 $divider-text-font-weight: map-get($m-font-weight, "-default") !default;
-$divider-text-line-height: $badge-height !default;
+$divider-text-line-height: $line-height-benchmark !default;
 
 /* icon */
 $icon-display: inline-block !default;
