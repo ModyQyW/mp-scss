@@ -25,7 +25,7 @@
   "scripts": {
     "lint": "prettier ./src/**/*.scss --write && stylelint ./src/**/*.scss --fix",
     "clean": "rimraf ./dist",
-    "build-all": "rimraf ./dist && sass ./src:./dist/css",
+    "build-all": "rimraf ./dist && yarn build-index && yarn build-reset && yarn build-elements && yarn build-layout && yarn build-components && yarn build-classes",
     "build-index": "sass ./src/index.scss ./dist/css/index.css --no-source-map",
     "build-reset": "sass ./src/reset:./dist/css/reset --no-source-map",
     "build-elements": "sass ./src/elements:./dist/css/elements --no-source-map",
