@@ -826,7 +826,9 @@ $m-length: (
 }
 
 /* positioning */
-$m-z-index: ("-auto": auto) !default;
+$m-z-index: (
+  "-auto": auto
+) !default;
 $tmp-z-index: $z-index-min;
 @while ($tmp-z-index <= $z-index-max) {
   $m-z-index: map-merge(
