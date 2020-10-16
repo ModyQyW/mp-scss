@@ -84,7 +84,7 @@ module.exports = {
       },
     ],
     sidebar: 'auto',
-    sidebarDepth: 3,
+    sidebarDepth: 4,
     lastUpdated: 'Last Updated',
     repo: 'MillCloud/mp-scss',
     repoLabel: '查看源码',
