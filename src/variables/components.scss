@@ -192,4 +192,4 @@ $overlay-z-index: $z-index-max - $z-index-step * 2 !default;
 $overlay-width: 100% !default;
 $overlay-height: 100% !default;
 $overlay-background-color: fade-out($black, .55) !default;
-$overlay-background-color-reverse: $wrapper-modal-background-color !default;
+$overlay-background-color-reverse: $overlay-background-color !default;
