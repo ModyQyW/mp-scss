@@ -825,6 +825,19 @@ $m-length: (
   );
 }
 
+/* positioning */
+$m-z-index: ("-auto": auto) !default;
+$tmp-z-index: $z-index-min;
+@while ($tmp-z-index <= $z-index-max) {
+  $m-z-index: map-merge(
+    $m-z-index,
+    (
+      "-#{$tmp-z-index}": $tmp-z-index
+    )
+  );
+  $tmp-z-index: $tmp-z-index + $z-index-step;
+}
+
 /* box-model */
 // flex
 $m-flex-shrink: (
@@ -937,6 +950,26 @@ $m-font-size: (
     )
   );
 }
+// font-weight
+$m-font-weight: (
+  "-thin": $font-weight-thin,
+  "-extra-light": $font-weight-extra-light,
+  "-ultra-light": $font-weight-ultra-light,
+  "-light": $font-weight-light,
+  "-default": $font-weight-default,
+  "-normal": $font-weight-normal,
+  "-regular": $font-weight-regular,
+  "-medium": $font-weight-medium,
+  "-semi-bold": $font-weight-semi-bold,
+  "-bold": $font-weight-bold,
+  "-extra-bold": $font-weight-extra-bold,
+  "-ultra-bold": $font-weight-ultra-bold,
+  "-heavy": $font-weight-heavy
+) !default;
+// font-variant
+$m-font-variant: (
+  "tabular-nums": $font-variant-tabular-nums
+) !default;
 // line-height
 $m-line-height: (
   "": $line-height-benchmark,

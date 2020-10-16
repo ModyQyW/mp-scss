@@ -14,7 +14,7 @@ $badge-padding-y: 0 !default;
 $badge-padding-x: $badge-padding-benchmark * $scale + $unit !default;
 $badge-font-size-benchmark: $font-size-benchmark - 2 !default;
 $badge-font-size: $badge-font-size-benchmark * $scale + $unit;
-$badge-font-weight: map-get($m-font-weight, "-default") !default;
+$badge-font-weight: $font-weight-default !default;
 $badge-line-height: $badge-height !default;
 $badge-border-style: solid !default;
 $badge-border-width: 1 * $scale + $unit !default;
@@ -98,7 +98,7 @@ $card-margin-y: 0 !default;
 $card-margin-x: 0 !default;
 $card-font-size-benchmark: $font-size-benchmark !default;
 $card-font-size: $card-font-size-benchmark * $scale + $unit !default;
-$card-font-weight: map-get($m-font-weight, "-normal") !default;
+$card-font-weight: $font-weight-default !default;
 $card-line-height: $line-height-benchmark !default;
 $card-border-style: solid !default;
 $card-border-width-benchmark: 1 !default;
@@ -118,7 +118,7 @@ $card-header-padding-y: $card-header-padding-benchmark * $scale + $unit;
 $card-header-padding-x: $card-header-padding-benchmark * 1.5 * $scale + $unit;
 $card-header-font-size-benchmark: $font-size-benchmark + 2 !default;
 $card-header-font-size: $card-header-font-size-benchmark * $scale + $unit !default;
-$card-header-font-weight: map-get($m-font-weight, "-medium") !default;
+$card-header-font-weight: $font-weight-medium !default;
 $card-header-line-height: $line-height-benchmark !default;
 // content
 $card-content-padding-benchmark: $card-header-padding-benchmark !default;
@@ -174,7 +174,7 @@ $divider-text-padding-y: 0 !default;
 $divider-text-padding-x: $divider-text-padding-benchmark * $scale + $unit;
 $divider-text-font-size-benchmark: $font-size-benchmark !default;
 $divider-text-font-size: $divider-text-font-size-benchmark * $scale + $unit;
-$divider-text-font-weight: map-get($m-font-weight, "-default") !default;
+$divider-text-font-weight: $font-weight-default !default;
 $divider-text-line-height: $line-height-benchmark !default;
 
 /* icon */
