@@ -1,27 +1,27 @@
 @import "../variables/index";
 
-.wrapper-modal {
+.overlay {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: $wrapper-modal-z-index;
-  width: $wrapper-modal-width;
-  height: $wrapper-modal-height;
+  z-index: $overlay-z-index;
+  width: $overlay-width;
+  height: $overlay-height;
   overflow: auto;
   outline: none;
 
   &,
   .is-light &,
   &.is-light {
-    color: $wrapper-modal-color;
-    background-color: $wrapper-modal-background-color;
+    color: $overlay-color;
+    background-color: $overlay-background-color;
   }
 
   .is-dark &,
   &.is-dark {
-    color: $wrapper-modal-color-reverse;
-    background-color: $wrapper-modal-background-color-reverse;
+    color: $overlay-color-reverse;
+    background-color: $overlay-background-color-reverse;
   }
 }
