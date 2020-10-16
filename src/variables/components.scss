@@ -191,5 +191,7 @@ $icon-lg-line-height: 1 !default;
 $overlay-z-index: $z-index-max - $z-index-step * 2 !default;
 $overlay-width: 100% !default;
 $overlay-height: 100% !default;
+$overlay-color: $color-main !default;
 $overlay-background-color: fade-out($black, .55) !default;
+$overlay-color-reverse: $color-main-reverse !default;
 $overlay-background-color-reverse: $overlay-background-color !default;
