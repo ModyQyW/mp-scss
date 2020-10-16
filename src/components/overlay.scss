@@ -1,0 +1,27 @@
+@import "../variables/index";
+
+.wrapper-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $wrapper-modal-z-index;
+  width: $wrapper-modal-width;
+  height: $wrapper-modal-height;
+  overflow: auto;
+  outline: none;
+
+  &,
+  .is-light &,
+  &.is-light {
+    color: $wrapper-modal-color;
+    background-color: $wrapper-modal-background-color;
+  }
+
+  .is-dark &,
+  &.is-dark {
+    color: $wrapper-modal-color-reverse;
+    background-color: $wrapper-modal-background-color-reverse;
+  }
+}
