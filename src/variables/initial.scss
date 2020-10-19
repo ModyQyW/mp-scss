@@ -186,19 +186,21 @@ $m-font-style: (
   "-oblique": oblique
 ) !default;
 // font-weight
-$font-weight-thin: 100 !default;
-$font-weight-extra-light: 200 !default;
-$font-weight-ultra-light: 200 !default;
-$font-weight-light: 300 !default;
-$font-weight-default: 400 !default;
-$font-weight-normal: 400 !default;
-$font-weight-regular: 400 !default;
-$font-weight-medium: 500 !default;
-$font-weight-semi-bold: 600 !default;
-$font-weight-bold: 700 !default;
-$font-weight-extra-bold: 800 !default;
-$font-weight-ultra-bold: 800 !default;
-$font-weight-heavy: 900 !default;
+$m-font-weight: (
+  "-thin": 100,
+  "-extra-light": 200,
+  "-ultra-light": 200,
+  "-light": 300,
+  "-default": 400,
+  "-normal": 400,
+  "-regular": 400,
+  "-medium": 500,
+  "-semi-bold": 600,
+  "-bold": 700,
+  "-extra-bold": 800,
+  "-ultra-bold": 800,
+  "-heavy": 900
+) !default;
 // font-variant
 $font-variant-tabular-nums: tabular-nums !default;
 // line-height

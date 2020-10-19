@@ -14,7 +14,7 @@ $badge-padding-y: 0 !default;
 $badge-padding-x: $badge-padding-base * $scale + $unit !default;
 $badge-font-size-base: $font-size-base - 2 !default;
 $badge-font-size: $badge-font-size-base * $scale + $unit;
-$badge-font-weight: $font-weight-default !default;
+$badge-font-weight: 400 !default;
 $badge-line-height: $badge-height !default;
 $badge-border-style: solid !default;
 $badge-border-width: 1 * $scale + $unit !default;
@@ -98,7 +98,7 @@ $card-margin-y: 0 !default;
 $card-margin-x: 0 !default;
 $card-font-size-base: $font-size-base !default;
 $card-font-size: $card-font-size-base * $scale + $unit !default;
-$card-font-weight: $font-weight-default !default;
+$card-font-weight: 400 !default;
 $card-line-height: $line-height-default !default;
 $card-border-style: solid !default;
 $card-border-width-base: 1 !default;
@@ -118,7 +118,7 @@ $card-header-padding-y: $card-header-padding-base * $scale + $unit;
 $card-header-padding-x: $card-header-padding-base * 1.5 * $scale + $unit;
 $card-header-font-size-base: $font-size-base + 2 !default;
 $card-header-font-size: $card-header-font-size-base * $scale + $unit !default;
-$card-header-font-weight: $font-weight-medium !default;
+$card-header-font-weight: 500 !default;
 $card-header-line-height: $line-height-default !default;
 // content
 $card-content-padding-base: $card-header-padding-base !default;
@@ -174,7 +174,7 @@ $divider-text-padding-y: 0 !default;
 $divider-text-padding-x: $divider-text-padding-base * $scale + $unit;
 $divider-text-font-size-base: $font-size-base !default;
 $divider-text-font-size: $divider-text-font-size-base * $scale + $unit;
-$divider-text-font-weight: $font-weight-default !default;
+$divider-text-font-weight: 400 !default;
 $divider-text-line-height: $line-height-default !default;
 
 /* icon */

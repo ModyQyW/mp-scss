@@ -961,22 +961,6 @@ $tmp-font-size: $font-size-min;
   );
   $tmp-font-size: $tmp-font-size + $font-size-step;
 }
-// font-weight
-$m-font-weight: (
-  "-thin": $font-weight-thin,
-  "-extra-light": $font-weight-extra-light,
-  "-ultra-light": $font-weight-ultra-light,
-  "-light": $font-weight-light,
-  "-default": $font-weight-default,
-  "-normal": $font-weight-normal,
-  "-regular": $font-weight-regular,
-  "-medium": $font-weight-medium,
-  "-semi-bold": $font-weight-semi-bold,
-  "-bold": $font-weight-bold,
-  "-extra-bold": $font-weight-extra-bold,
-  "-ultra-bold": $font-weight-ultra-bold,
-  "-heavy": $font-weight-heavy
-) !default;
 // font-variant
 $m-font-variant: (
   "tabular-nums": $font-variant-tabular-nums
