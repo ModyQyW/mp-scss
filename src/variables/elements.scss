@@ -3,19 +3,19 @@
 /* button */
 // common
 $button-display: flex !default;
-$button-padding-benchmark: 4 !default;
-$button-padding-y: $button-padding-benchmark * $scale + $unit !default;
-$button-padding-x: $button-padding-benchmark * 4 * $scale + $unit !default;
+$button-padding-base: 4 !default;
+$button-padding-y: $button-padding-base * $scale + $unit !default;
+$button-padding-x: $button-padding-base * 4 * $scale + $unit !default;
 $button-margin-y: 0 !default;
 $button-margin-x: auto !default;
-$button-font-size-benchmark: $font-size-benchmark !default;
-$button-font-size: $button-font-size-benchmark * $scale + $unit !default;
+$button-font-size-base: $font-size-base !default;
+$button-font-size: $button-font-size-base * $scale + $unit !default;
 $button-font-weight: $font-weight-default !default;
-$button-line-height: $line-height-benchmark !default;
+$button-line-height: $line-height-default !default;
 $button-border-style: solid !default;
 $button-border-width: 1 * $scale + $unit !default;
-$button-border-radius-benchmark: $border-radius-benchmark !default;
-$button-border-radius: $button-border-radius-benchmark * $scale + $unit !default;
+$button-border-radius-base: $border-radius-base !default;
+$button-border-radius: $button-border-radius-base * $scale + $unit !default;
 $button-transition: $transition-delay $transition-timing-function !default;
 // ripply
 $button-ripply-background-color: $gray-10 !default;
@@ -455,11 +455,11 @@ $button-info-link-disabled-background-color-reverse: $container-background-color
 $button-info-link-disabled-border-color-reverse: $container-background-color !default;
 // size
 $button-sm-padding-y: 0 !default;
-$button-sm-padding-x: $button-padding-benchmark * 2 * $scale + $unit !default;
-$button-sm-font-size: $button-font-size-benchmark * $scale + $unit !default;
-$button-lg-padding-y: $button-padding-benchmark * 1.5 * $scale + $unit !default;
-$button-lg-padding-x: $button-padding-benchmark * 4 * $scale + $unit !default;
-$button-lg-font-size: ($button-font-size-benchmark + 2) * $scale + $unit !default;
+$button-sm-padding-x: $button-padding-base * 2 * $scale + $unit !default;
+$button-sm-font-size: $button-font-size-base * $scale + $unit !default;
+$button-lg-padding-y: $button-padding-base * 1.5 * $scale + $unit !default;
+$button-lg-padding-x: $button-padding-base * 4 * $scale + $unit !default;
+$button-lg-font-size: ($button-font-size-base + 2) * $scale + $unit !default;
 
 /* input */
 // placeholder
@@ -467,20 +467,20 @@ $input-placeholder-color: $color-secondary !default;
 $input-placeholder-color-reverse: $color-secondary-reverse !default;
 // common
 $input-display: inline-block !default;
-$input-padding-benchmark: 4 !default;
-$input-padding-y: $input-padding-benchmark * $scale + $unit !default;
-$input-padding-x: $input-padding-benchmark * 3 * $scale + $unit !default;
+$input-padding-base: 4 !default;
+$input-padding-y: $input-padding-base * $scale + $unit !default;
+$input-padding-x: $input-padding-base * 3 * $scale + $unit !default;
 $input-margin-y: 0 !default;
 $input-margin-x: 0 !default;
-$input-font-size-benchmark: $font-size-benchmark !default;
-$input-font-size: $input-font-size-benchmark * $scale + $unit !default;
+$input-font-size-base: $font-size-base !default;
+$input-font-size: $input-font-size-base * $scale + $unit !default;
 $input-font-weight: $font-weight-default !default;
 $input-font-variant: $font-variant-tabular-nums !default;
-$input-line-height: $line-height-benchmark !default;
+$input-line-height: $line-height-default !default;
 $input-border-style: solid !default;
 $input-border-width: 1 * $scale + $unit !default;
-$input-border-radius-benchmark: $border-radius-benchmark !default;
-$input-border-radius: $input-border-radius-benchmark * $scale + $unit !default;
+$input-border-radius-base: $border-radius-base !default;
+$input-border-radius: $input-border-radius-base * $scale + $unit !default;
 $input-transition: $transition-delay $transition-timing-function !default;
 // default
 $input-color: $color-main !default;
@@ -509,26 +509,26 @@ $input-active-background-color-reverse: $container-background-color-reverse !def
 $input-active-border-color-reverse: $primary-6-reverse !default;
 // size
 $input-sm-padding-y: 0 !default;
-$input-sm-padding-x: $input-padding-benchmark * 2 * $scale + $unit !default;
-$input-sm-font-size: $input-font-size-benchmark * $scale + $unit !default;
-$input-lg-padding-y: $input-padding-benchmark * 1.5 * $scale + $unit !default;
-$input-lg-padding-x: $input-padding-benchmark * 4 * $scale + $unit !default;
-$input-lg-font-size: ($input-font-size-benchmark + 2) * $scale + $unit !default;
+$input-sm-padding-x: $input-padding-base * 2 * $scale + $unit !default;
+$input-sm-font-size: $input-font-size-base * $scale + $unit !default;
+$input-lg-padding-y: $input-padding-base * 1.5 * $scale + $unit !default;
+$input-lg-padding-x: $input-padding-base * 4 * $scale + $unit !default;
+$input-lg-font-size: ($input-font-size-base + 2) * $scale + $unit !default;
 // wrapper
 $input-wrapper-display: inline-flex !default;
 $input-wrapper-padding-y: $input-padding-y !default;
 $input-wrapper-padding-x: $input-padding-x !default;
 $input-wrapper-margin-y: $input-margin-y !default;
 $input-wrapper-margin-x: $input-margin-x !default;
-$input-wrapper-font-size-benchmark: $input-font-size-benchmark !default;
-$input-wrapper-font-size: $input-wrapper-font-size-benchmark * $scale + $unit !default;
+$input-wrapper-font-size-base: $input-font-size-base !default;
+$input-wrapper-font-size: $input-wrapper-font-size-base * $scale + $unit !default;
 $input-wrapper-font-weight: $input-font-weight !default;
 $input-wrapper-font-variant: $input-font-variant !default;
 $input-wrapper-line-height: $input-line-height !default;
 $input-wrapper-border-style: $input-border-style !default;
 $input-wrapper-border-width: $input-border-width !default;
-$input-wrapper-border-radius-benchmark: $input-border-radius-benchmark !default;
-$input-wrapper-border-radius: $input-wrapper-border-radius-benchmark * $scale + $unit !default;
+$input-wrapper-border-radius-base: $input-border-radius-base !default;
+$input-wrapper-border-radius: $input-wrapper-border-radius-base * $scale + $unit !default;
 $input-wrapper-transition: $input-transition !default;
 $input-wrapper-color: $input-color !default;
 $input-wrapper-background-color: $input-background-color !default;
@@ -555,16 +555,16 @@ $input-wrapper-active-color-reverse: $input-active-color-reverse !default;
 $input-wrapper-active-background-color-reverse: $input-active-background-color-reverse !default;
 $input-wrapper-active-border-color-reverse: $input-active-border-color-reverse !default;
 $input-wrapper-sm-padding-y: 0 !default;
-$input-wrapper-sm-padding-x: $input-padding-benchmark * 2 * $scale + $unit !default;
-$input-wrapper-sm-font-size: $input-font-size-benchmark * $scale + $unit !default;
-$input-wrapper-lg-padding-y: $input-padding-benchmark * 1.5 * $scale + $unit !default;
-$input-wrapper-lg-padding-x: $input-padding-benchmark * 4 * $scale + $unit !default;
-$input-wrapper-lg-font-size: ($input-font-size-benchmark + 2) * $scale + $unit !default;
+$input-wrapper-sm-padding-x: $input-padding-base * 2 * $scale + $unit !default;
+$input-wrapper-sm-font-size: $input-font-size-base * $scale + $unit !default;
+$input-wrapper-lg-padding-y: $input-padding-base * 1.5 * $scale + $unit !default;
+$input-wrapper-lg-padding-x: $input-padding-base * 4 * $scale + $unit !default;
+$input-wrapper-lg-font-size: ($input-font-size-base + 2) * $scale + $unit !default;
 // prefix
 $input-wrapper-prefix-display: flex !default;
-$input-wrapper-prefix-margin-right-benchmark: 4 !default;
-$input-wrapper-prefix-margin-right: $input-wrapper-prefix-margin-right-benchmark * $scale + $unit !default;
+$input-wrapper-prefix-margin-right-base: 4 !default;
+$input-wrapper-prefix-margin-right: $input-wrapper-prefix-margin-right-base * $scale + $unit !default;
 // suffix
 $input-wrapper-suffix-display: flex !default;
-$input-wrapper-suffix-margin-left-benchmark: 4 !default;
-$input-wrapper-suffix-margin-left: $input-wrapper-suffix-margin-left-benchmark * $scale + $unit !default;
+$input-wrapper-suffix-margin-left-base: 4 !default;
+$input-wrapper-suffix-margin-left: $input-wrapper-suffix-margin-left-base * $scale + $unit !default;

@@ -6,7 +6,7 @@ $unit: rpx !default;
 // 2x scaling is used in most cases
 $scale: 2 !default;
 
-/* common colors */
+/* common */
 // neutral color
 $gray: #8c8c8c !default;
 $gray-1: #fff !default;
@@ -48,13 +48,12 @@ $geek-blue: #2f54eb !default;
 $purple: #722ed1 !default;
 // magenta
 $magenta: #eb2f96 !default;
-
-/* denominators */
+// ratio
 $l-denominator: 3, 4, 5, 6, 8, 10, 12, 16, 24, 100 !default;
-
-/* lengths */
+// length
 $length-min: 0 !default;
 $length-max: 256 !default;
+$length-step: 1 !default;
 
 /* positioning */
 // position
@@ -107,9 +106,13 @@ $m-flex-wrap: (
   "-wrap-reverse": wrap-reverse
 ) !default;
 $flex-shrink-min: 0 !default;
+$flex-shrink-default: 1 !default;
 $flex-shrink-max: 8 !default;
+$flex-shrink-step: 1 !default;
 $flex-grow-min: 0 !default;
+$flex-grow-default: 0 !default;
 $flex-grow-max: 8 !default;
+$flex-grow-step: 1 !default;
 $m-align-content: (
   "-start": flex-start,
   "-end": flex-end,
@@ -142,20 +145,17 @@ $m-justify-content: (
   "-evenly": space-evenly,
   "-stretch": stretch
 ) !default;
-$m-order: (
-  "-init": 0,
-  "-first": -9999,
-  "-last": 9999
-) !default;
 $order-first: -9999 !default;
-$order-min: -24 !default;
-$order-init: 0 !default;
-$order-max: 24 !default;
 $order-last: 9999 !default;
+$order-min: -8 !default;
+$order-default: 0 !default;
+$order-max: 8 !default;
+$order-step: 1 !default;
 // spacing
-$spacing-benchmark: 12 !default;
+$spacing-base: 12 !default;
 $spacing-min: 0 !default;
 $spacing-max: 256 !default;
+$spacing-step: 1 !default;
 // overflow
 $m-overflow: (
   "-auto": auto,
@@ -176,9 +176,10 @@ $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif !default;
 $font-family-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 /* stylelint-enable */
 // font-size
-$font-size-benchmark: 14 !default;
+$font-size-base: 14 !default;
 $font-size-min: 10 !default;
 $font-size-max: 64 !default;
+$font-size-step: 1 !default;
 // font-style
 $m-font-style: (
   "-italic": italic,
@@ -201,9 +202,10 @@ $font-weight-heavy: 900 !default;
 // font-variant
 $font-variant-tabular-nums: tabular-nums !default;
 // line-height
-$line-height-benchmark: 1.5715 !default;
+$line-height-default: 1.5715 !default;
 $line-height-min: 18 !default;
 $line-height-max: 72 !default;
+$line-height-step: 1 !default;
 // text-align
 $m-text-align: (
   "-left": left,
@@ -278,16 +280,16 @@ $m-border-style: (
 // border-width
 $border-width-min: 0 !default;
 $border-width-max: 4 !default;
+$border-width-step: 1 !default;
 // border-radius
-$border-radius-benchmark: 2 !default;
+$border-radius-base: 2 !default;
 $border-radius-min: 0 !default;
 $border-radius-max: 8 !default;
+$border-radius-step: 1 !default;
 // box-shadow
 $box-shadow-umbra: rgba(0, 0, 0, .2) !default;
 $box-shadow-penumbra: rgba(0, 0, 0, .14) !default;
 $box-shadow-ambient: rgba(0, 0, 0, .12) !default;
-$box-shadow-min: 0 !default;
-$box-shadow-max: 24 !default;
 
 /* misc */
 // opacity

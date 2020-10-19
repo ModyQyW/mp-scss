@@ -8,7 +8,7 @@ $body-background-color: $page-background-color-reverse !default;
 $container-background-color: $gray-1 !default;
 $container-background-color-reverse: $gray-12 !default;
 
-/* common colors */
+/* common */
 // dust red
 $red-1: f-get-color($red, 1); // #fff1f0
 $red-2: f-get-color($red, 2); // #ffccc7
@@ -273,8 +273,6 @@ $magenta-7-reverse: mix($magenta-5, $container-background-color-reverse, 90%); /
 $magenta-8-reverse: mix($magenta-4, $container-background-color-reverse, 95%); // #f37fb7
 $magenta-9-reverse: mix($magenta-3, $container-background-color-reverse, 97%); // #f8a8cc
 $magenta-10-reverse: mix($magenta-2, $container-background-color-reverse, 98%); // #fad2e3
-
-/* theme colors that can be used in most places */
 // primary color
 $primary: $blue-6 !default;
 $primary-1: f-get-color($primary, 1);
@@ -390,7 +388,7 @@ $info-7-reverse: mix($info, $container-background-color-reverse, 90%);
 $info-8-reverse: mix($info, $container-background-color-reverse, 95%);
 $info-9-reverse: mix($info, $container-background-color-reverse, 97%);
 $info-10-reverse: mix($info, $container-background-color-reverse, 98%);
-// maps
+// common color map
 $m-colors: (
   "-transparent": transparent,
   "-black": $black,
@@ -786,8 +784,7 @@ $m-colors-reverse: (
   "-info-9": $info-9-reverse,
   "-info-10": $info-10-reverse
 );
-
-/* ratios */
+// ratio
 $m-ratio: (
   "-full": 100%,
   "-half": 50%,
@@ -803,18 +800,19 @@ $m-ratio: (
     );
   }
 }
-
-/* length */
+// length
 $m-length: (
   "-auto": auto
 ) !default;
-@for $v from $length-min to $length-max {
+$tmp-length: $length-min;
+@while ($tmp-length <= $length-max) {
   $m-length: map-merge(
     $m-length,
     (
-      "-#{$v}": $v * $scale + $unit
+      "-#{$tmp-length}": $tmp-length * $scale + $unit
     )
   );
+  $tmp-length: $tmp-length + $length-step;
 }
 @if ($scale != 1) {
   $m-length: map-merge(
@@ -826,6 +824,7 @@ $m-length: (
 }
 
 /* positioning */
+// z-index
 $m-z-index: (
   "-auto": auto
 ) !default;
@@ -843,66 +842,74 @@ $tmp-z-index: $z-index-min;
 /* box-model */
 // flex
 $m-flex-shrink: (
-  "": 1
+  "": $flex-shrink-default
 ) !default;
-@for $v from $flex-shrink-min to $flex-shrink-max {
+$tmp-flex-shrink: $flex-shrink-min;
+@while ($tmp-flex-shrink <= $flex-shrink-max) {
   $m-flex-shrink: map-merge(
     $m-flex-shrink,
     (
-      "-#{$v}": $v
+      "-#{$tmp-flex-shrink}": $tmp-flex-shrink
     )
   );
+  $tmp-flex-shrink: $tmp-flex-shrink + $flex-shrink-step;
 }
 $m-flex-grow: (
-  "": 1
+  "": $flex-grow-default
 ) !default;
-@for $v from $flex-grow-min to $flex-grow-max {
+$tmp-flex-grow: $flex-grow-min;
+@while ($tmp-flex-grow <= $flex-grow-max) {
   $m-flex-grow: map-merge(
     $m-flex-grow,
     (
-      "-#{$v}": $v
+      "-#{$tmp-flex-grow}": $tmp-flex-grow
     )
   );
+  $tmp-flex-grow: $tmp-flex-grow + $flex-grow-step;
 }
 $m-order: (
-  "-init": $order-init,
+  "": $order-default,
   "-first": $order-first,
   "-last": $order-last
 ) !default;
-@for $v from $order-min to $order-max {
+$tmp-order: $order-min;
+@while ($tmp-order <= $order-max) {
   $m-order: map-merge(
     $m-order,
     (
-      "-#{$v}": $v
+      "-#{$tmp-order}": $tmp-order
     )
   );
+  $tmp-order: $tmp-order + $order-step;
 }
 // spacing
 $m-spacing: (
   "-auto": auto,
-  "": $spacing-benchmark * $scale + $unit,
+  "": $spacing-base * $scale + $unit,
   "-xs": (
-    $spacing-benchmark - 8
+    $spacing-base - 8
   ) * $scale + $unit,
   "-sm": (
-    $spacing-benchmark - 4
+    $spacing-base - 4
   ) * $scale + $unit,
-  "-md": $spacing-benchmark * $scale + $unit,
+  "-md": $spacing-base * $scale + $unit,
   "-lg": (
-    $spacing-benchmark + 4
+    $spacing-base + 4
   ) * $scale + $unit,
   "-xl": (
-    $spacing-benchmark + 8
+    $spacing-base + 8
   ) * $scale + $unit
 ) !default;
-@for $v from $spacing-min to $spacing-max {
+$tmp-spacing: $spacing-min;
+@while ($tmp-spacing <= $spacing-max) {
   $m-spacing: map-merge(
     $m-spacing,
     (
-      "-#{$v}": $v * $scale + $unit,
-      "-n#{$v}": -1 * $v * $scale + $unit
+      "-#{$tmp-spacing}": $tmp-spacing * $scale + $unit,
+      "-n#{$tmp-spacing}": -1 * $tmp-spacing * $scale + $unit
     )
   );
+  $tmp-spacing: $tmp-spacing + $spacing-step;
 }
 @if ($scale != 1) {
   $m-spacing: map-merge(
@@ -924,33 +931,35 @@ $m-font-family: (
 ) !default;
 // font-size
 $m-font-size: (
-  "": $font-size-benchmark * $scale + $unit,
+  "": $font-size-base * $scale + $unit,
   "-xs": (
-    $font-size-benchmark - 4
+    $font-size-base - 4
   ) * $scale + $unit,
   "-sm": (
-    $font-size-benchmark - 2
+    $font-size-base - 2
   ) * $scale + $unit,
-  "-md": $font-size-benchmark * $scale + $unit,
+  "-md": $font-size-base * $scale + $unit,
   "-lg": (
-    $font-size-benchmark + 2
+    $font-size-base + 2
   ) * $scale + $unit,
   "-xl": (
-    $font-size-benchmark + 4
+    $font-size-base + 4
   ) * $scale + $unit,
-  "-2xl": round(($font-size-benchmark + 4) * 1.33333333) * $scale + $unit,
-  "-3xl": round(($font-size-benchmark + 4) * 1.33333333 * 1.16666667) * $scale + $unit,
-  "-4xl": round(($font-size-benchmark + 4) * 1.33333333 * 1.16666667 * 1.14285714) * $scale + $unit,
-  "-5xl": round(($font-size-benchmark + 4) * 1.33333333 * 1.16666667 * 1.14285714 * 1.125) * $scale + $unit,
-  "-6xl": round(($font-size-benchmark + 4) * 1.33333333 * 1.16666667 * 1.14285714 * 1.125 * 1.11111111) * $scale + $unit
+  "-2xl": round(($font-size-base + 4) * 1.33333333) * $scale + $unit,
+  "-3xl": round(($font-size-base + 4) * 1.33333333 * 1.16666667) * $scale + $unit,
+  "-4xl": round(($font-size-base + 4) * 1.33333333 * 1.16666667 * 1.14285714) * $scale + $unit,
+  "-5xl": round(($font-size-base + 4) * 1.33333333 * 1.16666667 * 1.14285714 * 1.125) * $scale + $unit,
+  "-6xl": round(($font-size-base + 4) * 1.33333333 * 1.16666667 * 1.14285714 * 1.125 * 1.11111111) * $scale + $unit
 ) !default;
-@for $v from $font-size-min to $font-size-max {
+$tmp-font-size: $font-size-min;
+@while ($tmp-font-size <= $font-size-max) {
   $m-font-size: map-merge(
     $m-font-size,
     (
-      "-#{$v}": $v * $scale + $unit
+      "-#{$tmp-font-size}": $tmp-font-size * $scale + $unit
     )
   );
+  $tmp-font-size: $tmp-font-size + $font-size-step;
 }
 // font-weight
 $m-font-weight: (
@@ -974,21 +983,23 @@ $m-font-variant: (
 ) !default;
 // line-height
 $m-line-height: (
-  "": $line-height-benchmark,
-  "-normal": $line-height-benchmark,
+  "": $line-height-default,
+  "-normal": $line-height-default,
   "-none": 1.15,
   "-tight": 1.3,
   "-snug": 1.45,
   "-relaxed": 1.65,
   "-loose": 2
 ) !default;
-@for $v from $line-height-min to $line-height-max {
+$tmp-line-height: $line-height-min;
+@while ($tmp-line-height <= $line-height-max) {
   $m-line-height: map-merge(
     $m-line-height,
     (
-      "-#{$v}": $v * $scale + $unit
+      "-#{$tmp-line-height}": $tmp-line-height * $scale + $unit
     )
   );
+  $tmp-line-height: $tmp-line-height + $line-height-step;
 }
 // color
 $color-title: fade-out($black, .15) !default;
@@ -1043,13 +1054,15 @@ $m-border-color-reverse: (
 $m-border-width: (
   "": 1 * $scale + $unit
 ) !default;
-@for $v from $border-width-min to $border-width-max {
+$tmp-border-width: $border-width-min;
+@while ($tmp-border-width <= $border-width-max) {
   $m-border-width: map-merge(
     $m-border-width,
     (
-      "-#{$v}": $v * $scale + $unit
+      "-#{$tmp-border-width}": $tmp-border-width * $scale + $unit
     )
   );
+  $tmp-border-width: $tmp-border-width + $border-width-step;
 }
 @if ($scale != 1) {
   $m-border-width: map-merge(
@@ -1061,30 +1074,32 @@ $m-border-width: (
 }
 // border-radius
 $m-border-radius: (
-  "": $border-radius-benchmark * $scale + $unit,
+  "": $border-radius-base * $scale + $unit,
   "-xs": (
-    $border-radius-benchmark - 2
+    $border-radius-base - 2
   ) * $scale + $unit,
   "-sm": (
-    $border-radius-benchmark - 1
+    $border-radius-base - 1
   ) * $scale + $unit,
-  "-md": $border-radius-benchmark * $scale + $unit,
+  "-md": $border-radius-base * $scale + $unit,
   "-lg": (
-    $border-radius-benchmark + 2
+    $border-radius-base + 2
   ) * $scale + $unit,
   "-xl": (
-    $border-radius-benchmark + 4
+    $border-radius-base + 4
   ) * $scale + $unit,
   "-half": 50%,
   "-full": 100%
 ) !default;
-@for $v from $border-radius-min to $border-radius-max {
+$tmp-border-radius: $border-radius-min;
+@while ($tmp-border-radius <= $border-radius-max) {
   $m-border-radius: map-merge(
     $m-border-radius,
     (
-      "-#{$v}": $v * $scale + $unit
+      "-#{$tmp-border-radius}": $tmp-border-radius * $scale + $unit
     )
   );
+  $tmp-border-radius: $tmp-border-radius + $border-radius-step;
 }
 @if ($scale != 1) {
   $m-border-radius: map-merge(
