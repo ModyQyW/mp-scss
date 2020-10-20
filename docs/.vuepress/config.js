@@ -79,8 +79,44 @@ module.exports = {
         link: '/',
       },
       {
-        text: '准备',
-        link: '/preparation/',
+        text: '介绍',
+        link: '/introduction/',
+      },
+      {
+        text: '原则',
+        link: '/principle/',
+      },
+      {
+        text: '函数',
+        link: '/functions/',
+      },
+      {
+        text: '变量',
+        link: '/variables/',
+      },
+      {
+        text: '重置',
+        link: '/reset/',
+      },
+      {
+        text: '元素',
+        link: '/elements/',
+      },
+      {
+        text: '布局',
+        link: '/layout/',
+      },
+      {
+        text: '组件',
+        link: '/components/',
+      },
+      {
+        text: '通用类',
+        link: '/classes/',
+      },
+      {
+        text: 'FAQ',
+        link: '/faq/',
       },
     ],
     sidebar: 'auto',
