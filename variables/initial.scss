@@ -149,6 +149,7 @@ $order-min: -8 !default;
 $order-max: 8 !default;
 $order-step: 1 !default;
 // length
+$length-default: auto !default;
 $length-min: 0 !default;
 $length-max: 128 !default;
 $length-step: 1 !default;
@@ -281,6 +282,7 @@ $m-border-style: (
   "-none": none
 ) !default;
 // border-width
+$border-width-base: 1 !default;
 $border-width-min: 0 !default;
 $border-width-max: 4 !default;
 $border-width-step: 1 !default;
@@ -304,5 +306,5 @@ $m-opacity: (
   "-100": 1
 ) !default;
 // transition
-$transition-delay: .48s !default;
-$transition-timing-function: cubic-bezier(.25, .8, .5, 1) !default;
+$transition-delay-default: .48s !default;
+$transition-timing-function-default: cubic-bezier(.25, .8, .5, 1) !default;

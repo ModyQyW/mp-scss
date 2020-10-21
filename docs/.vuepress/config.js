@@ -87,8 +87,8 @@ module.exports = {
         link: '/principle/',
       },
       {
-        text: '函数',
-        link: '/functions/',
+        text: '工具',
+        link: '/utils/',
       },
       {
         text: '变量',

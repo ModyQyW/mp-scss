@@ -863,6 +863,7 @@ $tmp-order: $order-min;
 }
 // length
 $m-length: (
+  "": $length-default,
   "-auto": auto
 ) !default;
 $tmp-length: $length-min;
@@ -925,7 +926,7 @@ $tmp-spacing: $spacing-min;
 /* typography */
 // font-family
 $m-font-family: (
-  "-default": $font-family-default,
+  "": $font-family-default,
   "-sans": $font-family-sans,
   "-serif": $font-family-serif,
   "-mono": $font-family-mono
@@ -1037,7 +1038,7 @@ $m-border-color-reverse: (
 );
 // border-width
 $m-border-width: (
-  "": 1 * $scale + $unit
+  "": $border-width-base * $scale + $unit
 ) !default;
 $tmp-border-width: $border-width-min;
 @while ($tmp-border-width <= $border-width-max) {
@@ -1330,5 +1331,5 @@ $m-box-shadow-ambient: (
 /* misc */
 // transition
 $m-transition: (
-  "": $transition-delay $transition-timing-function
+  "": $transition-delay-default $transition-timing-function-default
 );

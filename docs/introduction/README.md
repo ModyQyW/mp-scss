@@ -19,7 +19,7 @@
 
 ## 技术栈
 
-- [scss](https://sass-lang.com/)
+- [scss](https://sass-lang.com/) - 你的项目也必须使用`scss`
   - [变量 variables](https://sass-lang.com/documentation/variables)
   - [字符串 strings](https://sass-lang.com/documentation/values/strings)
   - [映射 maps](https://sass-lang.com/documentation/values/maps)
@@ -29,14 +29,13 @@
 
 ## 功能
 
-- Ant Design 色板的`scss`实现，可以直接使用的颜色生成函数
-- 大量变量
-- 默认样式的重置
-- 原有元素的美化
-- 布局类
-- 24 格栅栏系统
-- 组件类
-- 通用类
-- 可定制
+- 工具，包含了 Ant Design 色板的实现函数
+- 变量：基本覆盖了常用属性的变量
+- 重置：用于重置小程序默认样式
+- 元素：美化原有元素，支持 button 和 input
+- 布局：包含页面布局类和 24 格栅栏系统
+- 组件：用于快速写出组件的类
+- 通用类：基本覆盖了常用属性的类
+- 可定制：大量可自定义的部分
 
-如果你对这个库感兴趣，你可以继续阅读[原则部分](../preparation/README.md)来了解这个库设计和实现时所遵循的原则，也可以直接开始阅读[变量部分](../variables/README.md)来了解怎么使用这个库。
+如果你对这个库感兴趣，你可以继续阅读[原则部分](../preparation/README.md)来了解这个库设计和实现时所遵循的原则，也可以直接开始阅读[工具部分](../utils/README.md)来一步步了解怎么使用这个库。等你已经了解了怎么使用这个库，你还可以把这个文档作为速查表，而无需翻阅源码。
