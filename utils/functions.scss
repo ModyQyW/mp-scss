@@ -1,6 +1,8 @@
 // REF
 // - https://github.com/ant-design/ant-design/blob/master/components/style/color/colorPalette.less
 // - https://zhuanlan.zhihu.com/p/32422584
+// - https://blog.csdn.net/sunshine_in_moon/article/details/45131285
+// - https://blog.csdn.net/idfaya/article/details/6770414
 
 @function f-hex-to-hsv($hex-color) {
   // convert
@@ -108,13 +110,13 @@
   @return if(round(($v - 15% * $diff) * 100) / 100 < 0%, 0%, round(($v - 15% * $diff) * 100) / 100);
 }
 
-@function f-get-color($hex-color, $idx) {
-  @if ($idx == 6) {
+@function f-get-color($hex-color, $index: 6) {
+  @if ($index == 6) {
     @return $hex-color;
   }
-  $is-lighter: $idx <= 6;
+  $is-lighter: $index <= 6;
   $hsv-color: f-hex-to-hsv($hex-color); // deg, %, %
-  $diff: if($is-lighter, 5 + 1 - $idx, $idx - 5 - 1);
+  $diff: if($is-lighter, 6 - $index, $index - 6);
   $h: nth($hsv-color, 1); // deg
   $s: nth($hsv-color, 2); // %
   $v: nth($hsv-color, 3); // %

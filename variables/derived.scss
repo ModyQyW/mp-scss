@@ -800,32 +800,11 @@ $m-ratio: (
     );
   }
 }
-// length
-$m-length: (
-  "-auto": auto
-) !default;
-$tmp-length: $length-min;
-@while ($tmp-length <= $length-max) {
-  $m-length: map-merge(
-    $m-length,
-    (
-      "-#{$tmp-length}": $tmp-length * $scale + $unit
-    )
-  );
-  $tmp-length: $tmp-length + $length-step;
-}
-@if ($scale != 1) {
-  $m-length: map-merge(
-    $m-length,
-    (
-      "-1-real": 1 + $unit
-    )
-  );
-}
 
 /* positioning */
 // z-index
 $m-z-index: (
+  "": $z-index-default,
   "-auto": auto
 ) !default;
 $tmp-z-index: $z-index-min;
@@ -881,6 +860,28 @@ $tmp-order: $order-min;
     )
   );
   $tmp-order: $tmp-order + $order-step;
+}
+// length
+$m-length: (
+  "-auto": auto
+) !default;
+$tmp-length: $length-min;
+@while ($tmp-length <= $length-max) {
+  $m-length: map-merge(
+    $m-length,
+    (
+      "-#{$tmp-length}": $tmp-length * $scale + $unit
+    )
+  );
+  $tmp-length: $tmp-length + $length-step;
+}
+@if ($scale != 1) {
+  $m-length: map-merge(
+    $m-length,
+    (
+      "-1-real": 1 + $unit
+    )
+  );
 }
 // spacing
 $m-spacing: (
