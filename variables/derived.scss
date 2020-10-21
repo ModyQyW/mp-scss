@@ -1,6 +1,6 @@
 /* global variables that reference other variables or are computed */
 
-// global preset
+/* preset */
 $page-background-color: $gray-1 !default;
 $page-background-color-reverse: $gray-13 !default;
 $body-background-color: $page-background-color !default;
@@ -8,7 +8,7 @@ $body-background-color: $page-background-color-reverse !default;
 $container-background-color: $gray-1 !default;
 $container-background-color-reverse: $gray-12 !default;
 
-/* common */
+/* common colors */
 // dust red
 $red-1: f-get-color($red, 1); // #fff1f0
 $red-2: f-get-color($red, 2); // #ffccc7
@@ -274,7 +274,7 @@ $magenta-8-reverse: mix($magenta-4, $container-background-color-reverse, 95%); /
 $magenta-9-reverse: mix($magenta-3, $container-background-color-reverse, 97%); // #f8a8cc
 $magenta-10-reverse: mix($magenta-2, $container-background-color-reverse, 98%); // #fad2e3
 // primary color
-$primary: $blue-6 !default;
+$primary: $blue !default;
 $primary-1: f-get-color($primary, 1);
 $primary-2: f-get-color($primary, 2);
 $primary-3: f-get-color($primary, 3);
@@ -297,7 +297,7 @@ $primary-8-reverse: mix($primary, $container-background-color-reverse, 95%);
 $primary-9-reverse: mix($primary, $container-background-color-reverse, 97%);
 $primary-10-reverse: mix($primary, $container-background-color-reverse, 98%);
 // success color
-$success: $green-6 !default;
+$success: $green !default;
 $success-1: f-get-color($success, 1);
 $success-2: f-get-color($success, 2);
 $success-3: f-get-color($success, 3);
@@ -320,7 +320,7 @@ $success-8-reverse: mix($success, $container-background-color-reverse, 95%);
 $success-9-reverse: mix($success, $container-background-color-reverse, 97%);
 $success-10-reverse: mix($success, $container-background-color-reverse, 98%);
 // warning color
-$warning: $gold-6 !default;
+$warning: $gold !default;
 $warning-1: f-get-color($warning, 1);
 $warning-2: f-get-color($warning, 2);
 $warning-3: f-get-color($warning, 3);
@@ -343,7 +343,7 @@ $warning-8-reverse: mix($warning, $container-background-color-reverse, 95%);
 $warning-9-reverse: mix($warning, $container-background-color-reverse, 97%);
 $warning-10-reverse: mix($warning, $container-background-color-reverse, 98%);
 // error color
-$error: $red-6 !default;
+$error: $red !default;
 $error-1: f-get-color($error, 1);
 $error-2: f-get-color($error, 2);
 $error-3: f-get-color($error, 3);
@@ -366,7 +366,7 @@ $error-8-reverse: mix($error, $container-background-color-reverse, 95%);
 $error-9-reverse: mix($error, $container-background-color-reverse, 97%);
 $error-10-reverse: mix($error, $container-background-color-reverse, 98%);
 // info color
-$info: $blue-6 !default;
+$info: $blue !default;
 $info-1: f-get-color($info, 1);
 $info-2: f-get-color($info, 2);
 $info-3: f-get-color($info, 3);
@@ -784,22 +784,6 @@ $m-colors-reverse: (
   "-info-9": $info-9-reverse,
   "-info-10": $info-10-reverse
 );
-// ratio
-$m-ratio: (
-  "-full": 100%,
-  "-half": 50%,
-  "-none": none
-) !default;
-@each $denominator in $l-denominator {
-  @for $molecule from 1 to $denominator {
-    $m-ratio: map-merge(
-      $m-ratio,
-      (
-        "-#{$molecule}-#{$denominator}": $molecule / $denominator * 100%
-      )
-    );
-  }
-}
 
 /* positioning */
 // z-index
@@ -922,6 +906,22 @@ $tmp-spacing: $spacing-min;
     )
   );
 }
+// ratio
+$m-ratio: (
+  "-full": 100%,
+  "-half": 50%,
+  "-0": 0
+) !default;
+@each $denominator in $l-denominator {
+  @for $molecule from 1 to $denominator {
+    $m-ratio: map-merge(
+      $m-ratio,
+      (
+        "-#{$molecule}-#{$denominator}": $molecule / $denominator * 100%
+      )
+    );
+  }
+}
 
 /* typography */
 // font-family
@@ -971,11 +971,11 @@ $m-font-variant: (
 $m-line-height: (
   "": $line-height-default,
   "-normal": $line-height-default,
-  "-none": 1.15,
-  "-tight": 1.3,
-  "-snug": 1.45,
-  "-relaxed": 1.65,
-  "-loose": 2
+  "-none": $line-height-none,
+  "-tight": $line-height-tight,
+  "-snug": $line-height-snug,
+  "-relaxed": $line-height-relaxed,
+  "-loose": $line-height-loose
 ) !default;
 $tmp-line-height: $line-height-min;
 @while ($tmp-line-height <= $line-height-max) {
@@ -1023,19 +1023,19 @@ $background-color: fade-out($black, .96) !default;
 $background-color-reverse: fade-out($white, .92) !default;
 $m-background-color: (
   "": $background-color
-);
+) !default;
 $m-background-color-reverse: (
   "": $background-color-reverse
-);
+) !default;
 // border-color
 $border-color: fade-out($black, .85) !default;
 $border-color-reverse: fade-out($white, .8) !default;
 $m-border-color: (
   "": $border-color
-);
+) !default;
 $m-border-color-reverse: (
   "": $border-color-reverse
-);
+) !default;
 // border-width
 $m-border-width: (
   "": $border-width-base * $scale + $unit

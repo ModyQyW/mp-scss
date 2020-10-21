@@ -48,8 +48,6 @@ $geek-blue: #2f54eb !default;
 $purple: #722ed1 !default;
 // magenta
 $magenta: #eb2f96 !default;
-// ratio
-$l-denominator: 3, 4, 5, 6, 8, 10, 12, 16, 24, 100 !default;
 
 /* positioning */
 // position
@@ -87,7 +85,7 @@ $m-display: (
 ) !default;
 // flex
 $m-flex: (
-  "-init": 0 1 auto,
+  "": 0 1 auto,
   "-auto": 1 1 auto,
   "-none": 0 0 auto
 ) !default;
@@ -158,6 +156,8 @@ $spacing-base: 12 !default;
 $spacing-min: 0 !default;
 $spacing-max: 64 !default;
 $spacing-step: 1 !default;
+// ratio
+$l-denominator: 3, 4, 5, 6, 8, 10, 12, 16, 24, 100 !default;
 // overflow
 $m-overflow: (
   "-auto": auto,
@@ -207,6 +207,11 @@ $m-font-weight: (
 $font-variant-tabular-nums: tabular-nums !default;
 // line-height
 $line-height-default: 1.5715 !default;
+$line-height-none: 1.15 !default;
+$line-height-tight: 1.3 !default;
+$line-height-snug: 1.45 !default;
+$line-height-relaxed: 1.65 !default;
+$line-height-loose: 2 !default;
 $line-height-min: 18 !default;
 $line-height-max: 72 !default;
 $line-height-step: 1 !default;
