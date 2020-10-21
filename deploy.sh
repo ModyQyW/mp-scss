@@ -4,7 +4,7 @@
 set -e
 
 # 生成静态文件
-npm run build:docs
+yarn docs:build
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
@@ -18,6 +18,6 @@ git push -f git@github.com:MillCloud/mp-scss.git main:gh-pages
 
 cd -
 
-git add -A
-git commit -a -m 'docs: update'
-git push
+# git add -A
+# git commit -a -m 'docs: update'
+# git push
