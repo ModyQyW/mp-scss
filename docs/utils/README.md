@@ -12,7 +12,7 @@
 
 [源码（含参考链接）](https://github.com/MillCloud/mp-scss/blob/main/src/utils/functions.scss)
 
-### 单独使用函数
+### 使用函数
 
 引入`utils/function`后即可使用内置函数。
 
