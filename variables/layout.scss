@@ -25,21 +25,25 @@ $col-background-color: transparent !default;
 $col-background-color-reverse: transparent !default;
 
 $grid-max: 24 !default;
+$gutter-base: 12 !default;
 $m-gutter: (
-  "": 12 / 2 * $scale + $unit,
-  "-xs": 4 / 2 * $scale + $unit,
-  "-sm": 8 / 2 * $scale + $unit,
-  "-md": 12 / 2 * $scale + $unit,
-  "-lg": 16 / 2 * $scale + $unit,
-  "-xl": 20 / 2 * $scale + $unit
+  "": $gutter-base / 2 * $scale + $unit,
+  "-xs": ($gutter-base - 8) / 2 * $scale + $unit,
+  "-sm": ($gutter-base - 4) / 2 * $scale + $unit,
+  "-md": $gutter-base / 2 * $scale + $unit,
+  "-lg": ($gutter-base + 4) / 2 * $scale + $unit,
+  "-xl": ($gutter-base + 8) / 2 * $scale + $unit
 ) !default;
 $gutter-min: 4 !default;
 $gutter-max: 20 !default;
-@for $v from $gutter-min to $gutter-max {
+$gutter-step: 2 !default;
+$tmp-gutter: $gutter-min;
+@while ($tmp-gutter <= $gutter-max) {
   $m-gutter: map-merge(
     $m-gutter,
     (
-      "-#{$v}": $v / 2 * $scale + $unit
+      "-#{$tmp-gutter}": $tmp-gutter / 2 * $scale + $unit
     )
   );
+  $tmp-gutter: $tmp-gutter + $gutter-step;
 }
