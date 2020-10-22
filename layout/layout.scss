@@ -15,6 +15,10 @@
   flex: auto;
   flex-direction: column;
   min-height: 0;
+  font-family: $container-font-family;
+  font-size: $container-font-size;
+  font-weight: $container-font-weight;
+  line-height: $container-line-height;
   background-color: $container-background-color;
 
   &.is-light {
