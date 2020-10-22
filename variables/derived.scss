@@ -965,6 +965,7 @@ $tmp-font-size: $font-size-min;
 }
 // font-variant
 $m-font-variant: (
+  "": $font-variant-default,
   "tabular-nums": $font-variant-tabular-nums
 ) !default;
 // line-height
@@ -1007,7 +1008,7 @@ $m-color: (
   "-main-small": $color-main-small,
   "-secondary": $color-secondary,
   "-disabled": $color-disabled
-);
+) !default;
 $m-color-reverse: (
   "-title": $color-title-reverse,
   "-title-small": $color-title-small-reverse,
@@ -1015,7 +1016,7 @@ $m-color-reverse: (
   "-main-small": $color-main-small-reverse,
   "-secondary": $color-secondary-reverse,
   "-disabled": $color-disabled-reverse
-);
+) !default;
 
 /* visual */
 // background-color
@@ -1086,14 +1087,6 @@ $tmp-border-radius: $border-radius-min;
     )
   );
   $tmp-border-radius: $tmp-border-radius + $border-radius-step;
-}
-@if ($scale != 1) {
-  $m-border-radius: map-merge(
-    $m-border-radius,
-    (
-      "-1-real": 1 + $unit
-    )
-  );
 }
 // box-shadow
 $m-box-shadow-umbra: (
@@ -1332,4 +1325,4 @@ $m-box-shadow-ambient: (
 // transition
 $m-transition: (
   "": $transition-delay-default $transition-timing-function-default
-);
+) !default;

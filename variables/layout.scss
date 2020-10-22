@@ -26,6 +26,9 @@ $col-background-color-reverse: transparent !default;
 
 $grid-max: 24 !default;
 $gutter-base: 12 !default;
+$gutter-min: 4 !default;
+$gutter-max: 24 !default;
+$gutter-step: 2 !default;
 $m-gutter: (
   "": $gutter-base / 2 * $scale + $unit,
   "-xs": ($gutter-base - 8) / 2 * $scale + $unit,
@@ -34,9 +37,6 @@ $m-gutter: (
   "-lg": ($gutter-base + 4) / 2 * $scale + $unit,
   "-xl": ($gutter-base + 8) / 2 * $scale + $unit
 ) !default;
-$gutter-min: 4 !default;
-$gutter-max: 20 !default;
-$gutter-step: 2 !default;
 $tmp-gutter: $gutter-min;
 @while ($tmp-gutter <= $gutter-max) {
   $m-gutter: map-merge(
