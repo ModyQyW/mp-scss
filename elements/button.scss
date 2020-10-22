@@ -1,6 +1,5 @@
 @import "../variables/index";
 
-button,
 .btn {
   position: relative;
   box-sizing: border-box;
@@ -24,12 +23,14 @@ button,
   border-radius: $button-border-radius;
   outline: none;
   transition: $button-transition;
+  -webkit-tap-highlight-color: transparent;
 
   &::after {
     display: none;
   }
 
-  &[disabled] {
+  &[disabled],
+  &.is-disabled {
     cursor: not-allowed;
   }
 
@@ -37,23 +38,28 @@ button,
     position: absolute;
     top: 0;
     left: 0;
+    box-sizing: border-box;
     display: block;
     width: 100%;
     height: 100%;
     pointer-events: none;
     content: "";
+    background-color: unset;
     background-image: radial-gradient(circle, $button-ripply-background-color 10%, transparent 10.0001%);
     background-repeat: no-repeat;
     background-position: 50%;
+    border: none;
     border-radius: inherit;
     opacity: 0;
     transition: $button-ripply-transition;
     transform: scale($button-ripply-transform-scale, $button-ripply-transform-scale);
+    transform-origin: unset;
   }
 
   &.is-ripply:active::after,
   &.is-ripply.button-hover::after {
     display: block;
+    background-color: unset;
     opacity: $button-ripply-active-opacity;
     transition: 0s;
     transform: scale(0, 0);
@@ -84,9 +90,11 @@ button,
       color: $button-active-color;
       background-color: $button-active-background-color;
       border-color: $button-active-border-color;
+      opacity: unset;
     }
 
-    &[disabled] {
+    &[disabled],
+    &.is-disabled {
       color: $button-disabled-color;
       background-color: $button-disabled-background-color;
       border-color: $button-disabled-border-color;
@@ -117,9 +125,11 @@ button,
       color: $button-active-color-reverse;
       background-color: $button-active-background-color-reverse;
       border-color: $button-active-border-color-reverse;
+      opacity: unset;
     }
 
-    &[disabled] {
+    &[disabled],
+    &.is-disabled {
       color: $button-disabled-color;
       background-color: $button-disabled-background-color;
       border-color: $button-disabled-border-color;
@@ -210,7 +220,8 @@ button,
       border-color: $button-primary-link-active-border-color;
     }
 
-    &[disabled] {
+    &[disabled],
+    &.is-disabled {
       color: $button-primary-link-disabled-color;
       background-color: $button-primary-link-disabled-background-color;
       border-color: $button-primary-link-disabled-border-color;
@@ -297,7 +308,8 @@ button,
       border-color: $button-primary-link-active-border-color-reverse;
     }
 
-    &[disabled] {
+    &[disabled],
+    &.is-disabled {
       color: $button-primary-link-disabled-color-reverse;
       background-color: $button-primary-link-disabled-background-color-reverse;
       border-color: $button-primary-link-disabled-border-color-reverse;
@@ -388,7 +400,8 @@ button,
       border-color: $button-success-link-active-border-color;
     }
 
-    &[disabled] {
+    &[disabled],
+    &.is-disabled {
       color: $button-success-link-disabled-color;
       background-color: $button-success-link-disabled-background-color;
       border-color: $button-success-link-disabled-border-color;
@@ -475,7 +488,8 @@ button,
       border-color: $button-success-link-active-border-color-reverse;
     }
 
-    &[disabled] {
+    &[disabled],
+    &.is-disabled {
       color: $button-success-link-disabled-color-reverse;
       background-color: $button-success-link-disabled-background-color-reverse;
       border-color: $button-success-link-disabled-border-color-reverse;
@@ -566,7 +580,8 @@ button,
       border-color: $button-warning-link-active-border-color;
     }
 
-    &[disabled] {
+    &[disabled],
+    &.is-disabled {
       color: $button-warning-link-disabled-color;
       background-color: $button-warning-link-disabled-background-color;
       border-color: $button-warning-link-disabled-border-color;
@@ -653,7 +668,8 @@ button,
       border-color: $button-warning-link-active-border-color-reverse;
     }
 
-    &[disabled] {
+    &[disabled],
+    &.is-disabled {
       color: $button-warning-link-disabled-color-reverse;
       background-color: $button-warning-link-disabled-background-color-reverse;
       border-color: $button-warning-link-disabled-border-color-reverse;
@@ -744,7 +760,8 @@ button,
       border-color: $button-error-link-active-border-color;
     }
 
-    &[disabled] {
+    &[disabled],
+    &.is-disabled {
       color: $button-error-link-disabled-color;
       background-color: $button-error-link-disabled-background-color;
       border-color: $button-error-link-disabled-border-color;
@@ -831,7 +848,8 @@ button,
       border-color: $button-error-link-active-border-color-reverse;
     }
 
-    &[disabled] {
+    &[disabled],
+    &.is-disabled {
       color: $button-error-link-disabled-color-reverse;
       background-color: $button-error-link-disabled-background-color-reverse;
       border-color: $button-error-link-disabled-border-color-reverse;
@@ -922,7 +940,8 @@ button,
       border-color: $button-info-link-active-border-color;
     }
 
-    &[disabled] {
+    &[disabled],
+    &.is-disabled {
       color: $button-info-link-disabled-color;
       background-color: $button-info-link-disabled-background-color;
       border-color: $button-info-link-disabled-border-color;
@@ -1009,7 +1028,8 @@ button,
       border-color: $button-info-link-active-border-color-reverse;
     }
 
-    &[disabled] {
+    &[disabled],
+    &.is-disabled {
       color: $button-info-link-disabled-color-reverse;
       background-color: $button-info-link-disabled-background-color-reverse;
       border-color: $button-info-link-disabled-border-color-reverse;
@@ -1026,7 +1046,7 @@ button,
     font-size: $button-lg-font-size;
   }
 
-  &.is-loading:not([disabled]) {
+  &.is-loading:not([disabled]):not([class~="is-disabled"]) {
     pointer-events: none;
     cursor: default;
   }
