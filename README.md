@@ -2,11 +2,9 @@
 
 A scss lib for miniprogram. Since miniprogram is used almost only in China, Chinese docs are provided.
 
-一个面向小程序的 css 库。
+一个面向小程序的样式库。
 
-使用 scss 开发，提供函数 functions，变量 variables，重置 reset，组件 components 和类 classes。
-
-目标是：在只有原型图或者原型图都没有的情况下，用这个库可以快速做出适配多端小程序而且浏览正常的页面。
+详细文档见 [https://millcloud.github.io/mp-scss/](https://millcloud.github.io/mp-scss/)。
 
 ## 贡献
 
@@ -30,11 +28,11 @@ Copyright (c) 2019-present MillCloud
 
 ## 致谢
 
+- [Tailwindcss](https://tailwindcss.com/)
 - [Ant Design](https://ant.design/)
 - [Material Design](https://material.io/)
-- [bootstrap](https://github.com/twbs/stylelint-config-twbs-bootstrap)
-- [tailwindcss](https://tailwindcss.com/)
-- [bulma](https://bulma.io/)
-- [vuetify](https://vuetifyjs.com/)
+- [Bootstrap](https://github.com/twbs/stylelint-config-twbs-bootstrap)
+- [Bulma](https://bulma.io/)
+- [Vuetify](https://vuetifyjs.com/)
 - [normalize.css](https://github.com/necolas/normalize.css#readme)
 - [ress.css](https://ress-css.surge.sh/)
