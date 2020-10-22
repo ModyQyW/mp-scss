@@ -6,25 +6,17 @@
 // DO NOT USE V2 STYLE for wechat miniprogram
 /* stylelint-disable property-no-vendor-prefix, declaration-no-important */
 
-@import "../variables/index";
-
 page {
   width: 100%;
-  padding: 0;
-  margin: 0;
   overflow-x: hidden;
-  font-family: $font-family-default;
-  font-size: $font-size-base * $scale + $unit;
-  font-weight: 400;
-  line-height: $line-height-default;
-  color: $color-main;
   word-break: normal;
+  tab-size: 4;
   cursor: default;
   user-select: none;
-  background: initial;
-  text-size-adjust: none;
+  -webkit-text-size-adjust: 100%;
 }
 
+page,
 cover-image,
 cover-view,
 match-media,
