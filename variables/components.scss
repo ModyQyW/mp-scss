@@ -20,7 +20,7 @@ $badge-border-style: solid !default;
 $badge-border-width: 1 * $scale + $unit !default;
 $badge-border-radius-base: $badge-sizing-base / 2 !default;
 $badge-border-radius: $badge-border-radius-base * $scale + $unit !default;
-$badge-transition: $transition-delay $transition-timing-function !default;
+$badge-transition: $transition-delay-default $transition-timing-function-default !default;
 $badge-transform: translate(50%, -50%) !default;
 $badge-transform-origin: 100% 0 !default;
 // default
@@ -154,7 +154,7 @@ $divider-border-top-width-base: 1 !default;
 $divider-border-top-width: $divider-border-top-width-base * $scale + $unit !default;
 $divider-border-top-color: $border-color !default;
 $divider-border-top-color-reverse: $border-color-reverse !default;
-$divider-transition: $transition-delay $transition-timing-function !default;
+$divider-transition: $transition-delay-default $transition-timing-function-default !default;
 $divider-vertical-display: inline-block !default;
 $divider-vertical-width: auto !default;
 $divider-vertical-height: 100% !default;

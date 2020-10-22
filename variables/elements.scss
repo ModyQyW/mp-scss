@@ -16,10 +16,10 @@ $button-border-style: solid !default;
 $button-border-width: 1 * $scale + $unit !default;
 $button-border-radius-base: $border-radius-base !default;
 $button-border-radius: $button-border-radius-base * $scale + $unit !default;
-$button-transition: $transition-delay $transition-timing-function !default;
+$button-transition: $transition-delay-default $transition-timing-function-default !default;
 // ripply
 $button-ripply-background-color: $gray-10 !default;
-$button-ripply-transition: $transition-delay !default;
+$button-ripply-transition: $transition-delay-default !default;
 $button-ripply-transform-scale: 10 !default;
 $button-ripply-active-opacity: .24 !default;
 // default
@@ -481,7 +481,7 @@ $input-border-style: solid !default;
 $input-border-width: 1 * $scale + $unit !default;
 $input-border-radius-base: $border-radius-base !default;
 $input-border-radius: $input-border-radius-base * $scale + $unit !default;
-$input-transition: $transition-delay $transition-timing-function !default;
+$input-transition: $transition-delay-default $transition-timing-function-default !default;
 // default
 $input-color: $color-main !default;
 $input-background-color: $container-background-color !default;
@@ -497,7 +497,7 @@ $input-active-background-color: $container-background-color !default;
 $input-active-border-color: $primary-6 !default;
 $input-color-reverse: $color-main-reverse !default;
 $input-background-color-reverse: $container-background-color-reverse !default;
-$input-border-color-reverse: $border-color !default;
+$input-border-color-reverse: $border-color-reverse !default;
 $input-hover-color-reverse: $color-main-reverse !default;
 $input-hover-background-color-reverse: $container-background-color-reverse !default;
 $input-hover-border-color-reverse: $primary-6-reverse !default;

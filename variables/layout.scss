@@ -1,4 +1,10 @@
 // variables that used by layout
+$container-font-family: $font-family-default !default;
+$container-font-size-base: $font-size-base !default;
+$container-font-size: $container-font-size-base * $scale + $unit !default;
+$container-font-weight: 400 !default;
+$container-line-height: $line-height-default !default;
+
 $header-background-color: transparent !default;
 $header-background-color-reverse: transparent !default;
 
@@ -31,11 +37,19 @@ $gutter-max: 24 !default;
 $gutter-step: 2 !default;
 $m-gutter: (
   "": $gutter-base / 2 * $scale + $unit,
-  "-xs": ($gutter-base - 8) / 2 * $scale + $unit,
-  "-sm": ($gutter-base - 4) / 2 * $scale + $unit,
+  "-xs": (
+    $gutter-base - 8
+  ) / 2 * $scale + $unit,
+  "-sm": (
+    $gutter-base - 4
+  ) / 2 * $scale + $unit,
   "-md": $gutter-base / 2 * $scale + $unit,
-  "-lg": ($gutter-base + 4) / 2 * $scale + $unit,
-  "-xl": ($gutter-base + 8) / 2 * $scale + $unit
+  "-lg": (
+    $gutter-base + 4
+  ) / 2 * $scale + $unit,
+  "-xl": (
+    $gutter-base + 8
+  ) / 2 * $scale + $unit
 ) !default;
 $tmp-gutter: $gutter-min;
 @while ($tmp-gutter <= $gutter-max) {
