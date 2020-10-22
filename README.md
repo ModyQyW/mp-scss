@@ -34,5 +34,4 @@ Copyright (c) 2019-present MillCloud
 - [Bootstrap](https://github.com/twbs/stylelint-config-twbs-bootstrap)
 - [Bulma](https://bulma.io/)
 - [Vuetify](https://vuetifyjs.com/)
-- [normalize.css](https://github.com/necolas/normalize.css#readme)
 - [ress.css](https://ress-css.surge.sh/)
