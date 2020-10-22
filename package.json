@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/MillCloud/mp-scss/issues"
   },
-  "main": "./src/index.scss",
+  "main": "./index.scss",
   "license": "MIT",
   "author": {
     "name": "ModyQyW",
