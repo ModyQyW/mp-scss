@@ -69,7 +69,7 @@ module.exports = {
   ],
   locales: {
     '/': {
-      lang: 'zh-CN',
+      lang: 'zh-Hans',
     },
   },
   themeConfig: {
@@ -92,34 +92,142 @@ module.exports = {
       },
       {
         text: '变量',
-        link: '/variables/',
+        items: [
+          {
+            text: '总览',
+            link: '/variables/index',
+          },
+          {
+            text: '初始 initial',
+            link: '/variables/initial',
+          },
+          {
+            text: '衍生 derived',
+            link: '/variables/derived',
+          },
+          {
+            text: '元素 elements',
+            link: '/variables/elements',
+          },
+          {
+            text: '布局 layout',
+            link: '/variables/layout',
+          },
+          {
+            text: '组件 components',
+            link: '/variables/components',
+          },
+        ],
       },
       {
         text: '重置',
         link: '/reset/',
       },
       {
+        text: '通用',
+        items: [
+          {
+            text: '总览',
+            link: '/classes/index',
+          },
+          {
+            text: '定位 positioning',
+            link: '/classes/positioning',
+          },
+          {
+            text: '盒模型 box-model',
+            link: '/classes/box-model',
+          },
+          {
+            text: '排版 typography',
+            link: '/classes/typography',
+          },
+          {
+            text: '视觉 visual',
+            link: '/classes/visual',
+          },
+          {
+            text: '杂项 misc',
+            link: '/classes/misc',
+          },
+        ],
+      },
+      {
         text: '元素',
-        link: '/elements/',
+        items: [
+          {
+            text: '总览',
+            link: '/elements/index',
+          },
+          {
+            text: '按钮 button',
+            link: '/elements/button',
+          },
+          {
+            text: '输入框 input',
+            link: '/elements/input',
+          },
+        ],
       },
       {
         text: '布局',
-        link: '/layout/',
+        items: [
+          {
+            text: '总览',
+            link: '/layout/index',
+          },
+          {
+            text: '页面 page',
+            link: '/layout/page',
+          },
+          {
+            text: '栅格 grid',
+            link: '/layout/grid',
+          },
+        ],
       },
       {
         text: '组件',
-        link: '/components/',
+        items: [
+          {
+            text: '总览',
+            link: '/components/index',
+          },
+          {
+            text: '徽标 badge',
+            link: '/components/badge',
+          },
+          {
+            text: '卡片 card',
+            link: '/components/card',
+          },
+          {
+            text: '分割线 divider',
+            link: '/components/divider',
+          },
+          {
+            text: '图标 icon',
+            link: '/components/icon',
+          },
+          {
+            text: '遮罩 overlay',
+            link: '/components/overlay',
+          },
+        ],
       },
       {
-        text: '通用类',
-        link: '/classes/',
-      },
-      {
-        text: 'FAQ',
-        link: '/faq/',
+        text: '最佳实践',
+        link: '/best-practices/',
       },
     ],
-    sidebar: 'auto',
+    sidebar: {
+      '/variables/': ['', 'initial', 'derived', 'elements', 'layout', 'components'],
+      '/elements/': ['', 'button', 'input'],
+      '/classes/': ['', 'positioning', 'box-model', 'typography', 'visual', 'misc'],
+      '/layout/': ['', 'page', 'grid'],
+      '/components/': ['', 'badge', 'card', 'divider', 'icon', 'overlay'],
+      '/': 'auto',
+    },
     sidebarDepth: 4,
     lastUpdated: 'Last Updated',
     repo: 'MillCloud/mp-scss',

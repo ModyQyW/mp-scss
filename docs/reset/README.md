@@ -1,1 +1,19 @@
 # 重置
+
+[源码](https://github.com/MillCloud/mp-scss/blob/main/reset/index.scss)
+
+## 使用
+
+引入`reset`后即可重置小程序的默认样式。`reset`可以单独使用。
+
+```scss
+@import "~@modyqyw/mp-scss/reset";
+```
+
+`reset`参考了`ress.css`，匹配了小程序元素。
+
+## 注意
+
+如果你使用了微信小程序[新版组件样式](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#style)，将会导致重置和其它部分样式无效。
+
+为了确保样式库起作用，请关闭微信小程序新版组件样式。
