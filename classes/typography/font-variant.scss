@@ -1,7 +1,3 @@
-@import "../../variables/index";
-
-@each $k, $v in $m-font-variant {
-  .#{$k} {
-    font-variant: $v;
-  }
+.tabular-nums {
+  font-variant: tabular-nums;
 }
