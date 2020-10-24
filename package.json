@@ -52,23 +52,19 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "dependencies": {
-    "sass": "^1.27.0",
-    "sass-loader": "^10.0.3"
-  },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
-    "@modyqyw/eslint-config": "^1.8.8",
-    "@modyqyw/prettier-config": "^1.1.4",
-    "@modyqyw/stylelint-config": "^1.0.0",
+    "@modyqyw/eslint-config": "^1.9.1",
+    "@modyqyw/prettier-config": "^1.1.7",
+    "@modyqyw/stylelint-config": "^1.0.3",
     "@vuepress/plugin-active-header-links": "^1.7.1",
     "@vuepress/plugin-back-to-top": "^1.7.1",
     "@vuepress/plugin-blog": "^1.9.2",
     "@vuepress/plugin-medium-zoom": "^1.7.1",
     "@vuepress/plugin-nprogress": "^1.7.1",
     "@vuepress/plugin-pwa": "^1.7.1",
-    "commitizen": "^4.2.1",
+    "commitizen": "^4.2.2",
     "copyfiles": "^2.4.0",
     "cssnano": "^4.1.10",
     "eslint": "^7.11.0",
@@ -81,15 +77,13 @@
     "prettier": "^2.1.2",
     "renamer": "^2.0.1",
     "rimraf": "^3.0.2",
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.4",
     "stylelint": "^13.7.2",
     "vuepress": "^1.7.1",
     "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-plugin-helper-live2d": "^1.0.2",
     "vuepress-plugin-sitemap": "^2.3.1"
-  },
-  "peerDependencies": {
-    "sass": "~1.27.0",
-    "sass-loader": "~10.0.3"
   },
   "publishConfig": {
     "access": "public"
