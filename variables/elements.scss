@@ -475,7 +475,7 @@ $input-margin-x: 0 !default;
 $input-font-size-base: $font-size-base !default;
 $input-font-size: $input-font-size-base * $scale + $unit !default;
 $input-font-weight: 400 !default;
-$input-font-variant: $font-variant-tabular-nums !default;
+$input-font-variant: tabular-nums !default;
 $input-line-height: $line-height-default !default;
 $input-border-style: solid !default;
 $input-border-width: 1 * $scale + $unit !default;

@@ -153,6 +153,7 @@ $length-max: 128 !default;
 $length-step: 1 !default;
 // spacing
 $spacing-base: 12 !default;
+$spacing-diff: 4 !default;
 $spacing-min: 0 !default;
 $spacing-max: 64 !default;
 $spacing-step: 1 !default;
@@ -179,6 +180,7 @@ $font-family-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", mo
 /* stylelint-enable */
 // font-size
 $font-size-base: 14 !default;
+$font-size-diff: 2 !default;
 $font-size-min: 10 !default;
 $font-size-max: 64 !default;
 $font-size-step: 1 !default;
@@ -203,9 +205,6 @@ $m-font-weight: (
   "-ultra-bold": 800,
   "-heavy": 900
 ) !default;
-// font-variant
-$font-variant-default: normal !default;
-$font-variant-tabular-nums: tabular-nums !default;
 // line-height
 $line-height-default: 1.5715 !default;
 $line-height-none: 1.15 !default;
@@ -294,6 +293,7 @@ $border-width-max: 4 !default;
 $border-width-step: 1 !default;
 // border-radius
 $border-radius-base: 2 !default;
+$border-radius-diff: 1 !default;
 $border-radius-min: 0 !default;
 $border-radius-max: 8 !default;
 $border-radius-step: 1 !default;

@@ -873,17 +873,17 @@ $m-spacing: (
   "-auto": auto,
   "": $spacing-base * $scale + $unit,
   "-xs": (
-    $spacing-base - 8
+    $spacing-base - $spacing-diff * 2
   ) * $scale + $unit,
   "-sm": (
-    $spacing-base - 4
+    $spacing-base - $spacing-diff
   ) * $scale + $unit,
   "-md": $spacing-base * $scale + $unit,
   "-lg": (
-    $spacing-base + 4
+    $spacing-base + $spacing-diff
   ) * $scale + $unit,
   "-xl": (
-    $spacing-base + 8
+    $spacing-base + $spacing-diff * 2
   ) * $scale + $unit
 ) !default;
 $tmp-spacing: $spacing-min;
@@ -935,23 +935,18 @@ $m-font-family: (
 $m-font-size: (
   "": $font-size-base * $scale + $unit,
   "-xs": (
-    $font-size-base - 4
+    $font-size-base - $font-size-diff * 2
   ) * $scale + $unit,
   "-sm": (
-    $font-size-base - 2
+    $font-size-base - $font-size-diff
   ) * $scale + $unit,
   "-md": $font-size-base * $scale + $unit,
   "-lg": (
-    $font-size-base + 2
+    $font-size-base + $font-size-diff
   ) * $scale + $unit,
   "-xl": (
-    $font-size-base + 4
-  ) * $scale + $unit,
-  "-2xl": round(($font-size-base + 4) * 1.33333333) * $scale + $unit,
-  "-3xl": round(($font-size-base + 4) * 1.33333333 * 1.16666667) * $scale + $unit,
-  "-4xl": round(($font-size-base + 4) * 1.33333333 * 1.16666667 * 1.14285714) * $scale + $unit,
-  "-5xl": round(($font-size-base + 4) * 1.33333333 * 1.16666667 * 1.14285714 * 1.125) * $scale + $unit,
-  "-6xl": round(($font-size-base + 4) * 1.33333333 * 1.16666667 * 1.14285714 * 1.125 * 1.11111111) * $scale + $unit
+    $font-size-base + $font-size-diff * 2
+  ) * $scale + $unit
 ) !default;
 $tmp-font-size: $font-size-min;
 @while ($tmp-font-size <= $font-size-max) {
@@ -963,11 +958,6 @@ $tmp-font-size: $font-size-min;
   );
   $tmp-font-size: $tmp-font-size + $font-size-step;
 }
-// font-variant
-$m-font-variant: (
-  "": $font-variant-default,
-  "tabular-nums": $font-variant-tabular-nums
-) !default;
 // line-height
 $m-line-height: (
   "": $line-height-default,
@@ -1063,17 +1053,17 @@ $tmp-border-width: $border-width-min;
 $m-border-radius: (
   "": $border-radius-base * $scale + $unit,
   "-xs": (
-    $border-radius-base - 2
+    $border-radius-base - $border-radius-diff * 2
   ) * $scale + $unit,
   "-sm": (
-    $border-radius-base - 1
+    $border-radius-base - $border-radius-diff
   ) * $scale + $unit,
   "-md": $border-radius-base * $scale + $unit,
   "-lg": (
-    $border-radius-base + 2
+    $border-radius-base + $border-radius-diff
   ) * $scale + $unit,
   "-xl": (
-    $border-radius-base + 4
+    $border-radius-base + $border-radius-diff * 2
   ) * $scale + $unit,
   "-half": 50%,
   "-full": 100%

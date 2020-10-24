@@ -1,26 +1,37 @@
-// variables that used by layout
+/* variables that used by layout */
+
+/* page */
 $container-font-family: $font-family-default !default;
 $container-font-size-base: $font-size-base !default;
 $container-font-size: $container-font-size-base * $scale + $unit !default;
 $container-font-weight: 400 !default;
 $container-line-height: $line-height-default !default;
 
+$header-height-base: 48 !default;
+$header-height: $header-height-base * $scale + $unit !default;
 $header-background-color: transparent !default;
 $header-background-color-reverse: transparent !default;
 
+$navbar-height-base: 36 !default;
+$navbar-height: $header-height-base * $scale + $unit !default;
 $navbar-background-color: transparent !default;
 $navbar-background-color-reverse: transparent !default;
 
+$aside-width-base: 120 !default;
+$aside-width: $aside-width-base * $scale + $unit !default;
 $aside-background-color: transparent !default;
 $aside-background-color-reverse: transparent !default;
 
 $main-background-color: transparent !default;
 $main-background-color-reverse: transparent !default;
 
+$footer-height-base: 48 !default;
+$footer-height: $footer-height-base * $scale + $unit !default;
 $footer-background-color: transparent !default;
 $footer-background-color-reverse: transparent !default;
 
-$safe-area-height: 34 * $scale + $unit;
+$safe-area-height-base: 34 !default;
+$safe-area-height: $safe-area-height-base * $scale + $unit;
 $safe-area-background-color: transparent !default;
 $safe-area-background-color-reverse: transparent !default;
 
@@ -30,25 +41,27 @@ $row-background-color-reverse: transparent !default;
 $col-background-color: transparent !default;
 $col-background-color-reverse: transparent !default;
 
-$grid-max: 24 !default;
+/* grid */
+$grid-max: 12 !default;
 $gutter-base: 12 !default;
+$gutter-diff: 4 !default;
 $gutter-min: 4 !default;
 $gutter-max: 24 !default;
 $gutter-step: 2 !default;
 $m-gutter: (
   "": $gutter-base / 2 * $scale + $unit,
   "-xs": (
-    $gutter-base - 8
+    $gutter-base - $gutter-diff * 2
   ) / 2 * $scale + $unit,
   "-sm": (
-    $gutter-base - 4
+    $gutter-base - $gutter-diff
   ) / 2 * $scale + $unit,
   "-md": $gutter-base / 2 * $scale + $unit,
   "-lg": (
-    $gutter-base + 4
+    $gutter-base + $gutter-diff
   ) / 2 * $scale + $unit,
   "-xl": (
-    $gutter-base + 8
+    $gutter-base + $gutter-diff * 2
   ) / 2 * $scale + $unit
 ) !default;
 $tmp-gutter: $gutter-min;
