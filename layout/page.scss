@@ -28,17 +28,12 @@
   &.is-dark {
     background-color: $container-background-color-reverse;
   }
-
-  &.is-horizontal {
-    flex-direction: row;
-  }
 }
 
 .header {
-  flex: 0 0 auto;
+  flex: 0 0 $header-height;
   flex-direction: row;
-  height: 56 * $scale + $unit;
-  padding: 0 12 * $scale + $unit;
+  height: $header-height;
   background-color: $header-background-color;
 
   &.is-light,
@@ -53,10 +48,9 @@
 }
 
 .navbar {
-  flex: 0 0 auto;
+  flex: 0 0 $navbar-height;
   flex-direction: row;
-  height: 32 * $scale + $unit;
-  padding: 0 12 * $scale + $unit;
+  height: $navbar-height;
   background-color: $navbar-background-color;
 
   &.is-light,
@@ -71,11 +65,11 @@
 }
 
 .aside {
-  flex: 0 0 120 * $scale + $unit;
+  flex: 0 0 $aside-width;
   flex-direction: column;
-  width: 120 * $scale + $unit;
-  min-width: 120 * $scale + $unit;
-  max-width: 120 * $scale + $unit;
+  width: $aside-width;
+  min-width: $aside-width;
+  max-width: $aside-width;
   min-height: 0;
   background-color: $aside-background-color;
 
@@ -94,7 +88,6 @@
   flex: auto;
   flex-direction: column;
   min-height: 0;
-  padding: 12 * $scale + $unit;
   background-color: $main-background-color;
 
   &.is-light,
@@ -109,10 +102,9 @@
 }
 
 .footer {
-  flex: 0 0 auto;
+  flex: 0 0 $footer-height;
   flex-direction: row;
-  height: 48 * $scale + $unit;
-  padding: 0 12 * $scale + $unit;
+  height: $footer-height;
   background-color: $footer-background-color;
 
   &.is-light,
