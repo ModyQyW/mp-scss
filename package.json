@@ -1,7 +1,7 @@
 {
   "name": "@modyqyw/mp-scss",
   "version": "1.7.0",
-  "description": "A miniprogram-oriented SCSS lib for quickly building custom designs.",
+  "description": "A miniprogram-oriented and flexbox-based SCSS lib for quickly building custom designs.",
   "keywords": [
     "css",
     "miniprogram",
