@@ -13,7 +13,7 @@
   }
 }
 
-input.input {
+.input {
   position: relative;
   box-sizing: border-box;
   display: $input-display;
@@ -220,7 +220,7 @@ input.input {
     padding: $input-wrapper-sm-padding-y $input-wrapper-sm-padding-x;
     font-size: $input-wrapper-sm-font-size;
 
-    > input.input {
+    > .input {
       font-size: $input-wrapper-sm-font-size;
     }
   }
@@ -229,7 +229,7 @@ input.input {
     padding: $input-wrapper-lg-padding-y $input-wrapper-lg-padding-x;
     font-size: $input-wrapper-lg-font-size;
 
-    > input.input {
+    > .input {
       font-size: $input-wrapper-lg-font-size;
     }
   }
