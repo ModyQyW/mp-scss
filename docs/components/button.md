@@ -1,13 +1,13 @@
 # 按钮 button
 
-[源码](https://github.com/MillCloud/mp-scss/blob/main/elements/button.scss)
+[源码](https://github.com/MillCloud/mp-scss/blob/main/components/button.scss)
 
 ## 使用
 
 引入按钮文件即可正常使用按钮类，所有内置变量会被自动引入并应用。
 
 ```scss
-@import "~@modyqyw/mp-scss/elements/button";
+@import "~@modyqyw/mp-scss/components/button";
 ```
 
 如果需要自定义变量，那就需要在引入之前声明对应的变量。
@@ -15,7 +15,7 @@
 ```scss
 // ${PROJECT_DIR}/src/fake/path/index.scss
 $container-background-color-reverse: #121212;
-@import "~@modyqyw/mp-scss/elements/button";
+@import "~@modyqyw/mp-scss/components/button";
 ```
 
 ## 默认样式

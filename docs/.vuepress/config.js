@@ -75,157 +75,161 @@ module.exports = {
   themeConfig: {
     nav: [
       {
-        text: '首页',
-        link: '/',
-      },
-      {
-        text: '介绍',
-        link: '/introduction/',
-      },
-      {
-        text: '原则',
-        link: '/principle/',
-      },
-      {
-        text: '工具',
-        link: '/utils/',
-      },
-      {
-        text: '变量',
-        items: [
-          {
-            text: '总览',
-            link: '/variables/index',
-          },
-          {
-            text: '初始 initial',
-            link: '/variables/initial',
-          },
-          {
-            text: '衍生 derived',
-            link: '/variables/derived',
-          },
-          {
-            text: '元素 elements',
-            link: '/variables/elements',
-          },
-          {
-            text: '布局 layout',
-            link: '/variables/layout',
-          },
-          {
-            text: '组件 components',
-            link: '/variables/components',
-          },
-        ],
+        text: '指南',
+        link: '/guide/',
       },
       {
         text: '重置',
         link: '/reset/',
       },
       {
-        text: '通用',
+        text: '内容',
         items: [
           {
-            text: '总览',
-            link: '/classes/index',
+            text: '工具 utils',
+            items: [
+              {
+                text: '工具总览 utils',
+                link: '/utils/index',
+              },
+              {
+                text: '函数工具 functions',
+                link: '/utils/functions',
+              },
+            ],
           },
           {
-            text: '定位 positioning',
-            link: '/classes/positioning',
+            text: '变量 variables',
+            items: [
+              {
+                text: '变量总览 variables',
+                link: '/variables/index',
+              },
+              {
+                text: '初始变量 initial',
+                link: '/variables/initial',
+              },
+              {
+                text: '衍生变量 derived',
+                link: '/variables/derived',
+              },
+              {
+                text: '布局变量 layout',
+                link: '/variables/layout',
+              },
+              {
+                text: '组件变量 components',
+                link: '/variables/components',
+              },
+            ],
           },
           {
-            text: '盒模型 box-model',
-            link: '/classes/box-model',
+            text: '通用类 classes',
+            items: [
+              {
+                text: '通用类总览 classes',
+                link: '/classes/index',
+              },
+              {
+                text: '定位类 positioning',
+                link: '/classes/positioning',
+              },
+              {
+                text: '盒模型类 box-model',
+                link: '/classes/box-model',
+              },
+              {
+                text: '排版类 typography',
+                link: '/classes/typography',
+              },
+              {
+                text: '视觉类 visual',
+                link: '/classes/visual',
+              },
+              {
+                text: '杂项类 misc',
+                link: '/classes/misc',
+              },
+            ],
           },
           {
-            text: '排版 typography',
-            link: '/classes/typography',
+            text: '布局类 layout',
+            items: [
+              {
+                text: '布局类总览 layout',
+                link: '/layout/index',
+              },
+              {
+                text: '页面布局类 page',
+                link: '/layout/page',
+              },
+              {
+                text: '栅格系统类 grid',
+                link: '/layout/grid',
+              },
+            ],
           },
           {
-            text: '视觉 visual',
-            link: '/classes/visual',
-          },
-          {
-            text: '杂项 misc',
-            link: '/classes/misc',
+            text: '组件类 components',
+            items: [
+              {
+                text: '组件类总览 components',
+                link: '/components/index',
+              },
+              {
+                text: '徽标类 badge',
+                link: '/components/badge',
+              },
+              {
+                text: '按钮类 button',
+                link: '/components/button',
+              },
+              {
+                text: '卡片类 card',
+                link: '/components/card',
+              },
+              {
+                text: '分割线类 divider',
+                link: '/components/divider',
+              },
+              {
+                text: '图标类 icon',
+                link: '/components/icon',
+              },
+              {
+                text: '输入框类 input',
+                link: '/components/input',
+              },
+              {
+                text: '遮罩类 overlay',
+                link: '/components/overlay',
+              },
+            ],
           },
         ],
       },
       {
-        text: '元素',
-        items: [
-          {
-            text: '总览',
-            link: '/elements/index',
-          },
-          {
-            text: '按钮 button',
-            link: '/elements/button',
-          },
-          {
-            text: '输入框 input',
-            link: '/elements/input',
-          },
-        ],
-      },
-      {
-        text: '布局',
-        items: [
-          {
-            text: '总览',
-            link: '/layout/index',
-          },
-          {
-            text: '页面 page',
-            link: '/layout/page',
-          },
-          {
-            text: '栅格 grid',
-            link: '/layout/grid',
-          },
-        ],
-      },
-      {
-        text: '组件',
-        items: [
-          {
-            text: '总览',
-            link: '/components/index',
-          },
-          {
-            text: '徽标 badge',
-            link: '/components/badge',
-          },
-          {
-            text: '卡片 card',
-            link: '/components/card',
-          },
-          {
-            text: '分割线 divider',
-            link: '/components/divider',
-          },
-          {
-            text: '图标 icon',
-            link: '/components/icon',
-          },
-          {
-            text: '遮罩 overlay',
-            link: '/components/overlay',
-          },
-        ],
-      },
-      {
-        text: '最佳实践',
+        text: '进阶',
         link: '/best-practices/',
       },
     ],
     sidebar: {
-      '/variables/': ['', 'initial', 'derived', 'elements', 'layout', 'components'],
-      '/elements/': ['', 'button', 'input'],
+      '/guide/': [
+        {
+          title: '指南',
+          collapsable: false,
+          children: ['', 'getting-started'],
+        },
+        {
+          title: '原则',
+          collapsable: false,
+          children: ['design', 'implement'],
+        },
+      ],
+      '/variables/': ['', 'initial', 'derived', 'layout', 'components'],
       '/classes/': ['', 'positioning', 'box-model', 'typography', 'visual', 'misc'],
       '/layout/': ['', 'page', 'grid'],
-      '/components/': ['', 'badge', 'card', 'divider', 'icon', 'overlay'],
+      '/components/': ['', 'badge', 'button', 'card', 'divider', 'icon', 'input', 'overlay'],
       '/': 'auto',
     },
     sidebarDepth: 4,

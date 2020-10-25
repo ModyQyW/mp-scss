@@ -1,13 +1,13 @@
 # 输入框 input
 
-[源码](https://github.com/MillCloud/mp-scss/blob/main/elements/input.scss)
+[源码](https://github.com/MillCloud/mp-scss/blob/main/components/input.scss)
 
 ## 使用
 
 引入输入框文件即可正常使用输入框类，所有内置变量会被自动引入并应用。
 
 ```scss
-@import "~@modyqyw/mp-scss/elements/input";
+@import "~@modyqyw/mp-scss/components/input";
 ```
 
 如果需要自定义变量，那就需要在引入之前声明对应的变量。
@@ -15,7 +15,7 @@
 ```scss
 // ${PROJECT_DIR}/src/fake/path/index.scss
 $container-background-color-reverse: #121212;
-@import "~@modyqyw/mp-scss/elements/input";
+@import "~@modyqyw/mp-scss/components/input";
 ```
 
 ## 默认样式

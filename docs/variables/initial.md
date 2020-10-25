@@ -162,5 +162,5 @@ $scale: 1;
 |变量名|初始值|可否修改初始值|说明|
 |---|---|:-:|---|
 |`$m-opacity`|`("-0": 0, "-25": .25, "-50": .5, "-75": .75, "-100": 1)`|√||
-|`$transition-delay-default`|`.48s`|√||
+|`$transition-duration-default`|`.48s`|√||
 |`$transition-timing-function-default`|`cubic-bezier(.25, .8, .5, 1)`|√||

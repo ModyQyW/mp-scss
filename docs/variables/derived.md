@@ -459,4 +459,4 @@ $container-background-color-reverse: #121212;
 
 |变量名|初始值|可否修改初始值|说明|
 |---|---|:-:|---|
-|`$m-transition`|`("": $transition-delay-default $transition-timing-function-default)`|√||
+|`$m-transition`|`("": $transition-duration-default $transition-timing-function-default)`|√||
