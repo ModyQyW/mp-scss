@@ -1,4 +1,4 @@
-@import "../variables/index";
+@import "../variables";
 
 .badge {
   position: absolute;
@@ -6,7 +6,7 @@
   right: $badge-right;
   z-index: $badge-z-index;
   box-sizing: border-box;
-  display: $badge-display;
+  display: flex;
   align-items: center;
   min-width: $badge-min-width;
   height: $badge-height;

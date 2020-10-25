@@ -1,11 +1,10 @@
-// variables that used by components
+/* components variables */
 
 /* badge */
 // common
 $badge-top: 0 !default;
 $badge-right: 0 !default;
 $badge-z-index: auto !default;
-$badge-display: flex !default;
 $badge-sizing-base: 20 !default;
 $badge-min-width: $badge-sizing-base * $scale + $unit !default;
 $badge-height: $badge-sizing-base * $scale + $unit !default;
@@ -20,7 +19,7 @@ $badge-border-style: solid !default;
 $badge-border-width: 1 * $scale + $unit !default;
 $badge-border-radius-base: $badge-sizing-base / 2 !default;
 $badge-border-radius: $badge-border-radius-base * $scale + $unit !default;
-$badge-transition: $transition-delay-default $transition-timing-function-default !default;
+$badge-transition: $transition-duration-default $transition-timing-function-default !default;
 $badge-transform: translate(50%, -50%) !default;
 $badge-transform-origin: 100% 0 !default;
 // default
@@ -91,7 +90,6 @@ $badge-dot-border-radius: 100% !default;
 
 /* button */
 // common
-$button-display: flex !default;
 $button-padding-base: 4 !default;
 $button-padding-y: $button-padding-base * $scale + $unit !default;
 $button-padding-x: $button-padding-base * 4 * $scale + $unit !default;
@@ -105,10 +103,10 @@ $button-border-style: solid !default;
 $button-border-width: 1 * $scale + $unit !default;
 $button-border-radius-base: $border-radius-base !default;
 $button-border-radius: $button-border-radius-base * $scale + $unit !default;
-$button-transition: $transition-delay-default $transition-timing-function-default !default;
+$button-transition: $transition-duration-default $transition-timing-function-default !default;
 // ripply
 $button-ripply-background-color: $gray-10 !default;
-$button-ripply-transition: $transition-delay-default !default;
+$button-ripply-transition: $transition-duration-default !default;
 $button-ripply-transform-scale: 10 !default;
 $button-ripply-active-opacity: .24 !default;
 // default
@@ -552,7 +550,6 @@ $button-lg-font-size: ($button-font-size-base + 2) * $scale + $unit !default;
 
 /* card */
 // default
-$card-display: flex !default;
 $card-padding-y: 0 !default;
 $card-padding-x: 0 !default;
 $card-margin-y: 0 !default;
@@ -573,7 +570,6 @@ $card-color-reverse: $color-main-reverse !default;
 $card-background-color-reverse: $container-background-color-reverse !default;
 $card-border-color-reverse: $border-color-reverse !default;
 // header
-$card-header-display: flex !default;
 $card-header-padding-base: 16 !default;
 $card-header-padding-y: $card-header-padding-base * $scale + $unit !default;
 $card-header-padding-x: $card-header-padding-base * 1.5 * $scale + $unit !default;
@@ -604,7 +600,6 @@ $card-sm-footer-padding-x: $card-sm-footer-padding-base * 1.5 * $scale + $unit !
 
 /* divider */
 // common
-$divider-display: block !default;
 $divider-width: 100% !default;
 $divider-height: auto !default;
 $divider-margin-base: 8 !default;
@@ -615,8 +610,7 @@ $divider-border-top-width-base: 1 !default;
 $divider-border-top-width: $divider-border-top-width-base * $scale + $unit !default;
 $divider-border-top-color: $border-color !default;
 $divider-border-top-color-reverse: $border-color-reverse !default;
-$divider-transition: $transition-delay-default $transition-timing-function-default !default;
-$divider-vertical-display: inline-block !default;
+$divider-transition: $transition-duration-default $transition-timing-function-default !default;
 $divider-vertical-width: auto !default;
 $divider-vertical-height: 100% !default;
 $divider-vertical-margin-base: $divider-margin-base !default;
@@ -626,10 +620,7 @@ $divider-vertical-border-left-style: $divider-border-top-style !default;
 $divider-vertical-border-left-width: $divider-border-top-width !default;
 $divider-vertical-border-left-color: $border-color !default;
 $divider-vertical-border-left-color-reverse: $border-color-reverse !default;
-// wrapper
-$divider-wrapper-display: flex !default;
 // text
-$divider-text-display: inline-block !default;
 $divider-text-padding-base: 16 !default;
 $divider-text-padding-y: 0 !default;
 $divider-text-padding-x: $divider-text-padding-base * $scale + $unit !default;
@@ -639,7 +630,6 @@ $divider-text-font-weight: 400 !default;
 $divider-text-line-height: $line-height-default !default;
 
 /* icon */
-$icon-display: inline-block !default;
 $icon-sizing-base: $font-size-base !default;
 $icon-sizing: $icon-sizing-base * $scale + $unit !default;
 $icon-line-height: 1 !default;
@@ -653,7 +643,6 @@ $icon-lg-line-height: 1 !default;
 $input-placeholder-color: $color-secondary !default;
 $input-placeholder-color-reverse: $color-secondary-reverse !default;
 // common
-$input-display: inline-block !default;
 $input-padding-base: 4 !default;
 $input-padding-y: $input-padding-base * $scale + $unit !default;
 $input-padding-x: $input-padding-base * 3 * $scale + $unit !default;
@@ -668,7 +657,7 @@ $input-border-style: solid !default;
 $input-border-width: 1 * $scale + $unit !default;
 $input-border-radius-base: $border-radius-base !default;
 $input-border-radius: $input-border-radius-base * $scale + $unit !default;
-$input-transition: $transition-delay-default $transition-timing-function-default !default;
+$input-transition: $transition-duration-default $transition-timing-function-default !default;
 // default
 $input-color: $color-main !default;
 $input-background-color: $container-background-color !default;
@@ -702,7 +691,6 @@ $input-lg-padding-y: $input-padding-base * 1.5 * $scale + $unit !default;
 $input-lg-padding-x: $input-padding-base * 4 * $scale + $unit !default;
 $input-lg-font-size: ($input-font-size-base + 2) * $scale + $unit !default;
 // wrapper
-$input-wrapper-display: inline-flex !default;
 $input-wrapper-padding-y: $input-padding-y !default;
 $input-wrapper-padding-x: $input-padding-x !default;
 $input-wrapper-margin-y: $input-margin-y !default;
@@ -748,11 +736,9 @@ $input-wrapper-lg-padding-y: $input-padding-base * 1.5 * $scale + $unit !default
 $input-wrapper-lg-padding-x: $input-padding-base * 4 * $scale + $unit !default;
 $input-wrapper-lg-font-size: ($input-font-size-base + 2) * $scale + $unit !default;
 // prefix
-$input-wrapper-prefix-display: flex !default;
 $input-wrapper-prefix-margin-right-base: 4 !default;
 $input-wrapper-prefix-margin-right: $input-wrapper-prefix-margin-right-base * $scale + $unit !default;
 // suffix
-$input-wrapper-suffix-display: flex !default;
 $input-wrapper-suffix-margin-left-base: 4 !default;
 $input-wrapper-suffix-margin-left: $input-wrapper-suffix-margin-left-base * $scale + $unit !default;
 

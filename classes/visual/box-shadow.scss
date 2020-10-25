@@ -1,4 +1,4 @@
-@import "../../variables/index";
+@import "../../variables";
 
 @for $v from 0 to 24 {
   .shadow-#{$v} {

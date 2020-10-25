@@ -1,9 +1,9 @@
-@import "../variables/index";
+@import "../variables";
 
 .btn {
   position: relative;
   box-sizing: border-box;
-  display: $button-display;
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;

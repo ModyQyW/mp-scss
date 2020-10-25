@@ -1,7 +1,7 @@
-@import "../variables/index";
+@import "../variables";
 
 .icon {
-  display: $icon-display;
+  display: inline-block;
   width: $icon-sizing;
   height: $icon-sizing;
   line-height: $icon-line-height;

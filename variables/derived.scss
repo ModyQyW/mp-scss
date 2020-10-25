@@ -1,4 +1,4 @@
-/* global variables that reference other variables or are computed */
+/* derived variables */
 
 /* preset */
 $page-background-color: $gray-1 !default;
@@ -1314,5 +1314,5 @@ $m-box-shadow-ambient: (
 /* misc */
 // transition
 $m-transition: (
-  "": $transition-delay-default $transition-timing-function-default
+  "": $transition-duration-default $transition-timing-function-default
 ) !default;

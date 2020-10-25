@@ -1,11 +1,14 @@
-// styles reset
-//
-// REF
-// - https://ress-css.surge.sh/
-//
-// DO NOT USE V2 STYLE for wechat miniprogram
-/* stylelint-disable property-no-vendor-prefix, declaration-no-important */
+/*
+ * reset
+ *
+ * REF
+ * - https://ress-css.surge.sh/
+ *
+ * ATTENTION
+ * - DO NOT USE V2 STYLE for wechat miniprogram
+ */
 
+/* stylelint-disable property-no-vendor-prefix, declaration-no-important */
 page {
   width: 100%;
   overflow-x: hidden;
@@ -124,6 +127,7 @@ textarea {
 button {
   overflow: visible;
   text-transform: none;
+  // cause bug
   // -webkit-appearance: button;
 }
 

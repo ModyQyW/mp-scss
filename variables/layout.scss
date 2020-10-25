@@ -1,48 +1,51 @@
-/* variables that used by layout */
+/* layout variables */
 
 /* page */
+// container
 $container-font-family: $font-family-default !default;
 $container-font-size-base: $font-size-base !default;
 $container-font-size: $container-font-size-base * $scale + $unit !default;
 $container-font-weight: 400 !default;
 $container-line-height: $line-height-default !default;
-
+// header
 $header-height-base: 48 !default;
 $header-height: $header-height-base * $scale + $unit !default;
 $header-background-color: transparent !default;
 $header-background-color-reverse: transparent !default;
-
+// navbar
 $navbar-height-base: 36 !default;
 $navbar-height: $header-height-base * $scale + $unit !default;
 $navbar-background-color: transparent !default;
 $navbar-background-color-reverse: transparent !default;
-
+// aside
 $aside-width-base: 120 !default;
 $aside-width: $aside-width-base * $scale + $unit !default;
 $aside-background-color: transparent !default;
 $aside-background-color-reverse: transparent !default;
-
+// main
 $main-background-color: transparent !default;
 $main-background-color-reverse: transparent !default;
-
+// footer
 $footer-height-base: 48 !default;
 $footer-height: $footer-height-base * $scale + $unit !default;
 $footer-background-color: transparent !default;
 $footer-background-color-reverse: transparent !default;
-
+// safe-area
 $safe-area-height-base: 34 !default;
 $safe-area-height: $safe-area-height-base * $scale + $unit;
 $safe-area-background-color: transparent !default;
 $safe-area-background-color-reverse: transparent !default;
 
+/* grid */
+// row
 $row-background-color: transparent !default;
 $row-background-color-reverse: transparent !default;
-
+// col
 $col-background-color: transparent !default;
 $col-background-color-reverse: transparent !default;
-
-/* grid */
+// col numbers
 $grid-max: 12 !default;
+// gutter
 $gutter-base: 12 !default;
 $gutter-diff: 4 !default;
 $gutter-min: 4 !default;

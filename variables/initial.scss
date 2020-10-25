@@ -1,9 +1,15 @@
-/* global variables */
+/* initial variables */
 
-// rpx is used in most cases
+/*
+ * unit
+ * rpx is used in most cases
+ */
 $unit: rpx !default;
 
-// 2x scaling is used in most cases
+/*
+ * scale
+ * 2x scaling is used in most cases
+ */
 $scale: 2 !default;
 
 /* common */
@@ -312,5 +318,5 @@ $m-opacity: (
   "-100": 1
 ) !default;
 // transition
-$transition-delay-default: .48s !default;
+$transition-duration-default: .48s !default;
 $transition-timing-function-default: cubic-bezier(.25, .8, .5, 1) !default;

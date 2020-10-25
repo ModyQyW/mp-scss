@@ -1,9 +1,9 @@
-@import "../variables/index";
+@import "../variables";
 
 .card {
   position: relative;
   box-sizing: border-box;
-  display: $card-display;
+  display: flex;
   flex-direction: column;
   padding: $card-padding-y $card-padding-x;
   margin: $card-margin-y $card-margin-x;
@@ -29,9 +29,15 @@
     border-color: $card-border-color-reverse;
   }
 
-  .card-header {
+  .card-header,
+  .card-content,
+  .card-footer {
     position: relative;
     box-sizing: border-box;
+    display: flex;
+  }
+
+  .card-header {
     padding: $card-header-padding-y $card-header-padding-x;
     font-size: $card-header-font-size;
     font-weight: $card-header-font-weight;
@@ -39,14 +45,10 @@
   }
 
   .card-content {
-    position: relative;
-    box-sizing: border-box;
     padding: $card-content-padding-y $card-content-padding-x;
   }
 
   .card-footer {
-    position: relative;
-    box-sizing: border-box;
     padding: $card-footer-padding-y $card-footer-padding-x;
   }
 

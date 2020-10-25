@@ -1,8 +1,12 @@
-// REF
-// - https://github.com/ant-design/ant-design/blob/master/components/style/color/colorPalette.less
-// - https://zhuanlan.zhihu.com/p/32422584
-// - https://blog.csdn.net/sunshine_in_moon/article/details/45131285
-// - https://blog.csdn.net/idfaya/article/details/6770414
+/*
+ * functions
+ *
+ * REF
+ * - https://github.com/ant-design/ant-design/blob/master/components/style/color/colorPalette.less
+ * - https://zhuanlan.zhihu.com/p/32422584
+ * - https://blog.csdn.net/sunshine_in_moon/article/details/45131285
+ * - https://blog.csdn.net/idfaya/article/details/6770414
+ */
 
 @function f-hex-to-hsv($hex-color) {
   // convert

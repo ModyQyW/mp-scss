@@ -1,9 +1,9 @@
-@import "../variables/index";
+@import "../variables";
 
 .divider {
   position: relative;
   box-sizing: border-box;
-  display: $divider-display;
+  display: block;
   width: $divider-width;
   height: $divider-height;
   margin: $divider-margin-y $divider-margin-x;
@@ -24,7 +24,7 @@
   }
 
   &.is-vertical {
-    display: $divider-vertical-display;
+    display: inline-block;
     width: $divider-vertical-width;
     height: $divider-vertical-height;
     margin: $divider-vertical-margin-y $divider-vertical-margin-x;
@@ -48,13 +48,13 @@
 .divider-wrapper {
   position: relative;
   box-sizing: border-box;
-  display: $divider-wrapper-display;
+  display: flex;
   align-items: center;
 
   .divider-text {
     position: relative;
     box-sizing: border-box;
-    display: $divider-text-display;
+    display: inline-block;
     padding: $divider-text-padding-y $divider-text-padding-x;
     font-size: $divider-text-font-size;
     font-weight: $divider-text-font-weight;
