@@ -1,10 +1,12 @@
-# mp-scss
+# @modyqyw/mp-scss
 
-A scss lib for miniprogram. Since miniprogram is used almost only in China, Chinese docs are provided.
+A miniprogram-oriented SCSS lib for quickly building custom designs.
 
-一个面向小程序的样式库。
+Chinese docs are provided only since miniprograms are used almost only in China.
 
-详细文档见 [https://millcloud.github.io/mp-scss/](https://millcloud.github.io/mp-scss/)。
+一个面向小程序的 SCSS 库，用于快速实现自定义设计。
+
+完整文档见 [https://millcloud.github.io/mp-scss/](https://millcloud.github.io/mp-scss/)。
 
 ## 贡献
 
@@ -28,10 +30,10 @@ Copyright (c) 2019-present MillCloud
 
 ## 致谢
 
-- [Tailwindcss](https://tailwindcss.com/)
 - [Ant Design](https://ant.design/)
-- [Material Design](https://material.io/)
-- [Bootstrap](https://github.com/twbs/stylelint-config-twbs-bootstrap)
+- [Bootstrap](https://getbootstrap.com/)
 - [Bulma](https://bulma.io/)
-- [Vuetify](https://vuetifyjs.com/)
+- [Material Design](https://material.io/)
 - [ress.css](https://ress-css.surge.sh/)
+- [Tailwindcss](https://tailwindcss.com/)
+- [Vuetify](https://vuetifyjs.com/)
