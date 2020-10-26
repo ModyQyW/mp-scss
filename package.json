@@ -80,7 +80,6 @@
     "sass-loader": "^10.0.4",
     "stylelint": "^13.7.2",
     "vuepress": "^1.7.1",
-    "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-plugin-helper-live2d": "^1.0.2",
     "vuepress-plugin-sitemap": "^2.3.1"
   },
