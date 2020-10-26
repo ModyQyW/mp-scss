@@ -6,7 +6,7 @@ Chinese docs are provided only since miniprograms are used almost only in China.
 
 一个面向小程序和基于 Flexbox 的 SCSS 库，用于快速实现自定义设计。
 
-完整文档见 [https://millcloud.github.io/mp-scss/](https://millcloud.github.io/mp-scss/)。
+完整文档见 [Github Page](https://millcloud.github.io/mp-scss/) 或 [Gitee Page](https://millcloud.gitee.io/mp-scss/)。
 
 ## 贡献
 
