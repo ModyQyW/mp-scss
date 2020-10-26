@@ -86,44 +86,6 @@ module.exports = {
         text: '内容',
         items: [
           {
-            text: '工具 utils',
-            items: [
-              {
-                text: '工具总览 utils',
-                link: '/utils/index',
-              },
-              {
-                text: '函数工具 functions',
-                link: '/utils/functions',
-              },
-            ],
-          },
-          {
-            text: '变量 variables',
-            items: [
-              {
-                text: '变量总览 variables',
-                link: '/variables/index',
-              },
-              {
-                text: '初始变量 initial',
-                link: '/variables/initial',
-              },
-              {
-                text: '衍生变量 derived',
-                link: '/variables/derived',
-              },
-              {
-                text: '布局变量 layout',
-                link: '/variables/layout',
-              },
-              {
-                text: '组件变量 components',
-                link: '/variables/components',
-              },
-            ],
-          },
-          {
             text: '通用类 classes',
             items: [
               {
@@ -226,7 +188,6 @@ module.exports = {
           children: ['design', 'implement'],
         },
       ],
-      '/variables/': ['', 'initial', 'derived', 'layout', 'components'],
       '/classes/': ['', 'positioning', 'box-model', 'typography', 'visual', 'misc'],
       '/layout/': ['', 'page', 'grid'],
       '/components/': ['', 'badge', 'button', 'card', 'divider', 'icon', 'input', 'overlay'],
@@ -268,7 +229,6 @@ module.exports = {
         hostname: 'https://millcloud.github.io',
       },
     ],
-    'vuepress-plugin-code-copy',
     [
       'helper-live2d',
       {

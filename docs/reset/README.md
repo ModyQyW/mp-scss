@@ -10,10 +10,8 @@
 @import "~@modyqyw/mp-scss/reset";
 ```
 
-`reset`参考了`ress.css`，匹配了小程序元素。
-
 ## 注意
 
 如果你使用了微信小程序[新版组件样式](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#style)，将会导致重置和其它部分样式无效。
 
-为了确保样式库起作用，请关闭微信小程序新版组件样式。
+为了确保重置起作用，请不要使用微信小程序新版组件样式。

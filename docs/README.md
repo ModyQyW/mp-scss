@@ -7,10 +7,6 @@ actionLink: /guide/
 features:
 - title: 重置 reset
   details: 用于重置小程序元素默认样式
-- title: 工具 utils
-  details: 内部常用的代码封装
-- title: 变量 variables
-  details: 基本覆盖了常用属性的变量
 - title: 通用 classes
   details: 基本覆盖了常用属性的类
 - title: 布局 layout

@@ -1,6 +1,8 @@
 # 快速上手
 
 ::: warning 建议
+库和文档目前处于`beta`状态，请等待正式版放出后投入使用，目前欢迎帮助编写文档和优化代码。
+
 建议安装 [Node.js](https://nodejs.org/en/) 10 或者 12。
 
 国内安装 [node-sass](https://github.com/sass/node-sass#readme) 缓慢，建议转用 [dart-sass](https://github.com/sass/dart-sass#readme)。
@@ -24,10 +26,34 @@ npm i -D scss sass-loader
 
 现在，你应该已经可以使用所有这个库的所有功能。
 
-接下来就可以去学习一下[重置](../reset/README.md)，它是这个库里相对独立的一部分，你完全可以单独使用它。
+如果需要自定义，那么需要在引入之前写下你的自定义代码。
+
+```scss
+// 写下你的自定义代码
+
+// 引入
+@import "~@modyqyw/mp-scss";
+```
+
+引入是非常灵活的，你可以像上面那样全量引入，也可以单独引入某一个部分。下面的引入语句都能正常工作，你可以根据实际情况使用。
+
+```scss
+// 全量引入
+@import "~@modyqyw/mp-scss";
+// 引入通用类
+@import "~@modyqyw/mp-scss/classes";
+// 引入通用类里的定位类
+@import "~@modyqyw/mp-scss/classes/positioning";
+// 引入通用类里的定位类里的 position 相关类
+@import "~@modyqyw/mp-scss/classes/positioning/position";
+```
+
+这个库是面向小程序的，提倡使用`rpx`，`%`或不使用单位，参考[尺寸单位](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html)。
+
+接下来你可以去学习一下[重置](../reset/README.md)，它是这个库里相对独立的一部分，你完全可以单独使用它。
 
 你的重点是[通用类](../classes/index.md)，[布局类](../layout/index.md)和[组件类](../components/index.md)，它们讲述了怎么使用这个库绝大部分的功能，当然也包含了自定义。
 
 等你学会如何使用这个库之后，还可以去了解这个库其中所遵循的[原则](./purpose.md)。
 
-最后也不要忘了查看[进阶](../advance/README.md)，看看有什么进阶用法能用到你的项目上。
+最后也不要忘了查看[进阶](../advance/README.md)，看看有什么进阶用法能用到你的项目上，比如全量引入时的体积优化，修改缩放倍数，修改单位等等。
