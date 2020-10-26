@@ -1,6 +1,6 @@
-/* derived variables */
+/* 衍生变量 derived variables */
 
-/* preset */
+/* 预设变量 preset */
 $page-background-color: $gray-1 !default;
 $page-background-color-reverse: $gray-13 !default;
 $body-background-color: $page-background-color !default;
@@ -8,7 +8,7 @@ $body-background-color: $page-background-color-reverse !default;
 $container-background-color: $gray-1 !default;
 $container-background-color-reverse: $gray-12 !default;
 
-/* common colors */
+/* 通用颜色 common colors */
 // dust red
 $red-1: f-get-color($red, 1); // #fff1f0
 $red-2: f-get-color($red, 2); // #ffccc7
@@ -594,7 +594,7 @@ $m-colors: (
   "-info-8": $info-8,
   "-info-9": $info-9,
   "-info-10": $info-10
-);
+) !default;
 $m-colors-reverse: (
   "-red": $red-reverse,
   "-red-1": $red-1-reverse,
@@ -783,29 +783,32 @@ $m-colors-reverse: (
   "-info-8": $info-8-reverse,
   "-info-9": $info-9-reverse,
   "-info-10": $info-10-reverse
-);
-
-/* positioning */
-// z-index
-$m-z-index: (
-  "": $z-index-default,
-  "-auto": auto
 ) !default;
+
+/* 定位变量 positioning */
+// z-index
+$m-z-index: () !default;
 $tmp-z-index: $z-index-min;
 @while ($tmp-z-index <= $z-index-max) {
   $m-z-index: map-merge(
     $m-z-index,
-    (
-      "-#{$tmp-z-index}": $tmp-z-index
+    if(
+      $tmp-z-index < 0,
+      (
+        "-n#{abs($tmp-z-index)}": $tmp-z-index
+      ),
+      (
+        "-#{$tmp-z-index}": $tmp-z-index
+      )
     )
   );
   $tmp-z-index: $tmp-z-index + $z-index-step;
 }
 
-/* box-model */
-// flex
+/* 盒模型变量 box-model */
+// flex-shrink
 $m-flex-shrink: (
-  "": $flex-shrink-default
+  "-default": $flex-shrink-default
 ) !default;
 $tmp-flex-shrink: $flex-shrink-min;
 @while ($tmp-flex-shrink <= $flex-shrink-max) {
@@ -817,8 +820,9 @@ $tmp-flex-shrink: $flex-shrink-min;
   );
   $tmp-flex-shrink: $tmp-flex-shrink + $flex-shrink-step;
 }
+// flex-grow
 $m-flex-grow: (
-  "": $flex-grow-default
+  "-default": $flex-grow-default
 ) !default;
 $tmp-flex-grow: $flex-grow-min;
 @while ($tmp-flex-grow <= $flex-grow-max) {
@@ -830,110 +834,213 @@ $tmp-flex-grow: $flex-grow-min;
   );
   $tmp-flex-grow: $tmp-flex-grow + $flex-grow-step;
 }
+// order
 $m-order: (
-  "": $order-default,
   "-first": $order-first,
-  "-last": $order-last
+  "-last": $order-last,
+  "-default": $order-default
 ) !default;
 $tmp-order: $order-min;
 @while ($tmp-order <= $order-max) {
   $m-order: map-merge(
     $m-order,
-    (
-      "-#{$tmp-order}": $tmp-order
+    if(
+      $tmp-order < 0,
+      (
+        "-n#{abs($tmp-order)}": $tmp-order
+      ),
+      (
+        "-#{$tmp-order}": $tmp-order
+      )
     )
   );
-  $tmp-order: $tmp-order + $order-step;
+  $tmp-order: $tmp-order + abs($order-step);
 }
-// length
-$m-length: (
-  "": $length-default,
-  "-auto": auto
-) !default;
-$tmp-length: $length-min;
-@while ($tmp-length <= $length-max) {
-  $m-length: map-merge(
-    $m-length,
-    (
-      "-#{$tmp-length}": $tmp-length * $scale + $unit
-    )
-  );
-  $tmp-length: $tmp-length + $length-step;
-}
-@if ($scale != 1) {
-  $m-length: map-merge(
-    $m-length,
-    (
-      "-1-real": 1 + $unit
-    )
-  );
-}
-// spacing
-$m-spacing: (
-  "-auto": auto,
-  "": $spacing-base * $scale + $unit,
-  "-xs": (
-    $spacing-base - $spacing-diff * 2
-  ) * $scale + $unit,
-  "-sm": (
-    $spacing-base - $spacing-diff
-  ) * $scale + $unit,
-  "-md": $spacing-base * $scale + $unit,
-  "-lg": (
-    $spacing-base + $spacing-diff
-  ) * $scale + $unit,
-  "-xl": (
-    $spacing-base + $spacing-diff * 2
-  ) * $scale + $unit
-) !default;
-$tmp-spacing: $spacing-min;
-@while ($tmp-spacing <= $spacing-max) {
-  $m-spacing: map-merge(
-    $m-spacing,
-    (
-      "-#{$tmp-spacing}": $tmp-spacing * $scale + $unit,
-      "-n#{$tmp-spacing}": -1 * $tmp-spacing * $scale + $unit
-    )
-  );
-  $tmp-spacing: $tmp-spacing + $spacing-step;
-}
-@if ($scale != 1) {
-  $m-spacing: map-merge(
-    $m-spacing,
-    (
-      "-1-real": 1 + $unit,
-      "-n1-real": -1 + $unit
-    )
-  );
-}
-// ratio
-$m-ratio: (
+// width
+$m-width: (
   "-full": 100%,
   "-half": 50%,
-  "-0": 0
+  "-auto": auto
 ) !default;
-@each $denominator in $l-denominator {
-  @for $molecule from 1 to $denominator {
-    $m-ratio: map-merge(
-      $m-ratio,
+@each $denominator in $l-width-denominator {
+  @for $molecule from 1 to ($denominator - 1) {
+    $m-width: map-merge(
+      $m-width,
       (
         "-#{$molecule}-#{$denominator}": $molecule / $denominator * 100%
       )
     );
   }
 }
+$tmp-width: $width-min;
+@while ($tmp-width <= $width-max) {
+  $m-width: map-merge(
+    $m-width,
+    (
+      "-#{$tmp-width}": $tmp-width * $scale + $unit
+    )
+  );
+  $tmp-width: $tmp-width + $width-step;
+}
+@if ($scale != 1 and $width-has-1-real) {
+  $m-width: map-merge(
+    $m-width,
+    (
+      "-1-real": 1 + $unit
+    )
+  );
+}
+// height
+$m-height: (
+  "-full": 100%,
+  "-half": 50%,
+  "-auto": auto
+) !default;
+@each $denominator in $l-height-denominator {
+  @for $molecule from 1 to ($denominator - 1) {
+    $m-height: map-merge(
+      $m-height,
+      (
+        "-#{$molecule}-#{$denominator}": $molecule / $denominator * 100%
+      )
+    );
+  }
+}
+$tmp-height: $height-min;
+@while ($tmp-height <= $height-max) {
+  $m-height: map-merge(
+    $m-height,
+    (
+      "-#{$tmp-height}": $tmp-height * $scale + $unit
+    )
+  );
+  $tmp-height: $tmp-height + $height-step;
+}
+@if ($scale != 1 and $height-has-1-real) {
+  $m-height: map-merge(
+    $m-height,
+    (
+      "-1-real": 1 + $unit
+    )
+  );
+}
+// padding
+$m-padding: (
+  "-full": 100%,
+  "-half": 50%,
+  "-auto": auto,
+  "-xs": (
+    $padding-base - $padding-diff * 2
+  ) * $scale + $unit,
+  "-sm": (
+    $padding-base - $padding-diff
+  ) * $scale + $unit,
+  "-md": $padding-base * $scale + $unit,
+  "-lg": (
+    $padding-base + $padding-diff
+  ) * $scale + $unit,
+  "-xl": (
+    $padding-base + $padding-diff * 2
+  ) * $scale + $unit
+) !default;
+@each $denominator in $l-padding-denominator {
+  @for $molecule from 1 to ($denominator - 1) {
+    $m-padding: map-merge(
+      $m-padding,
+      (
+        "-#{$molecule}-#{$denominator}": $molecule / $denominator * 100%
+      )
+    );
+  }
+}
+$tmp-padding: $padding-min;
+@while ($tmp-padding <= $padding-max) {
+  $m-padding: map-merge(
+    $m-padding,
+    if(
+      $tmp-padding < 0,
+      (
+        "-n#{abs($tmp-padding)}": $tmp-padding * $scale + $unit
+      ),
+      (
+        "-#{$tmp-padding}": $tmp-padding * $scale + $unit
+      )
+    )
+  );
+  $tmp-padding: $tmp-padding + $padding-step;
+}
+@if ($scale != 1 and $padding-has-1-real) {
+  $m-padding: map-merge(
+    $m-padding,
+    (
+      "-1-real": 1 + $unit
+    )
+  );
+}
+// margin
+$m-margin: (
+  "-full": 100%,
+  "-half": 50%,
+  "-auto": auto,
+  "-xs": (
+    $margin-base - $margin-diff * 2
+  ) * $scale + $unit,
+  "-sm": (
+    $margin-base - $margin-diff
+  ) * $scale + $unit,
+  "-md": $margin-base * $scale + $unit,
+  "-lg": (
+    $margin-base + $margin-diff
+  ) * $scale + $unit,
+  "-xl": (
+    $margin-base + $margin-diff * 2
+  ) * $scale + $unit
+) !default;
+@each $denominator in $l-margin-denominator {
+  @for $molecule from 1 to ($denominator - 1) {
+    $m-margin: map-merge(
+      $m-margin,
+      (
+        "-#{$molecule}-#{$denominator}": $molecule / $denominator * 100%
+      )
+    );
+  }
+}
+$tmp-margin: $margin-min;
+@while ($tmp-margin <= $margin-max) {
+  $m-margin: map-merge(
+    $m-margin,
+    if(
+      $tmp-margin < 0,
+      (
+        "-n#{abs($tmp-margin)}": $tmp-margin * $scale + $unit
+      ),
+      (
+        "-#{$tmp-margin}": $tmp-margin * $scale + $unit
+      )
+    )
+  );
+  $tmp-margin: $tmp-margin + $margin-step;
+}
+@if ($scale != 1 and $margin-has-1-real) {
+  $m-margin: map-merge(
+    $m-margin,
+    (
+      "-1-real": 1 + $unit
+    )
+  );
+}
 
 /* typography */
 // font-family
 $m-font-family: (
-  "": $font-family-default,
+  "-default": $font-family-default,
   "-sans": $font-family-sans,
   "-serif": $font-family-serif,
   "-mono": $font-family-mono
 ) !default;
 // font-size
 $m-font-size: (
-  "": $font-size-base * $scale + $unit,
   "-xs": (
     $font-size-base - $font-size-diff * 2
   ) * $scale + $unit,
@@ -960,13 +1067,11 @@ $tmp-font-size: $font-size-min;
 }
 // line-height
 $m-line-height: (
-  "": $line-height-default,
-  "-normal": $line-height-default,
-  "-none": $line-height-none,
-  "-tight": $line-height-tight,
-  "-snug": $line-height-snug,
-  "-relaxed": $line-height-relaxed,
-  "-loose": $line-height-loose
+  "-xs": $line-height-default - $line-height-diff * 2,
+  "-sm": $line-height-default - $line-height-diff,
+  "-md": $line-height-default,
+  "-lg": $line-height-default + $line-height-diff,
+  "-xl": $line-height-default + $line-height-diff * 2
 ) !default;
 $tmp-line-height: $line-height-min;
 @while ($tmp-line-height <= $line-height-max) {
@@ -1029,7 +1134,14 @@ $m-border-color-reverse: (
 ) !default;
 // border-width
 $m-border-width: (
-  "": $border-width-base * $scale + $unit
+  "": $border-width-base * $scale + $unit,
+  "-md": $border-width-base * $scale + $unit,
+  "-lg": (
+    $border-width-base + $border-width-diff
+  ) * $scale + $unit,
+  "-xl": (
+    $border-width-base + $border-width-diff * 2
+  ) * $scale + $unit
 ) !default;
 $tmp-border-width: $border-width-min;
 @while ($tmp-border-width <= $border-width-max) {
@@ -1041,7 +1153,7 @@ $tmp-border-width: $border-width-min;
   );
   $tmp-border-width: $tmp-border-width + $border-width-step;
 }
-@if ($scale != 1) {
+@if ($scale != 1 and $border-width-has-1-real) {
   $m-border-width: map-merge(
     $m-border-width,
     (
@@ -1084,76 +1196,76 @@ $m-box-shadow-umbra: (
     0 0 0 0 $box-shadow-umbra
   ),
   1: (
-    0 2px 1px -1px $box-shadow-umbra
+    0 2 * $scale + $unit 1 * $scale + $unit -1 * $scale + $unit $box-shadow-umbra
   ),
   2: (
-    0 3px 1px -2px $box-shadow-umbra
+    0 3 * $scale + $unit 1 * $scale + $unit -2 * $scale + $unit $box-shadow-umbra
   ),
   3: (
-    0 3px 3px -2px $box-shadow-umbra
+    0 3 * $scale + $unit 3 * $scale + $unit -2 * $scale + $unit $box-shadow-umbra
   ),
   4: (
-    0 2px 4px -1px $box-shadow-umbra
+    0 2 * $scale + $unit 4 * $scale + $unit -1 * $scale + $unit $box-shadow-umbra
   ),
   5: (
-    0 3px 5px -1px $box-shadow-umbra
+    0 3 * $scale + $unit 5 * $scale + $unit -1 * $scale + $unit $box-shadow-umbra
   ),
   6: (
-    0 3px 5px -1px $box-shadow-umbra
+    0 3 * $scale + $unit 5 * $scale + $unit -1 * $scale + $unit $box-shadow-umbra
   ),
   7: (
-    0 4px 5px -2px $box-shadow-umbra
+    0 4 * $scale + $unit 5 * $scale + $unit -2 * $scale + $unit $box-shadow-umbra
   ),
   8: (
-    0 5px 5px -3px $box-shadow-umbra
+    0 5 * $scale + $unit 5 * $scale + $unit -3 * $scale + $unit $box-shadow-umbra
   ),
   9: (
-    0 5px 6px -3px $box-shadow-umbra
+    0 5 * $scale + $unit 6 * $scale + $unit -3 * $scale + $unit $box-shadow-umbra
   ),
   10: (
-    0 6px 6px -3px $box-shadow-umbra
+    0 6 * $scale + $unit 6 * $scale + $unit -3 * $scale + $unit $box-shadow-umbra
   ),
   11: (
-    0 6px 7px -4px $box-shadow-umbra
+    0 6 * $scale + $unit 7 * $scale + $unit -4 * $scale + $unit $box-shadow-umbra
   ),
   12: (
-    0 7px 8px -4px $box-shadow-umbra
+    0 7 * $scale + $unit 8 * $scale + $unit -4 * $scale + $unit $box-shadow-umbra
   ),
   13: (
-    0 7px 8px -4px $box-shadow-umbra
+    0 7 * $scale + $unit 8 * $scale + $unit -4 * $scale + $unit $box-shadow-umbra
   ),
   14: (
-    0 7px 9px -4px $box-shadow-umbra
+    0 7 * $scale + $unit 9 * $scale + $unit -4 * $scale + $unit $box-shadow-umbra
   ),
   15: (
-    0 8px 9px -5px $box-shadow-umbra
+    0 8 * $scale + $unit 9 * $scale + $unit -5 * $scale + $unit $box-shadow-umbra
   ),
   16: (
-    0 8px 10px -5px $box-shadow-umbra
+    0 8 * $scale + $unit 10 * $scale + $unit -5 * $scale + $unit $box-shadow-umbra
   ),
   17: (
-    0 8px 11px -5px $box-shadow-umbra
+    0 8 * $scale + $unit 11 * $scale + $unit -5 * $scale + $unit $box-shadow-umbra
   ),
   18: (
-    0 9px 11px -5px $box-shadow-umbra
+    0 9 * $scale + $unit 11 * $scale + $unit -5 * $scale + $unit $box-shadow-umbra
   ),
   19: (
-    0 9px 12px -6px $box-shadow-umbra
+    0 9 * $scale + $unit 12 * $scale + $unit -6 * $scale + $unit $box-shadow-umbra
   ),
   20: (
-    0 10px 13px -6px $box-shadow-umbra
+    0 10 * $scale + $unit 13 * $scale + $unit -6 * $scale + $unit $box-shadow-umbra
   ),
   21: (
-    0 10px 13px -6px $box-shadow-umbra
+    0 10 * $scale + $unit 13 * $scale + $unit -6 * $scale + $unit $box-shadow-umbra
   ),
   22: (
-    0 10px 14px -6px $box-shadow-umbra
+    0 10 * $scale + $unit 14 * $scale + $unit -6 * $scale + $unit $box-shadow-umbra
   ),
   23: (
-    0 11px 14px -7px $box-shadow-umbra
+    0 11 * $scale + $unit 14 * $scale + $unit -7 * $scale + $unit $box-shadow-umbra
   ),
   24: (
-    0 11px 15px -7px $box-shadow-umbra
+    0 11 * $scale + $unit 15 * $scale + $unit -7 * $scale + $unit $box-shadow-umbra
   )
 );
 $m-box-shadow-penumbra: (
@@ -1161,76 +1273,76 @@ $m-box-shadow-penumbra: (
     0 0 0 0 $box-shadow-penumbra
   ),
   1: (
-    0 1px 1px 0 $box-shadow-penumbra
+    0 1 * $scale + $unit 1 * $scale + $unit 0 $box-shadow-penumbra
   ),
   2: (
-    0 2px 2px 0 $box-shadow-penumbra
+    0 2 * $scale + $unit 2 * $scale + $unit 0 $box-shadow-penumbra
   ),
   3: (
-    0 3px 4px 0 $box-shadow-penumbra
+    0 3 * $scale + $unit 4 * $scale + $unit 0 $box-shadow-penumbra
   ),
   4: (
-    0 4px 5px 0 $box-shadow-penumbra
+    0 4 * $scale + $unit 5 * $scale + $unit 0 $box-shadow-penumbra
   ),
   5: (
-    0 5px 8px 0 $box-shadow-penumbra
+    0 5 * $scale + $unit 8 * $scale + $unit 0 $box-shadow-penumbra
   ),
   6: (
-    0 6px 10px 0 $box-shadow-penumbra
+    0 6 * $scale + $unit 10 * $scale + $unit 0 $box-shadow-penumbra
   ),
   7: (
-    0 7px 10px 1px $box-shadow-penumbra
+    0 7 * $scale + $unit 10 * $scale + $unit 1 * $scale + $unit $box-shadow-penumbra
   ),
   8: (
-    0 8px 10px 1px $box-shadow-penumbra
+    0 8 * $scale + $unit 10 * $scale + $unit 1 * $scale + $unit $box-shadow-penumbra
   ),
   9: (
-    0 9px 12px 1px $box-shadow-penumbra
+    0 9 * $scale + $unit 12 * $scale + $unit 1 * $scale + $unit $box-shadow-penumbra
   ),
   10: (
-    0 10px 14px 1px $box-shadow-penumbra
+    0 10 * $scale + $unit 14 * $scale + $unit 1 * $scale + $unit $box-shadow-penumbra
   ),
   11: (
-    0 11px 15px 1px $box-shadow-penumbra
+    0 11 * $scale + $unit 15 * $scale + $unit 1 * $scale + $unit $box-shadow-penumbra
   ),
   12: (
-    0 12px 17px 2px $box-shadow-penumbra
+    0 12 * $scale + $unit 17 * $scale + $unit 2 * $scale + $unit $box-shadow-penumbra
   ),
   13: (
-    0 13px 19px 2px $box-shadow-penumbra
+    0 13 * $scale + $unit 19 * $scale + $unit 2 * $scale + $unit $box-shadow-penumbra
   ),
   14: (
-    0 14px 21px 2px $box-shadow-penumbra
+    0 14 * $scale + $unit 21 * $scale + $unit 2 * $scale + $unit $box-shadow-penumbra
   ),
   15: (
-    0 15px 22px 2px $box-shadow-penumbra
+    0 15 * $scale + $unit 22 * $scale + $unit 2 * $scale + $unit $box-shadow-penumbra
   ),
   16: (
-    0 16px 24px 2px $box-shadow-penumbra
+    0 16 * $scale + $unit 24 * $scale + $unit 2 * $scale + $unit $box-shadow-penumbra
   ),
   17: (
-    0 17px 26px 2px $box-shadow-penumbra
+    0 17 * $scale + $unit 26 * $scale + $unit 2 * $scale + $unit $box-shadow-penumbra
   ),
   18: (
-    0 18px 28px 2px $box-shadow-penumbra
+    0 18 * $scale + $unit 28 * $scale + $unit 2 * $scale + $unit $box-shadow-penumbra
   ),
   19: (
-    0 19px 29px 2px $box-shadow-penumbra
+    0 19 * $scale + $unit 29 * $scale + $unit 2 * $scale + $unit $box-shadow-penumbra
   ),
   20: (
-    0 20px 31px 3px $box-shadow-penumbra
+    0 20 * $scale + $unit 31 * $scale + $unit 3 * $scale + $unit $box-shadow-penumbra
   ),
   21: (
-    0 21px 33px 3px $box-shadow-penumbra
+    0 21 * $scale + $unit 33 * $scale + $unit 3 * $scale + $unit $box-shadow-penumbra
   ),
   22: (
-    0 22px 35px 3px $box-shadow-penumbra
+    0 22 * $scale + $unit 35 * $scale + $unit 3 * $scale + $unit $box-shadow-penumbra
   ),
   23: (
-    0 23px 36px 3px $box-shadow-penumbra
+    0 23 * $scale + $unit 36 * $scale + $unit 3 * $scale + $unit $box-shadow-penumbra
   ),
   24: (
-    0 24px 38px 3px $box-shadow-penumbra
+    0 24 * $scale + $unit 38 * $scale + $unit 3 * $scale + $unit $box-shadow-penumbra
   )
 );
 $m-box-shadow-ambient: (
@@ -1238,81 +1350,81 @@ $m-box-shadow-ambient: (
     0 0 0 0 $box-shadow-ambient
   ),
   1: (
-    0 1px 3px 0 $box-shadow-ambient
+    0 1 * $scale + $unit 3 * $scale + $unit 0 $box-shadow-ambient
   ),
   2: (
-    0 1px 5px 0 $box-shadow-ambient
+    0 1 * $scale + $unit 5 * $scale + $unit 0 $box-shadow-ambient
   ),
   3: (
-    0 1px 8px 0 $box-shadow-ambient
+    0 1 * $scale + $unit 8 * $scale + $unit 0 $box-shadow-ambient
   ),
   4: (
-    0 1px 10px 0 $box-shadow-ambient
+    0 1 * $scale + $unit 10 * $scale + $unit 0 $box-shadow-ambient
   ),
   5: (
-    0 1px 14px 0 $box-shadow-ambient
+    0 1 * $scale + $unit 14 * $scale + $unit 0 $box-shadow-ambient
   ),
   6: (
-    0 1px 18px 0 $box-shadow-ambient
+    0 1 * $scale + $unit 18 * $scale + $unit 0 $box-shadow-ambient
   ),
   7: (
-    0 2px 16px 1px $box-shadow-ambient
+    0 2 * $scale + $unit 16 * $scale + $unit 1 * $scale + $unit $box-shadow-ambient
   ),
   8: (
-    0 3px 14px 2px $box-shadow-ambient
+    0 3 * $scale + $unit 14 * $scale + $unit 2 * $scale + $unit $box-shadow-ambient
   ),
   9: (
-    0 3px 16px 2px $box-shadow-ambient
+    0 3 * $scale + $unit 16 * $scale + $unit 2 * $scale + $unit $box-shadow-ambient
   ),
   10: (
-    0 4px 18px 3px $box-shadow-ambient
+    0 4 * $scale + $unit 18 * $scale + $unit 3 * $scale + $unit $box-shadow-ambient
   ),
   11: (
-    0 4px 20px 3px $box-shadow-ambient
+    0 4 * $scale + $unit 20 * $scale + $unit 3 * $scale + $unit $box-shadow-ambient
   ),
   12: (
-    0 5px 22px 4px $box-shadow-ambient
+    0 5 * $scale + $unit 22 * $scale + $unit 4 * $scale + $unit $box-shadow-ambient
   ),
   13: (
-    0 5px 24px 4px $box-shadow-ambient
+    0 5 * $scale + $unit 24 * $scale + $unit 4 * $scale + $unit $box-shadow-ambient
   ),
   14: (
-    0 5px 26px 4px $box-shadow-ambient
+    0 5 * $scale + $unit 26 * $scale + $unit 4 * $scale + $unit $box-shadow-ambient
   ),
   15: (
-    0 6px 28px 5px $box-shadow-ambient
+    0 6 * $scale + $unit 28 * $scale + $unit 5 * $scale + $unit $box-shadow-ambient
   ),
   16: (
-    0 6px 30px 5px $box-shadow-ambient
+    0 6 * $scale + $unit 30 * $scale + $unit 5 * $scale + $unit $box-shadow-ambient
   ),
   17: (
-    0 6px 32px 5px $box-shadow-ambient
+    0 6 * $scale + $unit 32 * $scale + $unit 5 * $scale + $unit $box-shadow-ambient
   ),
   18: (
-    0 7px 34px 6px $box-shadow-ambient
+    0 7 * $scale + $unit 34 * $scale + $unit 6 * $scale + $unit $box-shadow-ambient
   ),
   19: (
-    0 7px 36px 6px $box-shadow-ambient
+    0 7 * $scale + $unit 36 * $scale + $unit 6 * $scale + $unit $box-shadow-ambient
   ),
   20: (
-    0 8px 38px 7px $box-shadow-ambient
+    0 8 * $scale + $unit 38 * $scale + $unit 7 * $scale + $unit $box-shadow-ambient
   ),
   21: (
-    0 8px 40px 7px $box-shadow-ambient
+    0 8 * $scale + $unit 40 * $scale + $unit 7 * $scale + $unit $box-shadow-ambient
   ),
   22: (
-    0 8px 42px 7px $box-shadow-ambient
+    0 8 * $scale + $unit 42 * $scale + $unit 7 * $scale + $unit $box-shadow-ambient
   ),
   23: (
-    0 9px 44px 8px $box-shadow-ambient
+    0 9 * $scale + $unit 44 * $scale + $unit 8 * $scale + $unit $box-shadow-ambient
   ),
   24: (
-    0 9px 46px 8px $box-shadow-ambient
+    0 9 * $scale + $unit 46 * $scale + $unit 8 * $scale + $unit $box-shadow-ambient
   )
 );
 
 /* misc */
 // transition
 $m-transition: (
-  "": $transition-duration-default $transition-timing-function-default
+  "": $transition-default
 ) !default;

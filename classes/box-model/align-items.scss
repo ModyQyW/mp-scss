@@ -1,0 +1,7 @@
+@import "../../variables";
+
+@each $k, $v in $m-align-items {
+  .align#{$k} {
+    align-items: $v;
+  }
+}

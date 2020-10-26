@@ -1,0 +1,7 @@
+@import "../../variables";
+
+@each $k, $v in $m-flex-grow {
+  .flex-grow#{$k} {
+    flex-grow: $v;
+  }
+}

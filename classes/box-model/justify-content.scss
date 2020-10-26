@@ -1,0 +1,7 @@
+@import "../../variables";
+
+@each $k, $v in $m-justify-content {
+  .justify#{$k} {
+    justify-content: $v;
+  }
+}

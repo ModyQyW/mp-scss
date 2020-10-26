@@ -1,49 +1,7 @@
 @import "../../variables";
 
-@each $k, $v in $m-ratio {
+@each $k, $v in $m-width {
   .w#{$k} {
     width: $v;
   }
-}
-
-@each $k, $v in $m-length {
-  .w#{$k} {
-    width: $v;
-  }
-}
-
-.w-screen {
-  width: 100vw;
-}
-
-@each $k, $v in $m-ratio {
-  .min-w#{$k} {
-    min-width: $v;
-  }
-}
-
-@each $k, $v in $m-length {
-  .min-w#{$k} {
-    min-width: $v;
-  }
-}
-
-.min-w-screen {
-  min-width: 100vw;
-}
-
-@each $k, $v in $m-ratio {
-  .max-w#{$k} {
-    min-width: $v;
-  }
-}
-
-@each $k, $v in $m-length {
-  .max-w#{$k} {
-    min-width: $v;
-  }
-}
-
-.max-w-screen {
-  max-width: 100vw;
 }

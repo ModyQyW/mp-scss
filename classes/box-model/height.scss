@@ -1,49 +1,7 @@
 @import "../../variables";
 
-@each $k, $v in $m-ratio {
+@each $k, $v in $m-height {
   .h#{$k} {
     height: $v;
   }
-}
-
-@each $k, $v in $m-length {
-  .h#{$k} {
-    height: $v;
-  }
-}
-
-.h-screen {
-  height: 100vh;
-}
-
-@each $k, $v in $m-ratio {
-  .min-h#{$k} {
-    height: $v;
-  }
-}
-
-@each $k, $v in $m-length {
-  .min-h#{$k} {
-    height: $v;
-  }
-}
-
-.min-h-screen {
-  height: 100vh;
-}
-
-@each $k, $v in $m-ratio {
-  .max-h#{$k} {
-    height: $v;
-  }
-}
-
-@each $k, $v in $m-length {
-  .max-h#{$k} {
-    height: $v;
-  }
-}
-
-.max-h-screen {
-  height: 100vh;
 }

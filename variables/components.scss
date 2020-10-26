@@ -19,7 +19,7 @@ $badge-border-style: solid !default;
 $badge-border-width: 1 * $scale + $unit !default;
 $badge-border-radius-base: $badge-sizing-base / 2 !default;
 $badge-border-radius: $badge-border-radius-base * $scale + $unit !default;
-$badge-transition: $transition-duration-default $transition-timing-function-default !default;
+$badge-transition: $transition-default !default;
 $badge-transform: translate(50%, -50%) !default;
 $badge-transform-origin: 100% 0 !default;
 // default
@@ -103,10 +103,10 @@ $button-border-style: solid !default;
 $button-border-width: 1 * $scale + $unit !default;
 $button-border-radius-base: $border-radius-base !default;
 $button-border-radius: $button-border-radius-base * $scale + $unit !default;
-$button-transition: $transition-duration-default $transition-timing-function-default !default;
+$button-transition: $transition-default !default;
 // ripply
 $button-ripply-background-color: $gray-10 !default;
-$button-ripply-transition: $transition-duration-default !default;
+$button-ripply-transition: $transition-default !default;
 $button-ripply-transform-scale: 10 !default;
 $button-ripply-active-opacity: .24 !default;
 // default
@@ -610,7 +610,7 @@ $divider-border-top-width-base: 1 !default;
 $divider-border-top-width: $divider-border-top-width-base * $scale + $unit !default;
 $divider-border-top-color: $border-color !default;
 $divider-border-top-color-reverse: $border-color-reverse !default;
-$divider-transition: $transition-duration-default $transition-timing-function-default !default;
+$divider-transition: $transition-default !default;
 $divider-vertical-width: auto !default;
 $divider-vertical-height: 100% !default;
 $divider-vertical-margin-base: $divider-margin-base !default;
@@ -657,7 +657,7 @@ $input-border-style: solid !default;
 $input-border-width: 1 * $scale + $unit !default;
 $input-border-radius-base: $border-radius-base !default;
 $input-border-radius: $input-border-radius-base * $scale + $unit !default;
-$input-transition: $transition-duration-default $transition-timing-function-default !default;
+$input-transition: $transition-default !default;
 // default
 $input-color: $color-main !default;
 $input-background-color: $container-background-color !default;

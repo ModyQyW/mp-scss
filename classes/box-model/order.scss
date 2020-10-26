@@ -1,0 +1,7 @@
+@import "../../variables";
+
+@each $k, $v in $m-order {
+  .order#{$k} {
+    order: $v;
+  }
+}

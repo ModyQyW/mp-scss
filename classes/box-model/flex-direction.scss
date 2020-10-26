@@ -1,0 +1,7 @@
+@import "../../variables";
+
+@each $k, $v in $m-flex-direction {
+  .flex#{$k} {
+    flex-direction: $v;
+  }
+}

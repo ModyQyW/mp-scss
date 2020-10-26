@@ -1,19 +1,13 @@
-/* initial variables */
+/* 初始变量 initial variables */
 
-/*
- * unit
- * rpx is used in most cases
- */
+/* 单位 unit */
 $unit: rpx !default;
 
-/*
- * scale
- * 2x scaling is used in most cases
- */
+/* 缩放倍数 scale */
 $scale: 2 !default;
 
-/* common */
-// neutral color
+/* 通用变量 common */
+// 中性色 neutral color
 $gray: #8c8c8c !default;
 $gray-1: #fff !default;
 $gray-2: #fafafa !default;
@@ -55,7 +49,7 @@ $purple: #722ed1 !default;
 // magenta
 $magenta: #eb2f96 !default;
 
-/* positioning */
+/* 定位变量 positioning */
 // position
 $m-position: (
   "relative": relative,
@@ -64,22 +58,21 @@ $m-position: (
   "static": static,
   "sticky": sticky
 ) !default;
+// top/right/bottom/left
 $m-position-value: (
-  "-0": 0,
-  "-auto": auto
+  "-0": 0
 ) !default;
 // z-index
-$z-index-default: auto !default;
 $z-index-min: 0 !default;
 $z-index-max: 120 !default;
 $z-index-step: 10 !default;
+
+/* 盒模型变量 box-model */
 // box-sizing
 $m-box-sizing: (
   "-content": content-box,
   "-border": border-box
 ) !default;
-
-/* box-model */
 // display
 $m-display: (
   "-block": block,
@@ -91,38 +84,44 @@ $m-display: (
 ) !default;
 // flex
 $m-flex: (
-  "": 0 1 auto,
+  "-default": 0 1 auto,
   "-auto": 1 1 auto,
   "-none": 0 0 auto
 ) !default;
+// flex-direction
 $m-flex-direction: (
   "-row": row,
   "-row-reverse": row-reverse,
   "-col": column,
   "-col-reverse": column-reverse
 ) !default;
+// flex-wrap
 $m-flex-wrap: (
   "-nowrap": nowrap,
   "-wrap": wrap,
   "-wrap-reverse": wrap-reverse
 ) !default;
+// flex-shrink
 $flex-shrink-default: 1 !default;
 $flex-shrink-min: 0 !default;
-$flex-shrink-max: 8 !default;
+$flex-shrink-max: 2 !default;
 $flex-shrink-step: 1 !default;
+// flex-grow
 $flex-grow-default: 0 !default;
 $flex-grow-min: 0 !default;
-$flex-grow-max: 8 !default;
+$flex-grow-max: 2 !default;
 $flex-grow-step: 1 !default;
+// align-content
 $m-align-content: (
   "-start": flex-start,
   "-end": flex-end,
   "-center": center,
-  "-between": space-between,
-  "-around": space-around,
-  "-evenly": space-evenly,
+  "-space-between": space-between,
+  "-space-around": space-around,
+  "-space-evenly": space-evenly,
   "-stretch": stretch
 ) !default;
+// align-items
 $m-align-items: (
   "-start": flex-start,
   "-end": flex-end,
@@ -130,6 +129,7 @@ $m-align-items: (
   "-baseline": baseline,
   "-stretch": stretch
 ) !default;
+// align-self
 $m-align-self: (
   "-auto": auto,
   "-start": flex-start,
@@ -137,43 +137,58 @@ $m-align-self: (
   "-center": center,
   "-stretch": stretch
 ) !default;
+// justify-content
 $m-justify-content: (
   "-start": flex-start,
   "-end": flex-end,
   "-center": center,
-  "-between": space-between,
-  "-around": space-around,
-  "-evenly": space-evenly,
+  "-space-between": space-between,
+  "-space-around": space-around,
+  "-space-evenly": space-evenly,
   "-stretch": stretch
 ) !default;
+// order
 $order-first: -9999 !default;
 $order-last: 9999 !default;
 $order-default: 0 !default;
-$order-min: -8 !default;
-$order-max: 8 !default;
+$order-min: -2 !default;
+$order-max: 2 !default;
 $order-step: 1 !default;
-// length
-$length-default: auto !default;
-$length-min: 0 !default;
-$length-max: 128 !default;
-$length-step: 1 !default;
-// spacing
-$spacing-base: 12 !default;
-$spacing-diff: 4 !default;
-$spacing-min: 0 !default;
-$spacing-max: 64 !default;
-$spacing-step: 1 !default;
-// ratio
-$l-denominator: 3, 4, 5, 6, 8, 10, 12, 16, 24, 100 !default;
+// width
+$l-width-denominator: 2, 3, 4, 5, 6, 8, 10, 12 !default;
+$width-min: 0 !default;
+$width-max: 24 !default;
+$width-step: 1 !default;
+$width-has-1-real: true !default;
+// height
+$l-height-denominator: 2, 3, 4, 5, 6, 8, 10, 12 !default;
+$height-min: 0 !default;
+$height-max: 24 !default;
+$height-step: 1 !default;
+$height-has-1-real: true !default;
+// padding
+$l-padding-denominator: 2, 3, 4, 5, 6, 8, 10, 12 !default;
+$padding-base: 12 !default;
+$padding-diff: 4 !default;
+$padding-min: 0 !default;
+$padding-max: 24 !default;
+$padding-step: 1 !default;
+$padding-has-1-real: true !default;
+// margin
+$l-margin-denominator: 2, 3, 4, 5, 6, 8, 10, 12 !default;
+$margin-base: 12 !default;
+$margin-diff: 4 !default;
+$margin-min: 0 !default;
+$margin-max: 24 !default;
+$margin-step: 1 !default;
+$margin-has-1-real: true !default;
 // overflow
 $m-overflow: (
   "-auto": auto,
-  "-hidden": hidden,
-  "-visible": visible,
-  "-scroll": scroll
+  "-hidden": hidden
 ) !default;
 
-/* typography */
+/* 排版变量 typography */
 // font-family
 /* stylelint-disable value-keyword-case */
 $font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
@@ -213,11 +228,7 @@ $m-font-weight: (
 ) !default;
 // line-height
 $line-height-default: 1.5715 !default;
-$line-height-none: 1.15 !default;
-$line-height-tight: 1.3 !default;
-$line-height-snug: 1.45 !default;
-$line-height-relaxed: 1.65 !default;
-$line-height-loose: 2 !default;
+$line-height-diff: .143 !default;
 $line-height-min: 18 !default;
 $line-height-max: 72 !default;
 $line-height-step: 1 !default;
@@ -241,16 +252,8 @@ $m-text-transform: (
   "-uppercase": uppercase,
   "-lowercase": lowercase
 ) !default;
-// resize
-$m-resize: (
-  "-none": none,
-  "": both,
-  "-both": both,
-  "-y": vertical,
-  "-x": horizontal
-) !default;
 
-/* visual */
+/* 视觉变量 visual */
 // background-repeat
 $m-background-repeat: (
   "-repeat": repeat,
@@ -287,6 +290,7 @@ $m-background-size: (
 ) !default;
 // border-style
 $m-border-style: (
+  "": solid,
   "-solid": solid,
   "-dashed": dashed,
   "-dotted": dotted,
@@ -294,9 +298,11 @@ $m-border-style: (
 ) !default;
 // border-width
 $border-width-base: 1 !default;
+$border-width-diff: 1 !default;
 $border-width-min: 0 !default;
 $border-width-max: 4 !default;
 $border-width-step: 1 !default;
+$border-width-has-1-real: true !default;
 // border-radius
 $border-radius-base: 2 !default;
 $border-radius-diff: 1 !default;
@@ -308,7 +314,7 @@ $box-shadow-umbra: rgba(0, 0, 0, .2) !default;
 $box-shadow-penumbra: rgba(0, 0, 0, .14) !default;
 $box-shadow-ambient: rgba(0, 0, 0, .12) !default;
 
-/* misc */
+/* 杂项变量 misc */
 // opacity
 $m-opacity: (
   "-0": 0,
@@ -318,5 +324,4 @@ $m-opacity: (
   "-100": 1
 ) !default;
 // transition
-$transition-duration-default: .48s !default;
-$transition-timing-function-default: cubic-bezier(.25, .8, .5, 1) !default;
+$transition-default: .48s cubic-bezier(.25, .8, .5, 1) !default;

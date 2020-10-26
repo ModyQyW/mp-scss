@@ -1,0 +1,7 @@
+@import "../../variables";
+
+@each $k, $v in $m-flex-wrap {
+  .flex#{$k} {
+    flex-wrap: $v;
+  }
+}
