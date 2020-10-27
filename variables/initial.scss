@@ -26,28 +26,55 @@ $white: #fff !default;
 $black: #000 !default;
 // dust red
 $red: #f5222d !default;
+$has-red: true !default;
 // volcano
 $volcano: #fa541c !default;
+$has-volcano: true !default;
 // sunset orange
 $orange: #fa8c16 !default;
+$has-orange: true !default;
 // calendula gold
 $gold: #faad14 !default;
+$has-gold: true !default;
 // sunrise yellow
 $yellow: #fadb14 !default;
+$has-yellow: true !default;
 // lime
 $lime: #a0d911 !default;
+$has-lime: true !default;
 // polar green
 $green: #52c41a !default;
+$has-green: true !default;
 // cyan
 $cyan: #13c2c2 !default;
+$has-cyan: true !default;
 // daybreak blue
 $blue: #1890ff !default;
+$has-blue: true !default;
 // geek blue
 $geek-blue: #2f54eb !default;
+$has-geek-blue: true !default;
 // golden purple
 $purple: #722ed1 !default;
+$has-purple: true !default;
 // magenta
 $magenta: #eb2f96 !default;
+$has-magenta: true !default;
+// primary
+$primary: #1890ff !default;
+$has-primary: true !default;
+// success
+$success: #52c41a !default;
+$has-success: true !default;
+// warning
+$warning: #faad14 !default;
+$has-warning: true !default;
+// error
+$error: #f5222d !default;
+$has-error: true !default;
+// info
+$info: #1890ff !default;
+$has-info: true !default;
 
 /* 定位变量 positioning */
 // position
@@ -70,30 +97,23 @@ $z-index-step: 10 !default;
 /* 盒模型变量 box-model */
 // box-sizing
 $m-box-sizing: (
-  "-content": content-box,
   "-border": border-box
 ) !default;
 // display
 $m-display: (
   "-block": block,
-  "-inline-block": inline-block,
-  "-inline": inline,
   "-flex": flex,
-  "-inline-flex": inline-flex,
   "-none": none
 ) !default;
 // flex
 $m-flex: (
-  "-default": 0 1 auto,
   "-auto": 1 1 auto,
   "-none": 0 0 auto
 ) !default;
 // flex-direction
 $m-flex-direction: (
   "-row": row,
-  "-row-reverse": row-reverse,
-  "-col": column,
-  "-col-reverse": column-reverse
+  "-col": column
 ) !default;
 // flex-wrap
 $m-flex-wrap: (
@@ -102,12 +122,10 @@ $m-flex-wrap: (
   "-wrap-reverse": wrap-reverse
 ) !default;
 // flex-shrink
-$flex-shrink-default: 1 !default;
 $flex-shrink-min: 0 !default;
 $flex-shrink-max: 2 !default;
 $flex-shrink-step: 1 !default;
 // flex-grow
-$flex-grow-default: 0 !default;
 $flex-grow-min: 0 !default;
 $flex-grow-max: 2 !default;
 $flex-grow-step: 1 !default;
@@ -118,24 +136,20 @@ $m-align-content: (
   "-center": center,
   "-space-between": space-between,
   "-space-around": space-around,
-  "-space-evenly": space-evenly,
-  "-stretch": stretch
+  "-space-evenly": space-evenly
 ) !default;
 // align-items
 $m-align-items: (
   "-start": flex-start,
   "-end": flex-end,
-  "-center": center,
-  "-baseline": baseline,
-  "-stretch": stretch
+  "-center": center
 ) !default;
 // align-self
 $m-align-self: (
   "-auto": auto,
   "-start": flex-start,
   "-end": flex-end,
-  "-center": center,
-  "-stretch": stretch
+  "-center": center
 ) !default;
 // justify-content
 $m-justify-content: (
@@ -144,30 +158,26 @@ $m-justify-content: (
   "-center": center,
   "-space-between": space-between,
   "-space-around": space-around,
-  "-space-evenly": space-evenly,
-  "-stretch": stretch
+  "-space-evenly": space-evenly
 ) !default;
 // order
-$order-first: -9999 !default;
-$order-last: 9999 !default;
-$order-default: 0 !default;
 $order-min: -2 !default;
 $order-max: 2 !default;
 $order-step: 1 !default;
 // width
-$l-width-denominator: 2, 3, 4, 5, 6, 8, 10, 12 !default;
+$l-width-denominator: 3, 4, 6, 8, 10 !default;
 $width-min: 0 !default;
 $width-max: 24 !default;
 $width-step: 1 !default;
 $width-has-1-real: true !default;
 // height
-$l-height-denominator: 2, 3, 4, 5, 6, 8, 10, 12 !default;
+$l-height-denominator: 3, 4, 6, 8, 10 !default;
 $height-min: 0 !default;
 $height-max: 24 !default;
 $height-step: 1 !default;
 $height-has-1-real: true !default;
 // padding
-$l-padding-denominator: 2, 3, 4, 5, 6, 8, 10, 12 !default;
+$l-padding-denominator: 3, 4, 6, 8, 10 !default;
 $padding-base: 12 !default;
 $padding-diff: 4 !default;
 $padding-min: 0 !default;
@@ -175,7 +185,7 @@ $padding-max: 24 !default;
 $padding-step: 1 !default;
 $padding-has-1-real: true !default;
 // margin
-$l-margin-denominator: 2, 3, 4, 5, 6, 8, 10, 12 !default;
+$l-margin-denominator: 3, 4, 6, 8, 10 !default;
 $margin-base: 12 !default;
 $margin-diff: 4 !default;
 $margin-min: 0 !default;
@@ -194,61 +204,50 @@ $m-overflow: (
 $font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
   "Microsoft YaHei", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol" !default;
-$font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-  "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif !default;
 $font-family-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 /* stylelint-enable */
 // font-size
 $font-size-base: 14 !default;
 $font-size-diff: 2 !default;
 $font-size-min: 10 !default;
-$font-size-max: 64 !default;
-$font-size-step: 1 !default;
+$font-size-max: 48 !default;
+$font-size-step: 2 !default;
 // font-style
 $m-font-style: (
-  "-italic": italic,
-  "-oblique": oblique
+  "-normal": normal,
+  "-italic": italic
 ) !default;
 // font-weight
 $m-font-weight: (
-  "-thin": 100,
-  "-extra-light": 200,
-  "-ultra-light": 200,
-  "-light": 300,
-  "-default": 400,
-  "-normal": 400,
+  "": 400,
   "-regular": 400,
   "-medium": 500,
   "-semi-bold": 600,
-  "-bold": 700,
-  "-extra-bold": 800,
-  "-ultra-bold": 800,
-  "-heavy": 900
+  "-bold": 700
+) !default;
+// font-variant
+$m-font-variant: (
+  "tabular-nums": tabular-nums
 ) !default;
 // line-height
 $line-height-default: 1.5715 !default;
 $line-height-diff: .143 !default;
 $line-height-min: 18 !default;
-$line-height-max: 72 !default;
-$line-height-step: 1 !default;
+$line-height-max: 56 !default;
+$line-height-step: 2 !default;
 // text-align
 $m-text-align: (
   "-left": left,
   "-right": right,
-  "-center": center,
-  "-justify": justify
+  "-center": center
 ) !default;
 // text-decoration
 $m-text-decoration: (
   "-none": none,
-  "-overline": overline,
-  "-underline": underline,
-  "-line-through": line-through
+  "-underline": underline
 ) !default;
 // text-transform
 $m-text-transform: (
-  "-capitalize": capitalize,
   "-uppercase": uppercase,
   "-lowercase": lowercase
 ) !default;

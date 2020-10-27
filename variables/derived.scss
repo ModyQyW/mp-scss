@@ -274,7 +274,6 @@ $magenta-8-reverse: mix($magenta-4, $container-background-color-reverse, 95%); /
 $magenta-9-reverse: mix($magenta-3, $container-background-color-reverse, 97%); // #f8a8cc
 $magenta-10-reverse: mix($magenta-2, $container-background-color-reverse, 98%); // #fad2e3
 // primary color
-$primary: $blue !default;
 $primary-1: f-get-color($primary, 1);
 $primary-2: f-get-color($primary, 2);
 $primary-3: f-get-color($primary, 3);
@@ -297,7 +296,6 @@ $primary-8-reverse: mix($primary, $container-background-color-reverse, 95%);
 $primary-9-reverse: mix($primary, $container-background-color-reverse, 97%);
 $primary-10-reverse: mix($primary, $container-background-color-reverse, 98%);
 // success color
-$success: $green !default;
 $success-1: f-get-color($success, 1);
 $success-2: f-get-color($success, 2);
 $success-3: f-get-color($success, 3);
@@ -320,7 +318,6 @@ $success-8-reverse: mix($success, $container-background-color-reverse, 95%);
 $success-9-reverse: mix($success, $container-background-color-reverse, 97%);
 $success-10-reverse: mix($success, $container-background-color-reverse, 98%);
 // warning color
-$warning: $gold !default;
 $warning-1: f-get-color($warning, 1);
 $warning-2: f-get-color($warning, 2);
 $warning-3: f-get-color($warning, 3);
@@ -343,7 +340,6 @@ $warning-8-reverse: mix($warning, $container-background-color-reverse, 95%);
 $warning-9-reverse: mix($warning, $container-background-color-reverse, 97%);
 $warning-10-reverse: mix($warning, $container-background-color-reverse, 98%);
 // error color
-$error: $red !default;
 $error-1: f-get-color($error, 1);
 $error-2: f-get-color($error, 2);
 $error-3: f-get-color($error, 3);
@@ -366,7 +362,6 @@ $error-8-reverse: mix($error, $container-background-color-reverse, 95%);
 $error-9-reverse: mix($error, $container-background-color-reverse, 97%);
 $error-10-reverse: mix($error, $container-background-color-reverse, 98%);
 // info color
-$info: $blue !default;
 $info-1: f-get-color($info, 1);
 $info-2: f-get-color($info, 2);
 $info-3: f-get-color($info, 3);
@@ -406,384 +401,588 @@ $m-colors: (
   "-gray-10": $gray-10,
   "-gray-11": $gray-11,
   "-gray-12": $gray-12,
-  "-gray-13": $gray-13,
-  "-red": $red,
-  "-red-1": $red-1,
-  "-red-2": $red-2,
-  "-red-3": $red-3,
-  "-red-4": $red-4,
-  "-red-5": $red-5,
-  "-red-6": $red-6,
-  "-red-7": $red-7,
-  "-red-8": $red-8,
-  "-red-9": $red-9,
-  "-red-10": $red-10,
-  "-volcano": $volcano,
-  "-volcano-1": $volcano-1,
-  "-volcano-2": $volcano-2,
-  "-volcano-3": $volcano-3,
-  "-volcano-4": $volcano-4,
-  "-volcano-5": $volcano-5,
-  "-volcano-6": $volcano-6,
-  "-volcano-7": $volcano-7,
-  "-volcano-8": $volcano-8,
-  "-volcano-9": $volcano-9,
-  "-volcano-10": $volcano-10,
-  "-orange": $orange,
-  "-orange-1": $orange-1,
-  "-orange-2": $orange-2,
-  "-orange-3": $orange-3,
-  "-orange-4": $orange-4,
-  "-orange-5": $orange-5,
-  "-orange-6": $orange-6,
-  "-orange-7": $orange-7,
-  "-orange-8": $orange-8,
-  "-orange-9": $orange-9,
-  "-orange-10": $orange-10,
-  "-gold": $gold,
-  "-gold-1": $gold-1,
-  "-gold-2": $gold-2,
-  "-gold-3": $gold-3,
-  "-gold-4": $gold-4,
-  "-gold-5": $gold-5,
-  "-gold-6": $gold-6,
-  "-gold-7": $gold-7,
-  "-gold-8": $gold-8,
-  "-gold-9": $gold-9,
-  "-gold-10": $gold-10,
-  "-yellow": $yellow,
-  "-yellow-1": $yellow-1,
-  "-yellow-2": $yellow-2,
-  "-yellow-3": $yellow-3,
-  "-yellow-4": $yellow-4,
-  "-yellow-5": $yellow-5,
-  "-yellow-6": $yellow-6,
-  "-yellow-7": $yellow-7,
-  "-yellow-8": $yellow-8,
-  "-yellow-9": $yellow-9,
-  "-yellow-10": $yellow-10,
-  "-lime": $lime,
-  "-lime-1": $lime-1,
-  "-lime-2": $lime-2,
-  "-lime-3": $lime-3,
-  "-lime-4": $lime-4,
-  "-lime-5": $lime-5,
-  "-lime-6": $lime-6,
-  "-lime-7": $lime-7,
-  "-lime-8": $lime-8,
-  "-lime-9": $lime-9,
-  "-lime-10": $lime-10,
-  "-green": $green,
-  "-green-1": $green-1,
-  "-green-2": $green-2,
-  "-green-3": $green-3,
-  "-green-4": $green-4,
-  "-green-5": $green-5,
-  "-green-6": $green-6,
-  "-green-7": $green-7,
-  "-green-8": $green-8,
-  "-green-9": $green-9,
-  "-green-10": $green-10,
-  "-cyan": $cyan,
-  "-cyan-1": $cyan-1,
-  "-cyan-2": $cyan-2,
-  "-cyan-3": $cyan-3,
-  "-cyan-4": $cyan-4,
-  "-cyan-5": $cyan-5,
-  "-cyan-6": $cyan-6,
-  "-cyan-7": $cyan-7,
-  "-cyan-8": $cyan-8,
-  "-cyan-9": $cyan-9,
-  "-cyan-10": $cyan-10,
-  "-blue": $blue,
-  "-blue-1": $blue-1,
-  "-blue-2": $blue-2,
-  "-blue-3": $blue-3,
-  "-blue-4": $blue-4,
-  "-blue-5": $blue-5,
-  "-blue-6": $blue-6,
-  "-blue-7": $blue-7,
-  "-blue-8": $blue-8,
-  "-blue-9": $blue-9,
-  "-blue-10": $blue-10,
-  "-geek-blue": $geek-blue,
-  "-geek-blue-1": $geek-blue-1,
-  "-geek-blue-2": $geek-blue-2,
-  "-geek-blue-3": $geek-blue-3,
-  "-geek-blue-4": $geek-blue-4,
-  "-geek-blue-5": $geek-blue-5,
-  "-geek-blue-6": $geek-blue-6,
-  "-geek-blue-7": $geek-blue-7,
-  "-geek-blue-8": $geek-blue-8,
-  "-geek-blue-9": $geek-blue-9,
-  "-geek-blue-10": $geek-blue-10,
-  "-purple": $purple,
-  "-purple-1": $purple-1,
-  "-purple-2": $purple-2,
-  "-purple-3": $purple-3,
-  "-purple-4": $purple-4,
-  "-purple-5": $purple-5,
-  "-purple-6": $purple-6,
-  "-purple-7": $purple-7,
-  "-purple-8": $purple-8,
-  "-purple-9": $purple-9,
-  "-purple-10": $purple-10,
-  "-magenta": $magenta,
-  "-magenta-1": $magenta-1,
-  "-magenta-2": $magenta-2,
-  "-magenta-3": $magenta-3,
-  "-magenta-4": $magenta-4,
-  "-magenta-5": $magenta-5,
-  "-magenta-6": $magenta-6,
-  "-magenta-7": $magenta-7,
-  "-magenta-8": $magenta-8,
-  "-magenta-9": $magenta-9,
-  "-magenta-10": $magenta-10,
-  "-primary": $primary,
-  "-primary-1": $primary-1,
-  "-primary-2": $primary-2,
-  "-primary-3": $primary-3,
-  "-primary-4": $primary-4,
-  "-primary-5": $primary-5,
-  "-primary-6": $primary-6,
-  "-primary-7": $primary-7,
-  "-primary-8": $primary-8,
-  "-primary-9": $primary-9,
-  "-primary-10": $primary-10,
-  "-success": $success,
-  "-success-1": $success-1,
-  "-success-2": $success-2,
-  "-success-3": $success-3,
-  "-success-4": $success-4,
-  "-success-5": $success-5,
-  "-success-6": $success-6,
-  "-success-7": $success-7,
-  "-success-8": $success-8,
-  "-success-9": $success-9,
-  "-success-10": $success-10,
-  "-warning": $warning,
-  "-warning-1": $warning-1,
-  "-warning-2": $warning-2,
-  "-warning-3": $warning-3,
-  "-warning-4": $warning-4,
-  "-warning-5": $warning-5,
-  "-warning-6": $warning-6,
-  "-warning-7": $warning-7,
-  "-warning-8": $warning-8,
-  "-warning-9": $warning-9,
-  "-warning-10": $warning-10,
-  "-error": $error,
-  "-error-1": $error-1,
-  "-error-2": $error-2,
-  "-error-3": $error-3,
-  "-error-4": $error-4,
-  "-error-5": $error-5,
-  "-error-6": $error-6,
-  "-error-7": $error-7,
-  "-error-8": $error-8,
-  "-error-9": $error-9,
-  "-error-10": $error-10,
-  "-info": $info,
-  "-info-1": $info-1,
-  "-info-2": $info-2,
-  "-info-3": $info-3,
-  "-info-4": $info-4,
-  "-info-5": $info-5,
-  "-info-6": $info-6,
-  "-info-7": $info-7,
-  "-info-8": $info-8,
-  "-info-9": $info-9,
-  "-info-10": $info-10
+  "-gray-13": $gray-13
 ) !default;
-$m-colors-reverse: (
-  "-red": $red-reverse,
-  "-red-1": $red-1-reverse,
-  "-red-2": $red-2-reverse,
-  "-red-3": $red-3-reverse,
-  "-red-4": $red-4-reverse,
-  "-red-5": $red-5-reverse,
-  "-red-6": $red-6-reverse,
-  "-red-7": $red-7-reverse,
-  "-red-8": $red-8-reverse,
-  "-red-9": $red-9-reverse,
-  "-red-10": $red-10-reverse,
-  "-volcano": $volcano-reverse,
-  "-volcano-1": $volcano-1-reverse,
-  "-volcano-2": $volcano-2-reverse,
-  "-volcano-3": $volcano-3-reverse,
-  "-volcano-4": $volcano-4-reverse,
-  "-volcano-5": $volcano-5-reverse,
-  "-volcano-6": $volcano-6-reverse,
-  "-volcano-7": $volcano-7-reverse,
-  "-volcano-8": $volcano-8-reverse,
-  "-volcano-9": $volcano-9-reverse,
-  "-volcano-10": $volcano-10-reverse,
-  "-orange": $orange-reverse,
-  "-orange-1": $orange-1-reverse,
-  "-orange-2": $orange-2-reverse,
-  "-orange-3": $orange-3-reverse,
-  "-orange-4": $orange-4-reverse,
-  "-orange-5": $orange-5-reverse,
-  "-orange-6": $orange-6-reverse,
-  "-orange-7": $orange-7-reverse,
-  "-orange-8": $orange-8-reverse,
-  "-orange-9": $orange-9-reverse,
-  "-orange-10": $orange-10-reverse,
-  "-gold": $gold-reverse,
-  "-gold-1": $gold-1-reverse,
-  "-gold-2": $gold-2-reverse,
-  "-gold-3": $gold-3-reverse,
-  "-gold-4": $gold-4-reverse,
-  "-gold-5": $gold-5-reverse,
-  "-gold-6": $gold-6-reverse,
-  "-gold-7": $gold-7-reverse,
-  "-gold-8": $gold-8-reverse,
-  "-gold-9": $gold-9-reverse,
-  "-gold-10": $gold-10-reverse,
-  "-yellow": $yellow-reverse,
-  "-yellow-1": $yellow-1-reverse,
-  "-yellow-2": $yellow-2-reverse,
-  "-yellow-3": $yellow-3-reverse,
-  "-yellow-4": $yellow-4-reverse,
-  "-yellow-5": $yellow-5-reverse,
-  "-yellow-6": $yellow-6-reverse,
-  "-yellow-7": $yellow-7-reverse,
-  "-yellow-8": $yellow-8-reverse,
-  "-yellow-9": $yellow-9-reverse,
-  "-yellow-10": $yellow-10-reverse,
-  "-lime": $lime-reverse,
-  "-lime-1": $lime-1-reverse,
-  "-lime-2": $lime-2-reverse,
-  "-lime-3": $lime-3-reverse,
-  "-lime-4": $lime-4-reverse,
-  "-lime-5": $lime-5-reverse,
-  "-lime-6": $lime-6-reverse,
-  "-lime-7": $lime-7-reverse,
-  "-lime-8": $lime-8-reverse,
-  "-lime-9": $lime-9-reverse,
-  "-lime-10": $lime-10-reverse,
-  "-green": $green-reverse,
-  "-green-1": $green-1-reverse,
-  "-green-2": $green-2-reverse,
-  "-green-3": $green-3-reverse,
-  "-green-4": $green-4-reverse,
-  "-green-5": $green-5-reverse,
-  "-green-6": $green-6-reverse,
-  "-green-7": $green-7-reverse,
-  "-green-8": $green-8-reverse,
-  "-green-9": $green-9-reverse,
-  "-green-10": $green-10-reverse,
-  "-cyan": $cyan-reverse,
-  "-cyan-1": $cyan-1-reverse,
-  "-cyan-2": $cyan-2-reverse,
-  "-cyan-3": $cyan-3-reverse,
-  "-cyan-4": $cyan-4-reverse,
-  "-cyan-5": $cyan-5-reverse,
-  "-cyan-6": $cyan-6-reverse,
-  "-cyan-7": $cyan-7-reverse,
-  "-cyan-8": $cyan-8-reverse,
-  "-cyan-9": $cyan-9-reverse,
-  "-cyan-10": $cyan-10-reverse,
-  "-blue": $blue-reverse,
-  "-blue-1": $blue-1-reverse,
-  "-blue-2": $blue-2-reverse,
-  "-blue-3": $blue-3-reverse,
-  "-blue-4": $blue-4-reverse,
-  "-blue-5": $blue-5-reverse,
-  "-blue-6": $blue-6-reverse,
-  "-blue-7": $blue-7-reverse,
-  "-blue-8": $blue-8-reverse,
-  "-blue-9": $blue-9-reverse,
-  "-blue-10": $blue-10-reverse,
-  "-geek-blue": $geek-blue-reverse,
-  "-geek-blue-1": $geek-blue-1-reverse,
-  "-geek-blue-2": $geek-blue-2-reverse,
-  "-geek-blue-3": $geek-blue-3-reverse,
-  "-geek-blue-4": $geek-blue-4-reverse,
-  "-geek-blue-5": $geek-blue-5-reverse,
-  "-geek-blue-6": $geek-blue-6-reverse,
-  "-geek-blue-7": $geek-blue-7-reverse,
-  "-geek-blue-8": $geek-blue-8-reverse,
-  "-geek-blue-9": $geek-blue-9-reverse,
-  "-geek-blue-10": $geek-blue-10-reverse,
-  "-purple": $purple-reverse,
-  "-purple-1": $purple-1-reverse,
-  "-purple-2": $purple-2-reverse,
-  "-purple-3": $purple-3-reverse,
-  "-purple-4": $purple-4-reverse,
-  "-purple-5": $purple-5-reverse,
-  "-purple-6": $purple-6-reverse,
-  "-purple-7": $purple-7-reverse,
-  "-purple-8": $purple-8-reverse,
-  "-purple-9": $purple-9-reverse,
-  "-purple-10": $purple-10-reverse,
-  "-magenta": $magenta-reverse,
-  "-magenta-1": $magenta-1-reverse,
-  "-magenta-2": $magenta-2-reverse,
-  "-magenta-3": $magenta-3-reverse,
-  "-magenta-4": $magenta-4-reverse,
-  "-magenta-5": $magenta-5-reverse,
-  "-magenta-6": $magenta-6-reverse,
-  "-magenta-7": $magenta-7-reverse,
-  "-magenta-8": $magenta-8-reverse,
-  "-magenta-9": $magenta-9-reverse,
-  "-magenta-10": $magenta-10-reverse,
-  "-primary": $primary-reverse,
-  "-primary-1": $primary-1-reverse,
-  "-primary-2": $primary-2-reverse,
-  "-primary-3": $primary-3-reverse,
-  "-primary-4": $primary-4-reverse,
-  "-primary-5": $primary-5-reverse,
-  "-primary-6": $primary-6-reverse,
-  "-primary-7": $primary-7-reverse,
-  "-primary-8": $primary-8-reverse,
-  "-primary-9": $primary-9-reverse,
-  "-primary-10": $primary-10-reverse,
-  "-success": $success-reverse,
-  "-success-1": $success-1-reverse,
-  "-success-2": $success-2-reverse,
-  "-success-3": $success-3-reverse,
-  "-success-4": $success-4-reverse,
-  "-success-5": $success-5-reverse,
-  "-success-6": $success-6-reverse,
-  "-success-7": $success-7-reverse,
-  "-success-8": $success-8-reverse,
-  "-success-9": $success-9-reverse,
-  "-success-10": $success-10-reverse,
-  "-warning": $warning-reverse,
-  "-warning-1": $warning-1-reverse,
-  "-warning-2": $warning-2-reverse,
-  "-warning-3": $warning-3-reverse,
-  "-warning-4": $warning-4-reverse,
-  "-warning-5": $warning-5-reverse,
-  "-warning-6": $warning-6-reverse,
-  "-warning-7": $warning-7-reverse,
-  "-warning-8": $warning-8-reverse,
-  "-warning-9": $warning-9-reverse,
-  "-warning-10": $warning-10-reverse,
-  "-error": $error-reverse,
-  "-error-1": $error-1-reverse,
-  "-error-2": $error-2-reverse,
-  "-error-3": $error-3-reverse,
-  "-error-4": $error-4-reverse,
-  "-error-5": $error-5-reverse,
-  "-error-6": $error-6-reverse,
-  "-error-7": $error-7-reverse,
-  "-error-8": $error-8-reverse,
-  "-error-9": $error-9-reverse,
-  "-error-10": $error-10-reverse,
-  "-info": $info-reverse,
-  "-info-1": $info-1-reverse,
-  "-info-2": $info-2-reverse,
-  "-info-3": $info-3-reverse,
-  "-info-4": $info-4-reverse,
-  "-info-5": $info-5-reverse,
-  "-info-6": $info-6-reverse,
-  "-info-7": $info-7-reverse,
-  "-info-8": $info-8-reverse,
-  "-info-9": $info-9-reverse,
-  "-info-10": $info-10-reverse
-) !default;
+$m-colors-reverse: () !default;
+@if ($has-red) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-red": $red,
+      "-red-1": $red-1,
+      "-red-2": $red-2,
+      "-red-3": $red-3,
+      "-red-4": $red-4,
+      "-red-5": $red-5,
+      "-red-6": $red-6,
+      "-red-7": $red-7,
+      "-red-8": $red-8,
+      "-red-9": $red-9,
+      "-red-10": $red-10
+    )
+  );
+  $m-colors-reverse: map-merge(
+    $m-colors,
+    (
+      "-red": $red-reverse,
+      "-red-1": $red-1-reverse,
+      "-red-2": $red-2-reverse,
+      "-red-3": $red-3-reverse,
+      "-red-4": $red-4-reverse,
+      "-red-5": $red-5-reverse,
+      "-red-6": $red-6-reverse,
+      "-red-7": $red-7-reverse,
+      "-red-8": $red-8-reverse,
+      "-red-9": $red-9-reverse,
+      "-red-10": $red-10-reverse
+    )
+  );
+}
+@if ($has-volcano) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-volcano": $volcano,
+      "-volcano-1": $volcano-1,
+      "-volcano-2": $volcano-2,
+      "-volcano-3": $volcano-3,
+      "-volcano-4": $volcano-4,
+      "-volcano-5": $volcano-5,
+      "-volcano-6": $volcano-6,
+      "-volcano-7": $volcano-7,
+      "-volcano-8": $volcano-8,
+      "-volcano-9": $volcano-9,
+      "-volcano-10": $volcano-10
+    )
+  );
+  $m-colors-reverse: map-merge(
+    $m-colors,
+    (
+      "-volcano": $volcano-reverse,
+      "-volcano-1": $volcano-1-reverse,
+      "-volcano-2": $volcano-2-reverse,
+      "-volcano-3": $volcano-3-reverse,
+      "-volcano-4": $volcano-4-reverse,
+      "-volcano-5": $volcano-5-reverse,
+      "-volcano-6": $volcano-6-reverse,
+      "-volcano-7": $volcano-7-reverse,
+      "-volcano-8": $volcano-8-reverse,
+      "-volcano-9": $volcano-9-reverse,
+      "-volcano-10": $volcano-10-reverse
+    )
+  );
+}
+@if ($has-orange) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-orange": $orange,
+      "-orange-1": $orange-1,
+      "-orange-2": $orange-2,
+      "-orange-3": $orange-3,
+      "-orange-4": $orange-4,
+      "-orange-5": $orange-5,
+      "-orange-6": $orange-6,
+      "-orange-7": $orange-7,
+      "-orange-8": $orange-8,
+      "-orange-9": $orange-9,
+      "-orange-10": $orange-10
+    )
+  );
+  $m-colors-reverse: map-merge(
+    $m-colors,
+    (
+      "-orange": $orange-reverse,
+      "-orange-1": $orange-1-reverse,
+      "-orange-2": $orange-2-reverse,
+      "-orange-3": $orange-3-reverse,
+      "-orange-4": $orange-4-reverse,
+      "-orange-5": $orange-5-reverse,
+      "-orange-6": $orange-6-reverse,
+      "-orange-7": $orange-7-reverse,
+      "-orange-8": $orange-8-reverse,
+      "-orange-9": $orange-9-reverse,
+      "-orange-10": $orange-10-reverse
+    )
+  );
+}
+@if ($has-gold) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-gold": $gold,
+      "-gold-1": $gold-1,
+      "-gold-2": $gold-2,
+      "-gold-3": $gold-3,
+      "-gold-4": $gold-4,
+      "-gold-5": $gold-5,
+      "-gold-6": $gold-6,
+      "-gold-7": $gold-7,
+      "-gold-8": $gold-8,
+      "-gold-9": $gold-9,
+      "-gold-10": $gold-10
+    )
+  );
+  $m-colors-reverse: map-merge(
+    $m-colors,
+    (
+      "-gold": $gold-reverse,
+      "-gold-1": $gold-1-reverse,
+      "-gold-2": $gold-2-reverse,
+      "-gold-3": $gold-3-reverse,
+      "-gold-4": $gold-4-reverse,
+      "-gold-5": $gold-5-reverse,
+      "-gold-6": $gold-6-reverse,
+      "-gold-7": $gold-7-reverse,
+      "-gold-8": $gold-8-reverse,
+      "-gold-9": $gold-9-reverse,
+      "-gold-10": $gold-10-reverse
+    )
+  );
+}
+@if ($has-yellow) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-yellow": $yellow,
+      "-yellow-1": $yellow-1,
+      "-yellow-2": $yellow-2,
+      "-yellow-3": $yellow-3,
+      "-yellow-4": $yellow-4,
+      "-yellow-5": $yellow-5,
+      "-yellow-6": $yellow-6,
+      "-yellow-7": $yellow-7,
+      "-yellow-8": $yellow-8,
+      "-yellow-9": $yellow-9,
+      "-yellow-10": $yellow-10
+    )
+  );
+  $m-colors-reverse: map-merge(
+    $m-colors,
+    (
+      "-yellow": $yellow-reverse,
+      "-yellow-1": $yellow-1-reverse,
+      "-yellow-2": $yellow-2-reverse,
+      "-yellow-3": $yellow-3-reverse,
+      "-yellow-4": $yellow-4-reverse,
+      "-yellow-5": $yellow-5-reverse,
+      "-yellow-6": $yellow-6-reverse,
+      "-yellow-7": $yellow-7-reverse,
+      "-yellow-8": $yellow-8-reverse,
+      "-yellow-9": $yellow-9-reverse,
+      "-yellow-10": $yellow-10-reverse
+    )
+  );
+}
+@if ($has-lime) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-lime": $lime,
+      "-lime-1": $lime-1,
+      "-lime-2": $lime-2,
+      "-lime-3": $lime-3,
+      "-lime-4": $lime-4,
+      "-lime-5": $lime-5,
+      "-lime-6": $lime-6,
+      "-lime-7": $lime-7,
+      "-lime-8": $lime-8,
+      "-lime-9": $lime-9,
+      "-lime-10": $lime-10
+    )
+  );
+  $m-colors-reverse: map-merge(
+    $m-colors,
+    (
+      "-lime": $lime-reverse,
+      "-lime-1": $lime-1-reverse,
+      "-lime-2": $lime-2-reverse,
+      "-lime-3": $lime-3-reverse,
+      "-lime-4": $lime-4-reverse,
+      "-lime-5": $lime-5-reverse,
+      "-lime-6": $lime-6-reverse,
+      "-lime-7": $lime-7-reverse,
+      "-lime-8": $lime-8-reverse,
+      "-lime-9": $lime-9-reverse,
+      "-lime-10": $lime-10-reverse
+    )
+  );
+}
+@if ($has-green) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-green": $green,
+      "-green-1": $green-1,
+      "-green-2": $green-2,
+      "-green-3": $green-3,
+      "-green-4": $green-4,
+      "-green-5": $green-5,
+      "-green-6": $green-6,
+      "-green-7": $green-7,
+      "-green-8": $green-8,
+      "-green-9": $green-9,
+      "-green-10": $green-10
+    )
+  );
+  $m-colors-reverse: map-merge(
+    $m-colors,
+    (
+      "-green": $green-reverse,
+      "-green-1": $green-1-reverse,
+      "-green-2": $green-2-reverse,
+      "-green-3": $green-3-reverse,
+      "-green-4": $green-4-reverse,
+      "-green-5": $green-5-reverse,
+      "-green-6": $green-6-reverse,
+      "-green-7": $green-7-reverse,
+      "-green-8": $green-8-reverse,
+      "-green-9": $green-9-reverse,
+      "-green-10": $green-10-reverse
+    )
+  );
+}
+@if ($has-cyan) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-cyan": $cyan,
+      "-cyan-1": $cyan-1,
+      "-cyan-2": $cyan-2,
+      "-cyan-3": $cyan-3,
+      "-cyan-4": $cyan-4,
+      "-cyan-5": $cyan-5,
+      "-cyan-6": $cyan-6,
+      "-cyan-7": $cyan-7,
+      "-cyan-8": $cyan-8,
+      "-cyan-9": $cyan-9,
+      "-cyan-10": $cyan-10
+    )
+  );
+  $m-colors-reverse: map-merge(
+    $m-colors,
+    (
+      "-cyan": $cyan-reverse,
+      "-cyan-1": $cyan-1-reverse,
+      "-cyan-2": $cyan-2-reverse,
+      "-cyan-3": $cyan-3-reverse,
+      "-cyan-4": $cyan-4-reverse,
+      "-cyan-5": $cyan-5-reverse,
+      "-cyan-6": $cyan-6-reverse,
+      "-cyan-7": $cyan-7-reverse,
+      "-cyan-8": $cyan-8-reverse,
+      "-cyan-9": $cyan-9-reverse,
+      "-cyan-10": $cyan-10-reverse
+    )
+  );
+}
+@if ($has-blue) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-blue": $blue,
+      "-blue-1": $blue-1,
+      "-blue-2": $blue-2,
+      "-blue-3": $blue-3,
+      "-blue-4": $blue-4,
+      "-blue-5": $blue-5,
+      "-blue-6": $blue-6,
+      "-blue-7": $blue-7,
+      "-blue-8": $blue-8,
+      "-blue-9": $blue-9,
+      "-blue-10": $blue-10
+    )
+  );
+  $m-colors-reverse: map-merge(
+    $m-colors,
+    (
+      "-blue": $blue-reverse,
+      "-blue-1": $blue-1-reverse,
+      "-blue-2": $blue-2-reverse,
+      "-blue-3": $blue-3-reverse,
+      "-blue-4": $blue-4-reverse,
+      "-blue-5": $blue-5-reverse,
+      "-blue-6": $blue-6-reverse,
+      "-blue-7": $blue-7-reverse,
+      "-blue-8": $blue-8-reverse,
+      "-blue-9": $blue-9-reverse,
+      "-blue-10": $blue-10-reverse
+    )
+  );
+}
+@if ($has-geek-blue) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-geek-blue": $geek-blue,
+      "-geek-blue-1": $geek-blue-1,
+      "-geek-blue-2": $geek-blue-2,
+      "-geek-blue-3": $geek-blue-3,
+      "-geek-blue-4": $geek-blue-4,
+      "-geek-blue-5": $geek-blue-5,
+      "-geek-blue-6": $geek-blue-6,
+      "-geek-blue-7": $geek-blue-7,
+      "-geek-blue-8": $geek-blue-8,
+      "-geek-blue-9": $geek-blue-9,
+      "-geek-blue-10": $geek-blue-10
+    )
+  );
+  $m-colors-reverse: map-merge(
+    $m-colors,
+    (
+      "-geek-blue": $geek-blue-reverse,
+      "-geek-blue-1": $geek-blue-1-reverse,
+      "-geek-blue-2": $geek-blue-2-reverse,
+      "-geek-blue-3": $geek-blue-3-reverse,
+      "-geek-blue-4": $geek-blue-4-reverse,
+      "-geek-blue-5": $geek-blue-5-reverse,
+      "-geek-blue-6": $geek-blue-6-reverse,
+      "-geek-blue-7": $geek-blue-7-reverse,
+      "-geek-blue-8": $geek-blue-8-reverse,
+      "-geek-blue-9": $geek-blue-9-reverse,
+      "-geek-blue-10": $geek-blue-10-reverse
+    )
+  );
+}
+@if ($has-purple) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-purple": $purple,
+      "-purple-1": $purple-1,
+      "-purple-2": $purple-2,
+      "-purple-3": $purple-3,
+      "-purple-4": $purple-4,
+      "-purple-5": $purple-5,
+      "-purple-6": $purple-6,
+      "-purple-7": $purple-7,
+      "-purple-8": $purple-8,
+      "-purple-9": $purple-9,
+      "-purple-10": $purple-10
+    )
+  );
+  $m-colors-reverse: map-merge(
+    $m-colors,
+    (
+      "-purple": $purple-reverse,
+      "-purple-1": $purple-1-reverse,
+      "-purple-2": $purple-2-reverse,
+      "-purple-3": $purple-3-reverse,
+      "-purple-4": $purple-4-reverse,
+      "-purple-5": $purple-5-reverse,
+      "-purple-6": $purple-6-reverse,
+      "-purple-7": $purple-7-reverse,
+      "-purple-8": $purple-8-reverse,
+      "-purple-9": $purple-9-reverse,
+      "-purple-10": $purple-10-reverse
+    )
+  );
+}
+@if ($has-magenta) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-magenta": $magenta,
+      "-magenta-1": $magenta-1,
+      "-magenta-2": $magenta-2,
+      "-magenta-3": $magenta-3,
+      "-magenta-4": $magenta-4,
+      "-magenta-5": $magenta-5,
+      "-magenta-6": $magenta-6,
+      "-magenta-7": $magenta-7,
+      "-magenta-8": $magenta-8,
+      "-magenta-9": $magenta-9,
+      "-magenta-10": $magenta-10
+    )
+  );
+  $m-colors-reverse: map-merge(
+    $m-colors,
+    (
+      "-magenta": $magenta-reverse,
+      "-magenta-1": $magenta-1-reverse,
+      "-magenta-2": $magenta-2-reverse,
+      "-magenta-3": $magenta-3-reverse,
+      "-magenta-4": $magenta-4-reverse,
+      "-magenta-5": $magenta-5-reverse,
+      "-magenta-6": $magenta-6-reverse,
+      "-magenta-7": $magenta-7-reverse,
+      "-magenta-8": $magenta-8-reverse,
+      "-magenta-9": $magenta-9-reverse,
+      "-magenta-10": $magenta-10-reverse
+    )
+  );
+}
+@if ($has-primary) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-primary": $primary,
+      "-primary-1": $primary-1,
+      "-primary-2": $primary-2,
+      "-primary-3": $primary-3,
+      "-primary-4": $primary-4,
+      "-primary-5": $primary-5,
+      "-primary-6": $primary-6,
+      "-primary-7": $primary-7,
+      "-primary-8": $primary-8,
+      "-primary-9": $primary-9,
+      "-primary-10": $primary-10
+    )
+  );
+  $m-colors-reverse: map-merge(
+    $m-colors,
+    (
+      "-primary": $primary-reverse,
+      "-primary-1": $primary-1-reverse,
+      "-primary-2": $primary-2-reverse,
+      "-primary-3": $primary-3-reverse,
+      "-primary-4": $primary-4-reverse,
+      "-primary-5": $primary-5-reverse,
+      "-primary-6": $primary-6-reverse,
+      "-primary-7": $primary-7-reverse,
+      "-primary-8": $primary-8-reverse,
+      "-primary-9": $primary-9-reverse,
+      "-primary-10": $primary-10-reverse
+    )
+  );
+}
+@if ($has-success) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-success": $success,
+      "-success-1": $success-1,
+      "-success-2": $success-2,
+      "-success-3": $success-3,
+      "-success-4": $success-4,
+      "-success-5": $success-5,
+      "-success-6": $success-6,
+      "-success-7": $success-7,
+      "-success-8": $success-8,
+      "-success-9": $success-9,
+      "-success-10": $success-10
+    )
+  );
+  $m-colors-reverse: map-merge(
+    $m-colors,
+    (
+      "-success": $success-reverse,
+      "-success-1": $success-1-reverse,
+      "-success-2": $success-2-reverse,
+      "-success-3": $success-3-reverse,
+      "-success-4": $success-4-reverse,
+      "-success-5": $success-5-reverse,
+      "-success-6": $success-6-reverse,
+      "-success-7": $success-7-reverse,
+      "-success-8": $success-8-reverse,
+      "-success-9": $success-9-reverse,
+      "-success-10": $success-10-reverse
+    )
+  );
+}
+@if ($has-warning) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-warning": $warning,
+      "-warning-1": $warning-1,
+      "-warning-2": $warning-2,
+      "-warning-3": $warning-3,
+      "-warning-4": $warning-4,
+      "-warning-5": $warning-5,
+      "-warning-6": $warning-6,
+      "-warning-7": $warning-7,
+      "-warning-8": $warning-8,
+      "-warning-9": $warning-9,
+      "-warning-10": $warning-10
+    )
+  );
+  $m-colors-reverse: map-merge(
+    $m-colors,
+    (
+      "-warning": $warning-reverse,
+      "-warning-1": $warning-1-reverse,
+      "-warning-2": $warning-2-reverse,
+      "-warning-3": $warning-3-reverse,
+      "-warning-4": $warning-4-reverse,
+      "-warning-5": $warning-5-reverse,
+      "-warning-6": $warning-6-reverse,
+      "-warning-7": $warning-7-reverse,
+      "-warning-8": $warning-8-reverse,
+      "-warning-9": $warning-9-reverse,
+      "-warning-10": $warning-10-reverse
+    )
+  );
+}
+@if ($has-error) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-error": $error,
+      "-error-1": $error-1,
+      "-error-2": $error-2,
+      "-error-3": $error-3,
+      "-error-4": $error-4,
+      "-error-5": $error-5,
+      "-error-6": $error-6,
+      "-error-7": $error-7,
+      "-error-8": $error-8,
+      "-error-9": $error-9,
+      "-error-10": $error-10
+    )
+  );
+  $m-colors-reverse: map-merge(
+    $m-colors,
+    (
+      "-error": $error-reverse,
+      "-error-1": $error-1-reverse,
+      "-error-2": $error-2-reverse,
+      "-error-3": $error-3-reverse,
+      "-error-4": $error-4-reverse,
+      "-error-5": $error-5-reverse,
+      "-error-6": $error-6-reverse,
+      "-error-7": $error-7-reverse,
+      "-error-8": $error-8-reverse,
+      "-error-9": $error-9-reverse,
+      "-error-10": $error-10-reverse
+    )
+  );
+}
+@if ($has-info) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-info": $info,
+      "-info-1": $info-1,
+      "-info-2": $info-2,
+      "-info-3": $info-3,
+      "-info-4": $info-4,
+      "-info-5": $info-5,
+      "-info-6": $info-6,
+      "-info-7": $info-7,
+      "-info-8": $info-8,
+      "-info-9": $info-9,
+      "-info-10": $info-10
+    )
+  );
+  $m-colors-reverse: map-merge(
+    $m-colors,
+    (
+      "-info": $info-reverse,
+      "-info-1": $info-1-reverse,
+      "-info-2": $info-2-reverse,
+      "-info-3": $info-3-reverse,
+      "-info-4": $info-4-reverse,
+      "-info-5": $info-5-reverse,
+      "-info-6": $info-6-reverse,
+      "-info-7": $info-7-reverse,
+      "-info-8": $info-8-reverse,
+      "-info-9": $info-9-reverse,
+      "-info-10": $info-10-reverse
+    )
+  );
+}
+
 
 /* 定位变量 positioning */
 // z-index
@@ -807,9 +1006,7 @@ $tmp-z-index: $z-index-min;
 
 /* 盒模型变量 box-model */
 // flex-shrink
-$m-flex-shrink: (
-  "-default": $flex-shrink-default
-) !default;
+$m-flex-shrink: () !default;
 $tmp-flex-shrink: $flex-shrink-min;
 @while ($tmp-flex-shrink <= $flex-shrink-max) {
   $m-flex-shrink: map-merge(
@@ -821,9 +1018,7 @@ $tmp-flex-shrink: $flex-shrink-min;
   $tmp-flex-shrink: $tmp-flex-shrink + $flex-shrink-step;
 }
 // flex-grow
-$m-flex-grow: (
-  "-default": $flex-grow-default
-) !default;
+$m-flex-grow: () !default;
 $tmp-flex-grow: $flex-grow-min;
 @while ($tmp-flex-grow <= $flex-grow-max) {
   $m-flex-grow: map-merge(
@@ -835,11 +1030,7 @@ $tmp-flex-grow: $flex-grow-min;
   $tmp-flex-grow: $tmp-flex-grow + $flex-grow-step;
 }
 // order
-$m-order: (
-  "-first": $order-first,
-  "-last": $order-last,
-  "-default": $order-default
-) !default;
+$m-order: () !default;
 $tmp-order: $order-min;
 @while ($tmp-order <= $order-max) {
   $m-order: map-merge(
@@ -926,9 +1117,6 @@ $tmp-height: $height-min;
 }
 // padding
 $m-padding: (
-  "-full": 100%,
-  "-half": 50%,
-  "-auto": auto,
   "-xs": (
     $padding-base - $padding-diff * 2
   ) * $scale + $unit,
@@ -979,8 +1167,6 @@ $tmp-padding: $padding-min;
 }
 // margin
 $m-margin: (
-  "-full": 100%,
-  "-half": 50%,
   "-auto": auto,
   "-xs": (
     $margin-base - $margin-diff * 2
@@ -1035,12 +1221,11 @@ $tmp-margin: $margin-min;
 // font-family
 $m-font-family: (
   "": $font-family-default,
-  "-sans": $font-family-sans,
-  "-serif": $font-family-serif,
   "-mono": $font-family-mono
 ) !default;
 // font-size
 $m-font-size: (
+  "": $font-size-base * $scale + $diff,
   "-xs": (
     $font-size-base - $font-size-diff * 2
   ) * $scale + $unit,
@@ -1067,6 +1252,7 @@ $tmp-font-size: $font-size-min;
 }
 // line-height
 $m-line-height: (
+  "": $line-height-default,
   "-xs": $line-height-default - $line-height-diff * 2,
   "-sm": $line-height-default - $line-height-diff,
   "-md": $line-height-default,
@@ -1097,6 +1283,7 @@ $color-main-small-reverse: fade-out($white, .15) !default;
 $color-secondary-reverse: fade-out($white, .55) !default;
 $color-disabled-reverse: fade-out($white, .7) !default;
 $m-color: (
+  "": $color-main,
   "-title": $color-title,
   "-title-small": $color-title-small,
   "-main": $color-main,
@@ -1105,6 +1292,7 @@ $m-color: (
   "-disabled": $color-disabled
 ) !default;
 $m-color-reverse: (
+  "": $color-main-reverse,
   "-title": $color-title-reverse,
   "-title-small": $color-title-small-reverse,
   "-main": $color-main-reverse,
