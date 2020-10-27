@@ -1,6 +1,6 @@
 # 指南
 
-`@modyqyw/mp-scss`是一个面向小程序和基于 Flexbox 的 SCSS 库，用于快速实现自定义设计。
+`@modyqyw/mp-scss`是一个基于 Flexbox 的小程序 SCSS 库，用于快速实现自定义设计。
 
 `@modyqyw/mp-scss`定位介乎于`tailwindcss`和`bootstrap`，包含的东西比`tailwindcss`多、比`bootstrap`少，更贴近`tailwindcss`。
 

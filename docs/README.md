@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: '@modyqyw/mp-scss'
-tagline: 一个面向小程序和基于 Flexbox 的 SCSS 库，用于快速实现自定义设计。
+tagline: 一个基于 Flexbox 的小程序 SCSS 库，用于快速实现自定义设计。
 actionText: 指南 →
 actionLink: /guide/
 features:

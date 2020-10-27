@@ -1,10 +1,10 @@
 # @modyqyw/mp-scss
 
-A miniprogram-oriented and flexbox-based SCSS lib for quickly building custom designs.
+A flexbox-based miniprogram SCSS lib for quickly building custom designs.
 
 Chinese docs are provided only since miniprograms are used almost only in China.
 
-一个面向小程序和基于 Flexbox 的 SCSS 库，用于快速实现自定义设计。
+一个基于 Flexbox 的小程序 SCSS 库，用于快速实现自定义设计。
 
 完整文档见 [Github Page](https://millcloud.github.io/mp-scss/) 或 [Gitee Page](https://millcloud.gitee.io/mp-scss/)。
 
