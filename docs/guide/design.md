@@ -12,4 +12,4 @@
 
 只提供常用的布局类，即`.container`，`.header`，`.navbar`，`aside`，`.main`，`.footer`和`.safe-area`的相关类。
 
-只提供有限的组件类，即`.badge`，`.btn`，`.card`，`.divider`，`.icon`，`input`，`.overlay`的相关类。
+只提供有限的组件类，即`.badge`，`.btn`，`.card`，`.divider`，`.icon`，`.input`，`.overlay`的相关类。
