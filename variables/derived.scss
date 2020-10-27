@@ -1270,33 +1270,21 @@ $tmp-line-height: $line-height-min;
   $tmp-line-height: $tmp-line-height + $line-height-step;
 }
 // color
-$color-title: fade-out($black, .15) !default;
-$color-title-small: fade-out($black, .15) !default;
 $color-main: fade-out($black, .15) !default;
-$color-main-small: fade-out($black, .15) !default;
 $color-secondary: fade-out($black, .55) !default;
 $color-disabled: fade-out($black, .75) !default;
-$color-title-reverse: fade-out($white, .15) !default;
-$color-title-small-reverse: fade-out($white, .15) !default;
 $color-main-reverse: fade-out($white, .15) !default;
-$color-main-small-reverse: fade-out($white, .15) !default;
 $color-secondary-reverse: fade-out($white, .55) !default;
 $color-disabled-reverse: fade-out($white, .7) !default;
 $m-color: (
   "": $color-main,
-  "-title": $color-title,
-  "-title-small": $color-title-small,
   "-main": $color-main,
-  "-main-small": $color-main-small,
   "-secondary": $color-secondary,
   "-disabled": $color-disabled
 ) !default;
 $m-color-reverse: (
   "": $color-main-reverse,
-  "-title": $color-title-reverse,
-  "-title-small": $color-title-small-reverse,
   "-main": $color-main-reverse,
-  "-main-small": $color-main-small-reverse,
   "-secondary": $color-secondary-reverse,
   "-disabled": $color-disabled-reverse
 ) !default;
