@@ -25,8 +25,6 @@ $m-position: (
 @import "~@modyqyw/mp-scss/classes";
 @import "~@modyqyw/mp-scss/classes/positioning";
 @import "~@modyqyw/mp-scss/classes/positioning/position";
-
-// 最终得到 .relative, .absolute, .fixed
 ```
 
 ## top/right/bottom/left
@@ -44,7 +42,7 @@ $m-position: (
 这部分由`$m-position-value`生成，在引入之前修改`$m-position-value`可以自定义。
 
 ```scss
-// 增加 .*-auto
+// 增加 .top-auto, .right-auto, .bottom-auto, .left-auto, .inset-auto, .inset-y-auto, .inset-x-auto
 $m-position-value: (
   "-0": 0,
   "-auto": auto
@@ -55,8 +53,6 @@ $m-position-value: (
 @import "~@modyqyw/mp-scss/classes";
 @import "~@modyqyw/mp-scss/classes/positioning";
 @import "~@modyqyw/mp-scss/classes/positioning/position-value";
-
-// 最终得到 .top-0, .top-auto, .right-0, .right-auto, .bottom-0, .bottom-auto, .left-0, .left-auto, .inset-0, .inset-auto, .inset-y-0, .inset-y-auto, .inset-x-0, .inset-x-auto
 ```
 
 ## z-index
