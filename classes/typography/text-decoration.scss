@@ -1,7 +1,7 @@
 @import "../../variables";
 
 @each $k, $v in $m-text-decoration {
-  .text-decoration#{$k} {
+  .text#{$k} {
     text-decoration: $v;
   }
 }

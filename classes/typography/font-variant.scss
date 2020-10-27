@@ -1,3 +1,7 @@
-.tabular-nums {
-  font-variant: tabular-nums;
+@import "../../variables";
+
+@each $k, $v in $m-font-variant {
+  .#{$k} {
+    font-variant: $v;
+  }
 }
