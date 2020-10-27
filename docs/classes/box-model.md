@@ -428,8 +428,6 @@ $width-has-1-real: false;
 // 最终得到 .w-full, .w-half, .w-auto, .w-*-6, .w-*-8, .w-*-10, .w-0, .w-1, .w-2
 ```
 
-修改缩放倍数或修改单位请查看[进阶](../advance/README.md)。
-
 ## height
 
 |类名|样式|
@@ -518,8 +516,6 @@ $height-has-1-real: false;
 
 // 最终得到 .h-full, .h-half, .h-*-6, .h-*-8, .h-*-10, .h-0, .h-1, .h-2
 ```
-
-修改缩放倍数或修改单位请查看[进阶](../advance/README.md)。
 
 ## padding
 
@@ -629,8 +625,6 @@ $padding-has-1-real: false;
 
 // 最终得到 .p-auto, .p-xs, .p-sm, .p-md, .p-lg, .p-xl, .p-*-6, .p-*-8, .p-*-10, .p-0, .p-1, .p-2
 ```
-
-修改缩放倍数或修改单位请查看[进阶](../advance/README.md)。
 
 ## margin
 
@@ -742,8 +736,6 @@ $margin-has-1-real: false;
 
 // 最终得到 .m-half, .m-auto, .m-xs, .m-sm, .m-md, .m-lg, .m-xl, .m-*-6, .m-*-8, .m-*-10, .m-0, .m-1, .m-2
 ```
-
-修改缩放倍数或修改单位请查看[进阶](../advance/README.md)。
 
 ## overflow
 

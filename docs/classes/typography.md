@@ -114,17 +114,10 @@ $m-font-style: (
 |类名|样式|
 |---|---|
 |`.text`|`font-weight: 400;`|
-|`.text-thin`|`font-weight: 400;`|
-|`.text-extra-light`|`font-weight: 400;`|
-|`.text-ultra-light`|`font-weight: 400;`|
-|`.text-light`|`font-weight: 400;`|
 |`.text-regular`|`font-weight: 400;`|
 |`.text-medium`|`font-weight: 500;`|
 |`.text-semi-bold`|`font-weight: 600;`|
 |`.text-bold`|`font-weight: 700;`|
-|`.text-extra-bold`|`font-weight: 800;`|
-|`.text-ultra-bold`|`font-weight: 800;`|
-|`.text-heavy`|`font-weight: 900;`|
 
 这部分由`$m-font-weight`生成，在引入之前修改`$m-font-weight`可以自定义。
 
@@ -236,9 +229,25 @@ $line-height-step: 2;
 |`.is-dark .text-secondary`, `.is-dark.text-secondary`|`color: rgba(255, 255, 255, .45);`|
 |`.is-dark .text-disabled`, `.is-dark.text-disabled`|`color: rgba(255, 255, 255, .3);`|
 
-这部分由`$m-colors`，`$m-colors-reverse`，`$m-color`和`$m-color-reverse`生成，由于篇幅原因，省略了`$m-colors`和`$m-colors-reverse`生成的类。在引入之前做相关修改可以自定义。修改`$m-colors`和`$m-colors-reverse`见[进阶](../advance/README.md)，下面是修改`$m-color`和`$m-color-reverse`的示例。
+这部分由`$m-colors`，`$m-colors-reverse`，`$m-color`和`$m-color-reverse`生成，由于篇幅原因，省略了`$m-colors`和`$m-colors-reverse`生成的类。修改`$m-colors`和`$m-colors-reverse`可以自定义，见[进阶](../advance/README.md)。在引入之前做相关修改也可以自定义，下面是修改的示例。
 
 ```scss
+// 修改颜色
+$color-main: #333;
+$color-main-reverse: #333;
+// 也可以直接修改 $m-color 和 $m-color-reverse
+$m-color: (
+  "": #333,
+  "-main": #333,
+  "-secondary": #999,
+  "-disabled": #ccc
+) !default;
+$m-color-reverse: (
+  "": #333,
+  "-main": #333,
+  "-secondary": #999,
+  "-disabled": #ccc
+) !default;
 
 // 结合实际情况四选一引入
 @import "~@modyqyw/mp-scss";
