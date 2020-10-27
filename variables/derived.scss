@@ -1339,6 +1339,8 @@ $tmp-border-width: $border-width-min;
 }
 // border-radius
 $m-border-radius: (
+  "-full": 100%,
+  "-half": 50%,
   "": $border-radius-base * $scale + $unit,
   "-xs": (
     $border-radius-base - $border-radius-diff * 2
@@ -1352,9 +1354,7 @@ $m-border-radius: (
   ) * $scale + $unit,
   "-xl": (
     $border-radius-base + $border-radius-diff * 2
-  ) * $scale + $unit,
-  "-half": 50%,
-  "-full": 100%
+  ) * $scale + $unit
 ) !default;
 $tmp-border-radius: $border-radius-min;
 @while ($tmp-border-radius <= $border-radius-max) {

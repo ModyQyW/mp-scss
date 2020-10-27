@@ -258,8 +258,6 @@ $m-background-repeat: (
   "-repeat": repeat,
   "-repeat-y": repeat-y,
   "-repeat-x": repeat-x,
-  "-repeat-space": space,
-  "-repeat-round": round,
   "-no-repeat": no-repeat
 ) !default;
 // background-attachment
@@ -306,8 +304,12 @@ $border-width-has-1-real: true !default;
 $border-radius-base: 2 !default;
 $border-radius-diff: 1 !default;
 $border-radius-min: 0 !default;
-$border-radius-max: 8 !default;
+$border-radius-max: 4 !default;
 $border-radius-step: 1 !default;
+// outline
+$m-outline: (
+  "-none": none
+);
 // box-shadow
 $box-shadow-umbra: rgba(0, 0, 0, .2) !default;
 $box-shadow-penumbra: rgba(0, 0, 0, .14) !default;
@@ -317,9 +319,6 @@ $box-shadow-ambient: rgba(0, 0, 0, .12) !default;
 // opacity
 $m-opacity: (
   "-0": 0,
-  "-25": .25,
-  "-50": .5,
-  "-75": .75,
   "-100": 1
 ) !default;
 // transition
