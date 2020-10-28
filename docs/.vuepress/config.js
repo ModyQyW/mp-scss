@@ -203,8 +203,6 @@ module.exports = {
     },
     sidebarDepth: 4,
     lastUpdated: 'Last Updated',
-    repo: 'MillCloud/mp-scss',
-    repoLabel: '查看源码',
   },
   plugins: [
     '@vuepress/active-header-links',
