@@ -205,14 +205,12 @@
   > .prefix {
     display: inline-flex;
     justify-content: flex-start;
-    order: $order-first;
     margin-right: $input-wrapper-prefix-margin-right;
   }
 
   > .suffix {
     display: inline-flex;
     justify-content: flex-end;
-    order: $order-last;
     margin-left: $input-wrapper-suffix-margin-left;
   }
 
