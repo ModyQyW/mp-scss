@@ -1,7 +1,7 @@
 @import "../../variables";
 
-@for $v from 0 to 24 {
-  .shadow-#{$v} {
-    box-shadow: map-get($m-box-shadow-umbra, $v), map-get($m-box-shadow-penumbra, $v), map-get($m-box-shadow-ambient, $v);
+@each $k, $v in $box-shadow {
+  .shadow#{$k} {
+    box-shadow: $v;
   }
 }
