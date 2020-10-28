@@ -9,12 +9,11 @@
 这部分由`$m-box-sizing`生成，在引入之前修改`$m-box-sizing`可以自定义。
 
 ```scss
-// 添加 .box-content
+// 生成 .box-content, .box-border
 $m-box-sizing: (
   "-content": content-box,
   "-border": border-box
 );
-
 // 结合实际情况四选一引入
 @import "~@modyqyw/mp-scss";
 @import "~@modyqyw/mp-scss/classes";
@@ -28,7 +27,6 @@ $m-box-sizing: (
 |---|---|
 |`.d-block`|`display: block;`|
 |`.d-inline-block`|`display: inline-block;`|
-|`.d-inline`|`display: inline;`|
 |`.d-flex`|`display: flex;`|
 |`.d-inline-flex`|`display: inline-flex;`|
 |`.d-none`|`display: none;`|
@@ -36,7 +34,7 @@ $m-box-sizing: (
 这部分由`$m-display`生成，在引入之前修改`$m-display`可以自定义。
 
 ```scss
-// 添加 .d-inline-block, .d-inline, .d-inline-flex
+// 生成 .d-block, .d-inline-block, .d-inline, .d-flex, .d-inline-flex, .d-none
 $m-display: (
   "-block": block,
   "-inline-block": inline-block,
@@ -45,7 +43,6 @@ $m-display: (
   "-inline-flex": inline-flex,
   "-none": none
 );
-
 // 结合实际情况四选一引入
 @import "~@modyqyw/mp-scss";
 @import "~@modyqyw/mp-scss/classes";
@@ -63,13 +60,12 @@ $m-display: (
 这部分由`$m-flex`生成，在引入之前修改`$m-flex`可以自定义。
 
 ```scss
-// 添加 .flex-default
+// 生成 .flex, .flex-auto, .flex-none
 $m-flex: (
-  "-default": 0 1 auto,
+  "": 0 1 auto,
   "-auto": 1 1 auto,
   "-none": 0 0 auto
 );
-
 // 结合实际情况四选一引入
 @import "~@modyqyw/mp-scss";
 @import "~@modyqyw/mp-scss/classes";
@@ -82,19 +78,18 @@ $m-flex: (
 |类名|样式|
 |---|---|
 |`.flex-row`|`flex-direction: row;`|
-|`.flex-col`|`flex-direction: col;`|
+|`.flex-col`|`flex-direction: column;`|
 
 这部分由`$m-flex-direction`生成，在引入之前修改`$m-flex-direction`可以自定义。
 
 ```scss
-// 添加 .flex-row-reverse, .flex-col-reverse
+// 生成 .flex-row, .flex-row-reverse, .flex-col, .flex-col-reverse
 $m-flex-direction: (
   "-row": row,
   "-row-reverse": row-reverse,
   "-col": column,
   "-col-reverse": column-reverse
 );
-
 // 结合实际情况四选一引入
 @import "~@modyqyw/mp-scss";
 @import "~@modyqyw/mp-scss/classes";
@@ -112,13 +107,12 @@ $m-flex-direction: (
 这部分由`$m-flex-wrap`生成，在引入之前修改`$m-flex-wrap`可以自定义。
 
 ```scss
-// 添加 .flex-wrap-reverse
+// 生成 .flex-nowrap, .flex-wrap, .flex-wrap-reverse
 $m-flex-wrap: (
   "-nowrap": nowrap,
   "-wrap": wrap,
   "-wrap-reverse": wrap-reverse
 );
-
 // 结合实际情况四选一引入
 @import "~@modyqyw/mp-scss";
 @import "~@modyqyw/mp-scss/classes";
@@ -132,28 +126,24 @@ $m-flex-wrap: (
 |---|---|
 |`.flex-shrink-0`|`flex-shrink: 0;`|
 |`.flex-shrink-1`|`flex-shrink: 1;`|
-|`.flex-shrink-2`|`flex-shrink: 2;`|
 
 这部分由`$m-flex-shrink`生成，在引入之前做相关修改可以自定义。
 
 ```scss
-// 添加 .flex-shrink-default
+// 生成 .flex-shrink-2
 $m-flex-shrink: (
-  "-default": 1
+  "-2": 2
 );
-
 // 设置 min, max, step 循环填充映射
+// 生成 .flex-shrink-0, .flex-shrink-1, .flex-shrink-2
 $flex-shrink-min: 0;
-$flex-shrink-max: 4;
-$flex-shrink-step: 2;
-
+$flex-shrink-max: 2;
+$flex-shrink-step: 1;
 // 结合实际情况四选一引入
 @import "~@modyqyw/mp-scss";
 @import "~@modyqyw/mp-scss/classes";
 @import "~@modyqyw/mp-scss/classes/box-model";
 @import "~@modyqyw/mp-scss/classes/box-model/flex-shrink";
-
-// 最终得到 .flex-shrink-default, .flex-shrink-0, .flex-shrink-2, .flex-shrink-4
 ```
 
 ## flex-grow
@@ -162,28 +152,24 @@ $flex-shrink-step: 2;
 |---|---|
 |`.flex-grow-0`|`flex-grow: 0;`|
 |`.flex-grow-1`|`flex-grow: 1;`|
-|`.flex-grow-2`|`flex-grow: 2;`|
 
 这部分由`$m-flex-grow`生成，在引入之前做相关修改可以自定义。
 
 ```scss
-// 添加 .flex-grow-default
+// 生成 .flex-grow-2
 $m-flex-grow: (
-  "-default": 0
+  "-2": 2
 );
-
 // 设置 min, max, step 循环填充映射
+// 生成 .flex-grow-0, .flex-grow-1, .flex-grow-2
 $flex-grow-min: 0;
-$flex-grow-max: 4;
-$flex-grow-step: 2;
-
+$flex-grow-max: 2;
+$flex-grow-step: 1;
 // 结合实际情况四选一引入
 @import "~@modyqyw/mp-scss";
 @import "~@modyqyw/mp-scss/classes";
 @import "~@modyqyw/mp-scss/classes/box-model";
 @import "~@modyqyw/mp-scss/classes/box-model/flex-grow";
-
-// 最终得到 .flex-grow-default, .flex-grow-0, .flex-grow-2, .flex-grow-4
 ```
 
 ## align-content
@@ -195,12 +181,13 @@ $flex-grow-step: 2;
 |`.align-content-center`|`align-content: center;`|
 |`.align-content-space-between`|`align-content: space-between;`|
 |`.align-content-space-around`|`align-content: space-around;`|
-|`.align-content-space-evenly`|`align-content: space-evenly;`|
 
 这部分由`$m-align-content`生成，在引入之前修改`$m-align-content`可以自定义。
 
 ```scss
-// 添加 .align-content-stretch
+// 生成 .align-content-start, .align-content-end, .align-content-center,
+//     .align-content-space-between, .align-content-space-around,
+//     .align-content-evenly, .align-content-stretch
 $m-align-content: (
   "-start": flex-start,
   "-end": flex-end,
@@ -210,7 +197,6 @@ $m-align-content: (
   "-space-evenly": space-evenly,
   "-stretch": stretch
 );
-
 // 结合实际情况四选一引入
 @import "~@modyqyw/mp-scss";
 @import "~@modyqyw/mp-scss/classes";
@@ -229,7 +215,7 @@ $m-align-content: (
 这部分由`$m-align-items`生成，在引入之前修改`$m-align-items`可以自定义。
 
 ```scss
-// 添加 .align-baseline, .align-stretch
+// 生成 .align-start, .align-end, .align-center, .align-baseline, .align-stretch
 $m-align-items: (
   "-start": flex-start,
   "-end": flex-end,
@@ -237,7 +223,6 @@ $m-align-items: (
   "-baseline": baseline,
   "-stretch": stretch
 );
-
 // 结合实际情况四选一引入
 @import "~@modyqyw/mp-scss";
 @import "~@modyqyw/mp-scss/classes";
@@ -249,7 +234,6 @@ $m-align-items: (
 
 |类名|样式|
 |---|---|
-|`.align-self-auto`|`align-self: auto;`|
 |`.align-self-start`|`align-self: flex-start;`|
 |`.align-self-end`|`align-self: flex-end;`|
 |`.align-self-center`|`align-self: center;`|
@@ -257,7 +241,8 @@ $m-align-items: (
 这部分由`$m-align-self`生成，在引入之前修改`$m-align-self`可以自定义。
 
 ```scss
-// 添加 .align-self-stretch
+// 生成 .align-self-auto, .align-self-start, .align-self-end, .align-self-center,
+//     .align-self-stretch
 $m-align-self: (
   "-auto": auto,
   "-start": flex-start,
@@ -265,7 +250,6 @@ $m-align-self: (
   "-center": center,
   "-stretch": stretch
 );
-
 // 结合实际情况四选一引入
 @import "~@modyqyw/mp-scss";
 @import "~@modyqyw/mp-scss/classes";
@@ -282,12 +266,12 @@ $m-align-self: (
 |`.justify-center`|`justify-content: center;`|
 |`.justify-space-between`|`justify-content: space-between;`|
 |`.justify-space-around`|`justify-content: space-around;`|
-|`.justify-space-evenly`|`justify-content: space-evenly;`|
 
 这部分由`$m-justify-content`生成，在引入之前修改`$m-justify-content`可以自定义。
 
 ```scss
-// 添加 .justify-stretch
+// 生成 .justify-start, .justify-end, .justify-center, .justify-space-between,
+//     .justify-space-around, .justify-space-evenly, .justify-stretch
 $m-justify-content: (
   "-start": flex-start,
   "-end": flex-end,
@@ -297,7 +281,6 @@ $m-justify-content: (
   "-space-evenly": space-evenly,
   "-stretch": stretch
 );
-
 // 结合实际情况四选一引入
 @import "~@modyqyw/mp-scss";
 @import "~@modyqyw/mp-scss/classes";
@@ -318,25 +301,21 @@ $m-justify-content: (
 这部分由`$m-order`生成，在引入之前做相关修改可以自定义。
 
 ```scss
-// 添加 .order-first, .order-last, .order-default
+// 生成 .order-first, .order-last
 $m-order: (
   "-first": -9999,
-  "-last": 9999,
-  "-default": 0
+  "-last": 9999
 );
-
 // 设置 min, max, step 循环填充映射
+// 生成 .order-0, .order-1, .order-2
 $order-min: 0;
 $order-max: 2;
 $order-step: 1;
-
 // 结合实际情况四选一引入
 @import "~@modyqyw/mp-scss";
 @import "~@modyqyw/mp-scss/classes";
 @import "~@modyqyw/mp-scss/classes/box-model";
 @import "~@modyqyw/mp-scss/classes/box-model/order";
-
-// 最终得到 .order-first, .order-last, .order-default, .order-0, .order-1, .order-2
 ```
 
 ## width
@@ -345,12 +324,6 @@ $order-step: 1;
 |---|---|
 |`.w-full`|`width: 100%;`|
 |`.w-half`|`width: 50%;`|
-|`.w-auto`|`width: auto;`|
-|`.w-1-3`|`width: 33.33333333%;`|
-|`.w-2-3`|`width: 66.66666667%;`|
-|`.w-1-4`|`width: 25%;`|
-|`.w-2-4`|`width: 50%;`|
-|`.w-3-4`|`width: 75%;`|
 |`.w-1-6`|`width: 16.66666667%;`|
 |`.w-2-6`|`width: 33.33333333%;`|
 |`.w-3-6`|`width: 50%;`|
@@ -402,30 +375,26 @@ $order-step: 1;
 这部分由`$m-width`生成，在引入之前做相关修改可以自定义。
 
 ```scss
-// 移除 .w-auto
+// 生成 .w-full, .w-half, .w-auto
 $m-width: (
   "-full": 100%,
-  "-half": 50%
+  "-half": 50%,
+  "-auto": auto
 );
-
-// 移除 .w-*-3, .w-*-4
-$l-width-denominator: 6, 8, 10;
-
+// 生成 .w-*-8, .w-*-10, .w-*-12
+$l-width-denominator: 8, 10, 12;
 // 设置 min, max, step 循环填充映射
+// 生成 .w-0, .w-1, .w-2
 $width-min: 0;
 $width-max: 2;
 $width-step: 1;
-
-// 移除 .w-1-real
+// 移除 .w-1-real，如果 $scale == 1，则该变量不生效
 $width-has-1-real: false;
-
 // 结合实际情况四选一引入
 @import "~@modyqyw/mp-scss";
 @import "~@modyqyw/mp-scss/classes";
 @import "~@modyqyw/mp-scss/classes/box-model";
 @import "~@modyqyw/mp-scss/classes/box-model/width";
-
-// 最终得到 .w-full, .w-half, .w-auto, .w-*-6, .w-*-8, .w-*-10, .w-0, .w-1, .w-2
 ```
 
 ## height
@@ -434,7 +403,6 @@ $width-has-1-real: false;
 |---|---|
 |`.h-full`|`height: 100%;`|
 |`.h-half`|`height: 50%;`|
-|`.h-auto`|`height: auto;`|
 |`.h-1-3`|`height: 33.33333333%;`|
 |`.h-2-3`|`height: 66.66666667%;`|
 |`.h-1-4`|`height: 25%;`|
@@ -491,30 +459,26 @@ $width-has-1-real: false;
 这部分由`$m-height`生成，在引入之前做相关修改可以自定义。
 
 ```scss
-// 移除 .h-auto
+// 生成 .h-full, .h-half, .h-auto
 $m-height: (
   "-full": 100%,
-  "-half": 50%
+  "-half": 50%,
+  "-auto": auto
 );
-
-// 移除 .h-*-3, .h-*-4
-$l-height-denominator: 6, 8, 10;
-
+// 生成 .h-*-8, .h-*-10, .h-*-12
+$l-height-denominator: 8, 10, 12;
 // 设置 min, max, step 循环填充映射
+// 生成 .h-0, .h-1, .h-2
 $height-min: 0;
 $height-max: 2;
 $height-step: 1;
-
-// 移除 .h-1-real
+// 移除 .h-1-real，如果 $scale == 1，则该变量不生效
 $height-has-1-real: false;
-
 // 结合实际情况四选一引入
 @import "~@modyqyw/mp-scss";
 @import "~@modyqyw/mp-scss/classes";
 @import "~@modyqyw/mp-scss/classes/box-model";
 @import "~@modyqyw/mp-scss/classes/box-model/height";
-
-// 最终得到 .h-full, .h-half, .h-*-6, .h-*-8, .h-*-10, .h-0, .h-1, .h-2
 ```
 
 ## padding
@@ -584,11 +548,10 @@ $height-has-1-real: false;
 这部分由`$m-padding`生成，在引入之前做相关修改可以自定义。
 
 ```scss
-// 设置 base, diff 填充映射
+// 设置 base, diff
 $padding-base: 12;
-$padding-diff: 3;
-
-// 添加 .p-auto
+$padding-diff: 4;
+// 生成 .p-auto, .p-xs, .p-sm, .p-md, .p-lg, .p-xl
 $m-padding: (
   "-auto": auto,
   "-xs": (
@@ -605,25 +568,20 @@ $m-padding: (
     $padding-base + $padding-diff * 2
   ) * $scale + $unit
 );
-
-// 移除 .p-*-3, .p-*-4
-$l-padding-denominator: 6, 8, 10;
-
+// 生成 .p-*-8, .p-*-10, .p-*-12
+$l-padding-denominator: 8, 10, 12;
 // 设置 min, max, step 循环填充映射
+// 生成 .p-0, .p-1, .p-2
 $padding-min: 0;
 $padding-max: 2;
 $padding-step: 1;
-
-// 移除 .p-1-real
+// 移除 .p-1-real，如果 $scale == 1，则该变量不生效
 $padding-has-1-real: false;
-
 // 结合实际情况四选一引入
 @import "~@modyqyw/mp-scss";
 @import "~@modyqyw/mp-scss/classes";
 @import "~@modyqyw/mp-scss/classes/box-model";
 @import "~@modyqyw/mp-scss/classes/box-model/padding";
-
-// 最终得到 .p-auto, .p-xs, .p-sm, .p-md, .p-lg, .p-xl, .p-*-6, .p-*-8, .p-*-10, .p-0, .p-1, .p-2
 ```
 
 ## margin
@@ -694,13 +652,11 @@ $padding-has-1-real: false;
 这部分由`$m-margin`生成，在引入之前做相关修改可以自定义。
 
 ```scss
-// 设置 base, diff 填充映射
+// 设置 base, diff
 $margin-base: 12;
-$margin-diff: 3;
-
-// 添加 .m-half
+$margin-diff: 4;
+// 生成 .m-auto, .m-xs, .m-sm, .m-md, .m-lg, .m-xl
 $m-margin: (
-  "-half": 50%,
   "-auto": auto,
   "-xs": (
     $margin-base - $margin-diff * 2
@@ -716,25 +672,20 @@ $m-margin: (
     $margin-base + $margin-diff * 2
   ) * $scale + $unit
 );
-
-// 移除 .m-*-3, .m-*-4
-$l-margin-denominator: 6, 8, 10;
-
+// 生成 .m-*-8, .m-*-10, .m-*-12
+$l-margin-denominator: 8, 10, 12;
 // 设置 min, max, step 循环填充映射
+// 生成 .m-0, .m-1, .m-2
 $margin-min: 0;
 $margin-max: 2;
 $margin-step: 1;
-
-// 移除 .m-1-real
+// 移除 .m-1-real，如果 $scale == 1，则该变量不生效
 $margin-has-1-real: false;
-
 // 结合实际情况四选一引入
 @import "~@modyqyw/mp-scss";
 @import "~@modyqyw/mp-scss/classes";
 @import "~@modyqyw/mp-scss/classes/box-model";
 @import "~@modyqyw/mp-scss/classes/box-model/margin";
-
-// 最终得到 .m-half, .m-auto, .m-xs, .m-sm, .m-md, .m-lg, .m-xl, .m-*-6, .m-*-8, .m-*-10, .m-0, .m-1, .m-2
 ```
 
 ## overflow
@@ -751,7 +702,9 @@ $margin-has-1-real: false;
 这部分由`$m-overflow`生成，在引入之前修改`$m-overflow`可以自定义。
 
 ```scss
-// 增加 .overflow-visible, .overflow-y-visible, .overflow-x-visible, .overflow-scroll, .overflow-y-scroll, .overflow-x-scroll
+// 生成 .overflow-visible, .overflow-hidden, .overflow-visible, .overflow-scroll,
+//     .overflow-{y|x}-visible, .overflow-{y|x}-hidden, .overflow-{y|x}-visible,
+//     .overflow-{y|x}-scroll
 $m-overflow: (
   "-auto": auto,
   "-hidden": hidden,
@@ -764,6 +717,4 @@ $m-overflow: (
 @import "~@modyqyw/mp-scss/classes";
 @import "~@modyqyw/mp-scss/classes/box-model";
 @import "~@modyqyw/mp-scss/classes/box-model/overflow";
-
-// 最终得到 .overflow-auto, .overflow-hidden, .overflow-visible, .overflow-scroll, .overflow-y-auto, .overflow-y-hidden, .overflow-y-visible, .overflow-y-scroll, .overflow-x-auto, .overflow-x-hidden, .overflow-x-visible, .overflow-x-scroll
 ```
