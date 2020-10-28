@@ -384,26 +384,32 @@ $info-8-reverse: mix($info, $container-background-color-reverse, 95%);
 $info-9-reverse: mix($info, $container-background-color-reverse, 97%);
 $info-10-reverse: mix($info, $container-background-color-reverse, 98%);
 // common color map
-$m-colors: (
-  "-transparent": transparent,
-  "-black": $black,
-  "-white": $white,
-  "-gray": $gray,
-  "-gray-1": $gray-1,
-  "-gray-2": $gray-2,
-  "-gray-3": $gray-3,
-  "-gray-4": $gray-4,
-  "-gray-5": $gray-5,
-  "-gray-6": $gray-6,
-  "-gray-7": $gray-7,
-  "-gray-8": $gray-8,
-  "-gray-9": $gray-9,
-  "-gray-10": $gray-10,
-  "-gray-11": $gray-11,
-  "-gray-12": $gray-12,
-  "-gray-13": $gray-13
-) !default;
+$m-colors: () !default;
 $m-colors-reverse: () !default;
+@if ($has-transparent) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-transparent": transparent
+    )
+  );
+}
+@if ($has-black) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-black": $black
+    )
+  );
+}
+@if ($has-white) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-white": $white
+    )
+  );
+}
 @if ($has-red) {
   $m-colors: map-merge(
     $m-colors,
@@ -983,7 +989,6 @@ $m-colors-reverse: () !default;
   );
 }
 
-
 /* 定位变量 positioning */
 // z-index
 $m-z-index: () !default;
@@ -1045,13 +1050,12 @@ $tmp-order: $order-min;
       )
     )
   );
-  $tmp-order: $tmp-order + abs($order-step);
+  $tmp-order: $tmp-order + $order-step;
 }
 // width
 $m-width: (
   "-full": 100%,
-  "-half": 50%,
-  "-auto": auto
+  "-half": 50%
 ) !default;
 @each $denominator in $l-width-denominator {
   @for $molecule from 1 to ($denominator - 1) {
@@ -1084,8 +1088,7 @@ $tmp-width: $width-min;
 // height
 $m-height: (
   "-full": 100%,
-  "-half": 50%,
-  "-auto": auto
+  "-half": 50%
 ) !default;
 @each $denominator in $l-height-denominator {
   @for $molecule from 1 to ($denominator - 1) {
@@ -1220,12 +1223,11 @@ $tmp-margin: $margin-min;
 /* typography */
 // font-family
 $m-font-family: (
-  "": $font-family-default,
-  "-mono": $font-family-mono
+  "": $font-family-default
 ) !default;
 // font-size
 $m-font-size: (
-  "": $font-size-base * $scale + $diff,
+  "": $font-size-base * $scale + $font-size-diff,
   "-xs": (
     $font-size-base - $font-size-diff * 2
   ) * $scale + $unit,
@@ -1598,6 +1600,19 @@ $m-box-shadow-ambient: (
     0 9 * $scale + $unit 46 * $scale + $unit 8 * $scale + $unit $box-shadow-ambient
   )
 );
+$box-shadow: () !default;
+$tmp-box-shadow: $box-shadow-min;
+@while ($tmp-box-shadow <= $box-shadow-max) {
+  $l-box-shadow: map-get($m-box-shadow-umbra, $tmp-box-shadow), map-get($m-box-shadow-penumbra, $tmp-box-shadow),
+    map-get($m-box-shadow-ambient, $tmp-box-shadow);
+  $box-shadow: map-merge(
+    $box-shadow,
+    (
+      "-#{$tmp-box-shadow}": $l-box-shadow
+    )
+  );
+  $tmp-box-shadow: $tmp-box-shadow + $box-shadow-step;
+}
 
 /* misc */
 // transition

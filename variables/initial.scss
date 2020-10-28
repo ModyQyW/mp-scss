@@ -8,6 +8,7 @@ $scale: 2 !default;
 
 /* 通用变量 common */
 // 中性色 neutral color
+$has-transparent: true !default;
 $gray: #8c8c8c !default;
 $gray-1: #fff !default;
 $gray-2: #fafafa !default;
@@ -22,8 +23,11 @@ $gray-10: #262626 !default;
 $gray-11: #1f1f1f !default;
 $gray-12: #141414 !default;
 $gray-13: #000 !default;
+$has-gray: true !default;
 $white: #fff !default;
+$has-white: true !default;
 $black: #000 !default;
+$has-black: true !default;
 // dust red
 $red: #f5222d !default;
 $has-red: true !default;
@@ -81,9 +85,7 @@ $has-info: true !default;
 $m-position: (
   "relative": relative,
   "absolute": absolute,
-  "fixed": fixed,
-  "static": static,
-  "sticky": sticky
+  "fixed": fixed
 ) !default;
 // top/right/bottom/left
 $m-position-value: (
@@ -91,7 +93,7 @@ $m-position-value: (
 ) !default;
 // z-index
 $z-index-min: 0 !default;
-$z-index-max: 120 !default;
+$z-index-max: 50 !default;
 $z-index-step: 10 !default;
 
 /* 盒模型变量 box-model */
@@ -102,7 +104,9 @@ $m-box-sizing: (
 // display
 $m-display: (
   "-block": block,
+  "-inline-block": inline-block,
   "-flex": flex,
+  "-inline-flex": inline-flex,
   "-none": none
 ) !default;
 // flex
@@ -118,25 +122,21 @@ $m-flex-direction: (
 // flex-wrap
 $m-flex-wrap: (
   "-nowrap": nowrap,
-  "-wrap": wrap,
-  "-wrap-reverse": wrap-reverse
+  "-wrap": wrap
 ) !default;
 // flex-shrink
 $flex-shrink-min: 0 !default;
-$flex-shrink-max: 2 !default;
+$flex-shrink-max: 1 !default;
 $flex-shrink-step: 1 !default;
 // flex-grow
 $flex-grow-min: 0 !default;
-$flex-grow-max: 2 !default;
+$flex-grow-max: 1 !default;
 $flex-grow-step: 1 !default;
 // align-content
 $m-align-content: (
   "-start": flex-start,
   "-end": flex-end,
-  "-center": center,
-  "-space-between": space-between,
-  "-space-around": space-around,
-  "-space-evenly": space-evenly
+  "-center": center
 ) !default;
 // align-items
 $m-align-items: (
@@ -146,7 +146,6 @@ $m-align-items: (
 ) !default;
 // align-self
 $m-align-self: (
-  "-auto": auto,
   "-start": flex-start,
   "-end": flex-end,
   "-center": center
@@ -157,37 +156,36 @@ $m-justify-content: (
   "-end": flex-end,
   "-center": center,
   "-space-between": space-between,
-  "-space-around": space-around,
-  "-space-evenly": space-evenly
+  "-space-around": space-around
 ) !default;
 // order
 $order-min: -2 !default;
 $order-max: 2 !default;
 $order-step: 1 !default;
 // width
-$l-width-denominator: 3, 4, 6, 8, 10 !default;
+$l-width-denominator: 6, 8, 10 !default;
 $width-min: 0 !default;
 $width-max: 24 !default;
 $width-step: 1 !default;
 $width-has-1-real: true !default;
 // height
-$l-height-denominator: 3, 4, 6, 8, 10 !default;
+$l-height-denominator: 6, 8, 10 !default;
 $height-min: 0 !default;
 $height-max: 24 !default;
 $height-step: 1 !default;
 $height-has-1-real: true !default;
 // padding
-$l-padding-denominator: 3, 4, 6, 8, 10 !default;
 $padding-base: 12 !default;
 $padding-diff: 4 !default;
+$l-padding-denominator: 6, 8, 10 !default;
 $padding-min: 0 !default;
 $padding-max: 24 !default;
 $padding-step: 1 !default;
 $padding-has-1-real: true !default;
 // margin
-$l-margin-denominator: 3, 4, 6, 8, 10 !default;
 $margin-base: 12 !default;
 $margin-diff: 4 !default;
+$l-margin-denominator: 6, 8, 10 !default;
 $margin-min: 0 !default;
 $margin-max: 24 !default;
 $margin-step: 1 !default;
@@ -200,17 +198,16 @@ $m-overflow: (
 
 /* 排版变量 typography */
 // font-family
-/* stylelint-disable value-keyword-case */
-$font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
-  "Microsoft YaHei", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol" !default;
-$font-family-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-/* stylelint-enable */
+// font-family
+/* stylelint-disable value-keyword-case, comment-empty-line-before */
+/* prettier-ignore */
+$font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+/* stylelint-enable value-keyword-case, comment-empty-line-before */
 // font-size
 $font-size-base: 14 !default;
 $font-size-diff: 2 !default;
 $font-size-min: 10 !default;
-$font-size-max: 48 !default;
+$font-size-max: 36 !default;
 $font-size-step: 2 !default;
 // font-style
 $m-font-style: (
@@ -233,7 +230,7 @@ $m-font-variant: (
 $line-height-default: 1.5715 !default;
 $line-height-diff: .143 !default;
 $line-height-min: 18 !default;
-$line-height-max: 56 !default;
+$line-height-max: 44 !default;
 $line-height-step: 2 !default;
 // text-align
 $m-text-align: (
@@ -263,41 +260,28 @@ $m-background-repeat: (
 // background-attachment
 $m-background-attachment: (
   "-fixed": fixed,
-  "-local": local,
-  "-scroll": scroll
+  "-local": local
 ) !default;
 // background-position
 $m-background-position: (
-  "-top": top,
-  "-right": right,
-  "-bottom": bottom,
-  "-left": left,
-  "-right-top": right top,
-  "-right-bottom": right bottom,
-  "-left-top": left top,
-  "-left-bottom": left bottom,
   "-center": center
 ) !default;
 // background-size
 $m-background-size: (
   "-contain": contain,
-  "-cover": cover,
-  "-auto": auto,
-  "-full": 100% 100%
+  "-cover": cover
 ) !default;
 // border-style
 $m-border-style: (
   "": solid,
   "-solid": solid,
-  "-dashed": dashed,
-  "-dotted": dotted,
   "-none": none
 ) !default;
 // border-width
 $border-width-base: 1 !default;
 $border-width-diff: 1 !default;
 $border-width-min: 0 !default;
-$border-width-max: 4 !default;
+$border-width-max: 1 !default;
 $border-width-step: 1 !default;
 $border-width-has-1-real: true !default;
 // border-radius
@@ -314,6 +298,9 @@ $m-outline: (
 $box-shadow-umbra: rgba(0, 0, 0, .2) !default;
 $box-shadow-penumbra: rgba(0, 0, 0, .14) !default;
 $box-shadow-ambient: rgba(0, 0, 0, .12) !default;
+$box-shadow-min: 0 !default;
+$box-shadow-max: 24 !default;
+$box-shadow-step: 1 !default;
 
 /* 杂项变量 misc */
 // opacity
