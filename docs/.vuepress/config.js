@@ -174,6 +174,14 @@ module.exports = {
         text: '进阶',
         link: '/best-practices/',
       },
+      {
+        text: 'Gitee',
+        link: 'https://gitee.com/millcloud/mp-scss#readme'
+      },
+      {
+        text: 'Github',
+        link: 'https://github.com/MillCloud/mp-scss#readme'
+      }
     ],
     sidebar: {
       '/guide/': [
@@ -197,8 +205,6 @@ module.exports = {
     lastUpdated: 'Last Updated',
     repo: 'MillCloud/mp-scss',
     repoLabel: '查看源码',
-    editLinks: true,
-    editLinkText: '编辑此页面',
   },
   plugins: [
     '@vuepress/active-header-links',
