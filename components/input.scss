@@ -194,21 +194,21 @@
     }
   }
 
-  > .prefix,
-  > .suffix {
+  > .input-prefix,
+  > .input-suffix {
     position: relative;
     box-sizing: border-box;
     flex: none;
     align-items: center;
   }
 
-  > .prefix {
+  > .input-prefix {
     display: inline-flex;
     justify-content: flex-start;
     margin-right: $input-wrapper-prefix-margin-right;
   }
 
-  > .suffix {
+  > .input-suffix {
     display: inline-flex;
     justify-content: flex-end;
     margin-left: $input-wrapper-suffix-margin-left;
