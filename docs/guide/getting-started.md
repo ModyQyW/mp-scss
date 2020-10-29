@@ -26,6 +26,50 @@ npm i -D scss sass-loader
 
 现在，你应该已经可以使用所有这个库的所有功能。
 
+比如为页面添加布局。
+
+```html
+<view class="container h-full">
+  <view class="header">header</view>
+  <view class="navbar">navbar</view>
+  <view class="container flex-row">
+    <view class="aside">aside</view>
+    <view class="main">main</view>
+  </view>
+  <view class="footer">footer</view>
+</view>
+```
+
+又比如使用栅格系统和组件。
+
+```html
+<view class="container">
+  <view class="row">
+    <view class="col">
+      <button class="btn is-primary">
+        button
+        <view class="badge">1</view>
+      </button>
+    </view>
+    <view class="col">
+      <view class="input-wrapper">
+        <view class="input-prefix">prefix</view>
+        <input class="input"></input>
+        <view class="input-suffix">suffix</view>
+      </view>
+    </view>
+    <view class="col">
+	  <view class="card">
+		<view class="card-header">header</view>
+		<view class="divider m-0"></view>
+		<view class="card-content border-b">content</view>
+		<view class="card-footer">footer</view>
+	  </view>
+    </view>
+  </view>
+</view>
+```
+
 如果需要自定义，那么需要在引入之前写下你的自定义代码。具体的自定义方法可以查看对应的章节。
 
 ```scss
@@ -48,7 +92,7 @@ npm i -D scss sass-loader
 @import "~@modyqyw/mp-scss/classes/positioning/position";
 ```
 
-这个库是面向小程序的，提倡使用`rpx`，`%`或不使用单位，参考[尺寸单位](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html)。
+这个库是面向小程序的，提倡使用`rpx`，`%`或不使用单位，参考[尺寸单位](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html)。默认地，这个库使用最多的单位`$unit`为`rpx`，缩放倍数`$scale`为 2。
 
 接下来你可以去学习一下[重置](../reset/README.md)，它是这个库里相对独立的一部分，以微信小程序为基准，结合`ress.css`，重置小程序默认的样式。你完全可以单独使用它。
 
@@ -56,4 +100,4 @@ npm i -D scss sass-loader
 
 等你学会如何使用这个库之后，还可以去了解这个库其中所遵循的[原则](./design.md)。
 
-最后也不要忘了查看[进阶](../advance/README.md)，看看有什么进阶用法能用到你的项目上，比如全量引入时的体积优化，修改色板，修改单位，修改缩放倍数等等。默认地，单位`$unit`为`rpx`，缩放倍数`$scale`为 2。
+最后也不要忘了查看[进阶](../advance/README.md)，看看有什么进阶用法能用到你的项目上，比如全量引入时的体积优化，修改色板，修改单位，修改缩放倍数等等。
