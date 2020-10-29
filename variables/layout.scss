@@ -50,7 +50,7 @@ $gutter-base: 12 !default;
 $gutter-diff: 4 !default;
 $gutter-min: 4 !default;
 $gutter-max: 20 !default;
-$gutter-step: 2 !default;
+$gutter-step: 4 !default;
 $m-gutter: (
   "": $gutter-base / 2 * $scale + $unit,
   "-xs": (
