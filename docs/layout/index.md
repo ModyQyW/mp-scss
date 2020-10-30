@@ -1,6 +1,6 @@
-# 总览
+# 布局类总览 layout
 
-[源码](https://github.com/MillCloud/mp-scss/blob/main/layout/index.scss)
+[源码](https://github.com/MillCloud/mp-scss/blob/main/layout/index)
 
 ## 使用
 
@@ -16,5 +16,5 @@
 // 写下你的自定义代码
 
 // 引入
-@import `@modyqyw/mp-scss/layout`;
+@import "~@modyqyw/mp-scss/layout";
 ```

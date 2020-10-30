@@ -1,24 +1,14 @@
-# 按钮 button
-
-[源码](https://github.com/MillCloud/mp-scss/blob/main/components/button.scss)
-
-## 使用
-
-引入按钮文件即可正常使用按钮类，所有内置变量会被自动引入并应用。
-
-```scss
-@import "~@modyqyw/mp-scss/components/button";
-```
-
-如果需要自定义变量，那就需要在引入之前声明对应的变量。
-
-```scss
-// ${PROJECT_DIR}/src/fake/path/index.scss
-$container-background-color-reverse: #121212;
-@import "~@modyqyw/mp-scss/components/button";
-```
+# 按钮类 button
 
 ## 默认样式
+
+要使用按钮类，可以只引入对应的文件。
+
+```scss
+@import "~@modyqyw/mp-scss/components/button";
+```
+
+在`button`或`view`上添加`.btn`是最简单的使用方式。
 
 ```html
 <view class="container">
@@ -31,106 +21,67 @@ $container-background-color-reverse: #121212;
 
 ## 水波纹
 
+添加`is-ripply`就可以使用内置的水波纹效果。
+
 ```html
 <view class="container">
   <button class="btn is-ripply">水波纹</button>
-  <view class="btn is-ripply">水波纹</view>
 </view>
 ```
 
-## 明暗模式
+## 主题
 
-可以在按钮的祖先元素或按钮本身添加`is-dark`类，指定按钮使用暗黑模式。
-
-如果不添加，或者添加`is-light`类，按钮将使用明亮模式。
-
-一般而言，建议在页面的顶级布局元素（也就是`.container`）上添加`is-dark`类。
+默认有`default`，`primary`，`success`，`warning`，`error`, `info`六个主题，对于后五个主题还会提供`.is-*-outlined`和`.is-*-link`。
 
 ```html
-<view class="container">
+<!-- default 主题 -->
+<button class="btn">is-primary</button>
+<!-- primary 主题 -->
+<button class="btn is-primary">is-primary</button>
+<button class="btn is-primary-outlined">is-primary-outlined</button>
+<button class="btn is-primary-link">is-primary-link</button>
+<!-- success 主题 -->
+<button class="btn is-success">is-primary</button>
+<button class="btn is-success-outlined">is-primary-outlined</button>
+<button class="btn is-success-link">is-primary-link</button>
+<!-- warning 主题 -->
+<button class="btn is-warning">is-primary</button>
+<button class="btn is-warning-outlined">is-primary-outlined</button>
+<button class="btn is-warning-link">is-primary-link</button>
+<!-- error 主题 -->
+<button class="btn is-error">is-primary</button>
+<button class="btn is-error-outlined">is-primary-outlined</button>
+<button class="btn is-error-link">is-primary-link</button>
+<!-- info 主题 -->
+<button class="btn is-info">is-primary</button>
+<button class="btn is-info-outlined">is-primary-outlined</button>
+<button class="btn is-info-link">is-primary-link</button>
+```
+
+## 明亮模式和暗黑模式
+
+默认使用明亮模式。你也可以显式地在父元素或在`.btn`用`.is-light`指定使用明亮模式，用`.is-dark`就能指定使用暗黑模式。
+
+```html
+<view class="container is-light">
   <button class="btn">明亮模式</button>
+</view>
+<view class="container is-dark">
+  <!-- 强制使用明亮模式 -->
+  <button class="btn is-light">明亮模式</button>
 </view>
 <view class="container is-dark">
   <button class="btn">暗黑模式</button>
 </view>
-```
-
-## primary
-
-```html
 <view class="container">
-  <button class="btn is-primary">primary</button>
-  <button class="btn is-primary-outlined">primary-outlined</button>
-  <button class="btn is-primary-link">primary-link</button>
-</view>
-<view class="container is-dark">
-  <button class="btn is-primary">primary</button>
-  <button class="btn is-primary-outlined">primary-outlined</button>
-  <button class="btn is-primary-link">primary-link</button>
+  <!-- 强制使用暗黑模式 -->
+  <button class="btn is-dark">暗黑模式</button>
 </view>
 ```
 
-## success
+## 尺寸
 
-```html
-<view class="container">
-  <button class="btn is-success">success</button>
-  <button class="btn is-success-outlined">success-outlined</button>
-  <button class="btn is-success-link">success-link</button>
-</view>
-<view class="container is-dark">
-  <button class="btn is-success">success</button>
-  <button class="btn is-success-outlined">success-outlined</button>
-  <button class="btn is-success-link">success-link</button>
-</view>
-```
-
-## warning
-
-```html
-<view class="container">
-  <button class="btn is-warning">warning</button>
-  <button class="btn is-warning-outlined">warning-outlined</button>
-  <button class="btn is-warning-link">warning-link</button>
-</view>
-<view class="container is-dark">
-  <button class="btn is-warning">warning</button>
-  <button class="btn is-warning-outlined">warning-outlined</button>
-  <button class="btn is-warning-link">warning-link</button>
-</view>
-```
-
-## error
-
-```html
-<view class="container">
-  <button class="btn is-error">error</button>
-  <button class="btn is-error-outlined">error-outlined</button>
-  <button class="btn is-error-link">error-link</button>
-</view>
-<view class="container is-dark">
-  <button class="btn is-error">error</button>
-  <button class="btn is-error-outlined">error-outlined</button>
-  <button class="btn is-error-link">error-link</button>
-</view>
-```
-
-## info
-
-```html
-<view class="container">
-  <button class="btn is-info">info</button>
-  <button class="btn is-info-outlined">info-outlined</button>
-  <button class="btn is-info-link">info-link</button>
-</view>
-<view class="container is-dark">
-  <button class="btn is-info">info</button>
-  <button class="btn is-info-outlined">info-outlined</button>
-  <button class="btn is-info-link">info-link</button>
-</view>
-```
-
-## 不同尺寸
+使用`.is-small`可以使用更小的`.btn`，使用`.is-large`可以使用更大的`.btn`，可以结合不同主题、不同模式使用。
 
 ```html
 <view class="container">

@@ -1,24 +1,12 @@
 # 输入框 input
 
-[源码](https://github.com/MillCloud/mp-scss/blob/main/components/input.scss)
-
-## 使用
-
-引入输入框文件即可正常使用输入框类，所有内置变量会被自动引入并应用。
-
-```scss
-@import "~@modyqyw/mp-scss/components/input";
-```
-
-如果需要自定义变量，那就需要在引入之前声明对应的变量。
-
-```scss
-// ${PROJECT_DIR}/src/fake/path/index.scss
-$container-background-color-reverse: #121212;
-@import "~@modyqyw/mp-scss/components/input";
-```
-
 ## 默认样式
+
+要使用输入框类，可以只引入对应的文件。
+
+```scss
+@import "~@modyqyw/mp-scss/components/input";
+```
 
 ```html
 <view class="container">
@@ -26,13 +14,9 @@ $container-background-color-reverse: #121212;
 </view>
 ```
 
-## 明暗模式
+## 明亮模式和暗黑模式
 
-可以在输入框的祖先元素或按钮本身添加`is-dark`类，指定输入框使用暗黑模式。
-
-如果不添加，或者添加`is-light`类，输入框将使用明亮模式。
-
-一般而言，建议在页面的顶级布局元素（也就是`.container`）上添加`is-dark`类。
+默认使用明亮模式。你也可以显式地在父元素或在`.btn`用`.is-light`指定使用明亮模式，用`.is-dark`就能指定使用暗黑模式。
 
 ```html
 <view class="container">
@@ -45,6 +29,8 @@ $container-background-color-reverse: #121212;
 
 ## 尺寸
 
+使用`.is-small`可以使用更小的`.input`，使用`.is-large`可以使用更大的`.input`。
+
 ```html
 <view class="container">
   <input class="input is-small" placeholder="small" />
@@ -53,36 +39,18 @@ $container-background-color-reverse: #121212;
 </view>
 ```
 
-## 带前后缀的输入框组
+## 输入框组
+
+使用`.input-wrapper`启用输入框组，使用`.input-prefix`添加输入框组的前缀，使用`.input-suffix`添加输入框组的后缀。
 
 ```html
 <view class="container">
   <view class="input-wrapper">
-    <view class="prefix">前缀</view>
+    <view class="input-prefix">前缀</view>
     <input class="input" placeholder="请输入" />
-    <view class="suffix">后缀</view>
+    <view class="input-suffix">后缀</view>
   </view>
 </view>
 ```
 
-## 不同尺寸的输入框组
-
-```html
-<view class="container">
-  <view class="input-wrapper is-small">
-    <view class="prefix">前缀</view>
-    <input class="input" placeholder="small" />
-    <view class="suffix">后缀</view>
-  </view>
-  <view class="input-wrapper">
-    <view class="prefix">前缀</view>
-    <input class="input" placeholder="default" />
-    <view class="suffix">后缀</view>
-  </view>
-  <view class="input-wrapper is-large">
-    <view class="prefix">前缀</view>
-    <input class="input" placeholder="large" />
-    <view class="suffix">后缀</view>
-  </view>
-</view>
-```
+支持在`.input-wrapper`上使用`.is-light`，`is-dark`，`.is-small`和`.is-large`。

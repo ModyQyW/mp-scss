@@ -163,6 +163,10 @@ module.exports = {
                 link: '/components/input',
               },
               {
+                text: '加载器类 loader',
+                link: '/components/loader'
+              },
+              {
                 text: '遮罩类 overlay',
                 link: '/components/overlay',
               },
@@ -172,7 +176,7 @@ module.exports = {
       },
       {
         text: '进阶',
-        link: '/best-practices/',
+        link: '/advance/',
       },
       {
         text: 'Gitee',
@@ -198,7 +202,7 @@ module.exports = {
       ],
       '/classes/': ['', 'positioning', 'box-model', 'typography', 'visual', 'misc'],
       '/layout/': ['', 'page', 'grid'],
-      '/components/': ['', 'badge', 'button', 'card', 'divider', 'icon', 'input', 'overlay'],
+      '/components/': ['', 'badge', 'button', 'card', 'divider', 'icon', 'input', 'loader', 'overlay'],
       '/': 'auto',
     },
     sidebarDepth: 4,

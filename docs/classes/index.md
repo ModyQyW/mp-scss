@@ -1,6 +1,6 @@
 # 通用类总览 classes
 
-[源码](https://github.com/MillCloud/mp-scss/blob/main/classes/index.scss)
+[源码](https://github.com/MillCloud/mp-scss/blob/main/classes)
 
 ## 使用
 
@@ -16,5 +16,5 @@
 // 写下你的自定义代码
 
 // 引入
-@import `@modyqyw/mp-scss/classes`;
+@import "~@modyqyw/mp-scss/classes";
 ```
