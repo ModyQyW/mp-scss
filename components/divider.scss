@@ -51,6 +51,17 @@
   display: flex;
   align-items: center;
 
+  &,
+  .is-light &,
+  &.is-light {
+    color: $color-main;
+  }
+
+  .is-dark &,
+  &.is-dark {
+    color: $color-main-reverse;
+  }
+
   .divider-text {
     position: relative;
     box-sizing: border-box;
