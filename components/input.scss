@@ -4,12 +4,12 @@
   &,
   .is-light &,
   &.is-light {
-    color: $input-placeholder-color;
+    color: $color-secondary;
   }
 
   .is-dark &,
   &.is-dark {
-    color: $input-placeholder-color-reverse;
+    color: $color-secondary-reverse;
   }
 }
 
@@ -21,19 +21,18 @@
   min-width: 0;
   height: auto;
   min-height: unset;
-  padding: $input-padding-y $input-padding-x;
-  margin: $input-margin-y $input-margin-x;
-  font-size: $input-font-size;
-  font-weight: $input-font-weight;
-  font-variant: $input-font-variant;
-  line-height: $input-line-height;
+  padding: 4 * $scale + $unit 12 * $scale + $unit;
+  margin: 0;
+  font-size: $font-size-base * $scale + $unit;
+  font-weight: 400;
+  line-height: $line-height-default;
   white-space: nowrap;
   cursor: text;
-  border-style: $input-border-style;
-  border-width: $input-border-width;
-  border-radius: $input-border-radius;
+  border-style: solid;
+  border-width: 1 * $scale + $unit;
+  border-radius: $border-radius-base * $scale + $unit;
   outline: none;
-  transition: $input-transition;
+  transition: $transition-default;
 
   &:placeholder-shown {
     text-overflow: ellipsis;
@@ -42,64 +41,64 @@
   &,
   .is-light &,
   &.is-light {
-    color: $input-color;
-    background-color: $input-background-color;
-    border-color: $input-border-color;
+    color: $color-main;
+    background-color: $container-background-color;
+    border-color: $border-color;
 
-    &:hover {
-      color: $input-hover-color;
-      background-color: $input-hover-background-color;
-      border-color: $input-hover-border-color;
-    }
+    // &:hover {
+    //   color: $color-main;
+    //   background-color: $container-background-color;
+    //   border-color: $primary-6;
+    // }
 
     &:focus,
     &:focus-within {
-      color: $input-focus-color;
-      background-color: $input-focus-background-color;
-      border-color: $input-focus-border-color;
+      color: $color-main;
+      background-color: $container-background-color;
+      border-color: $primary-6;
     }
 
     &:active {
-      color: $input-active-color;
-      background-color: $input-active-background-color;
-      border-color: $input-active-border-color;
+      color: $color-main;
+      background-color: $container-background-color;
+      border-color: $primary-6;
     }
   }
 
   .is-dark &,
   &.is-dark {
-    color: $input-color-reverse;
-    background-color: $input-background-color-reverse;
-    border-color: $input-border-color-reverse;
+    color: $color-main-reverse;
+    background-color: $container-background-color-reverse;
+    border-color: $border-color-reverse;
 
-    &:hover {
-      color: $input-hover-color-reverse;
-      background-color: $input-hover-background-color-reverse;
-      border-color: $input-hover-border-color-reverse;
-    }
+    // &:hover {
+    //   color: $color-main-reverse;
+    //   background-color: $container-background-color-reverse;
+    //   border-color: $primary-6-reverse;
+    // }
 
     &:focus,
     &:focus-within {
-      color: $input-focus-color-reverse;
-      background-color: $input-focus-background-color-reverse;
-      border-color: $input-focus-border-color-reverse;
+      color: $color-main-reverse;
+      background-color: $container-background-color-reverse;
+      border-color: $primary-6-reverse;
     }
 
     &:active {
-      color: $input-active-color-reverse;
-      background-color: $input-active-background-color-reverse;
-      border-color: $input-active-border-color-reverse;
+      color: $color-main-reverse;
+      background-color: $container-background-color-reverse;
+      border-color: $primary-6-reverse;
     }
   }
 
   &.is-small {
-    padding: $input-sm-padding-y $input-sm-padding-x;
-    font-size: $input-sm-font-size;
+    padding: 0 8 * $scale + $unit;
+    font-size: $font-size-base * $scale + $unit;
   }
 
   &.is-large {
-    padding: $input-lg-padding-y $input-lg-padding-x;
-    font-size: $input-lg-font-size;
+    padding: 6 * $scale + $unit 16 * $scale + $unit;
+    font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
   }
 }
 
@@ -114,68 +113,67 @@
   min-width: 0;
   height: auto;
   min-height: unset;
-  padding: $input-wrapper-padding-y $input-wrapper-padding-x;
-  margin: $input-wrapper-margin-y $input-wrapper-margin-x;
-  font-size: $input-wrapper-font-size;
-  font-weight: $input-wrapper-font-weight;
-  font-variant: $input-wrapper-font-variant;
-  line-height: $input-wrapper-line-height;
-  border-style: $input-wrapper-border-style;
-  border-width: $input-wrapper-border-width;
-  border-radius: $input-wrapper-border-radius;
+  padding: 4 * $scale + $unit 12 * $scale + $unit;
+  margin: 0;
+  font-size: $font-size-base * $scale + $unit;
+  font-weight: 400;
+  line-height: $line-height-default;
+  border-style: solid;
+  border-width: 1 * $scale + $unit;
+  border-radius: $border-radius-base * $scale + $unit;
   outline: none;
-  transition: $input-wrapper-transition;
+  transition: $transition-default;
 
   &,
   .is-light &,
   &.is-light {
-    color: $input-wrapper-color;
-    background-color: $input-wrapper-background-color;
-    border-color: $input-wrapper-border-color;
+    color: $color-main;
+    background-color: $container-background-color;
+    border-color: $border-color;
 
-    &:hover {
-      color: $input-wrapper-hover-color;
-      background-color: $input-wrapper-hover-background-color;
-      border-color: $input-wrapper-hover-border-color;
-    }
+    // &:hover {
+    //   color: $color-main;
+    //   background-color: $container-background-color;
+    //   border-color: $primary-6;
+    // }
 
     &:focus,
     &:focus-within {
-      color: $input-wrapper-focus-color;
-      background-color: $input-wrapper-focus-background-color;
-      border-color: $input-wrapper-focus-border-color;
+      color: $color-main;
+      background-color: $container-background-color;
+      border-color: $primary-6;
     }
 
     &:active {
-      color: $input-wrapper-active-color;
-      background-color: $input-wrapper-active-background-color;
-      border-color: $input-wrapper-active-border-color;
+      color: $color-main;
+      background-color: $container-background-color;
+      border-color: $primary-6;
     }
   }
 
   .is-dark &,
   &.is-dark {
-    color: $input-wrapper-color-reverse;
-    background-color: $input-wrapper-background-color-reverse;
-    border-color: $input-wrapper-border-color-reverse;
+    color: $color-main-reverse;
+    background-color: $container-background-color-reverse;
+    border-color: $border-color-reverse;
 
-    &:hover {
-      color: $input-wrapper-hover-color-reverse;
-      background-color: $input-wrapper-hover-background-color-reverse;
-      border-color: $input-wrapper-hover-border-color-reverse;
-    }
+    // &:hover {
+    //   color: $color-main-reverse;
+    //   background-color: $container-background-color-reverse;
+    //   border-color: $primary-6-reverse;
+    // }
 
     &:focus,
     &:focus-within {
-      color: $input-wrapper-focus-color-reverse;
-      background-color: $input-wrapper-focus-background-color-reverse;
-      border-color: $input-wrapper-focus-border-color-reverse;
+      color: $color-main-reverse;
+      background-color: $container-background-color-reverse;
+      border-color: $primary-6-reverse;
     }
 
     &:active {
-      color: $input-wrapper-active-color-reverse;
-      background-color: $input-wrapper-active-background-color-reverse;
-      border-color: $input-wrapper-active-border-color-reverse;
+      color: $color-main-reverse;
+      background-color: $container-background-color-reverse;
+      border-color: $primary-6-reverse;
     }
   }
 
@@ -190,7 +188,7 @@
     &.is-small,
     &.is-large {
       padding: 0;
-      font-size: $input-wrapper-font-size;
+      font-size: $font-size-base * $scale + $unit;
     }
   }
 
@@ -205,30 +203,30 @@
   > .input-prefix {
     display: inline-flex;
     justify-content: flex-start;
-    margin-right: $input-wrapper-prefix-margin-right;
+    margin-right: 4 * $scale + $unit;
   }
 
   > .input-suffix {
     display: inline-flex;
     justify-content: flex-end;
-    margin-left: $input-wrapper-suffix-margin-left;
+    margin-left: 4 * $scale + $unit;
   }
 
   &.is-small {
-    padding: $input-wrapper-sm-padding-y $input-wrapper-sm-padding-x;
-    font-size: $input-wrapper-sm-font-size;
+    padding: 0 8 * $scale + $unit;
+    font-size: $font-size-base * $scale + $unit;
 
     > .input {
-      font-size: $input-wrapper-sm-font-size;
+      font-size: $font-size-base * $scale + $unit;
     }
   }
 
   &.is-large {
-    padding: $input-wrapper-lg-padding-y $input-wrapper-lg-padding-x;
-    font-size: $input-wrapper-lg-font-size;
+    padding: 6 * $scale + $unit 16 * $scale + $unit;
+    font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
 
     > .input {
-      font-size: $input-wrapper-lg-font-size;
+      font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
     }
   }
 }

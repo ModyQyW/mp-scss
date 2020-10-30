@@ -4,43 +4,43 @@
   position: relative;
   box-sizing: border-box;
   display: block;
-  width: $divider-width;
-  height: $divider-height;
-  margin: $divider-margin-y $divider-margin-x;
-  border-top-style: $divider-border-top-style;
-  border-top-width: $divider-border-top-width;
+  width: 100%;
+  height: auto;
+  margin: 24 * $scale + $unit 0;
+  border-top-style: solid;
+  border-top-width: 1 * $scale + $unit;
   border-left: none;
-  transition: $divider-transition;
+  transition: $transition-default;
 
   &,
   .is-light &,
   &.is-light {
-    border-top-color: $divider-border-top-color;
+    border-top-color: $border-color;
   }
 
   .is-dark &,
   &.is-dark {
-    border-top-color: $divider-border-top-color-reverse;
+    border-top-color: $border-color-reverse;
   }
 
   &.is-vertical {
     display: inline-block;
-    width: $divider-vertical-width;
-    height: $divider-vertical-height;
-    margin: $divider-vertical-margin-y $divider-vertical-margin-x;
+    width: auto;
+    height: 100%;
+    margin: 0 8 * $scale + $unit;
     border-top: none;
-    border-left-style: $divider-vertical-border-left-style;
-    border-left-width: $divider-vertical-border-left-width;
+    border-left-style: solid;
+    border-left-width: 1 * $scale + $unit;
 
     &,
     .is-light &,
     &.is-light {
-      border-left-color: $divider-vertical-border-left-color;
+      border-left-color: $border-color;
     }
 
     .is-dark &,
     &.is-dark {
-      border-left-color: $divider-vertical-border-left-color-reverse;
+      border-left-color: $border-color-reverse;
     }
   }
 }
@@ -55,10 +55,10 @@
     position: relative;
     box-sizing: border-box;
     display: inline-block;
-    padding: $divider-text-padding-y $divider-text-padding-x;
-    font-size: $divider-text-font-size;
-    font-weight: $divider-text-font-weight;
-    line-height: $divider-text-line-height;
+    padding: 0 16 * $scale + $unit;
+    font-size: $font-size-base * $scale + $unit;
+    font-weight: 400;
+    line-height: $line-height-default;
   }
 
   .divider,

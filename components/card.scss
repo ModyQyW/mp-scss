@@ -5,28 +5,28 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  padding: $card-padding-y $card-padding-x;
-  margin: $card-margin-y $card-margin-x;
-  font-size: $card-font-size;
-  font-weight: $card-font-weight;
-  line-height: $card-line-height;
-  border-style: $card-border-style;
-  border-width: $card-border-width;
-  border-radius: $card-border-radius;
+  padding: 0;
+  margin: 0;
+  font-size: $font-size-base * $scale + $unit;
+  font-weight: 400;
+  line-height: $line-height-default;
+  border-style: solid;
+  border-width: 1 * $scale + $unit;
+  border-radius: $border-radius-base * $scale + $unit;
 
   &,
   .is-light &,
   &.is-light {
-    color: $card-color;
-    background-color: $card-background-color;
-    border-color: $card-border-color;
+    color: $color-main;
+    background-color: $container-background-color;
+    border-color: $border-color;
   }
 
   .is-dark &,
   &.is-dark {
-    color: $card-color-reverse;
-    background-color: $card-background-color-reverse;
-    border-color: $card-border-color-reverse;
+    color: $color-main-reverse;
+    background-color: $container-background-color-reverse;
+    border-color: $border-color-reverse;
   }
 
   .card-header,
@@ -38,32 +38,32 @@
   }
 
   .card-header {
-    padding: $card-header-padding-y $card-header-padding-x;
-    font-size: $card-header-font-size;
-    font-weight: $card-header-font-weight;
-    line-height: $card-header-line-height;
+    padding: 16 * $scale + $unit 24 * $scale + $unit;
+    font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
+    font-weight: 500;
+    line-height: $line-height-default;
   }
 
   .card-content {
-    padding: $card-content-padding-y $card-content-padding-x;
+    padding: 24 * $scale + $unit;
   }
 
   .card-footer {
-    padding: $card-footer-padding-y $card-footer-padding-x;
+    padding: 16 * $scale + $unit 24 * $scale + $unit;
   }
 
   &.is-small {
     .card-header {
-      padding: $card-sm-header-padding-y $card-sm-header-padding-x;
-      font-size: $card-sm-header-font-size;
+      padding: 8 * $scale + $unit 12 * $scale + $unit;
+      font-size: $font-size-base * $scale + $unit;
     }
 
     .card-content {
-      padding: $card-sm-content-padding-y $card-sm-content-padding-x;
+      padding: 12 * $scale + $unit;
     }
 
     .card-footer {
-      padding: $card-sm-footer-padding-y $card-sm-footer-padding-x;
+      padding: 8 * $scale + $unit 12 * $scale + $unit;
     }
   }
 }

@@ -2,19 +2,19 @@
 
 .icon {
   display: inline-block;
-  width: $icon-sizing;
-  height: $icon-sizing;
-  line-height: $icon-line-height;
+  width: $font-size-base * $scale + $unit;
+  height: $font-size-base * $scale + $unit;
+  line-height: 1;
 
   &.is-small {
-    width: $icon-sm-sizing;
-    height: $icon-sm-sizing;
-    line-height: $icon-sm-line-height;
+    width: ($font-size-base - $font-size-diff) * $scale + $unit;
+    height: ($font-size-base - $font-size-diff) * $scale + $unit;
+    line-height: 1;
   }
 
   &.is-large {
-    width: $icon-lg-sizing;
-    height: $icon-lg-sizing;
-    line-height: $icon-lg-line-height;
+    width: ($font-size-base + $font-size-diff) * $scale + $unit;
+    height: ($font-size-base + $font-size-diff) * $scale + $unit;
+    line-height: 1;
   }
 }

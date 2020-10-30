@@ -2,140 +2,137 @@
 
 .badge {
   position: absolute;
-  top: $badge-top;
-  right: $badge-right;
-  z-index: $badge-z-index;
+  top: 0;
+  right: 0;
+  z-index: auto;
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  min-width: $badge-min-width;
-  height: $badge-height;
-  padding: $badge-padding-y $badge-padding-x;
-  font-size: $badge-font-size;
-  font-weight: $badge-font-weight;
-  line-height: $badge-line-height;
-  color: $badge-color;
+  min-width: 20 * $scale + $unit;
+  height: 20 * $scale + $unit;
+  padding: 0 6 * $scale + $unit;
+  font-size: ($font-size-base - $font-size-diff) * $scale + $unit;
+  font-weight: 400;
+  line-height: 20 * $scale + $unit;
   text-align: center;
   white-space: nowrap;
-  background-color: $badge-background-color;
-  border-color: $badge-border-color;
-  border-style: $badge-border-style;
-  border-width: $badge-border-width;
-  border-radius: $badge-border-radius;
-  transition: $badge-transition;
-  transform: $badge-transform;
-  transform-origin: $badge-transform-origin;
+  border-style: solid;
+  border-width: 1 * $scale + $unit;
+  border-radius: 10 * $scale + $unit;
+  transition: $transition-default;
+  transform: translate(50%, -50%);
+  transform-origin: 100% 0;
 
   &,
   .is-light &,
   &.is-light {
-    color: $badge-color;
-    background-color: $badge-background-color;
-    border-color: $badge-border-color;
-    box-shadow: $badge-box-shadow;
-  }
-
-  .is-dark &,
-  &.is-dark {
-    color: $badge-color-reverse;
-    background-color: $badge-background-color-reverse;
-    border-color: $badge-border-color-reverse;
-    box-shadow: $badge-box-shadow-reverse;
+    color: $color-main;
+    background-color: $gray-5;
+    border-color: $gray-5;
+    box-shadow: 0 0 0 1 * $scale + $unit $container-background-color;
   }
 
   &.is-primary,
   .is-light &.is-primary,
   &.is-light.is-primary {
-    color: $badge-primary-color;
-    background-color: $badge-primary-background-color;
-    border-color: $badge-primary-border-color;
-  }
-
-  .is-dark &.is-primary,
-  &.is-dark.is-primary {
-    color: $badge-primary-color-reverse;
-    background-color: $badge-primary-background-color-reverse;
-    border-color: $badge-primary-border-color-reverse;
+    color: $gray-1;
+    background-color: $primary-5;
+    border-color: $primary-5;
   }
 
   &.is-success,
   .is-light &.is-success,
   &.is-light.is-success {
-    color: $badge-success-color;
-    background-color: $badge-success-background-color;
-    border-color: $badge-success-border-color;
-  }
-
-  .is-dark &.is-success,
-  &.is-dark.is-success {
-    color: $badge-success-color-reverse;
-    background-color: $badge-success-background-color-reverse;
-    border-color: $badge-success-border-color-reverse;
+    color: $gray-1;
+    background-color: $success-5;
+    border-color: $success-5;
   }
 
   &.is-warning,
   .is-light &.is-warning,
   &.is-light.is-warning {
-    color: $badge-warning-color;
-    background-color: $badge-warning-background-color;
-    border-color: $badge-warning-border-color;
-  }
-
-  .is-dark &.is-warning,
-  &.is-dark.is-warning {
-    color: $badge-warning-color-reverse;
-    background-color: $badge-warning-background-color-reverse;
-    border-color: $badge-warning-border-color-reverse;
+    color: $gray-1;
+    background-color: $warning-5;
+    border-color: $warning-5;
   }
 
   &.is-error,
   .is-light &.is-error,
   &.is-light.is-error {
-    color: $badge-error-color;
-    background-color: $badge-error-background-color;
-    border-color: $badge-error-border-color;
-  }
-
-  .is-dark &.is-error,
-  &.is-dark.is-error {
-    color: $badge-error-color-reverse;
-    background-color: $badge-error-background-color-reverse;
-    border-color: $badge-error-border-color-reverse;
+    color: $gray-1;
+    background-color: $error-5;
+    border-color: $error-5;
   }
 
   &.is-info,
   .is-light &.is-info,
   &.is-light.is-info {
-    color: $badge-info-color;
-    background-color: $badge-info-background-color;
-    border-color: $badge-info-border-color;
+    color: $gray-1;
+    background-color: $info-5;
+    border-color: $info-5;
+  }
+
+  .is-dark &,
+  &.is-dark {
+    color: $color-main-reverse;
+    background-color: $gray-5;
+    border-color: $gray-5;
+    box-shadow: 0 0 0 1 * $scale + $unit $container-background-color-reverse;
+  }
+
+  .is-dark &.is-primary,
+  &.is-dark.is-primary {
+    color: $gray-1;
+    background-color: $primary-5-reverse;
+    border-color: $primary-5-reverse;
+  }
+
+  .is-dark &.is-success,
+  &.is-dark.is-success {
+    color: $gray-1;
+    background-color: $success-5-reverse;
+    border-color: $success-5-reverse;
+  }
+
+  .is-dark &.is-warning,
+  &.is-dark.is-warning {
+    color: $gray-1;
+    background-color: $warning-5-reverse;
+    border-color: $warning-5-reverse;
+  }
+
+  .is-dark &.is-error,
+  &.is-dark.is-error {
+    color: $gray-1;
+    background-color: $error-5-reverse;
+    border-color: $error-5-reverse;
   }
 
   .is-dark &.is-info,
   &.is-dark.is-info {
-    color: $badge-info-color-reverse;
-    background-color: $badge-info-background-color-reverse;
-    border-color: $badge-info-border-color-reverse;
+    color: $gray-1;
+    background-color: $info-5-reverse;
+    border-color: $info-5-reverse;
   }
 
   &.is-small {
-    min-width: $badge-sm-min-width;
-    height: $badge-sm-height;
-    padding: $badge-sm-padding-y $badge-sm-padding-x;
-    font-size: $badge-sm-font-size;
-    line-height: $badge-sm-line-height;
-    border-radius: $badge-sm-border-radius;
+    min-width: 14 * $scale + $unit;
+    height: 14 * $scale + $unit;
+    padding: 0;
+    font-size: ($font-size-base - $font-size-diff) * $scale + $unit;
+    line-height: 14 * $scale + $unit;
+    border-radius: 7 * $scale + $unit;
   }
 
   &.is-dot,
   &.is-dot.is-large,
   &.is-dotter.is-small {
-    width: $badge-dot-width;
-    min-width: $badge-dot-min-width;
-    height: $badge-dot-height;
-    padding: $badge-dot-padding-y $badge-dot-padding-x;
-    overflow: $badge-dot-overflow;
-    color: $badge-dot-color;
-    border-radius: $badge-dot-border-radius;
+    width: 6 * $scale + $unit;
+    min-width: auto;
+    height: 6 * $scale + $unit;
+    padding: 0;
+    overflow: hidden;
+    color: transparent;
+    border-radius: 100%;
   }
 }

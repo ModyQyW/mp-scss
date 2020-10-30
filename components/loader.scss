@@ -1,0 +1,177 @@
+@import "../variables";
+
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  position: relative;
+  width: $font-size-base * $scale + $unit;
+  height: $font-size-base * $scale + $unit;
+  margin: 0;
+  font-size: 0;
+  color: transparent;
+  border-radius: 50%;
+  transform: translateZ(0);
+  animation: load 2s infinite linear;
+
+  &,
+  .is-light &,
+  &.is-light {
+    background-image: linear-gradient(to right, $gray-7 10%, rgba(255, 255, 255, 0) 42%);
+  }
+
+  &::before,
+  .is-light &::before,
+  &.is-light::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    content: "";
+    background-color: $gray-7;
+    border-radius: 100% 0 0;
+  }
+
+  &::after,
+  .is-light &::after,
+  &.is-light::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 75%;
+    height: 75%;
+    margin: auto;
+    content: "";
+    background-color: $container-background-color;
+    border-radius: 50%;
+  }
+
+  .is-dark &::after,
+  &.is-dark::after {
+    background-color: $container-background-color-reverse;
+  }
+
+  &.is-primary,
+  .is-light &.is-primary,
+  &.is-light.is-primary {
+    background-image: linear-gradient(to right, $primary-6 10%, rgba(255, 255, 255, 0) 42%);
+  }
+
+  &.is-primary::before,
+  .is-light.is-primary &::before,
+  &.is-light.is-primary::before {
+    background-color: $primary-6;
+  }
+
+  .is-dark &.is-primary,
+  &.is-dark.is-primary {
+    background-image: linear-gradient(to right, $primary-6-reverse 10%, rgba(255, 255, 255, 0) 42%);
+  }
+
+  .is-dark.is-primary &::before,
+  &.is-dark.is-primary::before {
+    background-color: $primary-6-reverse;
+  }
+
+  &.is-success,
+  .is-light &.is-success,
+  &.is-light.is-success {
+    background-image: linear-gradient(to right, $success-6 10%, rgba(255, 255, 255, 0) 42%);
+  }
+
+  &.is-success::before,
+  .is-light.is-success &::before,
+  &.is-light.is-success::before {
+    background-color: $success-6;
+  }
+
+  .is-dark &.is-success,
+  &.is-dark.is-success {
+    background-image: linear-gradient(to right, $success-6-reverse 10%, rgba(255, 255, 255, 0) 42%);
+  }
+
+  .is-dark.is-success &::before,
+  &.is-dark.is-success::before {
+    background-color: $success-6-reverse;
+  }
+
+  &.is-warning,
+  .is-light &.is-warning,
+  &.is-light.is-warning {
+    background-image: linear-gradient(to right, $warning-6 10%, rgba(255, 255, 255, 0) 42%);
+  }
+
+  &.is-warning::before,
+  .is-light.is-warning &::before,
+  &.is-light.is-warning::before {
+    background-color: $warning-6;
+  }
+
+  .is-dark &.is-warning,
+  &.is-dark.is-warning {
+    background-image: linear-gradient(to right, $warning-6-reverse 10%, rgba(255, 255, 255, 0) 42%);
+  }
+
+  .is-dark.is-warning &::before,
+  &.is-dark.is-warning::before {
+    background-color: $warning-6-reverse;
+  }
+
+  &.is-error,
+  .is-light &.is-error,
+  &.is-light.is-error {
+    background-image: linear-gradient(to right, $error-6 10%, rgba(255, 255, 255, 0) 42%);
+  }
+
+  &.is-error::before,
+  .is-light.is-error &::before,
+  &.is-light.is-error::before {
+    background-color: $error-6;
+  }
+
+  .is-dark &.is-error,
+  &.is-dark.is-error {
+    background-image: linear-gradient(to right, $error-6-reverse 10%, rgba(255, 255, 255, 0) 42%);
+  }
+
+  .is-dark.is-error &::before,
+  &.is-dark.is-error::before {
+    background-color: $error-6-reverse;
+  }
+
+  &.is-info,
+  .is-light &.is-info,
+  &.is-light.is-info {
+    background-image: linear-gradient(to right, $info-6 10%, rgba(255, 255, 255, 0) 42%);
+  }
+
+  &.is-info::before,
+  .is-light.is-info &::before,
+  &.is-light.is-info::before {
+    background-color: $info-6;
+  }
+
+  .is-dark &.is-info,
+  &.is-dark.is-info {
+    background-image: linear-gradient(to right, $info-6-reverse 10%, rgba(255, 255, 255, 0) 42%);
+  }
+
+  .is-dark.is-info &::before,
+  &.is-dark.is-info::before {
+    background-color: $info-6-reverse;
+  }
+
+  &.is-large {
+    width: ($font-size-base + $font-size-diff) * $scale + $unit;
+    height: ($font-size-base + $font-size-diff) * $scale + $unit;
+  }
+}

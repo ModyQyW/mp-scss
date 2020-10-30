@@ -6,22 +6,22 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: $overlay-z-index;
-  width: $overlay-width;
-  height: $overlay-height;
+  z-index: $z-index-max - $z-index-step * 2;
+  width: 100%;
+  height: 100%;
   overflow: auto;
   outline: none;
 
   &,
   .is-light &,
   &.is-light {
-    color: $overlay-color;
-    background-color: $overlay-background-color;
+    color: $color-main;
+    background-color: fade-out($black, .55);
   }
 
   .is-dark &,
   &.is-dark {
-    color: $overlay-color-reverse;
-    background-color: $overlay-background-color-reverse;
+    color: $color-main-reverse;
+    background-color: fade-out($black, .55);
   }
 }
