@@ -60,114 +60,122 @@
     background-color: $container-background-color-reverse;
   }
 
+  &.is-white {
+    background-image: linear-gradient(to right, $white 10%, rgba(255, 255, 255, 0) 42%);
+  }
+
+  &.is-white::before {
+    background-color: $white;
+  }
+
   &.is-primary,
   .is-light &.is-primary,
   &.is-light.is-primary {
-    background-image: linear-gradient(to right, $primary-6 10%, rgba(255, 255, 255, 0) 42%);
+    background-image: linear-gradient(to right, $primary 10%, rgba(255, 255, 255, 0) 42%);
   }
 
   &.is-primary::before,
   .is-light.is-primary &::before,
   &.is-light.is-primary::before {
-    background-color: $primary-6;
+    background-color: $primary;
   }
 
   .is-dark &.is-primary,
   &.is-dark.is-primary {
-    background-image: linear-gradient(to right, $primary-6-reverse 10%, rgba(255, 255, 255, 0) 42%);
+    background-image: linear-gradient(to right, $primary-reverse 10%, rgba(255, 255, 255, 0) 42%);
   }
 
   .is-dark.is-primary &::before,
   &.is-dark.is-primary::before {
-    background-color: $primary-6-reverse;
+    background-color: $primary-reverse;
   }
 
   &.is-success,
   .is-light &.is-success,
   &.is-light.is-success {
-    background-image: linear-gradient(to right, $success-6 10%, rgba(255, 255, 255, 0) 42%);
+    background-image: linear-gradient(to right, $success 10%, rgba(255, 255, 255, 0) 42%);
   }
 
   &.is-success::before,
   .is-light.is-success &::before,
   &.is-light.is-success::before {
-    background-color: $success-6;
+    background-color: $success;
   }
 
   .is-dark &.is-success,
   &.is-dark.is-success {
-    background-image: linear-gradient(to right, $success-6-reverse 10%, rgba(255, 255, 255, 0) 42%);
+    background-image: linear-gradient(to right, $success-reverse 10%, rgba(255, 255, 255, 0) 42%);
   }
 
   .is-dark.is-success &::before,
   &.is-dark.is-success::before {
-    background-color: $success-6-reverse;
+    background-color: $success-reverse;
   }
 
   &.is-warning,
   .is-light &.is-warning,
   &.is-light.is-warning {
-    background-image: linear-gradient(to right, $warning-6 10%, rgba(255, 255, 255, 0) 42%);
+    background-image: linear-gradient(to right, $warning 10%, rgba(255, 255, 255, 0) 42%);
   }
 
   &.is-warning::before,
   .is-light.is-warning &::before,
   &.is-light.is-warning::before {
-    background-color: $warning-6;
+    background-color: $warning;
   }
 
   .is-dark &.is-warning,
   &.is-dark.is-warning {
-    background-image: linear-gradient(to right, $warning-6-reverse 10%, rgba(255, 255, 255, 0) 42%);
+    background-image: linear-gradient(to right, $warning-reverse 10%, rgba(255, 255, 255, 0) 42%);
   }
 
   .is-dark.is-warning &::before,
   &.is-dark.is-warning::before {
-    background-color: $warning-6-reverse;
+    background-color: $warning-reverse;
   }
 
   &.is-error,
   .is-light &.is-error,
   &.is-light.is-error {
-    background-image: linear-gradient(to right, $error-6 10%, rgba(255, 255, 255, 0) 42%);
+    background-image: linear-gradient(to right, $error 10%, rgba(255, 255, 255, 0) 42%);
   }
 
   &.is-error::before,
   .is-light.is-error &::before,
   &.is-light.is-error::before {
-    background-color: $error-6;
+    background-color: $error;
   }
 
   .is-dark &.is-error,
   &.is-dark.is-error {
-    background-image: linear-gradient(to right, $error-6-reverse 10%, rgba(255, 255, 255, 0) 42%);
+    background-image: linear-gradient(to right, $error-reverse 10%, rgba(255, 255, 255, 0) 42%);
   }
 
   .is-dark.is-error &::before,
   &.is-dark.is-error::before {
-    background-color: $error-6-reverse;
+    background-color: $error-reverse;
   }
 
   &.is-info,
   .is-light &.is-info,
   &.is-light.is-info {
-    background-image: linear-gradient(to right, $info-6 10%, rgba(255, 255, 255, 0) 42%);
+    background-image: linear-gradient(to right, $info 10%, rgba(255, 255, 255, 0) 42%);
   }
 
   &.is-info::before,
   .is-light.is-info &::before,
   &.is-light.is-info::before {
-    background-color: $info-6;
+    background-color: $info;
   }
 
   .is-dark &.is-info,
   &.is-dark.is-info {
-    background-image: linear-gradient(to right, $info-6-reverse 10%, rgba(255, 255, 255, 0) 42%);
+    background-image: linear-gradient(to right, $info-reverse 10%, rgba(255, 255, 255, 0) 42%);
   }
 
   .is-dark.is-info &::before,
   &.is-dark.is-info::before {
-    background-color: $info-6-reverse;
+    background-color: $info-reverse;
   }
 
   &.is-large {
