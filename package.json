@@ -38,6 +38,7 @@
     "copy-lv4": "copyfiles -u 2 ./dist/css/**/**/*.css ./dist/wxss && copyfiles -u 2 ./dist/css/**/**/*.css ./dist/acss",
     "rename": "renamer -e ext -f css -r wxss \"./dist/wxss/**\" && renamer -e ext -f css -r acss \"./dist/acss/**\"",
     "build": "yarn lint && yarn clean && yarn build-all && yarn transform && yarn copy && yarn rename",
+    "build-no-transform": "yarn lint && yarn clean && yarn build-all && yarn copy && yarn rename",
     "deploy": "np --no-tests --no-release-draft",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
