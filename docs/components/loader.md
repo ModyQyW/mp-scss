@@ -18,12 +18,14 @@
 
 ## 主题
 
-默认有`default`，`primary`，`success`，`warning`，`error`, `info`六个主题。
+默认有`default`，`white`，`primary`，`success`，`warning`，`error`, `info`七个主题。`white`是 2.0.0-beta.1 开始新增的。
 
 ```html
 <view class="container">
   <!-- default 主题 -->
   <view class="loader"></view>
+  <!-- white 主题，2.0.0-beta.1 新增 -->
+  <view class="loader is-white"></view>
   <!-- primary 主题 -->
   <view class="loader is-primary"></view>
   <!-- success 主题 -->
@@ -64,40 +66,25 @@
 
 ```html
 <view class="container">
-  <button class="loader is-large"></button>
+  <view class="loader is-large"></view>
 </view>
 ```
 
-## 适应不同的背景
+## 结合
 
-要适应特定颜色的背景，需要做额外的修改。
+一个常见的用途是把`.loader`和`.button`结合，自定义加载中按钮。
 
 ```html
-<view class="container">
-  <button class="loader"></button>
-</view>
+<button class="btn is-primary is-loading">
+  <view class="loader is-white"></view>
+  加载中...
+</button>
 ```
 
 ```scss
-.container,
-.container.is-light {
-  background-color: #fafafa;
-}
-
-.loader::after,
-.is-light .loader::after,
-.loader.is-light::after {
-  background-color: #fafafa;
-}
-
-.container.is-dark {
-  background-color: #121212;
-}
-
-.is-dark .loader::after,
-.loader.is-dark {
-  background-color: #121212;
+.btn.is-primary .loader.is-white::after {
+  background-color: $primary;
 }
 ```
 
-注意保证对应关系。
+注意需要让`.loader::after`的背景色和父元素的背景色保持一致。
