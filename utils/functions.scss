@@ -9,16 +9,16 @@
  */
 
 @function f-hex-to-hsv($hex-color) {
+  // init
+  $h: 0;
+  $s: 0;
+  $v: 0;
   // convert
   $r: red($hex-color) / 255;
   $g: green($hex-color) / 255;
   $b: blue($hex-color) / 255;
   $max: max($r, $g, $b);
   $min: min($r, $g, $b);
-  // init
-  $h: 0;
-  $s: 0;
-  $v: 0;
   // h deg
   @if ($max == $min) {
     $h: 0deg;
@@ -66,58 +66,42 @@
 
 @function f-get-hue($h, $s, $v, $diff, $is-lighter) {
   $hue: 0deg;
-  @if ($h == 0deg and $s == 0%) {
-    @return $h;
-  }
   @if ($h >= 60deg and $h <= 240deg) {
     $hue: if($is-lighter, $h - 2deg * $diff, $h + 2deg * $diff);
   } @else {
     $hue: if($is-lighter, $h + 2deg * $diff, $h - 2deg * $diff);
   }
-  @if ($hue < 0deg) {
-    $hue: $hue + 360deg;
-  } @else if ($hue >= 360deg) {
-    $hue: $hue - 360deg;
-  }
+  $hue: if($hue < 0deg, $hue + 360deg, $hue);
+  $hue: if($hue > 360deg, $hue - 360deg, $hue);
   // return deg
   @return round($hue);
 }
 
 @function f-get-saturation($h, $s, $v, $diff, $is-lighter) {
   $saturation: 0%;
-  @if ($h == 0deg and $s == 0%) {
-    @return $s;
-  }
   @if ($is-lighter) {
-    $saturation: round(($s - 16% * $diff) * 100) / 100;
+    $saturation: $s - 16% * $diff;
   } @else if ($diff == 4) {
-    $saturation: round(($s + 16%) * 100) / 100;
+    $saturation: $s + 16%;
   } @else {
-    $saturation: round(($s + 5% * $diff) * 100) / 100;
+    $saturation: $s + 5% * $diff;
   }
-  @if ($saturation > 100%) {
-    $saturation: 100%;
-  }
-  @if ($is-lighter == true and $diff == 5 and $saturation > 10%) {
-    $saturation: 10%;
-  }
-  @if ($saturation < 6%) {
-    $saturation: 6%;
-  }
+  $saturation: if($saturation > 100%, 100%, $saturation);
+  $saturation: if($is-lighter and $diff == 5 and $saturation > 10%, 10%, $saturation);
+  $saturation: if($saturation < 6%, 6%, $saturation);
+  // return %
   @return round($saturation);
 }
 
 @function f-get-value($h, $s, $v, $diff, $is-lighter) {
-  @if ($is-lighter) {
-    @return if(round(($v + 5% * $diff) * 100) / 100 > 100%, 100%, round(($v + 5% * $diff) * 100) / 100);
-  }
-  @return if(round(($v - 15% * $diff) * 100) / 100 < 0%, 0%, round(($v - 15% * $diff) * 100) / 100);
+  $value: 0%;
+  $value: if($is-lighter, $v + 5% * $diff, $v - 15% * $diff);
+  $value: if($value > 100%, 100%, $value);
+  // return %
+  @return round($value);
 }
 
 @function f-get-color($hex-color, $index: 6) {
-  @if ($index == 6) {
-    @return $hex-color;
-  }
   $is-lighter: $index <= 6;
   $hsv-color: f-hex-to-hsv($hex-color); // deg, %, %
   $diff: if($is-lighter, 6 - $index, $index - 6);
@@ -129,14 +113,5 @@
     f-get-saturation($h, $s, $v, $diff, $is-lighter),
     f-get-value($h, $s, $v, $diff, $is-lighter)
   );
-  $a: alpha($hex-color);
-  @if ($a == 1) {
-    @return $new-hex-color;
-  } @else if ($a <= .2) {
-    @return change-color($new-hex-color, $alpha: $a * 2);
-  } @else if ($a <= .4) {
-    @return change-color($new-hex-color, $alpha: $a * 1.5);
-  } @else {
-    @return change-color($new-hex-color, $alpha: $a);
-  }
+  @return change-color($new-hex-color, $alpha: alpha($hex-color));
 }
