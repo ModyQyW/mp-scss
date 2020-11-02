@@ -10,18 +10,21 @@
   width: 100%;
   height: 100%;
   overflow: auto;
+  color: $color-main;
+  background-color: fade-out($black, .55);
   outline: none;
 
-  &,
-  .is-light &,
-  &.is-light {
-    color: $color-main;
-    background-color: fade-out($black, .55);
-  }
+  @if ($has-dark) {
+    .is-light &,
+    &.is-light {
+      color: $color-main;
+      background-color: fade-out($black, .55);
+    }
 
-  .is-dark &,
-  &.is-dark {
-    color: $color-main-reverse;
-    background-color: fade-out($black, .55);
+    .is-dark &,
+    &.is-dark {
+      color: $color-main-reverse;
+      background-color: fade-out($black, .55);
+    }
   }
 }

@@ -10,23 +10,27 @@
   font-size: $font-size-base * $scale + $unit;
   font-weight: 400;
   line-height: $line-height-default;
+  color: $color-main;
+  background-color: $container-background-color;
+  border-color: $border-color;
   border-style: solid;
   border-width: 1 * $scale + $unit;
   border-radius: $border-radius-base * $scale + $unit;
 
-  &,
-  .is-light &,
-  &.is-light {
-    color: $color-main;
-    background-color: $container-background-color;
-    border-color: $border-color;
-  }
+  @if ($has-dark) {
+    .is-light &,
+    &.is-light {
+      color: $color-main;
+      background-color: $container-background-color;
+      border-color: $border-color;
+    }
 
-  .is-dark &,
-  &.is-dark {
-    color: $color-main-reverse;
-    background-color: $container-background-color-reverse;
-    border-color: $border-color-reverse;
+    .is-dark &,
+    &.is-dark {
+      color: $color-main-reverse;
+      background-color: $container-background-color-reverse;
+      border-color: $border-color-reverse;
+    }
   }
 
   .card-header,

@@ -14,105 +14,135 @@
   font-size: ($font-size-base - $font-size-diff) * $scale + $unit;
   font-weight: 400;
   line-height: 20 * $scale + $unit;
+  color: $color-main;
   text-align: center;
   white-space: nowrap;
+  background-color: $gray-5;
+  border-color: $gray-5;
   border-style: solid;
   border-width: 1 * $scale + $unit;
   border-radius: 10 * $scale + $unit;
+  box-shadow: 0 0 0 1 * $scale + $unit $container-background-color;
   transition: $transition-default;
   transform: translate(50%, -50%);
   transform-origin: 100% 0;
 
-  &,
-  .is-light &,
-  &.is-light {
-    color: $color-main;
-    background-color: $gray-5;
-    border-color: $gray-5;
-    box-shadow: 0 0 0 1 * $scale + $unit $container-background-color;
-  }
-
-  &.is-primary,
-  .is-light &.is-primary,
-  &.is-light.is-primary {
+  &.is-primary {
     color: $gray-1;
     background-color: $primary-5;
     border-color: $primary-5;
   }
 
-  &.is-success,
-  .is-light &.is-success,
-  &.is-light.is-success {
+  &.is-success {
     color: $gray-1;
     background-color: $success-5;
     border-color: $success-5;
   }
 
-  &.is-warning,
-  .is-light &.is-warning,
-  &.is-light.is-warning {
+  &.is-warning {
     color: $gray-1;
     background-color: $warning-5;
     border-color: $warning-5;
   }
 
-  &.is-error,
-  .is-light &.is-error,
-  &.is-light.is-error {
+  &.is-error {
     color: $gray-1;
     background-color: $error-5;
     border-color: $error-5;
   }
 
-  &.is-info,
-  .is-light &.is-info,
-  &.is-light.is-info {
+  &.is-info {
     color: $gray-1;
     background-color: $info-5;
     border-color: $info-5;
   }
 
-  .is-dark &,
-  &.is-dark {
-    color: $color-main-reverse;
-    background-color: $gray-5;
-    border-color: $gray-5;
-    box-shadow: 0 0 0 1 * $scale + $unit $container-background-color-reverse;
-  }
+  @if ($has-dark) {
+    .is-light &,
+    &.is-light {
+      color: $color-main;
+      background-color: $gray-5;
+      border-color: $gray-5;
+      box-shadow: 0 0 0 1 * $scale + $unit $container-background-color;
+    }
 
-  .is-dark &.is-primary,
-  &.is-dark.is-primary {
-    color: $gray-1;
-    background-color: $primary-5-reverse;
-    border-color: $primary-5-reverse;
-  }
+    .is-light &.is-primary,
+    &.is-light.is-primary {
+      color: $gray-1;
+      background-color: $primary-5;
+      border-color: $primary-5;
+    }
 
-  .is-dark &.is-success,
-  &.is-dark.is-success {
-    color: $gray-1;
-    background-color: $success-5-reverse;
-    border-color: $success-5-reverse;
-  }
+    .is-light &.is-success,
+    &.is-light.is-success {
+      color: $gray-1;
+      background-color: $success-5;
+      border-color: $success-5;
+    }
 
-  .is-dark &.is-warning,
-  &.is-dark.is-warning {
-    color: $gray-1;
-    background-color: $warning-5-reverse;
-    border-color: $warning-5-reverse;
-  }
+    .is-light &.is-warning,
+    &.is-light.is-warning {
+      color: $gray-1;
+      background-color: $warning-5;
+      border-color: $warning-5;
+    }
 
-  .is-dark &.is-error,
-  &.is-dark.is-error {
-    color: $gray-1;
-    background-color: $error-5-reverse;
-    border-color: $error-5-reverse;
-  }
+    .is-light &.is-error,
+    &.is-light.is-error {
+      color: $gray-1;
+      background-color: $error-5;
+      border-color: $error-5;
+    }
 
-  .is-dark &.is-info,
-  &.is-dark.is-info {
-    color: $gray-1;
-    background-color: $info-5-reverse;
-    border-color: $info-5-reverse;
+    .is-light &.is-info,
+    &.is-light.is-info {
+      color: $gray-1;
+      background-color: $info-5;
+      border-color: $info-5;
+    }
+
+    .is-dark &,
+    &.is-dark {
+      color: $color-main-reverse;
+      background-color: $gray-5;
+      border-color: $gray-5;
+      box-shadow: 0 0 0 1 * $scale + $unit $container-background-color-reverse;
+    }
+
+    .is-dark &.is-primary,
+    &.is-dark.is-primary {
+      color: $gray-1;
+      background-color: $primary-5-reverse;
+      border-color: $primary-5-reverse;
+    }
+
+    .is-dark &.is-success,
+    &.is-dark.is-success {
+      color: $gray-1;
+      background-color: $success-5-reverse;
+      border-color: $success-5-reverse;
+    }
+
+    .is-dark &.is-warning,
+    &.is-dark.is-warning {
+      color: $gray-1;
+      background-color: $warning-5-reverse;
+      border-color: $warning-5-reverse;
+    }
+
+    .is-dark &.is-error,
+    &.is-dark.is-error {
+      color: $gray-1;
+      background-color: $error-5-reverse;
+      border-color: $error-5-reverse;
+    }
+
+    .is-dark &.is-info,
+    &.is-dark.is-info {
+      color: $gray-1;
+      background-color: $info-5-reverse;
+      border-color: $info-5-reverse;
+    }
   }
 
   &.is-small {
@@ -125,7 +155,6 @@
   }
 
   &.is-dot,
-  &.is-dot.is-large,
   &.is-dotter.is-small {
     width: 6 * $scale + $unit;
     min-width: auto;

@@ -6,6 +6,9 @@ $unit: rpx !default;
 /* 缩放倍数 scale */
 $scale: 2 !default;
 
+/* 是否启用暗黑模式 */
+$has-dark: false !default;
+
 /* 通用变量 common */
 // 中性色 neutral color
 $has-transparent: true !default;
