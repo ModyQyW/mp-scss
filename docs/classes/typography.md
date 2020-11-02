@@ -228,7 +228,7 @@ $line-height-step: 2;
 |`.is-dark .text-secondary`, `.is-dark.text-secondary`|`color: rgba(255, 255, 255, .45);`|
 |`.is-dark .text-disabled`, `.is-dark.text-disabled`|`color: rgba(255, 255, 255, .3);`|
 
-这部分由`$m-colors`，`$m-colors-reverse`，`$m-color`和`$m-color-reverse`生成，由于篇幅原因，省略了`$m-colors`和`$m-colors-reverse`生成的类。修改`$m-colors`和`$m-colors-reverse`可以自定义，见[进阶](../advance/README.md)。在引入之前做相关修改也可以自定义。
+这部分由`$m-colors`，`$m-colors-reverse`，`$m-color`和`$m-color-reverse`生成，由于篇幅原因，省略了`$m-colors`和`$m-colors-reverse`生成的类。修改`$m-colors`和`$m-colors-reverse`可以自定义，见[进阶](../advance/README.md#色彩)。在引入之前做相关修改也可以自定义。
 
 ```scss
 // 修改颜色

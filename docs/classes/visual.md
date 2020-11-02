@@ -7,7 +7,7 @@
 |`.bg`，`.is-light .bg`，`.is-light.bg`|`background-color: rgba(0, 0, 0, .04);`|
 |`.is-dark .bg`，`.is-dark.bg`|`background-color: rgba(255, 255, 255, .08);`|
 
-这部分由`$m-colors`，`$m-colors-reverse`，`$m-background-color`和`$m-background-color-reverse`生成，由于篇幅原因，省略了`$m-colors`和`$m-colors-reverse`生成的类。修改`$m-colors`和`$m-colors-reverse`可以自定义，见[进阶](../advance/README.md)。在引入之前做相关修改也可以自定义。
+这部分由`$m-colors`，`$m-colors-reverse`，`$m-background-color`和`$m-background-color-reverse`生成，由于篇幅原因，省略了`$m-colors`和`$m-colors-reverse`生成的类。修改`$m-colors`和`$m-colors-reverse`可以自定义，见[进阶](../advance/README.md#色彩)。在引入之前做相关修改也可以自定义。
 
 ```scss
 // 修改颜色
@@ -140,7 +140,7 @@ $m-background-size: (
 |`.border`，`.is-light .border`, `.is-light.border`|`border-color: rgba(0, 0, 0, .15);`|
 |`.is-dark .border`, `.is-dark.border`|`border-color: rgba(255, 255, 255, .2);`|
 
-这部分由`$m-colors`，`$m-colors-reverse`，`$m-border-color`和`$m-border-color-reverse`生成，由于篇幅原因，省略了`$m-colors`和`$m-colors-reverse`生成的类。修改`$m-colors`和`$m-colors-reverse`可以自定义，见[进阶](../advance/README.md)。在引入之前做相关修改也可以自定义，下面是修改的示例。
+这部分由`$m-colors`，`$m-colors-reverse`，`$m-border-color`和`$m-border-color-reverse`生成，由于篇幅原因，省略了`$m-colors`和`$m-colors-reverse`生成的类。修改`$m-colors`和`$m-colors-reverse`可以自定义，见[进阶](../advance/README.md#色彩)。在引入之前做相关修改也可以自定义，下面是修改的示例。
 
 ```scss
 // 修改颜色

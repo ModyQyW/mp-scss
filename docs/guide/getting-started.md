@@ -92,7 +92,9 @@ npm i -D scss sass-loader
 @import "~@modyqyw/mp-scss/classes/positioning/position";
 ```
 
-这个库是面向小程序的，提倡使用`rpx`，`%`或不使用单位，参考[尺寸单位](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html)。默认地，这个库使用缩放倍数`$scale`为 2，使用单位`$unit`为`rpx`，。
+这个库是面向小程序的，提倡使用`rpx`，`%`或不使用单位，参考[尺寸单位](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html)。默认地，这个库使用缩放倍数`$scale`为 2，使用单位`$unit`为`rpx`。
+
+这个库支持使用暗黑模式，但默认不使用暗黑模式，也就是说文档里`.is-light`和`.is-dark`相关的部分默认不会生成，你需要手动开启暗黑模式，见[进阶](../advance/README.md#色彩)。
 
 接下来你可以去学习一下[重置](../reset/README.md)，它是这个库里相对独立的一部分，以微信小程序为基准，结合`ress.css`，重置小程序默认的样式。你完全可以单独使用它。
 
