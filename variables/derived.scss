@@ -394,6 +394,27 @@ $m-colors-reverse: () !default;
     )
   );
 }
+@if ($has-gray) {
+  $m-colors: map-merge(
+    $m-colors,
+    (
+      "-gray": $gray,
+      "-gray-1": $gray-1,
+      "-gray-2": $gray-2,
+      "-gray-3": $gray-3,
+      "-gray-4": $gray-4,
+      "-gray-5": $gray-5,
+      "-gray-6": $gray-6,
+      "-gray-7": $gray-7,
+      "-gray-8": $gray-8,
+      "-gray-9": $gray-9,
+      "-gray-10": $gray-10,
+      "-gray-11": $gray-11,
+      "-gray-12": $gray-12,
+      "-gray-13": $gray-13
+    )
+  );
+}
 @if ($has-black) {
   $m-colors: map-merge(
     $m-colors,
