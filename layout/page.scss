@@ -1,6 +1,5 @@
 @import "../variables";
 
-.container,
 .header,
 .navbar,
 .aside,
@@ -12,6 +11,7 @@
 }
 
 .container {
+  position: absolute;
   flex: auto;
   flex-direction: column;
   min-height: 0;
@@ -20,6 +20,10 @@
   font-weight: $container-font-weight;
   line-height: $container-line-height;
   background-color: $container-background-color;
+
+  .container {
+    position: relative;
+  }
 
   @if ($has-dark) {
     &.is-light,
