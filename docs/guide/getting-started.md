@@ -103,3 +103,8 @@ npm i -D scss sass-loader
 等你学会如何使用这个库之后，还可以去了解这个库其中所遵循的[原则](./design.md)。
 
 最后也不要忘了查看[进阶](../advance/README.md)，看看有什么进阶用法能用到你的项目上，比如全量引入时的体积优化，修改色板，修改单位，修改缩放倍数等等。
+
+为了方便快速开发，我们也提供了模版：
+
+- [boilerplate-uni-app](https://github.com/MillCloud/boilerplate-uni-app) - 结合了 uview-ui 和 uni-ui 的 uni-app 模板，包括但不限于完整的本地校验流程和可能用到的工具类库
+- [boilerplate-taro](https://github.com/MillCloud/boilerplate-taro) - 未完成
