@@ -7,7 +7,7 @@
   line-height: 1;
 
   &.is-small {
-    width: ($font-size-base - $font-size-diff) * $line-height-default * * $scale + $unit;
+    width: ($font-size-base - $font-size-diff) * $line-height-default * $scale + $unit;
     height: ($font-size-base - $font-size-diff) * $line-height-default * $scale + $unit;
     line-height: 1;
   }
