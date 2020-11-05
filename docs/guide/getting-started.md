@@ -5,16 +5,16 @@
 
 建议安装 [Node.js](https://nodejs.org/en/) 10 或者 12。
 
-国内安装 [node-sass](https://github.com/sass/node-sass#readme) 缓慢，建议转用 [dart-sass](https://github.com/sass/dart-sass#readme)。
+[node-sass](https://github.com/sass/node-sass#readme) 在国内安装缓慢且[已经被弃用](https://sass-lang.com/blog/libsass-is-deprecated)，建议转用 [dart-sass](https://github.com/sass/dart-sass#readme)。
 :::
 
 首先安装相关依赖。
 
 ```sh
-npm i @modyqyw/mp-scss
+npm i @modyqyw/mp-scss@next
 npm i -D scss sass-loader
 # or
-# yarn add @modyqyw/mp-scss
+# yarn add @modyqyw/mp-scss@next
 # yarn add -D scss sass-loader
 ```
 
