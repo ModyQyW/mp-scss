@@ -32,7 +32,6 @@
   color: $color-main;
   white-space: nowrap;
   cursor: text;
-  background-color: $container-background-color;
   border-color: $border-color;
   border-style: solid;
   border-width: 1 * $scale + $unit;
@@ -42,20 +41,17 @@
 
   // &:hover {
   //   color: $color-main;
-  //   background-color: $container-background-color;
   //   border-color: $primary-6;
   // }
 
   &:focus,
   &:focus-within {
     color: $color-main;
-    background-color: $container-background-color;
     border-color: $primary-6;
   }
 
   &:active {
     color: $color-main;
-    background-color: $container-background-color;
     border-color: $primary-6;
   }
 
@@ -67,25 +63,21 @@
     .is-light &,
     &.is-light {
       color: $color-main;
-      background-color: $container-background-color;
       border-color: $border-color;
 
       // &:hover {
       //   color: $color-main;
-      //   background-color: $container-background-color;
       //   border-color: $primary-6;
       // }
 
       &:focus,
       &:focus-within {
         color: $color-main;
-        background-color: $container-background-color;
         border-color: $primary-6;
       }
 
       &:active {
         color: $color-main;
-        background-color: $container-background-color;
         border-color: $primary-6;
       }
     }
@@ -93,25 +85,21 @@
     .is-dark &,
     &.is-dark {
       color: $color-main-reverse;
-      background-color: $container-background-color-reverse;
       border-color: $border-color-reverse;
 
       // &:hover {
       //   color: $color-main-reverse;
-      //   background-color: $container-background-color-reverse;
       //   border-color: $primary-6-reverse;
       // }
 
       &:focus,
       &:focus-within {
         color: $color-main-reverse;
-        background-color: $container-background-color-reverse;
         border-color: $primary-6-reverse;
       }
 
       &:active {
         color: $color-main-reverse;
-        background-color: $container-background-color-reverse;
         border-color: $primary-6-reverse;
       }
     }
@@ -145,7 +133,6 @@
   font-weight: 400;
   line-height: $line-height-default;
   color: $color-main;
-  background-color: $container-background-color;
   border-color: $border-color;
   border-style: solid;
   border-width: 1 * $scale + $unit;
@@ -155,20 +142,17 @@
 
   // &:hover {
   //   color: $color-main;
-  //   background-color: $container-background-color;
   //   border-color: $primary-6;
   // }
 
   &:focus,
   &:focus-within {
     color: $color-main;
-    background-color: $container-background-color;
     border-color: $primary-6;
   }
 
   &:active {
     color: $color-main;
-    background-color: $container-background-color;
     border-color: $primary-6;
   }
 
@@ -176,25 +160,21 @@
     .is-light &,
     &.is-light {
       color: $color-main;
-      background-color: $container-background-color;
       border-color: $border-color;
 
       // &:hover {
       //   color: $color-main;
-      //   background-color: $container-background-color;
       //   border-color: $primary-6;
       // }
 
       &:focus,
       &:focus-within {
         color: $color-main;
-        background-color: $container-background-color;
         border-color: $primary-6;
       }
 
       &:active {
         color: $color-main;
-        background-color: $container-background-color;
         border-color: $primary-6;
       }
     }
@@ -202,25 +182,21 @@
     .is-dark &,
     &.is-dark {
       color: $color-main-reverse;
-      background-color: $container-background-color-reverse;
       border-color: $border-color-reverse;
 
       // &:hover {
       //   color: $color-main-reverse;
-      //   background-color: $container-background-color-reverse;
       //   border-color: $primary-6-reverse;
       // }
 
       &:focus,
       &:focus-within {
         color: $color-main-reverse;
-        background-color: $container-background-color-reverse;
         border-color: $primary-6-reverse;
       }
 
       &:active {
         color: $color-main-reverse;
-        background-color: $container-background-color-reverse;
         border-color: $primary-6-reverse;
       }
     }
