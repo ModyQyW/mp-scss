@@ -102,7 +102,10 @@
 }
 
 @function f-get-color($hex-color, $index: 6) {
-  $is-lighter: $index <= 6;
+  @if ($index == 6) {
+    @return $hex-color;
+  }
+  $is-lighter: $index < 6;
   $hsv-color: f-hex-to-hsv($hex-color); // deg, %, %
   $diff: if($is-lighter, 6 - $index, $index - 6);
   $h: nth($hsv-color, 1); // deg

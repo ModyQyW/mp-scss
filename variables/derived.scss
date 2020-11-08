@@ -449,7 +449,7 @@ $m-colors-reverse: () !default;
     )
   );
   $m-colors-reverse: map-merge(
-    $m-colors,
+    $m-colors-reverse,
     (
       "-red": $red-reverse,
       "-red-1": $red-1-reverse,
@@ -483,7 +483,7 @@ $m-colors-reverse: () !default;
     )
   );
   $m-colors-reverse: map-merge(
-    $m-colors,
+    $m-colors-reverse,
     (
       "-volcano": $volcano-reverse,
       "-volcano-1": $volcano-1-reverse,
@@ -517,7 +517,7 @@ $m-colors-reverse: () !default;
     )
   );
   $m-colors-reverse: map-merge(
-    $m-colors,
+    $m-colors-reverse,
     (
       "-orange": $orange-reverse,
       "-orange-1": $orange-1-reverse,
@@ -551,7 +551,7 @@ $m-colors-reverse: () !default;
     )
   );
   $m-colors-reverse: map-merge(
-    $m-colors,
+    $m-colors-reverse,
     (
       "-gold": $gold-reverse,
       "-gold-1": $gold-1-reverse,
@@ -585,7 +585,7 @@ $m-colors-reverse: () !default;
     )
   );
   $m-colors-reverse: map-merge(
-    $m-colors,
+    $m-colors-reverse,
     (
       "-yellow": $yellow-reverse,
       "-yellow-1": $yellow-1-reverse,
@@ -619,7 +619,7 @@ $m-colors-reverse: () !default;
     )
   );
   $m-colors-reverse: map-merge(
-    $m-colors,
+    $m-colors-reverse,
     (
       "-lime": $lime-reverse,
       "-lime-1": $lime-1-reverse,
@@ -653,7 +653,7 @@ $m-colors-reverse: () !default;
     )
   );
   $m-colors-reverse: map-merge(
-    $m-colors,
+    $m-colors-reverse,
     (
       "-green": $green-reverse,
       "-green-1": $green-1-reverse,
@@ -687,7 +687,7 @@ $m-colors-reverse: () !default;
     )
   );
   $m-colors-reverse: map-merge(
-    $m-colors,
+    $m-colors-reverse,
     (
       "-cyan": $cyan-reverse,
       "-cyan-1": $cyan-1-reverse,
@@ -721,7 +721,7 @@ $m-colors-reverse: () !default;
     )
   );
   $m-colors-reverse: map-merge(
-    $m-colors,
+    $m-colors-reverse,
     (
       "-blue": $blue-reverse,
       "-blue-1": $blue-1-reverse,
@@ -755,7 +755,7 @@ $m-colors-reverse: () !default;
     )
   );
   $m-colors-reverse: map-merge(
-    $m-colors,
+    $m-colors-reverse,
     (
       "-geek-blue": $geek-blue-reverse,
       "-geek-blue-1": $geek-blue-1-reverse,
@@ -789,7 +789,7 @@ $m-colors-reverse: () !default;
     )
   );
   $m-colors-reverse: map-merge(
-    $m-colors,
+    $m-colors-reverse,
     (
       "-purple": $purple-reverse,
       "-purple-1": $purple-1-reverse,
@@ -823,7 +823,7 @@ $m-colors-reverse: () !default;
     )
   );
   $m-colors-reverse: map-merge(
-    $m-colors,
+    $m-colors-reverse,
     (
       "-magenta": $magenta-reverse,
       "-magenta-1": $magenta-1-reverse,
@@ -857,7 +857,7 @@ $m-colors-reverse: () !default;
     )
   );
   $m-colors-reverse: map-merge(
-    $m-colors,
+    $m-colors-reverse,
     (
       "-primary": $primary-reverse,
       "-primary-1": $primary-1-reverse,
@@ -891,7 +891,7 @@ $m-colors-reverse: () !default;
     )
   );
   $m-colors-reverse: map-merge(
-    $m-colors,
+    $m-colors-reverse,
     (
       "-success": $success-reverse,
       "-success-1": $success-1-reverse,
@@ -925,7 +925,7 @@ $m-colors-reverse: () !default;
     )
   );
   $m-colors-reverse: map-merge(
-    $m-colors,
+    $m-colors-reverse,
     (
       "-warning": $warning-reverse,
       "-warning-1": $warning-1-reverse,
@@ -959,7 +959,7 @@ $m-colors-reverse: () !default;
     )
   );
   $m-colors-reverse: map-merge(
-    $m-colors,
+    $m-colors-reverse,
     (
       "-error": $error-reverse,
       "-error-1": $error-1-reverse,
@@ -993,7 +993,7 @@ $m-colors-reverse: () !default;
     )
   );
   $m-colors-reverse: map-merge(
-    $m-colors,
+    $m-colors-reverse,
     (
       "-info": $info-reverse,
       "-info-1": $info-1-reverse,
