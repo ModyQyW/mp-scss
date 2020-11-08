@@ -58,88 +58,34 @@
   }
 
   @if ($has-dark) {
-    .is-light &,
-    &.is-light {
-      color: $color-main;
-      background-color: $gray-5;
-      border-color: $gray-5;
-      box-shadow: 0 0 0 1 * $scale + $unit $container-background-color;
-    }
-
-    .is-light &.is-primary,
-    &.is-light.is-primary {
-      color: $gray-1;
-      background-color: $primary-5;
-      border-color: $primary-5;
-    }
-
-    .is-light &.is-success,
-    &.is-light.is-success {
-      color: $gray-1;
-      background-color: $success-5;
-      border-color: $success-5;
-    }
-
-    .is-light &.is-warning,
-    &.is-light.is-warning {
-      color: $gray-1;
-      background-color: $warning-5;
-      border-color: $warning-5;
-    }
-
-    .is-light &.is-error,
-    &.is-light.is-error {
-      color: $gray-1;
-      background-color: $error-5;
-      border-color: $error-5;
-    }
-
-    .is-light &.is-info,
-    &.is-light.is-info {
-      color: $gray-1;
-      background-color: $info-5;
-      border-color: $info-5;
-    }
-
-    .is-dark &,
-    &.is-dark {
+    .is-dark & {
       color: $color-main-reverse;
-      background-color: $gray-5;
-      border-color: $gray-5;
+      background-color: $gray-8;
+      border-color: $gray-8;
       box-shadow: 0 0 0 1 * $scale + $unit $container-background-color-reverse;
     }
 
-    .is-dark &.is-primary,
-    &.is-dark.is-primary {
-      color: $gray-1;
+    .is-dark &.is-primary {
       background-color: $primary-5-reverse;
       border-color: $primary-5-reverse;
     }
 
-    .is-dark &.is-success,
-    &.is-dark.is-success {
-      color: $gray-1;
+    .is-dark &.is-success {
       background-color: $success-5-reverse;
       border-color: $success-5-reverse;
     }
 
-    .is-dark &.is-warning,
-    &.is-dark.is-warning {
-      color: $gray-1;
+    .is-dark &.is-warning {
       background-color: $warning-5-reverse;
       border-color: $warning-5-reverse;
     }
 
-    .is-dark &.is-error,
-    &.is-dark.is-error {
-      color: $gray-1;
+    .is-dark &.is-error {
       background-color: $error-5-reverse;
       border-color: $error-5-reverse;
     }
 
-    .is-dark &.is-info,
-    &.is-dark.is-info {
-      color: $gray-1;
+    .is-dark &.is-info {
       background-color: $info-5-reverse;
       border-color: $info-5-reverse;
     }

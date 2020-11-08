@@ -18,15 +18,7 @@
   border-radius: $border-radius-base * $scale + $unit;
 
   @if ($has-dark) {
-    .is-light &,
-    &.is-light {
-      color: $color-main;
-      background-color: $container-background-color;
-      border-color: $border-color;
-    }
-
-    .is-dark &,
-    &.is-dark {
+    .is-dark & {
       color: $color-main-reverse;
       background-color: $container-background-color-reverse;
       border-color: $border-color-reverse;

@@ -14,13 +14,7 @@
   transition: $transition-default;
 
   @if ($has-dark) {
-    .is-light &,
-    &.is-light {
-      border-top-color: $border-color;
-    }
-
-    .is-dark &,
-    &.is-dark {
+    .is-dark & {
       border-top-color: $border-color-reverse;
     }
   }
@@ -36,13 +30,7 @@
     border-left-width: 1 * $scale + $unit;
 
     @if ($has-dark) {
-      .is-light &,
-      &.is-light {
-        border-left-color: $border-color;
-      }
-
-      .is-dark &,
-      &.is-dark {
+      .is-dark & {
         border-left-color: $border-color-reverse;
       }
     }
@@ -57,13 +45,7 @@
   color: $color-main;
 
   @if ($has-dark) {
-    .is-light &,
-    &.is-light {
-      color: $color-main;
-    }
-
-    .is-dark &,
-    &.is-dark {
+    .is-dark & {
       color: $color-main-reverse;
     }
   }

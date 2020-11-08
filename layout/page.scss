@@ -28,13 +28,8 @@
   }
 
   @if ($has-dark) {
-    &.is-light,
-    .is-light & {
-      background-color: $container-background-color;
-    }
-
-    &.is-dark,
-    .is-dark & {
+    &.is-dark {
+      color: $color-main-reverse;
       background-color: $container-background-color-reverse;
     }
   }
@@ -47,12 +42,6 @@
   background-color: $header-background-color;
 
   @if ($has-dark) {
-    &.is-light,
-    .is-light & {
-      background-color: $header-background-color;
-    }
-
-    &.is-dark,
     .is-dark & {
       background-color: $header-background-color-reverse;
     }
@@ -66,12 +55,6 @@
   background-color: $navbar-background-color;
 
   @if ($has-dark) {
-    &.is-light,
-    .is-light & {
-      background-color: $navbar-background-color;
-    }
-
-    &.is-dark,
     .is-dark & {
       background-color: $navbar-background-color-reverse;
     }
@@ -88,12 +71,6 @@
   background-color: $aside-background-color;
 
   @if ($has-dark) {
-    &.is-light,
-    .is-light & {
-      background-color: $aside-background-color;
-    }
-
-    &.is-dark,
     .is-dark & {
       background-color: $aside-background-color-reverse;
     }
@@ -107,12 +84,6 @@
   background-color: $main-background-color;
 
   @if ($has-dark) {
-    &.is-light,
-    .is-light & {
-      background-color: $main-background-color;
-    }
-
-    &.is-dark,
     .is-dark & {
       background-color: $main-background-color-reverse;
     }
@@ -126,12 +97,6 @@
   background-color: $footer-background-color;
 
   @if ($has-dark) {
-    &.is-light,
-    .is-light & {
-      background-color: $footer-background-color;
-    }
-
-    &.is-dark,
     .is-dark & {
       background-color: $footer-background-color-reverse;
     }
@@ -148,12 +113,6 @@
   background-color: $safe-area-background-color;
 
   @if ($has-dark) {
-    &.is-light,
-    .is-light & {
-      background-color: $safe-area-background-color;
-    }
-
-    &.is-dark,
     .is-dark & {
       background-color: $safe-area-background-color-reverse;
     }

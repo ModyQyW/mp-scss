@@ -15,14 +15,7 @@
   outline: none;
 
   @if ($has-dark) {
-    .is-light &,
-    &.is-light {
-      color: $color-main;
-      background-color: fade-out($black, .55);
-    }
-
-    .is-dark &,
-    &.is-dark {
+    .is-dark & {
       color: $color-main-reverse;
       background-color: fade-out($black, .55);
     }

@@ -13,30 +13,14 @@
 }
 
 @if ($has-dark) {
-  @each $k, $v in $m-colors {
-    .is-light .bg#{$k},
-    .is-light.bg#{$k} {
-      background-color: $v;
-    }
-  }
-
-  @each $k, $v in $m-background-color {
-    .is-light .bg#{$k},
-    .is-light.bg#{$k} {
-      background-color: $v;
-    }
-  }
-
   @each $k, $v in $m-colors-reverse {
-    .is-dark .bg#{$k},
-    .is-dark.bg#{$k} {
+    .is-dark .bg#{$k} {
       background-color: $v;
     }
   }
 
   @each $k, $v in $m-background-color-reverse {
-    .is-dark .bg#{$k},
-    .is-dark.bg#{$k} {
+    .is-dark .bg#{$k} {
       background-color: $v;
     }
   }

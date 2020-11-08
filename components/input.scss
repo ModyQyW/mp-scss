@@ -4,13 +4,7 @@
   color: $color-secondary;
 
   @if ($has-dark) {
-    .is-light &,
-    &.is-light {
-      color: $color-secondary;
-    }
-
-    .is-dark &,
-    &.is-dark {
+    .is-dark & {
       color: $color-secondary-reverse;
     }
   }
@@ -39,13 +33,8 @@
   outline: none;
   transition: $transition-default;
 
-  // &:hover {
-  //   color: $color-main;
-  //   border-color: $primary-6;
-  // }
-
-  &:focus,
-  &:focus-within {
+  &:hover,
+  &:focus {
     color: $color-main;
     border-color: $primary-6;
   }
@@ -60,40 +49,12 @@
   }
 
   @if ($has-dark) {
-    .is-light &,
-    &.is-light {
-      color: $color-main;
-      border-color: $border-color;
-
-      // &:hover {
-      //   color: $color-main;
-      //   border-color: $primary-6;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $color-main;
-        border-color: $primary-6;
-      }
-
-      &:active {
-        color: $color-main;
-        border-color: $primary-6;
-      }
-    }
-
-    .is-dark &,
-    &.is-dark {
+    .is-dark & {
       color: $color-main-reverse;
       border-color: $border-color-reverse;
 
-      // &:hover {
-      //   color: $color-main-reverse;
-      //   border-color: $primary-6-reverse;
-      // }
-
-      &:focus,
-      &:focus-within {
+      &:hover,
+      &:focus {
         color: $color-main-reverse;
         border-color: $primary-6-reverse;
       }
@@ -140,13 +101,8 @@
   outline: none;
   transition: $transition-default;
 
-  // &:hover {
-  //   color: $color-main;
-  //   border-color: $primary-6;
-  // }
-
-  &:focus,
-  &:focus-within {
+  &:hover,
+  &:focus {
     color: $color-main;
     border-color: $primary-6;
   }
@@ -157,40 +113,12 @@
   }
 
   @if ($has-dark) {
-    .is-light &,
-    &.is-light {
-      color: $color-main;
-      border-color: $border-color;
-
-      // &:hover {
-      //   color: $color-main;
-      //   border-color: $primary-6;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $color-main;
-        border-color: $primary-6;
-      }
-
-      &:active {
-        color: $color-main;
-        border-color: $primary-6;
-      }
-    }
-
-    .is-dark &,
-    &.is-dark {
+    .is-dark & {
       color: $color-main-reverse;
       border-color: $border-color-reverse;
 
-      // &:hover {
-      //   color: $color-main-reverse;
-      //   border-color: $primary-6-reverse;
-      // }
-
-      &:focus,
-      &:focus-within {
+      &:hover,
+      &:focus {
         color: $color-main-reverse;
         border-color: $primary-6-reverse;
       }
