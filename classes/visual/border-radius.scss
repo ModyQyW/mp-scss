@@ -25,19 +25,19 @@
     border-bottom-left-radius: $v if($has-important, !important, "");
   }
 
-  .rounded-tl#{$k} {
-    border-top-left-radius: $v if($has-important, !important, "");
-  }
+  // .rounded-tl#{$k} {
+  //   border-top-left-radius: $v if($has-important, !important, "");
+  // }
 
-  .rounded-tr#{$k} {
-    border-top-right-radius: $v if($has-important, !important, "");
-  }
+  // .rounded-tr#{$k} {
+  //   border-top-right-radius: $v if($has-important, !important, "");
+  // }
 
-  .rounded-br#{$k} {
-    border-bottom-right-radius: $v if($has-important, !important, "");
-  }
+  // .rounded-br#{$k} {
+  //   border-bottom-right-radius: $v if($has-important, !important, "");
+  // }
 
-  .rounded-bl#{$k} {
-    border-bottom-left-radius: $v if($has-important, !important, "");
-  }
+  // .rounded-bl#{$k} {
+  //   border-bottom-left-radius: $v if($has-important, !important, "");
+  // }
 }
