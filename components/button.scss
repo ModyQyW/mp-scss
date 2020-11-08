@@ -1,3 +1,4 @@
+/* stylelint-disable selector-max-class */
 @import "../variables";
 
 .btn {
@@ -25,43 +26,669 @@
   border-width: 1 * $scale + $unit;
   border-radius: $border-radius-base * $scale + $unit;
   outline: none;
+  opacity: unset;
   transition: $transition-default;
   -webkit-tap-highlight-color: transparent;
 
-  // &:hover {
-  //   color: $primary-5;
-  //   background-color: $container-background-color;
-  //   border-color: $primary-5;
-  // }
-
-  &:focus,
-  &:focus-within {
-    color: $primary-5;
-    background-color: $container-background-color;
-    border-color: $primary-5;
+  &.is-rounded {
+    border-radius: round(16 + $font-size-base * $line-height-default + 1) / 2 * $scale + $unit;
   }
 
-  &:active,
-  &.button-hover {
-    color: $primary-7;
-    background-color: $container-background-color;
-    border-color: $primary-7;
-    opacity: unset;
+  &.is-small {
+    padding: 0 8 * $scale + $unit;
+    font-size: $font-size-base * $scale + $unit;
+
+    &.is-rounded {
+      border-radius: round(8 + $font-size-base * $line-height-default + 1) / 2 * $scale + $unit;
+    }
   }
 
-  &[disabled],
-  &.is-disabled {
-    color: $color-disabled;
-    // cursor: not-allowed;
-    background-color: $gray-3;
-    border-color: $border-color;
+  &.is-large {
+    padding: 6 * $scale + $unit 16 * $scale + $unit;
+    font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
+
+    &.is-rounded {
+      border-radius: round(16 + ($font-size-base + $font-size-diff) * $line-height-default + 1) / 2 * $scale + $unit;
+    }
   }
 
   &::after {
     display: none;
   }
 
-  &.is-ripply::after {
+  &:hover,
+  &:focus {
+    color: $gray-1;
+    background-color: $primary-6;
+    border-color: $primary-6;
+    opacity: unset;
+  }
+
+  &:active,
+  &.button-hover {
+    color: $gray-1;
+    background-color: $primary-7;
+    border-color: $primary-7;
+    opacity: unset;
+  }
+
+  &[disabled] {
+    color: $color-disabled;
+    pointer-events: none;
+    cursor: not-allowed;
+    user-select: none;
+    background-color: $gray-3;
+    border-color: $border-color;
+  }
+
+  @if ($has-dark) {
+    .is-dark &[disabled] {
+      color: $color-disabled-reverse;
+      background-color: $gray-10;
+      border-color: $border-color-reverse;
+    }
+  }
+
+  &.is-primary:not([disabled]) {
+    color: $gray-1;
+    background-color: $primary-6;
+    border-color: $primary-6;
+
+    &:hover,
+    &:focus {
+      color: $gray-1;
+      background-color: $primary-5;
+      border-color: $primary-5;
+    }
+
+    &:active,
+    &.button-hover {
+      color: $gray-1;
+      background-color: $primary-7;
+      border-color: $primary-7;
+    }
+
+    &.is-outlined {
+      color: $primary-6;
+      border-color: $primary-6;
+
+      &:hover,
+      &:focus {
+        color: $primary-5;
+        border-color: $primary-5;
+      }
+
+      &:active,
+      &.button-hover {
+        color: $primary-7;
+        border-color: $primary-7;
+      }
+    }
+
+    &.is-text {
+      color: $primary-6;
+
+      &:hover,
+      &:focus {
+        color: $primary-5;
+      }
+
+      &:active,
+      &.button-hover {
+        color: $primary-7;
+      }
+    }
+  }
+
+  &.is-success:not([disabled]) {
+    color: $gray-1;
+    background-color: $success-6;
+    border-color: $success-6;
+
+    &:hover,
+    &:focus {
+      color: $gray-1;
+      background-color: $success-5;
+      border-color: $success-5;
+    }
+
+    &:active,
+    &.button-hover {
+      color: $gray-1;
+      background-color: $success-7;
+      border-color: $success-7;
+    }
+
+    &.is-outlined {
+      color: $success-6;
+      border-color: $success-6;
+
+      &:hover,
+      &:focus {
+        color: $success-5;
+        border-color: $success-5;
+      }
+
+      &:active,
+      &.button-hover {
+        color: $success-7;
+        border-color: $success-7;
+      }
+    }
+
+    &.is-text {
+      color: $success-6;
+
+      &:hover,
+      &:focus {
+        color: $success-5;
+      }
+
+      &:active,
+      &.button-hover {
+        color: $success-7;
+      }
+    }
+  }
+
+  &.is-warning:not([disabled]) {
+    color: $gray-1;
+    background-color: $warning-6;
+    border-color: $warning-6;
+
+    &:hover,
+    &:focus {
+      color: $gray-1;
+      background-color: $warning-5;
+      border-color: $warning-5;
+    }
+
+    &:active,
+    &.button-hover {
+      color: $gray-1;
+      background-color: $warning-7;
+      border-color: $warning-7;
+    }
+
+    &.is-outlined {
+      color: $warning-6;
+      border-color: $warning-6;
+
+      &:hover,
+      &:focus {
+        color: $warning-5;
+        border-color: $warning-5;
+      }
+
+      &:active,
+      &.button-hover {
+        color: $warning-7;
+        border-color: $warning-7;
+      }
+    }
+
+    &.is-text {
+      color: $warning-6;
+
+      &:hover,
+      &:focus {
+        color: $warning-5;
+      }
+
+      &:active,
+      &.button-hover {
+        color: $warning-7;
+      }
+    }
+  }
+
+  &.is-error:not([disabled]) {
+    color: $gray-1;
+    background-color: $error-6;
+    border-color: $error-6;
+
+    &:hover,
+    &:focus {
+      color: $gray-1;
+      background-color: $error-5;
+      border-color: $error-5;
+    }
+
+    &:active,
+    &.button-hover {
+      color: $gray-1;
+      background-color: $error-7;
+      border-color: $error-7;
+    }
+
+    &.is-outlined {
+      color: $error-6;
+      border-color: $error-6;
+
+      &:hover,
+      &:focus {
+        color: $error-5;
+        border-color: $error-5;
+      }
+
+      &:active,
+      &.button-hover {
+        color: $error-7;
+        border-color: $error-7;
+      }
+    }
+
+    &.is-text {
+      color: $error-6;
+
+      &:hover,
+      &:focus {
+        color: $error-5;
+      }
+
+      &:active,
+      &.button-hover {
+        color: $error-7;
+      }
+    }
+  }
+
+  &.is-info:not([disabled]) {
+    color: $gray-1;
+    background-color: $info-6;
+    border-color: $info-6;
+
+    &:hover,
+    &:focus {
+      color: $gray-1;
+      background-color: $info-5;
+      border-color: $info-5;
+    }
+
+    &:active,
+    &.button-hover {
+      color: $gray-1;
+      background-color: $info-7;
+      border-color: $info-7;
+    }
+
+    &.is-outlined {
+      color: $info-6;
+      border-color: $info-6;
+
+      &:hover,
+      &:focus {
+        color: $info-5;
+        border-color: $info-5;
+      }
+
+      &:active,
+      &.button-hover {
+        color: $info-7;
+        border-color: $info-7;
+      }
+    }
+
+    &.is-text {
+      color: $info-6;
+
+      &:hover,
+      &:focus {
+        color: $info-5;
+      }
+
+      &:active,
+      &.button-hover {
+        color: $info-7;
+      }
+    }
+  }
+
+  @if ($has-dark) {
+    .is-dark & {
+      color: $color-main-reverse;
+      background-color: $container-background-color-reverse;
+      border-color: $border-color-reverse;
+
+      &:hover,
+      &:focus {
+        background-color: $primary-6-reverse;
+        border-color: $primary-6-reverse;
+      }
+
+      &:active,
+      &.button-hover {
+        background-color: $primary-7-reverse;
+        border-color: $primary-7-reverse;
+      }
+    }
+
+    .is-dark &.is-primary:not([disabled]) {
+      background-color: $primary-6-reverse;
+      border-color: $primary-6-reverse;
+
+      &:hover,
+      &:focus {
+        background-color: $primary-5-reverse;
+        border-color: $primary-5-reverse;
+      }
+
+      &:active,
+      &.button-hover {
+        background-color: $primary-7-reverse;
+        border-color: $primary-7-reverse;
+      }
+
+      &.is-outlined {
+        color: $primary-6-reverse;
+        border-color: $primary-6-reverse;
+
+        &:hover,
+        &:focus {
+          color: $primary-5-reverse;
+          border-color: $primary-5-reverse;
+        }
+
+        &:active,
+        &.button-hover {
+          color: $primary-7-reverse;
+          border-color: $primary-7-reverse;
+        }
+      }
+
+      &.is-text {
+        color: $primary-6-reverse;
+
+        &:hover,
+        &:focus {
+          color: $primary-5-reverse;
+        }
+
+        &:active,
+        &.button-hover {
+          color: $primary-7-reverse;
+        }
+      }
+    }
+
+    .is-dark &.is-success:not([disabled]) {
+      background-color: $success-6-reverse;
+      border-color: $success-6-reverse;
+
+      &:hover,
+      &:focus {
+        background-color: $success-5-reverse;
+        border-color: $success-5-reverse;
+      }
+
+      &:active,
+      &.button-hover {
+        background-color: $success-7-reverse;
+        border-color: $success-7-reverse;
+      }
+
+      &.is-outlined {
+        color: $success-6-reverse;
+        border-color: $success-6-reverse;
+
+        &:hover,
+        &:focus {
+          color: $success-5-reverse;
+          border-color: $success-5-reverse;
+        }
+
+        &:active,
+        &.button-hover {
+          color: $success-7-reverse;
+          border-color: $success-7-reverse;
+        }
+      }
+
+      &.is-text {
+        color: $success-6-reverse;
+
+        &:hover,
+        &:focus {
+          color: $success-5-reverse;
+        }
+
+        &:active,
+        &.button-hover {
+          color: $success-7-reverse;
+        }
+      }
+    }
+
+    .is-dark &.is-warning:not([disabled]) {
+      background-color: $warning-6-reverse;
+      border-color: $warning-6-reverse;
+
+      &:hover,
+      &:focus {
+        background-color: $warning-5-reverse;
+        border-color: $warning-5-reverse;
+      }
+
+      &:active,
+      &.button-hover {
+        background-color: $warning-7-reverse;
+        border-color: $warning-7-reverse;
+      }
+
+      &.is-outlined {
+        color: $warning-6-reverse;
+        border-color: $warning-6-reverse;
+
+        &:hover,
+        &:focus {
+          color: $warning-5-reverse;
+          border-color: $warning-5-reverse;
+        }
+
+        &:active,
+        &.button-hover {
+          color: $warning-7-reverse;
+          border-color: $warning-7-reverse;
+        }
+      }
+
+      &.is-text {
+        color: $warning-6-reverse;
+
+        &:hover,
+        &:focus {
+          color: $warning-5-reverse;
+        }
+
+        &:active,
+        &.button-hover {
+          color: $warning-7-reverse;
+        }
+      }
+    }
+
+    .is-dark &.is-error:not([disabled]) {
+      background-color: $error-6-reverse;
+      border-color: $error-6-reverse;
+
+      &:hover,
+      &:focus {
+        background-color: $error-5-reverse;
+        border-color: $error-5-reverse;
+      }
+
+      &:active,
+      &.button-hover {
+        background-color: $error-7-reverse;
+        border-color: $error-7-reverse;
+      }
+
+      &.is-outlined {
+        color: $error-6-reverse;
+        border-color: $error-6-reverse;
+
+        &:hover,
+        &:focus {
+          color: $error-5-reverse;
+          border-color: $error-5-reverse;
+        }
+
+        &:active,
+        &.button-hover {
+          color: $error-7-reverse;
+          border-color: $error-7-reverse;
+        }
+      }
+
+      &.is-text {
+        color: $error-6-reverse;
+
+        &:hover,
+        &:focus {
+          color: $error-5-reverse;
+        }
+
+        &:active,
+        &.button-hover {
+          color: $error-7-reverse;
+        }
+      }
+    }
+
+    .is-dark &.is-info:not([disabled]) {
+      background-color: $info-6-reverse;
+      border-color: $info-6-reverse;
+
+      &:hover,
+      &:focus {
+        background-color: $info-5-reverse;
+        border-color: $info-5-reverse;
+      }
+
+      &:active,
+      &.button-hover {
+        background-color: $info-7-reverse;
+        border-color: $info-7-reverse;
+      }
+
+      &.is-outlined {
+        color: $info-6-reverse;
+        border-color: $info-6-reverse;
+
+        &:hover,
+        &:focus {
+          color: $info-5-reverse;
+          border-color: $info-5-reverse;
+        }
+
+        &:active,
+        &.button-hover {
+          color: $info-7-reverse;
+          border-color: $info-7-reverse;
+        }
+      }
+
+      &.is-text {
+        color: $info-6-reverse;
+
+        &:hover,
+        &:focus {
+          color: $info-5-reverse;
+        }
+
+        &:active,
+        &.button-hover {
+          color: $info-7-reverse;
+        }
+      }
+    }
+  }
+
+  &.is-outlined:not([disabled]) {
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: $primary-6;
+      background-color: transparent;
+    }
+
+    &:active,
+    &.button-hover {
+      color: $primary-7;
+      background-color: transparent;
+    }
+  }
+
+  @if ($has-dark) {
+    .is-dark &.is-outlined:not([disabled]) {
+      background-color: transparent;
+      &:hover,
+      &:focus {
+        color: $primary-6-reverse;
+        background-color: transparent;
+      }
+
+      &:active,
+      &.button-hover {
+        color: $primary-7-reverse;
+        background-color: transparent;
+      }
+    }
+  }
+
+  &.is-text:not([disabled]) {
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: $primary-6;
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    &:active,
+    &.button-hover {
+      color: $primary-7;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  &.is-text[disabled] {
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  @if ($has-dark) {
+    .is-dark &.is-text:not([disabled]) {
+      background-color: transparent;
+      border-color: transparent;
+
+      &:hover,
+      &:focus {
+        color: $primary-6-reverse;
+        background-color: transparent;
+        border-color: transparent;
+      }
+
+      &:active,
+      &.button-hover {
+        color: $primary-7-reverse;
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+
+    .is-dark &.is-text[disabled] {
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  // 水波纹
+  &.is-ripply:not(.is-text)::after {
     position: absolute;
     top: 0;
     left: 0;
@@ -83,1414 +710,12 @@
     transform-origin: unset;
   }
 
-  &.is-ripply:active::after,
-  &.is-ripply.button-hover::after {
+  &.is-ripply:not(.is-text):active::after,
+  &.is-ripply.button-hover:not(.is-text)::after {
     display: block;
     background-color: unset;
     opacity: .24;
     transition: 0s;
-    transform: scale(0, 0);
-  }
-
-  &.is-primary {
-    color: $gray-1;
-    background-color: $primary-6;
-    border-color: $primary-6;
-
-    // &:hover {
-    //   color: $gray-1;
-    //   background-color: $primary-5;
-    //   border-color: $primary-5;
-    // }
-
-    &:focus,
-    &:focus-within {
-      color: $gray-1;
-      background-color: $primary-5;
-      border-color: $primary-5;
-    }
-
-    &:active,
-    &.button-hover {
-      color: $gray-1;
-      background-color: $primary-7;
-      border-color: $primary-7;
-    }
-  }
-
-  &.is-primary-outlined {
-    color: $primary-6;
-    background-color: $container-background-color;
-    border-color: $primary-6;
-
-    // &:hover {
-    //   color: $primary-5;
-    //   background-color: $container-background-color;
-    //   border-color: $primary-5;
-    // }
-
-    &:focus,
-    &:focus-within {
-      color: $primary-5;
-      background-color: $container-background-color;
-      border-color: $primary-5;
-    }
-
-    &:active,
-    &.button-hover {
-      color: $primary-7;
-      background-color: $container-background-color;
-      border-color: $primary-7;
-    }
-  }
-
-  &.is-primary-link {
-    color: $primary-6;
-    text-decoration: underline;
-    background-color: $container-background-color;
-    border-color: $container-background-color;
-
-    // &:hover {
-    //   color: $primary-5;
-    //   background-color: $container-background-color;
-    //   border-color: $container-background-color;
-    // }
-
-    &:focus,
-    &:focus-within {
-      color: $primary-5;
-      background-color: $container-background-color;
-      border-color: $container-background-color;
-    }
-
-    &:active,
-    &.button-hover {
-      color: $primary-7;
-      background-color: $container-background-color;
-      border-color: $container-background-color;
-    }
-
-    &[disabled],
-    &.is-disabled {
-      color: $color-disabled;
-      background-color: $container-background-color;
-      border-color: $container-background-color;
-    }
-  }
-
-  &.is-success {
-    color: $gray-1;
-    background-color: $success-6;
-    border-color: $success-6;
-
-    // &:hover {
-    //   color: $gray-1;
-    //   background-color: $success-5;
-    //   border-color: $success-5;
-    // }
-
-    &:focus,
-    &:focus-within {
-      color: $gray-1;
-      background-color: $success-5;
-      border-color: $success-5;
-    }
-
-    &:active,
-    &.button-hover {
-      color: $gray-1;
-      background-color: $success-7;
-      border-color: $success-7;
-    }
-  }
-
-  &.is-success-outlined {
-    color: $success-6;
-    background-color: $container-background-color;
-    border-color: $success-6;
-
-    // &:hover {
-    //   color: $success-5;
-    //   background-color: $container-background-color;
-    //   border-color: $success-5;
-    // }
-
-    &:focus,
-    &:focus-within {
-      color: $success-5;
-      background-color: $container-background-color;
-      border-color: $success-5;
-    }
-
-    &:active,
-    &.button-hover {
-      color: $success-7;
-      background-color: $container-background-color;
-      border-color: $success-7;
-    }
-  }
-
-  &.is-success-link {
-    color: $success-6;
-    text-decoration: underline;
-    background-color: $container-background-color;
-    border-color: $container-background-color;
-
-    // &:hover {
-    //   color: $success-5;
-    //   background-color: $container-background-color;
-    //   border-color: $container-background-color;
-    // }
-
-    &:focus,
-    &:focus-within {
-      color: $success-5;
-      background-color: $container-background-color;
-      border-color: $container-background-color;
-    }
-
-    &:active,
-    &.button-hover {
-      color: $success-7;
-      background-color: $container-background-color;
-      border-color: $container-background-color;
-    }
-
-    &[disabled],
-    &.is-disabled {
-      color: $color-disabled;
-      background-color: $container-background-color;
-      border-color: $container-background-color;
-    }
-  }
-
-  &.is-warning {
-    color: $gray-1;
-    background-color: $warning-6;
-    border-color: $warning-6;
-
-    // &:hover {
-    //   color: $gray-1;
-    //   background-color: $warning-5;
-    //   border-color: $warning-5;
-    // }
-
-    &:focus,
-    &:focus-within {
-      color: $gray-1;
-      background-color: $warning-5;
-      border-color: $warning-5;
-    }
-
-    &:active,
-    &.button-hover {
-      color: $gray-1;
-      background-color: $warning-7;
-      border-color: $warning-7;
-    }
-  }
-
-  &.is-warning-outlined {
-    color: $warning-6;
-    background-color: $container-background-color;
-    border-color: $warning-6;
-
-    // &:hover {
-    //   color: $warning-5;
-    //   background-color: $container-background-color;
-    //   border-color: $warning-5;
-    // }
-
-    &:focus,
-    &:focus-within {
-      color: $warning-5;
-      background-color: $container-background-color;
-      border-color: $warning-5;
-    }
-
-    &:active,
-    &.button-hover {
-      color: $warning-7;
-      background-color: $container-background-color;
-      border-color: $warning-7;
-    }
-  }
-
-  &.is-warning-link {
-    color: $warning-6;
-    text-decoration: underline;
-    background-color: $container-background-color;
-    border-color: $container-background-color;
-
-    // &:hover {
-    //   color: $warning-5;
-    //   background-color: $container-background-color;
-    //   border-color: $container-background-color;
-    // }
-
-    &:focus,
-    &:focus-within {
-      color: $warning-5;
-      background-color: $container-background-color;
-      border-color: $container-background-color;
-    }
-
-    &:active,
-    &.button-hover {
-      color: $warning-7;
-      background-color: $container-background-color;
-      border-color: $container-background-color;
-    }
-
-    &[disabled],
-    &.is-disabled {
-      color: $color-disabled;
-      background-color: $container-background-color;
-      border-color: $container-background-color;
-    }
-  }
-
-  &.is-error {
-    color: $gray-1;
-    background-color: $error-6;
-    border-color: $error-6;
-
-    // &:hover {
-    //   color: $gray-1;
-    //   background-color: $error-5;
-    //   border-color: $error-5;
-    // }
-
-    &:focus,
-    &:focus-within {
-      color: $gray-1;
-      background-color: $error-5;
-      border-color: $error-5;
-    }
-
-    &:active,
-    &.button-hover {
-      color: $gray-1;
-      background-color: $error-7;
-      border-color: $error-7;
-    }
-  }
-
-  &.is-error-outlined {
-    color: $error-6;
-    background-color: $container-background-color;
-    border-color: $error-6;
-
-    // &:hover {
-    //   color: $error-5;
-    //   background-color: $container-background-color;
-    //   border-color: $error-5;
-    // }
-
-    &:focus,
-    &:focus-within {
-      color: $error-5;
-      background-color: $container-background-color;
-      border-color: $error-5;
-    }
-
-    &:active,
-    &.button-hover {
-      color: $error-7;
-      background-color: $container-background-color;
-      border-color: $error-7;
-    }
-  }
-
-  &.is-error-link {
-    color: $error-6;
-    text-decoration: underline;
-    background-color: $container-background-color;
-    border-color: $container-background-color;
-
-    // &:hover {
-    //   color: $error-5;
-    //   background-color: $container-background-color;
-    //   border-color: $container-background-color;
-    // }
-
-    &:focus,
-    &:focus-within {
-      color: $error-5;
-      background-color: $container-background-color;
-      border-color: $container-background-color;
-    }
-
-    &:active,
-    &.button-hover {
-      color: $error-7;
-      background-color: $container-background-color;
-      border-color: $container-background-color;
-    }
-
-    &[disabled],
-    &.is-disabled {
-      color: $color-disabled;
-      background-color: $container-background-color;
-      border-color: $container-background-color;
-    }
-  }
-
-  &.is-info {
-    color: $gray-1;
-    background-color: $info-6;
-    border-color: $info-6;
-
-    // &:hover {
-    //   color: $gray-1;
-    //   background-color: $info-5;
-    //   border-color: $info-5;
-    // }
-
-    &:focus,
-    &:focus-within {
-      color: $gray-1;
-      background-color: $info-5;
-      border-color: $info-5;
-    }
-
-    &:active,
-    &.button-hover {
-      color: $gray-1;
-      background-color: $info-7;
-      border-color: $info-7;
-    }
-  }
-
-  &.is-info-outlined {
-    color: $info-6;
-    background-color: $container-background-color;
-    border-color: $info-6;
-
-    // &:hover {
-    //   color: $info-5;
-    //   background-color: $container-background-color;
-    //   border-color: $info-5;
-    // }
-
-    &:focus,
-    &:focus-within {
-      color: $info-5;
-      background-color: $container-background-color;
-      border-color: $info-5;
-    }
-
-    &:active,
-    &.button-hover {
-      color: $info-7;
-      background-color: $container-background-color;
-      border-color: $info-7;
-    }
-  }
-
-  &.is-info-link {
-    color: $info-6;
-    text-decoration: underline;
-    background-color: $container-background-color;
-    border-color: $container-background-color;
-
-    // &:hover {
-    //   color: $info-5;
-    //   background-color: $container-background-color;
-    //   border-color: $container-background-color;
-    // }
-
-    &:focus,
-    &:focus-within {
-      color: $info-5;
-      background-color: $container-background-color;
-      border-color: $container-background-color;
-    }
-
-    &:active,
-    &.button-hover {
-      color: $info-7;
-      background-color: $container-background-color;
-      border-color: $container-background-color;
-    }
-
-    &[disabled],
-    &.is-disabled {
-      color: $color-disabled;
-      background-color: $container-background-color;
-      border-color: $container-background-color;
-    }
-  }
-
-  @if ($has-dark) {
-    .is-light &,
-    &.is-light {
-      color: $color-main;
-      background-color: $container-background-color;
-      border-color: $border-color;
-
-      // &:hover {
-      //   color: $primary-5;
-      //   background-color: $container-background-color;
-      //   border-color: $primary-5;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $primary-5;
-        background-color: $container-background-color;
-        border-color: $primary-5;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $primary-7;
-        background-color: $container-background-color;
-        border-color: $primary-7;
-        opacity: unset;
-      }
-
-      &[disabled],
-      &.is-disabled {
-        color: $color-disabled;
-        background-color: $gray-3;
-        border-color: $border-color;
-      }
-    }
-
-    .is-light &.is-primary,
-    &.is-light.is-primary {
-      color: $gray-1;
-      background-color: $primary-6;
-      border-color: $primary-6;
-
-      // &:hover {
-      //   color: $gray-1;
-      //   background-color: $primary-5;
-      //   border-color: $primary-5;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $gray-1;
-        background-color: $primary-5;
-        border-color: $primary-5;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $gray-1;
-        background-color: $primary-7;
-        border-color: $primary-7;
-      }
-    }
-
-    .is-light &.is-primary-outlined,
-    &.is-light.is-primary-outlined {
-      color: $primary-6;
-      background-color: $container-background-color;
-      border-color: $primary-6;
-
-      // &:hover {
-      //   color: $primary-5;
-      //   background-color: $container-background-color;
-      //   border-color: $primary-5;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $primary-5;
-        background-color: $container-background-color;
-        border-color: $primary-5;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $primary-7;
-        background-color: $container-background-color;
-        border-color: $primary-7;
-      }
-    }
-
-    .is-light &.is-primary-link,
-    &.is-light.is-primary-link {
-      color: $primary-6;
-      text-decoration: underline;
-      background-color: $container-background-color;
-      border-color: $container-background-color;
-
-      // &:hover {
-      //   color: $primary-5;
-      //   background-color: $container-background-color;
-      //   border-color: $container-background-color;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $primary-5;
-        background-color: $container-background-color;
-        border-color: $container-background-color;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $primary-7;
-        background-color: $container-background-color;
-        border-color: $container-background-color;
-      }
-
-      &[disabled],
-      &.is-disabled {
-        color: $color-disabled;
-        background-color: $container-background-color;
-        border-color: $container-background-color;
-      }
-    }
-
-    .is-light &.is-success,
-    &.is-light.is-success {
-      color: $gray-1;
-      background-color: $success-6;
-      border-color: $success-6;
-
-      // &:hover {
-      //   color: $gray-1;
-      //   background-color: $success-5;
-      //   border-color: $success-5;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $gray-1;
-        background-color: $success-5;
-        border-color: $success-5;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $gray-1;
-        background-color: $success-7;
-        border-color: $success-7;
-      }
-    }
-
-    .is-light &.is-success-outlined,
-    &.is-light.is-success-outlined {
-      color: $success-6;
-      background-color: $container-background-color;
-      border-color: $success-6;
-
-      // &:hover {
-      //   color: $success-5;
-      //   background-color: $container-background-color;
-      //   border-color: $success-5;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $success-5;
-        background-color: $container-background-color;
-        border-color: $success-5;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $success-7;
-        background-color: $container-background-color;
-        border-color: $success-7;
-      }
-    }
-
-    .is-light &.is-success-link,
-    &.is-light.is-success-link {
-      color: $success-6;
-      text-decoration: underline;
-      background-color: $container-background-color;
-      border-color: $container-background-color;
-
-      // &:hover {
-      //   color: $success-5;
-      //   background-color: $container-background-color;
-      //   border-color: $container-background-color;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $success-5;
-        background-color: $container-background-color;
-        border-color: $container-background-color;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $success-7;
-        background-color: $container-background-color;
-        border-color: $container-background-color;
-      }
-
-      &[disabled],
-      &.is-disabled {
-        color: $color-disabled;
-        background-color: $container-background-color;
-        border-color: $container-background-color;
-      }
-    }
-
-    .is-light &.is-warning,
-    &.is-light.is-warning {
-      color: $gray-1;
-      background-color: $warning-6;
-      border-color: $warning-6;
-
-      // &:hover {
-      //   color: $gray-1;
-      //   background-color: $warning-5;
-      //   border-color: $warning-5;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $gray-1;
-        background-color: $warning-5;
-        border-color: $warning-5;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $gray-1;
-        background-color: $warning-7;
-        border-color: $warning-7;
-      }
-    }
-
-    .is-light &.is-warning-outlined,
-    &.is-light.is-warning-outlined {
-      color: $warning-6;
-      background-color: $container-background-color;
-      border-color: $warning-6;
-
-      // &:hover {
-      //   color: $warning-5;
-      //   background-color: $container-background-color;
-      //   border-color: $warning-5;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $warning-5;
-        background-color: $container-background-color;
-        border-color: $warning-5;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $warning-7;
-        background-color: $container-background-color;
-        border-color: $warning-7;
-      }
-    }
-
-    .is-light &.is-warning-link,
-    &.is-light.is-warning-link {
-      color: $warning-6;
-      text-decoration: underline;
-      background-color: $container-background-color;
-      border-color: $container-background-color;
-
-      // &:hover {
-      //   color: $warning-5;
-      //   background-color: $container-background-color;
-      //   border-color: $container-background-color;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $warning-5;
-        background-color: $container-background-color;
-        border-color: $container-background-color;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $warning-7;
-        background-color: $container-background-color;
-        border-color: $container-background-color;
-      }
-
-      &[disabled],
-      &.is-disabled {
-        color: $color-disabled;
-        background-color: $container-background-color;
-        border-color: $container-background-color;
-      }
-    }
-
-    .is-light &.is-error,
-    &.is-light.is-error {
-      color: $gray-1;
-      background-color: $error-6;
-      border-color: $error-6;
-
-      // &:hover {
-      //   color: $gray-1;
-      //   background-color: $error-5;
-      //   border-color: $error-5;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $gray-1;
-        background-color: $error-5;
-        border-color: $error-5;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $gray-1;
-        background-color: $error-7;
-        border-color: $error-7;
-      }
-    }
-
-    .is-light &.is-error-outlined,
-    &.is-light.is-error-outlined {
-      color: $error-6;
-      background-color: $container-background-color;
-      border-color: $error-6;
-
-      // &:hover {
-      //   color: $error-5;
-      //   background-color: $container-background-color;
-      //   border-color: $error-5;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $error-5;
-        background-color: $container-background-color;
-        border-color: $error-5;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $error-7;
-        background-color: $container-background-color;
-        border-color: $error-7;
-      }
-    }
-
-    .is-light &.is-error-link,
-    &.is-light.is-error-link {
-      color: $error-6;
-      text-decoration: underline;
-      background-color: $container-background-color;
-      border-color: $container-background-color;
-
-      // &:hover {
-      //   color: $error-5;
-      //   background-color: $container-background-color;
-      //   border-color: $container-background-color;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $error-5;
-        background-color: $container-background-color;
-        border-color: $container-background-color;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $error-7;
-        background-color: $container-background-color;
-        border-color: $container-background-color;
-      }
-
-      &[disabled],
-      &.is-disabled {
-        color: $color-disabled;
-        background-color: $container-background-color;
-        border-color: $container-background-color;
-      }
-    }
-
-    .is-light &.is-info,
-    &.is-light.is-info {
-      color: $gray-1;
-      background-color: $info-6;
-      border-color: $info-6;
-
-      // &:hover {
-      //   color: $gray-1;
-      //   background-color: $info-5;
-      //   border-color: $info-5;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $gray-1;
-        background-color: $info-5;
-        border-color: $info-5;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $gray-1;
-        background-color: $info-7;
-        border-color: $info-7;
-      }
-    }
-
-    .is-light &.is-info-outlined,
-    &.is-light.is-info-outlined {
-      color: $info-6;
-      background-color: $container-background-color;
-      border-color: $info-6;
-
-      // &:hover {
-      //   color: $info-5;
-      //   background-color: $container-background-color;
-      //   border-color: $info-5;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $info-5;
-        background-color: $container-background-color;
-        border-color: $info-5;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $info-7;
-        background-color: $container-background-color;
-        border-color: $info-7;
-      }
-    }
-
-    .is-light &.is-info-link,
-    &.is-light.is-info-link {
-      color: $info-6;
-      text-decoration: underline;
-      background-color: $container-background-color;
-      border-color: $container-background-color;
-
-      // &:hover {
-      //   color: $info-5;
-      //   background-color: $container-background-color;
-      //   border-color: $container-background-color;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $info-5;
-        background-color: $container-background-color;
-        border-color: $container-background-color;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $info-7;
-        background-color: $container-background-color;
-        border-color: $container-background-color;
-      }
-
-      &[disabled],
-      &.is-disabled {
-        color: $color-disabled;
-        background-color: $container-background-color;
-        border-color: $container-background-color;
-      }
-    }
-
-    .is-dark &,
-    &.is-dark {
-      color: $color-main-reverse;
-      background-color: $container-background-color-reverse;
-      border-color: $border-color-reverse;
-
-      // &:hover {
-      //   color: $primary-5-reverse;
-      //   background-color: $container-background-color-reverse;
-      //   border-color: $primary-5-reverse;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $primary-5-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $primary-5-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $primary-7-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $primary-7-reverse;
-        opacity: unset;
-      }
-
-      &[disabled],
-      &.is-disabled {
-        color: $color-disabled-reverse;
-        background-color: $gray-8;
-        border-color: $border-color-reverse;
-      }
-    }
-
-    .is-dark &.is-primary,
-    &.is-dark.is-primary {
-      color: $gray-1;
-      background-color: $primary-6-reverse;
-      border-color: $primary-6-reverse;
-
-      // &:hover {
-      //   color: $gray-1;
-      //   background-color: $primary-6-reverse;
-      //   border-color: $primary-6-reverse;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $gray-1;
-        background-color: $primary-5-reverse;
-        border-color: $primary-5-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $gray-1;
-        background-color: $primary-7-reverse;
-        border-color: $primary-7-reverse;
-      }
-    }
-
-    .is-dark &.is-primary-outlined,
-    &.is-dark.is-primary-outlined {
-      color: $primary-6-reverse;
-      background-color: $container-background-color-reverse;
-      border-color: $primary-6-reverse;
-
-      // &:hover {
-      //   color: $primary-5-reverse;
-      //   background-color: $container-background-color-reverse;
-      //   border-color: $primary-5-reverse;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $primary-5-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $primary-5-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $primary-7-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $primary-7-reverse;
-      }
-    }
-
-    .is-dark &.is-primary-link,
-    &.is-dark.is-primary-link {
-      color: $primary-6-reverse;
-      background-color: $container-background-color-reverse;
-      border-color: $container-background-color-reverse;
-
-      // &:hover {
-      //   color: $primary-5-reverse;
-      //   background-color: $container-background-color-reverse;
-      //   border-color: $container-background-color-reverse;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $primary-5-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $container-background-color-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $primary-7-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $container-background-color-reverse;
-      }
-
-      &[disabled],
-      &.is-disabled {
-        color: $color-disabled-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $container-background-color-reverse;
-      }
-    }
-
-    .is-dark &.is-success,
-    &.is-dark.is-success {
-      color: $gray-1;
-      background-color: $success-6-reverse;
-      border-color: $success-6-reverse;
-
-      // &:hover {
-      //   color: $gray-1;
-      //   background-color: $success-6-reverse;
-      //   border-color: $success-6-reverse;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $gray-1;
-        background-color: $success-5-reverse;
-        border-color: $success-5-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $gray-1;
-        background-color: $success-7-reverse;
-        border-color: $success-7-reverse;
-      }
-    }
-
-    .is-dark &.is-success-outlined,
-    &.is-dark.is-success-outlined {
-      color: $success-6-reverse;
-      background-color: $container-background-color-reverse;
-      border-color: $success-6-reverse;
-
-      // &:hover {
-      //   color: $success-5-reverse;
-      //   background-color: $container-background-color-reverse;
-      //   border-color: $success-5-reverse;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $success-5-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $success-5-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $success-7-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $success-7-reverse;
-      }
-    }
-
-    .is-dark &.is-success-link,
-    &.is-dark.is-success-link {
-      color: $success-6-reverse;
-      background-color: $container-background-color-reverse;
-      border-color: $container-background-color-reverse;
-
-      // &:hover {
-      //   color: $success-5-reverse;
-      //   background-color: $container-background-color-reverse;
-      //   border-color: $container-background-color-reverse;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $success-5-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $container-background-color-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $success-7-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $container-background-color-reverse;
-      }
-
-      &[disabled],
-      &.is-disabled {
-        color: $color-disabled-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $container-background-color-reverse;
-      }
-    }
-
-    .is-dark &.is-warning,
-    &.is-dark.is-warning {
-      color: $gray-1;
-      background-color: $warning-6-reverse;
-      border-color: $warning-6-reverse;
-
-      // &:hover {
-      //   color: $gray-1;
-      //   background-color: $warning-6-reverse;
-      //   border-color: $warning-6-reverse;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $gray-1;
-        background-color: $warning-5-reverse;
-        border-color: $warning-5-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $gray-1;
-        background-color: $warning-7-reverse;
-        border-color: $warning-7-reverse;
-      }
-    }
-
-    .is-dark &.is-warning-outlined,
-    &.is-dark.is-warning-outlined {
-      color: $warning-6-reverse;
-      background-color: $container-background-color-reverse;
-      border-color: $warning-6-reverse;
-
-      // &:hover {
-      //   color: $warning-5-reverse;
-      //   background-color: $container-background-color-reverse;
-      //   border-color: $warning-5-reverse;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $warning-5-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $warning-5-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $warning-7-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $warning-7-reverse;
-      }
-    }
-
-    .is-dark &.is-warning-link,
-    &.is-dark.is-warning-link {
-      color: $warning-6-reverse;
-      background-color: $container-background-color-reverse;
-      border-color: $container-background-color-reverse;
-
-      // &:hover {
-      //   color: $warning-5-reverse;
-      //   background-color: $container-background-color-reverse;
-      //   border-color: $container-background-color-reverse;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $warning-5-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $container-background-color-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $warning-7-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $container-background-color-reverse;
-      }
-
-      &[disabled],
-      &.is-disabled {
-        color: $color-disabled-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $container-background-color-reverse;
-      }
-    }
-
-    .is-dark &.is-error,
-    &.is-dark.is-error {
-      color: $gray-1;
-      background-color: $error-6-reverse;
-      border-color: $error-6-reverse;
-
-      // &:hover {
-      //   color: $gray-1;
-      //   background-color: $error-6-reverse;
-      //   border-color: $error-6-reverse;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $gray-1;
-        background-color: $error-5-reverse;
-        border-color: $error-5-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $gray-1;
-        background-color: $error-7-reverse;
-        border-color: $error-7-reverse;
-      }
-    }
-
-    .is-dark &.is-error-outlined,
-    &.is-dark.is-error-outlined {
-      color: $error-6-reverse;
-      background-color: $container-background-color-reverse;
-      border-color: $error-6-reverse;
-
-      // &:hover {
-      //   color: $error-5-reverse;
-      //   background-color: $container-background-color-reverse;
-      //   border-color: $error-5-reverse;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $error-5-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $error-5-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $error-7-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $error-7-reverse;
-      }
-    }
-
-    .is-dark &.is-error-link,
-    &.is-dark.is-error-link {
-      color: $error-6-reverse;
-      background-color: $container-background-color-reverse;
-      border-color: $container-background-color-reverse;
-
-      // &:hover {
-      //   color: $error-5-reverse;
-      //   background-color: $container-background-color-reverse;
-      //   border-color: $container-background-color-reverse;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $error-5-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $container-background-color-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $error-7-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $container-background-color-reverse;
-      }
-
-      &[disabled],
-      &.is-disabled {
-        color: $color-disabled-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $container-background-color-reverse;
-      }
-    }
-
-    .is-dark &.is-info,
-    &.is-dark.is-info {
-      color: $gray-1;
-      background-color: $info-6-reverse;
-      border-color: $info-6-reverse;
-
-      // &:hover {
-      //   color: $gray-1;
-      //   background-color: $info-6-reverse;
-      //   border-color: $info-6-reverse;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $gray-1;
-        background-color: $info-5-reverse;
-        border-color: $info-5-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $gray-1;
-        background-color: $info-7-reverse;
-        border-color: $info-7-reverse;
-      }
-    }
-
-    .is-dark &.is-info-outlined,
-    &.is-dark.is-info-outlined {
-      color: $info-6-reverse;
-      background-color: $container-background-color-reverse;
-      border-color: $info-6-reverse;
-
-      // &:hover {
-      //   color: $info-5-reverse;
-      //   background-color: $container-background-color-reverse;
-      //   border-color: $info-5-reverse;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $info-5-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $info-5-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $info-7-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $info-7-reverse;
-      }
-    }
-
-    .is-dark &.is-info-link,
-    &.is-dark.is-info-link {
-      color: $info-6-reverse;
-      background-color: $container-background-color-reverse;
-      border-color: $container-background-color-reverse;
-
-      // &:hover {
-      //   color: $info-5-reverse;
-      //   background-color: $container-background-color-reverse;
-      //   border-color: $container-background-color-reverse;
-      // }
-
-      &:focus,
-      &:focus-within {
-        color: $info-5-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $container-background-color-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $info-7-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $container-background-color-reverse;
-      }
-
-      &[disabled],
-      &.is-disabled {
-        color: $color-disabled-reverse;
-        background-color: $container-background-color-reverse;
-        border-color: $container-background-color-reverse;
-      }
-    }
-  }
-
-  &.is-small {
-    padding: 0 8 * $scale + $unit;
-    font-size: $font-size-base * $scale + $unit;
-  }
-
-  &.is-large {
-    padding: 6 * $scale + $unit 16 * $scale + $unit;
-    font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
-  }
-
-  &.is-loading:not([disabled]):not([class~="is-disabled"]) {
-    pointer-events: none;
-    cursor: default;
+    transform: scale(0);
   }
 }
