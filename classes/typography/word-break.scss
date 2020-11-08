@@ -1,3 +1,5 @@
+@import "../../variables";
+
 .text-break-normal {
   word-break: normal if($has-important, !important, "");
   overflow-wrap: normal if($has-important, !important, "");
