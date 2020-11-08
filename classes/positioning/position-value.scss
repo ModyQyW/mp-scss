@@ -2,35 +2,35 @@
 
 @each $k, $v in $m-position-value {
   .top#{$k} {
-    top: $v;
+    top: $v if($has-important, !important, "");
   }
 
   .right#{$k} {
-    right: $v;
+    right: $v if($has-important, !important, "");
   }
 
   .bottom#{$k} {
-    right: $v;
+    right: $v if($has-important, !important, "");
   }
 
   .left#{$k} {
-    right: $v;
+    right: $v if($has-important, !important, "");
   }
 
   .inset#{$k} {
-    top: $v;
-    right: $v;
-    bottom: $v;
-    left: $v;
+    top: $v if($has-important, !important, "");
+    right: $v if($has-important, !important, "");
+    bottom: $v if($has-important, !important, "");
+    left: $v if($has-important, !important, "");
   }
 
   .inset-y#{$k} {
-    top: $v;
-    bottom: $v;
+    top: $v if($has-important, !important, "");
+    bottom: $v if($has-important, !important, "");
   }
 
   .inset-x#{$k} {
-    right: $v;
-    left: $v;
+    right: $v if($has-important, !important, "");
+    left: $v if($has-important, !important, "");
   }
 }

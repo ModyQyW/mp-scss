@@ -2,42 +2,42 @@
 
 @each $k, $v in $m-border-radius {
   .rounded#{$k} {
-    border-radius: $v;
+    border-radius: $v if($has-important, !important, "");
   }
 
   .rounded-t#{$k} {
-    border-top-left-radius: $v;
-    border-top-right-radius: $v;
+    border-top-left-radius: $v if($has-important, !important, "");
+    border-top-right-radius: $v if($has-important, !important, "");
   }
 
   .rounded-b#{$k} {
-    border-bottom-right-radius: $v;
-    border-bottom-left-radius: $v;
+    border-bottom-right-radius: $v if($has-important, !important, "");
+    border-bottom-left-radius: $v if($has-important, !important, "");
   }
 
   .rounded-r#{$k} {
-    border-top-right-radius: $v;
-    border-bottom-right-radius: $v;
+    border-top-right-radius: $v if($has-important, !important, "");
+    border-bottom-right-radius: $v if($has-important, !important, "");
   }
 
   .rounded-l#{$k} {
-    border-top-left-radius: $v;
-    border-bottom-left-radius: $v;
+    border-top-left-radius: $v if($has-important, !important, "");
+    border-bottom-left-radius: $v if($has-important, !important, "");
   }
 
   .rounded-tl#{$k} {
-    border-top-left-radius: $v;
+    border-top-left-radius: $v if($has-important, !important, "");
   }
 
   .rounded-tr#{$k} {
-    border-top-right-radius: $v;
+    border-top-right-radius: $v if($has-important, !important, "");
   }
 
   .rounded-br#{$k} {
-    border-bottom-right-radius: $v;
+    border-bottom-right-radius: $v if($has-important, !important, "");
   }
 
   .rounded-bl#{$k} {
-    border-bottom-left-radius: $v;
+    border-bottom-left-radius: $v if($has-important, !important, "");
   }
 }

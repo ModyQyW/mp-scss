@@ -2,6 +2,6 @@
 
 @each $k, $v in $m-display {
   .d#{$k} {
-    display: $v;
+    display: $v if($has-important, !important, "");
   }
 }

@@ -2,6 +2,6 @@
 
 @each $k, $v in $m-opacity {
   .opacity#{$k} {
-    opacity: $v;
+    opacity: $v if($has-important, !important, "");
   }
 }

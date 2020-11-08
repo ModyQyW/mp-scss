@@ -2,6 +2,6 @@
 
 @each $k, $v in $m-text-transform {
   .text#{$k} {
-    text-transform: $v;
+    text-transform: $v if($has-important, !important, "");
   }
 }

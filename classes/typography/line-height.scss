@@ -2,6 +2,6 @@
 
 @each $k, $v in $m-line-height {
   .leading#{$k} {
-    line-height: $v;
+    line-height: $v if($has-important, !important, "");
   }
 }

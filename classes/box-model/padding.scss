@@ -2,32 +2,32 @@
 
 @each $k, $v in $m-padding {
   .p#{$k} {
-    padding: $v;
+    padding: $v if($has-important, !important, "");
   }
 
   .py#{$k} {
-    padding-top: $v;
-    padding-bottom: $v;
+    padding-top: $v if($has-important, !important, "");
+    padding-bottom: $v if($has-important, !important, "");
   }
 
   .px#{$k} {
-    padding-right: $v;
-    padding-left: $v;
+    padding-right: $v if($has-important, !important, "");
+    padding-left: $v if($has-important, !important, "");
   }
 
   .pt#{$k} {
-    padding-top: $v;
+    padding-top: $v if($has-important, !important, "");
   }
 
   .pb#{$k} {
-    padding-bottom: $v;
+    padding-bottom: $v if($has-important, !important, "");
   }
 
   .pr#{$k} {
-    padding-right: $v;
+    padding-right: $v if($has-important, !important, "");
   }
 
   .pl#{$k} {
-    padding-left: $v;
+    padding-left: $v if($has-important, !important, "");
   }
 }

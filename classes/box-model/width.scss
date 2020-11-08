@@ -2,6 +2,6 @@
 
 @each $k, $v in $m-width {
   .w#{$k} {
-    width: $v;
+    width: $v if($has-important, !important, "");
   }
 }

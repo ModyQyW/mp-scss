@@ -2,6 +2,6 @@
 
 @each $k, $v in $m-font-weight {
   .text#{$k} {
-    font-weight: $v;
+    font-weight: $v if($has-important, !important, "");
   }
 }

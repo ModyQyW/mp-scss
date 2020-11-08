@@ -2,6 +2,6 @@
 
 @each $k, $v in $m-align-items {
   .align#{$k} {
-    align-items: $v;
+    align-items: $v if($has-important, !important, "");
   }
 }

@@ -2,6 +2,6 @@
 
 @each $k, $v in $m-background-repeat {
   .bg#{$k} {
-    background-repeat: $v;
+    background-repeat: $v if($has-important, !important, "");
   }
 }

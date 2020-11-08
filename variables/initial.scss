@@ -9,6 +9,9 @@ $scale: 2 !default;
 /* 是否启用暗黑模式 */
 $has-dark: false !default;
 
+/* 是否在 classes 里启用 !important */
+$has-important: false !default;
+
 /* 通用变量 common */
 // 中性色 neutral color
 $has-transparent: true !default;

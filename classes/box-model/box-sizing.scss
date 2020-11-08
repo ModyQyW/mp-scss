@@ -2,6 +2,6 @@
 
 @each $k, $v in $m-box-sizing {
   .box#{$k} {
-    box-sizing: $v;
+    box-sizing: $v if($has-important, !important, "");
   }
 }

@@ -2,6 +2,6 @@
 
 @each $k, $v in $m-order {
   .order#{$k} {
-    order: $v;
+    order: $v if($has-important, !important, "");
   }
 }

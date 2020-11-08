@@ -1,18 +1,18 @@
 .text-break-normal {
-  word-break: normal;
-  overflow-wrap: normal;
+  word-break: normal if($has-important, !important, "");
+  overflow-wrap: normal if($has-important, !important, "");
 }
 
 .text-break-word {
-  overflow-wrap: break-word;
+  overflow-wrap: break-word if($has-important, !important, "");
 }
 
 .text-break-all {
-  word-break: break-all;
+  word-break: break-all if($has-important, !important, "");
 }
 
 .text-truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow: hidden if($has-important, !important, "");
+  text-overflow: ellipsis if($has-important, !important, "");
+  white-space: nowrap if($has-important, !important, "");
 }

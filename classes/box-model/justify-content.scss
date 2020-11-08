@@ -2,6 +2,6 @@
 
 @each $k, $v in $m-justify-content {
   .justify#{$k} {
-    justify-content: $v;
+    justify-content: $v if($has-important, !important, "");
   }
 }

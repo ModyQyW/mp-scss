@@ -2,6 +2,6 @@
 
 @each $k, $v in $m-outline {
   .outline#{$k} {
-    outline: $v;
+    outline: $v if($has-important, !important, "");
   }
 }

@@ -2,6 +2,6 @@
 
 @each $k, $v in $m-flex {
   .flex#{$k} {
-    flex: $v;
+    flex: $v if($has-important, !important, "");
   }
 }

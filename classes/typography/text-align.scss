@@ -2,6 +2,6 @@
 
 @each $k, $v in $m-text-align {
   .text#{$k} {
-    text-align: $v;
+    text-align: $v if($has-important, !important, "");
   }
 }

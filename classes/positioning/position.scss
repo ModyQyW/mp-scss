@@ -2,6 +2,6 @@
 
 @each $k, $v in $m-position {
   .#{$k} {
-    position: $v;
+    position: $v if($has-important, !important, "");
   }
 }

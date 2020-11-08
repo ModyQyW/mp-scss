@@ -2,32 +2,32 @@
 
 @each $k, $v in $m-border-style {
   .border#{$k} {
-    border-style: $v;
+    border-style: $v if($has-important, !important, "");
   }
 
   .border-t#{$k} {
-    border-top-style: $v;
+    border-top-style: $v if($has-important, !important, "");
   }
 
   .border-r#{$k} {
-    border-right-style: $v;
+    border-right-style: $v if($has-important, !important, "");
   }
 
   .border-b#{$k} {
-    border-bottom-style: $v;
+    border-bottom-style: $v if($has-important, !important, "");
   }
 
   .border-l#{$k} {
-    border-left-style: $v;
+    border-left-style: $v if($has-important, !important, "");
   }
 
   .border-y#{$k} {
-    border-top-style: $v;
-    border-bottom-style: $v;
+    border-top-style: $v if($has-important, !important, "");
+    border-bottom-style: $v if($has-important, !important, "");
   }
 
   .border-x#{$k} {
-    border-right-style: $v;
-    border-left-style: $v;
+    border-right-style: $v if($has-important, !important, "");
+    border-left-style: $v if($has-important, !important, "");
   }
 }

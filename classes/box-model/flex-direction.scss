@@ -2,6 +2,6 @@
 
 @each $k, $v in $m-flex-direction {
   .flex#{$k} {
-    flex-direction: $v;
+    flex-direction: $v if($has-important, !important, "");
   }
 }
