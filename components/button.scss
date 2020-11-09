@@ -94,6 +94,11 @@
     background-color: $primary-6;
     border-color: $primary-6;
 
+    &.is-plain {
+      color: $primary-6;
+      background-color: $container-background-color;
+    }
+
     &:hover,
     &:focus {
       color: $gray-1;
@@ -144,6 +149,11 @@
     color: $gray-1;
     background-color: $success-6;
     border-color: $success-6;
+
+    &.is-plain {
+      color: $success-6;
+      background-color: $container-background-color;
+    }
 
     &:hover,
     &:focus {
@@ -196,6 +206,11 @@
     background-color: $warning-6;
     border-color: $warning-6;
 
+    &.is-plain {
+      color: $warning-6;
+      background-color: $container-background-color;
+    }
+
     &:hover,
     &:focus {
       color: $gray-1;
@@ -247,6 +262,11 @@
     background-color: $error-6;
     border-color: $error-6;
 
+    &.is-plain {
+      color: $error-6;
+      background-color: $container-background-color;
+    }
+
     &:hover,
     &:focus {
       color: $gray-1;
@@ -297,6 +317,11 @@
     color: $gray-1;
     background-color: $info-6;
     border-color: $info-6;
+
+    &.is-plain {
+      color: $info-6;
+      background-color: $container-background-color;
+    }
 
     &:hover,
     &:focus {
@@ -364,17 +389,25 @@
     }
 
     .is-dark &.is-primary:not([disabled]) {
+      color: $gray-1;
       background-color: $primary-6-reverse;
       border-color: $primary-6-reverse;
 
+      &.is-plain {
+        color: $primary-6-reverse;
+        background-color: $container-background-color-reverse;
+      }
+
       &:hover,
       &:focus {
+        color: $gray-1;
         background-color: $primary-5-reverse;
         border-color: $primary-5-reverse;
       }
 
       &:active,
       &.button-hover {
+        color: $gray-1;
         background-color: $primary-7-reverse;
         border-color: $primary-7-reverse;
       }
@@ -412,17 +445,25 @@
     }
 
     .is-dark &.is-success:not([disabled]) {
+      color: $gray-1;
       background-color: $success-6-reverse;
       border-color: $success-6-reverse;
 
+      &.is-plain {
+        color: $success-6-reverse;
+        background-color: $container-background-color-reverse;
+      }
+
       &:hover,
       &:focus {
+        color: $gray-1;
         background-color: $success-5-reverse;
         border-color: $success-5-reverse;
       }
 
       &:active,
       &.button-hover {
+        color: $gray-1;
         background-color: $success-7-reverse;
         border-color: $success-7-reverse;
       }
@@ -460,17 +501,25 @@
     }
 
     .is-dark &.is-warning:not([disabled]) {
+      color: $gray-1;
       background-color: $warning-6-reverse;
       border-color: $warning-6-reverse;
 
+      &.is-plain {
+        color: $warning-6-reverse;
+        background-color: $container-background-color-reverse;
+      }
+
       &:hover,
       &:focus {
+        color: $gray-1;
         background-color: $warning-5-reverse;
         border-color: $warning-5-reverse;
       }
 
       &:active,
       &.button-hover {
+        color: $gray-1;
         background-color: $warning-7-reverse;
         border-color: $warning-7-reverse;
       }
@@ -508,17 +557,25 @@
     }
 
     .is-dark &.is-error:not([disabled]) {
+      color: $gray-1;
       background-color: $error-6-reverse;
       border-color: $error-6-reverse;
 
+      &.is-plain {
+        color: $error-6-reverse;
+        background-color: $container-background-color-reverse;
+      }
+
       &:hover,
       &:focus {
+        color: $gray-1;
         background-color: $error-5-reverse;
         border-color: $error-5-reverse;
       }
 
       &:active,
       &.button-hover {
+        color: $gray-1;
         background-color: $error-7-reverse;
         border-color: $error-7-reverse;
       }
@@ -556,17 +613,25 @@
     }
 
     .is-dark &.is-info:not([disabled]) {
+      color: $gray-1;
       background-color: $info-6-reverse;
       border-color: $info-6-reverse;
 
+      &.is-plain {
+        color: $info-6-reverse;
+        background-color: $container-background-color-reverse;
+      }
+
       &:hover,
       &:focus {
+        color: $gray-1;
         background-color: $info-5-reverse;
         border-color: $info-5-reverse;
       }
 
       &:active,
       &.button-hover {
+        color: $gray-1;
         background-color: $info-7-reverse;
         border-color: $info-7-reverse;
       }
