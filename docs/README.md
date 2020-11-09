@@ -15,7 +15,5 @@ features:
   details: 快速确定组件样式
 - title: 可自定义
   details: 大量可自定义的部分
-- title: PWA
-  details: 文档使用了 PWA 技术，你可以强制刷新或使用隐私模式浏览以确保文档内容最新。
 footer: MIT Licensed | Copyright © 2019-present MillCloud
 ---
