@@ -16,7 +16,7 @@
 
 ## 明亮模式和暗黑模式
 
-默认使用明亮模式。你也可以显式地在父元素或在`.btn`用`.is-light`指定使用明亮模式，用`.is-dark`就能指定使用暗黑模式。
+默认使用明亮模式。[手动开启暗黑模式](../advance/README.md#明亮模式和暗黑模式)并在`.container`上使用`.is-dark`，就能指定使用暗黑模式。
 
 ```html
 <view class="container">
@@ -53,4 +53,4 @@
 </view>
 ```
 
-支持在`.input-wrapper`上使用`.is-light`，`is-dark`，`.is-small`和`.is-large`。
+支持在`.input-wrapper`上使用`is-dark`，`.is-small`和`.is-large`。

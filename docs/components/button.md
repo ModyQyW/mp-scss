@@ -12,10 +12,8 @@
 
 ```html
 <view class="container">
-  <button class="btn">使用 button 作标签</button>
-  <button class="btn" disabled>使用 button 作标签，禁用状态</button>
-  <view class="btn">使用 view 作标签</view>
-  <view class="btn is-disabled">使用 view 作标签，禁用状态</view>
+  <button class="btn">button</button>
+  <button class="btn" disabled>disabled button</button>
 </view>
 ```
 
@@ -31,51 +29,51 @@
 
 ## 主题
 
-默认有`default`，`primary`，`success`，`warning`，`error`, `info`六个主题，对于后五个主题还会提供`.is-*-outlined`和`.is-*-link`。
+默认有`default`，`primary`，`success`，`warning`，`error`, `info`六个主题。
 
 ```html
 <!-- default 主题 -->
-<button class="btn">is-primary</button>
+<button class="btn">default</button>
+<button class="btn is-plain">default plain</button>
+<button class="btn is-outlined">default outlined</button>
+<button class="btn is-text">default text</button>
 <!-- primary 主题 -->
-<button class="btn is-primary">is-primary</button>
-<button class="btn is-primary-outlined">is-primary-outlined</button>
-<button class="btn is-primary-link">is-primary-link</button>
+<button class="btn is-primary">primary</button>
+<button class="btn is-primary is-plain">primary plain</button>
+<button class="btn is-primary is-outlined">primary outlined</button>
+<button class="btn is-primary is-text">primary text</button>
 <!-- success 主题 -->
-<button class="btn is-success">is-primary</button>
-<button class="btn is-success-outlined">is-primary-outlined</button>
-<button class="btn is-success-link">is-primary-link</button>
+<button class="btn is-success">success</button>
+<button class="btn is-success is-plain">success plain</button>
+<button class="btn is-success is-outlined">success outlined</button>
+<button class="btn is-success is-text">success text</button>
 <!-- warning 主题 -->
-<button class="btn is-warning">is-primary</button>
-<button class="btn is-warning-outlined">is-primary-outlined</button>
-<button class="btn is-warning-link">is-primary-link</button>
+<button class="btn is-warning">warning</button>
+<button class="btn is-warning is-plain">warning plain</button>
+<button class="btn is-warning is-outlined">warning outlined</button>
+<button class="btn is-warning is-text">warning text</button>
 <!-- error 主题 -->
-<button class="btn is-error">is-primary</button>
-<button class="btn is-error-outlined">is-primary-outlined</button>
-<button class="btn is-error-link">is-primary-link</button>
+<button class="btn is-error">error</button>
+<button class="btn is-error is-plain">error plain</button>
+<button class="btn is-error is-outlined">error outlined</button>
+<button class="btn is-error is-text">error text</button>
 <!-- info 主题 -->
-<button class="btn is-info">is-primary</button>
-<button class="btn is-info-outlined">is-primary-outlined</button>
-<button class="btn is-info-link">is-primary-link</button>
+<button class="btn is-info">info</button>
+<button class="btn is-info is-plain">info plain</button>
+<button class="btn is-info is-outlined">info outlined</button>
+<button class="btn is-info is-text">info text</button>
 ```
 
 ## 明亮模式和暗黑模式
 
-默认使用明亮模式。你也可以显式地在父元素或在`.btn`用`.is-light`指定使用明亮模式，用`.is-dark`就能指定使用暗黑模式。
+默认使用明亮模式。[手动开启暗黑模式](../advance/README.md#明亮模式和暗黑模式)并在`.container`上使用`.is-dark`，就能指定使用暗黑模式。
 
 ```html
 <view class="container is-light">
   <button class="btn">明亮模式</button>
 </view>
 <view class="container is-dark">
-  <!-- 强制使用明亮模式 -->
-  <button class="btn is-light">明亮模式</button>
-</view>
-<view class="container is-dark">
   <button class="btn">暗黑模式</button>
-</view>
-<view class="container">
-  <!-- 强制使用暗黑模式 -->
-  <button class="btn is-dark">暗黑模式</button>
 </view>
 ```
 

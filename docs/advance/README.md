@@ -2,7 +2,7 @@
 
 ## 优化体积
 
-小程序诞生的本意是让用户使用 APP 的少量功能，免去用户下载 APP 的烦恼，方便用户，也因此，小程序的体积有着相对严格的要求。
+小程序诞生的本意是让用户使用 APP 的少量功能，免去用户下载 APP 的烦恼，方便用户，也因此，小程序的体积有着较为严格的要求。
 
 以当下被广泛使用的微信小程序作为[参考](https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages.html)，整个小程序不得超过 16M，超过 2M 时需要分包，每个分包不得超过 2M。
 
@@ -49,7 +49,7 @@ yarn build-no-transform
 
 目前，小程序用得最多的缩放倍数是 2，用得最多的单位是`rpx`，见[尺寸单位](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html)。因此，这个库使用了`$scale`指定缩放倍数，默认为 2，使用了`$unit`指定单位，默认为`rpx`。
 
-如果要因为设计稿不是 iPhone6 而使用非 2 倍的缩放倍数，可以手动指定`$scale`。
+如果要因为设计稿不是 iPhone6 而使用非 2 的缩放倍数，可以手动指定`$scale`。
 
 ```scss
 // 设计稿是 iPhone5
@@ -66,17 +66,44 @@ $unit: px;
 @import "~@modyqyw/mp-scss";
 ```
 
-需要注意的是，修改`$scale`和`$unit`会影响通用类、布局类和组件类，如果你不能确定修改的后果，你可以只针对你需要的部分做简单的自定义，而不是修改`$scale`和`$unit`。
+需要注意的是，修改`$scale`和`$unit`会影响通用类、布局类和组件类，我们并不鼓励你修改这两个变量。如果你不能确定修改的后果，你可以只针对你需要的部分做简单的自定义，而不是修改`$scale`和`$unit`。
+
+## !important
+
+使用`!important`可以方便快速地得到自己想要的样式，你可以使用`$has-important`来让通用类`classes`中的样式附带上`!important`。
+
+```scss
+$has-important: true;
+@import "~@modyqyw/mp-scss";
+```
+
+需要注意的是，我们并不鼓励你使用`!important`覆盖样式，这可能会导致难以调整的样式。请尽可能地利用 CSS 的特性来覆盖样式。
 
 ## 色彩
 
 ### 明亮模式和暗黑模式
 
-一般建议在页面顶级布局元素上使用`.is-light`来明确声明使用明亮模式，使用`.is-dark`来明确声明使用暗黑模式。
+默认使用明亮模式。
 
-对应地，色板也分成了明亮模式色板`$m-colors`和暗黑模式色板`$m-colors-reverse`，用于`color`，`background-color`和`border-color`的颜色生成。
+要使用暗黑模式，需要手动开启暗黑模式的开关。
 
-从 2.0.0-beta.1 开始，增加暗黑模式的开关变量`$has-dark`，默认值为`false`，也就是不启用暗黑模式，此时无需使用`.is-light`和`.is-dark`来指定模式，一律采用明亮模式。
+```scss
+$has-dark: true;
+@import "~@modyqyw/mp-scss";
+```
+
+然后在页面顶级布局元素（一般是`.container`）上使用`.is-dark`来声明使用暗黑模式，这将会自动调整对应的类的表现。
+
+```html
+<view class="container is-dark">
+  <!-- 所有后代受影响，使用暗黑模式 -->
+  ...
+</view>
+```
+
+要注意：开启暗黑模式将会生成额外的样式，占用更多的体积，所以默认没有开启暗黑模式。
+
+色板有两个，分别是明亮模式色板`$m-colors`和暗黑模式色板`$m-colors-reverse`，用于`color`，`background-color`和`border-color`的颜色生成。
 
 ### 通用颜色
 

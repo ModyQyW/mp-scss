@@ -32,29 +32,17 @@
 
 ## 明亮模式和暗黑模式
 
-默认使用明亮模式。你也可以显式地在父元素或在`.divider`用`.is-light`指定使用明亮模式，用`.is-dark`就能指定使用暗黑模式。
+默认使用明亮模式。[手动开启暗黑模式](../advance/README.md#明亮模式和暗黑模式)并在`.container`上使用`.is-dark`，就能指定使用暗黑模式。
 
 ```html
-<view class="container is-light">
+<view class="container">
   <view>Lorem</view>
   <view class="divider"></view>
   <view>Lorem</view>
 </view>
 <view class="container is-dark">
   <view>Lorem</view>
-  <!-- 强制使用明亮模式 -->
-  <view class="divider is-light"></view>
-  <view>Lorem</view>
-</view>
-<view class="container is-dark">
-  <view>Lorem</view>
   <view class="divider"></view>
-  <view>Lorem</view>
-</view>
-<view class="container is-light">
-  <view>Lorem</view>
-  <!-- 强制使用暗黑模式 -->
-  <view class="divider is-dark"></view>
   <view>Lorem</view>
 </view>
 ```
@@ -88,5 +76,3 @@
   <view>Lorem</view>
 </view>
 ```
-
-支持在`.divider-wrapper`上使用`.is-light`和`.is-dark`。

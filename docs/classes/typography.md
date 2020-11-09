@@ -219,14 +219,10 @@ $line-height-step: 2;
 
 |类名|样式|
 |---|---|
-|`.text`，`.is-light .text`, `.is-light.text`|`color: rgba(0, 0, 0, .85);`|
-|`.text-main`，`.is-light .text-main`, `.is-light.text-main`|`color: rgba(0, 0, 0, .85);`|
-|`.text-secondary`，`.is-light .text-secondary`, `.is-light.text-secondary`|`color: rgba(0, 0, 0, .45);`|
-|`.text-disabled`，`.is-light .text-disabled`, `.is-light.text-disabled`|`color: rgba(0, 0, 0, .25);`|
-|`.is-dark .text`, `.is-dark.text`|`color: rgba(255, 255, 255, .85);`|
-|`.is-dark .text-main`, `.is-dark.text-main`|`color: rgba(255, 255, 255, .85);`|
-|`.is-dark .text-secondary`, `.is-dark.text-secondary`|`color: rgba(255, 255, 255, .45);`|
-|`.is-dark .text-disabled`, `.is-dark.text-disabled`|`color: rgba(255, 255, 255, .3);`|
+|`.text`|`color: rgba(0, 0, 0, .85);`|
+|`.text-main`|`color: rgba(0, 0, 0, .85);`|
+|`.text-secondary`|`color: rgba(0, 0, 0, .45);`|
+|`.text-disabled`|`color: rgba(0, 0, 0, .25);`|
 
 这部分由`$m-colors`，`$m-colors-reverse`，`$m-color`和`$m-color-reverse`生成，由于篇幅原因，省略了`$m-colors`和`$m-colors-reverse`生成的类。修改`$m-colors`和`$m-colors-reverse`可以自定义，见[进阶](../advance/README.md#色彩)。在引入之前做相关修改也可以自定义。
 
@@ -234,19 +230,17 @@ $line-height-step: 2;
 // 修改颜色
 $color-main: #333;
 $color-main-reverse: #333;
-// 生成 .text, .is-light .text, .is-light.text, .text-main, .is-light .text-main,
-//     .is-light.text-main, .text-secondary, .is-light .text-secondary,
-//     .is-light.text-secondary, .text-disabled, .is-light .text-disabled,
-//     .is-light.text-disabled
+// 生成 .text, .text-main, .text-secondary, .text-disabled
 $m-color: (
   "": $color-main,
   "-main": $color-main,
   "-secondary": #999,
   "-disabled": #ccc
 ) !default;
-// 生成 .is-dark .text, .is-dark.text, .is-dark .text-main, .is-dark.text-main,
-//     .text-secondary, .is-dark .text-secondary, .is-dark.text-secondary,
-//     .text-disabled, .is-dark .text-disabled, .is-dark.text-disabled
+// 开启暗黑模式开关
+$has-dark: true;
+// 生成 .is-dark .text, .is-dark .text-main, .is-dark .text-secondary,
+//     .is-dark .text-disabled
 $m-color-reverse: (
   "": $color-main-reverse,
   "-main": $color-main-reverse,

@@ -19,7 +19,6 @@ $m-position: (
   "static": static,
   "sticky": sticky
 );
-
 // 结合实际情况四选一引入
 @import "~@modyqyw/mp-scss";
 @import "~@modyqyw/mp-scss/classes";

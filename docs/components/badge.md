@@ -56,33 +56,19 @@
 
 ## 明亮模式和暗黑模式
 
-默认使用明亮模式。你也可以显式地在父元素或在`.badge`用`.is-light`指定使用明亮模式，用`.is-dark`就能指定使用暗黑模式。
+默认使用明亮模式。[手动开启暗黑模式](../advance/README.md#明亮模式和暗黑模式)并在`.container`上使用`.is-dark`，就能指定使用暗黑模式。
 
 ```html
-<view class="container is-light">
-  <view class="btn is-primary">
-    button
-    <view class="badge"></view>
-  </view>
-</view>
-<view class="container is-dark">
-  <view class="btn is-primary">
-    button
-    <!-- 强制使用明亮模式 -->
-    <view class="badge is-light"></view>
-  </view>
-</view>
-<view class="container is-dark">
-  <view class="btn is-primary">
-    button
-    <view class="badge"></view>
-  </view>
-</view>
 <view class="container">
   <view class="btn is-primary">
     button
-    <!-- 强制使用暗黑模式 -->
-    <view class="badge is-dark"></view>
+    <view class="badge"></view>
+  </view>
+</view>
+<view class="container is-dark">
+  <view class="btn is-primary">
+    button
+    <view class="badge"></view>
   </view>
 </view>
 ```

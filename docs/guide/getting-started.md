@@ -1,14 +1,14 @@
 # 快速上手
 
 ::: warning 建议
-库和文档目前处于`beta`状态，请等待正式版放出后投入使用，目前欢迎帮助编写文档和优化代码。
+库和文档目前处于`beta`状态，目前欢迎帮助编写文档、优化代码和加入新功能。
 
-建议安装 [Node.js](https://nodejs.org/en/) 10 或者 12。
+建议使用 [Node.js](https://nodejs.org/en/) 10 或者 12。
 
 [node-sass](https://github.com/sass/node-sass#readme) 在国内安装缓慢且[已经被弃用](https://sass-lang.com/blog/libsass-is-deprecated)，建议转用 [dart-sass](https://github.com/sass/dart-sass#readme)。
 :::
 
-首先安装相关依赖。
+首先安装相关依赖。对于不同的框架，可能需要安装额外的依赖，请以框架本身说明为准。
 
 ```sh
 npm i @modyqyw/mp-scss@next
@@ -29,7 +29,7 @@ npm i -D scss sass-loader
 比如为页面添加布局。
 
 ```html
-<view class="container h-full">
+<view class="container w-full h-full">
   <view class="header">header</view>
   <view class="navbar">navbar</view>
   <view class="container flex-row">
@@ -43,7 +43,7 @@ npm i -D scss sass-loader
 又比如使用栅格系统和组件。
 
 ```html
-<view class="container">
+<view class="container w-full">
   <view class="row">
     <view class="col">
       <button class="btn is-primary">
@@ -106,5 +106,5 @@ npm i -D scss sass-loader
 
 为了方便快速开发，我们也提供了模版：
 
-- [boilerplate-uni-app](https://github.com/MillCloud/boilerplate-uni-app) - 结合了 uview-ui 和 uni-ui 的 uni-app 模板，包括但不限于完整的本地校验流程和可能用到的工具类库
+- [boilerplate-uni-app](https://github.com/MillCloud/boilerplate-uni-app) - 结合了 uview-ui 和 uni-ui 的 uni-app 模板，包括但不限于完整的本地工作流程和可能用到的工具类库
 - [boilerplate-taro](https://github.com/MillCloud/boilerplate-taro) - 未完成

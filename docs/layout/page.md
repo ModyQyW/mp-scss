@@ -8,7 +8,7 @@
 @import "~@modyqyw/mp-scss/layout/page";
 ```
 
-首先要让根元素`page`占满整个屏幕。
+首先要让根元素`page`占满整个屏幕。如果你引入了`reset`，就可以不必手动地让根元素占满屏幕，因为`reset`已经完成了这部分工作。
 
 ```css
 page {
@@ -20,7 +20,7 @@ page {
 之后，让顶级的布局容器`.container`铺满整个屏幕。
 
 ```html
-<view class="container h-full">
+<view class="container w-full h-full">
   ...
 </view>
 ```
@@ -28,7 +28,7 @@ page {
 再填充`.header`，`.navbar`和`.footer`。如果需要安全区，可以加上`.safe-area`。
 
 ```html
-<view class="container h-full">
+<view class="container w-full h-full">
   <view class="header">header</view>
   <view class="navbar">navbar</view>
   ...
@@ -40,7 +40,7 @@ page {
 使用`.main`作为内容区。
 
 ```html
-<view class="container h-full">
+<view class="container w-full h-full">
   <view class="header">header</view>
   <view class="navbar">navbar</view>
   <view class="main">main</view>
@@ -51,10 +51,10 @@ page {
 要添加和`.main`同级的`.aside`，需要再包裹一个布局容器`.container`。
 
 ```html
-<view class="container h-full">
+<view class="container w-full h-full">
   <view class="header">header</view>
   <view class="navbar">navbar</view>
-  <view class="container flex-row">
+  <view class="container w-full flex-row">
     <view class="aside">aside</view>
     <view class="main">main</view>
   </view>
@@ -82,16 +82,16 @@ page {
 
 ## 明亮模式和暗黑模式
 
-默认使用明亮模式。你也可以使用`.is-light`显式地在`.container`指定使用明亮模式。
+默认使用明亮模式。
 
 ```html
-<view class="container is-light">
+<view class="container">
   <!-- 所有后代受影响，使用明亮模式 -->
   ...
 </view>
 ```
 
-使用`.is-dark`就能指定使用暗黑模式。
+[手动开启暗黑模式](../advance/README.md#明亮模式和暗黑模式)后，使用`.is-dark`就能指定使用暗黑模式。
 
 ```html
 <view class="container is-dark">

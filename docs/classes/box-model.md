@@ -130,9 +130,9 @@ $m-flex-wrap: (
 这部分由`$m-flex-shrink`生成，在引入之前做相关修改可以自定义。
 
 ```scss
-// 生成 .flex-shrink-2
+// 生成 .flex-shrink
 $m-flex-shrink: (
-  "-2": 2
+  "": 1
 );
 // 设置 min, max, step 循环填充映射
 // 生成 .flex-shrink-0, .flex-shrink-1, .flex-shrink-2
@@ -156,9 +156,9 @@ $flex-shrink-step: 1;
 这部分由`$m-flex-grow`生成，在引入之前做相关修改可以自定义。
 
 ```scss
-// 生成 .flex-grow-2
+// 生成 .flex-grow
 $m-flex-grow: (
-  "-2": 2
+  "": 0
 );
 // 设置 min, max, step 循环填充映射
 // 生成 .flex-grow-0, .flex-grow-1, .flex-grow-2
@@ -703,8 +703,7 @@ $margin-has-1-real: false;
 
 ```scss
 // 生成 .overflow-visible, .overflow-hidden, .overflow-visible, .overflow-scroll,
-//     .overflow-{y|x}-visible, .overflow-{y|x}-hidden, .overflow-{y|x}-visible,
-//     .overflow-{y|x}-scroll
+//     .overflow-{y|x}-visible, .overflow-{y|x}-hidden, .overflow-{y|x}-scroll
 $m-overflow: (
   "-auto": auto,
   "-hidden": hidden,

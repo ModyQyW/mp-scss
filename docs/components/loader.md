@@ -41,22 +41,14 @@
 
 ## 明亮模式和暗黑模式
 
-默认使用明亮模式。你也可以显式地在父元素或在`.loader`用`.is-light`指定使用明亮模式，用`.is-dark`就能指定使用暗黑模式。
+默认使用明亮模式。[手动开启暗黑模式](../advance/README.md#明亮模式和暗黑模式)并在`.container`上使用`.is-dark`，就能指定使用暗黑模式。
 
 ```html
 <view class="container">
   <view class="loader"></view>
 </view>
 <view class="container is-dark">
-  <!-- 强制使用明亮模式 -->
-  <view class="loader is-light"></view>
-</view>
-<view class="container is-dark">
   <view class="loader"></view>
-</view>
-<view class="container is-light">
-  <!-- 强制使用暗黑模式 -->
-  <view class="loader is-dark"></view>
 </view>
 ```
 

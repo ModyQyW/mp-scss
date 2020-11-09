@@ -4,8 +4,7 @@
 
 |类名|样式|
 |---|---|
-|`.bg`，`.is-light .bg`，`.is-light.bg`|`background-color: rgba(0, 0, 0, .04);`|
-|`.is-dark .bg`，`.is-dark.bg`|`background-color: rgba(255, 255, 255, .08);`|
+|`.bg`|`background-color: rgba(0, 0, 0, .04);`|
 
 这部分由`$m-colors`，`$m-colors-reverse`，`$m-background-color`和`$m-background-color-reverse`生成，由于篇幅原因，省略了`$m-colors`和`$m-colors-reverse`生成的类。修改`$m-colors`和`$m-colors-reverse`可以自定义，见[进阶](../advance/README.md#色彩)。在引入之前做相关修改也可以自定义。
 
@@ -13,11 +12,13 @@
 // 修改颜色
 $background-color: #fff;
 $background-color-reverse: #121212;
-// 生成 .bg, .is-light .bg, .is-light.bg
+// 生成 .bg
 $m-background-color: (
   "": $background-color
 );
-// 生成 .is-dark .bg, .is-dark.bg
+// 开启暗黑模式开关
+$has-dark: true;
+// 生成 .is-dark .bg
 $m-background-color-reverse: (
   "": $background-color-reverse
 );
@@ -137,8 +138,7 @@ $m-background-size: (
 
 |类名|样式|
 |---|---|
-|`.border`，`.is-light .border`, `.is-light.border`|`border-color: rgba(0, 0, 0, .15);`|
-|`.is-dark .border`, `.is-dark.border`|`border-color: rgba(255, 255, 255, .2);`|
+|`.border`|`border-color: rgba(0, 0, 0, .15);`|
 
 这部分由`$m-colors`，`$m-colors-reverse`，`$m-border-color`和`$m-border-color-reverse`生成，由于篇幅原因，省略了`$m-colors`和`$m-colors-reverse`生成的类。修改`$m-colors`和`$m-colors-reverse`可以自定义，见[进阶](../advance/README.md#色彩)。在引入之前做相关修改也可以自定义，下面是修改的示例。
 
@@ -146,11 +146,13 @@ $m-background-size: (
 // 修改颜色
 $border-color: #ddd;
 $border-color-reverse: #ddd;
-// 生成 .border, .is-light .border, .is-light.border
+// 生成 .border
 $m-border-color: (
   "": $border-color
 ) !default;
-// 生成 .is-dark .border, .is-dark.border
+// 开启暗黑模式开关
+$has-dark: true;
+// 生成 .is-dark .border
 $m-border-color-reverse: (
   "": $border-color-reverse
 ) !default;
