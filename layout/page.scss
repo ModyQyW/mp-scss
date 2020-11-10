@@ -9,14 +9,14 @@
   position: relative;
   box-sizing: border-box;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
 }
 
 .container {
   position: absolute;
   flex: auto;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
   min-height: 0;
   font-family: $container-font-family;
   font-size: $container-font-size;
@@ -40,6 +40,8 @@
 .header {
   flex: 0 0 $header-height;
   flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   height: $header-height;
   background-color: $header-background-color;
 
@@ -53,6 +55,8 @@
 .navbar {
   flex: 0 0 $navbar-height;
   flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   height: $navbar-height;
   background-color: $navbar-background-color;
 
@@ -95,6 +99,8 @@
 .footer {
   flex: 0 0 $footer-height;
   flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   height: $footer-height;
   background-color: $footer-background-color;
 
