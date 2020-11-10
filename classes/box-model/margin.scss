@@ -2,32 +2,32 @@
 
 @each $k, $v in $m-margin {
   .m#{$k} {
-    margin: $v if($has-important, !important, "");
+    margin: $v if($has-important, !important, null);
   }
 
   .my#{$k} {
-    margin-top: $v if($has-important, !important, "");
-    margin-bottom: $v if($has-important, !important, "");
+    margin-top: $v if($has-important, !important, null);
+    margin-bottom: $v if($has-important, !important, null);
   }
 
   .mt#{$k} {
-    margin-top: $v if($has-important, !important, "");
+    margin-top: $v if($has-important, !important, null);
   }
 
   .mb#{$k} {
-    margin-bottom: $v if($has-important, !important, "");
+    margin-bottom: $v if($has-important, !important, null);
   }
 
   .mx#{$k} {
-    margin-right: $v if($has-important, !important, "");
-    margin-left: $v if($has-important, !important, "");
+    margin-right: $v if($has-important, !important, null);
+    margin-left: $v if($has-important, !important, null);
   }
 
   .mr#{$k} {
-    margin-right: $v if($has-important, !important, "");
+    margin-right: $v if($has-important, !important, null);
   }
 
   .ml#{$k} {
-    margin-left: $v if($has-important, !important, "");
+    margin-left: $v if($has-important, !important, null);
   }
 }

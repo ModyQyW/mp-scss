@@ -2,32 +2,32 @@
 
 @each $k, $v in $m-border-width {
   .border#{$k} {
-    border-width: $v if($has-important, !important, "");
+    border-width: $v if($has-important, !important, null);
   }
 
   .border-y#{$k} {
-    border-top-width: $v if($has-important, !important, "");
-    border-bottom-width: $v if($has-important, !important, "");
+    border-top-width: $v if($has-important, !important, null);
+    border-bottom-width: $v if($has-important, !important, null);
   }
 
   .border-x#{$k} {
-    border-right-width: $v if($has-important, !important, "");
-    border-left-width: $v if($has-important, !important, "");
+    border-right-width: $v if($has-important, !important, null);
+    border-left-width: $v if($has-important, !important, null);
   }
 
   .border-t#{$k} {
-    border-top-width: $v if($has-important, !important, "");
+    border-top-width: $v if($has-important, !important, null);
   }
 
   .border-r#{$k} {
-    border-right-width: $v if($has-important, !important, "");
+    border-right-width: $v if($has-important, !important, null);
   }
 
   .border-b#{$k} {
-    border-bottom-width: $v if($has-important, !important, "");
+    border-bottom-width: $v if($has-important, !important, null);
   }
 
   .border-l#{$k} {
-    border-left-width: $v if($has-important, !important, "");
+    border-left-width: $v if($has-important, !important, null);
   }
 }

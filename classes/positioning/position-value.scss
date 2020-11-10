@@ -2,35 +2,35 @@
 
 @each $k, $v in $m-position-value {
   .top#{$k} {
-    top: $v if($has-important, !important, "");
+    top: $v if($has-important, !important, null);
   }
 
   .right#{$k} {
-    right: $v if($has-important, !important, "");
+    right: $v if($has-important, !important, null);
   }
 
   .bottom#{$k} {
-    right: $v if($has-important, !important, "");
+    right: $v if($has-important, !important, null);
   }
 
   .left#{$k} {
-    right: $v if($has-important, !important, "");
+    right: $v if($has-important, !important, null);
   }
 
   .inset#{$k} {
-    top: $v if($has-important, !important, "");
-    right: $v if($has-important, !important, "");
-    bottom: $v if($has-important, !important, "");
-    left: $v if($has-important, !important, "");
+    top: $v if($has-important, !important, null);
+    right: $v if($has-important, !important, null);
+    bottom: $v if($has-important, !important, null);
+    left: $v if($has-important, !important, null);
   }
 
   .inset-y#{$k} {
-    top: $v if($has-important, !important, "");
-    bottom: $v if($has-important, !important, "");
+    top: $v if($has-important, !important, null);
+    bottom: $v if($has-important, !important, null);
   }
 
   .inset-x#{$k} {
-    right: $v if($has-important, !important, "");
-    left: $v if($has-important, !important, "");
+    right: $v if($has-important, !important, null);
+    left: $v if($has-important, !important, null);
   }
 }

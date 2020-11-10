@@ -2,6 +2,6 @@
 
 @each $k, $v in $m-flex-grow {
   .flex-grow#{$k} {
-    flex-grow: $v if($has-important, !important, "");
+    flex-grow: $v if($has-important, !important, null);
   }
 }

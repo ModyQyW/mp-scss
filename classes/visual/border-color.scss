@@ -2,130 +2,130 @@
 
 @each $k, $v in $m-colors {
   .border#{$k} {
-    border-color: $v if($has-important, !important, "");
+    border-color: $v if($has-important, !important, null);
   }
 
   .border-y#{$k} {
-    border-top-color: $v if($has-important, !important, "");
-    border-bottom-color: $v if($has-important, !important, "");
+    border-top-color: $v if($has-important, !important, null);
+    border-bottom-color: $v if($has-important, !important, null);
   }
 
   .border-x#{$k} {
-    border-right-color: $v if($has-important, !important, "");
-    border-left-color: $v if($has-important, !important, "");
+    border-right-color: $v if($has-important, !important, null);
+    border-left-color: $v if($has-important, !important, null);
   }
 
   .border-t#{$k} {
-    border-top-color: $v if($has-important, !important, "");
+    border-top-color: $v if($has-important, !important, null);
   }
 
   .border-r#{$k} {
-    border-right-color: $v if($has-important, !important, "");
+    border-right-color: $v if($has-important, !important, null);
   }
 
   .border-b#{$k} {
-    border-bottom-color: $v if($has-important, !important, "");
+    border-bottom-color: $v if($has-important, !important, null);
   }
 
   .border-l#{$k} {
-    border-color: $v if($has-important, !important, "");
+    border-color: $v if($has-important, !important, null);
   }
 }
 
 @each $k, $v in $m-border-color {
   .border#{$k} {
-    border-color: $v if($has-important, !important, "");
+    border-color: $v if($has-important, !important, null);
   }
 
   .border-y#{$k} {
-    border-top-color: $v if($has-important, !important, "");
-    border-bottom-color: $v if($has-important, !important, "");
+    border-top-color: $v if($has-important, !important, null);
+    border-bottom-color: $v if($has-important, !important, null);
   }
 
   .border-x#{$k} {
-    border-right-color: $v if($has-important, !important, "");
-    border-left-color: $v if($has-important, !important, "");
+    border-right-color: $v if($has-important, !important, null);
+    border-left-color: $v if($has-important, !important, null);
   }
 
   .border-t#{$k} {
-    border-top-color: $v if($has-important, !important, "");
+    border-top-color: $v if($has-important, !important, null);
   }
 
   .border-r#{$k} {
-    border-right-color: $v if($has-important, !important, "");
+    border-right-color: $v if($has-important, !important, null);
   }
 
   .border-b#{$k} {
-    border-bottom-color: $v if($has-important, !important, "");
+    border-bottom-color: $v if($has-important, !important, null);
   }
 
   .border-l#{$k} {
-    border-color: $v if($has-important, !important, "");
+    border-color: $v if($has-important, !important, null);
   }
 }
 
 @if ($has-dark) {
   @each $k, $v in $m-colors-reverse {
     .is-dark .border#{$k} {
-      border-color: $v if($has-important, !important, "");
+      border-color: $v if($has-important, !important, null);
     }
 
     .is-dark .border-y#{$k} {
-      border-top-color: $v if($has-important, !important, "");
-      border-bottom-color: $v if($has-important, !important, "");
+      border-top-color: $v if($has-important, !important, null);
+      border-bottom-color: $v if($has-important, !important, null);
     }
 
     .is-dark .border-x#{$k} {
-      border-right-color: $v if($has-important, !important, "");
-      border-left-color: $v if($has-important, !important, "");
+      border-right-color: $v if($has-important, !important, null);
+      border-left-color: $v if($has-important, !important, null);
     }
 
     .is-dark .border-t#{$k} {
-      border-top-color: $v if($has-important, !important, "");
+      border-top-color: $v if($has-important, !important, null);
     }
 
     .is-dark .border-r#{$k} {
-      border-right-color: $v if($has-important, !important, "");
+      border-right-color: $v if($has-important, !important, null);
     }
 
     .is-dark .border-b#{$k} {
-      border-bottom-color: $v if($has-important, !important, "");
+      border-bottom-color: $v if($has-important, !important, null);
     }
 
     .is-dark .border-l#{$k} {
-      border-color: $v if($has-important, !important, "");
+      border-color: $v if($has-important, !important, null);
     }
   }
 
   @each $k, $v in $m-border-color-reverse {
     .is-dark .border#{$k} {
-      border-color: $v if($has-important, !important, "");
+      border-color: $v if($has-important, !important, null);
     }
 
     .is-dark .border-y#{$k} {
-      border-top-color: $v if($has-important, !important, "");
-      border-bottom-color: $v if($has-important, !important, "");
+      border-top-color: $v if($has-important, !important, null);
+      border-bottom-color: $v if($has-important, !important, null);
     }
 
     .is-dark .border-x#{$k} {
-      border-right-color: $v if($has-important, !important, "");
-      border-left-color: $v if($has-important, !important, "");
+      border-right-color: $v if($has-important, !important, null);
+      border-left-color: $v if($has-important, !important, null);
     }
 
     .is-dark .border-t#{$k} {
-      border-top-color: $v if($has-important, !important, "");
+      border-top-color: $v if($has-important, !important, null);
     }
 
     .is-dark .border-r#{$k} {
-      border-right-color: $v if($has-important, !important, "");
+      border-right-color: $v if($has-important, !important, null);
     }
 
     .is-dark .border-b#{$k} {
-      border-bottom-color: $v if($has-important, !important, "");
+      border-bottom-color: $v if($has-important, !important, null);
     }
 
     .is-dark .border-l#{$k} {
-      border-color: $v if($has-important, !important, "");
+      border-color: $v if($has-important, !important, null);
     }
   }
 }

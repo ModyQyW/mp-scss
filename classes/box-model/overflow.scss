@@ -2,14 +2,14 @@
 
 @each $k, $v in $m-overflow {
   .overflow#{$k} {
-    overflow: $v if($has-important, !important, "");
+    overflow: $v if($has-important, !important, null);
   }
 
   .overflow-y#{$k} {
-    overflow-y: $v if($has-important, !important, "");
+    overflow-y: $v if($has-important, !important, null);
   }
 
   .overflow-x#{$k} {
-    overflow-y: $v if($has-important, !important, "");
+    overflow-y: $v if($has-important, !important, null);
   }
 }

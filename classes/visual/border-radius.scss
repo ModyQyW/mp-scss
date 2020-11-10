@@ -2,42 +2,42 @@
 
 @each $k, $v in $m-border-radius {
   .rounded#{$k} {
-    border-radius: $v if($has-important, !important, "");
+    border-radius: $v if($has-important, !important, null);
   }
 
   .rounded-t#{$k} {
-    border-top-left-radius: $v if($has-important, !important, "");
-    border-top-right-radius: $v if($has-important, !important, "");
+    border-top-left-radius: $v if($has-important, !important, null);
+    border-top-right-radius: $v if($has-important, !important, null);
   }
 
   .rounded-b#{$k} {
-    border-bottom-right-radius: $v if($has-important, !important, "");
-    border-bottom-left-radius: $v if($has-important, !important, "");
+    border-bottom-right-radius: $v if($has-important, !important, null);
+    border-bottom-left-radius: $v if($has-important, !important, null);
   }
 
   .rounded-r#{$k} {
-    border-top-right-radius: $v if($has-important, !important, "");
-    border-bottom-right-radius: $v if($has-important, !important, "");
+    border-top-right-radius: $v if($has-important, !important, null);
+    border-bottom-right-radius: $v if($has-important, !important, null);
   }
 
   .rounded-l#{$k} {
-    border-top-left-radius: $v if($has-important, !important, "");
-    border-bottom-left-radius: $v if($has-important, !important, "");
+    border-top-left-radius: $v if($has-important, !important, null);
+    border-bottom-left-radius: $v if($has-important, !important, null);
   }
 
   // .rounded-tl#{$k} {
-  //   border-top-left-radius: $v if($has-important, !important, "");
+  //   border-top-left-radius: $v if($has-important, !important, null);
   // }
 
   // .rounded-tr#{$k} {
-  //   border-top-right-radius: $v if($has-important, !important, "");
+  //   border-top-right-radius: $v if($has-important, !important, null);
   // }
 
   // .rounded-br#{$k} {
-  //   border-bottom-right-radius: $v if($has-important, !important, "");
+  //   border-bottom-right-radius: $v if($has-important, !important, null);
   // }
 
   // .rounded-bl#{$k} {
-  //   border-bottom-left-radius: $v if($has-important, !important, "");
+  //   border-bottom-left-radius: $v if($has-important, !important, null);
   // }
 }

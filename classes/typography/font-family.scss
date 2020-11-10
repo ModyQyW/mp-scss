@@ -2,6 +2,6 @@
 
 @each $k, $v in $m-font-family {
   .font#{$k} {
-    font-family: $v if($has-important, !important, "");
+    font-family: $v if($has-important, !important, null);
   }
 }

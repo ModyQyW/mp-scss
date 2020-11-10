@@ -1,20 +1,20 @@
 @import "../../variables";
 
 .text-break-normal {
-  word-break: normal if($has-important, !important, "");
-  overflow-wrap: normal if($has-important, !important, "");
+  word-break: normal if($has-important, !important, null);
+  overflow-wrap: normal if($has-important, !important, null);
 }
 
 .text-break-word {
-  overflow-wrap: break-word if($has-important, !important, "");
+  overflow-wrap: break-word if($has-important, !important, null);
 }
 
 .text-break-all {
-  word-break: break-all if($has-important, !important, "");
+  word-break: break-all if($has-important, !important, null);
 }
 
 .text-truncate {
-  overflow: hidden if($has-important, !important, "");
-  text-overflow: ellipsis if($has-important, !important, "");
-  white-space: nowrap if($has-important, !important, "");
+  overflow: hidden if($has-important, !important, null);
+  text-overflow: ellipsis if($has-important, !important, null);
+  white-space: nowrap if($has-important, !important, null);
 }

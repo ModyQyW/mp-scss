@@ -2,6 +2,6 @@
 
 @each $k, $v in $m-font-size {
   .text#{$k} {
-    font-size: $v if($has-important, !important, "");
+    font-size: $v if($has-important, !important, null);
   }
 }

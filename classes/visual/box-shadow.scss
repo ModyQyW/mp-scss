@@ -2,6 +2,6 @@
 
 @each $k, $v in $box-shadow {
   .shadow#{$k} {
-    box-shadow: $v if($has-important, !important, "");
+    box-shadow: $v if($has-important, !important, null);
   }
 }
