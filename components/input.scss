@@ -156,13 +156,13 @@
   > .input-prefix {
     display: inline-flex;
     justify-content: flex-start;
-    margin-right: 4 * $scale + $unit;
+    margin-right: 12 * $scale + $unit;
   }
 
   > .input-suffix {
     display: inline-flex;
     justify-content: flex-end;
-    margin-left: 4 * $scale + $unit;
+    margin-left: 12 * $scale + $unit;
   }
 
   &.is-small {
