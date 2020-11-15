@@ -34,7 +34,7 @@
     border-radius: round(16 + $font-size-base * $line-height-default + 1) / 2 * $scale + $unit;
   }
 
-  &.is-small {
+  &.is-sm {
     padding: 0 8 * $scale + $unit;
     font-size: $font-size-base * $scale + $unit;
 
@@ -43,7 +43,7 @@
     }
   }
 
-  &.is-large {
+  &.is-lg {
     padding: 6 * $scale + $unit 16 * $scale + $unit;
     font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
 

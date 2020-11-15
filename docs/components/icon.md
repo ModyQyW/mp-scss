@@ -21,16 +21,16 @@
 
 ## 尺寸
 
-使用`.is-small`可以使用更小的`.icon`，使用`.is-large`可以使用更大的`.icon`，可以结合使用。
+使用`.is-sm`可以使用更小的`.icon`，使用`.is-lg`可以使用更大的`.icon`，可以结合使用。
 
 ```html
 <view class="container">
-  <button class="btn is-primary is-small">
-    <image class="icon is-small" src="../fake/image.png"></image>
+  <button class="btn is-primary is-sm">
+    <image class="icon is-sm" src="../fake/image.png"></image>
     text
   </button>
-  <button class="btn is-primary is-large">
-    <image class="icon is-large" src="../fake/image.png"></image>
+  <button class="btn is-primary is-lg">
+    <image class="icon is-lg" src="../fake/image.png"></image>
     text
   </button>
 </view>

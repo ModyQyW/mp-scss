@@ -75,12 +75,12 @@
 
 ## 尺寸
 
-使用`.is-small`可以使用更小的`.badge`。可以结合不同主题、不同模式使用。
+使用`.is-sm`可以使用更小的`.badge`。可以结合不同主题、不同模式使用。
 
 ```html
 <view class="btn is-primary">
   button
-  <view class="badge is-small"></view>
+  <view class="badge is-sm"></view>
 </view>
 ```
 

@@ -91,7 +91,7 @@
     }
   }
 
-  &.is-small {
+  &.is-sm {
     min-width: 14 * $scale + $unit;
     height: 14 * $scale + $unit;
     padding: 0;
@@ -101,7 +101,7 @@
   }
 
   &.is-dot,
-  &.is-dotter.is-small {
+  &.is-dotter.is-sm {
     width: 6 * $scale + $unit;
     min-width: auto;
     height: 6 * $scale + $unit;

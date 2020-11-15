@@ -140,7 +140,7 @@
     background-color: $white;
   }
 
-  &.is-large {
+  &.is-lg {
     width: ($font-size-base + $font-size-diff * 2) * $scale + $unit;
     height: ($font-size-base + $font-size-diff * 2) * $scale + $unit;
   }

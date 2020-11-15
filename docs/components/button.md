@@ -79,12 +79,12 @@
 
 ## 尺寸
 
-使用`.is-small`可以使用更小的`.btn`，使用`.is-large`可以使用更大的`.btn`，可以结合不同主题、不同模式使用。
+使用`.is-sm`可以使用更小的`.btn`，使用`.is-lg`可以使用更大的`.btn`，可以结合不同主题、不同模式使用。
 
 ```html
 <view class="container">
-  <button class="btn is-small">small</button>
+  <button class="btn is-sm">small</button>
   <button class="btn">default</button>
-  <button class="btn is-large">large</button>
+  <button class="btn is-lg">large</button>
 </view>
 ```

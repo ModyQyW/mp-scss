@@ -6,13 +6,13 @@
   height: $font-size-base * $scale + $unit;
   line-height: 1;
 
-  &.is-small {
+  &.is-sm {
     width: ($font-size-base - $font-size-diff) * $scale + $unit;
     height: ($font-size-base - $font-size-diff) * $scale + $unit;
     line-height: 1;
   }
 
-  &.is-large {
+  &.is-lg {
     width: ($font-size-base + $font-size-diff) * $scale + $unit;
     height: ($font-size-base + $font-size-diff) * $scale + $unit;
     line-height: 1;

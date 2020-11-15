@@ -49,7 +49,7 @@
     padding: 16 * $scale + $unit 24 * $scale + $unit;
   }
 
-  &.is-small {
+  &.is-sm {
     .card-header {
       padding: 8 * $scale + $unit 12 * $scale + $unit;
       font-size: $font-size-base * $scale + $unit;

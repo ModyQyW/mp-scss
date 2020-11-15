@@ -54,11 +54,11 @@
 
 ## 尺寸
 
-使用`.is-large`可以使用更大的`.loader`，可以结合不同主题、不同模式使用。
+使用`.is-lg`可以使用更大的`.loader`，可以结合不同主题、不同模式使用。
 
 ```html
 <view class="container">
-  <view class="loader is-large"></view>
+  <view class="loader is-lg"></view>
 </view>
 ```
 

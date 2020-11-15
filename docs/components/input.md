@@ -29,13 +29,13 @@
 
 ## 尺寸
 
-使用`.is-small`可以使用更小的`.input`，使用`.is-large`可以使用更大的`.input`。
+使用`.is-sm`可以使用更小的`.input`，使用`.is-lg`可以使用更大的`.input`。
 
 ```html
 <view class="container">
-  <input class="input is-small" placeholder="small" />
+  <input class="input is-sm" placeholder="small" />
   <input class="input" placeholder="default" />
-  <input class="input is-large" placeholder="large" />
+  <input class="input is-lg" placeholder="large" />
 </view>
 ```
 
@@ -53,4 +53,4 @@
 </view>
 ```
 
-支持在`.input-wrapper`上使用`is-dark`，`.is-small`和`.is-large`。
+支持在`.input-wrapper`上使用`is-dark`，`.is-sm`和`.is-lg`。

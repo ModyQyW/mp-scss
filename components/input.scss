@@ -66,12 +66,12 @@
     }
   }
 
-  &.is-small {
+  &.is-sm {
     padding: 0 8 * $scale + $unit;
     font-size: $font-size-base * $scale + $unit;
   }
 
-  &.is-large {
+  &.is-lg {
     padding: 6 * $scale + $unit 16 * $scale + $unit;
     font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
   }
@@ -138,8 +138,8 @@
     border-style: none;
     border-width: 0;
 
-    &.is-small,
-    &.is-large {
+    &.is-sm,
+    &.is-lg {
       padding: 0;
       font-size: $font-size-base * $scale + $unit;
     }
@@ -165,7 +165,7 @@
     margin-left: 12 * $scale + $unit;
   }
 
-  &.is-small {
+  &.is-sm {
     padding: 0 8 * $scale + $unit;
     font-size: $font-size-base * $scale + $unit;
 
@@ -174,7 +174,7 @@
     }
   }
 
-  &.is-large {
+  &.is-lg {
     padding: 6 * $scale + $unit 16 * $scale + $unit;
     font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
 
