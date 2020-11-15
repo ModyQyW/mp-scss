@@ -11,23 +11,22 @@
 
 ### 变量 variables
 
-- 变量划分为初始变量`initial variables`，衍生变量`derived variables`，布局变量`layout variables`和组件变量`components variables`。
+- 变量划分为初始变量`initial variables`，衍生变量`derived variables`和布局变量`layout variables`。
   - 初始变量 - 能够明确初始值，且不依赖于其它变量的变量。
   - 衍生变量 - 依赖其它变量或会做其它处理的变量。
   - 布局变量 - 特殊的初始变量/衍生变量，包含页面布局变量和栅格系统变量。
-  - 组件变量 - 特殊的初始变量/衍生变量，包含组件使用的变量。
-- 变量名没有包含属性名 - 通用度较高的变量，如`$unit`和`$scale`。
-- 变量名包括`has` - 表示是否需要把变量填充到对应映射里，如`$has-red`。
-- 变量名前缀是属性名或变量名包含属性名 - 和该属性相关的变量，如`$m-position`。
+- 变量名没有包含属性名 - 通用度较高的变量，如`$unit`表示单位，`$scale`表示缩放倍数，它们在很多地方都被使用到了。
+- 变量名包括`has` - 控制某些类是否会被生成，如`$has-dark`控制是否生成暗黑模式相关的类，`$has-red`控制是否生成`red`相关的类。
+- 变量名前缀是属性名或变量名包含属性名 - 和该属性相关的变量，如`$m-position`和`position`相关。
   - 特别地，`$m-position-value`这个映射会用于`top`，`right`，`bottom`，`left`这四个属性上，但变量名没有包含属性。
 - 变量名前缀是`f-` - 函数`function`，如`$f-get-color`。
 - 变量名前缀是`m-` - 映射`map`，如`$m-position`。
-  - 当对应的属性使用语义化命名且不会混淆时，键可以是空字符串。极少数情况为了方便开发，也可以使用空字符串作为键。
-  - `$m-font-family`会生成唯一的`.font*`类，可以使用空字符串作为默认值的键，对应的类就是`.font`。
-  - `background`相关属性生成的`.bg*`类不唯一，但`$m-background-color`生成的`.bg*`类不会和其它的混淆，所以`$m-background-color`里面也可以使用空字符串作为默认值的键。
-  - `.border*`类由多个相关属性共享，但`.border`本身可以明确表达需要边框的意图，对应地可以在`$m-border-color`，`$m-border-style`，`$m-border-width`都使用空字符串作为默认值的键，进而保证`.border`类的样式方便开发，但必须允许使用者自定义。
-- 变量名前缀是`l-` - 列表`list`，如`$l-width-denominator`。
-- 变量名后缀是`-default` - 作为基准值、可以被直接使用的简单变量，如`$line-height-base`。
+  - 当对应的属性不会混淆时，键可以是空字符串。特别地，考虑到语义化，多个相关属性可以同时拥有空字符串的键。
+  - `$m-font-family`会生成唯一的`.font*`类，不会混淆，所以可以使用空字符串作为默认值的键，对应的类就是`.font`，表示要使用默认的字体族。
+  - `background`相关属性生成的`.bg*`类不唯一，但`$m-background-color`生成的`.bg*`类不会和其它的混淆，所以`$m-background-color`里面也可以使用空字符串作为默认值的键，对应的类就是`.bg`，表示要使用默认的背景色。
+  - `.border*`类由多个相关属性共享，但`.border`本身可以明确表达需要使用边框的意图，对应地可以在`$m-border-color`，`$m-border-style`，`$m-border-width`都使用空字符串作为默认值的键，对应的类就是`.border`，表示要使用默认的边框。
+- 变量名前缀是`l-` - 列表`list`，只会用于百分比值的生成，如`$l-width-denominator`表示`width`相关的类会出现百分比的值，分数形式下的分母源于`$l-width-denominator`。
+- 变量名后缀是`-default` - 作为基准值、可以被直接使用的简单变量，如`$line-height-base`表示`line-height`的基准值。
 - 变量名后缀是`-base` - 作为基准值、需要作简单处理（往往是增减差量，乘以缩放倍数和添加单位）才能被使用的简单变量，如`$padding-base`。
 - 变量名后缀是`-diff` - 用于生成映射初始值的变量，表示差量，直接被基准值加减，如`$padding-diff`。
 - 变量名后缀是`-min` - 用于循环填充映射的变量，表示循环开始的值，如`$padding-min`。
