@@ -779,7 +779,7 @@
   &.is-ripply.button-hover:not(.is-text)::after {
     display: block;
     background-color: unset;
-    opacity: .24;
+    opacity: 0.24;
     transition: 0s;
     transform: scale(0);
   }

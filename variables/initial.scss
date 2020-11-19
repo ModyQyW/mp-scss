@@ -234,7 +234,7 @@ $m-font-variant: (
 ) !default;
 // line-height
 $line-height-default: 1.5715 !default;
-$line-height-diff: .143 !default;
+$line-height-diff: 0.143 !default;
 $line-height-min: 18 !default;
 $line-height-max: 44 !default;
 $line-height-step: 2 !default;
@@ -301,9 +301,9 @@ $m-outline: (
   "-none": none
 );
 // box-shadow
-$box-shadow-umbra: rgba(0, 0, 0, .2) !default;
-$box-shadow-penumbra: rgba(0, 0, 0, .14) !default;
-$box-shadow-ambient: rgba(0, 0, 0, .12) !default;
+$box-shadow-umbra: rgba(0, 0, 0, 0.2) !default;
+$box-shadow-penumbra: rgba(0, 0, 0, 0.14) !default;
+$box-shadow-ambient: rgba(0, 0, 0, 0.12) !default;
 $box-shadow-min: 0 !default;
 $box-shadow-max: 24 !default;
 $box-shadow-step: 1 !default;
@@ -315,4 +315,4 @@ $m-opacity: (
   "-100": 1
 ) !default;
 // transition
-$transition-default: .48s cubic-bezier(.25, .8, .5, 1) !default;
+$transition-default: 0.48s cubic-bezier(0.25, 0.8, 0.5, 1) !default;

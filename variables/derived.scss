@@ -1293,12 +1293,12 @@ $tmp-line-height: $line-height-min;
   $tmp-line-height: $tmp-line-height + $line-height-step;
 }
 // color
-$color-main: fade-out($black, .15) !default;
-$color-secondary: fade-out($black, .55) !default;
-$color-disabled: fade-out($black, .75) !default;
-$color-main-reverse: fade-out($white, .15) !default;
-$color-secondary-reverse: fade-out($white, .55) !default;
-$color-disabled-reverse: fade-out($white, .7) !default;
+$color-main: fade-out($black, 0.15) !default;
+$color-secondary: fade-out($black, 0.55) !default;
+$color-disabled: fade-out($black, 0.75) !default;
+$color-main-reverse: fade-out($white, 0.15) !default;
+$color-secondary-reverse: fade-out($white, 0.55) !default;
+$color-disabled-reverse: fade-out($white, 0.7) !default;
 $m-color: (
   "": $color-main,
   "-main": $color-main,
@@ -1314,8 +1314,8 @@ $m-color-reverse: (
 
 /* visual */
 // background-color
-$background-color: fade-out($black, .96) !default;
-$background-color-reverse: fade-out($white, .92) !default;
+$background-color: fade-out($black, 0.96) !default;
+$background-color-reverse: fade-out($white, 0.92) !default;
 $m-background-color: (
   "": $background-color
 ) !default;
@@ -1323,8 +1323,8 @@ $m-background-color-reverse: (
   "": $background-color-reverse
 ) !default;
 // border-color
-$border-color: fade-out($black, .85) !default;
-$border-color-reverse: fade-out($white, .8) !default;
+$border-color: fade-out($black, 0.85) !default;
+$border-color-reverse: fade-out($white, 0.8) !default;
 $m-border-color: (
   "": $border-color
 ) !default;

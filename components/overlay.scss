@@ -14,14 +14,14 @@
   height: 100%;
   overflow: auto;
   color: $color-main;
-  background-color: fade-out($black, .55);
+  background-color: fade-out($black, 0.55);
   outline: none;
   transition: $transition-default;
 
   @if ($has-dark) {
     .is-dark & {
       color: $color-main-reverse;
-      background-color: fade-out($black, .55);
+      background-color: fade-out($black, 0.55);
     }
   }
 }
