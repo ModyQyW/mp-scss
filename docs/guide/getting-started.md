@@ -26,47 +26,40 @@ npm i -D scss sass-loader
 
 现在，你应该已经可以使用所有这个库的所有功能。
 
-比如为页面添加布局。
+比如为页面添加布局。[微信小程序代码片段](https://developers.weixin.qq.com/s/S23bgZmT7qlI)
 
 ```html
-<view class="container w-full h-full">
+<view class="container h-full">
   <view class="header">header</view>
   <view class="navbar">navbar</view>
   <view class="container flex-row">
-    <view class="aside">aside</view>
-    <view class="main">main</view>
+    <view class="aside h-full">aside</view>
+    <view class="main h-full">main</view>
   </view>
   <view class="footer">footer</view>
+  <view class="safe-area" />
 </view>
 ```
 
-又比如使用栅格系统和组件。
+又比如使用栅格系统。[微信小程序代码片段](https://developers.weixin.qq.com/s/7E3vTZmp7bly)
 
 ```html
-<view class="container w-full">
-  <view class="row">
-    <view class="col">
-      <button class="btn is-primary">
-        button
-        <view class="badge">1</view>
-      </button>
+<view class="container h-full">
+  <view class="header">header</view>
+  <view class="main">
+    <view class="row w-full">
+      <view class="col col-3">col-3</view>
+      <view class="col col-3">col-3</view>
+      <view class="col col-3">col-3</view>
+      <view class="col col-3">col-3</view>
     </view>
-    <view class="col">
-      <view class="input-wrapper">
-        <view class="input-prefix">prefix</view>
-        <input class="input"></input>
-        <view class="input-suffix">suffix</view>
-      </view>
-    </view>
-    <view class="col">
-      <view class="card">
-      <view class="card-header">header</view>
-      <view class="divider m-0"></view>
-      <view class="card-content border-b">content</view>
-      <view class="card-footer">footer</view>
-      </view>
+    <view class="row w-full">
+      <view class="col col-6 pr-8">col-6</view>
+      <view class="col col-6 pl-8">col-6</view>
     </view>
   </view>
+  <view class="footer">footer</view>
+  <view class="safe-area"></view>
 </view>
 ```
 
