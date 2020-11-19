@@ -5,10 +5,12 @@
 .navbar,
 .aside,
 .main,
-.footer {
+.footer,
+.safe-area {
   position: relative;
   box-sizing: border-box;
   display: flex;
+  width: 100%;
 }
 
 .container {
@@ -87,6 +89,7 @@
   flex: auto;
   flex-direction: column;
   min-height: 0;
+  overflow-x: hidden;
   background-color: $main-background-color;
 
   @if ($has-dark) {
@@ -112,8 +115,6 @@
 }
 
 .safe-area {
-  position: relative;
-  box-sizing: border-box;
   flex: 0 0 $safe-area-height;
   height: $safe-area-height;
   min-height: $safe-area-height;
