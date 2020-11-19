@@ -1,4 +1,7 @@
+/* eslint-disable import/no-extraneous-dependencies */
+const config = require('@modyqyw/fabric/stylelint/scss');
+
 module.exports = {
-  extends: ['@modyqyw/stylelint-config/scss'],
+  ...config,
   ignoreFiles: ['**/*.md'],
 };
