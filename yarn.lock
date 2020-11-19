@@ -1022,10 +1022,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@modyqyw/fabric@~1.0.8":
-  version "1.0.8"
-  resolved "https://registry.npmjs.org/@modyqyw/fabric/-/fabric-1.0.8.tgz#72d572b8211230c9fd2ddb4a7bb8f29ef33c21b0"
-  integrity sha512-Hbqmnxy6qOn6xA2yMJkg8b9jFuGexqHOBiyTCIIQBOYKg0BRqhD26ZSkPnYdm4lLFXTZ855LIj15DQ/TFht1sA==
+"@modyqyw/fabric@~1.0.10":
+  version "1.0.10"
+  resolved "https://registry.npmjs.org/@modyqyw/fabric/-/fabric-1.0.10.tgz#06faedeb0d4bbb06f6c53ed58a90a72adec66b89"
+  integrity sha512-vksCgvf79b9viK62OmsaJDyaYZb7Afn6v3r+zj/OGdBsyQErPGxYG4bbh4daNFyZXDxOv8RYxlcXxUTrt3E0gA==
   dependencies:
     "@typescript-eslint/eslint-plugin" "~4.8.1"
     "@typescript-eslint/parser" "~4.8.1"
