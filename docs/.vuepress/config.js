@@ -222,6 +222,16 @@ module.exports = {
     '@vuepress/medium-zoom',
     '@vuepress/nprogress',
     [
+      '@vuepress/pwa',
+      {
+        serviceWorker: true,
+        updatePopup: {
+          message: '新内容可用。',
+          buttonText: '刷新',
+        },
+      },
+    ],
+    [
       'sitemap',
       {
         hostname: 'https://millcloud.github.io',

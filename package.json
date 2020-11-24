@@ -61,6 +61,7 @@
     "@vuepress/plugin-blog": "~1.9.3",
     "@vuepress/plugin-medium-zoom": "~1.7.1",
     "@vuepress/plugin-nprogress": "~1.7.1",
+    "@vuepress/plugin-pwa": "~1.7.1",
     "commitizen": "~4.2.2",
     "copyfiles": "~2.4.0",
     "cssnano": "~4.1.10",
