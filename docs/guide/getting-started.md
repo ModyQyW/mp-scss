@@ -99,6 +99,6 @@ npm i -D scss sass-loader
 
 为了方便快速开发，我们也提供了模版。
 
-- [boilerplate-uni-app](https://github.com/MillCloud/boilerplate-uni-app) - 结合了 uview-ui 和 uni-ui 的 uni-app 模板，包括但不限于完整的本地工作流程和可能用到的工具类库。
-- [boilerplate-taro](https://github.com/MillCloud/boilerplate-taro) - 未完成。
-- [boilerplate-rax](https://github.com/MillCloud/boilerplate-rax) - 未完成。
+- [boilerplate-uni-app](https://github.com/MillCloud/boilerplate-uni-app) - 结合了 uview-ui 和 uni-ui 的 uni-app 模板。
+- [boilerplate-taro](https://github.com/MillCloud/boilerplate-taro) - taro 模板。
+- [boilerplate-rax](https://github.com/MillCloud/boilerplate-rax) - rax 模板。
