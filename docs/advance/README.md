@@ -2,7 +2,7 @@
 
 ## 优化体积
 
-小程序诞生的本意是让用户使用 APP 的少量功能，免去用户下载 APP 的烦恼，方便用户，也因此，小程序的体积有着较为严格的要求。
+小程序诞生的本意是让用户使用 APP 的少量功能，也因此，小程序的体积有着较为严格的要求。
 
 以当下被广泛使用的微信小程序作为[参考](https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages.html)，整个小程序不得超过 16M，超过 2M 时需要分包，每个分包不得超过 2M。
 
@@ -124,7 +124,7 @@ $purple: #722ed1 !default;
 $magenta: #eb2f96 !default;
 ```
 
-库内部使用了`f-get-color`这个方法来生成明亮模式下的通用颜色。下面是使用`$red`生成`$red-1`到`$red-10`的代码，其它基准变量的使用与它类似。
+库内部使用了[`f-get-color`](https://github.com/MillCloud/mp-scss/blob/master/utils/functions.scss#L104)这个方法来生成明亮模式下的通用颜色。下面是使用`$red`生成`$red-1`到`$red-10`的代码，其它基准变量的使用与它类似。
 
 ```scss
 $red-1: f-get-color($red, 1);
@@ -139,7 +139,7 @@ $red-9: f-get-color($red, 9);
 $red-10: f-get-color($red, 10);
 ```
 
-而要生成暗黑模式下的通用颜色，则使用了`scss`提供的函数`mix`，布局容器在暗黑模式下的背景颜色变量`$container-background-color-reverse`以及明亮模式下的通用颜色。
+而要生成暗黑模式下的通用颜色，则使用了`scss`提供的函数[`mix`](https://sass-lang.com/documentation/modules/color#mix)，布局容器在暗黑模式下的背景颜色变量`$container-background-color-reverse`以及明亮模式下的通用颜色。
 
 ```scss
 $red-reverse: mix($red, $container-background-color-reverse, 85%);
@@ -295,11 +295,11 @@ $has-info: true !default;
 
 库内部使用`scss`实现了 Ant Design 的颜色生成方法`f-get-color`，如果有兴趣可以自行[查看 Github 源码](https://github.com/MillCloud/mp-scss/blob/master/utils/functions.scss)或[查看 Gitee 源码](https://gitee.com/MillCloud/mp-scss/blob/master/utils/functions.scss)。
 
-## faq
+## FAQ
 
 ### 为什么不使用 mixin
 
-mixin 在一定程度上加大了调试的负担，同时也会影响代码检查，我想尽可能地避免使用 mixin。
+mixin 在一定程度上加大了调试的负担，同时也会影响代码检查。
 
 ### 为什么不使用 css 变量
 
