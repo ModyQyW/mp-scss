@@ -197,7 +197,7 @@ module.exports = {
         {
           title: '原则',
           collapsable: false,
-          children: ['design', 'implement'],
+          children: ['usage', 'implement'],
         },
       ],
       '/classes/': ['', 'positioning', 'box-model', 'typography', 'visual', 'misc'],

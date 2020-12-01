@@ -2,10 +2,12 @@
 
 ## 默认样式
 
-要使用徽标类，可以只引入对应的文件。
+要使用徽标类，需要先引入。
 
 ```scss
-@import "~@modyqyw/mp-scss/components/badge";
+@import "~@modyqyw/mp-scss";
+// @import "~@modyqyw/mp-scss/components";
+// @import "~@modyqyw/mp-scss/components/badge";
 ```
 
 使用一个父元素作为容器，在其中使用`.badge`。

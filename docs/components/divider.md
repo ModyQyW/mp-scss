@@ -2,10 +2,12 @@
 
 ## 默认样式
 
-要使用分割线类，可以只引入对应的文件。
+要使用分割线类，需要先引入。
 
 ```scss
-@import "~@modyqyw/mp-scss/components/divider";
+@import "~@modyqyw/mp-scss";
+// @import "~@modyqyw/mp-scss/components";
+// @import "~@modyqyw/mp-scss/components/divider";
 ```
 
 在想要分割内容的地方可以使用`.divider`。
@@ -49,7 +51,7 @@
 
 ## 使用文字
 
-要使用带文字的文字较为复杂。
+要使用带文字的分割线较为复杂。
 
 ```html
 <view class="container">

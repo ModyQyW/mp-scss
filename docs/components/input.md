@@ -2,10 +2,12 @@
 
 ## 默认样式
 
-要使用输入框类，可以只引入对应的文件。
+要使用输入框类，需要先引入。
 
 ```scss
-@import "~@modyqyw/mp-scss/components/input";
+@import "~@modyqyw/mp-scss";
+// @import "~@modyqyw/mp-scss/components";
+// @import "~@modyqyw/mp-scss/components/input";
 ```
 
 ```html
@@ -54,3 +56,9 @@
 ```
 
 支持在`.input-wrapper`上使用`is-dark`，`.is-sm`和`.is-lg`。
+
+## FAQ
+
+### 阿里小程序 input 的 placeholder 样式不正常
+
+请指定 placeholder 类名为`input-placeholder`。

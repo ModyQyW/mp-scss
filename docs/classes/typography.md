@@ -6,22 +6,26 @@
 |---|---|
 |`.font`|`font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";`|
 
-这部分由`$m-font-family`生成，在引入之前修改`$m-font-family`可以自定义。
-
 ```scss
 // 生成 .font, .font-sans, .font-serif, .font-mono
+$font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
+  "Microsoft YaHei", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+$font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+  Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+$font-family-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $font-family: (
-  "": -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
-  "Microsoft YaHei", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-  "-sans": system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji",
-  "-serif": Georgia, Cambria, "Times New Roman", Times, serif,
-  "-mono": Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+  "": $font-family-default,
+  "-sans": $font-family-sans,
+  "-serif": $font-family-serif,
+  "-mono": $font-family-mono
 );
-// 结合实际情况四选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/typography";
-@import "~@modyqyw/mp-scss/classes/typography/font-family";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/typography";
+// @import "~@modyqyw/mp-scss/classes/typography/font-family";
 ```
 
 ## font-size
@@ -49,13 +53,12 @@ $font-family: (
 |`.text-34`|`font-size: 68rpx;`|
 |`.text-36`|`font-size: 72rpx;`|
 
-这部分由`$m-font-size`生成，在引入之前做相关修改可以自定义。
-
 ```scss
-// 设置 base, diff
+// 生成 .text, .text-xs, .text-sm, .text-md, .text-lg, .text-xl
+$scale: 2;
+$unit: rpx;
 $font-size-base: 16;
 $font-size-diff: 2;
-// 生成 .text, .text-xs, .text-sm, .text-md, .text-lg, .text-xl
 $m-font-size: (
   "": $font-size-base * $scale + $diff,
   "-xs": (
@@ -72,16 +75,15 @@ $m-font-size: (
     $font-size-base + $font-size-diff * 2
   ) * $scale + $unit
 );
-// 设置 min, max, step 循环填充映射
 // 生成 .text-12, .text-14, .text-16, .text-18, .text-20, .text-22, .text-24
 $font-size-min: 12;
 $font-size-max: 24;
 $font-size-step: 2;
-// 结合实际情况四选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/typography";
-@import "~@modyqyw/mp-scss/classes/typography/font-size";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/typography";
+// @import "~@modyqyw/mp-scss/classes/typography/font-size";
 ```
 
 ## font-style
@@ -91,8 +93,6 @@ $font-size-step: 2;
 |`.text-normal`|`font-style: normal;`|
 |`.text-italic`|`font-style: italic;`|
 
-这部分由`$m-font-style`生成，在引入之前修改`$m-font-style`可以自定义。
-
 ```scss
 // 生成 .text-normal, .text-italic, .text-oblique
 $m-font-style: (
@@ -100,11 +100,11 @@ $m-font-style: (
   "-italic": italic,
   "-oblique": oblique
 );
-// 结合实际情况四选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/typography";
-@import "~@modyqyw/mp-scss/classes/typography/font-style";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/typography";
+// @import "~@modyqyw/mp-scss/classes/typography/font-style";
 ```
 
 ## font-weight
@@ -116,8 +116,6 @@ $m-font-style: (
 |`.text-medium`|`font-weight: 500;`|
 |`.text-semi-bold`|`font-weight: 600;`|
 |`.text-bold`|`font-weight: 700;`|
-
-这部分由`$m-font-weight`生成，在引入之前修改`$m-font-weight`可以自定义。
 
 ```scss
 // 生成 .text, .text-thin, .text-extra-light, .text-ultra-light, .text-light,
@@ -137,11 +135,11 @@ $m-font-weight: (
   "-ultra-bold": 800,
   "-heavy": 900
 );
-// 结合实际情况四选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/typography";
-@import "~@modyqyw/mp-scss/classes/typography/font-weight";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/typography";
+// @import "~@modyqyw/mp-scss/classes/typography/font-weight";
 ```
 
 ## font-variant
@@ -150,16 +148,14 @@ $m-font-weight: (
 |---|---|
 |`.tabular-nums`|`font-variant: tabular-nums;`|
 
-这部分由`$m-font-variant`生成，在引入之前修改`$m-font-variant`可以自定义。
-
 ```scss
 // 不生成相关类
 $m-font-variant: ();
-// 结合实际情况四选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/typography";
-@import "~@modyqyw/mp-scss/classes/typography/font-variant";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/typography";
+// @import "~@modyqyw/mp-scss/classes/typography/font-variant";
 ```
 
 ## line-height
@@ -187,13 +183,10 @@ $m-font-variant: ();
 |`.leading-42`|`line-height: 84rpx;`|
 |`.leading-44`|`line-height: 88rpx;`|
 
-这部分由`$m-line-height`生成，在引入之前做相关修改可以自定义。
-
 ```scss
-// 设置 default, diff
+// 生成 .leading, .leading-xs, .leading-sm, .leading-md, .leading-lg, .leading-xl
 $line-height-default: 1.5715;
 $line-height-diff: .143;
-// 生成 .leading, .leading-xs, .leading-sm, .leading-md, .leading-lg, .leading-xl
 $m-font-size: (
   "": $line-height-default,
   "-xs": $line-height-default - $line-height-diff * 2,
@@ -202,17 +195,16 @@ $m-font-size: (
   "-lg": $line-height-default + $line-height-diff,
   "-xl": $line-height-default + $line-height-diff * 2
 );
-// 设置 min, max, step 循环填充映射
 // 生成 .leading-20, .leading-22, .leading-24, .leading-26, .leading-28,
 //     .leading-30, .leading-32
 $line-height-min: 20;
 $line-height-max: 32;
 $line-height-step: 2;
-// 结合实际情况四选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/typography";
-@import "~@modyqyw/mp-scss/classes/typography/";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/typography";
+// @import "~@modyqyw/mp-scss/classes/typography/line-height";
 ```
 
 ## color
@@ -224,34 +216,32 @@ $line-height-step: 2;
 |`.text-secondary`|`color: rgba(0, 0, 0, .45);`|
 |`.text-disabled`|`color: rgba(0, 0, 0, .25);`|
 
-这部分由`$m-colors`，`$m-colors-reverse`，`$m-color`和`$m-color-reverse`生成，由于篇幅原因，省略了`$m-colors`和`$m-colors-reverse`生成的类。修改`$m-colors`和`$m-colors-reverse`可以自定义，见[进阶](../advance/README.md#色彩)。在引入之前做相关修改也可以自定义。
+支持`$m-colors`和`$m-colors-reverse`里的色彩，此处省略，见[进阶 - 色彩](../advance/README.md#色彩)。
 
 ```scss
-// 修改颜色
+// 生成 .text, .text-main, .text-secondary, .text-disabled
 $color-main: #333;
 $color-main-reverse: #333;
-// 生成 .text, .text-main, .text-secondary, .text-disabled
 $m-color: (
   "": $color-main,
   "-main": $color-main,
   "-secondary": #999,
   "-disabled": #ccc
 ) !default;
-// 开启暗黑模式开关
+// 开启暗黑模式，生成 .is-dark .text, .is-dark .text-main,
+//                 .is-dark .text-secondary, .is-dark .text-disabled
 $has-dark: true;
-// 生成 .is-dark .text, .is-dark .text-main, .is-dark .text-secondary,
-//     .is-dark .text-disabled
 $m-color-reverse: (
   "": $color-main-reverse,
   "-main": $color-main-reverse,
   "-secondary": #999,
   "-disabled": #ccc
 ) !default;
-// 结合实际情况四选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/typography";
-@import "~@modyqyw/mp-scss/classes/typography/color";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/typography";
+// @import "~@modyqyw/mp-scss/classes/typography/color";
 ```
 
 ## text-align
@@ -262,8 +252,6 @@ $m-color-reverse: (
 |`.text-right`|`text-align: right;`|
 |`.text-center`|`text-align: center;`|
 
-这部分由`$m-text-align`生成，在引入之前修改`$m-text-align`可以自定义。
-
 ```scss
 // 生成 .text-left, .text-right, .text-center, .text-justify
 $m-text-align: (
@@ -272,11 +260,11 @@ $m-text-align: (
   "-center": center,
   "-justify": justify
 );
-// 结合实际情况四选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/typography";
-@import "~@modyqyw/mp-scss/classes/typography/text-align";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/typography";
+// @import "~@modyqyw/mp-scss/classes/typography/text-align";
 ```
 
 ## text-decoration
@@ -286,8 +274,6 @@ $m-text-align: (
 |`.text-none`|`text-decoration: none;`|
 |`.text-underline`|`text-decoration: underline;`|
 
-这部分由`$m-text-decoration`生成，在引入之前修改`$m-text-decoration`可以自定义。
-
 ```scss
 // 生成 .text-none, .text-overline, .text-underline, .text-line-through
 $m-text-decoration: (
@@ -296,11 +282,11 @@ $m-text-decoration: (
   "-underline": underline,
   "-line-through": line-through
 ) !default;
-// 结合实际情况四选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/typography";
-@import "~@modyqyw/mp-scss/classes/typography/text-decoration";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/typography";
+// @import "~@modyqyw/mp-scss/classes/typography/text-decoration";
 ```
 
 ## text-transform
@@ -310,8 +296,6 @@ $m-text-decoration: (
 |`.text-uppercase`|`text-transform: uppercase;`|
 |`.text-lowercase`|`text-transform: lowercase;`|
 
-这部分由`$m-text-transform`生成，在引入之前修改`$m-text-transform`可以自定义。
-
 ```scss
 // 生成 .text-capitalize, .text-uppercase, .text-lowercase
 $m-text-transform: (
@@ -319,11 +303,11 @@ $m-text-transform: (
   "-uppercase": uppercase,
   "-lowercase": lowercase
 );
-// 结合实际情况四选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/typography";
-@import "~@modyqyw/mp-scss/classes/typography/text-transform";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/typography";
+// @import "~@modyqyw/mp-scss/classes/typography/text-transform";
 ```
 
 ## word-break
@@ -335,13 +319,11 @@ $m-text-transform: (
 |`.text-break-all`|`word-break: break-all;`|
 |`.text-truncate`|`overflow: hidden; text-overflow: ellipsis; white-space: nowrap;`|
 
-这部分手动生成，目前不能自定义。
+这部分不能自定义。
 
 ```scss
-
-// 结合实际情况四选一引入
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/typography";
-@import "~@modyqyw/mp-scss/classes/typography/word-break";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/typography";
+// @import "~@modyqyw/mp-scss/classes/typography/word-break";
 ```

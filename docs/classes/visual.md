@@ -6,27 +6,25 @@
 |---|---|
 |`.bg`|`background-color: rgba(0, 0, 0, .04);`|
 
-这部分由`$m-colors`，`$m-colors-reverse`，`$m-background-color`和`$m-background-color-reverse`生成，由于篇幅原因，省略了`$m-colors`和`$m-colors-reverse`生成的类。修改`$m-colors`和`$m-colors-reverse`可以自定义，见[进阶](../advance/README.md#色彩)。在引入之前做相关修改也可以自定义。
+支持`$m-colors`和`$m-colors-reverse`里的色彩，此处省略，见[进阶 - 色彩](../advance/README.md#色彩)。
 
 ```scss
-// 修改颜色
+// 生成 .bg
 $background-color: #fff;
 $background-color-reverse: #121212;
-// 生成 .bg
 $m-background-color: (
   "": $background-color
 );
-// 开启暗黑模式开关
+// 开启暗黑模式，生成 .is-dark .bg
 $has-dark: true;
-// 生成 .is-dark .bg
 $m-background-color-reverse: (
   "": $background-color-reverse
 );
-// 结合实际情况四选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/visual";
-@import "~@modyqyw/mp-scss/classes/visual/background-color";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/visual";
+// @import "~@modyqyw/mp-scss/classes/visual/background-color";
 ```
 
 ## background-repeat
@@ -37,8 +35,6 @@ $m-background-color-reverse: (
 |`.bg-repeat-y`|`background-repeat: repeat-y;`|
 |`.bg-repeat-x`|`background-repeat: repeat-x;`|
 |`.bg-no-repeat`|`background-repeat: no-repeat;`|
-
-这部分由`$m-background-repeat`生成，在引入之前修改`$m-background-repeat`可以自定义。
 
 ```scss
 // 生成 .bg-repeat, .bg-repeat-y, .bg-repeat-x, .bg-no-repeat, .bg-repeat-space,
@@ -51,11 +47,11 @@ $m-background-repeat: (
   "-repeat-space": space,
   "-repeat-round": round
 );
-// 结合实际情况四选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/visual";
-@import "~@modyqyw/mp-scss/classes/visual/background-repeat";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/visual";
+// @import "~@modyqyw/mp-scss/classes/visual/background-repeat";
 ```
 
 ## background-attachment
@@ -65,8 +61,6 @@ $m-background-repeat: (
 |`.bg-fixed`|`background-attachment: fixed;`|
 |`.bg-local`|`background-attachment: local;`|
 
-这部分由`$m-background-attachment`生成，在引入之前修改`$m-background-attachment`可以自定义。
-
 ```scss
 // 生成 .bg-fixed, .bg-local, .bg-scroll
 $m-background-attachment: (
@@ -74,11 +68,11 @@ $m-background-attachment: (
   "-local": local,
   "-scroll": scroll
 );
-// 结合实际情况四选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/visual";
-@import "~@modyqyw/mp-scss/classes/visual/background-attachment";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/visual";
+// @import "~@modyqyw/mp-scss/classes/visual/background-attachment";
 ```
 
 ## background-position
@@ -86,8 +80,6 @@ $m-background-attachment: (
 |类名|样式|
 |---|---|
 |`.bg-center`|`background-position: center;`|
-
-这部分由`$m-background-position`生成，在引入之前修改`$m-background-position`可以自定义。
 
 ```scss
 // 生成 .bg-top, .bg-right, .bg-bottom, .bg-left, .bg-right-top, .bg-right-bottom,
@@ -103,11 +95,11 @@ $m-background-position: (
   "-left-bottom": left bottom,
   "-center": center
 );
-// 结合实际情况四选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/visual";
-@import "~@modyqyw/mp-scss/classes/visual/background-position";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/visual";
+// @import "~@modyqyw/mp-scss/classes/visual/background-position";
 ```
 
 ## background-size
@@ -117,8 +109,6 @@ $m-background-position: (
 |`.bg-contain`|`background-size: contain;`|
 |`.bg-cover`|`background-size: cover;`|
 
-这部分由`$m-background-size`生成，在引入之前修改`$m-background-size`可以自定义。
-
 ```scss
 // 生成 .bg-contain, .bg-cover, .bg-auto, .bg-full
 $m-background-size: (
@@ -127,11 +117,11 @@ $m-background-size: (
   "-auto": auto,
   "-full": 100% 100%
 );
-// 结合实际情况四选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/visual";
-@import "~@modyqyw/mp-scss/classes/visual/background-size";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/visual";
+// @import "~@modyqyw/mp-scss/classes/visual/background-size";
 ```
 
 ## border-color
@@ -140,27 +130,23 @@ $m-background-size: (
 |---|---|
 |`.border`|`border-color: rgba(0, 0, 0, .15);`|
 
-这部分由`$m-colors`，`$m-colors-reverse`，`$m-border-color`和`$m-border-color-reverse`生成，由于篇幅原因，省略了`$m-colors`和`$m-colors-reverse`生成的类。修改`$m-colors`和`$m-colors-reverse`可以自定义，见[进阶](../advance/README.md#色彩)。在引入之前做相关修改也可以自定义，下面是修改的示例。
-
 ```scss
-// 修改颜色
+// 生成 .border
 $border-color: #ddd;
 $border-color-reverse: #ddd;
-// 生成 .border
 $m-border-color: (
   "": $border-color
 ) !default;
-// 开启暗黑模式开关
+// 开启暗黑模式，生成 .is-dark .border
 $has-dark: true;
-// 生成 .is-dark .border
 $m-border-color-reverse: (
   "": $border-color-reverse
 ) !default;
-// 结合实际情况四选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/visual";
-@import "~@modyqyw/mp-scss/classes/visual/border-color";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/visual";
+// @import "~@modyqyw/mp-scss/classes/visual/border-color";
 ```
 
 ## border-style
@@ -171,8 +157,6 @@ $m-border-color-reverse: (
 |`.border-solid`|`border-style: solid;`|
 |`.border-none`|`border-style: none;`|
 
-这部分由`$m-border-style`生成，在引入之前修改`$m-border-style`可以自定义。
-
 ```scss
 // 生成 .border, .border-solid, .border-dashed, .border-dotted, .border-none
 $m-border-style: (
@@ -182,11 +166,11 @@ $m-border-style: (
   "-dotted": dotted,
   "-none": none
 );
-// 结合实际情况四选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/visual";
-@import "~@modyqyw/mp-scss/classes/visual/border-style";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/visual";
+// @import "~@modyqyw/mp-scss/classes/visual/border-style";
 ```
 
 ## border-width
@@ -201,15 +185,14 @@ $m-border-style: (
 |`.border-1`|`border-width: 2rpx;`|
 |`.border-1-real`|`border-width: 1rpx;`|
 
-注意：**支持使用`.border-y-*`，`.border-x-*`，`.border-t-*`，`.border-right-*`，`.border-b-*`，`.border-l-*`等类**，它们分别对应`border-top-width`和`border-bottom-width`，`border-right-width`和`border-left-width`，`border-top-width`，`border-right-width`，`border-bottom-width`，`border-left-width`。这里由于篇幅原因不再列出。
-
-这部分由`$m-border-width`生成，在引入之前做相关修改可以自定义。
+支持`.border-{y|x|t|r|b|l}-*`，分别对应`border-top-width`和`border-bottom-width`，`border-right-width`和`border-left-width`，`border-top-width`，`border-right-width`，`border-bottom-width`，`border-left-width`。
 
 ```scss
-// 设置 base, diff
+// 生成 .border, .border-md, .border-lg, .border-xl
+$scale: 2;
+$unit: rpx;
 $border-width-base: 1;
 $border-width-diff: 1;
-// 生成 .border, .border-md, .border-lg, .border-xl
 $m-border-width: (
   "": $border-width-base * $scale + $unit,
   "-md": $border-width-base * $scale + $unit,
@@ -220,18 +203,17 @@ $m-border-width: (
     $border-width-base + $border-width-diff * 2
   ) * $scale + $unit
 );
-// 设置 min, max, step 循环填充映射
 // 生成 .border-0, .border-1, .border-2
 $border-width-min: 0;
 $border-width-max: 2;
 $border-width-step: 1;
-// 移除 .border-1-real，如果 $scale == 1，则该变量不生效
+// 移除 .border-1-real，如果 $scale == 1，则该变量默认不生效
 $border-width-has-1-real: false;
-// 结合实际情况四选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/visual";
-@import "~@modyqyw/mp-scss/classes/visual/border-width";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/visual";
+// @import "~@modyqyw/mp-scss/classes/visual/border-width";
 ```
 
 ## border-radius
@@ -252,16 +234,15 @@ $border-width-has-1-real: false;
 |`.rounded-3`|`border-radius: 6rpx;`|
 |`.rounded-4`|`border-radius: 8rpx;`|
 
-注意：**支持使用`.rounded-t-*`，`.rounded-b-*`，`.rounded-r-*`，`.rounded-l-*`，`.rounded-tl-*`，`.rounded-tr-*`，`.rounded-br-*`，`.rounded-bl-*`等类**，它们分别对应`border-top-left-radius`和`border-top-right-radius`，`border-bottom-right-radius`和`border-bottom-left-radius`，`border-top-right-radius`和`border-bottom-right-radius`，`border-top-left-radius`和`border-bottom-left-radius`，`border-top-left-radius`，`border-top-right-radius`，`border-bottom-right-radius`，`border-bottom-left-radius`。这里由于篇幅原因不再列出。
-
-这部分由`$m-border-radius`生成，在引入之前做相关修改可以自定义。
+支持`.rounded-{t|b|r|l|tl|tr|br|bl}-*`，分别对应`border-top-left-radius`和`border-top-right-radius`，`border-bottom-right-radius`和`border-bottom-left-radius`，`border-top-right-radius`和`border-bottom-right-radius`，`border-top-left-radius`和`border-bottom-left-radius`，`border-top-left-radius`，`border-top-right-radius`，`border-bottom-right-radius`，`border-bottom-left-radius`。
 
 ```scss
-// 设置 base, diff
-$border-radius-base: 4;
-$border-radius-diff: 1;
 // 生成 .rounded-full, .rounded-half, .rounded, .rounded-xs, .rounded-sm,
 //     .rounded-md, .rounded-lg, .rounded-xl
+$scale: 2;
+$unit: rpx;
+$border-radius-base: 4;
+$border-radius-diff: 1;
 $m-border-radius: (
   "-full": 100%,
   "-half": 50%,
@@ -280,18 +261,15 @@ $m-border-radius: (
     $border-radius-base + $border-radius-diff * 2
   ) * $scale + $unit
 );
-// 设置 min, max, step 循环填充映射
 // 生成 .rounded-0, .rounded-1, .rounded-2
 $border-radius-min: 0;
 $border-radius-max: 2;
 $border-radius-step: 1;
-// 结合实际情况四选一引入
-@import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/visual";
-@import "~@modyqyw/mp-scss/classes/visual/border-radius";
 
-// 最终得到 .rounded-full, .rounded, .rounded-xs, .rounded-sm, .rounded-md, .rounded-lg, .rounded-xl, .rounded-0, .rounded-1, .rounded-2
+@import "~@modyqyw/mp-scss";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/visual";
+// @import "~@modyqyw/mp-scss/classes/visual/border-radius";
 ```
 
 ## outline
@@ -300,16 +278,14 @@ $border-radius-step: 1;
 |---|---|
 |`.outline-none`|`outline: none;`|
 
-这部分由`$m-outline`生成，在引入之前修改`$m-outline`可以自定义。
-
 ```scss
 // 不生成相关类
 $m-outline: ();
-// 结合实际情况四选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/visual";
-@import "~@modyqyw/mp-scss/classes/visual/outline";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/visual";
+// @import "~@modyqyw/mp-scss/classes/visual/outline";
 ```
 
 ## box-shadow
@@ -342,21 +318,18 @@ $m-outline: ();
 |`.shadow-23`|`box-shadow: 0 22rpx 28rpx -14rpx rgba(0, 0, 0, .2), 0 46rpx 72rpx 6rpx rgba(0, 0, 0, .14), 0 18rpx 88rpx 16rpx rgba(0, 0, 0, .12);`|
 |`.shadow-24`|`box-shadow: 0 22rpx 30rpx -14rpx rgba(0, 0, 0, .2), 0 48rpx 76rpx 6rpx rgba(0, 0, 0, .14), 0 18rpx 92rpx 16rpx rgba(0, 0, 0, .12);`|
 
-这部分由`$m-box-shadow`生成，在引入之前做相关修改可以自定义。
-
 ```scss
 // 修改颜色
 $box-shadow-umbra: rgba(0, 0, 0, .2);
 $box-shadow-penumbra: rgba(0, 0, 0, .14);
 $box-shadow-ambient: rgba(0, 0, 0, .12);
-// 设置 min, max, step 循环填充映射
 // 生成 .shadow-0, .shadow-1, .shadow-2, .shadow-3, .shadow-4
 $box-shadow-min: 0;
 $box-shadow-max: 4;
 $box-shadow-step: 1;
-// 结合实际情况四选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/classes";
-@import "~@modyqyw/mp-scss/classes/visual";
-@import "~@modyqyw/mp-scss/classes/visual/box-shadow";
+// @import "~@modyqyw/mp-scss/classes";
+// @import "~@modyqyw/mp-scss/classes/visual";
+// @import "~@modyqyw/mp-scss/classes/visual/box-shadow";
 ```

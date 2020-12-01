@@ -1,11 +1,15 @@
 # 栅格系统类 grid
 
+[微信小程序代码片段](https://developers.weixin.qq.com/s/7E3vTZmp7bly)
+
 ## 默认样式
 
-要使用栅格系统类，可以只引入对应的文件。
+要使用栅格系统类，需要先引入。
 
 ```scss
-@import "~@modyqyw/mp-scss/layout/grid";
+@import "~@modyqyw/mp-scss";
+// @import "~@modyqyw/mp-scss/layout";
+// @import "~@modyqyw/mp-scss/layout/grid";
 ```
 
 默认提供 12 格基于弹性盒子布局的栅格系统。行容器为`.row`，列容器为`.col`。
@@ -104,10 +108,10 @@
 ```scss
 // 修改栅格系统为 24 格
 $grid-max: 24;
-// 结合实际情况三选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/layout";
-@import "~@modyqyw/mp-scss/layout/grid";
+// @import "~@modyqyw/mp-scss/layout";
+// @import "~@modyqyw/mp-scss/layout/grid";
 ```
 
 ## 自定义 gutter 类
@@ -115,10 +119,11 @@ $grid-max: 24;
 这部分由`$m-gutter`生成，在引入之前做相关修改可以自定义。
 
 ```scss
-// 设置 base, diff
+// 生成 .gutter, .gutter-xs, .gutter-sm, .gutter-md, .gutter-lg, .gutter-xl
+$scale: 2;
+$unit: rpx;
 $gutter-base: 12;
 $gutter-diff: 4;
-// 生成 .gutter, .gutter-xs, .gutter-sm, .gutter-md, .gutter-lg, .gutter-xl
 $m-gutter: (
   "": $gutter-base * $scale + $diff,
   "-xs": (
@@ -135,13 +140,18 @@ $m-gutter: (
     $gutter-base + $gutter-diff * 2
   ) * $scale + $unit
 );
-// 设置 min, max, step 循环填充映射
 // 生成 .gutter-4, .gutter-8, .gutter-12
 $font-size-min: 4;
 $font-size-max: 12;
 $font-size-step: 4;
-// 结合实际情况三选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/layout";
-@import "~@modyqyw/mp-scss/layout/grid";
+// @import "~@modyqyw/mp-scss/layout";
+// @import "~@modyqyw/mp-scss/layout/grid";
 ```
+
+## FAQ
+
+### 为什么`.row`不能占满一行
+
+这很有可能是因为`.row`的父容器带有样式`display: flex; flex-direction: column`，出现这种情况时你需要为`.row`指定`.w-full`。如果需要使用列间隔，请手动指定`.row`的`width`以确保间隔正常。

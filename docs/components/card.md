@@ -2,10 +2,12 @@
 
 ## 默认样式
 
-要使用卡片类，可以只引入对应的文件。
+要使用卡片类，需要先引入。
 
 ```scss
-@import "~@modyqyw/mp-scss/components/card";
+@import "~@modyqyw/mp-scss";
+// @import "~@modyqyw/mp-scss/components";
+// @import "~@modyqyw/mp-scss/components/card";
 ```
 
 在`view`上使用`.card`。

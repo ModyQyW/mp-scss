@@ -1,11 +1,15 @@
 # 页面布局类 page
 
+[微信小程序代码片段](https://developers.weixin.qq.com/s/S23bgZmT7qlI)
+
 ## 默认样式
 
-要使用页面布局类，可以只引入对应的文件。
+要使用页面布局类，需要先引入。
 
 ```scss
-@import "~@modyqyw/mp-scss/layout/page";
+@import "~@modyqyw/mp-scss";
+// @import "~@modyqyw/mp-scss/layout";
+// @import "~@modyqyw/mp-scss/layout/page";
 ```
 
 首先要让根元素`page`占满整个屏幕。如果你引入了`reset`，就可以不必手动地让根元素占满屏幕，因为`reset`已经完成了这部分工作。
@@ -20,7 +24,7 @@ page {
 之后，让顶级的布局容器`.container`铺满整个屏幕。
 
 ```html
-<view class="container w-full h-full">
+<view class="container h-full">
   ...
 </view>
 ```
@@ -28,7 +32,7 @@ page {
 再填充`.header`，`.navbar`和`.footer`。如果需要安全区，可以加上`.safe-area`。
 
 ```html
-<view class="container w-full h-full">
+<view class="container h-full">
   <view class="header">header</view>
   <view class="navbar">navbar</view>
   ...
@@ -40,7 +44,7 @@ page {
 使用`.main`作为内容区。
 
 ```html
-<view class="container w-full h-full">
+<view class="container h-full">
   <view class="header">header</view>
   <view class="navbar">navbar</view>
   <view class="main">main</view>
@@ -51,32 +55,16 @@ page {
 要添加和`.main`同级的`.aside`，需要再包裹一个布局容器`.container`。
 
 ```html
-<view class="container w-full h-full">
+<view class="container h-full">
   <view class="header">header</view>
   <view class="navbar">navbar</view>
-  <view class="container w-full flex-row">
+  <view class="container flex-row">
     <view class="aside">aside</view>
     <view class="main">main</view>
   </view>
   <view class="footer">footer</view>
 </view>
 ```
-
-也可以把`.aside`独立出来，放到一边。
-
-```html
-<view class="container h-full flex-row">
-  <view class="aside">aside</view>
-  <view class="container">
-    <view class="header">header</view>
-    <view class="navbar">navbar</view>
-    <view class="main">main</view>
-    <view class="footer">footer</view>
-  </view>
-</view>
-```
-
-也可以把`.aside`放到一旁。
 
 组合使用页面布局类和通用类应该能满足绝大部分的布局需求。
 
@@ -110,10 +98,10 @@ page {
 // 修改 .container 的背景颜色
 $container-background-color: #fff;
 $container-background-color-reverse: #141414;
-// 结合实际情况三选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/layout";
-@import "~@modyqyw/mp-scss/layout/page";
+// @import "~@modyqyw/mp-scss/layout";
+// @import "~@modyqyw/mp-scss/layout/page";
 ```
 
 ## 自定义 header 高度
@@ -125,10 +113,10 @@ $container-background-color-reverse: #141414;
 ```scss
 // 修改 .header 高度为 80rpx
 $header-height-base: 40;
-// 结合实际情况三选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/layout";
-@import "~@modyqyw/mp-scss/layout/page";
+// @import "~@modyqyw/mp-scss/layout";
+// @import "~@modyqyw/mp-scss/layout/page";
 ```
 
 你也可以直接修改`$header-height: 80rpx;`，但这样`$header-height-base`，`$scale`和`$unit`都失去了本来的意义。如果没有必须这么做的理由，建议修改`$header-height-base`即可。
@@ -142,10 +130,10 @@ $header-height-base: 40;
 ```scss
 // 修改 .navbar 高度为 80rpx
 $navbar-height-base: 40;
-// 结合实际情况三选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/layout";
-@import "~@modyqyw/mp-scss/layout/page";
+// @import "~@modyqyw/mp-scss/layout";
+// @import "~@modyqyw/mp-scss/layout/page";
 ```
 
 你也可以直接修改`$navbar-height: 80rpx;`，但这样`$navbar-height-base`，`$scale`和`$unit`都失去了本来的意义。如果没有必须这么做的理由，建议修改`$navbar-height-base`即可。
@@ -159,10 +147,10 @@ $navbar-height-base: 40;
 ```scss
 // 修改 .aside 宽度为 200rpx
 $aside-width-base: 100;
-// 结合实际情况三选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/layout";
-@import "~@modyqyw/mp-scss/layout/page";
+// @import "~@modyqyw/mp-scss/layout";
+// @import "~@modyqyw/mp-scss/layout/page";
 ```
 
 你也可以直接修改`$aside-width: 200rpx;`，但这样`$aside-width-base`，`$scale`和`$unit`都失去了本来的意义。如果没有必须这么做的理由，建议修改`$aside-width-base`即可。
@@ -176,10 +164,10 @@ $aside-width-base: 100;
 ```scss
 // 修改 .footer 高度为 80rpx
 $footer-height-base: 40;
-// 结合实际情况三选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/layout";
-@import "~@modyqyw/mp-scss/layout/page";
+// @import "~@modyqyw/mp-scss/layout";
+// @import "~@modyqyw/mp-scss/layout/page";
 ```
 
 你也可以直接修改`$footer-height: 80rpx;`，但这样`$footer-height-base`，`$scale`和`$unit`都失去了本来的意义。如果没有必须这么做的理由，建议修改`$footer-height-base`即可。
@@ -193,10 +181,10 @@ $footer-height-base: 40;
 ```scss
 // 修改 .safe-area 高度为 80rpx
 $safe-area-height-base: 40;
-// 结合实际情况三选一引入
+
 @import "~@modyqyw/mp-scss";
-@import "~@modyqyw/mp-scss/layout";
-@import "~@modyqyw/mp-scss/layout/page";
+// @import "~@modyqyw/mp-scss/layout";
+// @import "~@modyqyw/mp-scss/layout/page";
 ```
 
 你也可以直接修改`$safe-area-height: 80rpx;`，但这样`$safe-area-height-base`，`$scale`和`$unit`都失去了本来的意义。如果没有必须这么做的理由，建议修改`$safe-area-height-base`即可。

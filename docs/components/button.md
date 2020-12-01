@@ -2,13 +2,15 @@
 
 ## 默认样式
 
-要使用按钮类，可以只引入对应的文件。
+要使用按钮类，需要先引入。
 
 ```scss
-@import "~@modyqyw/mp-scss/components/button";
+@import "~@modyqyw/mp-scss";
+// @import "~@modyqyw/mp-scss/components";
+// @import "~@modyqyw/mp-scss/components/button";
 ```
 
-在`button`或`view`上添加`.btn`是最简单的使用方式。
+在`button`上添加`.btn`是最简单的使用方式。
 
 ```html
 <view class="container">
@@ -69,7 +71,7 @@
 默认使用明亮模式。[手动开启暗黑模式](../advance/README.md#明亮模式和暗黑模式)并在`.container`上使用`.is-dark`，就能指定使用暗黑模式。
 
 ```html
-<view class="container is-light">
+<view class="container">
   <button class="btn">明亮模式</button>
 </view>
 <view class="container is-dark">

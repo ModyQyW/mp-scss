@@ -1,13 +1,14 @@
 # 重置
 
-[源码](https://github.com/MillCloud/mp-scss/blob/main/reset/index.scss)
+[源码](https://github.com/MillCloud/mp-scss/blob/master/reset/index.scss)
 
 ## 使用
 
 引入`reset`后即可重置小程序的默认样式。`reset`可以单独使用。
 
 ```scss
-@import "~@modyqyw/mp-scss/reset";
+@import "~@modyqyw/mp-scss";
+// @import "~@modyqyw/mp-scss/reset";
 ```
 
 ## 注意

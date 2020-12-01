@@ -2,10 +2,12 @@
 
 ## 默认样式
 
-要使用遮罩类，可以只引入对应的文件。
+要使用遮罩类，需要先引入。
 
 ```scss
-@import "~@modyqyw/mp-scss/components/overlay";
+@import "~@modyqyw/mp-scss";
+// @import "~@modyqyw/mp-scss/components";
+// @import "~@modyqyw/mp-scss/components/overlay";
 ```
 
 在`view`上添加`.overlay`是最简单的使用方式。

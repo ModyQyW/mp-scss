@@ -2,10 +2,12 @@
 
 ## 默认样式
 
-要使用加载器类，可以只引入对应的文件。
+要使用加载器类，需要先引入。
 
 ```scss
-@import "~@modyqyw/mp-scss/components/loader";
+@import "~@modyqyw/mp-scss";
+// @import "~@modyqyw/mp-scss/components";
+// @import "~@modyqyw/mp-scss/components/loader";
 ```
 
 在`view`上添加`.loader`是最简单的使用方式。
@@ -18,13 +20,13 @@
 
 ## 主题
 
-默认有`default`，`white`，`primary`，`success`，`warning`，`error`, `info`七个主题。`white`是 2.0.0-beta.1 开始新增的。
+默认有`default`，`white`，`primary`，`success`，`warning`，`error`, `info`七个主题。
 
 ```html
 <view class="container">
   <!-- default 主题 -->
   <view class="loader"></view>
-  <!-- white 主题，2.0.0-beta.1 新增 -->
+  <!-- white 主题 -->
   <view class="loader is-white"></view>
   <!-- primary 主题 -->
   <view class="loader is-primary"></view>

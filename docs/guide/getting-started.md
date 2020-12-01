@@ -1,9 +1,9 @@
 # 快速上手
 
 ::: warning 建议
-库和文档目前处于`beta`状态，目前欢迎帮助编写文档、优化代码和加入新功能。
+库和文档目前处于`rc`状态，可以投入使用。目前欢迎帮助编写文档和优化代码。
 
-建议使用 [Node.js](https://nodejs.org/en/) 10 或者 12。
+建议使用 [Node.js](https://nodejs.org/en/) 12 或者 14。
 
 [node-sass](https://github.com/sass/node-sass#readme) 在国内安装缓慢且[已经被弃用](https://sass-lang.com/blog/libsass-is-deprecated)，建议转用 [dart-sass](https://github.com/sass/dart-sass#readme)。
 :::
@@ -11,10 +11,10 @@
 首先安装相关依赖。对于不同的框架，可能需要安装额外的依赖，请以框架本身说明为准。
 
 ```sh
-npm i @modyqyw/mp-scss@next
+npm i @modyqyw/mp-scss
 npm i -D scss sass-loader
 # or
-# yarn add @modyqyw/mp-scss@next
+# yarn add @modyqyw/mp-scss
 # yarn add -D scss sass-loader
 ```
 
@@ -87,7 +87,7 @@ npm i -D scss sass-loader
 
 这个库是面向小程序的，提倡使用`rpx`，`%`或不使用单位，参考[尺寸单位](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html)。默认地，这个库使用缩放倍数`$scale`为 2，使用单位`$unit`为`rpx`。
 
-这个库支持使用暗黑模式，但默认不使用暗黑模式，也就是说文档里`.is-light`和`.is-dark`相关的部分默认不会生成，你需要手动开启暗黑模式，见[进阶](../advance/README.md#色彩)。
+这个库支持使用暗黑模式，但默认只能使用明亮模式，也就是说文档里`.is-dark`相关的部分默认不会生成，你需要手动开启暗黑模式，见[进阶](../advance/README.md#色彩)。
 
 接下来你可以去学习一下[重置](../reset/README.md)，它是这个库里相对独立的一部分，以微信小程序为基准，结合`ress.css`，重置小程序默认的样式。你完全可以单独使用它。
 
@@ -97,7 +97,8 @@ npm i -D scss sass-loader
 
 最后也不要忘了查看[进阶](../advance/README.md)，看看有什么进阶用法能用到你的项目上，比如全量引入时的体积优化，修改色板，修改单位，修改缩放倍数等等。
 
-为了方便快速开发，我们也提供了模版：
+为了方便快速开发，我们也提供了模版。
 
-- [boilerplate-uni-app](https://github.com/MillCloud/boilerplate-uni-app) - 结合了 uview-ui 和 uni-ui 的 uni-app 模板，包括但不限于完整的本地工作流程和可能用到的工具类库
-- [boilerplate-taro](https://github.com/MillCloud/boilerplate-taro) - 未完成
+- [boilerplate-uni-app](https://github.com/MillCloud/boilerplate-uni-app) - 结合了 uview-ui 和 uni-ui 的 uni-app 模板，包括但不限于完整的本地工作流程和可能用到的工具类库。
+- [boilerplate-taro](https://github.com/MillCloud/boilerplate-taro) - 未完成。
+- [boilerplate-rax](https://github.com/MillCloud/boilerplate-rax) - 未完成。
