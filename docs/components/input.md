@@ -62,3 +62,9 @@
 ### 阿里小程序 input 的 placeholder 样式不正常
 
 请指定 placeholder 类名为`input-placeholder`。
+
+### 高度表现难以调整
+
+在不同的框架里，input 的渲染有所不同。为了保持一致性，我们给`.input`指定了高度，而没有允许`.input`自动决定高度。
+
+如果有需要，可以自行使用通用类做样式自定义。
