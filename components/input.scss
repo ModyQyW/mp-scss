@@ -20,7 +20,7 @@
   display: inline-block;
   width: 100%;
   min-width: 0;
-  height: auto;
+  height: (4 * 2 + $font-size-base * $line-height-default + 1 * 2) * $scale + $unit;
   min-height: unset;
   padding: 4 * $scale + $unit 12 * $scale + $unit;
   margin: 0;
@@ -71,11 +71,13 @@
   }
 
   &.is-sm {
+    height: ($font-size-base * $line-height-default + 1 * 2) * $scale + $unit;
     padding: 0 8 * $scale + $unit;
     font-size: $font-size-base * $scale + $unit;
   }
 
   &.is-lg {
+    height: (6 * 2 + $font-size-base * $line-height-default + 1 * 2) * $scale + $unit;
     padding: 6 * $scale + $unit 16 * $scale + $unit;
     font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
   }
