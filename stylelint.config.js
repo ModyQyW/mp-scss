@@ -3,4 +3,5 @@ const config = require('@modyqyw/fabric/stylelint/scss');
 
 module.exports = {
   ...config,
+  ignoreFiles: ['**/*.md'],
 };
