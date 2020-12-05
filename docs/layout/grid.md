@@ -141,9 +141,9 @@ $m-gutter: (
   ) * $scale + $unit
 );
 // 生成 .gutter-4, .gutter-8, .gutter-12
-$font-size-min: 4;
-$font-size-max: 12;
-$font-size-step: 4;
+$gutter-min: 4;
+$gutter-max: 12;
+$gutter-step: 4;
 
 @import "~@modyqyw/mp-scss";
 // @import "~@modyqyw/mp-scss/layout";
