@@ -164,7 +164,7 @@ module.exports = {
               },
               {
                 text: '加载器类 loader',
-                link: '/components/loader'
+                link: '/components/loader',
               },
               {
                 text: '遮罩类 overlay',
@@ -179,13 +179,17 @@ module.exports = {
         link: '/advance/',
       },
       {
+        text: '改动日志',
+        link: '/changelog/',
+      },
+      {
         text: 'Gitee',
-        link: 'https://gitee.com/millcloud/mp-scss#readme'
+        link: 'https://gitee.com/millcloud/mp-scss#readme',
       },
       {
         text: 'Github',
-        link: 'https://github.com/MillCloud/mp-scss#readme'
-      }
+        link: 'https://github.com/MillCloud/mp-scss#readme',
+      },
     ],
     sidebar: {
       '/guide/': [
@@ -200,9 +204,26 @@ module.exports = {
           children: ['usage', 'implement'],
         },
       ],
-      '/classes/': ['', 'positioning', 'box-model', 'typography', 'visual', 'misc'],
+      '/classes/': [
+        '',
+        'positioning',
+        'box-model',
+        'typography',
+        'visual',
+        'misc',
+      ],
       '/layout/': ['', 'page', 'grid'],
-      '/components/': ['', 'badge', 'button', 'card', 'divider', 'icon', 'input', 'loader', 'overlay'],
+      '/components/': [
+        '',
+        'badge',
+        'button',
+        'card',
+        'divider',
+        'icon',
+        'input',
+        'loader',
+        'overlay',
+      ],
       '/': 'auto',
     },
     sidebarDepth: 4,

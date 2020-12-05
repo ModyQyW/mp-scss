@@ -162,12 +162,12 @@ $m-font-variant: ();
 
 |类名|样式|
 |---|---|
-|`.leading`|`line-height: 1.5715;`|
-|`.leading-xs`|`line-height: 1.2855;`|
-|`.leading-sm`|`line-height: 1.4285;`|
-|`.leading-md`|`line-height: 1.5715;`|
-|`.leading-lg`|`line-height: 1.7145;`|
-|`.leading-xl`|`line-height: 1.8575;`|
+|`.leading`|`line-height: 44rpx;`|
+|`.leading-xs`|`line-height: 36rpx;`|
+|`.leading-sm`|`line-height: 40rpx;`|
+|`.leading-md`|`line-height: 44rpx;`|
+|`.leading-lg`|`line-height: 48rpx;`|
+|`.leading-xl`|`line-height: 54rpx;`|
 |`.leading-18`|`line-height: 36rpx;`|
 |`.leading-20`|`line-height: 40rpx;`|
 |`.leading-22`|`line-height: 44rpx;`|
@@ -185,15 +185,25 @@ $m-font-variant: ();
 
 ```scss
 // 生成 .leading, .leading-xs, .leading-sm, .leading-md, .leading-lg, .leading-xl
-$line-height-default: 1.5715;
-$line-height-diff: .143;
-$m-font-size: (
-  "": $line-height-default,
-  "-xs": $line-height-default - $line-height-diff * 2,
-  "-sm": $line-height-default - $line-height-diff,
-  "-md": $line-height-default,
-  "-lg": $line-height-default + $line-height-diff,
-  "-xl": $line-height-default + $line-height-diff * 2
+$scale: 2;
+$unit: rpx;
+$line-height-base: 24;
+$line-height-diff: 2;
+$m-line-height: (
+  "": $line-height-base * $scale + $unit,
+  "-xs": (
+    $line-height-base - $line-height-diff * 2
+  ) * $scale + $unit,
+  "-sm": (
+    $line-height-base - $line-height-diff
+  ) * $scale + $unit,
+  "-md": $line-height-base * $scale + $unit,
+  "-lg": (
+    $line-height-base + $line-height-diff
+  ) * $scale + $unit,
+  "-xl": (
+    $line-height-base + $line-height-diff * 2
+  ) * $scale + $unit
 );
 // 生成 .leading-20, .leading-22, .leading-24, .leading-26, .leading-28,
 //     .leading-30, .leading-32
