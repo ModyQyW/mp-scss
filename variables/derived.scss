@@ -1248,7 +1248,7 @@ $m-font-family: (
 ) !default;
 // font-size
 $m-font-size: (
-  "": $font-size-base * $scale + $font-size-diff,
+  "": $font-size-base * $scale + $unit,
   "-xs": (
     $font-size-base - $font-size-diff * 2
   ) * $scale + $unit,
