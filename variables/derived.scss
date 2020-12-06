@@ -1274,10 +1274,10 @@ $tmp-font-size: $font-size-min;
   $tmp-font-size: $tmp-font-size + $font-size-step;
 }
 // line-height
-$line-height-base: $font-size-base + 8 !default;
+$line-height-base: $font-size-base + $font-size-diff * 4 !default;
 $line-height-diff: $font-size-diff !default;
-$line-height-min: $font-size-min + 8 !default;
-$line-height-max: $font-size-max + 8 !default;
+$line-height-min: $font-size-min + $font-size-diff * 4 !default;
+$line-height-max: $font-size-max + $font-size-diff * 4 !default;
 $line-height-step: $font-size-step !default;
 $m-line-height: (
   "": $line-height-base * $scale + $unit,
