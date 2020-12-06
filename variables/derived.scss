@@ -1274,13 +1274,26 @@ $tmp-font-size: $font-size-min;
   $tmp-font-size: $tmp-font-size + $font-size-step;
 }
 // line-height
+$line-height-base: $font-size-base + 8 !default;
+$line-height-diff: $font-size-diff !default;
+$line-height-min: $font-size-min + 8 !default;
+$line-height-max: $font-size-max + 8 !default;
+$line-height-step: $font-size-step !default;
 $m-line-height: (
-  "": $line-height-default,
-  "-xs": $line-height-default - $line-height-diff * 2,
-  "-sm": $line-height-default - $line-height-diff,
-  "-md": $line-height-default,
-  "-lg": $line-height-default + $line-height-diff,
-  "-xl": $line-height-default + $line-height-diff * 2
+  "": $line-height-base * $scale + $unit,
+  "-xs": (
+    $line-height-base - $line-height-diff * 2
+  ) * $scale + $unit,
+  "-sm": (
+    $line-height-base - $line-height-diff
+  ) * $scale + $unit,
+  "-md": $line-height-base * $scale + $unit,
+  "-lg": (
+    $line-height-base + $line-height-diff
+  ) * $scale + $unit,
+  "-xl": (
+    $line-height-base + $line-height-diff * 2
+  ) * $scale + $unit
 ) !default;
 $tmp-line-height: $line-height-min;
 @while ($tmp-line-height <= $line-height-max) {
