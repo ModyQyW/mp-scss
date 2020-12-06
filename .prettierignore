@@ -1,0 +1,6 @@
+.next/
+.nuxt/
+.umi/
+build/
+dist/
+node_modules/
