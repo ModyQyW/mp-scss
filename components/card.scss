@@ -9,7 +9,7 @@
   margin: 0;
   font-size: $font-size-base * $scale + $unit;
   font-weight: 400;
-  line-height: $line-height-default;
+  line-height: $line-height-base * $scale + $unit;
   color: $color-main;
   background-color: $container-background-color;
   border-color: $border-color;
@@ -38,7 +38,7 @@
     padding: 16 * $scale + $unit 24 * $scale + $unit;
     font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
     font-weight: 500;
-    line-height: $line-height-default;
+    line-height: ($line-height-base + $line-height-diff) * $scale + $unit;
   }
 
   .card-content {
@@ -53,6 +53,7 @@
     .card-header {
       padding: 8 * $scale + $unit 12 * $scale + $unit;
       font-size: $font-size-base * $scale + $unit;
+      line-height: $line-height-base * $scale + $unit;
     }
 
     .card-content {

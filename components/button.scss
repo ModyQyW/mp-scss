@@ -15,7 +15,7 @@
   overflow: hidden;
   font-size: $font-size-base * $scale + $unit;
   font-weight: 400;
-  line-height: $line-height-default;
+  line-height: $line-height-base * $scale + $unit;
   color: $color-main;
   text-align: center;
   white-space: nowrap;
@@ -31,24 +31,24 @@
   -webkit-tap-highlight-color: transparent;
 
   &.is-rounded {
-    border-radius: round(16 + $font-size-base * $line-height-default + 1) / 2 * $scale + $unit;
+    border-radius: (16 + $line-height-base + 1) / 2 * $scale + $unit;
   }
 
   &.is-sm {
     padding: 0 8 * $scale + $unit;
-    font-size: $font-size-base * $scale + $unit;
 
     &.is-rounded {
-      border-radius: round(8 + $font-size-base * $line-height-default + 1) / 2 * $scale + $unit;
+      border-radius: (8 + $line-height-base + 1) / 2 * $scale + $unit;
     }
   }
 
   &.is-lg {
     padding: 6 * $scale + $unit 16 * $scale + $unit;
     font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
+    line-height: ($line-height-base + $line-height-diff) * $scale + $unit;
 
     &.is-rounded {
-      border-radius: round(16 + ($font-size-base + $font-size-diff) * $line-height-default + 1) / 2 * $scale + $unit;
+      border-radius: (16 + $line-height-base + $line-height-diff + 1) / 2 * $scale + $unit;
     }
   }
 

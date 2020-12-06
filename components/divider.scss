@@ -57,7 +57,7 @@
     padding: 0 16 * $scale + $unit;
     font-size: $font-size-base * $scale + $unit;
     font-weight: 400;
-    line-height: $line-height-default;
+    line-height: $line-height-base * $scale + $unit;
   }
 
   .divider,

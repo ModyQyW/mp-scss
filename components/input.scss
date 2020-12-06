@@ -4,7 +4,7 @@
   padding: 0;
   font-size: $font-size-base * $scale + $unit;
   font-weight: 400;
-  line-height: $line-height-default;
+  line-height: $line-height-base * $scale + $unit;
   color: $color-secondary;
 
   @if ($has-dark) {
@@ -20,13 +20,13 @@
   display: inline-block;
   width: 100%;
   min-width: 0;
-  height: (4 * 2 + $font-size-base * $line-height-default + 1 * 2) * $scale + $unit;
+  height: (4 * 2 + $line-height-base + 1 * 2) * $scale + $unit;
   min-height: unset;
   padding: 4 * $scale + $unit 12 * $scale + $unit;
   margin: 0;
   font-size: $font-size-base * $scale + $unit;
   font-weight: 400;
-  line-height: $line-height-default;
+  line-height: $line-height-base * $scale + $unit;
   color: $color-main;
   white-space: nowrap;
   cursor: text;
@@ -71,15 +71,15 @@
   }
 
   &.is-sm {
-    height: ($font-size-base * $line-height-default + 1 * 2) * $scale + $unit;
+    height: ($line-height-base + 1 * 2) * $scale + $unit;
     padding: 0 8 * $scale + $unit;
-    font-size: $font-size-base * $scale + $unit;
   }
 
   &.is-lg {
-    height: (6 * 2 + $font-size-base * $line-height-default + 1 * 2) * $scale + $unit;
+    height: (6 * 2 + $line-height-base + $line-height-diff + 1 * 2) * $scale + $unit;
     padding: 6 * $scale + $unit 16 * $scale + $unit;
     font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
+    line-height: ($line-height-base + $line-height-diff) * $scale + $unit;
   }
 }
 
@@ -98,7 +98,7 @@
   margin: 0;
   font-size: $font-size-base * $scale + $unit;
   font-weight: 400;
-  line-height: $line-height-default;
+  line-height: $line-height-base * $scale + $unit;
   color: $color-main;
   border-color: $border-color;
   border-style: solid;
@@ -148,6 +148,7 @@
     &.is-lg {
       padding: 0;
       font-size: $font-size-base * $scale + $unit;
+      line-height: $line-height-base * $scale + $unit;
     }
   }
 
@@ -173,19 +174,18 @@
 
   &.is-sm {
     padding: 0 8 * $scale + $unit;
-    font-size: $font-size-base * $scale + $unit;
-
-    .input {
-      font-size: $font-size-base * $scale + $unit;
-    }
   }
 
   &.is-lg {
     padding: 6 * $scale + $unit 16 * $scale + $unit;
     font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
+    line-height: ($line-height-base + $line-height-diff) * $scale + $unit;
 
-    .input {
+    .input,
+    .input.is-sm,
+    .input.is-lg {
       font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
+      line-height: ($line-height-base + $line-height-diff) * $scale + $unit;
     }
   }
 }
