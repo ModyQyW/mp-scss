@@ -1,5 +1,24 @@
 @import "../variables";
 
+$badge--padding-y-base: 0;
+$badge--padding-y: $badge--padding-y-base * $scale + $unit; // 0 * $scale + $unit
+$badge--padding-x-base: $font-size-diff * 3; // 6
+$badge--padding-x: $badge--padding-x-base * $scale + $unit; // 6 * $scale + $unit
+$badge--height-base: $font-size-base + $font-size-diff * 3; // 20
+$badge--height: $badge--height-base * $scale + $unit; // 20 * $scale + $unit
+$badge--font-size-base: $font-size-base - $font-size-diff; // 12
+$badge--font-size: $badge--font-size-base * $scale + $unit; // 12 * $scale + $unit
+$badge--border-radius-base: $badge--height-base / 2; // 10
+$badge--border-radius: $badge--border-radius-base * $scale + $unit; // 10 * $scale + $unit
+
+$badge--height-base--sm: $font-size-base; // 14
+$badge--height--sm: $badge-height-base--sm * $scale + $unit; // 14 * $scale + $unit
+$badge--border-radius-base--sm: $badge--height-base--sm / 2; // 7
+$badge--border-radius--sm: $badge--border-radius-base--sm * $scale + $unit; // 7 * $scale + $unit
+
+$badge--height-base--dot: $font-size-diff * 3; // 6
+$badge--height--dot: $badge--height-base--dot * $scale + $unit; // 6 * $scale + $unit
+
 .badge {
   position: absolute;
   top: 0;
@@ -7,21 +26,22 @@
   z-index: auto;
   box-sizing: border-box;
   display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
   align-items: center;
-  min-width: 20 * $scale + $unit;
-  height: 20 * $scale + $unit;
-  padding: 0 6 * $scale + $unit;
-  font-size: ($font-size-base - $font-size-diff) * $scale + $unit;
+  justify-content: center;
+  width: auto;
+  min-width: $badge-height;
+  height: $badge--height;
+  padding: $badge--padding-y $badge--padding-x;
+  font-size: $badge--font-size;
   font-weight: 400;
-  line-height: 20 * $scale + $unit;
+  line-height: $badge-height;
   color: $color-main;
   text-align: center;
   white-space: nowrap;
   background-color: $gray-5;
-  border-color: $gray-5;
-  border-style: solid;
-  border-width: 1 * $scale + $unit;
-  border-radius: 10 * $scale + $unit;
+  border-radius: $badge--border-radius;
   box-shadow: 0 0 0 1 * $scale + $unit $container-background-color;
   transition: $transition-default;
   transform: translate(50%, -50%);
@@ -30,81 +50,74 @@
   &.is-primary {
     color: $gray-1;
     background-color: $primary-5;
-    border-color: $primary-5;
   }
 
   &.is-success {
     color: $gray-1;
     background-color: $success-5;
-    border-color: $success-5;
   }
 
   &.is-warning {
     color: $gray-1;
     background-color: $warning-5;
-    border-color: $warning-5;
   }
 
   &.is-error {
     color: $gray-1;
     background-color: $error-5;
-    border-color: $error-5;
   }
 
   &.is-info {
     color: $gray-1;
     background-color: $info-5;
-    border-color: $info-5;
   }
 
   @if ($has-dark) {
     .is-dark & {
       color: $color-main-reverse;
       background-color: $gray-8;
-      border-color: $gray-8;
       box-shadow: 0 0 0 1 * $scale + $unit $container-background-color-reverse;
     }
 
     .is-dark &.is-primary {
+      color: $gray-1;
       background-color: $primary-5-reverse;
-      border-color: $primary-5-reverse;
     }
 
     .is-dark &.is-success {
+      color: $gray-1;
       background-color: $success-5-reverse;
-      border-color: $success-5-reverse;
     }
 
     .is-dark &.is-warning {
+      color: $gray-1;
       background-color: $warning-5-reverse;
-      border-color: $warning-5-reverse;
     }
 
     .is-dark &.is-error {
+      color: $gray-1;
       background-color: $error-5-reverse;
-      border-color: $error-5-reverse;
     }
 
     .is-dark &.is-info {
+      color: $gray-1;
       background-color: $info-5-reverse;
-      border-color: $info-5-reverse;
     }
   }
 
   &.is-sm {
-    min-width: 14 * $scale + $unit;
-    height: 14 * $scale + $unit;
+    min-width: $badge--height--sm;
+    height: $badge--height--sm;
     padding: 0;
-    font-size: ($font-size-base - $font-size-diff) * $scale + $unit;
-    line-height: 14 * $scale + $unit;
-    border-radius: 7 * $scale + $unit;
+    line-height: $badge--height--sm;
+    border-radius: $badge--border-radius--sm;
   }
 
   &.is-dot,
-  &.is-dotter.is-sm {
-    width: 6 * $scale + $unit;
+  &.is-dot.is-sm {
+    width: $badge--height--dot;
     min-width: auto;
-    height: 6 * $scale + $unit;
+    height: $badge--height--dot;
     padding: 0;
     overflow: hidden;
     color: transparent;
