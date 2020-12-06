@@ -11,7 +11,7 @@
 // 生成 .opacity-0, .opacity-50, .opacity-100
 $m-opacity: (
   "-0": 0,
-  "-50": .5,
+  "-50": 0.5,
   "-100": 1
 );
 
@@ -25,11 +25,11 @@ $m-opacity: (
 
 |类名|样式|
 |---|---|
-|`.transition`|`transition: .48s cubic-bezier(.25, .8, .5, 1);`|
+|`.transition`|`transition: 0.48s cubic-bezier(.25, .8, .5, 1);`|
 
 ```scss
 // 生成 .transition
-$transition-default: .56s cubic-bezier(.25, .8, .5, 1);
+$transition-default: 0.56s cubic-bezier(.25, .8, .5, 1);
 $m-opacity: (
   "": $transition-default
 );
