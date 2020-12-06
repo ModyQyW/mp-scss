@@ -10,11 +10,10 @@
 
 ### line-height
 
-我们注意到在某些情况下使用纯数字作为`line-height`值将会导致意想不到的问题。从 2.1.0 开始，我们决定为`line-height`设置带单位的值。
+我们注意到在某些情况下使用多位数的小数作为`line-height`值将会导致意想不到的问题。从 2.1.0 开始，我们有如下调整。
 
-我们移除了`$line-height-default`。而作为代替，我们添加了`$line-height-base`。
-
-对应的自定义过程也需要修改，见[排版类#line-height](../classes/typography.md#line-height)。
+- `$line-height-default: 1.5 !default;`
+- `$line-height-diff: 0.25 !default;`
 
 ### 组件
 

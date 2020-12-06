@@ -232,6 +232,12 @@ $m-font-weight: (
 $m-font-variant: (
   "tabular-nums": tabular-nums
 ) !default;
+// line-height
+$line-height-default: 1.5 !default;
+$line-height-diff: 0.25 !default;
+$line-height-min: 18 !default;
+$line-height-max: 44 !default;
+$line-height-step: 2 !default;
 // text-align
 $m-text-align: (
   "-left": left,

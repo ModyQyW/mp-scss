@@ -6,8 +6,7 @@ $container-font-family: $font-family-default !default;
 $container-font-size-base: $font-size-base !default;
 $container-font-size: $container-font-size-base * $scale + $unit !default;
 $container-font-weight: 400 !default;
-$container-line-height-base: $line-height-base;
-$container-line-height: $container-line-height-base * $scale + $unit !default;
+$container-line-height: $line-height-default !default;
 // header
 $header-height-base: 48 !default;
 $header-height: $header-height-base * $scale + $unit !default;
