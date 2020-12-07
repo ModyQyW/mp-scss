@@ -2,19 +2,20 @@
 
 .icon {
   display: inline-block;
-  width: $line-height-base * $scale + $unit;
-  height: $line-height-base * $scale + $unit;
-  line-height: $line-height-base * $scale + $unit;
+  width: $font-size-base * $line-height-default * $scale + $unit;
+  height: $font-size-base * $line-height-default * $scale + $unit;
+  font-size: $font-size-base * $scale + $unit;
+  line-height: $line-height-default;
 
   &.is-sm {
-    width: ($line-height-base - $line-height-diff) * $scale + $unit;
-    height: ($line-height-base - $line-height-diff) * $scale + $unit;
-    line-height: ($line-height-base - $line-height-diff) * $scale + $unit;
+    width: ($font-size-base - $font-size-diff) * $line-height-default * $scale + $unit;
+    height: ($font-size-base - $font-size-diff) * $line-height-default * $scale + $unit;
+    font-size: ($font-size-base - $font-size-diff) * $scale + $unit;
   }
 
   &.is-lg {
-    width: ($line-height-base + $line-height-diff) * $scale + $unit;
-    height: ($line-height-base + $line-height-diff) * $scale + $unit;
-    line-height: ($line-height-base + $line-height-diff) * $scale + $unit;
+    width: ($font-size-base + $font-size-diff) * $line-height-default * $scale + $unit;
+    height: ($font-size-base + $font-size-diff) * $line-height-default * $scale + $unit;
+    font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
   }
 }

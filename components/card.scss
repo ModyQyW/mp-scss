@@ -4,12 +4,17 @@
   position: relative;
   box-sizing: border-box;
   display: flex;
+  flex: 0 0 auto;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
   padding: 0;
   margin: 0;
   font-size: $font-size-base * $scale + $unit;
   font-weight: 400;
-  line-height: $line-height-base * $scale + $unit;
+  line-height: $line-height-default;
   color: $color-main;
   background-color: $container-background-color;
   border-color: $border-color;
@@ -38,22 +43,28 @@
     padding: 16 * $scale + $unit 24 * $scale + $unit;
     font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
     font-weight: 500;
-    line-height: ($line-height-base + $line-height-diff) * $scale + $unit;
+    line-height: $line-height-default;
   }
 
   .card-content {
     padding: 24 * $scale + $unit;
+    font-size: $font-size-base * $scale + $unit;
+    font-weight: 400;
+    line-height: $line-height-default;
   }
 
   .card-footer {
     padding: 16 * $scale + $unit 24 * $scale + $unit;
+    font-size: $font-size-base * $scale + $unit;
+    font-weight: 400;
+    line-height: $line-height-default;
   }
 
   &.is-sm {
     .card-header {
       padding: 8 * $scale + $unit 12 * $scale + $unit;
       font-size: $font-size-base * $scale + $unit;
-      line-height: $line-height-base * $scale + $unit;
+      line-height: $line-height-default;
     }
 
     .card-content {

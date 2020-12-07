@@ -11,15 +11,35 @@
 
 .loader {
   position: relative;
-  width: $font-size-base * $scale + $unit;
-  height: $font-size-base * $scale + $unit;
+  width: $font-size-base * $line-height-default * $scale + $unit;
+  height: $font-size-base * $line-height-default * $scale + $unit;
   margin: 0;
   font-size: 0;
   color: transparent;
   background-image: linear-gradient(to right, $gray-7 10%, rgba(255, 255, 255, 0) 42%);
   border-radius: 50%;
   transform: translateZ(0);
-  animation: load 1.2s infinite linear;
+  animation: load 1s infinite linear;
+
+  &.is-xs {
+    width: ($font-size-base - $font-size-diff * 2) * $line-height-default * $scale + $unit;
+    height: ($font-size-base - $font-size-diff * 2) * $line-height-default * $scale + $unit;
+  }
+
+  &.is-sm {
+    width: ($font-size-base - $font-size-diff) * $line-height-default * $scale + $unit;
+    height: ($font-size-base - $font-size-diff) * $line-height-default * $scale + $unit;
+  }
+
+  &.is-lg {
+    width: ($font-size-base + $font-size-diff) * $line-height-default * $scale + $unit;
+    height: ($font-size-base + $font-size-diff) * $line-height-default * $scale + $unit;
+  }
+
+  &.is-xl {
+    width: ($font-size-base + $font-size-diff * 2) * $line-height-default * $scale + $unit;
+    height: ($font-size-base + $font-size-diff * 2) * $line-height-default * $scale + $unit;
+  }
 
   &::before {
     position: absolute;
@@ -138,10 +158,5 @@
 
   &.is-white::before {
     background-color: $white;
-  }
-
-  &.is-lg {
-    width: ($font-size-base + $font-size-diff * 2) * $scale + $unit;
-    height: ($font-size-base + $font-size-diff * 2) * $scale + $unit;
   }
 }

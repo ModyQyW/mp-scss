@@ -4,6 +4,7 @@
   position: relative;
   box-sizing: border-box;
   display: block;
+  flex: 0 0 auto;
   width: 100%;
   height: auto;
   margin: 24 * $scale + $unit 0;
@@ -57,7 +58,7 @@
     padding: 0 16 * $scale + $unit;
     font-size: $font-size-base * $scale + $unit;
     font-weight: 400;
-    line-height: $line-height-base * $scale + $unit;
+    line-height: $line-height-default;
   }
 
   .divider,

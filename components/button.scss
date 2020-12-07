@@ -1,21 +1,66 @@
 /* stylelint-disable selector-max-class */
 @import "../variables";
 
+/* .btn */
+// border-width
+$btn--border-width-base: $border-width-base; // 1
+$btn--border-width: $btn--border-width-base * $scale + $unit; // 1 * $scale + $unit
+// padding-y
+$btn--padding-y-base: 4;
+$btn--padding-y: $btn--padding-y-base * $scale + $unit; // 4 * $scale + $unit
+// padding-x
+$btn--padding-x-base: 16;
+$btn--padding-x: $btn--padding-x-base * $scale + $unit; // 16 * $scale + $unit
+// font-size
+$btn--font-size-base: $font-size-base; // 14
+$btn--font-size: $btn--font-size-base * $scale + $unit; // 14 * $scale + $unit
+// line-height
+$btn--line-height: $line-height-default; // 1.5
+// height
+$btn--height-base: $btn--border-width-base * 2 + $btn--padding-y-base * 2 + $btn--font-size-base * $btn--line-height; // 31
+$btn--height: $btn--height-base * $scale + $unit; // 31 * $scale + $unit
+
+/* .btn.is-sm */
+// padding-y
+$btn--padding-y-base--sm: 0;
+$btn--padding-y--sm: $btn--padding-y-base--sm * $scale + $unit; // 0 * $scale + $unit
+// padding-x
+$btn--padding-x-base--sm: 8;
+$btn--padding-x--sm: $btn--padding-x-base--sm * $scale + $unit; // 8 * $scale + $unit
+// height
+$btn--height-base--sm: $btn--border-width-base * 2 + $btn--padding-y-base--sm * 2 + $btn--font-size-base * $btn--line-height; // 23
+$btn--height--sm: $btn--height-base--sm * $scale + $unit; // 23 * $scale + $unit
+
+/* .btn.is-lg */
+// padding-y
+$btn--padding-y-base--lg: 6;
+$btn--padding-y--lg: $btn--padding-y-base--lg * $scale + $unit; // 6 * $scale + $unit
+// padding-x
+$btn--padding-x-base--lg: 16;
+$btn--padding-x--lg: $btn--padding-x-base--lg * $scale + $unit; // 16 * $scale + $unit
+// font-size
+$btn--font-size-base--lg: $font-size-base + $font-size-diff; // 16
+$btn--font-size--lg: $btn--font-size-base--lg * $scale + $unit; // 16 * $scale + $unit
+// height
+$btn--height-base--lg: $btn--border-width-base * 2 + $btn--padding-y-base--lg * 2 + $btn--font-size-base--lg * $btn--line-height; // 38
+$btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
+
 .btn {
   position: relative;
   box-sizing: border-box;
   display: flex;
+  flex: 0 0 auto;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   width: auto;
-  height: auto;
-  padding: 4 * $scale + $unit 16 * $scale + $unit;
+  height: $btn--height;
+  padding: $btn--padding-y $btn--padding-x;
   margin: 0;
   overflow: hidden;
-  font-size: $font-size-base * $scale + $unit;
+  font-size: $btn--font-size;
   font-weight: 400;
-  line-height: $line-height-base * $scale + $unit;
+  line-height: $btn--line-height;
   color: $color-main;
   text-align: center;
   white-space: nowrap;
@@ -23,7 +68,7 @@
   background-color: $container-background-color;
   border-color: $border-color;
   border-style: solid;
-  border-width: 1 * $scale + $unit;
+  border-width: $btn--border-width;
   border-radius: $border-radius-base * $scale + $unit;
   outline: none;
   opacity: unset;
@@ -31,24 +76,25 @@
   -webkit-tap-highlight-color: transparent;
 
   &.is-rounded {
-    border-radius: (16 + $line-height-base + 1) / 2 * $scale + $unit;
+    border-radius: $btn--height-base / 2 * $scale + $unit;
   }
 
   &.is-sm {
-    padding: 0 8 * $scale + $unit;
+    height: $btn--height--sm;
+    padding: $btn--padding-y--sm $btn--padding-x--sm;
 
     &.is-rounded {
-      border-radius: (8 + $line-height-base + 1) / 2 * $scale + $unit;
+      border-radius: $btn--height-base--sm / 2 * $scale + $unit;
     }
   }
 
   &.is-lg {
-    padding: 6 * $scale + $unit 16 * $scale + $unit;
-    font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
-    line-height: ($line-height-base + $line-height-diff) * $scale + $unit;
+    height: $btn--height--lg;
+    padding: $btn--padding-y--lg $btn--padding-x--lg;
+    font-size: $btn--font-size--lg;
 
     &.is-rounded {
-      border-radius: (16 + $line-height-base + $line-height-diff + 1) / 2 * $scale + $unit;
+      border-radius: $btn--height-base--lg / 2 * $scale + $unit;
     }
   }
 

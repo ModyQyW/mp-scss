@@ -1,38 +1,69 @@
 @import "../variables";
 
-.input-placeholder {
-  padding: 0;
-  font-size: $font-size-base * $scale + $unit;
-  font-weight: 400;
-  line-height: $line-height-base * $scale + $unit;
-  color: $color-secondary;
+/* .input */
+// border-width
+$input--border-width-base: $border-width-base; // 1
+$input--border-width: $input--border-width-base * $scale + $unit; // 1 * $scale + $unit
+// padding-y
+$input--padding-y-base: 4;
+$input--padding-y: $input--padding-y-base * $scale + $unit; // 4 * $scale + $unit
+// padding-x
+$input--padding-x-base: 12;
+$input--padding-x: $input--padding-x-base * $scale + $unit; // 12 * $scale + $unit
+// font-size
+$input--font-size-base: $font-size-base; // 14
+$input--font-size: $input--font-size-base * $scale + $unit; // 14 * $scale + $unit
+// line-height
+$input--line-height: $line-height-default; // 1.5
+// height
+$input--height-base: $input--border-width-base * 2 + $input--padding-y-base * 2 + $input--font-size-base * $input--line-height; // 31
+$input--height: $input--height-base * $scale + $unit; // 31 * $scale + $unit
 
-  @if ($has-dark) {
-    .is-dark & {
-      color: $color-secondary-reverse;
-    }
-  }
-}
+/* .input.is-sm */
+// padding-y
+$input--padding-y-base--sm: 0;
+$input--padding-y--sm: $input--padding-y-base--sm * $scale + $unit; // 0 * $scale + $unit
+// padding-x
+$input--padding-x-base--sm: 8;
+$input--padding-x--sm: $input--padding-x-base--sm * $scale + $unit; // 8 * $scale + $unit
+// height
+$input--height-base--sm: $input--border-width-base * 2 + $input--padding-y-base--sm * 2 + $input--font-size-base * $input--line-height; // 23
+$input--height--sm: $input--height-base--sm * $scale + $unit; // 23 * $scale + $unit
+
+/* .input.is-lg */
+// padding-y
+$input--padding-y-base--lg: 6;
+$input--padding-y--lg: $input--padding-y-base--lg * $scale + $unit; // 6 * $scale + $unit
+// padding-x
+$input--padding-x-base--lg: 16;
+$input--padding-x--lg: $input--padding-x-base--lg * $scale + $unit; // 16 * $scale + $unit
+// font-size
+$input--font-size-base--lg: $font-size-base + $font-size-diff; // 16
+$input--font-size--lg: $input--font-size-base--lg * $scale + $unit; // 16 * $scale + $unit
+// height
+$input--height-base--lg: $input--border-width-base * 2 + $input--padding-y-base--lg * 2 + $input--font-size-base--lg * $input--line-height; // 38
+$input--height--lg: $input--height-base--lg * $scale + $unit; // 38 * $scale + $unit
 
 .input {
   position: relative;
   box-sizing: border-box;
   display: inline-block;
+  flex: 0 0 auto;
   width: 100%;
   min-width: 0;
-  height: (4 * 2 + $line-height-base + 1 * 2) * $scale + $unit;
+  height: $input--height;
   min-height: unset;
-  padding: 4 * $scale + $unit 12 * $scale + $unit;
+  padding: $input--padding-y $input--padding-x;
   margin: 0;
-  font-size: $font-size-base * $scale + $unit;
+  font-size: $input--font-size;
   font-weight: 400;
-  line-height: $line-height-base * $scale + $unit;
+  line-height: $input--line-height;
   color: $color-main;
   white-space: nowrap;
   cursor: text;
   border-color: $border-color;
   border-style: solid;
-  border-width: 1 * $scale + $unit;
+  border-width: $input--border-width;
   border-radius: $border-radius-base * $scale + $unit;
   outline: none;
   transition: $transition-default;
@@ -71,15 +102,14 @@
   }
 
   &.is-sm {
-    height: ($line-height-base + 1 * 2) * $scale + $unit;
-    padding: 0 8 * $scale + $unit;
+    height: $input--height--sm;
+    padding: $input--padding-y--sm $input--padding-x--sm;
   }
 
   &.is-lg {
-    height: (6 * 2 + $line-height-base + $line-height-diff + 1 * 2) * $scale + $unit;
-    padding: 6 * $scale + $unit 16 * $scale + $unit;
-    font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
-    line-height: ($line-height-base + $line-height-diff) * $scale + $unit;
+    height: $input--height--lg;
+    padding: $input--padding-y--lg $input--padding-x--sm;
+    font-size: $input--font-size--lg;
   }
 }
 
@@ -87,22 +117,23 @@
   position: relative;
   box-sizing: border-box;
   display: inline-flex;
+  flex: 0 0 auto;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
   min-width: 0;
-  height: auto;
+  height: $input--height;
   min-height: unset;
-  padding: 4 * $scale + $unit 12 * $scale + $unit;
+  padding: $input--padding-y $input--padding-x;
   margin: 0;
-  font-size: $font-size-base * $scale + $unit;
+  font-size: $input--font-size;
   font-weight: 400;
-  line-height: $line-height-base * $scale + $unit;
+  line-height: $input--line-height;
   color: $color-main;
   border-color: $border-color;
   border-style: solid;
-  border-width: 1 * $scale + $unit;
+  border-width: $input--border-width;
   border-radius: $border-radius-base * $scale + $unit;
   outline: none;
   transition: $transition-default;
@@ -147,8 +178,8 @@
     &.is-sm,
     &.is-lg {
       padding: 0;
-      font-size: $font-size-base * $scale + $unit;
-      line-height: $line-height-base * $scale + $unit;
+      font-size: $input--font-size;
+      line-height: $input--line-height;
     }
   }
 
@@ -163,29 +194,44 @@
   .input-prefix {
     display: inline-flex;
     justify-content: flex-start;
-    margin-right: 12 * $scale + $unit;
+    margin-right: $input--padding-x;
   }
 
   .input-suffix {
     display: inline-flex;
     justify-content: flex-end;
-    margin-left: 12 * $scale + $unit;
+    margin-left: $input--padding-x;
   }
 
   &.is-sm {
-    padding: 0 8 * $scale + $unit;
+    height: $input--height--sm;
+    padding: $input--padding-y--sm $input--padding-x--sm;
   }
 
   &.is-lg {
-    padding: 6 * $scale + $unit 16 * $scale + $unit;
-    font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
-    line-height: ($line-height-base + $line-height-diff) * $scale + $unit;
+    height: $input--height--lg;
+    padding: $input--padding-y--lg $input--padding-x--lg;
+    font-size: $input--font-size--lg;
 
     .input,
     .input.is-sm,
     .input.is-lg {
-      font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
-      line-height: ($line-height-base + $line-height-diff) * $scale + $unit;
+      font-size: $input--font-size--lg;
+    }
+  }
+}
+
+.input-placeholder {
+  padding: 0;
+  font-size: $font-size-base * $scale + $unit;
+  font-weight: 400;
+  line-height: $line-height-default;
+  color: $color-secondary;
+  text-overflow: ellipsis;
+
+  @if ($has-dark) {
+    .is-dark & {
+      color: $color-secondary-reverse;
     }
   }
 }

@@ -5,22 +5,18 @@
 $badge--padding-y-base: 0;
 $badge--padding-y: $badge--padding-y-base * $scale + $unit; // 0 * $scale + $unit
 // padding-x
-$badge--padding-x-base: $font-size-diff * 3; // 6
+$badge--padding-x-base: 6;
 $badge--padding-x: $badge--padding-x-base * $scale + $unit; // 6 * $scale + $unit
 // font-size
 $badge--font-size-base: $font-size-base - $font-size-diff; // 12
 $badge--font-size: $badge--font-size-base * $scale + $unit; // 12 * $scale + $unit
 // line-height
-$badge--line-height-base: $font-size-base + $font-size-diff * 3; // 20
-$badge--line-height: $badge--line-height-base * $scale + $unit; // 20 * $scale + $unit
+$badge--line-height: $line-height-default; // 1.5
 // height
-$badge--height-base: $badge--padding-y-base * 2 + $badge--line-height-base; // 20
-$badge--height: $badge--height-base * $scale + $unit; // 20 * $scale + $unit
-// border-radius
-$badge--border-radius-base: $badge--height-base / 2; // 10
-$badge--border-radius: $badge--border-radius-base * $scale + $unit; // 10 * $scale + $unit
+$badge--height-base: $badge--padding-y-base * 2 + $badge--font-size-base * $badge--line-height; // 18
+$badge--height: $badge--height-base * $scale + $unit; // 18 * $scale + $unit
 
-/* .is-sm */
+/* .badge.is-sm */
 // padding-y
 $badge--padding-y-base--sm: 0;
 $badge--padding-y--sm: $badge--padding-y-base--sm * $scale + $unit; // 0 * $scale + $unit
@@ -28,16 +24,12 @@ $badge--padding-y--sm: $badge--padding-y-base--sm * $scale + $unit; // 0 * $scal
 $badge--padding-x-base--sm: 0;
 $badge--padding-x--sm: $badge--padding-x-base--sm * $scale + $unit; // 0 * $scale + $unit
 // line-height
-$badge--line-height-base--sm: $font-size-base; // 14
-$badge--line-height--sm: $badge--line-height-base--sm * $scale + $unit; // 14 * $scale + $unit
+$badge--line-height--sm: $line-height-default - $line-height-diff * 2; // 1
 // height
-$badge--height-base--sm: $badge--padding-y-base--sm * 2 + $badge--line-height-base--sm; // 14
+$badge--height-base--sm: $badge--padding-y-base--sm * 2 + $badge--font-size-base * $badge--line-height; // 14
 $badge--height--sm: $badge--height-base--sm * $scale + $unit; // 14 * $scale + $unit
-// border-radius
-$badge--border-radius-base--sm: $badge--height-base--sm / 2; // 7
-$badge--border-radius--sm: $badge--border-radius-base--sm * $scale + $unit; // 7 * $scale + $unit
 
-/* is-dot */
+/* .badge.is-dot */
 // padding-y
 $badge--padding-y-base--dot: 0;
 $badge--padding-y--dot: $badge--padding-y-base--dot * $scale + $unit; // 0 * $scale + $unit
@@ -45,7 +37,7 @@ $badge--padding-y--dot: $badge--padding-y-base--dot * $scale + $unit; // 0 * $sc
 $badge--padding-x-base--dot: 0;
 $badge--padding-x--dot: $badge--padding-x-base--dot * $scale + $unit; // 0 * $scale + $unit
 // height
-$badge--height-base--dot: $font-size-diff * 3; // 6
+$badge--height-base--dot: 6;
 $badge--height--dot: $badge--height-base--dot * $scale + $unit; // 6 * $scale + $unit
 
 /* styles */
@@ -66,12 +58,12 @@ $badge--height--dot: $badge--height-base--dot * $scale + $unit; // 6 * $scale + 
   padding: $badge--padding-y $badge--padding-x;
   font-size: $badge--font-size;
   font-weight: 400;
-  line-height: $badge--height;
+  line-height: $badge--line-height;
   color: $color-main;
   text-align: center;
   white-space: nowrap;
   background-color: $gray-5;
-  border-radius: $badge--border-radius;
+  border-radius: $badge--height-base / 2 * $scale + $unit;
   box-shadow: 0 0 0 1 * $scale + $unit $container-background-color;
   transition: $transition-default;
   transform: translate(50%, -50%);
@@ -140,7 +132,7 @@ $badge--height--dot: $badge--height-base--dot * $scale + $unit; // 6 * $scale + 
     height: $badge--height--sm;
     padding: $badge--padding-y--sm $badge--padding-x--sm;
     line-height: $badge--line-height--sm;
-    border-radius: $badge--border-radius--sm;
+    border-radius: $badge--height-base--sm / 2 * $scale + $unit;
   }
 
   &.is-dot {
