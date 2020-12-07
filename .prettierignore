@@ -1,6 +1,7 @@
 .next/
 .nuxt/
 .umi/
+.vuepress/
 build/
 dist/
 node_modules/
