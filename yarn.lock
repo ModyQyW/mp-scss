@@ -1054,10 +1054,10 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@modyqyw/fabric@~1.4.2":
-  version "1.4.2"
-  resolved "https://registry.npmjs.org/@modyqyw/fabric/-/fabric-1.4.2.tgz#d4c0b12e27256ed1ec63351e1238a4cfea664630"
-  integrity sha512-551ILsAYyi/I+k75RUq+/TXRQBGXLKIByJAruiCxaiIMvPRyGe6DhWeLKm9y6POlXqLdj5+Ekh7V+hVECmSmtw==
+"@modyqyw/fabric@~1.5.0":
+  version "1.5.0"
+  resolved "https://registry.npmjs.org/@modyqyw/fabric/-/fabric-1.5.0.tgz#8437fd7f5e812543c88906b901aaf6f2123da1c1"
+  integrity sha512-7RDc9xAS3SUxmfVVSfMSZNwUFiTJoQfgyvy8dZa77lod52cpH0Qle527X9NZKTN920u5BDnUElG0GF9cIxp2Bg==
   dependencies:
     "@commitlint/config-conventional" "~11.0.0"
     "@typescript-eslint/eslint-plugin" "~4.9.0"
@@ -1075,7 +1075,7 @@
     eslint-plugin-react "~7.21.5"
     eslint-plugin-react-hooks "~4.2.0"
     eslint-plugin-unicorn "~23.0.0"
-    eslint-plugin-vue "~7.1.0"
+    eslint-plugin-vue "~7.2.0"
     stylelint-config-prettier "~8.0.2"
     stylelint-config-twbs-bootstrap "~2.1.0"
     stylelint-prettier "~1.1.2"
@@ -4574,15 +4574,15 @@ eslint-plugin-unicorn@~23.0.0:
     safe-regex "^2.1.1"
     semver "^7.3.2"
 
-eslint-plugin-vue@~7.1.0:
-  version "7.1.0"
-  resolved "https://registry.npmjs.org/eslint-plugin-vue/-/eslint-plugin-vue-7.1.0.tgz#832d83e4e1e480c7285b2bc3ff1076cd0dca7a5b"
-  integrity sha512-9dW7kj8/d2IkDdgNpvIhJdJ3XzU3x4PThXYMzWt49taktYnGyrTY6/bXCYZ/VtQKU9kXPntPrZ41+8Pw0Nxblg==
+eslint-plugin-vue@~7.2.0:
+  version "7.2.0"
+  resolved "https://registry.npmjs.org/eslint-plugin-vue/-/eslint-plugin-vue-7.2.0.tgz#dd8323fe7ca28fe9377ce3f5f6cf17afe2686f2a"
+  integrity sha512-4mt0yIv6rBDNtvis/g22a0ozJ12GfcdEzX77u0ICYjKlxOVtGrKGEvo0cbOObHaKDg9a9kJcoaNodqE4TPfS2A==
   dependencies:
     eslint-utils "^2.1.0"
     natural-compare "^1.4.0"
     semver "^7.3.2"
-    vue-eslint-parser "^7.1.1"
+    vue-eslint-parser "^7.2.0"
 
 eslint-scope@^4.0.3:
   version "4.0.3"
@@ -11924,19 +11924,7 @@ vue-disqus@^3.0.5:
   resolved "https://registry.npmjs.org/vue-disqus/-/vue-disqus-3.0.5.tgz#8d0dd5cabdba7c47f82d129d2907a64366842fa8"
   integrity sha512-T3Y68lXf5W2lYt6j4Y3kZ4opLPH0EAzqriy11MS4D4Q2+UN0tFuUXeYP1MxfvdyaCEboXSM6CUswxsULuNV70Q==
 
-vue-eslint-parser@^7.1.1:
-  version "7.1.1"
-  resolved "https://registry.npmjs.org/vue-eslint-parser/-/vue-eslint-parser-7.1.1.tgz#c43c1c715ff50778b9a7e9a4e16921185f3425d3"
-  integrity sha512-8FdXi0gieEwh1IprIBafpiJWcApwrU+l2FEj8c1HtHFdNXMd0+2jUSjBVmcQYohf/E72irwAXEXLga6TQcB3FA==
-  dependencies:
-    debug "^4.1.1"
-    eslint-scope "^5.0.0"
-    eslint-visitor-keys "^1.1.0"
-    espree "^6.2.1"
-    esquery "^1.0.1"
-    lodash "^4.17.15"
-
-vue-eslint-parser@~7.2.0:
+vue-eslint-parser@^7.2.0, vue-eslint-parser@~7.2.0:
   version "7.2.0"
   resolved "https://registry.npmjs.org/vue-eslint-parser/-/vue-eslint-parser-7.2.0.tgz#1e17ae94ca71e617025e05143c8ac5593aacb6ef"
   integrity sha512-uVcQqe8sUNzdHGcRHMd2Z/hl6qEaWrAmglTKP92Fnq9TYU9un8xsyFgEdFJaXh/1rd7h8Aic1GaiQow5nVneow==

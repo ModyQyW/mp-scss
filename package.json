@@ -56,7 +56,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "~11.0.0",
-    "@modyqyw/fabric": "~1.4.2",
+    "@modyqyw/fabric": "~1.5.0",
     "@vuepress/plugin-active-header-links": "~1.7.1",
     "@vuepress/plugin-back-to-top": "~1.7.1",
     "@vuepress/plugin-blog": "~1.9.3",
