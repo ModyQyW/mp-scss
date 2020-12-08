@@ -25,6 +25,7 @@
     width: auto;
     height: 100%;
     margin: 0 8 * $scale + $unit;
+    vertical-align: middle;
     border-top: none;
     border-left-color: $border-color;
     border-left-style: solid;
@@ -59,6 +60,7 @@
     font-size: $font-size-base * $scale + $unit;
     font-weight: 400;
     line-height: $line-height-default;
+    vertical-align: middle;
   }
 
   .divider,

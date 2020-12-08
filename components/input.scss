@@ -60,6 +60,7 @@ $input--height--lg: $input--height-base--lg * $scale + $unit; // 38 * $scale + $
   line-height: $input--line-height;
   color: $color-main;
   white-space: nowrap;
+  vertical-align: middle;
   cursor: text;
   border-color: $border-color;
   border-style: solid;

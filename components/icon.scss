@@ -6,6 +6,7 @@
   height: $font-size-base * $line-height-default * $scale + $unit;
   font-size: $font-size-base * $scale + $unit;
   line-height: $line-height-default;
+  vertical-align: middle;
 
   &.is-sm {
     width: ($font-size-base - $font-size-diff) * $line-height-default * $scale + $unit;
