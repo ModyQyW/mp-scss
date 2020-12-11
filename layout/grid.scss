@@ -4,13 +4,26 @@
   position: relative;
   box-sizing: border-box;
   display: flex;
+  flex: 0 0 auto;
   flex-flow: row wrap;
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
 
   @each $k, $v in $m-gutter {
+    $tmp-width: calc(100% + #{$gutter-base * $scale + $unit});
+    @if ($k == "-xs") {
+      $tmp-width: calc(100% + #{($gutter-base - $gutter-diff * 2) * $scale + $unit});
+    } @else if ($k == "-sm") {
+      $tmp-width: calc(100% + #{($gutter-base - $gutter-diff) * $scale + $unit});
+    } @else if ($k == "-lg") {
+      $tmp-width: calc(100% + #{($gutter-base + $gutter-diff) * $scale + $unit});
+    } @else if ($k == "-xl") {
+      $tmp-width: calc(100% + #{($gutter-base + $gutter-diff * 2) * $scale + $unit});
+    }
+
     &.gutter#{$k} {
+      width: $tmp-width;
       margin-right: -$v;
       margin-left: -$v;
 
