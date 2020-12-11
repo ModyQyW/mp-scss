@@ -1,6 +1,6 @@
 # 指南
 
-`@modyqyw/mp-scss`是一个基于 [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) 的小程序 [SCSS](https://sass-lang.com/) 库，用于快速实现自定义设计，定位在`tailwindcss`和`bootstrap`之间。
+`@modyqyw/mp-scss`是一个基于 [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) 的小程序 [SCSS](https://sass-lang.com/) 库，用于快速实现自定义设计。
 
 除了可自定义、提供属性类之外，`@modyqyw/mp-scss`还专门支持了小程序，包含了重置样式 reset，布局样式 layout，组件样式 components 等，目的就是让小程序开发更加简单快捷。
 
@@ -14,7 +14,7 @@
 
 ## 初衷
 
-`@modyqyw/mp-scss`是我们在被小程序折磨的时候做出来的样式库。
+`@modyqyw/mp-scss`是我在被小程序折磨的时候做出来的样式库。
 
 现有的、比较好的、成体系的、保持更新的小程序跨平台框架有这么几个。
 
@@ -23,7 +23,7 @@
 - [rax](https://rax.js.org/) - 阿里出品
 - [remax](https://remaxjs.org/) - 阿里出品
 
-他们都提供了官方 ui 库或者推荐了社区 ui 库。但很多时候，ui 库不能直接满足定制化的需求，我们更需要一个可以帮助快速实现页面样式的库。
+他们都提供了官方 ui 库或者推荐了社区 ui 库。但很多时候，ui 库不能直接满足定制化的需求，我更需要一个可以帮助快速实现页面样式的库。
 
 在尝试好几个库无果后，就有了`@modyqyw/mp-scss`。希望它对正在看文档的你有帮助。
 

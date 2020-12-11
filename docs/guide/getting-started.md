@@ -1,21 +1,21 @@
 # 快速上手
 
 ::: warning 建议
-库和文档目前处于`rc`状态，可以投入使用。目前欢迎帮助编写文档和优化代码。
+库和文档已经可以投入生产环境，但文档还缺少代码片段，演示效果图，演示 APP 和演示小程序。欢迎 PR。
 
 建议使用 [Node.js](https://nodejs.org/en/) 12 或者 14。
 
-[node-sass](https://github.com/sass/node-sass#readme) 在国内安装缓慢且[已经被弃用](https://sass-lang.com/blog/libsass-is-deprecated)，建议转用 [dart-sass](https://github.com/sass/dart-sass#readme)。
+[node-sass](https://github.com/sass/node-sass#readme) [已经被弃用](https://sass-lang.com/blog/libsass-is-deprecated)，请使用 [dart-sass](https://github.com/sass/dart-sass#readme)。
 :::
 
-首先安装相关依赖。对于不同的框架，可能需要安装额外的依赖，请以框架本身说明为准。
+首先安装相关依赖。对于不同的框架，可能需要安装不同的或者额外的依赖，请以框架本身说明为准。
 
 ```sh
 npm i @modyqyw/mp-scss
-npm i -D scss sass-loader
+npm i -D sass sass-loader
 # or
 # yarn add @modyqyw/mp-scss
-# yarn add -D scss sass-loader
+# yarn add -D sass sass-loader
 ```
 
 然后在项目的入口`scss`部分引入这个库。
@@ -24,7 +24,7 @@ npm i -D scss sass-loader
 @import "~@modyqyw/mp-scss";
 ```
 
-现在，你应该已经可以使用所有这个库的所有功能。
+现在就可以使用所有这个库的所有功能了。
 
 比如为页面添加布局。[微信小程序代码片段](https://developers.weixin.qq.com/s/S23bgZmT7qlI)
 
