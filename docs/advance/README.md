@@ -21,9 +21,9 @@
 请先克隆这个库到本地。
 
 ```sh
-git@github.com:MillCloud/mp-scss.git
+git@github.com:ModyQyW/mp-scss.git
 # for gitee
-# git@gitee.com:millcloud/mp-scss.git
+# git@gitee.com:ModyQyW/mp-scss.git
 npm install -g yarn && yarn
 ```
 
@@ -124,7 +124,7 @@ $purple: #722ed1 !default;
 $magenta: #eb2f96 !default;
 ```
 
-库内部使用了[`f-get-color`](https://github.com/MillCloud/mp-scss/blob/master/utils/functions.scss#L104)这个方法来生成明亮模式下的通用颜色。下面是使用`$red`生成`$red-1`到`$red-10`的代码，其它基准变量的使用与它类似。
+库内部使用了[`f-get-color`](https://github.com/ModyQyW/mp-scss/blob/master/utils/functions.scss#L104)这个方法来生成明亮模式下的通用颜色。下面是使用`$red`生成`$red-1`到`$red-10`的代码，其它基准变量的使用与它类似。
 
 ```scss
 $red-1: f-get-color($red, 1);
@@ -293,7 +293,7 @@ $has-info: true !default;
 
 如果你对 Ant Design 比较熟悉，你会发现这个项目里使用了 Ant Design 的色板，所以要查看颜色的话，完全可以去查看 Ant Design 的色板。
 
-库内部使用`scss`实现了 Ant Design 的颜色生成方法`f-get-color`，如果有兴趣可以自行[查看 Github 源码](https://github.com/MillCloud/mp-scss/blob/master/utils/functions.scss)或[查看 Gitee 源码](https://gitee.com/MillCloud/mp-scss/blob/master/utils/functions.scss)。
+库内部使用`scss`实现了 Ant Design 的颜色生成方法`f-get-color`，如果有兴趣可以自行[查看 Github 源码](https://github.com/ModyQyW/mp-scss/blob/master/utils/functions.scss)或[查看 Gitee 源码](https://gitee.com/ModyQyW/mp-scss/blob/master/utils/functions.scss)。
 
 ## FAQ
 

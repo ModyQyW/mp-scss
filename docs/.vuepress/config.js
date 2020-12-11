@@ -184,11 +184,11 @@ module.exports = {
       },
       {
         text: 'Gitee',
-        link: 'https://gitee.com/millcloud/mp-scss#readme',
+        link: 'https://gitee.com/ModyQyW/mp-scss#readme',
       },
       {
         text: 'Github',
-        link: 'https://github.com/MillCloud/mp-scss#readme',
+        link: 'https://github.com/ModyQyW/mp-scss#readme',
       },
     ],
     sidebar: {
@@ -255,7 +255,7 @@ module.exports = {
     [
       'sitemap',
       {
-        hostname: 'https://millcloud.github.io',
+        hostname: 'https://modyqyw.github.io',
       },
     ],
     [

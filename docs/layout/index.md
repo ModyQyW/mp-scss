@@ -1,6 +1,6 @@
 # 布局类总览 layout
 
-[源码](https://github.com/MillCloud/mp-scss/blob/master/layout)
+[源码](https://github.com/ModyQyW/mp-scss/blob/master/layout)
 
 ## 使用
 

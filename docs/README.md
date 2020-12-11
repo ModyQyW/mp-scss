@@ -15,5 +15,5 @@ features:
   details: 快速确定组件样式
 - title: 可自定义
   details: 提供可自定义的内容和对应的修改指南
-footer: MIT Licensed | Copyright © 2019-present MillCloud
+footer: MIT Licensed | Copyright © 2019-present ModyQyW
 ---

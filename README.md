@@ -6,7 +6,7 @@ Chinese docs are provided only since miniprograms are used almost only in China.
 
 一个基于 Flexbox 的小程序 SCSS 库，用于快速实现自定义设计。
 
-完整文档见 [Github Page](https://millcloud.github.io/mp-scss/) 或 [Gitee Page](https://millcloud.gitee.io/mp-scss/)。
+完整文档见 [Github Page](https://modyqyw.github.io/mp-scss/) 或 [Gitee Page](https://modyqyw.gitee.io/mp-scss/)。
 
 ## 贡献
 
@@ -14,19 +14,19 @@ Chinese docs are provided only since miniprograms are used almost only in China.
 
 ## 版本命名
 
-使用 [SemVer](http://semver.org/) 进行版本控制。有关可用版本，请参阅此仓库的 [releases](https://github.com/MillCloud/mp-scss/releases)。
+使用 [SemVer](http://semver.org/) 进行版本控制。
 
 ## 作者
 
 - **Rui Wu** - *最初工作* - [ModyQyW](https://github.com/ModyQyW)
 
-另请参阅参与此项目的 [contributors](https://github.com/MillCloud/mp-scss/contributors) 列表。
+另请参阅参与此项目的 [contributors](https://github.com/ModyQyW/mp-scss/contributors) 列表。
 
 ## 协议
 
 [MIT](./LICENSE)
 
-Copyright (c) 2019-present MillCloud
+Copyright (c) 2019-present ModyQyW
 
 ## 致谢
 

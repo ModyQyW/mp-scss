@@ -1,6 +1,6 @@
 # 组件类总览 components
 
-[源码](https://github.com/MillCloud/mp-scss/blob/master/components)
+[源码](https://github.com/ModyQyW/mp-scss/blob/master/components)
 
 ## 使用
 
