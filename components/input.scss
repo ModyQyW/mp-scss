@@ -223,6 +223,8 @@ $input--height--lg: $input--height-base--lg * $scale + $unit; // 38 * $scale + $
 }
 
 .input-placeholder {
+  /* stylelint-disable-next-line declaration-no-important */
+  top: calc(50% - #{$font-size-base * $line-height-default / 2 * $scale + $unit}) !important;
   padding: 0;
   font-size: $font-size-base * $scale + $unit;
   font-weight: 400;
