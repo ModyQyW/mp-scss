@@ -1,6 +1,6 @@
 {
   "name": "@modyqyw/mp-scss",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A flexbox-based miniprogram SCSS lib for quickly building custom designs.",
   "keywords": [
     "css",
