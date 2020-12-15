@@ -2,6 +2,10 @@
 
 ## 2.0
 
+### 2.0.2
+
+- 修复 - components - 修复部分组件样式，尽可能统一它们在不同平台的表现。
+
 ### 2.0.1
 
 - 调整 - variables - 调整了`line-height`两个相关变量的默认值（`$line-height-default: 1.5 !default;`，`$line-height-diff: 0.25 !default;`），以避免某些情况下使用多位小数作为`line-height`导致的问题。
