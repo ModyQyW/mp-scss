@@ -102,14 +102,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
     display: none;
   }
 
-  &:hover,
-  &:focus {
-    color: $gray-1;
-    background-color: $primary-6;
-    border-color: $primary-6;
-    opacity: unset;
-  }
-
   &:active,
   &.button-hover {
     color: $gray-1;
@@ -145,13 +137,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
       background-color: $container-background-color;
     }
 
-    &:hover,
-    &:focus {
-      color: $gray-1;
-      background-color: $primary-5;
-      border-color: $primary-5;
-    }
-
     &:active,
     &.button-hover {
       color: $gray-1;
@@ -163,12 +148,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
       color: $primary-6;
       border-color: $primary-6;
 
-      &:hover,
-      &:focus {
-        color: $primary-5;
-        border-color: $primary-5;
-      }
-
       &:active,
       &.button-hover {
         color: $primary-7;
@@ -178,11 +157,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
 
     &.is-text {
       color: $primary-6;
-
-      &:hover,
-      &:focus {
-        color: $primary-5;
-      }
 
       &:active,
       &.button-hover {
@@ -201,13 +175,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
       background-color: $container-background-color;
     }
 
-    &:hover,
-    &:focus {
-      color: $gray-1;
-      background-color: $success-5;
-      border-color: $success-5;
-    }
-
     &:active,
     &.button-hover {
       color: $gray-1;
@@ -219,12 +186,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
       color: $success-6;
       border-color: $success-6;
 
-      &:hover,
-      &:focus {
-        color: $success-5;
-        border-color: $success-5;
-      }
-
       &:active,
       &.button-hover {
         color: $success-7;
@@ -234,11 +195,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
 
     &.is-text {
       color: $success-6;
-
-      &:hover,
-      &:focus {
-        color: $success-5;
-      }
 
       &:active,
       &.button-hover {
@@ -257,13 +213,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
       background-color: $container-background-color;
     }
 
-    &:hover,
-    &:focus {
-      color: $gray-1;
-      background-color: $warning-5;
-      border-color: $warning-5;
-    }
-
     &:active,
     &.button-hover {
       color: $gray-1;
@@ -275,12 +224,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
       color: $warning-6;
       border-color: $warning-6;
 
-      &:hover,
-      &:focus {
-        color: $warning-5;
-        border-color: $warning-5;
-      }
-
       &:active,
       &.button-hover {
         color: $warning-7;
@@ -290,11 +233,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
 
     &.is-text {
       color: $warning-6;
-
-      &:hover,
-      &:focus {
-        color: $warning-5;
-      }
 
       &:active,
       &.button-hover {
@@ -313,13 +251,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
       background-color: $container-background-color;
     }
 
-    &:hover,
-    &:focus {
-      color: $gray-1;
-      background-color: $error-5;
-      border-color: $error-5;
-    }
-
     &:active,
     &.button-hover {
       color: $gray-1;
@@ -331,12 +262,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
       color: $error-6;
       border-color: $error-6;
 
-      &:hover,
-      &:focus {
-        color: $error-5;
-        border-color: $error-5;
-      }
-
       &:active,
       &.button-hover {
         color: $error-7;
@@ -346,11 +271,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
 
     &.is-text {
       color: $error-6;
-
-      &:hover,
-      &:focus {
-        color: $error-5;
-      }
 
       &:active,
       &.button-hover {
@@ -369,13 +289,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
       background-color: $container-background-color;
     }
 
-    &:hover,
-    &:focus {
-      color: $gray-1;
-      background-color: $info-5;
-      border-color: $info-5;
-    }
-
     &:active,
     &.button-hover {
       color: $gray-1;
@@ -387,12 +300,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
       color: $info-6;
       border-color: $info-6;
 
-      &:hover,
-      &:focus {
-        color: $info-5;
-        border-color: $info-5;
-      }
-
       &:active,
       &.button-hover {
         color: $info-7;
@@ -402,11 +309,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
 
     &.is-text {
       color: $info-6;
-
-      &:hover,
-      &:focus {
-        color: $info-5;
-      }
 
       &:active,
       &.button-hover {
@@ -420,12 +322,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
       color: $color-main-reverse;
       background-color: $container-background-color-reverse;
       border-color: $border-color-reverse;
-
-      &:hover,
-      &:focus {
-        background-color: $primary-6-reverse;
-        border-color: $primary-6-reverse;
-      }
 
       &:active,
       &.button-hover {
@@ -444,13 +340,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
         background-color: $container-background-color-reverse;
       }
 
-      &:hover,
-      &:focus {
-        color: $gray-1;
-        background-color: $primary-5-reverse;
-        border-color: $primary-5-reverse;
-      }
-
       &:active,
       &.button-hover {
         color: $gray-1;
@@ -462,12 +351,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
         color: $primary-6-reverse;
         border-color: $primary-6-reverse;
 
-        &:hover,
-        &:focus {
-          color: $primary-5-reverse;
-          border-color: $primary-5-reverse;
-        }
-
         &:active,
         &.button-hover {
           color: $primary-7-reverse;
@@ -477,11 +360,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
 
       &.is-text {
         color: $primary-6-reverse;
-
-        &:hover,
-        &:focus {
-          color: $primary-5-reverse;
-        }
 
         &:active,
         &.button-hover {
@@ -500,13 +378,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
         background-color: $container-background-color-reverse;
       }
 
-      &:hover,
-      &:focus {
-        color: $gray-1;
-        background-color: $success-5-reverse;
-        border-color: $success-5-reverse;
-      }
-
       &:active,
       &.button-hover {
         color: $gray-1;
@@ -518,12 +389,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
         color: $success-6-reverse;
         border-color: $success-6-reverse;
 
-        &:hover,
-        &:focus {
-          color: $success-5-reverse;
-          border-color: $success-5-reverse;
-        }
-
         &:active,
         &.button-hover {
           color: $success-7-reverse;
@@ -533,11 +398,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
 
       &.is-text {
         color: $success-6-reverse;
-
-        &:hover,
-        &:focus {
-          color: $success-5-reverse;
-        }
 
         &:active,
         &.button-hover {
@@ -556,13 +416,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
         background-color: $container-background-color-reverse;
       }
 
-      &:hover,
-      &:focus {
-        color: $gray-1;
-        background-color: $warning-5-reverse;
-        border-color: $warning-5-reverse;
-      }
-
       &:active,
       &.button-hover {
         color: $gray-1;
@@ -574,12 +427,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
         color: $warning-6-reverse;
         border-color: $warning-6-reverse;
 
-        &:hover,
-        &:focus {
-          color: $warning-5-reverse;
-          border-color: $warning-5-reverse;
-        }
-
         &:active,
         &.button-hover {
           color: $warning-7-reverse;
@@ -589,11 +436,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
 
       &.is-text {
         color: $warning-6-reverse;
-
-        &:hover,
-        &:focus {
-          color: $warning-5-reverse;
-        }
 
         &:active,
         &.button-hover {
@@ -612,13 +454,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
         background-color: $container-background-color-reverse;
       }
 
-      &:hover,
-      &:focus {
-        color: $gray-1;
-        background-color: $error-5-reverse;
-        border-color: $error-5-reverse;
-      }
-
       &:active,
       &.button-hover {
         color: $gray-1;
@@ -630,12 +465,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
         color: $error-6-reverse;
         border-color: $error-6-reverse;
 
-        &:hover,
-        &:focus {
-          color: $error-5-reverse;
-          border-color: $error-5-reverse;
-        }
-
         &:active,
         &.button-hover {
           color: $error-7-reverse;
@@ -645,11 +474,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
 
       &.is-text {
         color: $error-6-reverse;
-
-        &:hover,
-        &:focus {
-          color: $error-5-reverse;
-        }
 
         &:active,
         &.button-hover {
@@ -668,13 +492,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
         background-color: $container-background-color-reverse;
       }
 
-      &:hover,
-      &:focus {
-        color: $gray-1;
-        background-color: $info-5-reverse;
-        border-color: $info-5-reverse;
-      }
-
       &:active,
       &.button-hover {
         color: $gray-1;
@@ -686,12 +503,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
         color: $info-6-reverse;
         border-color: $info-6-reverse;
 
-        &:hover,
-        &:focus {
-          color: $info-5-reverse;
-          border-color: $info-5-reverse;
-        }
-
         &:active,
         &.button-hover {
           color: $info-7-reverse;
@@ -701,11 +512,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
 
       &.is-text {
         color: $info-6-reverse;
-
-        &:hover,
-        &:focus {
-          color: $info-5-reverse;
-        }
 
         &:active,
         &.button-hover {
@@ -718,12 +524,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
   &.is-outlined:not([disabled]) {
     background-color: transparent;
 
-    &:hover,
-    &:focus {
-      color: $primary-6;
-      background-color: transparent;
-    }
-
     &:active,
     &.button-hover {
       color: $primary-7;
@@ -734,11 +534,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
   @if ($has-dark) {
     .is-dark &.is-outlined:not([disabled]) {
       background-color: transparent;
-      &:hover,
-      &:focus {
-        color: $primary-6-reverse;
-        background-color: transparent;
-      }
 
       &:active,
       &.button-hover {
@@ -751,13 +546,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
   &.is-text:not([disabled]) {
     background-color: transparent;
     border-color: transparent;
-
-    &:hover,
-    &:focus {
-      color: $primary-6;
-      background-color: transparent;
-      border-color: transparent;
-    }
 
     &:active,
     &.button-hover {
@@ -776,13 +564,6 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
     .is-dark &.is-text:not([disabled]) {
       background-color: transparent;
       border-color: transparent;
-
-      &:hover,
-      &:focus {
-        color: $primary-6-reverse;
-        background-color: transparent;
-        border-color: transparent;
-      }
 
       &:active,
       &.button-hover {
