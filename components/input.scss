@@ -69,12 +69,6 @@ $input--height--lg: $input--height-base--lg * $scale + $unit; // 38 * $scale + $
   outline: none;
   transition: $transition-default;
 
-  &:hover,
-  &:focus {
-    color: $color-main;
-    border-color: $primary-6;
-  }
-
   &:active {
     color: $color-main;
     border-color: $primary-6;
@@ -88,12 +82,6 @@ $input--height--lg: $input--height-base--lg * $scale + $unit; // 38 * $scale + $
     .is-dark & {
       color: $color-main-reverse;
       border-color: $border-color-reverse;
-
-      &:hover,
-      &:focus {
-        color: $color-main-reverse;
-        border-color: $primary-6-reverse;
-      }
 
       &:active {
         color: $color-main-reverse;
@@ -139,12 +127,6 @@ $input--height--lg: $input--height-base--lg * $scale + $unit; // 38 * $scale + $
   outline: none;
   transition: $transition-default;
 
-  &:hover,
-  &:focus {
-    color: $color-main;
-    border-color: $primary-6;
-  }
-
   &:active {
     color: $color-main;
     border-color: $primary-6;
@@ -154,12 +136,6 @@ $input--height--lg: $input--height-base--lg * $scale + $unit; // 38 * $scale + $
     .is-dark & {
       color: $color-main-reverse;
       border-color: $border-color-reverse;
-
-      &:hover,
-      &:focus {
-        color: $color-main-reverse;
-        border-color: $primary-6-reverse;
-      }
 
       &:active {
         color: $color-main-reverse;
