@@ -95,10 +95,10 @@ npm i -D sass sass-loader
 
 等你学会如何使用这个库之后，还可以去了解这个库其中所遵循的[原则](./design.md)。
 
-最后也不要忘了查看[进阶](../advance/README.md)，看看有什么进阶用法能用到你的项目上，比如全量引入时的体积优化，修改色板，修改单位，修改缩放倍数等等。
+也不要忘了查看[进阶](../advance/README.md)，看看有什么进阶用法能用到你的项目上，比如全量引入时的体积优化，修改色板，修改单位，修改缩放倍数等等。
 
-为了方便快速开发，我们也提供了模版。
+请记住，这个库**只专注于样式**，不考虑任何的交互逻辑，所有的交互逻辑都需要你自行处理。这个库的核心用法就是**组合类名**，快速实现样式表现。
 
-- [boilerplate-uni-app](https://github.com/ModyQyW/boilerplate-uni-app) - 结合了 uview-ui 和 uni-ui 的 uni-app 模板。
-- [boilerplate-taro](https://github.com/ModyQyW/boilerplate-taro) - taro 模板。
-- [boilerplate-rax](https://github.com/ModyQyW/boilerplate-rax) - rax 模板。
+为了方便快速开发，你也可以使用社区内的模版。
+
+- [boilerplate-uni-app](https://github.com/MillCloud/boilerplate-uni-app) - 结合了 uview-ui 和 uni-ui 的 uni-app 模板。

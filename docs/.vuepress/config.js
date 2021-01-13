@@ -183,6 +183,10 @@ module.exports = {
         link: '/changelog/',
       },
       {
+        text: '赞赏',
+        link: '/donation/',
+      },
+      {
         text: 'Gitee',
         link: 'https://gitee.com/ModyQyW/mp-scss#readme',
       },
@@ -196,12 +200,7 @@ module.exports = {
         {
           title: '指南',
           collapsable: false,
-          children: ['', 'getting-started'],
-        },
-        {
-          title: '原则',
-          collapsable: false,
-          children: ['usage', 'implement'],
+          children: ['', 'getting-started', 'implement'],
         },
       ],
       '/classes/': [
