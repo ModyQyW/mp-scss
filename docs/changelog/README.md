@@ -1,5 +1,15 @@
 # 改动日志
 
+## 2.1
+
+### 2.1.0
+
+- 新增 - components - overlay 支持 is-hidden 类，用于设置 overlay 显隐时的动画效果。
+- 调整 - 默认支持 android >= 4.4 和 ios >= 10。
+- 调整 - 把 sass 从 1.32.4 更新到 1.32.5。
+- 调整 - variables - 调整 transition 的默认值，加入`all`。
+- 调整 - docs - 调整部分描述。
+
 ## 2.0
 
 ### 2.0.4
