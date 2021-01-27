@@ -25,3 +25,8 @@
     }
   }
 }
+
+.overlay.is-hidden {
+  z-index: -($z-index-max - $z-index-step * 2);
+  opacity: 0;
+}

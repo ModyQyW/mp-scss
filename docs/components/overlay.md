@@ -18,6 +18,18 @@
 </view>
 ```
 
+## 隐藏 <Badge text="2.1 起" />
+
+要隐藏一个遮罩，只需要为`.overlay`添加`.is-hidden`。
+
+```html
+<view class="container">
+  <view class="overlay is-hidden"></view>
+</view>
+```
+
+要切换显示和隐藏，只需要动态地去掉和添加`.is-hidden`即可。
+
 ## 明亮模式和暗黑模式
 
 默认使用明亮模式。[手动开启暗黑模式](../advance/README.md#明亮模式和暗黑模式)并在`.container`上使用`.is-dark`，就能指定使用暗黑模式。
