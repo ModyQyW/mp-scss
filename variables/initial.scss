@@ -314,4 +314,4 @@ $m-opacity: (
   "-100": 1
 ) !default;
 // transition
-$transition-default: 0.48s cubic-bezier(0.25, 0.8, 0.5, 1) !default;
+$transition-default: all 0.48s cubic-bezier(0.25, 0.8, 0.5, 1) !default;
