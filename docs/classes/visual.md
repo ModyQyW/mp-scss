@@ -37,8 +37,8 @@ $m-background-color-reverse: (
 |`.bg-no-repeat`|`background-repeat: no-repeat;`|
 
 ```scss
-// 生成 .bg-repeat, .bg-repeat-y, .bg-repeat-x, .bg-no-repeat, .bg-repeat-space,
-//     .bg-repeat-round
+// 生成 .bg-repeat, .bg-repeat-y, .bg-repeat-x, .bg-no-repeat,
+//     .bg-repeat-space, .bg-repeat-round
 $m-background-repeat: (
   "-repeat": repeat,
   "-repeat-y": repeat-y,
@@ -82,8 +82,8 @@ $m-background-attachment: (
 |`.bg-center`|`background-position: center;`|
 
 ```scss
-// 生成 .bg-top, .bg-right, .bg-bottom, .bg-left, .bg-right-top, .bg-right-bottom,
-//     .bg-left-top, .bg-left-bottom, .bg-center
+// 生成 .bg-top, .bg-right, .bg-bottom, .bg-left, .bg-right-top,
+//     .bg-right-bottom, .bg-left-top, .bg-left-bottom, .bg-center
 $m-background-position: (
   "-top": top,
   "-right": right,

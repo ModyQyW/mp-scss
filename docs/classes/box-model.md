@@ -195,7 +195,8 @@ $m-align-content: (
 |`.align-center`|`align-items: center;`|
 
 ```scss
-// 生成 .align-start, .align-end, .align-center, .align-baseline, .align-stretch
+// 生成 .align-start, .align-end, .align-center, .align-baseline,
+//     .align-stretch
 $m-align-items: (
   "-start": flex-start,
   "-end": flex-end,
@@ -219,8 +220,8 @@ $m-align-items: (
 |`.align-self-center`|`align-self: center;`|
 
 ```scss
-// 生成 .align-self-auto, .align-self-start, .align-self-end, .align-self-center,
-//     .align-self-stretch
+// 生成 .align-self-auto, .align-self-start, .align-self-end,
+//     .align-self-center, .align-self-stretch
 $m-align-self: (
   "-auto": auto,
   "-start": flex-start,
@@ -665,8 +666,9 @@ $margin-has-1-real: false;
 |`.overflow-x-hidden`|`overflow-x: hidden;`|
 
 ```scss
-// 生成 .overflow-visible, .overflow-hidden, .overflow-visible, .overflow-scroll,
-//     .overflow-{y|x}-visible, .overflow-{y|x}-hidden, .overflow-{y|x}-scroll
+// 生成 .overflow-visible, .overflow-hidden, .overflow-visible,
+//     .overflow-scroll, .overflow-{y|x}-visible, .overflow-{y|x}-hidden,
+//     .overflow-{y|x}-scroll
 $m-overflow: (
   "-auto": auto,
   "-hidden": hidden,

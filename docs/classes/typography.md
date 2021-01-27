@@ -184,7 +184,8 @@ $m-font-variant: ();
 |`.leading-44`|`line-height: 88rpx;`|
 
 ```scss
-// 生成 .leading, .leading-xs, .leading-sm, .leading-md, .leading-lg, .leading-xl
+// 生成 .leading, .leading-xs, .leading-sm, .leading-md, .leading-lg,
+//     .leading-xl
 $line-height-default: 1.5;
 $line-height-diff: 0.25;
 $m-font-size: (
