@@ -44,7 +44,7 @@
   min-height: 0;
 }
 
-@for $v from 1 to $grid-max {
+@for $v from 1 through $grid-max {
   $percent: $v / $grid-max * 100%;
   .col-#{$v} {
     flex: 0 0 $percent;

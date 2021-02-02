@@ -1079,7 +1079,7 @@ $m-width: (
   "-half": 50%
 ) !default;
 @each $denominator in $l-width-denominator {
-  @for $molecule from 1 to ($denominator - 1) {
+  @for $molecule from 1 through ($denominator - 1) {
     $m-width: map-merge(
       $m-width,
       (
@@ -1112,7 +1112,7 @@ $m-height: (
   "-half": 50%
 ) !default;
 @each $denominator in $l-height-denominator {
-  @for $molecule from 1 to ($denominator - 1) {
+  @for $molecule from 1 through ($denominator - 1) {
     $m-height: map-merge(
       $m-height,
       (
@@ -1156,7 +1156,7 @@ $m-padding: (
   ) * $scale + $unit
 ) !default;
 @each $denominator in $l-padding-denominator {
-  @for $molecule from 1 to ($denominator - 1) {
+  @for $molecule from 1 through ($denominator - 1) {
     $m-padding: map-merge(
       $m-padding,
       (
@@ -1207,7 +1207,7 @@ $m-margin: (
   ) * $scale + $unit
 ) !default;
 @each $denominator in $l-margin-denominator {
-  @for $molecule from 1 to ($denominator - 1) {
+  @for $molecule from 1 through ($denominator - 1) {
     $m-margin: map-merge(
       $m-margin,
       (
