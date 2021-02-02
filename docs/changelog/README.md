@@ -2,6 +2,10 @@
 
 ## 2.1
 
+### 2.1.1
+
+- 修复 - classes - 修复 width，height，padding，margin，col 相关类缺失的问题
+
 ### 2.1.0
 
 - 新增 - components - overlay 支持 is-hidden 类，用于设置 overlay 显隐时的动画效果。
