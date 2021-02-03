@@ -49,7 +49,7 @@
     "docs:deploy": "sh deploy.sh",
     "release": "yarn deploy && yarn docs:deploy",
     "check": "ncu",
-    "commit": "git-cz && git push"
+    "commit": "cz && git push"
   },
   "config": {
     "commitizen": {
