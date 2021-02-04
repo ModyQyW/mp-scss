@@ -10,11 +10,11 @@
   }
 
   .bottom#{$k} {
-    right: $v if($has-important, !important, null);
+    bottom: $v if($has-important, !important, null);
   }
 
   .left#{$k} {
-    right: $v if($has-important, !important, null);
+    left: $v if($has-important, !important, null);
   }
 
   .inset#{$k} {
