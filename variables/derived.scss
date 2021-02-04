@@ -1273,14 +1273,7 @@ $m-border-color-reverse: (
 ) !default;
 // border-width
 $m-border-width: (
-  "": $border-width-base * $scale + $unit,
-  "-md": $border-width-base * $scale + $unit,
-  "-lg": (
-    $border-width-base + $border-width-diff
-  ) * $scale + $unit,
-  "-xl": (
-    $border-width-base + $border-width-diff * 2
-  ) * $scale + $unit
+  "": $border-width-base * $scale + $unit
 ) !default;
 $tmp-border-width: $border-width-min;
 @while ($tmp-border-width <= $border-width-max) {
