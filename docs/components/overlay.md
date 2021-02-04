@@ -18,7 +18,7 @@
 </view>
 ```
 
-## 隐藏 <Badge text="2.1 起" />
+## 隐藏 <Badge text="2.1 添加" />
 
 要隐藏一个遮罩，只需要为`.overlay`添加`.is-hidden`。
 
