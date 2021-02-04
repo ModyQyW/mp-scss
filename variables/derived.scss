@@ -1155,16 +1155,6 @@ $m-padding: (
     $padding-base + $padding-diff * 2
   ) * $scale + $unit
 ) !default;
-@each $denominator in $l-padding-denominator {
-  @for $molecule from 1 through ($denominator - 1) {
-    $m-padding: map-merge(
-      $m-padding,
-      (
-        "-#{$molecule}-#{$denominator}": $molecule / $denominator * 100%
-      )
-    );
-  }
-}
 $tmp-padding: $padding-min;
 @while ($tmp-padding <= $padding-max) {
   $m-padding: map-merge(
