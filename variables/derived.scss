@@ -1201,20 +1201,7 @@ $m-font-family: (
 ) !default;
 // font-size
 $m-font-size: (
-  "": $font-size-base * $scale + $unit,
-  "-xs": (
-    $font-size-base - $font-size-diff * 2
-  ) * $scale + $unit,
-  "-sm": (
-    $font-size-base - $font-size-diff
-  ) * $scale + $unit,
-  "-md": $font-size-base * $scale + $unit,
-  "-lg": (
-    $font-size-base + $font-size-diff
-  ) * $scale + $unit,
-  "-xl": (
-    $font-size-base + $font-size-diff * 2
-  ) * $scale + $unit
+  "": $font-size-base * $scale + $unit
 ) !default;
 $tmp-font-size: $font-size-min;
 @while ($tmp-font-size <= $font-size-max) {
