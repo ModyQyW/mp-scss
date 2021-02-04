@@ -1216,11 +1216,11 @@ $tmp-font-size: $font-size-min;
 // line-height
 $m-line-height: (
   "": $line-height-default,
-  "-xs": $line-height-default - $line-height-diff * 2,
-  "-sm": $line-height-default - $line-height-diff,
-  "-md": $line-height-default,
-  "-lg": $line-height-default + $line-height-diff,
-  "-xl": $line-height-default + $line-height-diff * 2
+  "-none": $line-height-default - $line-height-diff * 2,
+  "-tight": $line-height-default - $line-height-diff,
+  "-normal": $line-height-default,
+  "-relaxed": $line-height-default + $line-height-diff,
+  "-loose": $line-height-default + $line-height-diff * 2
 ) !default;
 $tmp-line-height: $line-height-min;
 @while ($tmp-line-height <= $line-height-max) {
