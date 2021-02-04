@@ -4,7 +4,7 @@
 
 ### 2.1.1
 
-- 修复 - classes - 修复 width，height，padding，margin，col 相关类缺失的问题
+- 修复 - classes - 修复 width，height，padding，margin，col 相关类缺失的问题。
 
 ### 2.1.0
 
@@ -18,7 +18,7 @@
 
 ### 2.0.4
 
-- 调整 - 把 sass 从 1.30.0 更新到 1.32.4
+- 调整 - 把 sass 从 1.30.0 更新到 1.32.4。
 
 ### 2.0.3
 
