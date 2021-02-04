@@ -1167,20 +1167,7 @@ $tmp-padding: $padding-min;
 }
 // margin
 $m-margin: (
-  "-auto": auto,
-  "-xs": (
-    $margin-base - $margin-diff * 2
-  ) * $scale + $unit,
-  "-sm": (
-    $margin-base - $margin-diff
-  ) * $scale + $unit,
-  "-md": $margin-base * $scale + $unit,
-  "-lg": (
-    $margin-base + $margin-diff
-  ) * $scale + $unit,
-  "-xl": (
-    $margin-base + $margin-diff * 2
-  ) * $scale + $unit
+  "-auto": auto
 ) !default;
 $tmp-margin: $margin-min;
 @while ($tmp-margin <= $margin-max) {
