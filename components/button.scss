@@ -3,7 +3,7 @@
 
 /* .btn */
 // border-width
-$btn--border-width-base: $border-width-base; // 1
+$btn--border-width-base: 1;
 $btn--border-width: $btn--border-width-base * $scale + $unit; // 1 * $scale + $unit
 // padding-y
 $btn--padding-y-base: 4;
