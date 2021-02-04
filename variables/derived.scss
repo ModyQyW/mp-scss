@@ -1140,21 +1140,7 @@ $tmp-height: $height-min;
   );
 }
 // padding
-$m-padding: (
-  "-xs": (
-    $padding-base - $padding-diff * 2
-  ) * $scale + $unit,
-  "-sm": (
-    $padding-base - $padding-diff
-  ) * $scale + $unit,
-  "-md": $padding-base * $scale + $unit,
-  "-lg": (
-    $padding-base + $padding-diff
-  ) * $scale + $unit,
-  "-xl": (
-    $padding-base + $padding-diff * 2
-  ) * $scale + $unit
-) !default;
+$m-padding: () !default;
 $tmp-padding: $padding-min;
 @while ($tmp-padding <= $padding-max) {
   $m-padding: map-merge(
