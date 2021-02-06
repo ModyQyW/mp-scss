@@ -30,10 +30,13 @@ Copyright (c) 2019-present ModyQyW
 
 ## 致谢
 
+下面按字母表顺序排列。
+
 - [Ant Design](https://ant.design/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Bulma](https://bulma.io/)
 - [Material Design](https://material.io/)
 - [ress.css](https://ress-css.surge.sh/)
 - [Tailwindcss](https://tailwindcss.com/)
+- [Vant](https://vant-contrib.gitee.io/vant/)
 - [Vuetify](https://vuetifyjs.com/)
