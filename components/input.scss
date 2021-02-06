@@ -2,7 +2,7 @@
 
 /* variables */
 // border-width
-$input--border-width-base: 1;
+$input--border-width-base: 1 !default;
 $input--border-width: $input--border-width-base * $scale + $unit;
 // padding-y
 $input--padding-y-base: 4 !default;
