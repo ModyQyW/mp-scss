@@ -49,16 +49,16 @@
 </view>
 ```
 
-## 使用文字
+## 使用文字或图标
 
-要使用带文字的分割线较为复杂。
+要使用带文字的水平分割线较为复杂。其中，`.divider-content` 是 2.2 新增的，在这个版本之前你应该使用 `.divider-text`（在 2.2 被移除）。
 
 ```html
 <view class="container">
   <view>Lorem</view>
-  <view class="divider-wrapper">
+  <view class="divider-wrapper w-full">
     <view class="divider"></view>
-    <view class="divider-text">text</view>
+    <view class="divider-content">text</view>
     <view class="divider"></view>
   </view>
   <view>Lorem</view>
@@ -70,11 +70,29 @@
 ```html
 <view class="container">
   <view>Lorem</view>
-  <view class="divider-wrapper is-left">
+  <view class="divider-wrapper w-full is-left">
     <view class="divider"></view>
-    <view class="divider-text">text</view>
+    <view class="divider-content">text</view>
     <view class="divider"></view>
   </view>
   <view>Lorem</view>
 </view>
 ```
+
+同理可以使用图标。
+
+## 变量 <Badge text="2.2 新增">
+
+下面是一些可供自定义的变量。
+
+|变量名|变量值|
+|---|---|
+|`$divider--margin-y-base`|8|
+|`$divider--margin-y-base--vertical`|0|
+|`$divider-wrapper--margin-y-base`|8|
+|`$divider-content--padding-y-base`|0|
+|`$divider--margin-x-base`|0|
+|`$divider--margin-x-base--vertical`|8|
+|`$divider-wrapper--margin-x-base`|0|
+|`$divider-content--padding-x-base`|8|
+|`$divider--border-width-base`|1|

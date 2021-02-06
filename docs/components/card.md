@@ -68,3 +68,27 @@
   <view class="card">...</view>
 </view>
 ```
+
+## 变量 <Badge text="2.2 新增">
+
+下面是一些可供自定义的变量。
+
+|变量名|变量值|
+|---|---|
+|`$card-header--padding-y-base`|16|
+|`$card-header--padding-y-base--sm`|8|
+|`$card-content--padding-y-base`|16|
+|`$card-content--padding-y-base--sm`|8|
+|`$card-footer--padding-y-base`|16|
+|`$card-footer--padding-y-base--sm`|8|
+|`$card-header--padding-x-base`|16|
+|`$card-header--padding-x-base--sm`|8|
+|`$card-content--padding-x-base`|16|
+|`$card-content--padding-x-base--sm`|8|
+|`$card-footer--padding-x-base`|16|
+|`$card-footer--padding-x-base--sm`|8|
+|`$card--font-size-base`|`$font-size-base`，默认为 14|
+|`$card--font-size-base--sm`|`$font-size-base`，默认为 14|
+|`$card--line-height`|`$line-height-default`，默认为 1.5|
+|`$card--line-height--sm`|`$line-height-default`，默认为 1.5|
+|`$card--border-width-base`|1|

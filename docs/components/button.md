@@ -19,16 +19,6 @@
 </view>
 ```
 
-## 水波纹
-
-添加`is-ripply`就可以使用内置的水波纹效果。
-
-```html
-<view class="container">
-  <button class="btn is-ripply">水波纹</button>
-</view>
-```
-
 ## 主题
 
 默认有`default`，`primary`，`success`，`warning`，`error`, `info`六个主题。
@@ -79,14 +69,59 @@
 </view>
 ```
 
-## 尺寸
+## 水波纹
 
-使用`.is-sm`可以使用更小的`.btn`，使用`.is-lg`可以使用更大的`.btn`，可以结合不同主题、不同模式使用。
+添加`is-ripply`就可以使用内置的水波纹效果，可以结合不同主题、不同模式使用。
 
 ```html
 <view class="container">
+  <button class="btn is-ripply">水波纹</button>
+</view>
+```
+
+## 尺寸
+
+内置四个尺寸类，可以结合不同主题、不同模式使用。其中，`.is-xs` 和 `.is-xl` 是 2.2 新增的。
+
+```html
+<view class="container">
+  <button class="btn is-xs">extra small</button>
   <button class="btn is-sm">small</button>
   <button class="btn">default</button>
   <button class="btn is-lg">large</button>
+  <button class="btn is-xl">extra large</button>
 </view>
 ```
+
+## 变量 <Badge text="2.2 新增">
+
+下面是一些可供自定义的变量。
+
+|变量名|变量值|
+|---|---|
+|`$btn--border-width-base`|1|
+|`$btn--padding-y-base`|4|
+|`$btn--padding-y-base--xs`|0|
+|`$btn--padding-y-base--sm`|2|
+|`$btn--padding-y-base--lg`|6|
+|`$btn--padding-y-base--xl`|8|
+|`$btn--padding-x-base`|16|
+|`$btn--padding-x-base--xs`|8|
+|`$btn--padding-x-base--sm`|12|
+|`$btn--padding-x-base--lg`|20|
+|`$btn--padding-x-base--xl`|24|
+|`$btn--font-size-base`|`$font-size-base`，默认为 14|
+|`$btn--font-size-base--xs`|`$font-size-base`，默认为 14|
+|`$btn--font-size-base--sm`|`$font-size-base`，默认为 14|
+|`$btn--font-size-base--lg`|`$font-size-base + $font-size-diff`，默认为 16|
+|`$btn--font-size-base--xl`|`$font-size-base + $font-size-diff`，默认为 16|
+|`$btn--line-height`|`$line-height-default`，默认为 1.5|
+|`$btn--line-height--xs`|`$line-height-default`，默认为 1.5|
+|`$btn--line-height--sm`|`$line-height-default`，默认为 1.5|
+|`$btn--line-height--lg`|`$line-height-default`，默认为 1.5|
+|`$btn--line-height--xl`|`$line-height-default`，默认为 1.5|
+|`$btn--height-base`|`$btn--border-width-base * 2 + $btn--padding-y-base * 2 + $btn--font-size-base * $btn--line-height`，默认为 31|
+|`$btn--height-base--xs`|`$btn--border-width-base * 2 + $btn--padding-y-base--xs * 2 + $btn--font-size-base--xs * $btn--line-height--xs`，默认为 23|
+|`$btn--height-base--sm`|`$btn--border-width-base * 2 + $btn--padding-y-base--sm * 2 + $btn--font-size-base--sm * $btn--line-height--sm`，默认为 27|
+|`$btn--height-base--lg`|`$btn--border-width-base * 2 + $btn--padding-y-base--lg * 2 + $btn--font-size-base--lg * $btn--line-height--lg`，默认为 38|
+|`$btn--height-base--xl`|`$btn--border-width-base * 2 + $btn--padding-y-base--xl * 2 + $btn--font-size-base--xl * $btn--line-height--xl`，默认为 42|

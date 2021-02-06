@@ -1,7 +1,5 @@
 # 栅格系统类 grid
 
-[微信小程序代码片段](https://developers.weixin.qq.com/s/7E3vTZmp7bly)
-
 ## 默认样式
 
 要使用栅格系统类，需要先引入。
@@ -149,9 +147,3 @@ $gutter-step: 4;
 // @import "~@modyqyw/mp-scss/layout";
 // @import "~@modyqyw/mp-scss/layout/grid";
 ```
-
-## FAQ
-
-### 为什么`.row`不能占满一行
-
-这很有可能是因为`.row`的父容器带有样式`display: flex; flex-direction: column`，出现这种情况时你需要为`.row`指定`.w-full`。如果需要使用列间隔，请手动指定`.row`的`width`以确保间隔正常。

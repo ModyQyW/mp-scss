@@ -20,7 +20,7 @@
 
 ## 主题
 
-默认有`default`，`white`，`primary`，`success`，`warning`，`error`, `info`七个主题。
+默认有`default`，`white`，`black`，`primary`，`success`，`warning`，`error`, `info` 八个主题。其中，`black` 是 2.2 新增的。
 
 ```html
 <view class="container">
@@ -28,6 +28,8 @@
   <view class="loader"></view>
   <!-- white 主题 -->
   <view class="loader is-white"></view>
+  <!-- black 主题 -->
+  <view class="loader is-black"></view>
   <!-- primary 主题 -->
   <view class="loader is-primary"></view>
   <!-- success 主题 -->
@@ -56,11 +58,15 @@
 
 ## 尺寸
 
-使用`.is-lg`可以使用更大的`.loader`，可以结合不同主题、不同模式使用。
+内置四个尺寸类。其中，`.is-xs` 和 `.is-xl` 是 2.2 新增的。
 
 ```html
 <view class="container">
+  <view class="loader is-xs"></view>
+  <view class="loader is-sm"></view>
+  <view class="loader"></view>
   <view class="loader is-lg"></view>
+  <view class="loader is-xl"></view>
 </view>
 ```
 
@@ -75,10 +81,21 @@
 </button>
 ```
 
+注意需要让`.loader::after`的背景色和父元素的背景色保持一致。
+
 ```scss
-.btn.is-primary .loader.is-white::after {
+.btn.is-primary.is-loading .loader::after {
   background-color: $primary;
 }
 ```
 
-注意需要让`.loader::after`的背景色和父元素的背景色保持一致。
+## 变量 <Badge text="2.2 新增" />
+
+下面是一些可供自定义的变量。
+
+|变量名|变量值|
+|---|---|
+|`$loader--font-size-base`|`$font-size-base`，默认为 14|
+|`$loader--font-size-diff`|`$font-size-diff`，默认为 2|
+|`$loader--line-height`|`$line-height-default`，默认为 1.5|
+|`$loader--animation-duration`|1s|

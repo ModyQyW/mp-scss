@@ -26,7 +26,7 @@ npm i -D sass sass-loader
 
 现在就可以使用所有这个库的所有功能了。
 
-比如为页面添加布局。[微信小程序代码片段](https://developers.weixin.qq.com/s/S23bgZmT7qlI)
+比如为页面添加布局。
 
 ```html
 <view class="container h-full">
@@ -41,7 +41,7 @@ npm i -D sass sass-loader
 </view>
 ```
 
-又比如使用栅格系统。[微信小程序代码片段](https://developers.weixin.qq.com/s/7E3vTZmp7bly)
+又比如使用栅格系统。
 
 ```html
 <view class="container h-full">

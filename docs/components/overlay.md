@@ -18,7 +18,7 @@
 </view>
 ```
 
-## 隐藏 <Badge text="2.1 添加" />
+## 隐藏 <Badge text="2.1 新增" />
 
 要隐藏一个遮罩，只需要为`.overlay`添加`.is-hidden`。
 
@@ -38,9 +38,6 @@
 <view class="container">
   <view class="overlay"></view>
 </view>
-```
-
-```html
 <view class="container is-dark">
   <view class="overlay"></view>
 </view>
@@ -61,3 +58,12 @@
   </view>
 </view>
 ```
+
+## 变量 <Badge text="2.2 新增" />
+
+下面是一些可供自定义的变量。
+
+|变量名|变量值|
+|---|---|
+|`$overlay--z-index`|`$z-index-max - $z-index-step`，默认为 40|
+|`$overlay--background-color`|`fade-out($black, 0.55)`，即 `rgba(0, 0, 0, 0.45)`|

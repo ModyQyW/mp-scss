@@ -4,17 +4,20 @@
 
 |类名|样式|
 |---|---|
-|`.font`|`font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";`|
+|`.font`|`font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";`|
 
 ```scss
 // 生成 .font, .font-sans, .font-serif, .font-mono
-$font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
-  "Microsoft YaHei", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-$font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-  Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
-$font-family-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+  "Microsoft YaHei", "微软雅黑", Arial, "Noto Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-serif: georgia, cambria, "Times New Roman", times, serif;
+$font-family-mono: menlo, monaco, consolas, "Liberation Mono", "Courier New",
+  monospace;
 $font-family: (
   "": $font-family-default,
   "-sans": $font-family-sans,
@@ -33,11 +36,11 @@ $font-family: (
 |类名|样式|
 |---|---|
 |`.text`|`font-size: 28rpx;`|
-|`.text-xs`|`font-size: 20rpx;`|
-|`.text-sm`|`font-size: 24rpx;`|
-|`.text-md`|`font-size: 28rpx;`|
-|`.text-lg`|`font-size: 32rpx;`|
-|`.text-xl`|`font-size: 36rpx;`|
+|`.text-xs`<Badge text="2.2 移除" />|`font-size: 20rpx;`|
+|`.text-sm`<Badge text="2.2 移除" />|`font-size: 24rpx;`|
+|`.text-md`<Badge text="2.2 移除" />|`font-size: 28rpx;`|
+|`.text-lg`<Badge text="2.2 移除" />|`font-size: 32rpx;`|
+|`.text-xl`<Badge text="2.2 移除" />|`font-size: 36rpx;`|
 |`.text-10`|`font-size: 20rpx;`|
 |`.text-12`|`font-size: 24rpx;`|
 |`.text-14`|`font-size: 28rpx;`|
@@ -52,28 +55,16 @@ $font-family: (
 |`.text-32`|`font-size: 64rpx;`|
 |`.text-34`|`font-size: 68rpx;`|
 |`.text-36`|`font-size: 72rpx;`|
+|`.text-38`<Badge text="2.2 新增" />|`font-size: 76rpx;`|
+|`.text-40`<Badge text="2.2 新增" />|`font-size: 80rpx;`|
 
 ```scss
-// 生成 .text, .text-xs, .text-sm, .text-md, .text-lg, .text-xl
+// 生成 .text
 $scale: 2;
 $unit: rpx;
 $font-size-base: 16;
-$font-size-diff: 2;
 $m-font-size: (
-  "": $font-size-base * $scale + $diff,
-  "-xs": (
-    $font-size-base - $font-size-diff * 2
-  ) * $scale + $unit,
-  "-sm": (
-    $font-size-base - $font-size-diff
-  ) * $scale + $unit,
-  "-md": $font-size-base * $scale + $unit,
-  "-lg": (
-    $font-size-base + $font-size-diff
-  ) * $scale + $unit,
-  "-xl": (
-    $font-size-base + $font-size-diff * 2
-  ) * $scale + $unit
+  "": $font-size-base * $scale + $diff
 );
 // 生成 .text-12, .text-14, .text-16, .text-18, .text-20, .text-22, .text-24
 $font-size-min: 12;
@@ -163,11 +154,16 @@ $m-font-variant: ();
 |类名|样式|
 |---|---|
 |`.leading`|`line-height: 1.5;`|
-|`.leading-xs`|`line-height: 1;`|
-|`.leading-sm`|`line-height: 1.25;`|
-|`.leading-md`|`line-height: 1.5;`|
-|`.leading-lg`|`line-height: 1.75;`|
-|`.leading-xl`|`line-height: 2;`|
+|`.leading-xs`<Badge text="2.2 移除" />|`line-height: 1;`|
+|`.leading-sm`<Badge text="2.2 移除" />|`line-height: 1.25;`|
+|`.leading-md`<Badge text="2.2 移除" />|`line-height: 1.5;`|
+|`.leading-lg`<Badge text="2.2 移除" />|`line-height: 1.75;`|
+|`.leading-xl`<Badge text="2.2 移除" />|`line-height: 2;`|
+|`.leading-none`<Badge text="2.2 新增" />|`line-height: 1;`|
+|`.leading-tight`<Badge text="2.2 新增" />|`line-height: 1.25;`|
+|`.leading-normal`<Badge text="2.2 新增" />|`line-height: 1.5;`|
+|`.leading-relaxed`<Badge text="2.2 新增" />|`line-height: 1.75;`|
+|`.leading-loose`<Badge text="2.2 新增" />|`line-height: 2;`|
 |`.leading-18`|`line-height: 36rpx;`|
 |`.leading-20`|`line-height: 40rpx;`|
 |`.leading-22`|`line-height: 44rpx;`|
@@ -182,20 +178,21 @@ $m-font-variant: ();
 |`.leading-40`|`line-height: 80rpx;`|
 |`.leading-42`|`line-height: 84rpx;`|
 |`.leading-44`|`line-height: 88rpx;`|
+|`.leading-46`|`line-height: 92rpx;`|
+|`.leading-48`|`line-height: 98rpx;`|
 
 ```scss
-// 生成 .leading, .leading-xs, .leading-sm, .leading-md, .leading-lg,
-//     .leading-xl
+// 生成 .leading, .leading-none, .leading-tight, .leading-normal,
+//     .leading-relaxed, .leading-loose
 $line-height-default: 1.5;
 $line-height-diff: 0.25;
 $m-font-size: (
   "": $line-height-default,
-  "-xs": $line-height-default - $line-height-diff * 2,
-  "-sm": $line-height-default - $line-height-diff,
-  "-md": $line-height-default,
-  "-lg": $line-height-default + $line-height-diff,
-  "-xl": $line-height-default + $line-height-diff * 2
-
+  "-none": $line-height-default - $line-height-diff * 2,
+  "-tight": $line-height-default - $line-height-diff,
+  "-normal": $line-height-default,
+  "-relaxed": $line-height-default + $line-height-diff,
+  "-loose": $line-height-default + $line-height-diff * 2
 );
 // 生成 .leading-20, .leading-22, .leading-24, .leading-26, .leading-28,
 //     .leading-30, .leading-32
@@ -218,7 +215,7 @@ $line-height-step: 2;
 |`.text-secondary`|`color: rgba(0, 0, 0, .45);`|
 |`.text-disabled`|`color: rgba(0, 0, 0, .25);`|
 
-支持`$m-colors`和`$m-colors-reverse`里的色彩，此处省略，见[进阶 - 色彩](../advance/README.md#色彩)。
+支持`$m-colors`和`$m-colors-reverse`里的色彩，详见[进阶 - 色彩](../advance/README.md#色彩)。
 
 ```scss
 // 生成 .text, .text-main, .text-secondary, .text-disabled
@@ -277,10 +274,9 @@ $m-text-align: (
 |`.text-underline`|`text-decoration: underline;`|
 
 ```scss
-// 生成 .text-none, .text-overline, .text-underline, .text-line-through
+// 生成 .text-none, .text-underline, .text-line-through
 $m-text-decoration: (
   "-none": none,
-  "-overline": overline,
   "-underline": underline,
   "-line-through": line-through
 ) !default;

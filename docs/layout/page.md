@@ -1,7 +1,5 @@
 # 页面布局类 page
 
-[微信小程序代码片段](https://developers.weixin.qq.com/s/S23bgZmT7qlI)
-
 ## 默认样式
 
 要使用页面布局类，需要先引入。

@@ -27,8 +27,8 @@
   - `.border*`类由多个相关属性共享，但`.border`本身可以明确表达需要使用边框的意图，对应地可以在`$m-border-color`，`$m-border-style`，`$m-border-width`都使用空字符串作为默认值的键，对应的类就是`.border`，表示要使用默认的边框。
 - 变量名前缀是`l-` - [列表`list`](https://sass-lang.com/documentation/modules/list)，只会用于百分比值的生成，如`$l-width-denominator`表示`width`相关的类会出现百分比的值，分数形式下的分母源于`$l-width-denominator`。
 - 变量名后缀是`-default` - 作为基准值、可以被直接使用的简单变量，如`$line-height-default`表示`line-height`的基准值。对于同一属性，变量名后缀是`-base`的变量和变量名后缀是`-default`的变量最多只能存在一个。
-- 变量名后缀是`-base` - 作为基准值、需要作简单处理（往往是增减差量，乘以缩放倍数和添加单位）才能被使用的简单变量，如`$padding-base`。对于同一属性，变量名后缀是`-base`的变量和变量名后缀是`-default`的变量最多只能存在一个。
-- 变量名后缀是`-diff` - 用于生成映射初始值的变量，表示差量，直接被基准值加减，如`$padding-diff`。
+- 变量名后缀是`-base` - 作为基准值、需要作简单处理（往往是增减差量，乘以缩放倍数和添加单位）才能被使用的简单变量，如`$font-size-base`。对于同一属性，变量名后缀是`-base`的变量和变量名后缀是`-default`的变量最多只能存在一个。
+- 变量名后缀是`-diff` - 用于生成映射初始值的变量，表示差量，直接被基准值加减，如`$line-height-diff`。
 - 变量名后缀是`-min` - 用于循环填充映射的变量，表示循环开始的值，如`$padding-min`。
 - 变量名后缀是`-max` - 用于循环填充映射的变量，表示循环结束的值，如`$padding-max`。
 - 变量名后缀是`-step` - 用于循环填充映射的变量，表示循环循环每次递增的值，如`$padding-step`。

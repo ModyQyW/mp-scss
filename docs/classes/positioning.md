@@ -9,14 +9,12 @@
 |`.fixed`|`position: fixed;`|
 
 ```scss
-// 生成 .relative, .absolute, .fixed, .static, .sticky
+// 生成 .relative, .absolute, .fixed
 $m-position: (
   "relative": relative,
   "absolute": absolute,
-  "fixed": fixed,
-  "static": static,
-  "sticky": sticky
-);
+  "fixed": fixed
+)
 
 @import "~@modyqyw/mp-scss";
 // @import "~@modyqyw/mp-scss/classes";
