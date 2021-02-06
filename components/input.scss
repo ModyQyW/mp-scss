@@ -1,49 +1,61 @@
 @import "../variables";
 
-/* .input */
+/* variables */
 // border-width
 $input--border-width-base: 1;
-$input--border-width: $input--border-width-base * $scale + $unit; // 1 * $scale + $unit
+$input--border-width: $input--border-width-base * $scale + $unit;
 // padding-y
-$input--padding-y-base: 4;
-$input--padding-y: $input--padding-y-base * $scale + $unit; // 4 * $scale + $unit
+$input--padding-y-base: 4 !default;
+$input--padding-y: $input--padding-y-base * $scale + $unit;
+$input--padding-y-base--xs: 0 !default;
+$input--padding-y--xs: $input--padding-y-base--xs * $scale + $unit;
+$input--padding-y-base--sm: 2 !default;
+$input--padding-y--sm: $input--padding-y-base--sm * $scale + $unit;
+$input--padding-y-base--lg: 6 !default;
+$input--padding-y--lg: $input--padding-y-base--lg * $scale + $unit;
+$input--padding-y-base--xl: 8 !default;
+$input--padding-y--xl: $input--padding-y-base--xl * $scale + $unit;
 // padding-x
-$input--padding-x-base: 12;
-$input--padding-x: $input--padding-x-base * $scale + $unit; // 12 * $scale + $unit
+$input--padding-x-base: 12 !default;
+$input--padding-x: $input--padding-x-base * $scale + $unit;
+$input--padding-x-base--xs: 4 !default;
+$input--padding-x--xs: $input--padding-x-base--xs * $scale + $unit;
+$input--padding-x-base--sm: 8 !default;
+$input--padding-x--sm: $input--padding-x-base--sm * $scale + $unit;
+$input--padding-x-base--lg: 16 !default;
+$input--padding-x--lg: $input--padding-x-base--lg * $scale + $unit;
+$input--padding-x-base--xl: 20 !default;
+$input--padding-x--xl: $input--padding-x-base--xl * $scale + $unit;
 // font-size
-$input--font-size-base: $font-size-base; // 14
-$input--font-size: $input--font-size-base * $scale + $unit; // 14 * $scale + $unit
+$input--font-size-base: $font-size-base !default; // 14
+$input--font-size: $input--font-size-base * $scale + $unit;
+$input--font-size-base--xs: $font-size-base !default; // 14
+$input--font-size--xs: $input--font-size-base--xs * $scale + $unit;
+$input--font-size-base--sm: $font-size-base !default; // 14
+$input--font-size--sm: $input--font-size-base--sm * $scale + $unit;
+$input--font-size-base--lg: $font-size-base + $font-size-diff !default; // 16
+$input--font-size--lg: $input--font-size-base--lg * $scale + $unit;
+$input--font-size-base--xl: $font-size-base + $font-size-diff !default; // 16
+$input--font-size--xl: $input--font-size-base--xl * $scale + $unit;
 // line-height
-$input--line-height: $line-height-default; // 1.5
+$input--line-height: $line-height-default !default; // 1.5
+$input--line-height--xs: $line-height-default !default; // 1.5
+$input--line-height--sm: $line-height-default !default; // 1.5
+$input--line-height--lg: $line-height-default !default; // 1.5
+$input--line-height--xl: $line-height-default !default; // 1.5
 // height
-$input--height-base: $input--border-width-base * 2 + $input--padding-y-base * 2 + $input--font-size-base * $input--line-height; // 31
-$input--height: $input--height-base * $scale + $unit; // 31 * $scale + $unit
+$input--height-base: $input--border-width-base * 2 + $input--padding-y-base * 2 + $input--font-size-base * $input--line-height !default; // 31
+$input--height: $input--height-base * $scale + $unit;
+$input--height-base--xs: $input--border-width-base * 2 + $input--padding-y-base--xs * 2 + $input--font-size-base--xs * $input--line-height--xs !default; // 23
+$input--height--xs: $input--height-base--xs * $scale + $unit;
+$input--height-base--sm: $input--border-width-base * 2 + $input--padding-y-base--sm * 2 + $input--font-size-base--sm * $input--line-height--sm !default; // 27
+$input--height--sm: $input--height-base--sm * $scale + $unit;
+$input--height-base--lg: $input--border-width-base * 2 + $input--padding-y-base--lg * 2 + $input--font-size-base--lg * $input--line-height--lg !default; // 38
+$input--height--lg: $input--height-base--lg * $scale + $unit;
+$input--height-base--xl: $input--border-width-base * 2 + $input--padding-y-base--xl * 2 + $input--font-size-base--xl * $input--line-height--xl !default; // 42
+$input--height--xl: $input--height-base--xl * $scale + $unit;
 
-/* .input.is-sm */
-// padding-y
-$input--padding-y-base--sm: 0;
-$input--padding-y--sm: $input--padding-y-base--sm * $scale + $unit; // 0 * $scale + $unit
-// padding-x
-$input--padding-x-base--sm: 8;
-$input--padding-x--sm: $input--padding-x-base--sm * $scale + $unit; // 8 * $scale + $unit
-// height
-$input--height-base--sm: $input--border-width-base * 2 + $input--padding-y-base--sm * 2 + $input--font-size-base * $input--line-height; // 23
-$input--height--sm: $input--height-base--sm * $scale + $unit; // 23 * $scale + $unit
-
-/* .input.is-lg */
-// padding-y
-$input--padding-y-base--lg: 6;
-$input--padding-y--lg: $input--padding-y-base--lg * $scale + $unit; // 6 * $scale + $unit
-// padding-x
-$input--padding-x-base--lg: 16;
-$input--padding-x--lg: $input--padding-x-base--lg * $scale + $unit; // 16 * $scale + $unit
-// font-size
-$input--font-size-base--lg: $font-size-base + $font-size-diff; // 16
-$input--font-size--lg: $input--font-size-base--lg * $scale + $unit; // 16 * $scale + $unit
-// height
-$input--height-base--lg: $input--border-width-base * 2 + $input--padding-y-base--lg * 2 + $input--font-size-base--lg * $input--line-height; // 38
-$input--height--lg: $input--height-base--lg * $scale + $unit; // 38 * $scale + $unit
-
+/* styles */
 .input {
   position: relative;
   box-sizing: border-box;
@@ -69,36 +81,35 @@ $input--height--lg: $input--height-base--lg * $scale + $unit; // 38 * $scale + $
   outline: none;
   transition: $transition-default;
 
-  &:active {
-    color: $color-main;
-    border-color: $primary-6;
-  }
-
-  &:placeholder-shown {
-    text-overflow: ellipsis;
-  }
-
   @if ($has-dark) {
     .is-dark & {
       color: $color-main-reverse;
       border-color: $border-color-reverse;
-
-      &:active {
-        color: $color-main-reverse;
-        border-color: $primary-6-reverse;
-      }
     }
+  }
+
+  &.is-xs {
+    height: $input--height--xs;
+    padding: $input--padding-y--xs $input--padding-x--xs;
+    font-size: $input--font-size--xs;
   }
 
   &.is-sm {
     height: $input--height--sm;
     padding: $input--padding-y--sm $input--padding-x--sm;
+    font-size: $input--font-size--sm;
   }
 
   &.is-lg {
     height: $input--height--lg;
-    padding: $input--padding-y--lg $input--padding-x--sm;
+    padding: $input--padding-y--lg $input--padding-x--lg;
     font-size: $input--font-size--lg;
+  }
+
+  &.is-xl {
+    height: $input--height--xl;
+    padding: $input--padding-y--xl $input--padding-x--xl;
+    font-size: $input--font-size--xl;
   }
 }
 
@@ -127,20 +138,10 @@ $input--height--lg: $input--height-base--lg * $scale + $unit; // 38 * $scale + $
   outline: none;
   transition: $transition-default;
 
-  &:active {
-    color: $color-main;
-    border-color: $primary-6;
-  }
-
   @if ($has-dark) {
     .is-dark & {
       color: $color-main-reverse;
       border-color: $border-color-reverse;
-
-      &:active {
-        color: $color-main-reverse;
-        border-color: $primary-6-reverse;
-      }
     }
   }
 
@@ -151,13 +152,6 @@ $input--height--lg: $input--height-base--lg * $scale + $unit; // 38 * $scale + $
     border-color: transparent;
     border-style: none;
     border-width: 0;
-
-    &.is-sm,
-    &.is-lg {
-      padding: 0;
-      font-size: $input--font-size;
-      line-height: $input--line-height;
-    }
   }
 
   .input-prefix,
@@ -180,31 +174,36 @@ $input--height--lg: $input--height-base--lg * $scale + $unit; // 38 * $scale + $
     margin-left: $input--padding-x;
   }
 
+  &.is-xs {
+    height: $input--height--xs;
+    padding: $input--padding-y--xs $input--padding-x--xs;
+    font-size: $input--font-size--xs;
+  }
+
   &.is-sm {
     height: $input--height--sm;
     padding: $input--padding-y--sm $input--padding-x--sm;
+    font-size: $input--font-size--sm;
   }
 
   &.is-lg {
     height: $input--height--lg;
     padding: $input--padding-y--lg $input--padding-x--lg;
     font-size: $input--font-size--lg;
+  }
 
-    .input,
-    .input.is-sm,
-    .input.is-lg {
-      font-size: $input--font-size--lg;
-    }
+  &.is-xl {
+    height: $input--height--xl;
+    padding: $input--padding-y--xl $input--padding-x--xl;
+    font-size: $input--font-size--xl;
   }
 }
 
 .input-placeholder {
-  /* stylelint-disable-next-line declaration-no-important */
-  top: calc(50% - #{$font-size-base * $line-height-default / 2 * $scale + $unit}) !important;
   padding: 0;
-  font-size: $font-size-base * $scale + $unit;
+  font-size: $input--font-size;
   font-weight: 400;
-  line-height: $line-height-default;
+  line-height: $input--line-height;
   color: $color-secondary;
   text-overflow: ellipsis;
 
@@ -212,5 +211,25 @@ $input--height--lg: $input--height-base--lg * $scale + $unit; // 38 * $scale + $
     .is-dark & {
       color: $color-secondary-reverse;
     }
+  }
+
+  .is-xs & {
+    font-size: $input--font-size--xs;
+    line-height: $input--line-height--xs;
+  }
+
+  .is-sm & {
+    font-size: $input--font-size--sm;
+    line-height: $input--line-height--sm;
+  }
+
+  .is-lg & {
+    font-size: $input--font-size--lg;
+    line-height: $input--line-height--lg;
+  }
+
+  .is-xl & {
+    font-size: $input--font-size--xl;
+    line-height: $input--line-height--xl;
   }
 }
