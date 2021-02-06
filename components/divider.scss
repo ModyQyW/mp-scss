@@ -1,5 +1,29 @@
 @import "../variables";
 
+/* variables */
+// margin-y
+$divider--margin-y-base: 8 !default;
+$divider--margin-y: $divider--margin-y-base * $scale + $unit;
+$divider--margin-y-base--vertical: 0 !default;
+$divider--margin-y--vertical: $divider--margin-y-base--vertical * $scale + $unit;
+$divider-wrapper--margin-y-base: 8 !default;
+$divider-wrapper--margin-y: $divider-wrapper--margin-y-base * $scale + $unit;
+$divider-content--padding-y-base: 0 !default;
+$divider-content--padding-y: $divider-content--padding-y-base * $scale + $unit;
+// margin-x
+$divider--margin-x-base: 0 !default;
+$divider--margin-x: $divider--margin-x-base * $scale + $unit;
+$divider--margin-x-base--vertical: 8 !default;
+$divider--margin-x--vertical: $divider--margin-x-base--vertical * $scale + $unit;
+$divider-wrapper--margin-x-base: 0 !default;
+$divider-wrapper--margin-x: $divider-wrapper--margin-x-base * $scale + $unit;
+$divider-content--padding-x-base: 8 !default;
+$divider-content--padding-x: $divider-content--padding-x-base * $scale + $unit;
+// border-width
+$divider--border-width-base: 1 !default;
+$divider--border-width: $divider--border-width-base * $scale + $unit;
+
+/* styles */
 .divider {
   position: relative;
   box-sizing: border-box;
@@ -7,10 +31,10 @@
   flex: 0 0 auto;
   width: 100%;
   height: auto;
-  margin: 24 * $scale + $unit 0;
+  margin: $divider--margin-y $divider--margin-x;
   border-top-color: $border-color;
   border-top-style: solid;
-  border-top-width: 1 * $scale + $unit;
+  border-top-width: $divider--border-width;
   border-left: none;
   transition: $transition-default;
 
@@ -24,12 +48,12 @@
     display: inline-block;
     width: auto;
     height: 100%;
-    margin: 0 8 * $scale + $unit;
+    margin: $divider--margin-y--vertical $divider--margin-x--vertical;
     vertical-align: middle;
     border-top: none;
     border-left-color: $border-color;
     border-left-style: solid;
-    border-left-width: 1 * $scale + $unit;
+    border-left-width: $divider--border-width;
 
     @if ($has-dark) {
       .is-dark & {
@@ -43,7 +67,9 @@
   position: relative;
   box-sizing: border-box;
   display: flex;
+  flex: 0 0 auto;
   align-items: center;
+  height: auto;
   color: $color-main;
 
   @if ($has-dark) {
@@ -52,19 +78,18 @@
     }
   }
 
-  .divider-text {
+  .divider-content {
     position: relative;
     box-sizing: border-box;
-    display: inline-block;
-    padding: 0 16 * $scale + $unit;
-    font-size: $font-size-base * $scale + $unit;
-    font-weight: 400;
-    line-height: $line-height-default;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: $divider-content--padding-y $divider-content--padding-x;
     vertical-align: middle;
   }
 
-  .divider,
-  &.is-center .divider {
+  .divider {
     flex: 0 1 50%;
     max-width: 50%;
   }
