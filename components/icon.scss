@@ -1,22 +1,59 @@
 @import "../variables";
 
+/* variables */
+// font-size
+$icon--font-size-base: $font-size-base !default; // 14
+$icon--font-size: $icon--font-size-base * $scale + $unit;
+$icon--font-size-base--xs: $font-size-base !default; // 14
+$icon--font-size--xs: $icon--font-size-base--xs * $scale + $unit;
+$icon--font-size-base--sm: $font-size-base !default; // 14
+$icon--font-size--sm: $icon--font-size-base--sm * $scale + $unit;
+$icon--font-size-base--lg: $font-size-base + $font-size-diff !default; // 16
+$icon--font-size--lg: $icon--font-size-base--lg * $scale + $unit;
+$icon--font-size-base--xl: $font-size-base + $font-size-diff !default; // 16
+$icon--font-size--xl: $icon--font-size-base--xl * $scale + $unit;
+// line-height
+$icon--line-height: $line-height-default !default; // 1.5
+$icon--line-height--xs: $line-height-default !default; // 1.5
+$icon--line-height--sm: $line-height-default !default; // 1.5
+$icon--line-height--lg: $line-height-default !default; // 1.5
+$icon--line-height--xl: $line-height-default !default; // 1.5
+
+/* styles */
 .icon {
   display: inline-block;
-  width: $font-size-base * $line-height-default * $scale + $unit;
-  height: $font-size-base * $line-height-default * $scale + $unit;
-  font-size: $font-size-base * $scale + $unit;
-  line-height: $line-height-default;
+  width: $icon--font-size-base * $icon--line-height * $scale + $unit;
+  height: $icon--font-size-base * $icon--line-height * $scale + $unit;
+  font-size: $icon--font-size;
+  line-height: $icon--line-height;
+  text-align: center;
   vertical-align: middle;
 
+  &.is-xs {
+    width: $icon--font-size-base--xs * $icon--line-height--xs * $scale + $unit;
+    height: $icon--font-size-base--xs * $icon--line-height--xs * $scale + $unit;
+    font-size: $icon--font-size--xs;
+    line-height: $icon--line-height--xs;
+  }
+
   &.is-sm {
-    width: ($font-size-base - $font-size-diff) * $line-height-default * $scale + $unit;
-    height: ($font-size-base - $font-size-diff) * $line-height-default * $scale + $unit;
-    font-size: ($font-size-base - $font-size-diff) * $scale + $unit;
+    width: $icon--font-size-base--sm * $icon--line-height--sm * $scale + $unit;
+    height: $icon--font-size-base--sm * $icon--line-height--sm * $scale + $unit;
+    font-size: $icon--font-size--sm;
+    line-height: $icon--line-height--sm;
   }
 
   &.is-lg {
-    width: ($font-size-base + $font-size-diff) * $line-height-default * $scale + $unit;
-    height: ($font-size-base + $font-size-diff) * $line-height-default * $scale + $unit;
-    font-size: ($font-size-base + $font-size-diff) * $scale + $unit;
+    width: $icon--font-size-base--lg * $icon--line-height--lg * $scale + $unit;
+    height: $icon--font-size-base--lg * $icon--line-height--lg * $scale + $unit;
+    font-size: $icon--font-size--lg;
+    line-height: $icon--line-height--lg;
+  }
+
+  &.is-xl {
+    width: $icon--font-size-base--xl * $icon--line-height--xl * $scale + $unit;
+    height: $icon--font-size-base--xl * $icon--line-height--xl * $scale + $unit;
+    font-size: $icon--font-size--xl;
+    line-height: $icon--line-height--xl;
   }
 }
