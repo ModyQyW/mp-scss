@@ -1,50 +1,62 @@
 /* stylelint-disable selector-max-class */
 @import "../variables";
 
-/* .btn */
+/* variables */
 // border-width
-$btn--border-width-base: 1;
-$btn--border-width: $btn--border-width-base * $scale + $unit; // 1 * $scale + $unit
+$btn--border-width-base: 1 !default;
+$btn--border-width: $btn--border-width-base * $scale + $unit;
 // padding-y
-$btn--padding-y-base: 4;
-$btn--padding-y: $btn--padding-y-base * $scale + $unit; // 4 * $scale + $unit
+$btn--padding-y-base: 4 !default;
+$btn--padding-y: $btn--padding-y-base * $scale + $unit;
+$btn--padding-y-base--xs: 0 !default;
+$btn--padding-y--xs: $btn--padding-y-base--xs * $scale + $unit;
+$btn--padding-y-base--sm: 2 !default;
+$btn--padding-y--sm: $btn--padding-y-base--sm * $scale + $unit;
+$btn--padding-y-base--lg: 6 !default;
+$btn--padding-y--lg: $btn--padding-y-base--lg * $scale + $unit;
+$btn--padding-y-base--xl: 8 !default;
+$btn--padding-y--xl: $btn--padding-y-base--xl * $scale + $unit;
 // padding-x
-$btn--padding-x-base: 16;
-$btn--padding-x: $btn--padding-x-base * $scale + $unit; // 16 * $scale + $unit
+$btn--padding-x-base: 16 !default;
+$btn--padding-x: $btn--padding-x-base * $scale + $unit;
+$btn--padding-x-base--xs: 8 !default;
+$btn--padding-x--xs: $btn--padding-x-base--xs * $scale + $unit;
+$btn--padding-x-base--sm: 12 !default;
+$btn--padding-x--sm: $btn--padding-x-base--sm * $scale + $unit;
+$btn--padding-x-base--lg: 20 !default;
+$btn--padding-x--lg: $btn--padding-x-base--lg * $scale + $unit;
+$btn--padding-x-base--xl: 24 !default;
+$btn--padding-x--xl: $btn--padding-x-base--xl * $scale + $unit;
 // font-size
-$btn--font-size-base: $font-size-base; // 14
-$btn--font-size: $btn--font-size-base * $scale + $unit; // 14 * $scale + $unit
+$btn--font-size-base: $font-size-base !default; // 14
+$btn--font-size: $btn--font-size-base * $scale + $unit;
+$btn--font-size-base--xs: $font-size-base !default; // 14
+$btn--font-size--xs: $btn--font-size-base--xs * $scale + $unit;
+$btn--font-size-base--sm: $font-size-base !default; // 14
+$btn--font-size--sm: $btn--font-size-base--sm * $scale + $unit;
+$btn--font-size-base--lg: $font-size-base + $font-size-diff !default; // 16
+$btn--font-size--lg: $btn--font-size-base--lg * $scale + $unit;
+$btn--font-size-base--xl: $font-size-base + $font-size-diff !default; // 16
+$btn--font-size--xl: $btn--font-size-base--xl * $scale + $unit;
 // line-height
-$btn--line-height: $line-height-default; // 1.5
+$btn--line-height: $line-height-default !default; // 1.5
+$btn--line-height--xs: $line-height-default !default; // 1.5
+$btn--line-height--sm: $line-height-default !default; // 1.5
+$btn--line-height--lg: $line-height-default !default; // 1.5
+$btn--line-height--xl: $line-height-default !default; // 1.5
 // height
-$btn--height-base: $btn--border-width-base * 2 + $btn--padding-y-base * 2 + $btn--font-size-base * $btn--line-height; // 31
-$btn--height: $btn--height-base * $scale + $unit; // 31 * $scale + $unit
+$btn--height-base: $btn--border-width-base * 2 + $btn--padding-y-base * 2 + $btn--font-size-base * $btn--line-height !default; // 31
+$btn--height: $btn--height-base * $scale + $unit;
+$btn--height-base--xs: $btn--border-width-base * 2 + $btn--padding-y-base--xs * 2 + $btn--font-size-base--xs * $btn--line-height--xs !default; // 23
+$btn--height--xs: $btn--height-base--xs * $scale + $unit;
+$btn--height-base--sm: $btn--border-width-base * 2 + $btn--padding-y-base--sm * 2 + $btn--font-size-base--sm * $btn--line-height--sm !default; // 27
+$btn--height--sm: $btn--height-base--sm * $scale + $unit;
+$btn--height-base--lg: $btn--border-width-base * 2 + $btn--padding-y-base--lg * 2 + $btn--font-size-base--lg * $btn--line-height--lg !default; // 38
+$btn--height--lg: $btn--height-base--lg * $scale + $unit;
+$btn--height-base--xl: $btn--border-width-base * 2 + $btn--padding-y-base--xl * 2 + $btn--font-size-base--xl * $btn--line-height--xl !default; // 42
+$btn--height--xl: $btn--height-base--xl * $scale + $unit;
 
-/* .btn.is-sm */
-// padding-y
-$btn--padding-y-base--sm: 0;
-$btn--padding-y--sm: $btn--padding-y-base--sm * $scale + $unit; // 0 * $scale + $unit
-// padding-x
-$btn--padding-x-base--sm: 8;
-$btn--padding-x--sm: $btn--padding-x-base--sm * $scale + $unit; // 8 * $scale + $unit
-// height
-$btn--height-base--sm: $btn--border-width-base * 2 + $btn--padding-y-base--sm * 2 + $btn--font-size-base * $btn--line-height; // 23
-$btn--height--sm: $btn--height-base--sm * $scale + $unit; // 23 * $scale + $unit
-
-/* .btn.is-lg */
-// padding-y
-$btn--padding-y-base--lg: 6;
-$btn--padding-y--lg: $btn--padding-y-base--lg * $scale + $unit; // 6 * $scale + $unit
-// padding-x
-$btn--padding-x-base--lg: 16;
-$btn--padding-x--lg: $btn--padding-x-base--lg * $scale + $unit; // 16 * $scale + $unit
-// font-size
-$btn--font-size-base--lg: $font-size-base + $font-size-diff; // 16
-$btn--font-size--lg: $btn--font-size-base--lg * $scale + $unit; // 16 * $scale + $unit
-// height
-$btn--height-base--lg: $btn--border-width-base * 2 + $btn--padding-y-base--lg * 2 + $btn--font-size-base--lg * $btn--line-height; // 38
-$btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
-
+/* styles */
 .btn {
   position: relative;
   box-sizing: border-box;
@@ -66,7 +78,7 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
   white-space: nowrap;
   cursor: pointer;
   background-color: $container-background-color;
-  border-color: $border-color;
+  border-color: $gray-5;
   border-style: solid;
   border-width: $btn--border-width;
   border-radius: $border-radius-base * $scale + $unit;
@@ -75,8 +87,491 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
   transition: $transition-default;
   -webkit-tap-highlight-color: transparent;
 
+  &::after {
+    display: none;
+  }
+
+  &.button-hover {
+    background-color: $gray-3;
+    opacity: unset;
+  }
+
+  &[disabled] {
+    color: $color-disabled;
+    pointer-events: none;
+    cursor: not-allowed;
+    user-select: none;
+    background-color: $gray-3;
+    border-color: $gray-5;
+  }
+
+  &.is-outlined:not([disabled]) {
+    background-color: transparent;
+
+    &.button-hover {
+      background-color: transparent;
+      border-color: $color-main;
+    }
+  }
+
+  &.is-text:not([disabled]) {
+    background-color: transparent;
+    border-color: transparent;
+
+    &.button-hover {
+      background-color: $gray-3;
+      border-color: $gray-3;
+    }
+  }
+
+  &.is-text[disabled] {
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  &.is-primary:not([disabled]) {
+    color: $gray-1;
+    background-color: $primary-6;
+    border-color: $primary-6;
+
+    &.is-plain {
+      color: $primary-6;
+      background-color: $container-background-color;
+    }
+
+    &.button-hover {
+      color: $gray-1;
+      background-color: $primary-7;
+      border-color: $primary-7;
+    }
+
+    &.is-outlined {
+      color: $primary-6;
+      background-color: transparent;
+      border-color: $primary-6;
+
+      &.button-hover {
+        color: $primary-7;
+        border-color: $primary-7;
+      }
+    }
+
+    &.is-text {
+      color: $primary-6;
+      background-color: transparent;
+      border-color: transparent;
+
+      &.button-hover {
+        background-color: $primary-1;
+        border-color: $primary-1;
+      }
+    }
+  }
+
+  &.is-success:not([disabled]) {
+    color: $gray-1;
+    background-color: $success-6;
+    border-color: $success-6;
+
+    &.is-plain {
+      color: $success-6;
+      background-color: $container-background-color;
+    }
+
+    &.button-hover {
+      color: $gray-1;
+      background-color: $success-7;
+      border-color: $success-7;
+    }
+
+    &.is-outlined {
+      color: $success-6;
+      background-color: transparent;
+      border-color: $success-6;
+
+      &.button-hover {
+        color: $success-7;
+        border-color: $success-7;
+      }
+    }
+
+    &.is-text {
+      color: $success-6;
+      background-color: transparent;
+      border-color: transparent;
+
+      &.button-hover {
+        background-color: $success-1;
+        border-color: $success-1;
+      }
+    }
+  }
+
+  &.is-warning:not([disabled]) {
+    color: $gray-1;
+    background-color: $warning-6;
+    border-color: $warning-6;
+
+    &.is-plain {
+      color: $warning-6;
+      background-color: $container-background-color;
+    }
+
+    &.button-hover {
+      color: $gray-1;
+      background-color: $warning-7;
+      border-color: $warning-7;
+    }
+
+    &.is-outlined {
+      color: $warning-6;
+      background-color: transparent;
+      border-color: $warning-6;
+
+      &.button-hover {
+        color: $warning-7;
+        border-color: $warning-7;
+      }
+    }
+
+    &.is-text {
+      color: $warning-6;
+      background-color: transparent;
+      border-color: transparent;
+
+      &.button-hover {
+        background-color: $warning-1;
+        border-color: $warning-1;
+      }
+    }
+  }
+
+  &.is-error:not([disabled]) {
+    color: $gray-1;
+    background-color: $error-6;
+    border-color: $error-6;
+
+    &.is-plain {
+      color: $error-6;
+      background-color: $container-background-color;
+    }
+
+    &.button-hover {
+      color: $gray-1;
+      background-color: $error-7;
+      border-color: $error-7;
+    }
+
+    &.is-outlined {
+      color: $error-6;
+      background-color: transparent;
+      border-color: $error-6;
+
+      &.button-hover {
+        color: $error-7;
+        border-color: $error-7;
+      }
+    }
+
+    &.is-text {
+      color: $error-6;
+      background-color: transparent;
+      border-color: transparent;
+
+      &.button-hover {
+        background-color: $error-1;
+        border-color: $error-1;
+      }
+    }
+  }
+
+  &.is-info:not([disabled]) {
+    color: $gray-1;
+    background-color: $info-6;
+    border-color: $info-6;
+
+    &.is-plain {
+      color: $info-6;
+      background-color: $container-background-color;
+    }
+
+    &.button-hover {
+      color: $gray-1;
+      background-color: $info-7;
+      border-color: $info-7;
+    }
+
+    &.is-outlined {
+      color: $info-6;
+      background-color: transparent;
+      border-color: $info-6;
+
+      &.button-hover {
+        color: $info-7;
+        border-color: $info-7;
+      }
+    }
+
+    &.is-text {
+      color: $info-6;
+      background-color: transparent;
+      border-color: transparent;
+
+      &.button-hover {
+        background-color: $info-1;
+        border-color: $info-1;
+      }
+    }
+  }
+
+  @if ($has-dark) {
+    .is-dark & {
+      color: $color-main-reverse;
+      background-color: $container-background-color-reverse;
+      border-color: $gray-9;
+
+      &.button-hover {
+        background-color: $gray-11;
+      }
+
+      &[disabled] {
+        color: $color-disabled-reverse;
+        background-color: $gray-11;
+        border-color: $gray-9;
+      }
+
+      &.is-outlined:not([disabled]) {
+        background-color: transparent;
+
+        &.button-hover {
+          background-color: transparent;
+          border-color: $color-main-reverse;
+        }
+      }
+
+      &.is-text:not([disabled]) {
+        background-color: transparent;
+        border-color: transparent;
+
+        &.button-hover {
+          background-color: $gray-11;
+          border-color: $gray-11;
+        }
+      }
+
+      &.is-text[disabled] {
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+
+    .is-dark &.is-primary:not([disabled]) {
+      color: $gray-1;
+      background-color: $primary-6-reverse;
+      border-color: $primary-6-reverse;
+
+      &.is-plain {
+        color: $primary-6-reverse;
+        background-color: $container-background-color-reverse;
+      }
+
+      &.button-hover {
+        color: $gray-1;
+        background-color: $primary-7-reverse;
+        border-color: $primary-7-reverse;
+      }
+
+      &.is-outlined {
+        color: $primary-6-reverse;
+        background-color: transparent;
+        border-color: $primary-6-reverse;
+
+        &.button-hover {
+          color: $primary-7-reverse;
+          border-color: $primary-7-reverse;
+        }
+      }
+
+      &.is-text {
+        color: $primary-6-reverse;
+        background-color: transparent;
+        border-color: transparent;
+
+        &.button-hover {
+          background-color: $primary-1-reverse;
+          border-color: $primary-1-reverse;
+        }
+      }
+    }
+
+    .is-dark &.is-success:not([disabled]) {
+      color: $gray-1;
+      background-color: $success-6-reverse;
+      border-color: $success-6-reverse;
+
+      &.is-plain {
+        color: $success-6-reverse;
+        background-color: $container-background-color-reverse;
+      }
+
+      &.button-hover {
+        color: $gray-1;
+        background-color: $success-7-reverse;
+        border-color: $success-7-reverse;
+      }
+
+      &.is-outlined {
+        color: $success-6-reverse;
+        background-color: transparent;
+        border-color: $success-6-reverse;
+
+        &.button-hover {
+          color: $success-7-reverse;
+          border-color: $success-7-reverse;
+        }
+      }
+
+      &.is-text {
+        color: $success-6-reverse;
+        background-color: transparent;
+        border-color: transparent;
+
+        &.button-hover {
+          background-color: $success-1-reverse;
+          border-color: $success-1-reverse;
+        }
+      }
+    }
+
+    .is-dark &.is-warning:not([disabled]) {
+      color: $gray-1;
+      background-color: $warning-6-reverse;
+      border-color: $warning-6-reverse;
+
+      &.is-plain {
+        color: $warning-6-reverse;
+        background-color: $container-background-color-reverse;
+      }
+
+      &.button-hover {
+        color: $gray-1;
+        background-color: $warning-7-reverse;
+        border-color: $warning-7-reverse;
+      }
+
+      &.is-outlined {
+        color: $warning-6-reverse;
+        background-color: transparent;
+        border-color: $warning-6-reverse;
+
+        &.button-hover {
+          color: $warning-7-reverse;
+          border-color: $warning-7-reverse;
+        }
+      }
+
+      &.is-text {
+        color: $warning-6-reverse;
+        background-color: transparent;
+        border-color: transparent;
+
+        &.button-hover {
+          background-color: $warning-1-reverse;
+          border-color: $warning-1-reverse;
+        }
+      }
+    }
+
+    .is-dark &.is-error:not([disabled]) {
+      color: $gray-1;
+      background-color: $error-6-reverse;
+      border-color: $error-6-reverse;
+
+      &.is-plain {
+        color: $error-6-reverse;
+        background-color: $container-background-color-reverse;
+      }
+
+      &.button-hover {
+        color: $gray-1;
+        background-color: $error-7-reverse;
+        border-color: $error-7-reverse;
+      }
+
+      &.is-outlined {
+        color: $error-6-reverse;
+        background-color: transparent;
+        border-color: $error-6-reverse;
+
+        &.button-hover {
+          color: $error-7-reverse;
+          border-color: $error-7-reverse;
+        }
+      }
+
+      &.is-text {
+        color: $error-6-reverse;
+        background-color: transparent;
+        border-color: transparent;
+
+        &.button-hover {
+          background-color: $error-1-reverse;
+          border-color: $error-1-reverse;
+        }
+      }
+    }
+
+    .is-dark &.is-info:not([disabled]) {
+      color: $gray-1;
+      background-color: $info-6-reverse;
+      border-color: $info-6-reverse;
+
+      &.is-plain {
+        color: $info-6-reverse;
+        background-color: $container-background-color-reverse;
+      }
+
+      &.button-hover {
+        color: $gray-1;
+        background-color: $info-7-reverse;
+        border-color: $info-7-reverse;
+      }
+
+      &.is-outlined {
+        color: $info-6-reverse;
+        background-color: transparent;
+        border-color: $info-6-reverse;
+
+        &.button-hover {
+          color: $info-7-reverse;
+          border-color: $info-7-reverse;
+        }
+      }
+
+      &.is-text {
+        color: $info-6-reverse;
+        background-color: transparent;
+        border-color: transparent;
+
+        &.button-hover {
+          background-color: $info-1-reverse;
+          border-color: $info-1-reverse;
+        }
+      }
+    }
+  }
+
   &.is-rounded {
     border-radius: $btn--height-base / 2 * $scale + $unit;
+  }
+
+  &.is-xs {
+    height: $btn--height--xs;
+    padding: $btn--padding-y--xs $btn--padding-x--xs;
+
+    &.is-rounded {
+      border-radius: $btn--height-base--xs / 2 * $scale + $unit;
+    }
   }
 
   &.is-sm {
@@ -98,489 +593,18 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
     }
   }
 
-  &::after {
-    display: none;
-  }
-
-  &:active,
-  &.button-hover {
-    color: $gray-1;
-    background-color: $primary-7;
-    border-color: $primary-7;
-    opacity: unset;
-  }
-
-  &[disabled] {
-    color: $color-disabled;
-    pointer-events: none;
-    cursor: not-allowed;
-    user-select: none;
-    background-color: $gray-3;
-    border-color: $border-color;
-  }
-
-  @if ($has-dark) {
-    .is-dark &[disabled] {
-      color: $color-disabled-reverse;
-      background-color: $gray-10;
-      border-color: $border-color-reverse;
-    }
-  }
-
-  &.is-primary:not([disabled]) {
-    color: $gray-1;
-    background-color: $primary-6;
-    border-color: $primary-6;
-
-    &.is-plain {
-      color: $primary-6;
-      background-color: $container-background-color;
-    }
-
-    &:active,
-    &.button-hover {
-      color: $gray-1;
-      background-color: $primary-7;
-      border-color: $primary-7;
-    }
-
-    &.is-outlined {
-      color: $primary-6;
-      border-color: $primary-6;
-
-      &:active,
-      &.button-hover {
-        color: $primary-7;
-        border-color: $primary-7;
-      }
-    }
-
-    &.is-text {
-      color: $primary-6;
-
-      &:active,
-      &.button-hover {
-        color: $primary-7;
-      }
-    }
-  }
-
-  &.is-success:not([disabled]) {
-    color: $gray-1;
-    background-color: $success-6;
-    border-color: $success-6;
-
-    &.is-plain {
-      color: $success-6;
-      background-color: $container-background-color;
-    }
-
-    &:active,
-    &.button-hover {
-      color: $gray-1;
-      background-color: $success-7;
-      border-color: $success-7;
-    }
-
-    &.is-outlined {
-      color: $success-6;
-      border-color: $success-6;
-
-      &:active,
-      &.button-hover {
-        color: $success-7;
-        border-color: $success-7;
-      }
-    }
-
-    &.is-text {
-      color: $success-6;
-
-      &:active,
-      &.button-hover {
-        color: $success-7;
-      }
-    }
-  }
-
-  &.is-warning:not([disabled]) {
-    color: $gray-1;
-    background-color: $warning-6;
-    border-color: $warning-6;
-
-    &.is-plain {
-      color: $warning-6;
-      background-color: $container-background-color;
-    }
-
-    &:active,
-    &.button-hover {
-      color: $gray-1;
-      background-color: $warning-7;
-      border-color: $warning-7;
-    }
-
-    &.is-outlined {
-      color: $warning-6;
-      border-color: $warning-6;
-
-      &:active,
-      &.button-hover {
-        color: $warning-7;
-        border-color: $warning-7;
-      }
-    }
-
-    &.is-text {
-      color: $warning-6;
-
-      &:active,
-      &.button-hover {
-        color: $warning-7;
-      }
-    }
-  }
-
-  &.is-error:not([disabled]) {
-    color: $gray-1;
-    background-color: $error-6;
-    border-color: $error-6;
-
-    &.is-plain {
-      color: $error-6;
-      background-color: $container-background-color;
-    }
-
-    &:active,
-    &.button-hover {
-      color: $gray-1;
-      background-color: $error-7;
-      border-color: $error-7;
-    }
-
-    &.is-outlined {
-      color: $error-6;
-      border-color: $error-6;
-
-      &:active,
-      &.button-hover {
-        color: $error-7;
-        border-color: $error-7;
-      }
-    }
-
-    &.is-text {
-      color: $error-6;
-
-      &:active,
-      &.button-hover {
-        color: $error-7;
-      }
-    }
-  }
-
-  &.is-info:not([disabled]) {
-    color: $gray-1;
-    background-color: $info-6;
-    border-color: $info-6;
-
-    &.is-plain {
-      color: $info-6;
-      background-color: $container-background-color;
-    }
-
-    &:active,
-    &.button-hover {
-      color: $gray-1;
-      background-color: $info-7;
-      border-color: $info-7;
-    }
-
-    &.is-outlined {
-      color: $info-6;
-      border-color: $info-6;
-
-      &:active,
-      &.button-hover {
-        color: $info-7;
-        border-color: $info-7;
-      }
-    }
-
-    &.is-text {
-      color: $info-6;
-
-      &:active,
-      &.button-hover {
-        color: $info-7;
-      }
-    }
-  }
-
-  @if ($has-dark) {
-    .is-dark & {
-      color: $color-main-reverse;
-      background-color: $container-background-color-reverse;
-      border-color: $border-color-reverse;
-
-      &:active,
-      &.button-hover {
-        background-color: $primary-7-reverse;
-        border-color: $primary-7-reverse;
-      }
-    }
-
-    .is-dark &.is-primary:not([disabled]) {
-      color: $gray-1;
-      background-color: $primary-6-reverse;
-      border-color: $primary-6-reverse;
-
-      &.is-plain {
-        color: $primary-6-reverse;
-        background-color: $container-background-color-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $gray-1;
-        background-color: $primary-7-reverse;
-        border-color: $primary-7-reverse;
-      }
-
-      &.is-outlined {
-        color: $primary-6-reverse;
-        border-color: $primary-6-reverse;
-
-        &:active,
-        &.button-hover {
-          color: $primary-7-reverse;
-          border-color: $primary-7-reverse;
-        }
-      }
-
-      &.is-text {
-        color: $primary-6-reverse;
-
-        &:active,
-        &.button-hover {
-          color: $primary-7-reverse;
-        }
-      }
-    }
-
-    .is-dark &.is-success:not([disabled]) {
-      color: $gray-1;
-      background-color: $success-6-reverse;
-      border-color: $success-6-reverse;
-
-      &.is-plain {
-        color: $success-6-reverse;
-        background-color: $container-background-color-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $gray-1;
-        background-color: $success-7-reverse;
-        border-color: $success-7-reverse;
-      }
-
-      &.is-outlined {
-        color: $success-6-reverse;
-        border-color: $success-6-reverse;
-
-        &:active,
-        &.button-hover {
-          color: $success-7-reverse;
-          border-color: $success-7-reverse;
-        }
-      }
-
-      &.is-text {
-        color: $success-6-reverse;
-
-        &:active,
-        &.button-hover {
-          color: $success-7-reverse;
-        }
-      }
-    }
-
-    .is-dark &.is-warning:not([disabled]) {
-      color: $gray-1;
-      background-color: $warning-6-reverse;
-      border-color: $warning-6-reverse;
-
-      &.is-plain {
-        color: $warning-6-reverse;
-        background-color: $container-background-color-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $gray-1;
-        background-color: $warning-7-reverse;
-        border-color: $warning-7-reverse;
-      }
-
-      &.is-outlined {
-        color: $warning-6-reverse;
-        border-color: $warning-6-reverse;
-
-        &:active,
-        &.button-hover {
-          color: $warning-7-reverse;
-          border-color: $warning-7-reverse;
-        }
-      }
-
-      &.is-text {
-        color: $warning-6-reverse;
-
-        &:active,
-        &.button-hover {
-          color: $warning-7-reverse;
-        }
-      }
-    }
-
-    .is-dark &.is-error:not([disabled]) {
-      color: $gray-1;
-      background-color: $error-6-reverse;
-      border-color: $error-6-reverse;
-
-      &.is-plain {
-        color: $error-6-reverse;
-        background-color: $container-background-color-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $gray-1;
-        background-color: $error-7-reverse;
-        border-color: $error-7-reverse;
-      }
-
-      &.is-outlined {
-        color: $error-6-reverse;
-        border-color: $error-6-reverse;
-
-        &:active,
-        &.button-hover {
-          color: $error-7-reverse;
-          border-color: $error-7-reverse;
-        }
-      }
-
-      &.is-text {
-        color: $error-6-reverse;
-
-        &:active,
-        &.button-hover {
-          color: $error-7-reverse;
-        }
-      }
-    }
-
-    .is-dark &.is-info:not([disabled]) {
-      color: $gray-1;
-      background-color: $info-6-reverse;
-      border-color: $info-6-reverse;
-
-      &.is-plain {
-        color: $info-6-reverse;
-        background-color: $container-background-color-reverse;
-      }
-
-      &:active,
-      &.button-hover {
-        color: $gray-1;
-        background-color: $info-7-reverse;
-        border-color: $info-7-reverse;
-      }
-
-      &.is-outlined {
-        color: $info-6-reverse;
-        border-color: $info-6-reverse;
-
-        &:active,
-        &.button-hover {
-          color: $info-7-reverse;
-          border-color: $info-7-reverse;
-        }
-      }
-
-      &.is-text {
-        color: $info-6-reverse;
-
-        &:active,
-        &.button-hover {
-          color: $info-7-reverse;
-        }
-      }
-    }
-  }
-
-  &.is-outlined:not([disabled]) {
-    background-color: transparent;
-
-    &:active,
-    &.button-hover {
-      color: $primary-7;
-      background-color: transparent;
-    }
-  }
-
-  @if ($has-dark) {
-    .is-dark &.is-outlined:not([disabled]) {
-      background-color: transparent;
-
-      &:active,
-      &.button-hover {
-        color: $primary-7-reverse;
-        background-color: transparent;
-      }
-    }
-  }
-
-  &.is-text:not([disabled]) {
-    background-color: transparent;
-    border-color: transparent;
-
-    &:active,
-    &.button-hover {
-      color: $primary-7;
-      background-color: transparent;
-      border-color: transparent;
-    }
-  }
-
-  &.is-text[disabled] {
-    background-color: transparent;
-    border-color: transparent;
-  }
-
-  @if ($has-dark) {
-    .is-dark &.is-text:not([disabled]) {
-      background-color: transparent;
-      border-color: transparent;
-
-      &:active,
-      &.button-hover {
-        color: $primary-7-reverse;
-        background-color: transparent;
-        border-color: transparent;
-      }
-    }
-
-    .is-dark &.is-text[disabled] {
-      background-color: transparent;
-      border-color: transparent;
+  &.is-xl {
+    height: $btn--height--xl;
+    padding: $btn--padding-y--xl $btn--padding-x--xl;
+    font-size: $btn--font-size--xl;
+
+    &.is-rounded {
+      border-radius: $btn--height-base--xl / 2 * $scale + $unit;
     }
   }
 
   // 水波纹
-  &.is-ripply:not(.is-text)::after {
+  &.is-ripply::after {
     position: absolute;
     top: 0;
     left: 0;
@@ -602,8 +626,13 @@ $btn--height--lg: $btn--height-base--lg * $scale + $unit; // 38 * $scale + $unit
     transform-origin: unset;
   }
 
-  &.is-ripply:not(.is-text):active::after,
-  &.is-ripply.button-hover:not(.is-text)::after {
+  @if ($has-dark) {
+    .is-dark &.is-ripply::after {
+      background-image: radial-gradient(circle, $gray-4 10%, transparent 10.0001%);
+    }
+  }
+
+  &.is-ripply.button-hover::after {
     display: block;
     background-color: unset;
     opacity: 0.24;
