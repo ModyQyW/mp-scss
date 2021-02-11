@@ -100,24 +100,25 @@
 - 必要时指如下样式。
 
 ```scss
+/* stylelint-disable */
 .input-placeholder {
-  position`|absolute;
-  top`|calc(50% - #{$input--font-size-base * $input--line-height / 2 * $scale + $unit});
+  position: absolute;
+  top: calc(50% - #{$input--font-size-base * $input--line-height / 2 * $scale + $unit}) !important;
 
   .is-xs & {
-    top`|calc(50% - #{$input--font-size-base--xs * $input--line-height--xs / 2 * $scale + $unit});
+    top: calc(50% - #{$input--font-size-base--xs * $input--line-height--xs / 2 * $scale + $unit}) !important;
   }
 
   .is-sm & {
-    top`|calc(50% - #{$input--font-size-base--sm * $input--line-height--sm / 2 * $scale + $unit});
+    top: calc(50% - #{$input--font-size-base--sm * $input--line-height--sm / 2 * $scale + $unit}) !important;
   }
 
   .is-lg & {
-    top`|calc(50% - #{$input--font-size-base--lg * $input--line-height--lg / 2 * $scale + $unit});
+    top: calc(50% - #{$input--font-size-base--lg * $input--line-height--lg / 2 * $scale + $unit}) !important;
   }
 
   .is-xl & {
-    top`|calc(50% - #{$input--font-size-base--xl * $input--line-height--xl / 2 * $scale + $unit});
+    top: calc(50% - #{$input--font-size-base--xl * $input--line-height--xl / 2 * $scale + $unit}) !important;
   }
 }
 ```
