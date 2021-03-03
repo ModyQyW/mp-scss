@@ -1,199 +1,68 @@
-module.exports = {
+const { config } = require('vuepress-theme-hope');
+
+module.exports = config({
   base: '/mp-scss/',
   title: '@modyqyw/mp-scss',
-  head: [
-    [
-      'link',
-      {
-        rel: 'icon',
-        href: `/favicon.ico`,
-      },
-    ],
-    [
-      'link',
-      {
-        rel: 'manifest',
-        href: '/manifest.json',
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'theme-color',
-        content: '#65b687',
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'apple-mobile-web-app-capable',
-        content: 'yes',
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'apple-mobile-web-app-status-bar-style',
-        content: 'black',
-      },
-    ],
-    [
-      'link',
-      {
-        rel: 'apple-touch-icon',
-        href: '/favicon.ico',
-      },
-    ],
-    [
-      'link',
-      {
-        rel: 'mask-icon',
-        href: '/favicon.ico',
-        color: '#000000',
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'msapplication-TileImage',
-        content: '/favicon.ico',
-      },
-    ],
-    [
-      'meta',
-      {
-        name: 'msapplication-TileColor',
-        content: '#000000',
-      },
-    ],
-  ],
-  locales: {
-    '/': {
-      lang: 'zh-Hans',
-    },
-  },
+  description: '一个基于 Flexbox 的小程序 SCSS 库，用于快速实现自定义设计。如有问题请尝试强制刷新。',
   themeConfig: {
+    // 主题配置 https://vuepress-theme-hope.github.io/zh/config/theme/
+    baseLang: 'zh-CN',
+    author: 'ModyQyW <wurui7@mail3.sysu.edu.cn>',
     nav: [
-      {
-        text: '指南',
-        link: '/guide/',
-      },
-      {
-        text: '重置',
-        link: '/reset/',
-      },
+      { text: '指南', link: '/guide/' },
       {
         text: '内容',
         items: [
           {
-            text: '通用类 classes',
+            text: '重置 reset',
+            prefix: '/reset/',
             items: [
-              {
-                text: '通用类总览 classes',
-                link: '/classes/index',
-              },
-              {
-                text: '定位类 positioning',
-                link: '/classes/positioning',
-              },
-              {
-                text: '盒模型类 box-model',
-                link: '/classes/box-model',
-              },
-              {
-                text: '排版类 typography',
-                link: '/classes/typography',
-              },
-              {
-                text: '视觉类 visual',
-                link: '/classes/visual',
-              },
-              {
-                text: '杂项类 misc',
-                link: '/classes/misc',
-              },
+              { text: '重置总览 reset', link: '' },
+            ],
+          },
+          {
+            text: '通用类 classes',
+            prefix: '/classes/',
+            items: [
+              { text: '通用类总览 classes', link: 'index' },
+              { text: '定位类 positioning', link: 'positioning' },
+              { text: '盒模型类 box-model', link: 'box-model' },
+              { text: '排版类 typography', link: 'typography' },
+              { text: '视觉类 visual', link: 'visual' },
+              { text: '杂项类 misc', link: 'misc' },
             ],
           },
           {
             text: '布局类 layout',
+            prefix: '/layout/',
             items: [
-              {
-                text: '布局类总览 layout',
-                link: '/layout/index',
-              },
-              {
-                text: '页面布局类 page',
-                link: '/layout/page',
-              },
-              {
-                text: '栅格系统类 grid',
-                link: '/layout/grid',
-              },
+              { text: '布局类总览 layout', link: 'index' },
+              { text: '页面布局类 page', link: 'page' },
+              { text: '栅格系统类 grid', link: '/layout/grid' },
             ],
           },
           {
             text: '组件类 components',
+            prefix: '/components/',
             items: [
-              {
-                text: '组件类总览 components',
-                link: '/components/index',
-              },
-              {
-                text: '徽标类 badge',
-                link: '/components/badge',
-              },
-              {
-                text: '按钮类 button',
-                link: '/components/button',
-              },
-              {
-                text: '卡片类 card',
-                link: '/components/card',
-              },
-              {
-                text: '分割线类 divider',
-                link: '/components/divider',
-              },
-              {
-                text: '图标类 icon',
-                link: '/components/icon',
-              },
-              {
-                text: '输入框类 input',
-                link: '/components/input',
-              },
-              {
-                text: '加载器类 loader',
-                link: '/components/loader',
-              },
-              {
-                text: '遮罩类 overlay',
-                link: '/components/overlay',
-              },
+              { text: '组件类总览 components', link: 'index' },
+              { text: '徽标类 badge', link: 'badge' },
+              { text: '按钮类 button', link: 'button' },
+              { text: '卡片类 card', link: 'card' },
+              { text: '分割线类 divider', link: 'divider' },
+              { text: '图标类 icon', link: 'icon' },
+              { text: '输入框类 input', link: 'input' },
+              { text: '加载器类 loader', link: 'loader' },
+              { text: '遮罩类 overlay', link: 'overlay' },
             ],
           },
         ],
       },
-      {
-        text: '进阶',
-        link: '/advance/',
-      },
-      {
-        text: '改动日志',
-        link: '/changelog/',
-      },
-      {
-        text: '赞赏',
-        link: '/donation/',
-      },
-      {
-        text: 'Gitee',
-        link: 'https://gitee.com/ModyQyW/mp-scss#readme',
-      },
-      {
-        text: 'Github',
-        link: 'https://github.com/ModyQyW/mp-scss#readme',
-      },
+      { text: '进阶', link: '/advance/' },
+      { text: '改动日志', link: '/changelog/' },
+      { text: '赞赏', link: '/donation/' },
+      { text: 'Gitee', link: 'https://gitee.com/ModyQyW/mp-scss#readme' },
+      { text: 'Github', link: 'https://github.com/ModyQyW/mp-scss#readme' },
     ],
     sidebar: {
       '/guide/': [
@@ -223,40 +92,24 @@ module.exports = {
         'loader',
         'overlay',
       ],
-      '/': 'auto',
+      '/': [''],
     },
+    hostname: 'https://modyqyw.top',
     sidebarDepth: 4,
-    lastUpdated: 'Last Updated',
+    editLinks: false,
+    blog: false,
+    pageInfo: false,
+    mdEnhance: {
+      lineNumbers: true,
+    },
+    comment: false,
+    copyright: false,
+    pwa: {
+      favicon: '/favicon.ico',
+    },
+    feed: false,
   },
   plugins: [
-    '@vuepress/active-header-links',
-    '@vuepress/back-to-top',
-    [
-      '@vuepress/last-updated',
-      {
-        dateOptions: {
-          hour12: false,
-        },
-      },
-    ],
-    '@vuepress/medium-zoom',
-    '@vuepress/nprogress',
-    [
-      '@vuepress/pwa',
-      {
-        serviceWorker: true,
-        updatePopup: {
-          message: '新内容可用。',
-          buttonText: '刷新',
-        },
-      },
-    ],
-    [
-      'sitemap',
-      {
-        hostname: 'https://modyqyw.github.io',
-      },
-    ],
     [
       'helper-live2d',
       {
@@ -279,4 +132,4 @@ module.exports = {
     extractHeaders: ['h2', 'h3', 'h4'],
   },
   evergreen: true,
-};
+});

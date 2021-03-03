@@ -1,3 +1,7 @@
+---
+sidebar: 'auto'
+---
+
 # 重置
 
 [源码](https://github.com/ModyQyW/mp-scss/blob/master/reset/index.scss)
