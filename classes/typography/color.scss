@@ -1,25 +1,25 @@
 @import "../../variables";
 
-@each $k, $v in $m-colors {
-  .text#{$k} {
-    color: $v if($has-important, !important, null);
-  }
-}
-
 @each $k, $v in $m-color {
   .text#{$k} {
     color: $v if($has-important, !important, null);
   }
 }
 
+@each $k, $v in $m-colors {
+  .text#{$k} {
+    color: $v if($has-important, !important, null);
+  }
+}
+
 @if ($has-dark) {
-  @each $k, $v in $m-colors-reverse {
+  @each $k, $v in $m-color-reverse {
     .is-dark .text#{$k} {
       color: $v if($has-important, !important, null);
     }
   }
 
-  @each $k, $v in $m-color-reverse {
+  @each $k, $v in $m-colors-reverse {
     .is-dark .text#{$k} {
       color: $v if($has-important, !important, null);
     }
