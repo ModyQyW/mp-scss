@@ -67,17 +67,17 @@
     "lint-staged": "~10.5.4",
     "markdownlint-cli": "~0.27.1",
     "np": "~7.4.0",
-    "postcss": "~8.2.6",
+    "postcss": "~8.2.7",
     "postcss-cli": "~8.3.1",
     "postcss-preset-env": "~6.7.0",
     "prettier": "~2.2.1",
     "renamer": "~2.0.1",
     "rimraf": "~3.0.2",
     "sass": "~1.32.8",
-    "stylelint": "~13.11.0",
+    "stylelint": "~13.12.0",
     "vuepress": "~1.8.2",
     "vuepress-plugin-helper-live2d": "~1.0.2",
-    "vuepress-theme-hope": "~1.11.1"
+    "vuepress-theme-hope": "~1.11.2"
   },
   "publishConfig": {
     "access": "public"
