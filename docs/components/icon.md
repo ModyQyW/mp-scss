@@ -14,7 +14,7 @@
 
 ```html
 <view class="container">
-  <button class="btn is-primary">
+  <button class="btn">
     <image class="icon" src="../assets/image.png"></image>
     text
   </button>
@@ -27,23 +27,23 @@
 
 ```html
 <view class="container">
-  <button class="btn is-primary is-xs">
+  <button class="btn is-xs">
     <image class="icon is-xs mr-4" src="../assets/image.png"></image>
     text
   </button>
-  <button class="btn is-primary is-sm">
+  <button class="btn is-sm">
     <image class="icon is-sm mr-4" src="../assets/image.png"></image>
     text
   </button>
-  <button class="btn is-primary">
+  <button class="btn">
     <image class="icon mr-4" src="../assets/image.png"></image>
     text
   </button>
-  <button class="btn is-primary is-lg">
+  <button class="btn is-lg">
     <image class="icon is-lg mr-4" src="../assets/image.png"></image>
     text
   </button>
-  <button class="btn is-primary is-xl">
+  <button class="btn is-xl">
     <image class="icon is-xl mr-4" src="../assets/image.png"></image>
     text
   </button>

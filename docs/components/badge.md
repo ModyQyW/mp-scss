@@ -13,7 +13,7 @@
 使用一个父元素作为容器，在其中使用`.badge`。
 
 ```html
-<view class="btn is-primary">
+<view class="btn">
   button
   <view class="badge"></view>
 </view>
@@ -25,32 +25,32 @@
 
 ```html
 <!-- default 主题 -->
-<view class="btn is-primary">
+<view class="btn">
   button
   <view class="badge"></view>
 </view>
 <!-- primary 主题 -->
-<view class="btn is-primary">
+<view class="btn">
   button
   <view class="badge is-primary"></view>
 </view>
 <!-- success 主题 -->
-<view class="btn is-primary">
+<view class="btn">
   button
   <view class="badge is-success"></view>
 </view>
 <!-- warning 主题 -->
-<view class="btn is-warning">
+<view class="btn">
   button
-  <view class="badge"></view>
+  <view class="badge is-warning"></view>
 </view>
 <!-- error 主题 -->
-<view class="btn is-primary">
+<view class="btn">
   button
   <view class="badge is-error"></view>
 </view>
 <!-- info 主题 -->
-<view class="btn is-primary">
+<view class="btn">
   button
   <view class="badge is-info"></view>
 </view>
@@ -62,13 +62,13 @@
 
 ```html
 <view class="container">
-  <view class="btn is-primary">
+  <view class="btn">
     button
     <view class="badge"></view>
   </view>
 </view>
 <view class="container is-dark">
-  <view class="btn is-primary">
+  <view class="btn">
     button
     <view class="badge"></view>
   </view>
@@ -80,7 +80,7 @@
 使用`.is-sm`可以使用更小的`.badge`。可以结合不同主题、不同模式使用。
 
 ```html
-<view class="btn is-primary">
+<view class="btn">
   button
   <view class="badge is-sm"></view>
 </view>
@@ -91,7 +91,7 @@
 使用`.is-dot`可以使用圆点形式的`.badge`。可以结合不同主题、不同模式使用。
 
 ```html
-<view class="btn is-primary">
+<view class="btn">
   button
   <view class="badge is-dot"></view>
 </view>
