@@ -40,6 +40,16 @@ $card--border-width-base: 1 !default;
 $card--border-width: $card--border-width-base * $scale + $unit;
 
 /* styles */
+.card-header,
+.card-content,
+.card-footer {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  background-color: transparent;
+}
+
 .card {
   position: relative;
   box-sizing: border-box;
@@ -68,16 +78,6 @@ $card--border-width: $card--border-width-base * $scale + $unit;
       background-color: $container-background-color-reverse;
       border-color: $border-color-reverse;
     }
-  }
-
-  .card-header,
-  .card-content,
-  .card-footer {
-    position: relative;
-    box-sizing: border-box;
-    display: flex;
-    width: 100%;
-    background-color: transparent;
   }
 
   .card-header {
