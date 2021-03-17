@@ -1358,7 +1358,27 @@ $tmp-border-width: $border-width-min;
 $m-border-radius: (
   "-full": 100%,
   "-half": 50%,
-  "": $border-radius-base * $scale + $unit
+  "-pill": 9999 + $unit,
+  "": $border-radius-base * $scale + $unit,
+  "-xs": (
+    $border-radius-base - $border-radius-diff * 2
+  ) * $scale + $unit,
+  "-sm": (
+    $border-radius-base - $border-radius-diff
+  ) * $scale + $unit,
+  "-md": $border-radius-base * $scale + $unit,
+  "-lg": (
+    $border-radius-base + $border-radius-diff
+  ) * $scale + $unit,
+  "-xl": (
+    $border-radius-base + $border-radius-diff * 2
+  ) * $scale + $unit,
+  "-2xl": (
+    $border-radius-base + $border-radius-diff * 4
+  ) * $scale + $unit,
+  "-3xl": (
+    $border-radius-base + $border-radius-diff * 6
+  ) * $scale + $unit
 ) !default;
 $tmp-border-radius: $border-radius-min;
 @while ($tmp-border-radius <= $border-radius-max) {
