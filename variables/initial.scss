@@ -243,7 +243,8 @@ $line-height-step: 2 !default;
 $m-text-align: (
   "-left": left,
   "-right": right,
-  "-center": center
+  "-center": center,
+  "-justify": justify
 ) !default;
 // text-decoration
 $m-text-decoration: (
