@@ -96,7 +96,8 @@ $m-position: (
 ) !default;
 // top/right/bottom/left
 $m-position-value: (
-  "-0": 0
+  "-0": 0,
+  "-auto": auto
 ) !default;
 // z-index
 $z-index-min: 0 !default;
