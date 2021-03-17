@@ -1217,14 +1217,6 @@ $tmp-margin: $margin-min;
   );
   $tmp-margin: $tmp-margin + $margin-step;
 }
-@if ($scale != 1 and $margin-has-1-real) {
-  $m-margin: map-merge(
-    $m-margin,
-    (
-      "-1-real": 1 + $unit
-    )
-  );
-}
 
 /* typography */
 // font-family
