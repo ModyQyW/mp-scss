@@ -1012,7 +1012,9 @@ $m-colors-reverse: () !default;
 
 /* 定位变量 positioning */
 // z-index
-$m-z-index: () !default;
+$m-z-index: (
+  "-auto": auto
+) !default;
 $tmp-z-index: $z-index-min;
 @while ($tmp-z-index <= $z-index-max) {
   $m-z-index: map-merge(
