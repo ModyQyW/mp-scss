@@ -307,7 +307,7 @@ $border-radius-step: 1 !default;
 // outline
 $m-outline: (
   "-none": none
-);
+) !default;
 // box-shadow
 $box-shadow-umbra: rgba(0, 0, 0, 0.2) !default;
 $box-shadow-penumbra: rgba(0, 0, 0, 0.14) !default;
