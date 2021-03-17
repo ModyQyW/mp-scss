@@ -196,6 +196,8 @@ $margin-min: 0 !default;
 $margin-max: 40 !default;
 $margin-step: 1 !default;
 $margin-has-1-real: true !default;
+$margin-base: 12 !default;
+$margin-diff: 4 !default;
 // overflow
 $m-overflow: (
   "-auto": auto,
