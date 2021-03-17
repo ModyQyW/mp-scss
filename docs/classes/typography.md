@@ -1,5 +1,7 @@
 # 排版类 typography
 
+[源码](https://github.com/ModyQyW/mp-scss/blob/main/classes/typography)
+
 ## font-family
 
 |类名|样式|
@@ -7,7 +9,7 @@
 |`.font`|`font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";`|
 
 ```scss
-// 生成 .font, .font-sans, .font-serif, .font-mono
+// 生成 .font, .font-{sans|serif|mono}
 $font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
   "Microsoft YaHei", "微软雅黑", Arial, "Noto Sans", sans-serif,
@@ -36,11 +38,19 @@ $font-family: (
 |类名|样式|
 |---|---|
 |`.text`|`font-size: 28rpx;`|
-|`.text-xs`<Badge text="2.2 移除" />|`font-size: 20rpx;`|
-|`.text-sm`<Badge text="2.2 移除" />|`font-size: 24rpx;`|
-|`.text-md`<Badge text="2.2 移除" />|`font-size: 28rpx;`|
-|`.text-lg`<Badge text="2.2 移除" />|`font-size: 32rpx;`|
-|`.text-xl`<Badge text="2.2 移除" />|`font-size: 36rpx;`|
+|`.text-xs`|`font-size: 20rpx;`|
+|`.text-sm`|`font-size: 24rpx;`|
+|`.text-md`|`font-size: 28rpx;`|
+|`.text-lg`|`font-size: 32rpx;`|
+|`.text-xl`|`font-size: 36rpx;`|
+|`.text-2xl`|`font-size: 40rpx;`|
+|`.text-3xl`|`font-size: 48rpx;`|
+|`.text-4xl`|`font-size: 56rpx;`|
+|`.text-5xl`|`font-size: 64rpx;`|
+|`.text-6xl`|`font-size: 80rpx;`|
+|`.text-7xl`|`font-size: 96rpx;`|
+|`.text-8xl`|`font-size: 112rpx;`|
+|`.text-9xl`|`font-size: 128rpx;`|
 |`.text-10`|`font-size: 20rpx;`|
 |`.text-12`|`font-size: 24rpx;`|
 |`.text-14`|`font-size: 28rpx;`|
@@ -55,20 +65,71 @@ $font-family: (
 |`.text-32`|`font-size: 64rpx;`|
 |`.text-34`|`font-size: 68rpx;`|
 |`.text-36`|`font-size: 72rpx;`|
-|`.text-38`<Badge text="2.2 新增" />|`font-size: 76rpx;`|
-|`.text-40`<Badge text="2.2 新增" />|`font-size: 80rpx;`|
+|`.text-38`|`font-size: 76rpx;`|
+|`.text-40`|`font-size: 80rpx;`|
+|`.text-42`|`font-size: 84rpx;`|
+|`.text-44`|`font-size: 88rpx;`|
+|`.text-46`|`font-size: 92rpx;`|
+|`.text-48`|`font-size: 96rpx;`|
+|`.text-50`|`font-size: 100rpx;`|
+|`.text-52`|`font-size: 104rpx;`|
+|`.text-54`|`font-size: 108rpx;`|
+|`.text-56`|`font-size: 112rpx;`|
+|`.text-58`|`font-size: 116rpx;`|
+|`.text-60`|`font-size: 120rpx;`|
+|`.text-62`|`font-size: 124rpx;`|
+|`.text-64`|`font-size: 128rpx;`|
 
 ```scss
-// 生成 .text
-$scale: 2;
+// 通用变量
 $unit: rpx;
-$font-size-base: 16;
+$scale: 2;
+// // 生成 .text-{xs|sm|md|lg|xl|2xl|3xl|4xl|5xl|6xl|7xl|8xl|9xl}
+$font-size-base: 14 !default;
+$font-size-diff: 2 !default;
 $m-font-size: (
-  "": $font-size-base * $scale + $diff
+  "": $font-size-base * $scale + $unit,
+  "-xs": (
+    $font-size-base - $font-size-diff * 2
+  ) * $scale + $unit,
+  "-sm": (
+    $font-size-base - $font-size-diff
+  ) * $scale + $unit,
+  "-md": $font-size-base * $scale + $unit,
+  "-lg": (
+    $font-size-base + $font-size-diff
+  ) * $scale + $unit,
+  "-xl": (
+    $font-size-base + $font-size-diff * 2
+  ) * $scale + $unit,
+  "-2xl": (
+    $font-size-base + $font-size-diff * 3
+  ) * $scale + $unit,
+  "-3xl": (
+    $font-size-base + $font-size-diff * 5
+  ) * $scale + $unit,
+  "-4xl": (
+    $font-size-base + $font-size-diff * 7
+  ) * $scale + $unit,
+  "-5xl": (
+    $font-size-base + $font-size-diff * 9
+  ) * $scale + $unit,
+  "-6xl": (
+    $font-size-base + $font-size-diff * 13
+  ) * $scale + $unit,
+  "-7xl": (
+    $font-size-base + $font-size-diff * 17
+  ) * $scale + $unit,
+  "-8xl": (
+    $font-size-base + $font-size-diff * 21
+  ) * $scale + $unit,
+  "-9xl": (
+    $font-size-base + $font-size-diff * 25
+  ) * $scale + $unit
 );
-// 生成 .text-12, .text-14, .text-16, .text-18, .text-20, .text-22, .text-24
-$font-size-min: 12;
-$font-size-max: 24;
+// 生成 .text-{10|12|14|16|...|62|64}
+$font-size-min: 10;
+$font-size-max: 64;
 $font-size-step: 2;
 
 @import "~@modyqyw/mp-scss";
@@ -83,9 +144,10 @@ $font-size-step: 2;
 |---|---|
 |`.text-normal`|`font-style: normal;`|
 |`.text-italic`|`font-style: italic;`|
+|`.text-oblique`|`font-style: oblique;`|
 
 ```scss
-// 生成 .text-normal, .text-italic, .text-oblique
+// 生成 .text-{normal|italic|oblique}
 $m-font-style: (
   "-normal": normal,
   "-italic": italic,
@@ -109,22 +171,13 @@ $m-font-style: (
 |`.text-bold`|`font-weight: 700;`|
 
 ```scss
-// 生成 .text, .text-thin, .text-extra-light, .text-ultra-light, .text-light,
-//     .text-regular, .text-medium, .text-semi-bold, .text-bold,
-//     .text-extra-bold, .text-ultra-bold, .text-heavy
+// 生成 .text, .text-{regular|medium|semi-bold|bold}
 $m-font-weight: (
   "": 400,
-  "-thin": 100,
-  "-extra-light": 200,
-  "-ultra-light": 200,
-  "-light": 300,
   "-regular": 400,
   "-medium": 500,
   "-semi-bold": 600,
-  "-bold": 700,
-  "-extra-bold": 800,
-  "-ultra-bold": 800,
-  "-heavy": 900
+  "-bold": 700
 );
 
 @import "~@modyqyw/mp-scss";
@@ -140,8 +193,10 @@ $m-font-weight: (
 |`.tabular-nums`|`font-variant: tabular-nums;`|
 
 ```scss
-// 不生成相关类
-$m-font-variant: ();
+// 生成 .tabular-nums
+$m-font-variant: (
+  "tabular-nums": tabular-nums
+);
 
 @import "~@modyqyw/mp-scss";
 // @import "~@modyqyw/mp-scss/classes";
@@ -154,16 +209,11 @@ $m-font-variant: ();
 |类名|样式|
 |---|---|
 |`.leading`|`line-height: 1.5;`|
-|`.leading-xs`<Badge text="2.2 移除" />|`line-height: 1;`|
-|`.leading-sm`<Badge text="2.2 移除" />|`line-height: 1.25;`|
-|`.leading-md`<Badge text="2.2 移除" />|`line-height: 1.5;`|
-|`.leading-lg`<Badge text="2.2 移除" />|`line-height: 1.75;`|
-|`.leading-xl`<Badge text="2.2 移除" />|`line-height: 2;`|
-|`.leading-none`<Badge text="2.2 新增" />|`line-height: 1;`|
-|`.leading-tight`<Badge text="2.2 新增" />|`line-height: 1.25;`|
-|`.leading-normal`<Badge text="2.2 新增" />|`line-height: 1.5;`|
-|`.leading-relaxed`<Badge text="2.2 新增" />|`line-height: 1.75;`|
-|`.leading-loose`<Badge text="2.2 新增" />|`line-height: 2;`|
+|`.leading-xs`|`line-height: 1;`|
+|`.leading-sm`|`line-height: 1.25;`|
+|`.leading-md`|`line-height: 1.5;`|
+|`.leading-lg`|`line-height: 1.75;`|
+|`.leading-xl`|`line-height: 2;`|
 |`.leading-18`|`line-height: 36rpx;`|
 |`.leading-20`|`line-height: 40rpx;`|
 |`.leading-22`|`line-height: 44rpx;`|
@@ -180,24 +230,34 @@ $m-font-variant: ();
 |`.leading-44`|`line-height: 88rpx;`|
 |`.leading-46`|`line-height: 92rpx;`|
 |`.leading-48`|`line-height: 98rpx;`|
+|`.leading-50`|`line-height: 98rpx;`|
+|`.leading-52`|`line-height: 98rpx;`|
+|`.leading-54`|`line-height: 98rpx;`|
+|`.leading-56`|`line-height: 98rpx;`|
+|`.leading-58`|`line-height: 98rpx;`|
+|`.leading-60`|`line-height: 98rpx;`|
+|`.leading-62`|`line-height: 98rpx;`|
+|`.leading-64`|`line-height: 98rpx;`|
+|`.leading-66`|`line-height: 98rpx;`|
+|`.leading-68`|`line-height: 98rpx;`|
+|`.leading-70`|`line-height: 98rpx;`|
+|`.leading-72`|`line-height: 98rpx;`|
 
 ```scss
-// 生成 .leading, .leading-none, .leading-tight, .leading-normal,
-//     .leading-relaxed, .leading-loose
+// 生成 .leading, .leading-{xs|sm|md|lg|xl}
 $line-height-default: 1.5;
 $line-height-diff: 0.25;
-$m-font-size: (
+$m-line-height: (
   "": $line-height-default,
-  "-none": $line-height-default - $line-height-diff * 2,
-  "-tight": $line-height-default - $line-height-diff,
-  "-normal": $line-height-default,
-  "-relaxed": $line-height-default + $line-height-diff,
-  "-loose": $line-height-default + $line-height-diff * 2
+  "-xs": $line-height-default - $line-height-diff * 2,
+  "-sm": $line-height-default - $line-height-diff,
+  "-md": $line-height-default,
+  "-lg": $line-height-default + $line-height-diff,
+  "-xl": $line-height-default + $line-height-diff * 2
 );
-// 生成 .leading-20, .leading-22, .leading-24, .leading-26, .leading-28,
-//     .leading-30, .leading-32
-$line-height-min: 20;
-$line-height-max: 32;
+// 生成 .leading-{18|20|22|24|...|70|72}
+$line-height-min: 18;
+$line-height-max: 72;
 $line-height-step: 2;
 
 @import "~@modyqyw/mp-scss";
@@ -214,28 +274,45 @@ $line-height-step: 2;
 |`.text-main`|`color: rgba(0, 0, 0, .85);`|
 |`.text-secondary`|`color: rgba(0, 0, 0, .45);`|
 |`.text-disabled`|`color: rgba(0, 0, 0, .25);`|
+|`.text-primary`|`color: #1890ff;`|
+|`.text-success`|`color: #52c41a;`|
+|`.text-warning`|`color: #faad14;`|
+|`.text-error`|`color: #f5222d;`|
+|`.text-info`|`color: #1890ff;`|
+|`.is-dark .text`|`color: rgba(255, 255, 255, .85);`|
+|`.is-dark .text-main`|`color: rgba(255, 255, 255, .85);`|
+|`.is-dark .text-secondary`|`color: rgba(255, 255, 255, .45);`|
+|`.is-dark .text-disabled`|`color: rgba(255, 255, 255, .3);`|
+|`.is-dark .text-primary`|`color: #177ddc;`|
+|`.is-dark .text-success`|`color: #49aa19;`|
+|`.is-dark .text-warning`|`color: #d89614;`|
+|`.is-dark .text-error`|`color: #d32029;`|
+|`.is-dark .text-info`|`color: #177ddc;`|
 
-支持`$m-colors`和`$m-colors-reverse`里的色彩，详见[进阶 - 色彩](../advance/README.md#色彩)。
+请参考 [色彩](../advance/README.md#色彩) 说明，了解更多。
 
 ```scss
-// 生成 .text, .text-main, .text-secondary, .text-disabled
-$color-main: #333;
-$color-main-reverse: #333;
+$color-main: fade-out($black, 0.15) !default;
+$color-secondary: fade-out($black, 0.55) !default;
+$color-disabled: fade-out($black, 0.75) !default;
+$color-main-reverse: fade-out($white, 0.15) !default;
+$color-secondary-reverse: fade-out($white, 0.55) !default;
+$color-disabled-reverse: fade-out($white, 0.7) !default;
+// 生成 .text, .text-{main|secondary|disabled}
 $m-color: (
   "": $color-main,
   "-main": $color-main,
-  "-secondary": #999,
-  "-disabled": #ccc
-) !default;
-// 开启暗黑模式，生成 .is-dark .text, .is-dark .text-main,
-//                 .is-dark .text-secondary, .is-dark .text-disabled
+  "-secondary": $color-secondary,
+  "-disabled": $color-disabled
+);
+// 生成 。is-dark .text, 。is-dark .text-{main|secondary|disabled}
 $has-dark: true;
 $m-color-reverse: (
   "": $color-main-reverse,
   "-main": $color-main-reverse,
-  "-secondary": #999,
-  "-disabled": #ccc
-) !default;
+  "-secondary": $color-secondary-reverse,
+  "-disabled": $color-disabled-reverse
+);
 
 @import "~@modyqyw/mp-scss";
 // @import "~@modyqyw/mp-scss/classes";
@@ -250,9 +327,10 @@ $m-color-reverse: (
 |`.text-left`|`text-align: left;`|
 |`.text-right`|`text-align: right;`|
 |`.text-center`|`text-align: center;`|
+|`.text-justify`|`text-align: justify;`|
 
 ```scss
-// 生成 .text-left, .text-right, .text-center, .text-justify
+// 生成 .text-{left|right|center|justify}
 $m-text-align: (
   "-left": left,
   "-right": right,
@@ -272,14 +350,17 @@ $m-text-align: (
 |---|---|
 |`.text-none`|`text-decoration: none;`|
 |`.text-underline`|`text-decoration: underline;`|
+|`.text-overline`|`text-decoration: overline;`|
+|`.text-line-through`|`text-decoration: line-through;`|
 
 ```scss
-// 生成 .text-none, .text-underline, .text-line-through
+// 生成 .text-{none|underline|overline|line-through}
 $m-text-decoration: (
   "-none": none,
   "-underline": underline,
+  "-overline": overline,
   "-line-through": line-through
-) !default;
+);
 
 @import "~@modyqyw/mp-scss";
 // @import "~@modyqyw/mp-scss/classes";
@@ -293,13 +374,14 @@ $m-text-decoration: (
 |---|---|
 |`.text-uppercase`|`text-transform: uppercase;`|
 |`.text-lowercase`|`text-transform: lowercase;`|
+|`.text-capitalize`|`text-transform: capitalize;`|
 
 ```scss
 // 生成 .text-capitalize, .text-uppercase, .text-lowercase
 $m-text-transform: (
-  "-capitalize": capitalize,
   "-uppercase": uppercase,
-  "-lowercase": lowercase
+  "-lowercase": lowercase,
+  "-capitalize": capitalize
 );
 
 @import "~@modyqyw/mp-scss";
@@ -318,10 +400,3 @@ $m-text-transform: (
 |`.text-truncate`|`overflow: hidden; text-overflow: ellipsis; white-space: nowrap;`|
 
 这部分不能自定义。
-
-```scss
-@import "~@modyqyw/mp-scss";
-// @import "~@modyqyw/mp-scss/classes";
-// @import "~@modyqyw/mp-scss/classes/typography";
-// @import "~@modyqyw/mp-scss/classes/typography/word-break";
-```

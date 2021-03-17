@@ -1,17 +1,24 @@
 # 杂项类 misc
 
+[源码](https://github.com/ModyQyW/mp-scss/blob/main/classes/misc)
+
 ## opacity
 
 |类名|样式|
 |---|---|
 |`.opacity-0`|`opacity: 0;`|
+|`.opacity-25`|`opacity: 0.25;`|
+|`.opacity-50`|`opacity: 0.5;`|
+|`.opacity-75`|`opacity: 0.75;`|
 |`.opacity-100`|`opacity: 1;`|
 
 ```scss
-// 生成 .opacity-0, .opacity-50, .opacity-100
+// 生成 .opacity-{0|25|50|75|100}
 $m-opacity: (
   "-0": 0,
+  "-25": 0.25,
   "-50": 0.5,
+  "-75": 0.75,
   "-100": 1
 );
 

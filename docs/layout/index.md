@@ -1,10 +1,10 @@
 # 布局类总览 layout
 
-[源码](https://github.com/ModyQyW/mp-scss/blob/master/layout)
+[源码](https://github.com/ModyQyW/mp-scss/blob/main/layout)
 
 ## 使用
 
-引入`layout`后即可使用内置的布局类。`layout`可以单独使用。
+引入 `layout` 后即可使用内置的布局类。`layout` 可以单独使用。
 
 ```scss
 @import "~@modyqyw/mp-scss";

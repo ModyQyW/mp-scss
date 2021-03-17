@@ -6,19 +6,20 @@
 
 ## 工具 utils
 
-- 使用 3 次或以上的代码段需要抽离成[函数](https://sass-lang.com/documentation/values/functions)，如 `f-get-color`。
+- 使用 3 次或以上的代码段需要抽离成 [函数](https://sass-lang.com/documentation/values/functions)，如 `f-get-color`。
 - 样式不抽离成混合 `mixin`，方便 `stylelint` 校验、修正。
 
 ## 变量 variables
 
-- [变量](https://sass-lang.com/documentation/variables)划分为初始变量 `initial variables`，衍生变量 `derived variables` 和布局变量 `layout variables`。
-  - 初始变量 - 能够明确初始值，且不依赖于其它变量的变量，如 `$red;`。
+- [变量](https://sass-lang.com/documentation/variables) 划分为初始变量 `initial variables`，衍生变量 `derived variables`，布局变量 `layout variables` 和组件变量 `components variables`。
+  - 初始变量 - 能够明确初始值，且不依赖于其它变量的变量，如 `$red`。
   - 衍生变量 - 依赖其它变量或会做其它处理的变量，如 `$red-1`。
   - 布局变量 - 特殊的初始变量/衍生变量，包含页面布局变量和栅格系统变量，如 `$container-font-family`。
-- 变量名没有包含[属性名](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference) - 通用度较高的变量，如 `$unit` 表示单位，`$scale` 表示缩放倍数，它们在很多地方都被使用到了，不需要也不应该在变量名里包含属性名。
+  - 组件变量 - 特殊的初始变量/衍生变量，包括各组件使用的变量，如 `$badge--padding-y-base`。
+- 变量名没有包含 [属性名](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference) - 通用度较高的变量，如 `$unit` 表示单位，`$scale` 表示缩放倍数，它们在很多地方都被使用到了，不需要也不应该在变量名里包含属性名。
 - 变量名包括 `has` - 控制某些类是否会被生成，如 `$has-dark` 控制是否生成暗黑模式相关的类，`$has-red` 控制是否生成 `red` 相关的类。
 - 变量名前缀是属性名或变量名包含属性名 - 和该属性相关的变量，如 `$m-position` 和 `position` 相关。
-  - 特别地，`$m-position-value` 这个[映射](https://sass-lang.com/documentation/modules/map)会用于 `top`，`right`，`bottom`，`left` 这四个属性上，但变量名没有包含属性。
+  - 特别地，`$m-position-value` 这个 [映射](https://sass-lang.com/documentation/modules/map) 会用于 `top`，`right`，`bottom`，`left` 这四个属性上，但变量名没有包含属性。
 - 变量名前缀是 `f-` - 函数，如 `$f-get-color`。
 - 变量名前缀是 `m-` - 映射，如 `$m-position`。
   - 当对应的属性不会混淆时，键可以是空字符串。特别地，考虑到语义化，多个相关属性可以同时拥有空字符串的键。
@@ -28,14 +29,14 @@
 - 变量名前缀是 `l-` - [列表 `list`](https://sass-lang.com/documentation/modules/list)，只会用于百分比值的生成，如 `$l-width-denominator` 表示 `width` 相关的类会出现百分比的值，分数形式下的分母源于 `$l-width-denominator`。
 - 变量名后缀是 `-default` - 作为基准值、可以被直接使用的简单变量，如 `$line-height-default` 表示 `line-height` 的基准值。对于同一属性，变量名后缀是 `-base` 的变量和变量名后缀是 `-default` 的变量最多只能存在一个。
 - 变量名后缀是 `-base` - 作为基准值、需要作简单处理（往往是增减差量，乘以缩放倍数和添加单位）才能被使用的简单变量，如 `$font-size-base`。对于同一属性，变量名后缀是 `-base` 的变量和变量名后缀是 `-default` 的变量最多只能存在一个。
-- 变量名后缀是 `-diff` - 用于生成映射初始值的变量，表示差量，直接被基准值加减，如`$line-height-diff`。
-- 变量名后缀是 `-min` - 用于循环填充映射的变量，表示循环开始的值，如 `$padding-min`。
-- 变量名后缀是 `-max` - 用于循环填充映射的变量，表示循环结束的值，如 `$padding-max`。
-- 变量名后缀是 `-step` - 用于循环填充映射的变量，表示循环循环每次递增的值，如 `$padding-step`。
+- 变量名后缀是 `-diff` - 用于生成映射初始值的变量，表示差量，直接被基准值加减，如`$font-size-diff`。
+- 变量名后缀是 `-min` - 用于循环填充映射的变量，表示循环开始的值，如 `$font-size-min`。
+- 变量名后缀是 `-max` - 用于循环填充映射的变量，表示循环结束的值，如 `$font-size-max`。
+- 变量名后缀是 `-step` - 用于循环填充映射的变量，表示循环循环每次递增的值，如 `$font-size-step`。
 - 变量名后缀是 `-reverse` - 暗黑模式下使用的变量，如 `$red-reverse`。
 - 变量名后缀是 `-has-1-real` - 在 `$scale` 不为 1 时生成，填充到对应属性的映射里。
 - 简单的固定值不需要写成变量，如 `relative`，`auto`， `100`。
-- 为不会带来破坏性影响的变量添加 `!default`，允许修改默认值。但不会添加校验，如果自定义变量错误将会无法正常使用。
+- 为不会带来破坏性影响的变量添加 `!default`，允许修改默认值。但不会添加校验，如错误地自定义变量将使得库无法正常运作。
 
 ## 重置 reset
 

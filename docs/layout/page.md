@@ -1,5 +1,7 @@
 # 页面布局类 page
 
+[源码](https://github.com/ModyQyW/mp-scss/blob/main/page.scss)
+
 ## 默认样式
 
 要使用页面布局类，需要先引入。
@@ -10,16 +12,17 @@
 // @import "~@modyqyw/mp-scss/layout/page";
 ```
 
-首先要让根元素`page`占满整个屏幕。如果你引入了`reset`，就可以不必手动地让根元素占满屏幕，因为`reset`已经完成了这部分工作。
+首先要让根元素占满整个屏幕。如果你引入了 `reset`，它已经替你完成了这部分工作。
 
-```css
-page {
+```scss
+page,
+body {
   width: 100%;
   height: 100%;
 }
 ```
 
-之后，让顶级的布局容器`.container`铺满整个屏幕。
+之后，让顶级布局容器 `.container` 铺满整个屏幕。
 
 ```html
 <view class="container h-full">
@@ -27,7 +30,7 @@ page {
 </view>
 ```
 
-再填充`.header`，`.navbar`和`.footer`。如果需要安全区，可以加上`.safe-area`。
+再填充 `.header`，`.navbar` 和 `.footer`。如果需要安全区，可以加上 `.safe-area`。
 
 ```html
 <view class="container h-full">
@@ -39,7 +42,7 @@ page {
 </view>
 ```
 
-使用`.main`作为内容区。
+使用 `.main` 作为内容区。
 
 ```html
 <view class="container h-full">
@@ -50,7 +53,7 @@ page {
 </view>
 ```
 
-要添加和`.main`同级的`.aside`，需要再包裹一个布局容器`.container`。
+要添加和 `.main` 同级的 `.aside`，需要再包裹一个布局容器 `.container`。
 
 ```html
 <view class="container h-full">
@@ -66,6 +69,15 @@ page {
 
 组合使用页面布局类和通用类应该能满足绝大部分的布局需求。
 
+注意，在某些机型上可能会出现布局不正常的问题，一般是对 flexbox 布局支持不佳所致，可以尝试指定 `.container.flex-row` 的高度。针对上面最后一个示例，可以使用以下的方式指定高度。
+
+```scss
+.container.flex-row {
+  flex: 0 0 calc(100% - #{($header-height-base + $navbar-height-base + $footer-height-base) * $scale + $unit});
+  height: 0 0 calc(100% - #{($header-height-base + $navbar-height-base + $footer-height-base) * $scale + $unit});
+}
+```
+
 ## 明亮模式和暗黑模式
 
 默认使用明亮模式。
@@ -77,7 +89,7 @@ page {
 </view>
 ```
 
-[手动开启暗黑模式](../advance/README.md#明亮模式和暗黑模式)后，使用`.is-dark`就能指定使用暗黑模式。
+[手动开启暗黑模式](../advance/README.md#明亮模式和暗黑模式) 后，使用 `.is-dark` 开启暗黑模式。
 
 ```html
 <view class="container is-dark">
@@ -86,103 +98,94 @@ page {
 </view>
 ```
 
-## 自定义 container 背景颜色
+## 变量
 
-手动指定`$container-background-color`就能自定义`.container`明亮模式下的背景色，手动指定`$container-background-color-reverse`就能自定义`.container`暗黑模式下的背景色。
+|变量名|默认值|
+|---|---|
+|`$page-background-color`|`$gray-1`|
+|`$page-background-color-reverse`|`$gray-13`|
+|`$body-background-color`|`$page-background-color`|
+|`$body-background-color-reverse`|`$page-background-color-reverse`|
+|`$page-background-color`|`$gray-1`|
+|`$page-background-color-reverse`|`$gray-13`|
+|`$container-font-family`|`$font-family-default`|
+|`$container-font-size-base`|`$font-size-base`|
+|`$container-font-weight`|`400`|
+|`$container-line-height`|`$line-height-default`|
+|`$container-background-color`|`$gray-1`|
+|`$container-background-color-reverse`|`$gray-12`|
+|`$header-height-base`|`48`|
+|`$header-background-color`|`transparent`|
+|`$header-background-color-reverse`|`transparent`|
+|`$navbar-height-base`|`32`|
+|`$navbar-background-color`|`transparent`|
+|`$navbar-background-color-reverse`|`transparent`|
+|`$aside-width-base`|`100`|
+|`$aside-background-color`|`transparent`|
+|`$aside-background-color-reverse`|`transparent`|
+|`$main-background-color`|`transparent`|
+|`$main-background-color-reverse`|`transparent`|
+|`$footer-height-base`|`48`|
+|`$footer-background-color`|`transparent`|
+|`$footer-background-color-reverse`|`transparent`|
+|`$safe-area-height-base`|`34`|
+|`$safe-area-background-color`|`transparent`|
+|`$safe-area-background-color-reverse`|`transparent`|
 
-`.container`在明亮模式下背景色默认为`#fff`，在暗黑模式下背景色默认为`#141414`。
+你可以直接修改对应的变量来自定义，也可以像下面这样手动自定义。
 
 ```scss
-// 修改 .container 的背景颜色
+// 指定根元素的背景色，-reverse 后缀表示暗黑模式下使用
+$page-background-color: #fff;
+$page-background-color-reverse: #000;
+$body-background-color: $page-background-color;
+$body-background-color: $page-background-color-reverse;
+
+// 指定 .container 及其子元素排版的默认表现
+$container-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+  "微软雅黑", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$container-font-size-base: 14;
+$container-font-weight: 400;
+$container-line-height: 1.5;
+// 指定 .container 背景色
 $container-background-color: #fff;
 $container-background-color-reverse: #141414;
 
-@import "~@modyqyw/mp-scss";
-// @import "~@modyqyw/mp-scss/layout";
-// @import "~@modyqyw/mp-scss/layout/page";
-```
+// 指定 .header 高度
+$header-height-base: 48;
+// 指定 .header 背景色
+$header-background-color: transparent;
+$header-background-color-reverse: transparent;
 
-## 自定义 header 高度
+// 指定 .navbar 高度
+$navbar-height-base: 32;
+// 指定 .navbar 背景色
+$navbar-background-color: transparent;
+$navbar-background-color-reverse: transparent;
 
-手动指定`$header-height-base`就能自定义`.header`高度。
-
-`$header-height-base`默认值为`48`，将会使用`$header-height-base * $scale + $unit`作为`.header`的高度，也就是说`.header`高度默认为`96rpx`。
-
-```scss
-// 修改 .header 高度为 80rpx
-$header-height-base: 40;
-
-@import "~@modyqyw/mp-scss";
-// @import "~@modyqyw/mp-scss/layout";
-// @import "~@modyqyw/mp-scss/layout/page";
-```
-
-你也可以直接修改`$header-height: 80rpx;`，但这样`$header-height-base`，`$scale`和`$unit`都失去了本来的意义。如果没有必须这么做的理由，建议修改`$header-height-base`即可。
-
-## 自定义 navbar 高度
-
-手动指定`$navbar-height-base`就能自定义`.navbar`高度。
-
-`$navbar-height-base`默认值为`36`，将会使用`$navbar-height-base * $scale + $unit`作为`.navbar`的高度，也就是说`.navbar`高度默认为`72rpx`。
-
-```scss
-// 修改 .navbar 高度为 80rpx
-$navbar-height-base: 40;
-
-@import "~@modyqyw/mp-scss";
-// @import "~@modyqyw/mp-scss/layout";
-// @import "~@modyqyw/mp-scss/layout/page";
-```
-
-你也可以直接修改`$navbar-height: 80rpx;`，但这样`$navbar-height-base`，`$scale`和`$unit`都失去了本来的意义。如果没有必须这么做的理由，建议修改`$navbar-height-base`即可。
-
-## 自定义 aside 宽度
-
-手动指定`$aside-width-base`就能自定义`.aside`高度。
-
-`$aside-width-base`默认值为`120`，将会使用`$aside-width-base * $scale + $unit`作为`.aside`的宽度，也就是说`.aside`宽度默认为`240rpx`。
-
-```scss
-// 修改 .aside 宽度为 200rpx
+// 指定 .aside 宽度
 $aside-width-base: 100;
+// 指定 .aside 背景色
+$aside-background-color: transparent;
+$aside-background-color-reverse: transparent;
+
+// 指定 .main 背景色
+$main-background-color: transparent;
+$main-background-color-reverse: transparent;
+
+// 指定 .footer 高度
+$footer-height-base: 48;
+// 指定 .footer 背景色
+$footer-background-color: transparent;
+$footer-background-color-reverse: transparent;
+
+// 指定 .safe-area 高度
+$safe-area-height-base: 34;
+// 指定 .safe-area 背景色
+$safe-area-background-color: transparent;
+$safe-area-background-color-reverse: transparent;
 
 @import "~@modyqyw/mp-scss";
 // @import "~@modyqyw/mp-scss/layout";
 // @import "~@modyqyw/mp-scss/layout/page";
 ```
-
-你也可以直接修改`$aside-width: 200rpx;`，但这样`$aside-width-base`，`$scale`和`$unit`都失去了本来的意义。如果没有必须这么做的理由，建议修改`$aside-width-base`即可。
-
-## 自定义 footer 高度
-
-手动指定`$footer-height-base`就能自定义`.footer`高度。
-
-`$footer-height-base`默认值为`48`，将会使用`$footer-height-base * $scale + $unit`作为`.footer`的高度，也就是说`.footer`高度默认为`96rpx`。
-
-```scss
-// 修改 .footer 高度为 80rpx
-$footer-height-base: 40;
-
-@import "~@modyqyw/mp-scss";
-// @import "~@modyqyw/mp-scss/layout";
-// @import "~@modyqyw/mp-scss/layout/page";
-```
-
-你也可以直接修改`$footer-height: 80rpx;`，但这样`$footer-height-base`，`$scale`和`$unit`都失去了本来的意义。如果没有必须这么做的理由，建议修改`$footer-height-base`即可。
-
-## 自定义 safe-area 高度
-
-手动指定`$safe-area-height-base`就能自定义`.safe-area`高度。
-
-`$safe-area-height-base`默认值为`34`，将会使用`$safe-area-height-base * $scale + $unit`作为`.safe-area`的高度，也就是说`.safe-area`高度默认为`96rpx`。
-
-```scss
-// 修改 .safe-area 高度为 80rpx
-$safe-area-height-base: 40;
-
-@import "~@modyqyw/mp-scss";
-// @import "~@modyqyw/mp-scss/layout";
-// @import "~@modyqyw/mp-scss/layout/page";
-```
-
-你也可以直接修改`$safe-area-height: 80rpx;`，但这样`$safe-area-height-base`，`$scale`和`$unit`都失去了本来的意义。如果没有必须这么做的理由，建议修改`$safe-area-height-base`即可。

@@ -2,7 +2,7 @@
 
 `@modyqyw/mp-scss` 是一个基于 [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) 的小程序 [SCSS](https://sass-lang.com/) 库，用于快速实现自定义设计。
 
-除了可自定义、提供属性类之外，`@modyqyw/mp-scss` 还专门支持了小程序，包含了重置样式 `reset`，布局样式 `layout`，组件样式 `components` 等，目的就是让小程序开发更加简单快捷。
+除了可自定义、提供属性类之外，`@modyqyw/mp-scss` 还支持了小程序，包含了重置样式 `reset`，布局样式 `layout`，组件样式 `components` 等，目的就是让小程序开发更加简单快捷。
 
 ## 特性
 

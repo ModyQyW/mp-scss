@@ -4,7 +4,7 @@ sidebar: 'auto'
 
 # 重置
 
-[源码](https://github.com/ModyQyW/mp-scss/blob/master/reset/index.scss)
+[源码](https://github.com/ModyQyW/mp-scss/blob/main/reset/index.scss)
 
 ## 使用
 

@@ -4,15 +4,71 @@ sidebar: 'auto'
 
 # 改动日志
 
+## 2.3
+
+### 2.3.0
+
+- 调整 - 组件变量统一放到 `@modyqyw/mp-scss/variables/components.scss`。
+- 新增 - `.static`。
+- 新增 - `.{top|right|bottom|left|inset|inset-y|inset-x}-auto`。
+- 调整 - `$z-index-min` 0 -> -50。
+- 新增 - `.z-auto`。
+- 新增 - `.box-content`。
+- 新增 - `.d-inline`。
+- 新增 - `.flex-initial`。
+- 调整 - `$flex-shrink-max` 1 -> 4。
+- 调整 - `$flex-grow-max` 1 -> 4。
+- 调整 - `$width-max` 40 -> 80。
+- 调整（可能导致破坏性更新） - `$width-step` 1 -> 2。
+- 新增 - `.w-auto`。
+- 调整 - `$height-max` 40 -> 80。
+- 调整（可能导致破坏性更新） - `$height-step` 1 -> 2。
+- 新增 - `.h-auto`。
+- 新增 - `$padding-base`，`$padding-diff`，`.p-{xs|sm|md|lg|xl}`。
+- 调整 - `$padding-max` 40 -> 80。
+- 调整（可能导致破坏性更新） - `$padding-step` 1 -> 2。
+- 调整（可能导致破坏性更新） - 移除 `$padding-has-1-real`，不再生成 `.p-1-real`。
+- 修复 - 移除 padding 类不合理的负值支持。
+- 新增 - `$margin-base`，`$margin-diff`，`.m-{nxs|nsm|nmd|nlg|nxl|xs|sm|md|lg|xl}`。
+- 调整 - `$margin-min` 0 -> -80。
+- 调整 - `$margin-max` 40 -> 80。
+- 调整（可能导致破坏性更新） - `$margin-step` 1 -> 2。
+- 调整（可能导致破坏性更新） - 移除 `$margin-has-1-real`，不再生成 `.m-1-real`。
+- 新增 - `.overflow-visible`。
+- 调整 - `$font-size-max` 40 -> 64。
+- 新增 - `.text-oblique`。
+- 调整 - `$line-height-max` 48 -> 72。
+- 新增 - `.text-{xs|sm|md|lg|xl|2xl|3xl|4xl|5xl|6xl|7xl|8xl|9xl}`。
+- 调整（可能导致破坏性更新） - `.leading-{none|tight|normal|relaxed|loose}` -> `.leading-{xs|sm|md|lg|xl}`。
+- 新增 - `.text-justify`。
+- 新增 - `.text-{overline|line-through}`。
+- 新增 - `.text-capitalize`。
+- 新增 - `.bg-scroll`。
+- 新增 - `.bg-auto`。
+- 新增 - `.border-{dotted|dashed}`。
+- 调整 - `$border-width-max` 1 -> 4。
+- 新增 - `$border-radius-diff`，`.rounded-{pill|xs|sm|md|lg|xl|2xl|3xl}`。
+- 调整 - `$border-radius-max` 1 -> 8。
+- 修复 - 修复无法自定义 `$m-outline` 的问题。
+- 新增 - `.opacity-{25|50|75}`。
+- 调整（可能导致破坏性更新） - `$navbar-height-base` 36 -> 32。
+- 调整（可能导致破坏性更新） - `$aside-width-base` 120 -> 100。
+- 优化 - 移除多余变量。
+- 调整 - `$gutter-min` 4 -> 0。
+- 调整 - `$gutter-max` 20 -> 24。
+- 调整（可能导致破坏性更新） - button 组件类默认表现移除 `overflow: hidden`。
+- 调整（可能导致破坏性更新） - button 组件类 `.is-rounded` 调整为 `.is-pill`。
+- 修复 - 修复 card 组件类部分样式优先级的问题。
+
 ## 2.2
 
 ### 2.2.5
 
-- 修复 - 修复布局类内使用了错误变量的问题
+- 修复 - 修复布局类内使用了错误变量的问题。
 
 ### 2.2.4
 
-- 修复 - 修复 card 组件类部分样式优先级的问题
+- 修复 - 修复 card 组件类部分样式优先级的问题。
 
 ### 2.2.3
 
@@ -20,7 +76,7 @@ sidebar: 'auto'
 
 ### 2.2.2
 
-- 调整 - 调整字体颜色，背景颜色和边框颜色的类的顺序，现在使用默认颜色生成的类会被使用色板颜色生成的类覆盖样式
+- 调整 - 调整字体颜色，背景颜色和边框颜色的类的顺序，现在使用默认颜色生成的类会被使用色板颜色生成的类覆盖样式。
 
 ### 2.2.1
 

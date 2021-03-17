@@ -1,5 +1,7 @@
 # 栅格系统类 grid
 
+[源码](https://github.com/ModyQyW/mp-scss/blob/main/grid.scss)
+
 ## 默认样式
 
 要使用栅格系统类，需要先引入。
@@ -10,7 +12,7 @@
 // @import "~@modyqyw/mp-scss/layout/grid";
 ```
 
-默认提供 12 格基于弹性盒子布局的栅格系统。行容器为`.row`，列容器为`.col`。
+默认提供 12 格基于弹性盒子布局的栅格系统。行容器为 `.row`，列容器为 `.col`。
 
 ```html
 <view class="row">
@@ -27,11 +29,11 @@
 </view>
 ```
 
-默认地，列容器还支持`.col-1`，`.col-2`到`.col-12`。
+默认地，列容器还支持 `.col-{1-12}`。
 
 ## 列间隔
 
-给`.row`添加`.gutter`相关的类可以添加列间隔。
+给 `.row` 添加 `.gutter` 相关类可以添加列间隔，默认支持 `.gutter` 和 `.gutter-{xs|sm|md|lg|xl|0|4|8|12|16|20|24}`。
 
 ```html
 <view class="row gutter">
@@ -62,6 +64,8 @@
 |`.row.gutter-lg > .col`|`padding-right: 16rpx; padding-left: 16rpx;`|
 |`.row.gutter-xl`|`margin-right: -20rpx; margin-left: -20rpx;`|
 |`.row.gutter-xl > .col`|`padding-right: 20rpx; padding-left: 20rpx;`|
+|`.row.gutter-0`|`margin-right: 0; margin-left: 0;`|
+|`.row.gutter-0 > .col`|`padding-right: 0; padding-left: 0;`|
 |`.row.gutter-4`|`margin-right: -4rpx; margin-left: -4rpx;`|
 |`.row.gutter-4 > .col`|`padding-right: 4rpx; padding-left: 4rpx;`|
 |`.row.gutter-8`|`margin-right: 8rpx; margin-left: -8rpx;`|
@@ -72,10 +76,12 @@
 |`.row.gutter-16 > .col`|`padding-right: 16rpx; padding-left: 16rpx;`|
 |`.row.gutter-20`|`margin-right: -20rpx; margin-left: -20rpx;`|
 |`.row.gutter-20 > .col`|`padding-right: 20rpx; padding-left: 20rpx;`|
+|`.row.gutter-24`|`margin-right: -24rpx; margin-left: -24rpx;`|
+|`.row.gutter-24 > .col`|`padding-right: 24rpx; padding-left: 24rpx;`|
 
 ## 列偏移
 
-给`.col`添加`.col-offset-`相关的类可以添加列偏移，默认支持`.col-offset-1`，`.col-offset-2`到`.col-offset-12`。
+给 `.col` 添加 `.col-offset-*` 相关类可以添加列偏移，默认支持 `.col-offset-{1-12}`。
 
 ```html
 <view class="row">
@@ -86,7 +92,7 @@
 
 ## 列排序
 
-给`col`添加`.col-pull-`或`.col-push-`相关的类可以更改列排序，默认支持`.col-pull-1`，`.col-pull-2`到`.col-pull-12`，`.col-push-1`，`.col-push-2`到`.col-push-12`。
+给 `.col` 添加 `.col-pull-*` 或 `.col-push-*` 相关类可以更改列排序，默认支持 `.col-pull-{1-12}`，`.col-push-{1-12}`。
 
 ```html
 <view class="row">
@@ -95,52 +101,48 @@
 </view>
 ```
 
-你也可以使用`.order-`相关的类更改列排序。
+你也可以使用 `.order` 相关类更改列排序。
 
-## 自定义栅格数量
+## 变量
 
-手动指定`$grid-max`就能自定义栅格数量。
-
-`$grid-max`默认值为`12`，也就是说栅格系统默认为 12 格。
-
-```scss
-// 修改栅格系统为 24 格
-$grid-max: 24;
-
-@import "~@modyqyw/mp-scss";
-// @import "~@modyqyw/mp-scss/layout";
-// @import "~@modyqyw/mp-scss/layout/grid";
-```
-
-## 自定义 gutter 类
-
-这部分由`$m-gutter`生成，在引入之前做相关修改可以自定义。
+|变量名|默认值|
+|---|---|
+|`$grid-max`|`12`|
+|`$gutter-base`|`12`|
+|`$gutter-diff`|`4`|
+|`$gutter-min`|`0`|
+|`$gutter-max`|`24`|
+|`$gutter-step`|`4`|
+|`$m-gutter`|因过长而省略，见下方示例|
 
 ```scss
-// 生成 .gutter, .gutter-xs, .gutter-sm, .gutter-md, .gutter-lg, .gutter-xl
-$scale: 2;
+// 通用变量
 $unit: rpx;
+$scale: 2;
+// 指定栅格数量为 12 格
+$grid-max: 12;
+// 生成 .gutter, .gutter-{xs|sm|md|lg|xl}
 $gutter-base: 12;
 $gutter-diff: 4;
 $m-gutter: (
-  "": $gutter-base * $scale + $diff,
+  "": $gutter-base / 2 * $scale + $unit,
   "-xs": (
     $gutter-base - $gutter-diff * 2
-  ) * $scale + $unit,
+  ) / 2 * $scale + $unit,
   "-sm": (
     $gutter-base - $gutter-diff
-  ) * $scale + $unit,
-  "-md": $gutter-base * $scale + $unit,
+  ) / 2 * $scale + $unit,
+  "-md": $gutter-base / 2 * $scale + $unit,
   "-lg": (
     $gutter-base + $gutter-diff
-  ) * $scale + $unit,
+  ) / 2 * $scale + $unit,
   "-xl": (
     $gutter-base + $gutter-diff * 2
-  ) * $scale + $unit
+  ) / 2 * $scale + $unit
 );
-// 生成 .gutter-4, .gutter-8, .gutter-12
-$gutter-min: 4;
-$gutter-max: 12;
+// 生成 .gutter-{0|4|8|12|16|20|24}
+$gutter-min: 0;
+$gutter-max: 24;
 $gutter-step: 4;
 
 @import "~@modyqyw/mp-scss";

@@ -1,16 +1,19 @@
 # 盒模型类 box-model
 
+[源码](https://github.com/ModyQyW/mp-scss/blob/main/classes/box-model)
+
 ## box-sizing
 
 |类名|样式|
 |---|---|
 |`.box-border`|`box-sizing: border-box;`|
+|`.box-content`|`box-sizing: content-box;`|
 
 ```scss
-// 生成 .box-content, .box-border
+// 生成 .box-{border|content}
 $m-box-sizing: (
-  "-content": content-box,
-  "-border": border-box
+  "-border": border-box,
+  "-content": content-box
 );
 
 @import "~@modyqyw/mp-scss";
@@ -25,12 +28,13 @@ $m-box-sizing: (
 |---|---|
 |`.d-block`|`display: block;`|
 |`.d-inline-block`|`display: inline-block;`|
+|`.d-inline`|`display: inline;`|
 |`.d-flex`|`display: flex;`|
 |`.d-inline-flex`|`display: inline-flex;`|
 |`.d-none`|`display: none;`|
 
 ```scss
-// 生成 .d-block, .d-inline-block, .d-inline, .d-flex, .d-inline-flex, .d-none
+// 生成 .d-{block|inline-block|inline|flex|inline-flex|none}
 $m-display: (
   "-block": block,
   "-inline-block": inline-block,
@@ -50,13 +54,14 @@ $m-display: (
 
 |类名|样式|
 |---|---|
+|`.flex-initial`|`flex: 0 1 auto;`|
 |`.flex-auto`|`flex: 1 1 auto;`|
 |`.flex-none`|`flex: 0 0 auto;`|
 
 ```scss
-// 生成 .flex, .flex-auto, .flex-none
+// 生成 .flex-{initial|auto|none}
 $m-flex: (
-  "": 0 1 auto,
+  "-initial": 0 1 auto,
   "-auto": 1 1 auto,
   "-none": 0 0 auto
 );
@@ -75,12 +80,10 @@ $m-flex: (
 |`.flex-col`|`flex-direction: column;`|
 
 ```scss
-// 生成 .flex-row, .flex-row-reverse, .flex-col, .flex-col-reverse
+// 生成 .flex-{row|col}
 $m-flex-direction: (
   "-row": row,
-  "-row-reverse": row-reverse,
-  "-col": column,
-  "-col-reverse": column-reverse
+  "-col": column
 );
 
 @import "~@modyqyw/mp-scss";
@@ -97,11 +100,10 @@ $m-flex-direction: (
 |`.flex-wrap`|`flex-direction: wrap;`|
 
 ```scss
-// 生成 .flex-nowrap, .flex-wrap, .flex-wrap-reverse
+// 生成 .flex-{nowrap|wrap}
 $m-flex-wrap: (
   "-nowrap": nowrap,
-  "-wrap": wrap,
-  "-wrap-reverse": wrap-reverse
+  "-wrap": wrap
 );
 
 @import "~@modyqyw/mp-scss";
@@ -116,15 +118,16 @@ $m-flex-wrap: (
 |---|---|
 |`.flex-shrink-0`|`flex-shrink: 0;`|
 |`.flex-shrink-1`|`flex-shrink: 1;`|
+|`.flex-shrink-2`|`flex-shrink: 2;`|
+|`.flex-shrink-3`|`flex-shrink: 3;`|
+|`.flex-shrink-4`|`flex-shrink: 4;`|
 
 ```scss
-// 生成 .flex-shrink
-$m-flex-shrink: (
-  "": 1
-);
-// 生成 .flex-shrink-0, .flex-shrink-1, .flex-shrink-2
+// 不额外生成
+$m-flex-shrink: ();
+// 生成 .flex-shrink-{0-4}
 $flex-shrink-min: 0;
-$flex-shrink-max: 2;
+$flex-shrink-max: 4;
 $flex-shrink-step: 1;
 
 @import "~@modyqyw/mp-scss";
@@ -139,15 +142,16 @@ $flex-shrink-step: 1;
 |---|---|
 |`.flex-grow-0`|`flex-grow: 0;`|
 |`.flex-grow-1`|`flex-grow: 1;`|
+|`.flex-grow-2`|`flex-grow: 2;`|
+|`.flex-grow-3`|`flex-grow: 3;`|
+|`.flex-grow-4`|`flex-grow: 4;`|
 
 ```scss
-// 生成 .flex-grow
-$m-flex-grow: (
-  "": 0
-);
-// 生成 .flex-grow-0, .flex-grow-1, .flex-grow-2
+// 不额外生成
+$m-flex-grow: ();
+// 生成 .flex-grow-{0-4}
 $flex-grow-min: 0;
-$flex-grow-max: 2;
+$flex-grow-max: 4;
 $flex-grow-step: 1;
 
 @import "~@modyqyw/mp-scss";
@@ -165,14 +169,11 @@ $flex-grow-step: 1;
 |`.align-content-center`|`align-content: center;`|
 
 ```scss
-// 生成 .align-content-start, .align-content-end, .align-content-center,
-//     .align-content-space-between, .align-content-space-around
+// 生成 .align-content-{start|end|center}
 $m-align-content: (
   "-start": flex-start,
   "-end": flex-end,
-  "-center": center,
-  "-space-between": space-between,
-  "-space-around": space-around
+  "-center": center
 );
 
 @import "~@modyqyw/mp-scss";
@@ -190,7 +191,7 @@ $m-align-content: (
 |`.align-center`|`align-items: center;`|
 
 ```scss
-// 生成 .align-start, .align-end, .align-center
+// 生成 .align-{start|end|center}
 $m-align-items: (
   "-start": flex-start,
   "-end": flex-end,
@@ -212,7 +213,7 @@ $m-align-items: (
 |`.align-self-center`|`align-self: center;`|
 
 ```scss
-// 生成 .align-self-start, .align-self-end, .align-self-center
+// 生成 .align-self-{start|end|center}
 $m-align-self: (
   "-start": flex-start,
   "-end": flex-end,
@@ -236,8 +237,7 @@ $m-align-self: (
 |`.justify-space-around`|`justify-content: space-around;`|
 
 ```scss
-// 生成 .justify-start, .justify-end, .justify-center, .justify-space-between,
-//     .justify-space-around
+// 生成 .justify-{start|end|center|space-between|around}
 $m-justify-content: (
   "-start": flex-start,
   "-end": flex-end,
@@ -263,13 +263,10 @@ $m-justify-content: (
 |`.order-2`|`order: 2;`|
 
 ```scss
-// 生成 .order-first, .order-last
-$m-order: (
-  "-first": -9999,
-  "-last": 9999
-);
-// 生成 .order-0, .order-1, .order-2
-$order-min: 0;
+// 不额外生成
+$m-order: ();
+// 生成 .order-{n2|n1|0|1|2}
+$order-min: -2;
 $order-max: 2;
 $order-step: 1;
 
@@ -283,13 +280,9 @@ $order-step: 1;
 
 |类名|样式|
 |---|---|
+|`.w-auto`|`width: auto;`|
 |`.w-full`|`width: 100%;`|
 |`.w-half`|`width: 50%;`|
-|`.w-1-6`<Badge text="2.2 移除" />|`width: 16.66666667%;`|
-|`.w-2-6`<Badge text="2.2 移除" />|`width: 33.33333333%;`|
-|`.w-3-6`<Badge text="2.2 移除" />|`width: 50%;`|
-|`.w-4-6`<Badge text="2.2 移除" />|`width: 66.66666667%;`|
-|`.w-5-6`<Badge text="2.2 移除" />|`width: 83.33333333%;`|
 |`.w-1-8`|`width: 12.5%;`|
 |`.w-2-8`|`width: 25%;`|
 |`.w-3-8`|`width: 37.5%;`|
@@ -306,75 +299,75 @@ $order-step: 1;
 |`.w-7-10`|`width: 70%;`|
 |`.w-8-10`|`width: 80%;`|
 |`.w-9-10`|`width: 90%;`|
-|`.w-1-12`<Badge text="2.2 新增" />|`width: 8.33333333%;`|
-|`.w-2-12`<Badge text="2.2 新增" />|`width: 16.66666667%;`|
-|`.w-3-12`<Badge text="2.2 新增" />|`width: 25%;`|
-|`.w-4-12`<Badge text="2.2 新增" />|`width: 33.33333333%;`|
-|`.w-5-12`<Badge text="2.2 新增" />|`width: 41.66666667%;`|
-|`.w-6-12`<Badge text="2.2 新增" />|`width: 50%;`|
-|`.w-7-12`<Badge text="2.2 新增" />|`width: 58.33333333%;`|
-|`.w-8-12`<Badge text="2.2 新增" />|`width: 66.66666667%;`|
-|`.w-9-12`<Badge text="2.2 新增" />|`width: 75%;`|
-|`.w-10-12`<Badge text="2.2 新增" />|`width: 83.33333333%;`|
-|`.w-11-12`<Badge text="2.2 新增" />|`width: 91.66666667%;`|
+|`.w-1-12`|`width: 8.33333333%;`|
+|`.w-2-12`|`width: 16.66666667%;`|
+|`.w-3-12`|`width: 25%;`|
+|`.w-4-12`|`width: 33.33333333%;`|
+|`.w-5-12`|`width: 41.66666667%;`|
+|`.w-6-12`|`width: 50%;`|
+|`.w-7-12`|`width: 58.33333333%;`|
+|`.w-8-12`|`width: 66.66666667%;`|
+|`.w-9-12`|`width: 75%;`|
+|`.w-10-12`|`width: 83.33333333%;`|
+|`.w-11-12`|`width: 91.66666667%;`|
 |`.w-0`|`width: 0;`|
-|`.w-1`|`width: 2rpx;`|
 |`.w-2`|`width: 4rpx;`|
-|`.w-3`|`width: 6rpx;`|
 |`.w-4`|`width: 8rpx;`|
-|`.w-5`|`width: 10rpx;`|
 |`.w-6`|`width: 12rpx;`|
-|`.w-7`|`width: 14rpx;`|
 |`.w-8`|`width: 16rpx;`|
-|`.w-9`|`width: 18rpx;`|
 |`.w-10`|`width: 20rpx;`|
-|`.w-11`|`width: 22rpx;`|
 |`.w-12`|`width: 24rpx;`|
-|`.w-13`|`width: 26rpx;`|
 |`.w-14`|`width: 28rpx;`|
-|`.w-15`|`width: 30rpx;`|
 |`.w-16`|`width: 32rpx;`|
-|`.w-17`|`width: 34rpx;`|
 |`.w-18`|`width: 36rpx;`|
-|`.w-19`|`width: 38rpx;`|
 |`.w-20`|`width: 40rpx;`|
-|`.w-21`|`width: 42rpx;`|
 |`.w-22`|`width: 44rpx;`|
-|`.w-23`|`width: 46rpx;`|
 |`.w-24`|`width: 48rpx;`|
-|`.w-25`<Badge text="2.2 新增" />|`width: 50rpx;`|
-|`.w-26`<Badge text="2.2 新增" />|`width: 52rpx;`|
-|`.w-27`<Badge text="2.2 新增" />|`width: 54rpx;`|
-|`.w-28`<Badge text="2.2 新增" />|`width: 56rpx;`|
-|`.w-29`<Badge text="2.2 新增" />|`width: 58rpx;`|
-|`.w-30`<Badge text="2.2 新增" />|`width: 60rpx;`|
-|`.w-31`<Badge text="2.2 新增" />|`width: 62rpx;`|
-|`.w-32`<Badge text="2.2 新增" />|`width: 64rpx;`|
-|`.w-33`<Badge text="2.2 新增" />|`width: 66rpx;`|
-|`.w-34`<Badge text="2.2 新增" />|`width: 68rpx;`|
-|`.w-35`<Badge text="2.2 新增" />|`width: 70rpx;`|
-|`.w-36`<Badge text="2.2 新增" />|`width: 72rpx;`|
-|`.w-37`<Badge text="2.2 新增" />|`width: 74rpx;`|
-|`.w-38`<Badge text="2.2 新增" />|`width: 76rpx;`|
-|`.w-39`<Badge text="2.2 新增" />|`width: 78rpx;`|
-|`.w-40`<Badge text="2.2 新增" />|`width: 80rpx;`|
+|`.w-26`|`width: 52rpx;`|
+|`.w-28`|`width: 56rpx;`|
+|`.w-30`|`width: 60rpx;`|
+|`.w-32`|`width: 64rpx;`|
+|`.w-34`|`width: 68rpx;`|
+|`.w-36`|`width: 72rpx;`|
+|`.w-38`|`width: 76rpx;`|
+|`.w-40`|`width: 80rpx;`|
+|`.w-42`|`width: 84rpx;`|
+|`.w-44`|`width: 88rpx;`|
+|`.w-46`|`width: 92rpx;`|
+|`.w-48`|`width: 96rpx;`|
+|`.w-50`|`width: 100rpx;`|
+|`.w-52`|`width: 104rpx;`|
+|`.w-54`|`width: 108rpx;`|
+|`.w-56`|`width: 112rpx;`|
+|`.w-58`|`width: 116rpx;`|
+|`.w-60`|`width: 120rpx;`|
+|`.w-62`|`width: 124rpx;`|
+|`.w-64`|`width: 128rpx;`|
+|`.w-66`|`width: 132rpx;`|
+|`.w-68`|`width: 136rpx;`|
+|`.w-70`|`width: 140rpx;`|
+|`.w-72`|`width: 144rpx;`|
+|`.w-74`|`width: 148rpx;`|
+|`.w-76`|`width: 152rpx;`|
+|`.w-78`|`width: 156rpx;`|
+|`.w-80`|`width: 160rpx;`|
 |`.w-1-real`|`width: 1rpx;`|
 
 ```scss
-// 生成 .w-full, .w-half, .w-auto
+// 生成 .w-{auto|full|half}
 $m-width: (
+  "-auto": auto,
   "-full": 100%,
-  "-half": 50%,
-  "-auto": auto
+  "-half": 50%
 );
 // 生成 .w-*-{8|10|12}
 $l-width-denominator: 8, 10, 12;
-// 生成 .w-0, .w-1, .w-2
+// 生成 .w-{0|2|4|6|...|78|80}
 $width-min: 0;
-$width-max: 2;
-$width-step: 1;
-// 移除 .w-1-real，如果 $scale == 1，则该变量默认不生效
-$width-has-1-real: false;
+$width-max: 80;
+$width-step: 2;
+// 在 $scale != 1 的时候生成 .w-1-real
+$width-has-1-real: true;
 
 @import "~@modyqyw/mp-scss";
 // @import "~@modyqyw/mp-scss/classes";
@@ -386,13 +379,9 @@ $width-has-1-real: false;
 
 |类名|样式|
 |---|---|
+|`.h-auto`|`height: auto;`|
 |`.h-full`|`height: 100%;`|
 |`.h-half`|`height: 50%;`|
-|`.h-1-6`<Badge text="2.2 移除" />|`height: 16.66666667%;`|
-|`.h-2-6`<Badge text="2.2 移除" />|`height: 33.33333333%;`|
-|`.h-3-6`<Badge text="2.2 移除" />|`height: 50%;`|
-|`.h-4-6`<Badge text="2.2 移除" />|`height: 66.66666667%;`|
-|`.h-5-6`<Badge text="2.2 移除" />|`height: 83.33333333%;`|
 |`.h-1-8`|`height: 12.5%;`|
 |`.h-2-8`|`height: 25%;`|
 |`.h-3-8`|`height: 37.5%;`|
@@ -409,77 +398,75 @@ $width-has-1-real: false;
 |`.h-7-10`|`height: 70%;`|
 |`.h-8-10`|`height: 80%;`|
 |`.h-9-10`|`height: 90%;`|
-|`.h-1-12`<Badge text="2.2 新增" />|`height: 8.33333333%;`|
-|`.h-2-12`<Badge text="2.2 新增" />|`height: 16.66666667%;`|
-|`.h-3-12`<Badge text="2.2 新增" />|`height: 25%;`|
-|`.h-4-12`<Badge text="2.2 新增" />|`height: 33.33333333%;`|
-|`.h-5-12`<Badge text="2.2 新增" />|`height: 41.66666667%;`|
-|`.h-6-12`<Badge text="2.2 新增" />|`height: 50%;`|
-|`.h-7-12`<Badge text="2.2 新增" />|`height: 58.33333333%;`|
-|`.h-8-12`<Badge text="2.2 新增" />|`height: 66.66666667%;`|
-|`.h-9-12`<Badge text="2.2 新增" />|`height: 75%;`|
-|`.h-10-12`<Badge text="2.2 新增" />|`height: 83.33333333%;`|
-|`.h-11-12`<Badge text="2.2 新增" />|`height: 91.66666667%;`|
+|`.h-1-12`|`height: 8.33333333%;`|
+|`.h-2-12`|`height: 16.66666667%;`|
+|`.h-3-12`|`height: 25%;`|
+|`.h-4-12`|`height: 33.33333333%;`|
+|`.h-5-12`|`height: 41.66666667%;`|
+|`.h-6-12`|`height: 50%;`|
+|`.h-7-12`|`height: 58.33333333%;`|
+|`.h-8-12`|`height: 66.66666667%;`|
+|`.h-9-12`|`height: 75%;`|
+|`.h-10-12`|`height: 83.33333333%;`|
+|`.h-11-12`|`height: 91.66666667%;`|
 |`.h-0`|`height: 0;`|
-|`.h-1`|`height: 2rpx;`|
 |`.h-2`|`height: 4rpx;`|
-|`.h-3`|`height: 6rpx;`|
 |`.h-4`|`height: 8rpx;`|
-|`.h-5`|`height: 10rpx;`|
 |`.h-6`|`height: 12rpx;`|
-|`.h-7`|`height: 14rpx;`|
 |`.h-8`|`height: 16rpx;`|
-|`.h-9`|`height: 18rpx;`|
 |`.h-10`|`height: 20rpx;`|
-|`.h-11`|`height: 22rpx;`|
 |`.h-12`|`height: 24rpx;`|
-|`.h-13`|`height: 26rpx;`|
 |`.h-14`|`height: 28rpx;`|
-|`.h-15`|`height: 30rpx;`|
 |`.h-16`|`height: 32rpx;`|
-|`.h-17`|`height: 34rpx;`|
 |`.h-18`|`height: 36rpx;`|
-|`.h-19`|`height: 38rpx;`|
 |`.h-20`|`height: 40rpx;`|
-|`.h-21`|`height: 42rpx;`|
 |`.h-22`|`height: 44rpx;`|
-|`.h-23`|`height: 46rpx;`|
 |`.h-24`|`height: 48rpx;`|
-|`.h-25`<Badge text="2.2 新增" />|`height: 50rpx;`|
-|`.h-26`<Badge text="2.2 新增" />|`height: 52rpx;`|
-|`.h-27`<Badge text="2.2 新增" />|`height: 54rpx;`|
-|`.h-28`<Badge text="2.2 新增" />|`height: 56rpx;`|
-|`.h-29`<Badge text="2.2 新增" />|`height: 58rpx;`|
-|`.h-30`<Badge text="2.2 新增" />|`height: 60rpx;`|
-|`.h-31`<Badge text="2.2 新增" />|`height: 62rpx;`|
-|`.h-32`<Badge text="2.2 新增" />|`height: 64rpx;`|
-|`.h-33`<Badge text="2.2 新增" />|`height: 66rpx;`|
-|`.h-34`<Badge text="2.2 新增" />|`height: 68rpx;`|
-|`.h-35`<Badge text="2.2 新增" />|`height: 70rpx;`|
-|`.h-36`<Badge text="2.2 新增" />|`height: 72rpx;`|
-|`.h-37`<Badge text="2.2 新增" />|`height: 74rpx;`|
-|`.h-38`<Badge text="2.2 新增" />|`height: 76rpx;`|
-|`.h-39`<Badge text="2.2 新增" />|`height: 78rpx;`|
-|`.h-40`<Badge text="2.2 新增" />|`height: 80rpx;`|
+|`.h-26`|`height: 52rpx;`|
+|`.h-28`|`height: 56rpx;`|
+|`.h-30`|`height: 60rpx;`|
+|`.h-32`|`height: 64rpx;`|
+|`.h-34`|`height: 68rpx;`|
+|`.h-36`|`height: 72rpx;`|
+|`.h-38`|`height: 76rpx;`|
+|`.h-40`|`height: 80rpx;`|
+|`.h-42`|`height: 84rpx;`|
+|`.h-44`|`height: 88rpx;`|
+|`.h-46`|`height: 92rpx;`|
+|`.h-48`|`height: 96rpx;`|
+|`.h-50`|`height: 100rpx;`|
+|`.h-52`|`height: 104rpx;`|
+|`.h-54`|`height: 108rpx;`|
+|`.h-56`|`height: 112rpx;`|
+|`.h-58`|`height: 116rpx;`|
+|`.h-60`|`height: 120rpx;`|
+|`.h-62`|`height: 124rpx;`|
+|`.h-64`|`height: 128rpx;`|
+|`.h-66`|`height: 132rpx;`|
+|`.h-68`|`height: 136rpx;`|
+|`.h-70`|`height: 140rpx;`|
+|`.h-72`|`height: 144rpx;`|
+|`.h-74`|`height: 148rpx;`|
+|`.h-76`|`height: 152rpx;`|
+|`.h-78`|`height: 156rpx;`|
+|`.h-80`|`height: 160rpx;`|
 |`.h-1-real`|`height: 1rpx;`|
 
-这部分由`$m-height`生成，在引入之前做相关修改可以自定义。
-
 ```scss
-// 生成 .h-full, .h-half, .h-auto
+// 生成 .h-{auto|full|half}
 $m-height: (
+  "-auto": auto,
   "-full": 100%,
-  "-half": 50%,
-  "-auto": auto
+  "-half": 50%
 );
 // 生成 .h-*-{8|10|12}
 $l-height-denominator: 8, 10, 12;
-// 生成 .h-0, .h-1, .h-2
+// 生成 .h-{0|2|4|6|...|78|80}
 $height-min: 0;
-$height-max: 2;
-$height-step: 1;
-// 移除 .h-1-real，如果 $scale == 1，则该变量默认不生效
-$height-has-1-real: false;
+$height-max: 80;
+$height-step: 2;
+// 在 $scale != 1 的时候生成 h-1-real
+$height-has-1-real: true;
 
 @import "~@modyqyw/mp-scss";
 // @import "~@modyqyw/mp-scss/classes";
@@ -491,81 +478,60 @@ $height-has-1-real: false;
 
 |类名|样式|
 |---|---|
-|`.p-xs`<Badge text="2.2 移除" />|`padding: 8rpx;`|
-|`.p-sm`<Badge text="2.2 移除" />|`padding: 16rpx;`|
-|`.p-md`<Badge text="2.2 移除" />|`padding: 24rpx;`|
-|`.p-lg`<Badge text="2.2 移除" />|`padding: 32rpx;`|
-|`.p-xl`<Badge text="2.2 移除" />|`padding: 40rpx;`|
-|`.p-1-6`<Badge text="2.2 移除" />|`padding: 16.66666667%;`|
-|`.p-2-6`<Badge text="2.2 移除" />|`padding: 33.33333333%;`|
-|`.p-3-6`<Badge text="2.2 移除" />|`padding: 50%;`|
-|`.p-4-6`<Badge text="2.2 移除" />|`padding: 66.66666667%;`|
-|`.p-5-6`<Badge text="2.2 移除" />|`padding: 83.33333333%;`|
-|`.p-1-8`<Badge text="2.2 移除" />|`padding: 12.5%;`|
-|`.p-2-8`<Badge text="2.2 移除" />|`padding: 25%;`|
-|`.p-3-8`<Badge text="2.2 移除" />|`padding: 37.5%;`|
-|`.p-4-8`<Badge text="2.2 移除" />|`padding: 50%;`|
-|`.p-5-8`<Badge text="2.2 移除" />|`padding: 62.5%;`|
-|`.p-6-8`<Badge text="2.2 移除" />|`padding: 75%;`|
-|`.p-7-8`<Badge text="2.2 移除" />|`padding: 87.5%;`|
-|`.p-1-10`<Badge text="2.2 移除" />|`padding: 10%;`|
-|`.p-2-10`<Badge text="2.2 移除" />|`padding: 20%;`|
-|`.p-3-10`<Badge text="2.2 移除" />|`padding: 30%;`|
-|`.p-4-10`<Badge text="2.2 移除" />|`padding: 40%;`|
-|`.p-5-10`<Badge text="2.2 移除" />|`padding: 50%;`|
-|`.p-6-10`<Badge text="2.2 移除" />|`padding: 60%;`|
-|`.p-7-10`<Badge text="2.2 移除" />|`padding: 70%;`|
-|`.p-8-10`<Badge text="2.2 移除" />|`padding: 80%;`|
-|`.p-9-10`<Badge text="2.2 移除" />|`padding: 90%;`|
+|`.p-xs`|`padding: 8rpx;`|
+|`.p-sm`|`padding: 16rpx;`|
+|`.p-md`|`padding: 24rpx;`|
+|`.p-lg`|`padding: 32rpx;`|
+|`.p-xl`|`padding: 40rpx;`|
 |`.p-0`|`padding: 0;`|
-|`.p-1`|`padding: 2rpx;`|
 |`.p-2`|`padding: 4rpx;`|
-|`.p-3`|`padding: 6rpx;`|
 |`.p-4`|`padding: 8rpx;`|
-|`.p-5`|`padding: 10rpx;`|
 |`.p-6`|`padding: 12rpx;`|
-|`.p-7`|`padding: 14rpx;`|
 |`.p-8`|`padding: 16rpx;`|
-|`.p-9`|`padding: 18rpx;`|
 |`.p-10`|`padding: 20rpx;`|
-|`.p-11`|`padding: 22rpx;`|
 |`.p-12`|`padding: 24rpx;`|
-|`.p-13`|`padding: 26rpx;`|
 |`.p-14`|`padding: 28rpx;`|
-|`.p-15`|`padding: 30rpx;`|
 |`.p-16`|`padding: 32rpx;`|
-|`.p-17`|`padding: 34rpx;`|
 |`.p-18`|`padding: 36rpx;`|
-|`.p-19`|`padding: 38rpx;`|
 |`.p-20`|`padding: 40rpx;`|
-|`.p-21`|`padding: 42rpx;`|
 |`.p-22`|`padding: 44rpx;`|
-|`.p-23`|`padding: 46rpx;`|
 |`.p-24`|`padding: 48rpx;`|
-|`.p-25`<Badge text="2.2 新增" />|`padding: 50rpx;`|
-|`.p-26`<Badge text="2.2 新增" />|`padding: 52rpx;`|
-|`.p-27`<Badge text="2.2 新增" />|`padding: 54rpx;`|
-|`.p-28`<Badge text="2.2 新增" />|`padding: 56rpx;`|
-|`.p-29`<Badge text="2.2 新增" />|`padding: 58rpx;`|
-|`.p-30`<Badge text="2.2 新增" />|`padding: 60rpx;`|
-|`.p-31`<Badge text="2.2 新增" />|`padding: 62rpx;`|
-|`.p-32`<Badge text="2.2 新增" />|`padding: 64rpx;`|
-|`.p-33`<Badge text="2.2 新增" />|`padding: 66rpx;`|
-|`.p-34`<Badge text="2.2 新增" />|`padding: 68rpx;`|
-|`.p-35`<Badge text="2.2 新增" />|`padding: 70rpx;`|
-|`.p-36`<Badge text="2.2 新增" />|`padding: 72rpx;`|
-|`.p-37`<Badge text="2.2 新增" />|`padding: 74rpx;`|
-|`.p-38`<Badge text="2.2 新增" />|`padding: 76rpx;`|
-|`.p-39`<Badge text="2.2 新增" />|`padding: 78rpx;`|
-|`.p-40`<Badge text="2.2 新增" />|`padding: 80rpx;`|
-|`.p-1-real`|`padding: 1rpx;`|
+|`.p-26`|`padding: 52rpx;`|
+|`.p-28`|`padding: 56rpx;`|
+|`.p-30`|`padding: 60rpx;`|
+|`.p-32`|`padding: 64rpx;`|
+|`.p-34`|`padding: 68rpx;`|
+|`.p-36`|`padding: 72rpx;`|
+|`.p-38`|`padding: 76rpx;`|
+|`.p-40`|`padding: 80rpx;`|
+|`.p-42`|`padding: 84rpx;`|
+|`.p-44`|`padding: 88rpx;`|
+|`.p-46`|`padding: 92rpx;`|
+|`.p-48`|`padding: 96rpx;`|
+|`.p-50`|`padding: 100rpx;`|
+|`.p-52`|`padding: 104rpx;`|
+|`.p-54`|`padding: 108rpx;`|
+|`.p-56`|`padding: 112rpx;`|
+|`.p-58`|`padding: 116rpx;`|
+|`.p-60`|`padding: 120rpx;`|
+|`.p-62`|`padding: 124rpx;`|
+|`.p-64`|`padding: 128rpx;`|
+|`.p-66`|`padding: 132rpx;`|
+|`.p-68`|`padding: 136rpx;`|
+|`.p-70`|`padding: 140rpx;`|
+|`.p-72`|`padding: 144rpx;`|
+|`.p-74`|`padding: 148rpx;`|
+|`.p-76`|`padding: 152rpx;`|
+|`.p-78`|`padding: 156rpx;`|
+|`.p-80`|`padding: 160rpx;`|
 
-支持`.p{y|x|t|r|b|l}-*`，分别对应`padding-top`和`padding-bottom`，`padding-right`和`padding-left`，`padding-top`，`padding-right`，`padding-bottom`，`padding-left`。
+也支持 `.p{y|x|t|r|b|l}-*`，分别对应`padding-top` 和 `padding-bottom`，`padding-right` 和 `padding-left`，`padding-top`，`padding-right`，`padding-bottom`，`padding-left`。
 
 ```scss
-// 生成 .p-xs, .p-sm, .p-md, .p-lg, .p-xl
-$scale: 2;
+// 通用变量
 $unit: rpx;
+$scale: 2;
+// 生成 .p-{xs|sm|md|lg|xl}
 $padding-base: 12;
 $padding-diff: 4;
 $m-padding: (
@@ -583,14 +549,10 @@ $m-padding: (
     $padding-base + $padding-diff * 2
   ) * $scale + $unit
 );
-// 生成 .p-*-{8|10|12}
-$l-padding-denominator: 8, 10, 12;
-// 生成 .p-0, .p-1, .p-2
+// 生成 .p-{0|2|4|6|...|78|80}
 $padding-min: 0;
-$padding-max: 2;
-$padding-step: 1;
-// 移除 .p-1-real，如果 $scale == 1，则该变量默认不生效
-$padding-has-1-real: false;
+$padding-max: 80;
+$padding-step: 2;
 
 @import "~@modyqyw/mp-scss";
 // @import "~@modyqyw/mp-scss/classes";
@@ -603,85 +565,124 @@ $padding-has-1-real: false;
 |类名|样式|
 |---|---|
 |`.m-auto`|`margin: auto;`|
-|`.m-xs`<Badge text="2.2 移除" />|`margin: 8rpx;`|
-|`.m-sm`<Badge text="2.2 移除" />|`margin: 16rpx;`|
-|`.m-md`<Badge text="2.2 移除" />|`margin: 24rpx;`|
-|`.m-lg`<Badge text="2.2 移除" />|`margin: 32rpx;`|
-|`.m-xl`<Badge text="2.2 移除" />|`margin: 40rpx;`|
-|`.m-1-6`<Badge text="2.2 移除" />|`margin: 16.66666667%;`|
-|`.m-2-6`<Badge text="2.2 移除" />|`margin: 33.33333333%;`|
-|`.m-3-6`<Badge text="2.2 移除" />|`margin: 50%;`|
-|`.m-4-6`<Badge text="2.2 移除" />|`margin: 66.66666667%;`|
-|`.m-5-6`<Badge text="2.2 移除" />|`margin: 83.33333333%;`|
-|`.m-1-8`<Badge text="2.2 移除" />|`margin: 12.5%;`|
-|`.m-2-8`<Badge text="2.2 移除" />|`margin: 25%;`|
-|`.m-3-8`<Badge text="2.2 移除" />|`margin: 37.5%;`|
-|`.m-4-8`<Badge text="2.2 移除" />|`margin: 50%;`|
-|`.m-5-8`<Badge text="2.2 移除" />|`margin: 62.5%;`|
-|`.m-6-8`<Badge text="2.2 移除" />|`margin: 75%;`|
-|`.m-7-8`<Badge text="2.2 移除" />|`margin: 87.5%;`|
-|`.m-1-10`<Badge text="2.2 移除" />|`margin: 10%;`|
-|`.m-2-10`<Badge text="2.2 移除" />|`margin: 20%;`|
-|`.m-3-10`<Badge text="2.2 移除" />|`margin: 30%;`|
-|`.m-4-10`<Badge text="2.2 移除" />|`margin: 40%;`|
-|`.m-5-10`<Badge text="2.2 移除" />|`margin: 50%;`|
-|`.m-6-10`<Badge text="2.2 移除" />|`margin: 60%;`|
-|`.m-7-10`<Badge text="2.2 移除" />|`margin: 70%;`|
-|`.m-8-10`<Badge text="2.2 移除" />|`margin: 80%;`|
-|`.m-9-10`<Badge text="2.2 移除" />|`margin: 90%;`|
+|`.m-nxs`|`margin: -8rpx;`|
+|`.m-nsm`|`margin: -16rpx;`|
+|`.m-nmd`|`margin: -24rpx;`|
+|`.m-nlg`|`margin: -32rpx;`|
+|`.m-nxl`|`margin: -40rpx;`|
+|`.m-xs`|`margin: 8rpx;`|
+|`.m-sm`|`margin: 16rpx;`|
+|`.m-md`|`margin: 24rpx;`|
+|`.m-lg`|`margin: 32rpx;`|
+|`.m-xl`|`margin: 40rpx;`|
+|`.m-n80`|`margin: -160rpx;`|
+|`.m-n78`|`margin: -156rpx;`|
+|`.m-n76`|`margin: -152rpx;`|
+|`.m-n74`|`margin: -148rpx;`|
+|`.m-n72`|`margin: -144rpx;`|
+|`.m-n70`|`margin: -140rpx;`|
+|`.m-n68`|`margin: -136rpx;`|
+|`.m-n66`|`margin: -132rpx;`|
+|`.m-n64`|`margin: -128rpx;`|
+|`.m-n62`|`margin: -124rpx;`|
+|`.m-n60`|`margin: -120rpx;`|
+|`.m-n58`|`margin: -116rpx;`|
+|`.m-n56`|`margin: -112rpx;`|
+|`.m-n54`|`margin: -108rpx;`|
+|`.m-n52`|`margin: -104rpx;`|
+|`.m-n50`|`margin: -100rpx;`|
+|`.m-n48`|`margin: -96rpx;`|
+|`.m-n46`|`margin: -92rpx;`|
+|`.m-n44`|`margin: -88rpx;`|
+|`.m-n42`|`margin: -84rpx;`|
+|`.m-n40`|`margin: -80rpx;`|
+|`.m-n38`|`margin: -76rpx;`|
+|`.m-n36`|`margin: -72rpx;`|
+|`.m-n34`|`margin: -68rpx;`|
+|`.m-n32`|`margin: -64rpx;`|
+|`.m-n30`|`margin: -60rpx;`|
+|`.m-n28`|`margin: -56rpx;`|
+|`.m-n26`|`margin: -52rpx;`|
+|`.m-n24`|`margin: -48rpx;`|
+|`.m-n22`|`margin: -44rpx;`|
+|`.m-n20`|`margin: -40rpx;`|
+|`.m-n18`|`margin: -36rpx;`|
+|`.m-n16`|`margin: -32rpx;`|
+|`.m-n14`|`margin: -28rpx;`|
+|`.m-n12`|`margin: -24rpx;`|
+|`.m-n10`|`margin: -20rpx;`|
+|`.m-n8`|`margin: -16rpx;`|
+|`.m-n6`|`margin: -12rpx;`|
+|`.m-n4`|`margin: -8rpx;`|
+|`.m-n2`|`margin: -4rpx;`|
 |`.m-0`|`margin: 0;`|
-|`.m-1`|`margin: 2rpx;`|
 |`.m-2`|`margin: 4rpx;`|
-|`.m-3`|`margin: 6rpx;`|
 |`.m-4`|`margin: 8rpx;`|
-|`.m-5`|`margin: 10rpx;`|
 |`.m-6`|`margin: 12rpx;`|
-|`.m-7`|`margin: 14rpx;`|
 |`.m-8`|`margin: 16rpx;`|
-|`.m-9`|`margin: 18rpx;`|
 |`.m-10`|`margin: 20rpx;`|
-|`.m-11`|`margin: 22rpx;`|
 |`.m-12`|`margin: 24rpx;`|
-|`.m-13`|`margin: 26rpx;`|
 |`.m-14`|`margin: 28rpx;`|
-|`.m-15`|`margin: 30rpx;`|
 |`.m-16`|`margin: 32rpx;`|
-|`.m-17`|`margin: 34rpx;`|
 |`.m-18`|`margin: 36rpx;`|
-|`.m-19`|`margin: 38rpx;`|
 |`.m-20`|`margin: 40rpx;`|
-|`.m-21`|`margin: 42rpx;`|
 |`.m-22`|`margin: 44rpx;`|
-|`.m-23`|`margin: 46rpx;`|
 |`.m-24`|`margin: 48rpx;`|
-|`.m-25`<Badge text="2.2 新增" />|`margin: 50rpx;`|
-|`.m-26`<Badge text="2.2 新增" />|`margin: 52rpx;`|
-|`.m-27`<Badge text="2.2 新增" />|`margin: 54rpx;`|
-|`.m-28`<Badge text="2.2 新增" />|`margin: 56rpx;`|
-|`.m-29`<Badge text="2.2 新增" />|`margin: 58rpx;`|
-|`.m-30`<Badge text="2.2 新增" />|`margin: 60rpx;`|
-|`.m-31`<Badge text="2.2 新增" />|`margin: 62rpx;`|
-|`.m-32`<Badge text="2.2 新增" />|`margin: 64rpx;`|
-|`.m-33`<Badge text="2.2 新增" />|`margin: 66rpx;`|
-|`.m-34`<Badge text="2.2 新增" />|`margin: 68rpx;`|
-|`.m-35`<Badge text="2.2 新增" />|`margin: 70rpx;`|
-|`.m-36`<Badge text="2.2 新增" />|`margin: 72rpx;`|
-|`.m-37`<Badge text="2.2 新增" />|`margin: 74rpx;`|
-|`.m-38`<Badge text="2.2 新增" />|`margin: 76rpx;`|
-|`.m-39`<Badge text="2.2 新增" />|`margin: 78rpx;`|
-|`.m-40`<Badge text="2.2 新增" />|`margin: 80rpx;`|
-|`.m-1-real`|`margin: 1rpx;`|
+|`.m-26`|`margin: 52rpx;`|
+|`.m-28`|`margin: 56rpx;`|
+|`.m-30`|`margin: 60rpx;`|
+|`.m-32`|`margin: 64rpx;`|
+|`.m-34`|`margin: 68rpx;`|
+|`.m-36`|`margin: 72rpx;`|
+|`.m-38`|`margin: 76rpx;`|
+|`.m-40`|`margin: 80rpx;`|
+|`.m-42`|`margin: 84rpx;`|
+|`.m-44`|`margin: 88rpx;`|
+|`.m-46`|`margin: 92rpx;`|
+|`.m-48`|`margin: 96rpx;`|
+|`.m-50`|`margin: 100rpx;`|
+|`.m-52`|`margin: 104rpx;`|
+|`.m-54`|`margin: 108rpx;`|
+|`.m-56`|`margin: 112rpx;`|
+|`.m-58`|`margin: 116rpx;`|
+|`.m-60`|`margin: 120rpx;`|
+|`.m-62`|`margin: 124rpx;`|
+|`.m-64`|`margin: 128rpx;`|
+|`.m-66`|`margin: 132rpx;`|
+|`.m-68`|`margin: 136rpx;`|
+|`.m-70`|`margin: 140rpx;`|
+|`.m-72`|`margin: 144rpx;`|
+|`.m-74`|`margin: 148rpx;`|
+|`.m-76`|`margin: 152rpx;`|
+|`.m-78`|`margin: 156rpx;`|
+|`.m-80`|`margin: 160rpx;`|
 
-支持`.m{y|x|t|r|b|l}-*`，分别对应`margin-top`和`margin-bottom`，`margin-right`和`margin-left`，`margin-top`，`margin-right`，`margin-bottom`，`margin-left`。
+也支持 `.m{y|x|t|r|b|l}-*`，分别对应`margin-top` 和 `margin-bottom`，`margin-right` 和 `margin-left`，`margin-top`，`margin-right`，`margin-bottom`，`margin-left`。
 
 ```scss
-// 生成 .m-auto, .m-xs, .m-sm, .m-md, .m-lg, .m-xl
-$scale: 2;
+// 通用变量
 $unit: rpx;
+$scale: 2;
+// 生成 .m-{auto|nxs|nsm|nmd|nlg|nxl|xs|sm|md|lg|xl}
 $margin-base: 12;
 $margin-diff: 4;
 $m-margin: (
   "-auto": auto,
+  "-nxs": (
+    -$margin-base + $margin-diff * 2
+  ) * $scale + $unit,
+  "-nsm": (
+    -$margin-base + $margin-diff
+  ) * $scale + $unit,
+  "-nmd": (
+    -$margin-base
+  ) * $scale + $unit,
+  "-nlg": (
+    -$margin-base + $margin-diff
+  ) * $scale + $unit,
+  "-nxl": (
+    -$margin-base + $margin-diff * 2
+  ) * $scale + $unit,
   "-xs": (
     $margin-base - $margin-diff * 2
   ) * $scale + $unit,
@@ -696,14 +697,10 @@ $m-margin: (
     $margin-base + $margin-diff * 2
   ) * $scale + $unit
 );
-// 生成 .m-*-{8|10|12}
-$l-margin-denominator: 8, 10, 12;
-// 生成 .m-0, .m-1, .m-2
-$margin-min: 0;
-$margin-max: 2;
-$margin-step: 1;
-// 移除 .m-1-real，如果 $scale == 1，则该变量默认不生效
-$margin-has-1-real: false;
+// 生成 .m-{-80|-78|-76|-74|...|78|80}
+$margin-min: -80;
+$margin-max: 80;
+$margin-step: 2;
 
 @import "~@modyqyw/mp-scss";
 // @import "~@modyqyw/mp-scss/classes";
@@ -717,19 +714,20 @@ $margin-has-1-real: false;
 |---|---|
 |`.overflow-auto`|`overflow: auto;`|
 |`.overflow-hidden`|`overflow: hidden;`|
+|`.overflow-visible`|`overflow: visible;`|
 |`.overflow-y-auto`|`overflow-y: auto;`|
 |`.overflow-y-hidden`|`overflow-y: hidden;`|
+|`.overflow-y-visible`|`overflow-y: visible;`|
 |`.overflow-x-auto`|`overflow-x: auto;`|
 |`.overflow-x-hidden`|`overflow-x: hidden;`|
+|`.overflow-x-visible`|`overflow-x: visible;`|
 
 ```scss
-// 生成 .overflow-auto, .overflow-hidden, .overflow-{y|x}-auto,
-//     .overflow-{y|x}-hidden
+// 生成 .overflow-{auto|hidden|visible}, .overflow-{y|x}-{auto|hidden|visible}
 $m-overflow: (
   "-auto": auto,
   "-hidden": hidden,
-  "-visible": visible,
-  "-scroll": scroll
+  "-visible": visible
 );
 
 @import "~@modyqyw/mp-scss";

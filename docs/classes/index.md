@@ -1,6 +1,6 @@
 # 通用类总览 classes
 
-[源码](https://github.com/ModyQyW/mp-scss/blob/master/classes)
+[源码](https://github.com/ModyQyW/mp-scss/blob/main/classes)
 
 ## 使用
 

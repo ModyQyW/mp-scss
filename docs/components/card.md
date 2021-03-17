@@ -1,5 +1,7 @@
 # 卡片类 card
 
+[源码](https://github.com/ModyQyW/mp-scss/blob/main/compoents/card.scss)
+
 ## 默认样式
 
 要使用卡片类，需要先引入。
@@ -10,15 +12,15 @@
 // @import "~@modyqyw/mp-scss/components/card";
 ```
 
-在`view`上使用`.card`。
+在 `view` 上使用 `.card`。
 
 ```html
 <view class="container">
-  <view class="card">...</view>
+  <view class="card"></view>
 </view>
 ```
 
-然后使用`.card-header`作为卡片头，使用`.card-content`作为卡片主要内容，使用`.card-footer`作为卡片尾。
+然后使用 `.card-header` 作为卡片头，使用 `.card-content` 作为卡片主要内容，使用 `.card-footer` 作为卡片尾。
 
 ```html
 <view class="container">
@@ -30,27 +32,13 @@
 </view>
 ```
 
-要添加分割线，可以使用`.border`相关的类。
-
-```html
-<view class="container">
-  <view class="card">
-    <view class="card-header border-b">header</view>
-    <view class="card-content">content</view>
-    <view class="card-footer border-t">footer</view>
-  </view>
-</view>
-```
-
-也可以使用分割线类`.divider`。
+要添加分割线，可以使用 `.border` 相关的类。
 
 ```html
 <view class="container">
   <view class="card">
     <view class="card-header">header</view>
-    <view class="divider m-0"></view>
-    <view class="card-content">content</view>
-    <view class="divider m-0"></view>
+    <view class="card-content border-y">content</view>
     <view class="card-footer">footer</view>
   </view>
 </view>
@@ -58,37 +46,35 @@
 
 ## 明亮模式和暗黑模式
 
-默认使用明亮模式。[手动开启暗黑模式](../advance/README.md#明亮模式和暗黑模式)并在`.container`上使用`.is-dark`，就能指定使用暗黑模式。
+默认使用明亮模式。[手动开启暗黑模式](../advance/README.md#明亮模式和暗黑模式) 并在 `.container` 上使用 `.is-dark`，就能指定使用暗黑模式。
 
 ```html
 <view class="container">
-  <view class="card">...</view>
+  <view class="card"></view>
 </view>
 <view class="container is-dark">
-  <view class="card">...</view>
+  <view class="card"></view>
 </view>
 ```
 
-## 变量 <Badge text="2.2 新增" />
+## 变量
 
-下面是一些可供自定义的变量。
-
-|变量名|变量值|
+|变量名|默认值|
 |---|---|
-|`$card-header--padding-y-base`|16|
-|`$card-header--padding-y-base--sm`|8|
-|`$card-content--padding-y-base`|16|
-|`$card-content--padding-y-base--sm`|8|
-|`$card-footer--padding-y-base`|16|
-|`$card-footer--padding-y-base--sm`|8|
-|`$card-header--padding-x-base`|16|
-|`$card-header--padding-x-base--sm`|8|
-|`$card-content--padding-x-base`|16|
-|`$card-content--padding-x-base--sm`|8|
-|`$card-footer--padding-x-base`|16|
-|`$card-footer--padding-x-base--sm`|8|
-|`$card--font-size-base`|`$font-size-base`，默认为 14|
-|`$card--font-size-base--sm`|`$font-size-base`，默认为 14|
-|`$card--line-height`|`$line-height-default`，默认为 1.5|
-|`$card--line-height--sm`|`$line-height-default`，默认为 1.5|
-|`$card--border-width-base`|1|
+|`$card-header--padding-y-base`|`16`|
+|`$card-header--padding-y-base--sm`|`8`|
+|`$card-content--padding-y-base`|`16`|
+|`$card-content--padding-y-base--sm`|`8`|
+|`$card-footer--padding-y-base`|`16`|
+|`$card-footer--padding-y-base--sm`|`8`|
+|`$card-header--padding-x-base`|`16`|
+|`$card-header--padding-x-base--sm`|`8`|
+|`$card-content--padding-x-base`|`16`|
+|`$card-content--padding-x-base--sm`|`8`|
+|`$card-footer--padding-x-base`|`16`|
+|`$card-footer--padding-x-base--sm`|`8`|
+|`$card--font-size-base`|`$font-size-base`|
+|`$card--font-size-base--sm`|`$font-size-base`|
+|`$card--line-height`|`$line-height-default`|
+|`$card--line-height--sm`|`$line-height-default`|
+|`$card--border-width-base`|`1`|

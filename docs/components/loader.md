@@ -1,5 +1,7 @@
 # 加载器类 loader
 
+[源码](https://github.com/ModyQyW/mp-scss/blob/main/compoents/loader.scss)
+
 ## 默认样式
 
 要使用加载器类，需要先引入。
@@ -10,7 +12,7 @@
 // @import "~@modyqyw/mp-scss/components/loader";
 ```
 
-在`view`上添加`.loader`是最简单的使用方式。
+在 `view` 上添加 `.loader` 是最简单的使用方式。
 
 ```html
 <view class="container">
@@ -20,7 +22,7 @@
 
 ## 主题
 
-默认有`default`，`white`，`black`，`primary`，`success`，`warning`，`error`, `info` 八个主题。其中，`black` 是 2.2 新增的。
+默认有 `default`，`white`，`black`，`primary`，`success`，`warning`，`error`，`info` 八个主题。
 
 ```html
 <view class="container">
@@ -45,7 +47,7 @@
 
 ## 明亮模式和暗黑模式
 
-默认使用明亮模式。[手动开启暗黑模式](../advance/README.md#明亮模式和暗黑模式)并在`.container`上使用`.is-dark`，就能指定使用暗黑模式。
+默认使用明亮模式。[手动开启暗黑模式](../advance/README.md#明亮模式和暗黑模式) 并在 `.container` 上使用 `.is-dark`，就能指定使用暗黑模式。
 
 ```html
 <view class="container">
@@ -58,7 +60,7 @@
 
 ## 尺寸
 
-内置四个尺寸类。其中，`.is-xs` 和 `.is-xl` 是 2.2 新增的。
+内置四个尺寸类。
 
 ```html
 <view class="container">
@@ -72,7 +74,7 @@
 
 ## 结合
 
-一个常见的用途是把`.loader`和`.button`结合，自定义加载中按钮。
+一个常见的用途是把 `.loader` 和 `.button` 结合，自定义加载中按钮。
 
 ```html
 <button class="btn is-primary is-loading">
@@ -81,7 +83,7 @@
 </button>
 ```
 
-注意需要让`.loader::after`的背景色和父元素的背景色保持一致。
+注意需要让 `.loader::after` 的背景色和父元素的背景色保持一致。
 
 ```scss
 .btn.is-primary.is-loading .loader::after {
@@ -89,13 +91,11 @@
 }
 ```
 
-## 变量 <Badge text="2.2 新增" />
+## 变量
 
-下面是一些可供自定义的变量。
-
-|变量名|变量值|
+|变量名|默认值|
 |---|---|
-|`$loader--font-size-base`|`$font-size-base`，默认为 14|
-|`$loader--font-size-diff`|`$font-size-diff`，默认为 2|
-|`$loader--line-height`|`$line-height-default`，默认为 1.5|
-|`$loader--animation-duration`|1s|
+|`$loader--font-size-base`|`$font-size-base`|
+|`$loader--font-size-diff`|`$font-size-diff`|
+|`$loader--line-height`|`$line-height-default`|
+|`$loader--animation-duration`|`1s`|
