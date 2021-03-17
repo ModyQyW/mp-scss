@@ -91,6 +91,7 @@ $has-info: true !default;
 $m-position: (
   "relative": relative,
   "absolute": absolute,
+  "static": static,
   "fixed": fixed
 ) !default;
 // top/right/bottom/left
