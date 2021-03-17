@@ -107,7 +107,8 @@ $z-index-step: 10 !default;
 /* 盒模型变量 box-model */
 // box-sizing
 $m-box-sizing: (
-  "-border": border-box
+  "-border": border-box,
+  "-content": content-box
 ) !default;
 // display
 $m-display: (
