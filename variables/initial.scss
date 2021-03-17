@@ -288,6 +288,8 @@ $m-background-size: (
 $m-border-style: (
   "": solid,
   "-solid": solid,
+  "-dotted": dotted,
+  "-dashed": dashed,
   "-none": none
 ) !default;
 // border-width
