@@ -281,7 +281,8 @@ $m-background-position: (
 // background-size
 $m-background-size: (
   "-contain": contain,
-  "-cover": cover
+  "-cover": cover,
+  "-auto": auto
 ) !default;
 // border-style
 $m-border-style: (
