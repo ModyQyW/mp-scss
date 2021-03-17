@@ -121,6 +121,7 @@ $m-display: (
 ) !default;
 // flex
 $m-flex: (
+  "-initial": 0 1 auto,
   "-auto": 1 1 auto,
   "-none": 0 0 auto
 ) !default;
