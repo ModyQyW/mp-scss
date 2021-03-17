@@ -100,7 +100,7 @@ $m-position-value: (
   "-auto": auto
 ) !default;
 // z-index
-$z-index-min: 0 !default;
+$z-index-min: -50 !default;
 $z-index-max: 50 !default;
 $z-index-step: 10 !default;
 
