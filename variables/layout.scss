@@ -42,8 +42,8 @@ $grid-max: 12 !default;
 // gutter
 $gutter-base: 12 !default;
 $gutter-diff: 4 !default;
-$gutter-max: 20 !default;
 $gutter-min: 0 !default;
+$gutter-max: 24 !default;
 $gutter-step: 4 !default;
 $m-gutter: (
   "": $gutter-base / 2 * $scale + $unit,
