@@ -1,25 +1,5 @@
 @import "../variables";
 
-/* variables */
-// font-size
-$icon--font-size-base: $font-size-base !default; // 14
-$icon--font-size: $icon--font-size-base * $scale + $unit;
-$icon--font-size-base--xs: $font-size-base !default; // 14
-$icon--font-size--xs: $icon--font-size-base--xs * $scale + $unit;
-$icon--font-size-base--sm: $font-size-base !default; // 14
-$icon--font-size--sm: $icon--font-size-base--sm * $scale + $unit;
-$icon--font-size-base--lg: $font-size-base + $font-size-diff !default; // 16
-$icon--font-size--lg: $icon--font-size-base--lg * $scale + $unit;
-$icon--font-size-base--xl: $font-size-base + $font-size-diff !default; // 16
-$icon--font-size--xl: $icon--font-size-base--xl * $scale + $unit;
-// line-height
-$icon--line-height: $line-height-default !default; // 1.5
-$icon--line-height--xs: $line-height-default !default; // 1.5
-$icon--line-height--sm: $line-height-default !default; // 1.5
-$icon--line-height--lg: $line-height-default !default; // 1.5
-$icon--line-height--xl: $line-height-default !default; // 1.5
-
-/* styles */
 .icon {
   display: inline-block;
   width: $icon--font-size-base * $icon--line-height * $scale + $unit;

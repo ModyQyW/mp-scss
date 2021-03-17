@@ -1,62 +1,6 @@
 /* stylelint-disable selector-max-class */
 @import "../variables";
 
-/* variables */
-// border-width
-$btn--border-width-base: 1 !default;
-$btn--border-width: $btn--border-width-base * $scale + $unit;
-// padding-y
-$btn--padding-y-base: 4 !default;
-$btn--padding-y: $btn--padding-y-base * $scale + $unit;
-$btn--padding-y-base--xs: 0 !default;
-$btn--padding-y--xs: $btn--padding-y-base--xs * $scale + $unit;
-$btn--padding-y-base--sm: 2 !default;
-$btn--padding-y--sm: $btn--padding-y-base--sm * $scale + $unit;
-$btn--padding-y-base--lg: 6 !default;
-$btn--padding-y--lg: $btn--padding-y-base--lg * $scale + $unit;
-$btn--padding-y-base--xl: 8 !default;
-$btn--padding-y--xl: $btn--padding-y-base--xl * $scale + $unit;
-// padding-x
-$btn--padding-x-base: 16 !default;
-$btn--padding-x: $btn--padding-x-base * $scale + $unit;
-$btn--padding-x-base--xs: 8 !default;
-$btn--padding-x--xs: $btn--padding-x-base--xs * $scale + $unit;
-$btn--padding-x-base--sm: 12 !default;
-$btn--padding-x--sm: $btn--padding-x-base--sm * $scale + $unit;
-$btn--padding-x-base--lg: 20 !default;
-$btn--padding-x--lg: $btn--padding-x-base--lg * $scale + $unit;
-$btn--padding-x-base--xl: 24 !default;
-$btn--padding-x--xl: $btn--padding-x-base--xl * $scale + $unit;
-// font-size
-$btn--font-size-base: $font-size-base !default; // 14
-$btn--font-size: $btn--font-size-base * $scale + $unit;
-$btn--font-size-base--xs: $font-size-base !default; // 14
-$btn--font-size--xs: $btn--font-size-base--xs * $scale + $unit;
-$btn--font-size-base--sm: $font-size-base !default; // 14
-$btn--font-size--sm: $btn--font-size-base--sm * $scale + $unit;
-$btn--font-size-base--lg: $font-size-base + $font-size-diff !default; // 16
-$btn--font-size--lg: $btn--font-size-base--lg * $scale + $unit;
-$btn--font-size-base--xl: $font-size-base + $font-size-diff !default; // 16
-$btn--font-size--xl: $btn--font-size-base--xl * $scale + $unit;
-// line-height
-$btn--line-height: $line-height-default !default; // 1.5
-$btn--line-height--xs: $line-height-default !default; // 1.5
-$btn--line-height--sm: $line-height-default !default; // 1.5
-$btn--line-height--lg: $line-height-default !default; // 1.5
-$btn--line-height--xl: $line-height-default !default; // 1.5
-// height
-$btn--height-base: $btn--border-width-base * 2 + $btn--padding-y-base * 2 + $btn--font-size-base * $btn--line-height !default; // 31
-$btn--height: $btn--height-base * $scale + $unit;
-$btn--height-base--xs: $btn--border-width-base * 2 + $btn--padding-y-base--xs * 2 + $btn--font-size-base--xs * $btn--line-height--xs !default; // 23
-$btn--height--xs: $btn--height-base--xs * $scale + $unit;
-$btn--height-base--sm: $btn--border-width-base * 2 + $btn--padding-y-base--sm * 2 + $btn--font-size-base--sm * $btn--line-height--sm !default; // 27
-$btn--height--sm: $btn--height-base--sm * $scale + $unit;
-$btn--height-base--lg: $btn--border-width-base * 2 + $btn--padding-y-base--lg * 2 + $btn--font-size-base--lg * $btn--line-height--lg !default; // 38
-$btn--height--lg: $btn--height-base--lg * $scale + $unit;
-$btn--height-base--xl: $btn--border-width-base * 2 + $btn--padding-y-base--xl * 2 + $btn--font-size-base--xl * $btn--line-height--xl !default; // 42
-$btn--height--xl: $btn--height-base--xl * $scale + $unit;
-
-/* styles */
 .btn {
   position: relative;
   box-sizing: border-box;

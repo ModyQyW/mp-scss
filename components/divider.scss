@@ -1,29 +1,5 @@
 @import "../variables";
 
-/* variables */
-// margin-y
-$divider--margin-y-base: 8 !default;
-$divider--margin-y: $divider--margin-y-base * $scale + $unit;
-$divider--margin-y-base--vertical: 0 !default;
-$divider--margin-y--vertical: $divider--margin-y-base--vertical * $scale + $unit;
-$divider-wrapper--margin-y-base: 8 !default;
-$divider-wrapper--margin-y: $divider-wrapper--margin-y-base * $scale + $unit;
-$divider-content--padding-y-base: 0 !default;
-$divider-content--padding-y: $divider-content--padding-y-base * $scale + $unit;
-// margin-x
-$divider--margin-x-base: 0 !default;
-$divider--margin-x: $divider--margin-x-base * $scale + $unit;
-$divider--margin-x-base--vertical: 8 !default;
-$divider--margin-x--vertical: $divider--margin-x-base--vertical * $scale + $unit;
-$divider-wrapper--margin-x-base: 0 !default;
-$divider-wrapper--margin-x: $divider-wrapper--margin-x-base * $scale + $unit;
-$divider-content--padding-x-base: 8 !default;
-$divider-content--padding-x: $divider-content--padding-x-base * $scale + $unit;
-// border-width
-$divider--border-width-base: 1 !default;
-$divider--border-width: $divider--border-width-base * $scale + $unit;
-
-/* styles */
 .divider {
   position: relative;
   box-sizing: border-box;

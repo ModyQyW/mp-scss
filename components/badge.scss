@@ -1,37 +1,5 @@
 @import "../variables";
 
-/* variables */
-// padding-y
-$badge--padding-y-base: 0 !default;
-$badge--padding-y: $badge--padding-y-base * $scale + $unit;
-$badge--padding-y-base--sm: 0 !default;
-$badge--padding-y--sm: $badge--padding-y-base--sm * $scale + $unit;
-$badge--padding-y-base--dot: 0 !default;
-$badge--padding-y--dot: $badge--padding-y-base--dot * $scale + $unit;
-// padding-x
-$badge--padding-x-base: 6 !default;
-$badge--padding-x: $badge--padding-x-base * $scale + $unit;
-$badge--padding-x-base--sm: 0 !default;
-$badge--padding-x--sm: $badge--padding-x-base--sm * $scale + $unit;
-$badge--padding-x-base--dot: 0 !default;
-$badge--padding-x--dot: $badge--padding-x-base--dot * $scale + $unit;
-// font-size
-$badge--font-size-base: $font-size-base - $font-size-diff !default; // 12
-$badge--font-size: $badge--font-size-base * $scale + $unit;
-$badge--font-size-base--sm: $font-size-base - $font-size-diff !default; // 12
-$badge--font-size--sm: $badge--font-size-base--sm * $scale + $unit;
-// line-height
-$badge--line-height: $line-height-default !default; // 1.5
-$badge--line-height--sm: $line-height-default - $line-height-diff !default; // 1.25
-// height
-$badge--height-base: $badge--padding-y-base * 2 + $badge--font-size-base * $badge--line-height !default; // 18
-$badge--height: $badge--height-base * $scale + $unit;
-$badge--height-base--sm: $badge--padding-y-base--sm * 2 + $badge--font-size-base--sm * $badge--line-height--sm !default; // 15
-$badge--height--sm: $badge--height-base--sm * $scale + $unit;
-$badge--height-base--dot: 6 !default;
-$badge--height--dot: $badge--height-base--dot * $scale + $unit;
-
-/* styles */
 .badge {
   position: absolute;
   top: 0;

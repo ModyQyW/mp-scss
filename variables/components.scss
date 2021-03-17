@@ -1,0 +1,236 @@
+/* badge */
+// padding-y
+$badge--padding-y-base: 0 !default;
+$badge--padding-y: $badge--padding-y-base * $scale + $unit;
+$badge--padding-y-base--sm: 0 !default;
+$badge--padding-y--sm: $badge--padding-y-base--sm * $scale + $unit;
+$badge--padding-y-base--dot: 0 !default;
+$badge--padding-y--dot: $badge--padding-y-base--dot * $scale + $unit;
+// padding-x
+$badge--padding-x-base: 6 !default;
+$badge--padding-x: $badge--padding-x-base * $scale + $unit;
+$badge--padding-x-base--sm: 0 !default;
+$badge--padding-x--sm: $badge--padding-x-base--sm * $scale + $unit;
+$badge--padding-x-base--dot: 0 !default;
+$badge--padding-x--dot: $badge--padding-x-base--dot * $scale + $unit;
+// font-size
+$badge--font-size-base: $font-size-base - $font-size-diff !default; // 12
+$badge--font-size: $badge--font-size-base * $scale + $unit;
+$badge--font-size-base--sm: $font-size-base - $font-size-diff !default; // 12
+$badge--font-size--sm: $badge--font-size-base--sm * $scale + $unit;
+// line-height
+$badge--line-height: $line-height-default !default; // 1.5
+$badge--line-height--sm: $line-height-default - $line-height-diff !default; // 1.25
+// height
+$badge--height-base: $badge--padding-y-base * 2 + $badge--font-size-base * $badge--line-height !default; // 18
+$badge--height: $badge--height-base * $scale + $unit;
+$badge--height-base--sm: $badge--padding-y-base--sm * 2 + $badge--font-size-base--sm * $badge--line-height--sm !default; // 15
+$badge--height--sm: $badge--height-base--sm * $scale + $unit;
+$badge--height-base--dot: 6 !default;
+$badge--height--dot: $badge--height-base--dot * $scale + $unit;
+
+/* button */
+// border-width
+$btn--border-width-base: 1 !default;
+$btn--border-width: $btn--border-width-base * $scale + $unit;
+// padding-y
+$btn--padding-y-base: 4 !default;
+$btn--padding-y: $btn--padding-y-base * $scale + $unit;
+$btn--padding-y-base--xs: 0 !default;
+$btn--padding-y--xs: $btn--padding-y-base--xs * $scale + $unit;
+$btn--padding-y-base--sm: 2 !default;
+$btn--padding-y--sm: $btn--padding-y-base--sm * $scale + $unit;
+$btn--padding-y-base--lg: 6 !default;
+$btn--padding-y--lg: $btn--padding-y-base--lg * $scale + $unit;
+$btn--padding-y-base--xl: 8 !default;
+$btn--padding-y--xl: $btn--padding-y-base--xl * $scale + $unit;
+// padding-x
+$btn--padding-x-base: 16 !default;
+$btn--padding-x: $btn--padding-x-base * $scale + $unit;
+$btn--padding-x-base--xs: 8 !default;
+$btn--padding-x--xs: $btn--padding-x-base--xs * $scale + $unit;
+$btn--padding-x-base--sm: 12 !default;
+$btn--padding-x--sm: $btn--padding-x-base--sm * $scale + $unit;
+$btn--padding-x-base--lg: 20 !default;
+$btn--padding-x--lg: $btn--padding-x-base--lg * $scale + $unit;
+$btn--padding-x-base--xl: 24 !default;
+$btn--padding-x--xl: $btn--padding-x-base--xl * $scale + $unit;
+// font-size
+$btn--font-size-base: $font-size-base !default; // 14
+$btn--font-size: $btn--font-size-base * $scale + $unit;
+$btn--font-size-base--xs: $font-size-base !default; // 14
+$btn--font-size--xs: $btn--font-size-base--xs * $scale + $unit;
+$btn--font-size-base--sm: $font-size-base !default; // 14
+$btn--font-size--sm: $btn--font-size-base--sm * $scale + $unit;
+$btn--font-size-base--lg: $font-size-base + $font-size-diff !default; // 16
+$btn--font-size--lg: $btn--font-size-base--lg * $scale + $unit;
+$btn--font-size-base--xl: $font-size-base + $font-size-diff !default; // 16
+$btn--font-size--xl: $btn--font-size-base--xl * $scale + $unit;
+// line-height
+$btn--line-height: $line-height-default !default; // 1.5
+$btn--line-height--xs: $line-height-default !default; // 1.5
+$btn--line-height--sm: $line-height-default !default; // 1.5
+$btn--line-height--lg: $line-height-default !default; // 1.5
+$btn--line-height--xl: $line-height-default !default; // 1.5
+// height
+$btn--height-base: $btn--border-width-base * 2 + $btn--padding-y-base * 2 + $btn--font-size-base * $btn--line-height !default; // 31
+$btn--height: $btn--height-base * $scale + $unit;
+$btn--height-base--xs: $btn--border-width-base * 2 + $btn--padding-y-base--xs * 2 + $btn--font-size-base--xs * $btn--line-height--xs !default; // 23
+$btn--height--xs: $btn--height-base--xs * $scale + $unit;
+$btn--height-base--sm: $btn--border-width-base * 2 + $btn--padding-y-base--sm * 2 + $btn--font-size-base--sm * $btn--line-height--sm !default; // 27
+$btn--height--sm: $btn--height-base--sm * $scale + $unit;
+$btn--height-base--lg: $btn--border-width-base * 2 + $btn--padding-y-base--lg * 2 + $btn--font-size-base--lg * $btn--line-height--lg !default; // 38
+$btn--height--lg: $btn--height-base--lg * $scale + $unit;
+$btn--height-base--xl: $btn--border-width-base * 2 + $btn--padding-y-base--xl * 2 + $btn--font-size-base--xl * $btn--line-height--xl !default; // 42
+$btn--height--xl: $btn--height-base--xl * $scale + $unit;
+
+/* card */
+// padding-y
+$card-header--padding-y-base: 16 !default;
+$card-header--padding-y: $card-header--padding-y-base * $scale + $unit !default;
+$card-header--padding-y-base--sm: 8 !default;
+$card-header--padding-y--sm: $card-header--padding-y-base--sm * $scale + $unit;
+$card-content--padding-y-base: 16 !default;
+$card-content--padding-y: $card-content--padding-y-base * $scale + $unit !default;
+$card-content--padding-y-base--sm: 8 !default;
+$card-content--padding-y--sm: $card-content--padding-y-base--sm * $scale + $unit;
+$card-footer--padding-y-base: 16 !default;
+$card-footer--padding-y: $card-footer--padding-y-base * $scale + $unit !default;
+$card-footer--padding-y-base--sm: 8 !default;
+$card-footer--padding-y--sm: $card-footer--padding-y-base--sm * $scale + $unit;
+// padding-x
+$card-header--padding-x-base: 16 !default;
+$card-header--padding-x: $card-header--padding-x-base * $scale + $unit !default;
+$card-header--padding-x-base--sm: 8 !default;
+$card-header--padding-x--sm: $card-header--padding-x-base--sm * $scale + $unit;
+$card-content--padding-x-base: 16 !default;
+$card-content--padding-x: $card-content--padding-x-base * $scale + $unit !default;
+$card-content--padding-x-base--sm: 8 !default;
+$card-content--padding-x--sm: $card-content--padding-x-base--sm * $scale + $unit;
+$card-footer--padding-x-base: 16 !default;
+$card-footer--padding-x: $card-footer--padding-x-base * $scale + $unit !default;
+$card-footer--padding-x-base--sm: 8 !default;
+$card-footer--padding-x--sm: $card-footer--padding-x-base--sm * $scale + $unit;
+// font-size
+$card--font-size-base: $font-size-base !default; // 14
+$card--font-size: $card--font-size-base * $scale + $unit;
+$card--font-size-base--sm: $font-size-base !default; // 14
+$card--font-size--sm: $card--font-size-base--sm * $scale + $unit;
+// line-height
+$card--line-height: $line-height-default !default; // 1.5
+$card--line-height--sm: $line-height-default !default; // 1.5
+// border-width
+$card--border-width-base: 1 !default;
+$card--border-width: $card--border-width-base * $scale + $unit;
+
+/* divider */
+// margin-y
+$divider--margin-y-base: 8 !default;
+$divider--margin-y: $divider--margin-y-base * $scale + $unit;
+$divider--margin-y-base--vertical: 0 !default;
+$divider--margin-y--vertical: $divider--margin-y-base--vertical * $scale + $unit;
+$divider-wrapper--margin-y-base: 8 !default;
+$divider-wrapper--margin-y: $divider-wrapper--margin-y-base * $scale + $unit;
+$divider-content--padding-y-base: 0 !default;
+$divider-content--padding-y: $divider-content--padding-y-base * $scale + $unit;
+// margin-x
+$divider--margin-x-base: 0 !default;
+$divider--margin-x: $divider--margin-x-base * $scale + $unit;
+$divider--margin-x-base--vertical: 8 !default;
+$divider--margin-x--vertical: $divider--margin-x-base--vertical * $scale + $unit;
+$divider-wrapper--margin-x-base: 0 !default;
+$divider-wrapper--margin-x: $divider-wrapper--margin-x-base * $scale + $unit;
+$divider-content--padding-x-base: 8 !default;
+$divider-content--padding-x: $divider-content--padding-x-base * $scale + $unit;
+// border-width
+$divider--border-width-base: 1 !default;
+$divider--border-width: $divider--border-width-base * $scale + $unit;
+
+/* icon */
+// font-size
+$icon--font-size-base: $font-size-base !default; // 14
+$icon--font-size: $icon--font-size-base * $scale + $unit;
+$icon--font-size-base--xs: $font-size-base !default; // 14
+$icon--font-size--xs: $icon--font-size-base--xs * $scale + $unit;
+$icon--font-size-base--sm: $font-size-base !default; // 14
+$icon--font-size--sm: $icon--font-size-base--sm * $scale + $unit;
+$icon--font-size-base--lg: $font-size-base + $font-size-diff !default; // 16
+$icon--font-size--lg: $icon--font-size-base--lg * $scale + $unit;
+$icon--font-size-base--xl: $font-size-base + $font-size-diff !default; // 16
+$icon--font-size--xl: $icon--font-size-base--xl * $scale + $unit;
+// line-height
+$icon--line-height: $line-height-default !default; // 1.5
+$icon--line-height--xs: $line-height-default !default; // 1.5
+$icon--line-height--sm: $line-height-default !default; // 1.5
+$icon--line-height--lg: $line-height-default !default; // 1.5
+$icon--line-height--xl: $line-height-default !default; // 1.5
+
+/* input */
+// border-width
+$input--border-width-base: 1 !default;
+$input--border-width: $input--border-width-base * $scale + $unit;
+// padding-y
+$input--padding-y-base: 4 !default;
+$input--padding-y: $input--padding-y-base * $scale + $unit;
+$input--padding-y-base--xs: 0 !default;
+$input--padding-y--xs: $input--padding-y-base--xs * $scale + $unit;
+$input--padding-y-base--sm: 2 !default;
+$input--padding-y--sm: $input--padding-y-base--sm * $scale + $unit;
+$input--padding-y-base--lg: 6 !default;
+$input--padding-y--lg: $input--padding-y-base--lg * $scale + $unit;
+$input--padding-y-base--xl: 8 !default;
+$input--padding-y--xl: $input--padding-y-base--xl * $scale + $unit;
+// padding-x
+$input--padding-x-base: 12 !default;
+$input--padding-x: $input--padding-x-base * $scale + $unit;
+$input--padding-x-base--xs: 4 !default;
+$input--padding-x--xs: $input--padding-x-base--xs * $scale + $unit;
+$input--padding-x-base--sm: 8 !default;
+$input--padding-x--sm: $input--padding-x-base--sm * $scale + $unit;
+$input--padding-x-base--lg: 16 !default;
+$input--padding-x--lg: $input--padding-x-base--lg * $scale + $unit;
+$input--padding-x-base--xl: 20 !default;
+$input--padding-x--xl: $input--padding-x-base--xl * $scale + $unit;
+// font-size
+$input--font-size-base: $font-size-base !default; // 14
+$input--font-size: $input--font-size-base * $scale + $unit;
+$input--font-size-base--xs: $font-size-base !default; // 14
+$input--font-size--xs: $input--font-size-base--xs * $scale + $unit;
+$input--font-size-base--sm: $font-size-base !default; // 14
+$input--font-size--sm: $input--font-size-base--sm * $scale + $unit;
+$input--font-size-base--lg: $font-size-base + $font-size-diff !default; // 16
+$input--font-size--lg: $input--font-size-base--lg * $scale + $unit;
+$input--font-size-base--xl: $font-size-base + $font-size-diff !default; // 16
+$input--font-size--xl: $input--font-size-base--xl * $scale + $unit;
+// line-height
+$input--line-height: $line-height-default !default; // 1.5
+$input--line-height--xs: $line-height-default !default; // 1.5
+$input--line-height--sm: $line-height-default !default; // 1.5
+$input--line-height--lg: $line-height-default !default; // 1.5
+$input--line-height--xl: $line-height-default !default; // 1.5
+// height
+$input--height-base: $input--border-width-base * 2 + $input--padding-y-base * 2 + $input--font-size-base * $input--line-height !default; // 31
+$input--height: $input--height-base * $scale + $unit;
+$input--height-base--xs: $input--border-width-base * 2 + $input--padding-y-base--xs * 2 + $input--font-size-base--xs * $input--line-height--xs !default; // 23
+$input--height--xs: $input--height-base--xs * $scale + $unit;
+$input--height-base--sm: $input--border-width-base * 2 + $input--padding-y-base--sm * 2 + $input--font-size-base--sm * $input--line-height--sm !default; // 27
+$input--height--sm: $input--height-base--sm * $scale + $unit;
+$input--height-base--lg: $input--border-width-base * 2 + $input--padding-y-base--lg * 2 + $input--font-size-base--lg * $input--line-height--lg !default; // 38
+$input--height--lg: $input--height-base--lg * $scale + $unit;
+$input--height-base--xl: $input--border-width-base * 2 + $input--padding-y-base--xl * 2 + $input--font-size-base--xl * $input--line-height--xl !default; // 42
+$input--height--xl: $input--height-base--xl * $scale + $unit;
+
+/* loader */
+// font-size
+$loader--font-size-base: $font-size-base !default; // 14
+$loader--font-size-diff: $font-size-diff !default; // 2
+// line-height
+$loader--line-height: $line-height-default !default; // 1.5
+// animation-duration
+$loader--animation-duration: 1s !default;
+
+/* overlay */
+// z-index
+$overlay--z-index: $z-index-max - $z-index-step !default; // 40
+// background-color
+$overlay--background-color: fade-out($black, 0.55) !default; // rgba(0, 0, 0, 0.45)

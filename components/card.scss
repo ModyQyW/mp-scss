@@ -1,45 +1,5 @@
 @import "../variables";
 
-/* variables */
-// padding-y
-$card-header--padding-y-base: 16 !default;
-$card-header--padding-y: $card-header--padding-y-base * $scale + $unit !default;
-$card-header--padding-y-base--sm: 8 !default;
-$card-header--padding-y--sm: $card-header--padding-y-base--sm * $scale + $unit;
-$card-content--padding-y-base: 16 !default;
-$card-content--padding-y: $card-content--padding-y-base * $scale + $unit !default;
-$card-content--padding-y-base--sm: 8 !default;
-$card-content--padding-y--sm: $card-content--padding-y-base--sm * $scale + $unit;
-$card-footer--padding-y-base: 16 !default;
-$card-footer--padding-y: $card-footer--padding-y-base * $scale + $unit !default;
-$card-footer--padding-y-base--sm: 8 !default;
-$card-footer--padding-y--sm: $card-footer--padding-y-base--sm * $scale + $unit;
-// padding-x
-$card-header--padding-x-base: 16 !default;
-$card-header--padding-x: $card-header--padding-x-base * $scale + $unit !default;
-$card-header--padding-x-base--sm: 8 !default;
-$card-header--padding-x--sm: $card-header--padding-x-base--sm * $scale + $unit;
-$card-content--padding-x-base: 16 !default;
-$card-content--padding-x: $card-content--padding-x-base * $scale + $unit !default;
-$card-content--padding-x-base--sm: 8 !default;
-$card-content--padding-x--sm: $card-content--padding-x-base--sm * $scale + $unit;
-$card-footer--padding-x-base: 16 !default;
-$card-footer--padding-x: $card-footer--padding-x-base * $scale + $unit !default;
-$card-footer--padding-x-base--sm: 8 !default;
-$card-footer--padding-x--sm: $card-footer--padding-x-base--sm * $scale + $unit;
-// font-size
-$card--font-size-base: $font-size-base !default; // 14
-$card--font-size: $card--font-size-base * $scale + $unit;
-$card--font-size-base--sm: $font-size-base !default; // 14
-$card--font-size--sm: $card--font-size-base--sm * $scale + $unit;
-// line-height
-$card--line-height: $line-height-default !default; // 1.5
-$card--line-height--sm: $line-height-default !default; // 1.5
-// border-width
-$card--border-width-base: 1 !default;
-$card--border-width: $card--border-width-base * $scale + $unit;
-
-/* styles */
 .card-header,
 .card-content,
 .card-footer {

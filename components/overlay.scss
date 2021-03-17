@@ -1,12 +1,5 @@
 @import "../variables";
 
-/* variables */
-// z-index
-$overlay--z-index: $z-index-max - $z-index-step !default; // 40
-// background-color
-$overlay--background-color: fade-out($black, 0.55) !default; // rgba(0, 0, 0, 0.45)
-
-/* styles */
 .overlay {
   position: fixed;
   top: 0;

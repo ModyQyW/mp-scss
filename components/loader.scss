@@ -9,16 +9,6 @@
   }
 }
 
-/* variables */
-// font-size
-$loader--font-size-base: $font-size-base !default; // 14
-$loader--font-size-diff: $font-size-diff !default; // 2
-// line-height
-$loader--line-height: $line-height-default !default; // 1.5
-// animation-duration
-$loader--animation-duration: 1s !default;
-
-/* styles */
 .loader {
   position: relative;
   width: $loader--font-size-base * $loader--line-height * $scale + $unit;
