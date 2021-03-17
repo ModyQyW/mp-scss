@@ -1144,30 +1144,30 @@ $tmp-height: $height-min;
   );
 }
 // padding
-$m-padding: () !default;
+$m-padding: (
+  "-xs": (
+    $padding-base - $padding-diff * 2
+  ) * $scale + $unit,
+  "-sm": (
+    $padding-base - $padding-diff
+  ) * $scale + $unit,
+  "-md": $padding-base * $scale + $unit,
+  "-lg": (
+    $padding-base + $padding-diff
+  ) * $scale + $unit,
+  "-xl": (
+    $padding-base + $padding-diff * 2
+  ) * $scale + $unit
+) !default;
 $tmp-padding: $padding-min;
 @while ($tmp-padding <= $padding-max) {
   $m-padding: map-merge(
     $m-padding,
-    if(
-      $tmp-padding < 0,
-      (
-        "-n#{abs($tmp-padding)}": $tmp-padding * $scale + $unit
-      ),
-      (
-        "-#{$tmp-padding}": $tmp-padding * $scale + $unit
-      )
+    (
+      "-#{$tmp-padding}": $tmp-padding * $scale + $unit
     )
   );
   $tmp-padding: $tmp-padding + $padding-step;
-}
-@if ($scale != 1 and $padding-has-1-real) {
-  $m-padding: map-merge(
-    $m-padding,
-    (
-      "-1-real": 1 + $unit
-    )
-  );
 }
 // margin
 $m-margin: (
