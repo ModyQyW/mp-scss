@@ -10,6 +10,10 @@
   background-color: transparent;
 }
 
+.card-header {
+  font-weight: 500;
+}
+
 .card {
   position: relative;
   box-sizing: border-box;
@@ -43,7 +47,6 @@
   .card-header {
     padding: $card-header--padding-y $card-header--padding-x;
     font-size: ($card--font-size-base + $font-size-diff) * $scale + $unit;
-    font-weight: 500;
   }
 
   .card-content {
