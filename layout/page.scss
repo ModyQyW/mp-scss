@@ -1,6 +1,5 @@
 @import "../variables";
 
-.container,
 .header,
 .navbar,
 .aside,
@@ -15,10 +14,13 @@
 
 .container {
   position: absolute;
+  box-sizing: border-box;
+  display: flex;
   flex: auto;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  width: 100%;
   min-height: 0;
   font-family: $container-font-family;
   font-size: $container-font-size;

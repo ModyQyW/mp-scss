@@ -9,7 +9,7 @@ $scale: 2 !default;
 /* 是否启用暗黑模式 */
 $has-dark: false !default;
 
-/* 是否在 classes 里启用 !important */
+/* 是否在 classes 里启用 !important 方便覆盖样式 */
 $has-important: false !default;
 
 /* 通用变量 common */
@@ -208,7 +208,6 @@ $m-overflow: (
 // font-family
 $font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
   "微软雅黑", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-
 // font-size
 $font-size-base: 14 !default;
 $font-size-diff: 2 !default;
