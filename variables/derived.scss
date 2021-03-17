@@ -1111,6 +1111,7 @@ $tmp-width: $width-min;
 }
 // height
 $m-height: (
+  "-auto": auto,
   "-full": 100%,
   "-half": 50%
 ) !default;
