@@ -200,7 +200,8 @@ $margin-step: 2 !default;
 // overflow
 $m-overflow: (
   "-auto": auto,
-  "-hidden": hidden
+  "-hidden": hidden,
+  "-visible": visible
 ) !default;
 
 /* 排版变量 typography */
