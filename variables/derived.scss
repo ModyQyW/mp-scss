@@ -1233,7 +1233,44 @@ $m-font-family: (
 ) !default;
 // font-size
 $m-font-size: (
-  "": $font-size-base * $scale + $unit
+  "": $font-size-base * $scale + $unit,
+  "-xs": (
+    $font-size-base - $font-size-diff * 2
+  ) * $scale + $unit,
+  "-sm": (
+    $font-size-base - $font-size-diff
+  ) * $scale + $unit,
+  "-md": $font-size-base * $scale + $unit,
+  "-lg": (
+    $font-size-base + $font-size-diff
+  ) * $scale + $unit,
+  "-xl": (
+    $font-size-base + $font-size-diff * 2
+  ) * $scale + $unit,
+  "-2xl": (
+    $font-size-base + $font-size-diff * 3
+  ) * $scale + $unit,
+  "-3xl": (
+    $font-size-base + $font-size-diff * 5
+  ) * $scale + $unit,
+  "-4xl": (
+    $font-size-base + $font-size-diff * 7
+  ) * $scale + $unit,
+  "-5xl": (
+    $font-size-base + $font-size-diff * 9
+  ) * $scale + $unit,
+  "-6xl": (
+    $font-size-base + $font-size-diff * 13
+  ) * $scale + $unit,
+  "-7xl": (
+    $font-size-base + $font-size-diff * 17
+  ) * $scale + $unit,
+  "-8xl": (
+    $font-size-base + $font-size-diff * 21
+  ) * $scale + $unit,
+  "-9xl": (
+    $font-size-base + $font-size-diff * 25
+  ) * $scale + $unit
 ) !default;
 $tmp-font-size: $font-size-min;
 @while ($tmp-font-size <= $font-size-max) {
