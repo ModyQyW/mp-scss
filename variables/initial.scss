@@ -192,12 +192,12 @@ $padding-min: 0 !default;
 $padding-max: 80 !default;
 $padding-step: 2 !default;
 // margin
-$margin-max: 40 !default;
 $margin-step: 1 !default;
 $margin-has-1-real: true !default;
 $margin-base: 12 !default;
 $margin-diff: 4 !default;
 $margin-min: -80 !default;
+$margin-max: 80 !default;
 // overflow
 $m-overflow: (
   "-auto": auto,
