@@ -249,12 +249,15 @@ $m-text-align: (
 // text-decoration
 $m-text-decoration: (
   "-none": none,
-  "-underline": underline
+  "-underline": underline,
+  "-overline": overline,
+  "-line-through": line-through
 ) !default;
 // text-transform
 $m-text-transform: (
   "-uppercase": uppercase,
-  "-lowercase": lowercase
+  "-lowercase": lowercase,
+  "-capitalize": capitalize
 ) !default;
 
 /* 视觉变量 visual */
