@@ -1077,6 +1077,7 @@ $tmp-order: $order-min;
 }
 // width
 $m-width: (
+  "-auto": auto,
   "-full": 100%,
   "-half": 50%
 ) !default;
