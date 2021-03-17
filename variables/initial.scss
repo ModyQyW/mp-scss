@@ -271,7 +271,8 @@ $m-background-repeat: (
 // background-attachment
 $m-background-attachment: (
   "-fixed": fixed,
-  "-local": local
+  "-local": local,
+  "-scroll": scroll
 ) !default;
 // background-position
 $m-background-position: (
