@@ -229,19 +229,19 @@ $m-font-variant: (
 |`.leading-42`|`line-height: 84rpx;`|
 |`.leading-44`|`line-height: 88rpx;`|
 |`.leading-46`|`line-height: 92rpx;`|
-|`.leading-48`|`line-height: 98rpx;`|
-|`.leading-50`|`line-height: 98rpx;`|
-|`.leading-52`|`line-height: 98rpx;`|
-|`.leading-54`|`line-height: 98rpx;`|
-|`.leading-56`|`line-height: 98rpx;`|
-|`.leading-58`|`line-height: 98rpx;`|
-|`.leading-60`|`line-height: 98rpx;`|
-|`.leading-62`|`line-height: 98rpx;`|
-|`.leading-64`|`line-height: 98rpx;`|
-|`.leading-66`|`line-height: 98rpx;`|
-|`.leading-68`|`line-height: 98rpx;`|
-|`.leading-70`|`line-height: 98rpx;`|
-|`.leading-72`|`line-height: 98rpx;`|
+|`.leading-48`|`line-height: 96rpx;`|
+|`.leading-50`|`line-height: 100rpx;`|
+|`.leading-52`|`line-height: 104rpx;`|
+|`.leading-54`|`line-height: 108rpx;`|
+|`.leading-56`|`line-height: 112rpx;`|
+|`.leading-58`|`line-height: 116rpx;`|
+|`.leading-60`|`line-height: 120rpx;`|
+|`.leading-62`|`line-height: 124rpx;`|
+|`.leading-64`|`line-height: 128rpx;`|
+|`.leading-66`|`line-height: 132rpx;`|
+|`.leading-68`|`line-height: 136rpx;`|
+|`.leading-70`|`line-height: 140rpx;`|
+|`.leading-72`|`line-height: 144rpx;`|
 
 ```scss
 // 生成 .leading, .leading-{xs|sm|md|lg|xl}
