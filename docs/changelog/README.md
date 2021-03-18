@@ -6,6 +6,10 @@ sidebar: 'auto'
 
 ## 2.3
 
+### 2.3.1
+
+- 修复 - 修复 `input-wrapper` 下的 `.input` 字体大小不正确的问题
+
 ### 2.3.0
 
 - 调整 - 组件变量统一放到 `@modyqyw/mp-scss/variables/components.scss`。
