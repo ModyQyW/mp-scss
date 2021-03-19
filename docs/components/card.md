@@ -1,6 +1,6 @@
 # 卡片类 card
 
-[源码](https://github.com/ModyQyW/mp-scss/blob/main/compoents/card.scss)
+[源码](https://github.com/ModyQyW/mp-scss/blob/main/components/card.scss)
 
 ## 默认样式
 

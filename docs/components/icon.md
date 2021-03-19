@@ -1,6 +1,6 @@
 # 图标类 icon
 
-[源码](https://github.com/ModyQyW/mp-scss/blob/main/compoents/icon.scss)
+[源码](https://github.com/ModyQyW/mp-scss/blob/main/components/icon.scss)
 
 ## 默认样式
 

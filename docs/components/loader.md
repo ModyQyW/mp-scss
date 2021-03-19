@@ -1,6 +1,6 @@
 # 加载器类 loader
 
-[源码](https://github.com/ModyQyW/mp-scss/blob/main/compoents/loader.scss)
+[源码](https://github.com/ModyQyW/mp-scss/blob/main/components/loader.scss)
 
 ## 默认样式
 

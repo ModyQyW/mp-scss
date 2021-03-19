@@ -1,6 +1,6 @@
 # 遮罩类 overlay
 
-[源码](https://github.com/ModyQyW/mp-scss/blob/main/compoents/overlay.scss)
+[源码](https://github.com/ModyQyW/mp-scss/blob/main/components/overlay.scss)
 
 ## 默认样式
 

@@ -1,6 +1,6 @@
 # 分割线类 divider
 
-[源码](https://github.com/ModyQyW/mp-scss/blob/main/compoents/divider.scss)
+[源码](https://github.com/ModyQyW/mp-scss/blob/main/components/divider.scss)
 
 ## 默认样式
 

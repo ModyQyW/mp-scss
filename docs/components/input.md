@@ -1,6 +1,6 @@
 # 输入框 input
 
-[源码](https://github.com/ModyQyW/mp-scss/blob/main/compoents/input.scss)
+[源码](https://github.com/ModyQyW/mp-scss/blob/main/components/input.scss)
 
 ## 默认样式
 

@@ -1,6 +1,6 @@
 # 徽标类 badge
 
-[源码](https://github.com/ModyQyW/mp-scss/blob/main/compoents/badge.scss)
+[源码](https://github.com/ModyQyW/mp-scss/blob/main/components/badge.scss)
 
 ## 默认样式
 

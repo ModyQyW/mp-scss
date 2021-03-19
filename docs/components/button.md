@@ -1,6 +1,6 @@
 # 按钮类 button
 
-[源码](https://github.com/ModyQyW/mp-scss/blob/main/compoents/button.scss)
+[源码](https://github.com/ModyQyW/mp-scss/blob/main/components/button.scss)
 
 ## 默认样式
 
