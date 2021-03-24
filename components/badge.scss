@@ -86,6 +86,11 @@
     }
   }
 
+  &.is-white {
+    color: $primary;
+    background-color: $white;
+  }
+
   &.is-sm {
     min-width: $badge--height--sm;
     height: $badge--height--sm;
