@@ -1622,13 +1622,13 @@ $m-box-shadow-ambient: (
     0 9 * $scale + $unit 46 * $scale + $unit 8 * $scale + $unit $box-shadow-ambient
   )
 );
-$box-shadow: () !default;
+$m-box-shadow: () !default;
 $tmp-box-shadow: $box-shadow-min;
 @while ($tmp-box-shadow <= $box-shadow-max) {
   $l-box-shadow: map-get($m-box-shadow-umbra, $tmp-box-shadow), map-get($m-box-shadow-penumbra, $tmp-box-shadow),
     map-get($m-box-shadow-ambient, $tmp-box-shadow);
-  $box-shadow: map-merge(
-    $box-shadow,
+  $m-box-shadow: map-merge(
+    $m-box-shadow,
     (
       "-#{$tmp-box-shadow}": $l-box-shadow
     )

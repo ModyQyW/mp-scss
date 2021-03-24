@@ -1,6 +1,6 @@
 @import "../../variables";
 
-@each $k, $v in $box-shadow {
+@each $k, $v in $m-box-shadow {
   .shadow#{$k} {
     box-shadow: $v if($has-important, !important, null);
   }
