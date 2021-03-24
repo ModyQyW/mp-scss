@@ -12,6 +12,9 @@ $has-dark: false !default;
 /* 是否在 classes 里启用 !important 方便覆盖样式 */
 $has-important: false !default;
 
+/* 是否导出供 JavaScript 使用 */
+$has-export: false !default;
+
 /* 通用变量 common */
 // 中性色 neutral color
 $has-transparent: true !default;
