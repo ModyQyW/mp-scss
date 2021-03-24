@@ -1182,10 +1182,10 @@ $m-margin: (
     -$margin-base
   ) * $scale + $unit,
   "-nlg": (
-    -$margin-base + $margin-diff
+    -$margin-base - $margin-diff
   ) * $scale + $unit,
   "-nxl": (
-    -$margin-base + $margin-diff * 2
+    -$margin-base - $margin-diff * 2
   ) * $scale + $unit,
   "-xs": (
     $margin-base - $margin-diff * 2
