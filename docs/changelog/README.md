@@ -4,6 +4,13 @@ sidebar: 'auto'
 
 # 改动日志
 
+## 2.4
+
+- 新增 - badge 组件类增加 `.is-white`。
+- 修复 - 修复 `.m-n{lg|xl}` 表现不正确的问题。
+- 修复 - `$box-shadow` -> `$m-box-shadow`，修复命名未遵循规范的问题。
+- 新增 - 新增 `$has-export`，控制是否导出给 JavaScript 使用。
+
 ## 2.3
 
 ### 2.3.1
@@ -102,7 +109,7 @@ sidebar: 'auto'
 - 新增 - divider 组件类增加 `.divider-content`。
 - 新增 - icon 组件类增加两个尺寸类 `.is-xs` 和 `.is-xl`。
 - 新增 - input 组件类增加两个尺寸类 `.is-xs` 和 `.is-xl`。
-- 新增 - loader 组件类增加 `.loader.is-black`。
+- 新增 - loader 组件类增加 `.is-black`。
 - 调整 - 调整 `$font-family-default`。
 - 调整 - 调整 `$border-radius-base`。
 - 调整（可能导致破坏性更新） - 禁止修改 `$white` 和 `$black`。

@@ -94,6 +94,30 @@ yarn build-no-transform
 
 `dist` 目录下默认生成三个文件夹 `acss`，`css`，`wxss`，分别对应不同的文件后缀，请根据需要使用。
 
+## 在 JavaScript 里使用
+
+在某些情况下，你可能会想在 JavaScript 里使用某些变量。
+
+请先手动开启对应的开关 `$has-export`。
+
+```scss
+// {PROJECT_DIR}/styles/variables.scss
+$has-export: true;
+@import "~@modyqyw/mp-scss/variables";
+```
+
+确保配置正确（如果你在框架内使用，不妨看看框架的文档来确认），然后在 JavaScript 文件里引入即可使用。
+
+```javascript
+import variables from '@/styles/variables.scss';
+
+console.log('unit:', variables.unit); // 输出 unit: rpx
+```
+
+默认会导出所有简单变量。
+
+你也可以查看 [这里](https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass) 了解更多。
+
 ## 缩放倍数和单位
 
 目前，小程序用得最多的缩放倍数是 2，用得最多的单位是 `rpx`，见 [尺寸单位](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html)。因此，这个库指定 `$scale: 2 !default;` 和 `$unit: rpx !default;`，分别对应缩放倍数和基本单位。

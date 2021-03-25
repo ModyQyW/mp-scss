@@ -23,7 +23,7 @@
 
 ## 主题
 
-默认有 `default`，`primary`，`success`，`warning`，`error`, `info` 六个主题。
+默认有 `default`，`primary`，`success`，`warning`，`error`，`info`，`white` 几个主题。
 
 ```html
 <!-- default 主题 -->
@@ -55,6 +55,11 @@
 <view class="btn">
   button
   <view class="badge is-info"></view>
+</view>
+<!-- white 主题 -->
+<view class="btn">
+  button
+  <view class="badge is-white"></view>
 </view>
 ```
 
