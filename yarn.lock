@@ -1261,10 +1261,10 @@
     event-target-shim "^5.0.1"
     miniprogram-api-typings "^2.10.2"
 
-"@modyqyw/fabric@~1.24.0":
-  version "1.24.0"
-  resolved "https://registry.yarnpkg.com/@modyqyw/fabric/-/fabric-1.24.0.tgz#5f719e6f2edbc5f3f14de487e4e93acfca0d9d86"
-  integrity sha512-MyTCueHj4WcDhfPnrXLzMAoS6C6IW8CGMWMtb4nOLF6zJqlsAKhuOigGdIlLvg7qgXZcA2wNWJB+DFcdh8iqrw==
+"@modyqyw/fabric@~1.24.2":
+  version "1.24.2"
+  resolved "https://registry.yarnpkg.com/@modyqyw/fabric/-/fabric-1.24.2.tgz#dfd533ff356fef9ef937f9cfeeade4c37de4b1b8"
+  integrity sha512-H9YAfDr9EMohJaqXkaxaC8x2OozICU/uv+56tqM1sxez0H0DAwRAzu9g35n+WVFaYRDKDPVNYetvpKeXtTS5fA==
   dependencies:
     "@commitlint/config-conventional" "~12.0.1"
     "@typescript-eslint/eslint-plugin" "~4.19.0"
@@ -1279,7 +1279,7 @@
     eslint-plugin-import "~2.22.1"
     eslint-plugin-jsx-a11y "~6.4.1"
     eslint-plugin-prettier "~3.3.1"
-    eslint-plugin-react "~7.23.0"
+    eslint-plugin-react "~7.23.1"
     eslint-plugin-react-hooks "~4.2.0"
     eslint-plugin-vue "~7.8.0"
     eslint-plugin-vuejs-accessibility "~0.6.1"
@@ -5342,7 +5342,7 @@ eslint-plugin-react-hooks@~4.2.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.2.0.tgz#8c229c268d468956334c943bb45fc860280f5556"
   integrity sha512-623WEiZJqxR7VdxFCKLI6d6LLpwJkGPYKODnkH3D7WpOG5KM8yWueBd8TLsNAetEJNF5iJmolaAKO3F8yzyVBQ==
 
-eslint-plugin-react@~7.23.0:
+eslint-plugin-react@~7.23.1:
   version "7.23.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.23.1.tgz#f1a2e844c0d1967c822388204a8bc4dee8415b11"
   integrity sha512-MvFGhZjI8Z4HusajmSw0ougGrq3Gs4vT/0WgwksZgf5RrLrRa2oYAw56okU4tZJl8+j7IYNuTM+2RnFEuTSdRQ==

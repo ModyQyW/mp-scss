@@ -58,7 +58,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "~12.0.1",
-    "@modyqyw/fabric": "~1.24.0",
+    "@modyqyw/fabric": "~1.24.2",
     "commitizen": "~4.2.3",
     "copyfiles": "~2.4.1",
     "cssnano": "~4.1.10",
