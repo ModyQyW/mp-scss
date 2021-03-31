@@ -2,6 +2,8 @@
 
 [源码](https://github.com/ModyQyW/mp-scss/blob/main/components/card.scss)
 
+在实际使用中，卡片类的局限性较大，建议改用栅格系统实现 `.card`。在 `v3` 版本，卡片类将会被移除。
+
 ## 默认样式
 
 要使用卡片类，需要先引入。
@@ -54,6 +56,18 @@
 </view>
 <view class="container is-dark">
   <view class="card"></view>
+</view>
+```
+
+## 用栅格系统模拟卡片类
+
+```html
+<view class="container">
+  <view class="row flex-wrap border rounded">
+    <view class="row text-bold p-md">header</view>
+    <view class="row p-md">content</view>
+    <view class="row p-md">footer</view>
+  </view>
 </view>
 ```
 
