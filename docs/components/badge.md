@@ -12,7 +12,7 @@
 // @import "~@modyqyw/mp-scss/components/badge";
 ```
 
-使用一个父元素作为容器，在其中使用`.badge`。
+使用一个父元素作为容器，在其中使用 `.badge`，默认会显示在右上角。
 
 ```html
 <view class="btn">
@@ -101,6 +101,25 @@
 <view class="btn">
   button
   <view class="badge is-dot"></view>
+</view>
+```
+
+## 位置
+
+使用 `.is-bottom` 可以让 `.badge` 出现在容器的右下角，使用 `.is-left` 可以让 `.badge` 出现在左上角，组合使用 `.is-bottom` 和 `.is-left` 可以让 `.badge` 出现在左下角。
+
+```html
+<view class="btn">
+  button
+  <view class="badge is-bottom"></view>
+</view>
+<view class="btn">
+  button
+  <view class="badge is-left"></view>
+</view>
+<view class="btn">
+  button
+  <view class="badge is-left is-bottom"></view>
 </view>
 ```
 

@@ -28,6 +28,22 @@
   transform: translate(50%, -50%);
   transform-origin: 100% 0;
 
+  &.is-bottom {
+    top: auto;
+    bottom: 0;
+    transform: translate(50%, 50%);
+  }
+
+  &.is-left {
+    right: auto;
+    left: 0;
+    transform: translate(-50%, -50%);
+
+    &.is-bottom {
+      transform: translate(-50%, 50%);
+    }
+  }
+
   &.is-primary {
     color: $gray-1;
     background-color: $primary-5;
