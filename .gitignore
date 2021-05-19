@@ -123,9 +123,14 @@ dist
 # VSCode
 .vscode-test
 .vscode
+*.vsix
 
 # Jetbrains
 .idea
+
+# DCloud
+.hbuilder
+.hbuilderx
 
 # yarn v2
 .yarn/cache

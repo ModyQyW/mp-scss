@@ -3,13 +3,9 @@ const config = require('@modyqyw/fabric/prettier');
 
 module.exports = {
   ...config,
+  // write your own rules here
   overrides: [
     ...config.overrides,
-    {
-      files: ['*.css', '*.less', '*.scss'],
-      options: {
-        printWidth: 160,
-      },
-    },
+    // write your own overrides here
   ],
 };
