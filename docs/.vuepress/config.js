@@ -2,11 +2,16 @@ const { config } = require('vuepress-theme-hope');
 
 module.exports = config({
   base: '/mp-scss/',
-  title: '@modyqyw/mp-scss',
-  description: '一个基于 Flexbox 的小程序 SCSS 库，用于快速实现自定义设计。如有问题请尝试强制刷新。',
+  locales: {
+    '/': {
+      lang: 'zh-CN',
+      title: '@modyqyw/mp-scss',
+      description:
+        '一个基于 Flexbox 的小程序 SCSS 库，用于快速实现自定义设计。如有问题请尝试强制刷新。',
+    },
+  },
   themeConfig: {
     // 主题配置 https://vuepress-theme-hope.github.io/zh/config/theme/
-    baseLang: 'zh-CN',
     author: 'ModyQyW <wurui7@mail3.sysu.edu.cn>',
     nav: [
       { text: '指南', link: '/guide/' },
@@ -16,9 +21,7 @@ module.exports = config({
           {
             text: '重置 reset',
             prefix: '/reset/',
-            items: [
-              { text: '重置总览 reset', link: '' },
-            ],
+            items: [{ text: '重置总览 reset', link: '' }],
           },
           {
             text: '通用类 classes',
