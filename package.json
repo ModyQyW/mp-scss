@@ -46,8 +46,6 @@
     "deploy": "np --no-tests --no-release-draft",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "docs:deploy": "sh deploy.sh",
-    "release": "yarn deploy && yarn docs:deploy",
     "check": "ncu",
     "commit": "cz",
     "prepare": "is-ci || husky install"
