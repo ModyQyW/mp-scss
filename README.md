@@ -6,6 +6,8 @@ Chinese docs are provided only since miniprograms are used almost only in China.
 
 一个基于 Flexbox 的小程序 SCSS 库，用于快速实现自定义设计。
 
+这个库帮助你在小程序里使用功能类优先的 CSS 框架（比如 Tailwindcss 和 Windicss）。由于小程序的限制，很难直接应用它们，所以这个库诞生了。
+
 完整文档见 [Github Page](https://modyqyw.github.io/mp-scss/) 或 [Gitee Page](https://modyqyw.gitee.io/mp-scss/)。
 
 ## 贡献
@@ -40,3 +42,5 @@ Copyright (c) 2019-present ModyQyW
 - [Tailwindcss](https://tailwindcss.com/)
 - [Vant](https://vant-contrib.gitee.io/vant/)
 - [Vuetify](https://vuetifyjs.com/)
+- [Windicss](https://windicss.org/)
+- [Zan Design](https://design.youzan.com/)
