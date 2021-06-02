@@ -35,9 +35,11 @@ Copyright (c) 2019-present ModyQyW
 下面按字母表顺序排列。
 
 - [Ant Design](https://ant.design/)
+- [aqua.css](https://aquacss.netlify.app/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Bulma](https://bulma.io/)
 - [Material Design](https://material.io/)
+- [Primer Design](https://primer.style/)
 - [ress.css](https://ress-css.surge.sh/)
 - [Tailwindcss](https://tailwindcss.com/)
 - [Vant](https://vant-contrib.gitee.io/vant/)

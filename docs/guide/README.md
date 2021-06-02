@@ -32,10 +32,14 @@
 `@modyqyw/mp-scss` 学习了社区里的优质设计和实现。下面按字母表顺序排列。
 
 - [Ant Design](https://ant.design/)
+- [aqua.css](https://aquacss.netlify.app/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Bulma](https://bulma.io/)
 - [Material Design](https://material.io/)
+- [Primer Design](https://primer.style/)
 - [ress.css](https://ress-css.surge.sh/)
 - [Tailwindcss](https://tailwindcss.com/)
 - [Vant](https://vant-contrib.gitee.io/vant/)
 - [Vuetify](https://vuetifyjs.com/)
+- [Windicss](https://windicss.org/)
+- [Zan Design](https://design.youzan.com/)
