@@ -53,9 +53,9 @@ jobs:
           source-repo: git@github.com:ModyQyW/mp-scss.git
           destination-repo: git@gitee.com:ModyQyW/mp-scss.git
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.RSA_PRIVATE_KEY }}
 
-      - name: Build Gitee Pages
+      - name: Deploy to Gitee Pages
         uses: yanglbme/gitee-pages-action@main
         with:
           gitee-username: ModyQyW
