@@ -59,7 +59,7 @@
     "@babel/core": "~7.14.6",
     "@babel/eslint-parser": "~7.14.7",
     "@commitlint/cli": "~12.1.4",
-    "@modyqyw/fabric": "~2.6.0",
+    "@modyqyw/fabric": "~2.6.1",
     "commitizen": "~4.2.4",
     "copyfiles": "~2.4.1",
     "cssnano": "~5.0.6",

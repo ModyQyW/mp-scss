@@ -1346,10 +1346,10 @@
     event-target-shim "^5.0.1"
     miniprogram-api-typings "^2.10.2"
 
-"@modyqyw/fabric@~2.6.0":
-  version "2.6.0"
-  resolved "https://registry.npmjs.org/@modyqyw/fabric/-/fabric-2.6.0.tgz#e16288dabdb9df35ac68e64487d54616c0adb3f4"
-  integrity sha512-OhYe8Hvm1CKKxhc9pukjKlJJoDgml5whO24BVa/01/sOGkm+7OcVjN/TbhLputXN/s58A1YwK9atG94J+tNMzg==
+"@modyqyw/fabric@~2.6.1":
+  version "2.6.1"
+  resolved "https://registry.npmjs.org/@modyqyw/fabric/-/fabric-2.6.1.tgz#5f6f1a80d9eb1c672806dab7497af2c524af0212"
+  integrity sha512-kaxOXWsS/8eucc5FISXG5E+jn5g8n2k0UfFOGlO2Fggh/r+3D0pQmpBKRl/CGkNW1z+5J/OSx2NX7KPnCRBwQQ==
   dependencies:
     "@babel/core" "~7.14.6"
     "@babel/eslint-parser" "~7.14.7"

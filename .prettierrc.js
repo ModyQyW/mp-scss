@@ -4,7 +4,13 @@ module.exports = {
   ...config,
   // write your own rules here
   overrides: [
-    ...config.overrides,
-    // write your own overrides here
+    {
+      files: ['*.css', '*.less', '*.scss'],
+      options: {
+        printWidth: 160,
+        singleQuote: false,
+        trailingComma: 'none',
+      },
+    },
   ],
 };
