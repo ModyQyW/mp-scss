@@ -82,6 +82,7 @@
     "vuepress-theme-hope": "~1.19.0"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
