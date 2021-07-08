@@ -48,7 +48,8 @@
     "docs:build": "vuepress build docs",
     "check": "ncu",
     "commit": "cz",
-    "prepare": "is-ci || husky install"
+    "prepare": "is-ci || husky install",
+    "release": "release-it"
   },
   "config": {
     "commitizen": {
