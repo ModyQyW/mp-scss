@@ -13,6 +13,7 @@ module.exports = {
     release: false,
   },
   hooks: {
-    "before:init": "yarn run lint"
+    "before:init": "yarn run lint",
+    "after:git:release": "git push origin main:release -f"
   }
 };
