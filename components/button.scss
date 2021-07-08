@@ -1,4 +1,5 @@
 /* stylelint-disable selector-max-class */
+@use "sass:math";
 @import "../variables";
 
 .btn {
@@ -505,7 +506,7 @@
   }
 
   &.is-pill {
-    border-radius: $btn--height-base / 2 * $scale + $unit;
+    border-radius: math.div($btn--height-base, 2) * $scale + $unit;
   }
 
   &.is-xs {
@@ -513,7 +514,7 @@
     padding: $btn--padding-y--xs $btn--padding-x--xs;
 
     &.is-pill {
-      border-radius: $btn--height-base--xs / 2 * $scale + $unit;
+      border-radius: math.div($btn--height-base--xs, 2) * $scale + $unit;
     }
   }
 
@@ -522,7 +523,7 @@
     padding: $btn--padding-y--sm $btn--padding-x--sm;
 
     &.is-pill {
-      border-radius: $btn--height-base--sm / 2 * $scale + $unit;
+      border-radius: math.div($btn--height-base--sm, 2) * $scale + $unit;
     }
   }
 
@@ -532,7 +533,7 @@
     font-size: $btn--font-size--lg;
 
     &.is-pill {
-      border-radius: $btn--height-base--lg / 2 * $scale + $unit;
+      border-radius: math.div($btn--height-base--lg, 2) * $scale + $unit;
     }
   }
 
@@ -542,7 +543,7 @@
     font-size: $btn--font-size--xl;
 
     &.is-pill {
-      border-radius: $btn--height-base--xl / 2 * $scale + $unit;
+      border-radius: math.div($btn--height-base--xl, 2) * $scale + $unit;
     }
   }
 

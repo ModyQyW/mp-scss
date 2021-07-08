@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "../variables";
 
 .row {
@@ -45,7 +46,7 @@
 }
 
 @for $v from 1 through $grid-max {
-  $percent: $v / $grid-max * 100%;
+  $percent: math.div($v, $grid-max) * 100%;
   .col-#{$v} {
     flex: 0 0 $percent;
     max-width: $percent;

@@ -1,4 +1,5 @@
 /* 衍生变量 derived variables */
+@use "sass:math";
 
 /* 预设变量 preset */
 $page-background-color: $gray-1 !default;
@@ -1086,7 +1087,7 @@ $m-width: (
     $m-width: map-merge(
       $m-width,
       (
-        "-#{$molecule}-#{$denominator}": $molecule / $denominator * 100%
+        "-#{$molecule}-#{$denominator}": math.div($molecule, $denominator) * 100%
       )
     );
   }
@@ -1120,7 +1121,7 @@ $m-height: (
     $m-height: map-merge(
       $m-height,
       (
-        "-#{$molecule}-#{$denominator}": $molecule / $denominator * 100%
+        "-#{$molecule}-#{$denominator}": math.div($molecule, $denominator) * 100%
       )
     );
   }

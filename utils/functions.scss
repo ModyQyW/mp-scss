@@ -7,6 +7,7 @@
  * - https://blog.csdn.net/sunshine_in_moon/article/details/45131285
  * - https://blog.csdn.net/idfaya/article/details/6770414
  */
+@use "sass:math";
 
 @function f-hex-to-hsv($hex-color) {
   // init
@@ -14,25 +15,25 @@
   $s: 0;
   $v: 0;
   // convert
-  $r: red($hex-color) / 255;
-  $g: green($hex-color) / 255;
-  $b: blue($hex-color) / 255;
+  $r: math.div(red($hex-color), 255);
+  $g: math.div(green($hex-color), 255);
+  $b: math.div(blue($hex-color), 255);
   $max: max($r, $g, $b);
   $min: min($r, $g, $b);
   // h deg
   @if ($max == $min) {
     $h: 0deg;
   } @else if ($max == $r and $g >= $b) {
-    $h: 60deg * ($g - $b) / ($max - $min) + 0deg;
+    $h: math.div(60deg * ($g - $b), ($max - $min)) + 0deg;
   } @else if ($max == $r and $g < $b) {
-    $h: 60deg * ($g - $b) / ($max - $min) + 360deg;
+    $h: math.div(60deg * ($g - $b), ($max - $min)) + 360deg;
   } @else if ($max == $g) {
-    $h: 60deg * ($b - $r) / ($max - $min) + 120deg;
+    $h: math.div(60deg * ($b - $r), ($max - $min)) + 120deg;
   } @else if ($max == $b) {
-    $h: 60deg * ($r - $g) / ($max - $min) + 240deg;
+    $h: math.div(60deg * ($r - $g), ($max - $min)) + 240deg;
   }
   // s %
-  $s: if($max == 0, 0%, percentage(1 - $min / $max));
+  $s: if($max == 0, 0%, percentage(1 - math.div($min, $max)));
   // v %
   $v: percentage($max);
   // return list
@@ -40,11 +41,11 @@
 }
 
 @function f-hsv-to-hex($h, $s, $v) {
-  $h: $h / 1deg;
-  $s: $s / 100%;
-  $v: $v / 100%;
-  $hi: floor($h / 60);
-  $f: $h / 60 - $hi;
+  $h: math.div($h, 1deg);
+  $s: math.div($s, 100%);
+  $v: math.div($v, 100%);
+  $hi: floor(math.div($h, 60));
+  $f: math.div($h, 60) - $hi;
   $p: round($v * (1 - $s) * 255);
   $q: round($v * (1 - $f * $s) * 255);
   $t: round($v * (1 - (1 - $f) * $s) * 255);

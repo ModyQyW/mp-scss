@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "../variables";
 
 .badge {
@@ -22,7 +23,7 @@
   text-align: center;
   white-space: nowrap;
   background-color: $gray-5;
-  border-radius: $badge--height-base / 2 * $scale + $unit;
+  border-radius: math.div($badge--height-base, 2) * $scale + $unit;
   box-shadow: 0 0 0 1 * $scale + $unit $container-background-color;
   transition: $transition-default;
   transform: translate(50%, -50%);
@@ -113,7 +114,7 @@
     padding: $badge--padding-y--sm $badge--padding-x--sm;
     font-size: $badge--font-size--sm;
     line-height: $badge--line-height--sm;
-    border-radius: $badge--height-base--sm / 2 * $scale + $unit;
+    border-radius: math.div($badge--height-base--sm, 2) * $scale + $unit;
   }
 
   &.is-dot {

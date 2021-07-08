@@ -1,4 +1,5 @@
 /* layout variables */
+@use "sass:math";
 
 /* page */
 // container
@@ -46,27 +47,19 @@ $gutter-min: 0 !default;
 $gutter-max: 24 !default;
 $gutter-step: 4 !default;
 $m-gutter: (
-  "": $gutter-base / 2 * $scale + $unit,
-  "-xs": (
-    $gutter-base - $gutter-diff * 2
-  ) / 2 * $scale + $unit,
-  "-sm": (
-    $gutter-base - $gutter-diff
-  ) / 2 * $scale + $unit,
-  "-md": $gutter-base / 2 * $scale + $unit,
-  "-lg": (
-    $gutter-base + $gutter-diff
-  ) / 2 * $scale + $unit,
-  "-xl": (
-    $gutter-base + $gutter-diff * 2
-  ) / 2 * $scale + $unit
+  "": math.div($gutter-base, 2) * $scale + $unit,
+  "-xs": math.div($gutter-base - $gutter-diff * 2, 2) * $scale + $unit,
+  "-sm": math.div($gutter-base - $gutter-diff, 2) * $scale + $unit,
+  "-md": math.div($gutter-base, 2) * $scale + $unit,
+  "-lg": math.div($gutter-base + $gutter-diff, 2) * $scale + $unit,
+  "-xl": math.div($gutter-base + $gutter-diff * 2, 2) * $scale + $unit
 ) !default;
 $tmp-gutter: $gutter-min;
 @while ($tmp-gutter <= $gutter-max) {
   $m-gutter: map-merge(
     $m-gutter,
     (
-      "-#{$tmp-gutter}": $tmp-gutter / 2 * $scale + $unit
+      "-#{$tmp-gutter}": math.div($tmp-gutter, 2) * $scale + $unit
     )
   );
   $tmp-gutter: $tmp-gutter + $gutter-step;

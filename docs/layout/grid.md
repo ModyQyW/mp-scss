@@ -125,20 +125,12 @@ $grid-max: 12;
 $gutter-base: 12;
 $gutter-diff: 4;
 $m-gutter: (
-  "": $gutter-base / 2 * $scale + $unit,
-  "-xs": (
-    $gutter-base - $gutter-diff * 2
-  ) / 2 * $scale + $unit,
-  "-sm": (
-    $gutter-base - $gutter-diff
-  ) / 2 * $scale + $unit,
-  "-md": $gutter-base / 2 * $scale + $unit,
-  "-lg": (
-    $gutter-base + $gutter-diff
-  ) / 2 * $scale + $unit,
-  "-xl": (
-    $gutter-base + $gutter-diff * 2
-  ) / 2 * $scale + $unit
+  "": math.div($gutter-base, 2) * $scale + $unit,
+  "-xs": math.div($gutter-base - $gutter-diff * 2, 2) * $scale + $unit,
+  "-sm": math.div($gutter-base - $gutter-diff, 2) * $scale + $unit,
+  "-md": math.div($gutter-base, 2) * $scale + $unit,
+  "-lg": math.div($gutter-base + $gutter-diff, 2) * $scale + $unit,
+  "-xl": math.div($gutter-base + $gutter-diff * 2, 2) * $scale + $unit
 );
 // 生成 .gutter-{0|4|8|12|16|20|24}
 $gutter-min: 0;
