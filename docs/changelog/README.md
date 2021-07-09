@@ -6,6 +6,11 @@ sidebar: 'auto'
 
 ## 2.5
 
+### 2.5.2
+
+- 调整 - 依赖版本。
+- 调整 - 使用 `math.div` 代替 `/`，具体原因见 [slash-div](https://sass-lang.com/documentation/breaking-changes/slash-div)。
+
 ### 2.5.1
 
 - 调整 - 调整依赖版本
