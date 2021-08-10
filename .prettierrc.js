@@ -1,16 +1,5 @@
-const config = require('@modyqyw/fabric/prettier');
+const { prettier } = require('@modyqyw/fabric');
 
 module.exports = {
-  ...config,
-  // write your own rules here
-  overrides: [
-    {
-      files: ['*.css', '*.less', '*.scss'],
-      options: {
-        printWidth: 160,
-        singleQuote: false,
-        trailingComma: 'none',
-      },
-    },
-  ],
+  ...prettier,
 };

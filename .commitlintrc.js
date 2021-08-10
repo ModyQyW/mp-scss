@@ -1,9 +1,5 @@
-const config = require('@modyqyw/fabric/commitlint');
+const { commitlint } = require('@modyqyw/fabric');
 
 module.exports = {
-  ...config,
-  rules: {
-    ...config.rules,
-    // write your own rules here
-  },
+  ...commitlint,
 };

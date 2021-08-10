@@ -1,9 +1,5 @@
-const config = require('@modyqyw/fabric/stylelint/scss');
+const { stylelint } = require('@modyqyw/fabric');
 
 module.exports = {
-  ...config,
-  rules: {
-    ...config.rules,
-    // write your own rules here
-  },
+  ...stylelint.scss,
 };
