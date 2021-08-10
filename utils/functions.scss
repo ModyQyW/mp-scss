@@ -112,10 +112,6 @@
   $h: nth($hsv-color, 1); // deg
   $s: nth($hsv-color, 2); // %
   $v: nth($hsv-color, 3); // %
-  $new-hex-color: f-hsv-to-hex(
-    f-get-hue($h, $s, $v, $diff, $is-lighter),
-    f-get-saturation($h, $s, $v, $diff, $is-lighter),
-    f-get-value($h, $s, $v, $diff, $is-lighter)
-  );
+  $new-hex-color: f-hsv-to-hex(f-get-hue($h, $s, $v, $diff, $is-lighter), f-get-saturation($h, $s, $v, $diff, $is-lighter), f-get-value($h, $s, $v, $diff, $is-lighter));
   @return change-color($new-hex-color, $alpha: alpha($hex-color));
 }

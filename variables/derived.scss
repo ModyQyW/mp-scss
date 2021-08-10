@@ -1626,8 +1626,7 @@ $m-box-shadow-ambient: (
 $m-box-shadow: () !default;
 $tmp-box-shadow: $box-shadow-min;
 @while ($tmp-box-shadow <= $box-shadow-max) {
-  $l-box-shadow: map-get($m-box-shadow-umbra, $tmp-box-shadow), map-get($m-box-shadow-penumbra, $tmp-box-shadow),
-    map-get($m-box-shadow-ambient, $tmp-box-shadow);
+  $l-box-shadow: map-get($m-box-shadow-umbra, $tmp-box-shadow), map-get($m-box-shadow-penumbra, $tmp-box-shadow), map-get($m-box-shadow-ambient, $tmp-box-shadow);
   $m-box-shadow: map-merge(
     $m-box-shadow,
     (
