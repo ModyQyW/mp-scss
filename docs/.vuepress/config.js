@@ -7,7 +7,7 @@ module.exports = config({
       lang: 'zh-CN',
       title: '@modyqyw/mp-scss',
       description:
-        '一个基于 Flexbox 的小程序 SCSS 库，用于快速实现自定义设计。如有问题请尝试强制刷新。',
+        '⚠️ 已废弃！现在推荐使用 WindiCSS + DaisyUI。特定组件可考虑使用 UViewUI、ThorUI、UniUI、VantUI、NutUI、AntDesignMobile 等。',
     },
   },
   themeConfig: {

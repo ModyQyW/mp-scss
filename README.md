@@ -1,5 +1,9 @@
 # @modyqyw/mp-scss
 
+**⚠️ Deprecated! Now it is recommended to use WindiCSS + DaisyUI. Specific components can be considered to use UViewUI, ThorUI, UniUI, Vant, NutUI, AntDesignMobile etc.**
+
+**⚠️ 已废弃！现在推荐使用 WindiCSS + DaisyUI。特定组件可考虑使用 UViewUI、ThorUI、UniUI、VantUI、NutUI、AntDesignMobile 等。**
+
 A flexbox-based miniprogram SCSS lib for quickly building custom designs.
 
 Chinese docs are provided only since miniprograms are used almost only in China.
